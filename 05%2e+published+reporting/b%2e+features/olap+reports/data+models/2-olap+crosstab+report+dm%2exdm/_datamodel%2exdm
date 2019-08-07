@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20Source:%20OLAP%20(Essbase);%20Structure:%20Concatenated%20flat%20%20XML;%20Features:%20Supports%20multiple%20views%20on%20data%20stored%20in%20Essbase%20or%20other%20OLAP%20sources.%20MDX%20Query%20examples%20(work%20with%20Sample.Basic)]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="G1:Prod-Profit" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[WITH 
+MEMBER [Measures].[New_Profit] AS 'IIF(IsEmpty(Profit), 0, Profit)',Solve_order=100
+SELECT 
+  NON EMPTY EXCEPT([Product].Generations(2).Members, {[Product].[Diet]}) ON Axis(0),
+  NON EMPTY [Market].Generations(3).Members PROPERTIES ANCESTOR_NAMES,LEVEL_NUMBER,GEN_NUMBER ON Axis(1),
+  {[Scenario].[Actual], [Scenario].[Budget]} ON Axis(2)
+FROM Sample.Basic
+Where [New_Profit]]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G2:Mrkt-Sales" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[WITH 
+MEMBER [Measures].[New_Sales] AS 'IIF(IsEmpty(Sales), 0, Sales)',Solve_order=100
+
+SELECT 
+  NON EMPTY [Market].Generations(2).Members ON Axis(0),
+  NON EMPTY [Product].Generations(3).Members PROPERTIES ANCESTOR_NAMES,LEVEL_NUMBER,GEN_NUMBER, MEMBER_ALIAS ON Axis(1),
+  {[Scenario].[Actual], [Scenario].[Budget]} ON Axis(2)
+FROM Sample.Basic
+where [New_Sales]]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G3:Prod-by-Mrkt" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[WITH 
+MEMBER [Measures].[New_Sales] AS 'IIF(IsEmpty(Sales), 0, Sales)',Solve_order=100
+MEMBER [Measures].[New_COGs] AS 'IIF(IsEmpty(COGS), 0, COGS)',Solve_order=100
+
+Select {[Measures].[New_Sales],[Measures].[New_COGS]} on Axis(0), [Market].levels(0).members PROPERTIES MEMBER_ALIAS, ANCESTOR_NAMES on Axis(1), (Product).levels(0).members PROPERTIES MEMBER_ALIAS, ANCESTOR_NAMES on Axis(2)
+from Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G4:QtrSales-by-Mrk" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT 
+  NON EMPTY {[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]} ON COLUMNS, NON EMPTY CROSSJOIN([Year].Generations(2).Members, [Market].Levels(0).members) ON ROWS
+FROM Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="G_1" source="G1:Prod-Profit" label="G_1">
+    <element name="Scenario" value="Scenario" dataType="xsd:string" label="Scenario" breakOrder="None" fieldOrder="0"/>
+    <element name="Market" value="Market" dataType="xsd:string" label="Market" breakOrder="None" fieldOrder="1"/>
+    <element name="Market_ANCESTOR_NAMES" value="Market.ANCESTOR_NAMES" dataType="xsd:string" label="Market.ANCESTOR_NAMES" breakOrder="None" fieldOrder="1"/>
+    <element name="Market_LEVEL_NUMBER" value="Market.LEVEL_NUMBER" dataType="xsd:string" label="Market.LEVEL_NUMBER" breakOrder="None" fieldOrder="1"/>
+    <element name="Market_GEN_NUMBER" value="Market.GEN_NUMBER" dataType="xsd:string" label="Market.GEN_NUMBER" breakOrder="None" fieldOrder="1"/>
+    <element name="_100" value="100" dataType="xsd:double" label="Colas" breakOrder="None" fieldOrder="5" ifNull="0"/>
+    <element name="_200" value="200" dataType="xsd:double" label="Root Beer" breakOrder="None" fieldOrder="6" ifNull="0"/>
+    <element name="_300" value="300" dataType="xsd:double" label="Cream Soda" breakOrder="None" fieldOrder="7" ifNull="0"/>
+    <element name="_400" value="400" dataType="xsd:double" label="Fruit Soda" breakOrder="None" fieldOrder="8" ifNull="0"/>
+    <element name="Market_PARENT_NAME" value="${SUBSTRING(G_1.Market_ANCESTOR_NAMES,1,INSTR(G_1.Market_ANCESTOR_NAMES,' ')-1)}" dataType="xsd:string" label="Market Region" breakOrder="None" fieldOrder="0"/>
+  </group>
+  <group name="G_2" source="G2:Mrkt-Sales" label="G_2">
+    <element name="Scenario" value="Scenario" dataType="xsd:string" label="Scenario" breakOrder="None" fieldOrder="0"/>
+    <element name="Product" value="Product" dataType="xsd:string" label="Product" breakOrder="None" fieldOrder="1"/>
+    <element name="Product_ANCESTOR_NAMES" value="Product.ANCESTOR_NAMES" dataType="xsd:string" label="Product.ANCESTOR_NAMES" breakOrder="None" fieldOrder="1"/>
+    <element name="Product_LEVEL_NUMBER" value="Product.LEVEL_NUMBER" dataType="xsd:string" label="Product.LEVEL_NUMBER" breakOrder="None" fieldOrder="1"/>
+    <element name="Product_GEN_NUMBER" value="Product.GEN_NUMBER" dataType="xsd:string" label="Product.GEN_NUMBER" breakOrder="None" fieldOrder="1"/>
+    <element name="Product_MEMBER_ALIAS" value="Product.MEMBER_ALIAS" dataType="xsd:string" label="Product.MEMBER_ALIAS" breakOrder="None" fieldOrder="1"/>
+    <element name="East" value="East" dataType="xsd:double" label="East Sales" breakOrder="None" fieldOrder="6" ifNull="0"/>
+    <element name="West" value="West" dataType="xsd:double" label="West Sales" breakOrder="None" fieldOrder="7" ifNull="0"/>
+    <element name="South" value="South" dataType="xsd:double" label="South Sales" breakOrder="None" fieldOrder="8" ifNull="0"/>
+    <element name="Central" value="Central" dataType="xsd:double" label="Central Sales" breakOrder="None" fieldOrder="9" ifNull="0"/>
+    <element name="Product_PARENT_NAME" value="${SUBSTRING(G_2.Product_ANCESTOR_NAMES,1,INSTR(G_2.Product_ANCESTOR_NAMES,' ')-1)}" dataType="xsd:string" label="Product Category Code" breakOrder="None" fieldOrder="0"/>
+    <element name="Product_PARENT_ALIAS" value="${DECODE(G_2.Product_PARENT_NAME, 100, 'Colas', 200, 'Root Beer', 300, 'Cream Sodas', 400, 'Fruit Sodas', 'Diet Drinks')}" dataType="xsd:string" label="Product Category" breakOrder="None" fieldOrder="0"/>
+  </group>
+  <group name="G_3" source="G3:Prod-by-Mrkt" label="G_3">
+    <element name="Product" value="Product" dataType="xsd:string" label="Product" breakOrder="None" fieldOrder="0"/>
+    <element name="Product_MEMBER_ALIAS" value="Product.MEMBER_ALIAS" dataType="xsd:string" label="Product.MEMBER_ALIAS" breakOrder="None" fieldOrder="0"/>
+    <element name="Product_ANCESTOR_NAMES" value="Product.ANCESTOR_NAMES" dataType="xsd:string" label="Product.ANCESTOR_NAMES" breakOrder="None" fieldOrder="0"/>
+    <element name="Market" value="Market" dataType="xsd:string" label="Market" breakOrder="None" fieldOrder="3"/>
+    <element name="Market_MEMBER_ALIAS" value="Market.MEMBER_ALIAS" dataType="xsd:string" label="Market.MEMBER_ALIAS" breakOrder="None" fieldOrder="3"/>
+    <element name="Market_ANCESTOR_NAMES" value="Market.ANCESTOR_NAMES" dataType="xsd:string" label="Market.ANCESTOR_NAMES" breakOrder="None" fieldOrder="3"/>
+    <element name="New_Sales" value="New_Sales" dataType="xsd:double" label="Sales" breakOrder="None" fieldOrder="6"/>
+    <element name="New_COGs" value="New_COGs" dataType="xsd:double" label="COGs" breakOrder="None" fieldOrder="7"/>
+    <element name="Market_PARENT_NAME" value="${SUBSTRING(G_3.Market_ANCESTOR_NAMES,1,INSTR(G_3.Market_ANCESTOR_NAMES,' ')-1)}" dataType="xsd:string" label="Market Region" breakOrder="None" fieldOrder="0"/>
+  </group>
+  <group name="G_4" source="G4:QtrSales-by-Mrk" label="G_4">
+    <element name="Year" value="Year" dataType="xsd:string" label="Year" breakOrder="None" fieldOrder="0"/>
+    <element name="Market" value="Market" dataType="xsd:string" label="Market" breakOrder="None" fieldOrder="1"/>
+    <element name="Sales" value="Sales" dataType="xsd:double" label="Sales" breakOrder="None" fieldOrder="2"/>
+    <element name="COGS" value="COGS" dataType="xsd:double" label="COGS" breakOrder="None" fieldOrder="3"/>
+    <element name="Margin" value="Margin" dataType="xsd:double" label="Margin" breakOrder="None" fieldOrder="4"/>
+    <element name="Total_Expenses" value="Total Expenses" dataType="xsd:double" label="Total Expenses" breakOrder="None" fieldOrder="5"/>
+    <element name="Profit" value="Profit" dataType="xsd:double" label="Profit" breakOrder="None" fieldOrder="6"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="G4:QtrSales-by-Mrk" left="775px" top="83px"/><layout name="G3:Prod-by-Mrkt" left="530px" top="80px"/><layout name="G2:Mrkt-Sales" left="283px" top="77px"/><layout name="G1:Prod-Profit" left="48px" top="104px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

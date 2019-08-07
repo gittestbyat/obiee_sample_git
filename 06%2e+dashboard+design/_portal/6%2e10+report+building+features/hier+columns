@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="gjebvdnaietnuutk">
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_479">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Hierarchical Column
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_478">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_474">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_480">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description : &lt;/b&gt;&lt;/font&gt; This feature adds a new column type called a hierarchical column. Hierarchical columns can be level-based (Products) or parent/child (Sales Rep). Skip level and ragged hierarchies are also supported (Products Ragged Skipped Lvl).
+[br/]
+Hierarchical columns can be expanded and collapsed within the same column to show more or fewer levels of detail. Each expansion takes you to the next level of the hierarchy one level at a time. Once you reach the leaf level, no expansion icon is available.</sawd:HTML>
+			</sawd:htmlView><sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_482">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; Hierarchical columns must first be set up in the Administration tool. Within that tool, a hierarchy must be built and exposed through the subject area. Once this is done, the hierarchical column is available for selection from within the Answers Analysis editor. Open the subject area and drill down to the appropriate folder containing the column. Hierarchical columns have a unique icon to make them easier to identify.[br/]</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="pse5llip64dg33pf" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="d90jp7inaevli4up" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 0" display="embed" showView="" links="" duid="dr8saeebarmpdnr3"><saw:caption><saw:text>Level Based Hierarchy</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Query Elements/Hier Columns/Level Based Hierarchy"/></sawd:reportView><sawd:reportView name="Report 1" display="embed" showView="" duid="rdlahfq3ktu9lsfq"><saw:caption><saw:text>Level Based Hierarchy 2</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Query Elements/Hier Columns/Level Based Hierarchy 2"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" duid="6cv11usaegcg1rcf" frozen="false" canFreeze="false" break="column" layoutType="bestFit"><sawd:dashboardSection name="Section 3" collapsible="false" duid="n8504q1chtq2biu4" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 2" display="embed" showView="" links="" duid="2g1487jda6nk1vcf"><saw:caption><saw:text>Value Based (Parent Child) Hierarchy</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Query Elements/Hier Columns/Value Based (Parent Child) Hierarchy"/></sawd:reportView><sawd:reportView name="Report 3" display="embed" showView="" duid="fksd2p8bind3sem7"><saw:caption><saw:text>Value Based (Parent Child) Hierarchy 2</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Query Elements/Hier Columns/Value Based (Parent Child) Hierarchy 2"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

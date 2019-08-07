@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="nd1dviibpulsbu62" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" canFreeze="true" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1847">[br/]&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Listing All ODBC Procedures
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1848">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt;[br/]To get more details about exact parameters expected in each procedure syntax, and outputs delivered by each procedure, copy and paste the following into a logical SQL query window : [br/] [br/]&lt;font color=darkred&gt;[b]call NQSGetSQLProcedureColumns(&#39;%&#39;,&#39;%&#39;,&#39;[/b]the_name_of_the_procedure_you_need_details_on[b]&#39;,&#39;%&#39;)[/b][br/]  &lt;/font&gt;[br/] </sawd:HTML>
+			</sawd:htmlView><sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1846">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			
+			
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	
+<sawd:dashboardColumn name="Column 0" break="column" frozen="false" canFreeze="false" duid="enqil4kdg4a4akvv" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="6o5dqhts77bu6tbt" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Administration</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 3" duid="4gqkt1bsrhqk974k"><sawd:HTML fmt="html">&lt;pre&gt;&lt;font color = darkblue&gt;GetOBISVersion() &lt;/font&gt; : Procedure for retrieving product version number
+&lt;font color = darkblue&gt;GetSMABucketStats() &lt;/font&gt; : Procedure to get SMA bucket statistics.
+&lt;font color = darkblue&gt;NQSChangeSelfPassword(&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for changing the password of a user
+&lt;font color = darkblue&gt;NQSGetCurrentTimestamp() &lt;/font&gt; : Procedure to get current timestamp
+&lt;font color = darkblue&gt;NQSGetODBCDSNs() &lt;/font&gt; : Procedure to get all ODBC DSN entries
+&lt;font color = darkblue&gt;NQSGetSysInfo(&#39;%&#39;) &lt;/font&gt; : Procedure for getting OBIS system information
+&lt;font color = darkblue&gt;NQSResetConnections(&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for reset connections
+&lt;font color = darkblue&gt;NQSSearchIdentities(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to search users or roles
+&lt;font color = darkblue&gt;OBISAvailableDiagnostics() &lt;/font&gt; : Describes available options to OBISGetDiagnostics
+&lt;font color = darkblue&gt;OBISDiagnostics(&#39;%&#39;) &lt;/font&gt; : Procedure to get SMA bucket statistics.
+&lt;font color = darkblue&gt;RollingRestart(&#39;%&#39;) &lt;/font&gt; : Procedure to restart all slave nodes in the cluster.&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 2" duid="6o5dqhts77bu6tbt" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Cache</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 2" duid="4gqkt1bsrhqk974k"><sawd:HTML fmt="html">&lt;pre&gt;&lt;font color = darkblue&gt;SAPurgeAllCache() &lt;/font&gt; : Procedure to purge all cache entries unilaterally.
+&lt;font color = darkblue&gt;SAPurgeAllMCNCache() &lt;/font&gt; : Procedure to purge all MDX member name cache entries unilaterally.
+&lt;font color = darkblue&gt;SAPurgeCacheByDatabase(&#39;%&#39;) &lt;/font&gt; : Procedure to purge cache entries associated with a specified physical database.
+&lt;font color = darkblue&gt;SAPurgeCacheByQuery(&#39;%&#39;) &lt;/font&gt; : Procedure to purge cache entries associated with a specified SQL query.
+&lt;font color = darkblue&gt;SAPurgeCacheByTable(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to purge cache entries associated with a specified physical table.
+&lt;font color = darkblue&gt;SAPurgeInternalCache(&#39;%&#39;) &lt;/font&gt; : Procedure to purge internal caches, arguemnt can be 1(ROWWISEINITBLOCK), 2(DRILLDOWNINFO), 4(DRILLDOWNQUERY)
+&lt;font color = darkblue&gt;SAPurgeMCNCacheByCube(&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to purge MDX member name caption cache entries associated with a specified physical cube.
+&lt;font color = darkblue&gt;SAPurgePlanCache() &lt;/font&gt; : Procedure to purge plan cache entries.
+&lt;font color = darkblue&gt;SASeedQuery(&#39;%&#39;) &lt;/font&gt; : Procedure to seed a specified SQL query.&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 5" duid="6o5dqhts77bu6tbt" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Procedures</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 6" duid="4gqkt1bsrhqk974k"><sawd:HTML fmt="html">&lt;pre&gt;
+&lt;font color = darkblue&gt;IsProcedureSupported(&#39;%&#39;) &lt;/font&gt; : To check if a given procedure is supported.
+&lt;font color = darkblue&gt;NQS_GetCurrentActivitiesProcedure(&#39;%&#39;) &lt;/font&gt; :  
+&lt;font color = darkblue&gt;NQSGetSQLProcedureColumns(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving input and output column information from procedures
+&lt;font color = darkblue&gt;NQSGetSQLProcedures(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving information on all the system procedures
+&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 3" duid="6o5dqhts77bu6tbt" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Essbase</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 4" duid="4gqkt1bsrhqk974k"><sawd:HTML fmt="html">&lt;pre&gt;&lt;font color = darkblue&gt;NQSCreateCalcScript(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to create a calc script for a cube
+&lt;font color = darkblue&gt;NQSExecCalcScript(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to execute a calc script for a cube
+&lt;font color = darkblue&gt;NQSExecMaxL(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for executing Essbase MaxL script
+&lt;font color = darkblue&gt;NQSGetCalcScriptNames(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to get the calc scripts for a cube
+&lt;font color = darkblue&gt;NQSGetEssbaseCubeDetails(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for getting Essbase measure and level information
+&lt;font color = darkblue&gt;NQSGetEssbaseCubeInfo(&#39;%&#39;) &lt;/font&gt; : Procedure for getting mapped Essbase information for a given measure
+&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 4" duid="6o5dqhts77bu6tbt" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Logical Model</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 5" duid="4gqkt1bsrhqk974k"><sawd:HTML fmt="html">&lt;pre&gt;&lt;font color = darkblue&gt;NQSCollectRelatedFields(&#39;%&#39;) &lt;/font&gt; : Procedure to get the information on the related fields in the dynamic picklist or multi-valued field
+&lt;font color = darkblue&gt;NQSExtractMetadataProject(&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to extract projects metadata
+&lt;font color = darkblue&gt;NQSGenerateDrillDownQuery(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for generating drill down query
+&lt;font color = darkblue&gt;NQSGetBusinessDimensions(&#39;%&#39;) &lt;/font&gt; : Procedure to get all the business dimensions of a given business model
+&lt;font color = darkblue&gt;NQSGetBusinessLevelColumnProperties(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to get the column properties on business model
+&lt;font color = darkblue&gt;NQSGetBusinessLevelColumns(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to get all the business columns of a given business model, dimension, and level
+&lt;font color = darkblue&gt;NQSGetBusinessLevels(&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to get all the business levels and their child levels of a given business model and dimension
+&lt;font color = darkblue&gt;NQSGetBusinessModelColumnInfo(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to get the column information on business model
+&lt;font color = darkblue&gt;NQSGetBusinessModels() &lt;/font&gt; : Procedure to get all the business models
+&lt;font color = darkblue&gt;NQSGetConformingDimensionLinks() &lt;/font&gt; : Procedure for retrieving all the conforming links
+&lt;font color = darkblue&gt;NQSGetDrillGraph(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for getting Drill Graph
+&lt;font color = darkblue&gt;NQSGetHierarchies(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for getting hierarchy information
+&lt;font color = darkblue&gt;NQSGetLevelAttributes(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for getting Level information
+&lt;font color = darkblue&gt;NQSGetLevelDrillability(&#39;%&#39;) &lt;/font&gt; : Procedure for drilling down into child dimension levels
+&lt;font color = darkblue&gt;NQSGetLevels(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for getting Level information
+&lt;font color = darkblue&gt;NQSGetLogicalDimensionLevels(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for getting logical dimension and Level information
+&lt;font color = darkblue&gt;NQSGetLogicalDrillGraph(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for getting logical dimension and Level information
+&lt;font color = darkblue&gt;NQSGetLogicalLevelAttributes(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for getting logical dimension and Level information
+&lt;font color = darkblue&gt;NQSGetLogicalTables(&#39;%&#39;) &lt;/font&gt; : Procedure to get the logical tables
+&lt;font color = darkblue&gt;NQSGetSQLCustomColumns(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving customized columns of tables
+&lt;font color = darkblue&gt;NQSGetSQLCustomTables(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for Custom tables from catalog/schema hierarchy
+&lt;font color = darkblue&gt;NQSGetTableType(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for detecting if a table is a fact or dimension table
+&lt;font color = darkblue&gt;NQSGetUniqueIdForObject(&#39;%&#39;) &lt;/font&gt; : Procedure for getting unique id for presentation objects
+&lt;font color = darkblue&gt;NQSIsCompatibleGrain(&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for testing if two grains are compatible
+&lt;font color = darkblue&gt;NQSModifyMetadata(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to apply changes to a repository
+&lt;font color = darkblue&gt;NQSQueryMetadataObjects(7 param.) &lt;/font&gt; : Procedure to get the XUDML data on queried metadata objects
+&lt;font color = darkblue&gt;NQSQueryMetadataProjects(&#39;%&#39;) &lt;/font&gt; : Get all metadata projects defined in the repository
+&lt;font color = darkblue&gt;SAGetSharedRequestKey(&#39;%&#39;) &lt;/font&gt; : Procedure to generate a hash value for a specific sql query.
+&lt;font color = darkblue&gt;NQSCallExtender(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to run BI Extender
+&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 6" duid="6o5dqhts77bu6tbt" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>RPD Physical Model</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 7" duid="4gqkt1bsrhqk974k"><sawd:HTML fmt="html">&lt;pre&gt;&lt;font color = darkblue&gt;NQSGetSQLCatalogs() &lt;/font&gt; : Procedure for retrieving all the catalogs from the repository
+&lt;font color = darkblue&gt;NQSGetSQLColumns(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving columns of tables
+&lt;font color = darkblue&gt;NQSGetSQLDataTypes(&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving data types supported in the server
+&lt;font color = darkblue&gt;NQSGetSQLForeignKeys(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving foreign key constraints defined for tables
+&lt;font color = darkblue&gt;NQSGetSQLPrimaryKeys(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving primary key defined for tables
+&lt;font color = darkblue&gt;NQSGetSQLSchemaNames(&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving schema of catalogs
+&lt;font color = darkblue&gt;NQSGetSQLSpecialColumns(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving special columns in a table
+&lt;font color = darkblue&gt;NQSGetSQLStatistics(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving a list of statistics and indices of a table
+&lt;font color = darkblue&gt;NQSGetSQLTables(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure for retrieving tables from catalog/schema hierarchy
+&lt;font color = darkblue&gt;NQSMetadataImportFromDatabase(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to get the XUDML data on imported metadata objects from database
+&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 8" duid="6o5dqhts77bu6tbt" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Variables and Security</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 9" duid="4gqkt1bsrhqk974k"><sawd:HTML fmt="html">&lt;pre&gt;
+&lt;font color = darkblue&gt;NQSGetDirectMembers(&#39;%&#39;) &lt;/font&gt; : Procedure to get direct members of a group
+&lt;font color = darkblue&gt;NQSGetGroupInfo() &lt;/font&gt; : Procedure to get group information
+&lt;font color = darkblue&gt;NQSGetGroupMemberships(&#39;%&#39;) &lt;/font&gt; : Procedure to get group information from user guid
+&lt;font color = darkblue&gt;NQSGetGroups(&#39;%&#39;) &lt;/font&gt; : Procedure to get group information
+&lt;font color = darkblue&gt;NQSGetGroupUsers(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to user information using group guid
+&lt;font color = darkblue&gt;NQSGetUsers(&#39;%&#39;,&#39;%&#39;,&#39;%&#39;) &lt;/font&gt; : Procedure to get user information
+&lt;font color = darkblue&gt;NQSGetSessionValues(&#39;%&#39;) &lt;/font&gt; : Procedure to get session variable values
+&lt;font color = darkblue&gt;NQSSetSessionValue(&#39;%&#39;) &lt;/font&gt; : Procedure to set the values of a list of session variables
+&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 7" duid="6o5dqhts77bu6tbt" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Query Engine</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 8" duid="4gqkt1bsrhqk974k"><sawd:HTML fmt="html">&lt;pre&gt;
+&lt;font color = darkblue&gt;NQSGetContextualQueryColumnInfo(&#39;%&#39;) &lt;/font&gt; : Procedure to get the information on query projection columns
+&lt;font color = darkblue&gt;NQSGetGroupByBreakInfo(&#39;%&#39;) &lt;/font&gt; : Procedure to generate group by break information for a query
+&lt;font color = darkblue&gt;NQSGetQueryColumnInfo(&#39;%&#39;) &lt;/font&gt; : Procedure to get the information on query projection columns
+&lt;font color = darkblue&gt;NQSGetQueryLogExcerpt(&#39;%&#39;) &lt;/font&gt; : Procedure for getting query log for a particular request
+&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 9" duid="6o5dqhts77bu6tbt" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Logging</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 10" duid="4gqkt1bsrhqk974k"><sawd:HTML fmt="html">&lt;pre&gt;&lt;font color = darkblue&gt;NQS_MAFlushLogger() &lt;/font&gt; :  
+&lt;font color = darkblue&gt;NQS_MaLogDiagnosticsInformation() &lt;/font&gt; : Return allocator diagnostics information
+&lt;font color = darkblue&gt;NQS_MASetGlobalModeLoggingStatus(&#39;%&#39;) &lt;/font&gt; :  
+&lt;font color = darkblue&gt;NQS_MASetLocalModeLoggingStatus(&#39;%&#39;) &lt;/font&gt; :  
+&lt;font color = darkblue&gt;NQS_MASetLoggingMode(&#39;%&#39;) &lt;/font&gt; :  
+&lt;font color = darkblue&gt;NQS_MASetNodeSizesToLog(...  ) &lt;/font&gt; : Set allocator bucket sizes for diagnostics logging
+&lt;font color = darkblue&gt;NQSGetQueryLogExcerpt(&#39;%&#39;) &lt;/font&gt; : Procedure for getting query log for a particular request
+&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

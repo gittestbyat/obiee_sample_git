@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawkpi:kpi xmlns:sawkpi="com.siebel.analytics.web/kpi/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawbsc="com.siebel.analytics.web/scorecard/v1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" subjectArea="&quot;A - Sample Sales&quot;" isTrendEnabled="true" ID="2a36a8c0-0ba3-1000-8567-0ae4eb530000" name="Revenue KPI" xmlVersion="201106170"><sawkpi:kpiPeriod changeToleranceType="UNITS">
+		<saw:column columnID="cb2dcc77ef3cb636e" xsi:type="saw:regularColumn">
+			<saw:columnFormula>
+				<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr>
+			</saw:columnFormula>
+		</saw:column></sawkpi:kpiPeriod><sawkpi:owner id="25AA0C80A36211E28F0FDF357267F21E"/><sawkpi:relatedDocuments>
+		<sawkpi:relatedDocument>
+			<sawkpi:name>Visit Eden Inc. Finance Portal</sawkpi:name>
+			<sawkpi:description/>
+			<sawkpi:link type="URL">
+				<sawkpi:path>http://www.oracle.com/BI</sawkpi:path>
+			</sawkpi:link>
+		</sawkpi:relatedDocument>
+		<sawkpi:relatedDocument>
+			<sawkpi:name>View Quarterly Report</sawkpi:name>
+			<sawkpi:description/>
+			<sawkpi:link type="URL">
+				<sawkpi:path>http://www.oracle.com/</sawkpi:path>
+			</sawkpi:link>
+		</sawkpi:relatedDocument>
+		<sawkpi:relatedDocument>
+			<sawkpi:name>Get Stock Quote</sawkpi:name>
+			<sawkpi:description/>
+			<sawkpi:link type="URL">
+				<sawkpi:path>http://finance.yahoo.com/q?s=orcl</sawkpi:path>
+			</sawkpi:link>
+		</sawkpi:relatedDocument>
+	</sawkpi:relatedDocuments><sawkpi:dimensions><sawkpi:dimension dimensionID="Products.Products Hierarchy">
+			<saw:column columnID="c851b79a7414032bf" xsi:type="saw:hierarchicalColumn" dimensionID="H1 Products" hierarchyID="Products Hierarchy" tableName="Products"/>
+		</sawkpi:dimension><sawkpi:dimension dimensionID="&quot;Office Regions&quot;.&quot;D50  Region&quot;"><saw:column xsi:type="saw:regularColumn" columnID="c720c181eecfe603c"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Office Regions&quot;.&quot;D50  Region&quot;</sawx:expr></saw:columnFormula></saw:column></sawkpi:dimension><sawkpi:dimension dimensionID="&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;"><saw:column xsi:type="saw:regularColumn" columnID="c8b49bb37a66983dd"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></saw:columnFormula></saw:column></sawkpi:dimension></sawkpi:dimensions><sawkpi:postUpdateBusinessRules><sawkpi:kpiBusinessRule isDefault="true"><sawkpi:businessRule/></sawkpi:kpiBusinessRule></sawkpi:postUpdateBusinessRules><sawkpi:actualValue isWritable="false">
+		<saw:column columnID="c74051cff425929cb" xsi:type="saw:regularColumn">
+			<saw:columnFormula>
+				<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+			</saw:columnFormula>
+			<saw:displayFormat>
+				<saw:formatSpec suppress="repeat" wrapText="true">
+					<saw:dataFormat xsi:type="saw:currency" currencyTag="int:wrhs" commas="true" negativeType="paren" minDigits="0" maxDigits="0"/>
+				</saw:formatSpec>
+			</saw:displayFormat>
+			<saw:tableHeading>
+				
+			</saw:tableHeading>
+			<saw:columnHeading>
+				
+			</saw:columnHeading>
+		</saw:column>
+	</sawkpi:actualValue><sawkpi:targetSets><sawkpi:targetSet isDefault="true" name="Default">
+			<sawkpi:targetValue isWritable="false">
+				<saw:column columnID="cde70b8f5b671bd97" xsi:type="saw:regularColumn">
+					<saw:columnFormula>
+						<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;</sawx:expr>
+					</saw:columnFormula>
+					<saw:tableHeading>
+						
+					</saw:tableHeading>
+					<saw:columnHeading>
+						
+					</saw:columnHeading>
+				</saw:column>
+			</sawkpi:targetValue>
+			<sawkpi:thresholds goal="high" treatNoDataAs="NOSTATUS" scoreType="PERCENTOFTARGET" thresholdType="PERCENTOFTARGET">
+				<sawkpi:thresholdRange ID="29f35e30-0ba3-1000-8567-0ae4eb530000" value="100" assessmentStateKey="OK"><sawkpi:statusText>
+						<saw:caption captionID="kcap12832459_1461">
+							<saw:text>OK</saw:text>
+						</saw:caption>
+					</sawkpi:statusText><sawkpi:rangeExpression>
+						<sawx:expr xsi:type="sawx:comparison" op="greater">
+							<sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+							<sawx:expr xsi:type="sawx:arithmetic" op="multiply"><sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="targetVal"/><sawx:expr xsi:type="xsd:decimal">1</sawx:expr></sawx:expr>
+						</sawx:expr>
+					</sawkpi:rangeExpression><sawkpi:iconScheme color="green" icon="fmap:common/kpi_ok_status.gif"/></sawkpi:thresholdRange>
+				<sawkpi:thresholdRange ID="29f38540-0ba3-1000-8567-0ae4eb530000" value="50" assessmentStateKey="WARNING"><sawkpi:statusText>
+						<saw:caption captionID="kcap12832459_1462">
+							<saw:text>WARNING</saw:text>
+						</saw:caption>
+					</sawkpi:statusText><sawkpi:rangeExpression>
+						<sawx:expr xsi:type="sawx:comparison" op="greater">
+							<sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+							<sawx:expr xsi:type="sawx:arithmetic" op="multiply"><sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="targetVal"/><sawx:expr xsi:type="xsd:decimal">0.9</sawx:expr></sawx:expr>
+						</sawx:expr>
+					</sawkpi:rangeExpression><sawkpi:iconScheme color="yellow" icon="fmap:common/kpi_warning_status.gif"/></sawkpi:thresholdRange>
+				<sawkpi:thresholdRange ID="29f38541-0ba3-1000-8567-0ae4eb530000" value="0" assessmentStateKey="CRITICAL"><sawkpi:statusText>
+						<saw:caption captionID="kcap12832459_1463">
+							<saw:text>CRITICAL</saw:text>
+						</saw:caption>
+					</sawkpi:statusText><sawkpi:rangeExpression>
+						<sawx:expr xsi:type="sawx:comparison" op="lessOrEqual">
+							<sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+							<sawx:expr xsi:type="sawx:arithmetic" op="multiply"><sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="targetVal"/><sawx:expr xsi:type="xsd:decimal">0.9</sawx:expr></sawx:expr>
+						</sawx:expr>
+					</sawkpi:rangeExpression><sawkpi:iconScheme color="red" icon="fmap:common/kpi_critical_status.gif"/></sawkpi:thresholdRange>
+			</sawkpi:thresholds>
+		</sawkpi:targetSet></sawkpi:targetSets><sawkpi:customColumns><saw:column xsi:type="saw:regularColumn" columnID="cd1c72976351fe231"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">AGO(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1)</sawx:expr></saw:columnFormula><saw:columnHeading><saw:caption><saw:text>Year Ago Revenue</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf6e8a9d30142e7f8"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot; -  AGO(&quot;Base Facts&quot;.&quot;1- Revenue&quot;, 1)</sawx:expr></saw:columnFormula><saw:columnHeading><saw:caption><saw:text>Growth $</saw:text></saw:caption></saw:columnHeading></saw:column></sawkpi:customColumns></sawkpi:kpi>

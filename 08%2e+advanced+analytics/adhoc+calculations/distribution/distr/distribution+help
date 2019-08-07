@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria subjectArea="&quot;A - Sample Sales&quot;" xsi:type="saw:simpleCriteria" withinHierarchy="true">
+    <saw:columns>
+      <saw:column columnID="c0" xsi:type="saw:regularColumn">
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12387046_42950" fmt="html">
+            <saw:text>Dummy Object</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12387046_42951" fmt="html">
+            <saw:text>Can be any working column</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">count(&quot;Time&quot;.&quot;T05 Per Name Year&quot;)</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+    </saw:columns>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat/>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!01">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#9999CC"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!11">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!12">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="8" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#9999CC"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!21">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!211">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!22">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="8" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#9999CC"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!31">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!33">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!34">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!35">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!351">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!352">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!36">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="8" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#9999CC"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!41">
+            <saw:displayFormat>
+              <saw:formatSpec borderPosition="8" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#9999CC"/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+      </saw:cvTable>
+      <saw:pageProps orientation="portrait" printRows="visible">
+        <saw:pageHeader show="false"/>
+        <saw:pageFooter show="true" showOnDashboard="true">
+          <saw:zone position="top">
+            <saw:displayFormat>
+              <saw:formatSpec hAlign="center"/>
+            </saw:displayFormat>
+          </saw:zone>
+          <saw:zone position="left">
+            <saw:displayFormat>
+              <saw:formatSpec hAlign="left" width="33%" backgroundColor="#E2E2F9" fontStyle="italic" borderPosition="10" borderColor="#000000" fontSize="9" borderStyle="single"/>
+            </saw:displayFormat>
+            <saw:caption fmt="text" captionID="kcap12387046_42952">
+              <saw:text>Sample Sales Reports Help</saw:text>
+            </saw:caption>
+          </saw:zone>
+          <saw:zone position="center">
+            <saw:displayFormat>
+              <saw:formatSpec hAlign="center" width="34%" backgroundColor="#E2E2F9" borderColor="#000000" fontSize="9" fontStyle="italic" borderPosition="10" borderStyle="single"/>
+            </saw:displayFormat>
+            <saw:caption fmt="text" captionID="kcap12387046_42953">
+              <saw:text>@{savedName}</saw:text>
+            </saw:caption>
+          </saw:zone>
+          <saw:zone position="right">
+            <saw:displayFormat>
+              <saw:formatSpec hAlign="right" width="33%" backgroundColor="#E2E2F9" borderColor="#000000" fontSize="9" fontStyle="italic" borderPosition="10" borderStyle="single"/>
+            </saw:displayFormat>
+            <saw:caption fmt="text">
+              <saw:text/>
+            </saw:caption>
+          </saw:zone>
+          <saw:zone position="bottom">
+            <saw:displayFormat>
+              <saw:formatSpec hAlign="center"/>
+            </saw:displayFormat>
+          </saw:zone>
+        </saw:pageFooter>
+      </saw:pageProps>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="none" logoUrl="res/sk_oracle10/catalog/myportal.gif" includeName="false" autoPreview="true"><saw:logoFormat>
+        <saw:displayFormat>
+          <saw:formatSpec vAlign="middle"/>
+        </saw:displayFormat>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderPosition="10" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#000000" backgroundColor="#E2E2F9" vAlign="middle" height="25"/>
+      </saw:displayFormat><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#000000" fontStyle="bold,italic" fontSize="14" paddingLeft="10" paddingRight="0" paddingTop="0" paddingBottom="0" vAlign="middle"/>
+        </saw:displayFormat>
+        <saw:caption fmt="text" captionID="kcap12387046_42945">
+          <saw:text>Statistical Distribution - Samples Report Help</saw:text>
+        </saw:caption>
+      </saw:title></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c0"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!21" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12387046_42946">
+          <saw:text>&lt;!-- ==== 2 LAYOUT ======--&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;2. Layout :&lt;/b&gt;&lt;/font&gt;&lt;!-- ==== 2.1 Views ======--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;2.1 Views Layout: &lt;/b&gt;&lt;/font&gt;&lt;/u&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/viewui/chart/axispievalues.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Chart 1 &lt;/b&gt;&lt;/font&gt; &lt;b&gt; - Value Distribution &lt;/b&gt; - shows a bar chart of the metric value distribution by bins. Y axis for the bar represents the percentage of total value for whole population. The overriding line indicates cumulative percentages values. The x axis of this chart represents each calculated bin, the axis displays the min and the max value of each bucket. The red marker on the chart visualizes which bucket does the average value belong to.&lt;br/&gt;&lt;!-- note --&gt;&amp;nbsp;&lt;img src=&quot;res/s_oracle10/meters/icon/sm/Error.gif&quot;&gt;&lt;i&gt;&lt;font color=#996600&gt;&lt;b&gt;&amp;nbsp;! Note :&lt;/b&gt; Limitation on Inability to infer empty bins: &lt;/font&gt;current version of the report is not able to show &#39;empty buckets&#39;. Ie, as the reports calculates the bin number for each record, it can not add a row to the data set if no record fall in a specific bucket. In this case of a distribution, such a bucket will not appear on the report at all. This does &lt;u&gt;not&lt;/u&gt; impact the calculations shown in the report nor the validity of all information shown, but only impacts the visual aspect of the distribution charts. This limitation can be fixed by adding a &#39;Union&#39; query to this Answers definition, with a firm numbering of each bucket in it.&lt;/i&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/viewui/chart/axispievalues.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Chart 2 &lt;/b&gt;&lt;/font&gt;&lt;b&gt; - Individual Counts Distribution &lt;/b&gt; - is similar to Chart 1, but plots occurrences counts as opposed to metric value. The bar chart indicates the count of distinct individuals in each bucket, and hence is representative of a probability to fall in each bucket. The x axis of this chart represents the bucket number. To see the calculated min and the max value of a bucket number, refer to the table below the charts.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/viewui/chart/axispievalues.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Chart 3 &lt;/b&gt;&lt;/font&gt;&lt;b&gt; - Confidence Intervals &lt;/b&gt; - shows value percentage distribution, and highlights the confidence interval limits in each bucket.For example, what is the cumulated possibility that an individual falls under the upper limit of that interval. This indicates the probability that any random individual will fall below a given value in the range. There is 20% probability that a random record falls within the first quintile. Similarly, there is 40% probability for any random individual to fall within first two quintiles, etc...</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!211" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12393384_200">
+          <saw:text>&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/picker/icolumn.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Summary single line table&lt;/b&gt;&lt;/font&gt; below Chart 2 shows several descriptive and dispersion measures on selected population: &lt;br/&gt;- count of individuals, &lt;br/&gt;- central location: median, average (mean)&lt;br/&gt;- dispersion: range, coefficient of variation (CV). CV is a statistical measure of the dispersion of data points in a data series around the mean. it represents the ratio of the standard deviation to the mean, and it is a useful indicator for comparing the degree of variation from one data series to another. This is also valid if the means are drastically different from each other. Coefficient of variation can help determine how much volatility (risk) you are assuming in comparison to the amount of return you can expect from an investment. Basically, the lower the ratio of standard deviation to mean return, the lower the risk and the better the risk-return tradeoff. Distributions with CV below 1 are considered low-variance, while those with CV &amp;#62; 1 are considered high-variance. &lt;br/&gt;- skewness: This is the orientation of the median relative to the quartiles,for example Pearsons coefficient of skewness. This coefficient measures the asymmetry of the distribution. It is defined as: 3x(mean - median) / standard deviation. The coefficient is positive (positive skew) when the median is less than the mean and in that case the tail of the distribution is skewed to the right. When the median is more than the mean, the coefficient is negative and the tail of the distribution is skewed in the left direction. If there is no skewness or the distribution is symmetric like the bell-shaped normal curve then the mean = median = mode, and the coefficient is close to zero.&lt;br/&gt;- Bin amplitude: range of each single bin &lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/picker/icolumn.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Table&lt;/b&gt;&lt;/font&gt; - at the bottom of the page displays the various measures details per bin, that support the charts. It displays the sum and average of metric value for each bin, rolling cumulative value,and occurrences (number of records) that fall into each bin and their cumulative count.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/picker/icolumn.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Select information to display: Tables with detailed data&lt;/b&gt;&lt;/font&gt; display the detail of the population records that support these distribution. Use this view if you are interested in downloading or drilling into details. The top selector in this detailed table allows the user to specify which bin number# to show detail for.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/picker/ifilter.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Filter&lt;/b&gt;&lt;/font&gt; - block at the bottom of the page displays the filters currently applied to the results displayed. This filter block is only visible if there are filters applied.&lt;br/&gt;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!22" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12393384_201">
+          <saw:text>&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/picker/ifilter.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Page filter prompts&lt;/b&gt;&lt;/font&gt; at the bottom of the page allow you to filter down scope of the whole report. Click a button next to each field and enter specific list of values for this field. When done, select &lt;b&gt;Go&lt;/b&gt; to the right of the prompts. Filter prompts can also be hidden when collapsing the bottom page section, by clicking the icon on top right side of that section.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/viewui/chart/axislegend.gif&quot;&gt;Top page &lt;font color=#666699&gt;&lt;b&gt; Select Dimension &lt;/b&gt;&lt;/font&gt; - drop down selector allows you to choose which dimension to analyze in the report. &lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/viewui/chart/axislegend.gif&quot;&gt;Top page &lt;font color=#666699&gt;&lt;b&gt; Select Metric&lt;/b&gt;&lt;/font&gt; - drop down selector allows you to choose which metric to analyze in the report. &lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/viewui/chart/axislegend.gif&quot;&gt;Top page &lt;font color=#666699&gt;&lt;b&gt; Divide Metric by &lt;/b&gt;&lt;/font&gt;drop down selector allows you to enter a divider value for the metric, in order to optimize the screen views display. For example, enter 1000 to see metric expressed in thousands, or enter 0.1 to see metric values multiplied by 10. Don&#39;t forget to Hit &quot;&lt;b&gt;Go&lt;/b&gt;&quot; button to update the report data.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_oracle10/viewui/chart/axislegend.gif&quot;&gt;Top page &lt;font color=#666699&gt;&lt;b&gt; Set # of Bins&lt;/b&gt;&lt;/font&gt; - lets you enter the number of buckets to use for the distribution. &lt;br/&gt;&lt;!-- ==== 2.2 Navigations ======--&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;2.2 Navigations: &lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;This page has no Drilling or Navigations enabled. &lt;br/&gt;&amp;nbsp;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!11" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12387046_42947">
+          <saw:text>&lt;!-- ==== 1 PURPOSE and USAGE ==--&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;1. Purpose and Usage :&lt;/b&gt;&lt;/font&gt;&lt;!-- ==== 1.1 Purpose ======--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;1.1 Purpose: &lt;/b&gt;&lt;/u&gt;&lt;/font&gt;&lt;br/&gt;This dashboard page describes basic statistical discrete distribution views of a selected population. It lets the user dynamically define the number of buckets to use for statistical distribution, as well as the grain in the population, and provides several dynamic representations in the results. &lt;br/&gt;This report is useful to understand how the individuals of a population are distributed between the minimum and the maximum values, and to suggest the probabilities of where an individual may fall in a specific bucket. The report applies to numerous business situations: distribution of order values, distribution of call times, distribution of salaries, and so on. It allows visualizing skewness of a given population versus typical distribution.</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!12" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12393384_202">
+          <saw:text>&lt;!-- ==== 1.2 Usage  ======--&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;1.2 Usage: &lt;/b&gt;&lt;/u&gt;&lt;/font&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&amp;nbsp;From drop down list of choices at the top of page, select a metric to analyze from &quot;Select Metric&quot; prompt and select a dimension from &quot;Select Dimension&quot; prompt and select &lt;b&gt;Go&lt;/b&gt;. &lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&amp;nbsp;Set the number of bins to desired value on the prompt at the top of the page and hit &quot;Go&quot; button.&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&amp;nbsp;If necessary, enter a division factor (For example, 1000) in &quot;Divide Metric Value by&quot; prompt at top of the page and select &lt;b&gt;Go&lt;/b&gt;. &lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&amp;nbsp;Filter the scope of the report as required by using &quot;Page Filter Prompts&quot; at bottom of page. &lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&amp;nbsp;To view tables with detailed data, select the option from &quot;Select information to display :&quot; drop down.&lt;br/&gt;&amp;nbsp;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!01" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12387046_42948">
+          <saw:text>&lt;br/&gt;&lt;table width=370 cellpadding=8 cellspacing=0 bgcolor=&quot;#F9F9F9&quot; style=&quot;border: 1px solid #D0D0E0&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;font color=#666699 size=2&gt;&lt;b&gt;&lt;i&gt;Contents :&lt;/i&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&amp;nbsp;1. Purpose and Usage&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;1.1 Purpose &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;1.2 Usage &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;2. Layout&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;2.1 Views Layout &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;2.2 Navigations &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;3. Technical Design&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.1 RPD Columns Required &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.2 Specific Filters &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.3 Presentation Variables &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.4 Top Page Prompts and Page Filter Prompts &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.5 Answers Calculations &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.6 Limitations&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;4. Leverage and Deploy&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;4.1 Deploying Sample Sales reports in other environments &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;4.2 Other Adaptations &lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!31" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12387046_42949">
+          <saw:text>&lt;!-- ==== 3. TECH DESIGN ======--&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;3. Technical Design :&lt;/b&gt;&lt;/font&gt;&lt;!-- ==== 3.1 RPD columns required ======--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/common/opcopy.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.1 RPD Columns Required: &lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;font color=black&gt; This report requires at minimum, the following RPD objects :&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;- one metric, with any default aggregation rule and any number format. For example, INT, Double, etc.)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;- one dimension that can be of any type.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Grain of the query results dataset: &lt;/b&gt; Dimension 1 individuals. There is one row per dimension 1 individual in the query results. &lt;br/&gt;&lt;!-- note --&gt;&amp;nbsp;&lt;img src=&quot;res/s_oracle10/meters/icon/sm/Error.gif&quot;&gt;&lt;i&gt;&lt;font color=#996600&gt;&lt;b&gt;&amp;nbsp;! Note :&lt;/b&gt; The validity of the calculated results of Answers in the report depends on the appropriate level of grain maintained in the query results, for example, not adding additional dimensions without updating the aggregations, and maintaining the appropriate aggregations clauses (&#39;by&#39; clauses) in each formula.&lt;/font&gt;&lt;/i&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt; The report also leverages numerous other columns in its is prompted filters statements. These specific filter statements columns are only necessary when using page filter values or when a report is set as a target for a navigation. The report also works without filtering, regardless of is prompted filter statements deleted.&lt;!-- ==== 3.2 Filters ==========--&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/common/opfilter.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.2 Specific Filters :&lt;/u&gt; &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;The report does not have any specific filters besides &lt;b&gt;is prompted&lt;/b&gt; filters mentioned above.</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!33" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12393384_203">
+          <saw:text>&lt;!-- ==== 3.3 Presentation Variables ==========--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/common/oprename.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.3 Presentation Variables :&lt;/u&gt; &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;Presentation variables in the report add user interaction at the dashboard page level. A user can select values for metrics column names or other objects directly in the dashboard page prompt. It updates dynamically in the report design. There is no need for opening Answers and saving a new version of the report.&lt;br/&gt;This report&#39;s design includes the following Presentation Variables :&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; {Met01}: &lt;/b&gt;Holds the column name of the metric column to be used.&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; {Dim01}: &lt;/b&gt;Holds the column name of the dimension column to be used.&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; {NumBands}: &lt;/b&gt;Holds the number of fixed bins to use for the distribution analysis.&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; {Denominator} :&lt;/b&gt;Used to divide the value of the selected metric, and display a number expressed in units, thousands, millions, and so on, as per user choice.&lt;!-- note --&gt;&lt;br/&gt;&amp;nbsp;&lt;img src=&quot;res/s_oracle10/meters/icon/sm/Error.gif&quot;&gt;&lt;i&gt;&lt;font color=#996600&gt;&lt;b&gt;&amp;nbsp;! Note :&lt;/b&gt; Prompt objects defining each of the Presentation Variables used in the report are required on the dashboard page where report is posted. If not present, default values for Presentation Variables are used as defined in Answers columns.&lt;/font&gt;&lt;/i&gt;&lt;!-- Useful: --&gt;&lt;br/&gt;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/picker/icheck.gif&quot;&gt;&lt;i&gt;&lt;font color=#0000ff&gt;&lt;b&gt;&amp;nbsp;! Useful: &lt;/b&gt;Presentation variables can be removed from the report design and replaced by fixed columns. See Home Page Help for more information.&lt;/font&gt;&lt;/i&gt;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!34" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12393384_204">
+          <saw:text>&lt;!-- ==== 3.4 Prompts ======--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/common/opformula.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.4 Top Page Prompts and Page Filter Prompts :&lt;/u&gt; &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;This report leverages the following prompt objects that are needed at the dashboard page level :&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; &#39;Divide Metric Value by&#39;&lt;/b&gt; top page prompt: Defines the divider value stored into Presentation Variable {Denominator}.&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; &#39;Select Metric&#39;&lt;/b&gt; top page prompt: Defines the column name stored into Presentation Variable {Met01}.&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; &#39;Page Filter Prompts&#39;&lt;/b&gt; at the bottom of the page: Allows filtering the report scope for selected attributes.&lt;br/&gt; You can edit this prompt block to change or update the attributes. Validate that any new attributes is present as an is prompted filter in the reports.&lt;!-- Useful: --&gt;&lt;br/&gt;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/picker/icheck.gif&quot;&gt;&lt;i&gt;&lt;font color=#0000ff&gt;&lt;b&gt;&amp;nbsp;! Useful :&lt;/b&gt; For more information on customizing choices or defaults in Top Page Prompts, see item &lt;/i&gt;How can you change choices in drop downs at the top of each dashboard page ?&lt;i&gt; in Home Page Help. &lt;/font&gt;&lt;/i&gt;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!35" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12393384_205">
+          <saw:text>&lt;!-- ==== 3.5 Answers Calcs ======--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/common/opformula.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.5 Answers Calculations :&lt;/u&gt; &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;This report leverages multiple aggregations and calculations designed directly in Answers. Most of the Answers based calculations in the report have a header name in Answers of: &lt;b&gt;&quot;Answers Calc&quot;&lt;/b&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Bin &lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; FLOOR [ (Metric Value - MIN(Metric)) / (MAX(Metric)*1.0001-MIN(Metric)) * {NumBands} ] + 1&lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: None&lt;br/&gt;- Description: This column calculates which bucket each individual falls in by its metric value. The number of desired buckets is specified with {NumBands} Presentation Variable. The calculation of the bucket for a given individual is the distance of this individual to the bottom value of the population, divided by the range of this population, multiplied by number of total buckets desired. The Floor expression rounds this value to an integer. The 1.0001 multiplier factor guarantees that the main ratio will never be equal to 1, to avoid having one extra bucket for single top individual.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Bin Bounds&lt;/b&gt; &lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; [ Bin Number for Current Record * Range of the Metric / Total number of Bins ) + Value of Bottom Individual ]&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Concatenated with &#39; - &#39; and &lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;[ (Bin Number for Current Record + 1) * Range of the Metric / Total number of Bins ) + Value of Bottom Individual ]&lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: This column converts the bin number in expression of the bound values for this bin. Ie, this bin starts at value X and ends at value Y. The interval X-Y should represent 1/ total number of bins * Range of metric value..&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Avg Value&lt;/b&gt; &lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Metric value divided by denominator Presentation Variable &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Average&lt;br/&gt;- Description: This column aggregates the metric values to show the average value&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Confidence&lt;/b&gt; &lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; &lt;b&gt;From&lt;/b&gt; ((Quintile of metric )-1 ) * 20% &lt;b&gt;To&lt;/b&gt; (Quintile of metric ) * 20% &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: This indicates the probability that any random individual will fall below a given value in the range. There is 20% probability that a random record falls within the first quintile, ie, that is value be below the cap (max) value of first quintile. Similarly, there is 40% probability for any random individual to fall within first two quintiles, etc... &lt;br/&gt;&amp;nbsp;&amp;nbsp;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!351" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12393384_206">
+          <saw:text>&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Cum Value&lt;/b&gt; &lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Rolling Sum (Metric) &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: &lt;b&gt;Default&lt;/b&gt;&lt;br/&gt;- Description: This column cumulates a rolling sum of the metric value. It&#39;s used in the value distribution chart to display the cumulative value line.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt;Individual Counts&lt;/b&gt;&lt;br/&gt;- Basic formula structure :&lt;font color=darkblue&gt; 1 (constant value)&lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Sum&lt;br/&gt;- Description: Counting the records in each bucket in the query&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Cum Count&lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Rolling sum (1) &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: Cumulates a rolling counter of the records. This column is used in the value distribution chart to display the cumulative value line.&lt;br&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Pct Value&lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Metric value / Sum(Metric Value) * 100 &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Sum&lt;br/&gt;- Description: expresses the metric value as a percentage of the total value in the query population.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Cum Pct Value&lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Rolling sum [ Metric value / Sum(Metric Value) * 100 ] &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: rolling sum that cumulates metric value expressed as a percentage of the total value in the query population.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt;Includes Avg&lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Case when (distance between metric value for current record and Avg (metric)) is minimum, then mark all individuals in the bin with 0 else null.&lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: This marker locates the bin where the closest individual to Average population value is located. This marker is then used in the table and chart views.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt;Median&lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Median (Metric) &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: Indicates the median value of the metric for the population. &lt;br/&gt;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!352" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12393384_207">
+          <saw:text>&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Skewness (Pearson&#39;s)&lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; 3 * [ mean (metric) - median(metric) ]/ standard deviation(metric) &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: Pearsons coefficient of skewness, orientation of the median relative to the quartiles. This coefficient measures the asymmetry of the distribution. When coefficient is positive (positive skew) the median is less than the mean and in that case the tail of the distribution is skewed to the right. When the median is more than the mean, the coefficient is negative and the tail of the distribution is skewed in the left direction. If there is no skewness or the distribution is symmetric like the bell-shaped normal curve then the mean equals the median which equals the mode, and the coefficient is close to zero. &lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Range&lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Max (Metric) - Min (Metric) &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: Displays the range of the metric value for the whole population.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt;Coeff of Variation&lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Standard Deviation (Metric) / Mean (Metric)&lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: coefficient of variation is a statistical measure of the dispersion of data points in a data series around the mean. it is a useful indicator for comparing the degree of variation from one data series to another, even if the means are drastically different from each other. Coefficient of variation can help determine how much volatility (risk) in the population.: The lower the ratio of standard deviation to mean return, the lower the risk and the better the risk-return tradeoff. Distributions with CV below 1 are considered low-variance, while those with CV &gt; 1 are considered high-variance&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Bin Amplitude&lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; [Max (Metric) - Min (Metric)] / Number of Bins in the whole population&lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: This column divides the range by the number of bins desired in the distribution analysis, and indicates the value span of a single bin.&lt;br/&gt;&lt;!-- Useful: --&gt;&lt;br/&gt;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/picker/icheck.gif&quot;&gt;&lt;i&gt;&lt;font color=#0000ff&gt;&lt;b&gt;&amp;nbsp;! Useful :&lt;/b&gt; {Denominator} Presentation Variable is present multiple times in the report, in combination with metric value objects. This variable is only needed to allow report users to dynamically show values expressed in units, thousands, millions, and so on.&lt;/font&gt;&lt;/i&gt;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!36" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12393384_208">
+          <saw:text>&lt;!-- ==== 3.6 Limitations ====--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/b_mozilla_4/menuflag.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/ibots/file_delete.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.6 Limitations: &lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;font color=darkred&gt;&lt;b&gt; Limitation on Inability to infer empty bins: &lt;/font&gt;&lt;/b&gt;Current version of the report is not able to show &#39;empty buckets&#39;. As the report calculates the bin number for each record, it can not add a row to the data set if no records fall in a specific bucket. In this case of a distribution, such a bucket does not display on the report at all. This does not impact the calculations shown in the report or the validity of all information shown, but only impacts the visual aspect of the distribution charts. This limitation can be fixed by adding a Union query to this Answers definition with a firm numbering of each bucket in it.&lt;/i&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_oracle10/treeview/dot.gif&quot;&gt;&lt;b&gt; Answers forced aggregation rules for Metrics used in this report: &lt;/b&gt;&lt;br/&gt; Some columns in this report may have aggregation rules set to a value other than Default (see details of columns in item 3.5 above), or have calculations that include a formula forcing aggregation of the column data.&lt;br&gt; - overriding these default aggregation rules with different values may prevent the report to render correct results.&lt;br&gt;- In most cases, generic reports support use of any type of metric, as they fully leverage the RPD natural aggregation set for any metric. For example, whether the metric selected for the Presentation Variable naturally aggregates with a sum rule (like revenue), an average rule (like DSO ratio) or a period end aggregation (like headcount), or anything else, the report properly leverages that rule. &lt;br&gt;- In some cases, the calculations required by the report make it necessary to force a fixed aggregation within the column definition. These reports may not leverage natural aggregation of any metric, but expect to be run only with a metric of proper type (aggregation) in order to see correct results. Reports leveraging some specific fixed aggregations are: Statistical Distribution, Comparative Distribution, Eighty Twenty, Deciling Comparative, Value Based Tiering, Proportional TopNs,Toppers Heatmap, and Waterfall. A choice of metrics for these reports is restricted to only sum aggregative reports compared to other reports&lt;br&gt;To adapt fixed aggregation reports for using other metric types, edit the report in Answers and update specific columns or formulas in the report to a different aggregation rule than the one specified.&lt;br&gt;&lt;br/&gt;&amp;nbsp;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!41" autoPreview="true">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12851338_1689">
+          <saw:text>&lt;!-- ==== 4. Leverage and Deploy ==--&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_oracle10/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;4. Leverage and Deploy :&lt;/b&gt;&lt;/font&gt;&lt;ol start=&quot;1&quot;&gt;&lt;p&gt;&lt;!--=== 1 ===--&gt;&lt;li style=&quot;color: #666699; font-size:8pt; font-weight:bold; font-style: italic&quot;&gt;How do you export, copy, or recreate a Samples report into a different environment?&lt;/li&gt;&lt;hr style=&quot;color: #666699; width: 100%; height: 1px;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight:normal; font-style:normal&quot;&gt;Samples reports can be used to familiarize a user with functionality available in Answers. For example, Samples reports can help users understand what can be done within Answers and Dashboards without requiring any RPD work. At the same time, many of the answers aggregations used in Sample Sales could instead be maintained in RPD metadata directly, to simplify reports design. &lt;br/&gt;Sample Sales can also be leveraged as template reports to deploy and copy within different environments,&lt;u&gt; using different models, Subject Areas, and different objects.&lt;/u&gt;:&lt;ul&gt;&lt;li&gt;Oracle BI EE group has designed a utility to easily complete this operation: &lt;font color=#000080&gt;&lt;b&gt;Content Accelerator Framework V1.0, CAF&lt;/font&gt;&lt;/b&gt;. This utility allows to easily and rapidly replicate any existing report into different OBI EE environments, leveraging different objects. It provides an intuitive interface to complete exact mapping report code, allowing you to substitute existing objects and Subject Area informations with any other environment information. Samples reports and dashboard pages can be fully cloned quickly using CAF V1.0 utility. The utility is not an Oracle Corp licensed product, it is accessible for download on Oracle Technology Network (http://www.oracle.com/technology/products/bi/enterprise-edition.html). You can also contact your Oracle representative for more information on how to best leverage CAF V1.0..&lt;/li&gt;&lt;li&gt; An alternative to the CAF V1.0 utility is to manually edit every column of a report to clone, and replace each Presentation Variable or Presentation Variable default value to another object, from another environment. The name of the Subject Area must be updated as well from Advanced Tab in Answers.&lt;/li&gt;&lt;li&gt;To assist with this process, a set of Samples reports with no column Presentation Variables has been saved for this application. The reports use fixed metrics and dimensions columns in their answers definition, their syntax is simpler to understand and they are more appropriate for edits. They only exist for one Subject Area in the application and are saved under a folder &#39;Fixed Columns Reports&#39;, within the &#39;Reports&#39; folder. These reports are not exposed in any dashboard.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/p&gt;&lt;!--=== 2 ===--&gt;&lt;li style=&quot;color: #666699; font-size:8pt; font-weight:bold; font-style: italic&quot;&gt;How can you edit Answers columns and set different default objects on Presentation Variables ?&lt;/li&gt;&lt;hr style=&quot;color: #666699; width: 100%; height: 1px;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight:normal; font-style:normal&quot;&gt;Samples reports are made flexible by the extensive use of Presentation Variables in Answers columns. These Presentation Variables get set when the user selects the prompt values in the dashboard page and select &lt;b&gt;Go&lt;/b&gt;. The syntax of Presentation Variables in Answers column is the following: &quot;{variable name}{default value to use if variable value not defined anywhere else}&quot;. When viewing the report within Answers directly, Presentation Variables assume their default values.To update default values for a variable, update the default field with the correct value. The update must occur every where the variable is used in the report, for example all Answers columns and all content filter formulas must be thoroughly checked. Single same variable in a report must have a single unique default value.Another option is to ease this update is to copy the XML definition of the report from the Advanced tab, and replace the string sequence of the existing default value with a new one.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;!--=== 3 ===--&gt;&lt;li style=&quot;color: #666699; font-size:8pt; font-weight:bold; font-style: italic&quot;&gt;How do you remove Presentation Variables from report definition ?&lt;/li&gt;&lt;hr style=&quot;color: #666699; width: 100%; height: 1px;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight:normal; font-style:normal&quot;&gt;Presentation variables syntax can be removed from report definition, for either a single variable or for all. To remove a variable, open the report in Answers and replace the syntax: &quot;{variable name}{default value}&quot; by the simple presentation column syntax: &quot;TableName&quot;.&quot;ColumnName&quot;. The replace must occur every where the variable is used in the report, for example, all Answers columns and all content filter formulas must be thoroughly checked. An easier option is to copy the XML definition of the report from the Advanced tab, and replace the string sequence of the existing variable.&lt;br/&gt;Also, see next question in this document for accessing a set of reports that is not leveraging any Presentation Variables for its Answers columns.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;!--=== 4 ===--&gt;&lt;li style=&quot;color: #666699; font-size:8pt; font-weight:bold; font-style: italic&quot;&gt; Is there a set of Samples reports that does NOT use Presentation Variables for its Answers columns ?&lt;/li&gt;&lt;hr style=&quot;color: #666699; width: 100%; height: 1px;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight:normal; font-style:normal&quot;&gt;For convenience reasons, a set of Samples report with no Presentation Variables for columns has been saved. These reports use fixed metrics and dimensions columns in Answers, and only leverage Presentation Variables for objects other than metrics and dimension names. Their syntax is simpler to read and they are more appropriate for edits and adapt tasks. They only exist for one Subject Area in the application and are saved under a folder &#39;Fixed Columns Reports&#39;, within the &#39;Reports&#39; folder. These reports are not exposed in any dashboard.&lt;/ul&gt;&lt;/span&gt;&lt;/p&gt;&lt;/ol&gt;</saw:text>
+        </saw:caption>
+      </saw:staticText>
+    </saw:view>
+  </saw:views>
+</saw:report>

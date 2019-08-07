@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="1fgaj9fnrr1gec4v"><sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 7" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 4" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1866">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Creating Aggregate Tables
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 4" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1865">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 6" duid="tc8jgu68jioop6o7" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:htmlView name="HTML 5" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1867">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This page indicates the grain of all the aggregations that exist as part of the Flight Delay model, and how many rows each aggregate contains. The link on the right also provides the script to rebuild these aggregates, as a backup resource.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="90s7gq9ajf7tjah5" break="column" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:dashboardSection name="Section 3" duid="sa8777oncstprvl9" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>SampleApp_EXA Subject Area Aggregation Scripts</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="10" paddingBottom="5" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="new" showView="" duid="m8gl6mr6lc810lbd"><saw:caption><saw:text>PA scripts for SampleApp_EXA Aggregates Oracle DB</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Persistent Aggregates/PA scripts for SampleApp_EXA Aggregates Oracle DB"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="hno3th559r6b7rcl" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="4u0jou8p24osun8t" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Airlines Subject Area Aggregation Scripts</saw:text></saw:caption><saw:displayFormat><saw:formatSpec paddingTop="10" wrapText="true" borderPosition="none" paddingLeft="0" paddingRight="0" paddingBottom="5"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#333366" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:reportView name="Report 2" display="new" showView="" duid="bdsiedrvrb2jko80"><saw:caption><saw:text>Airlines Demo Agg Scripts ORCL</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Recovery/Airlines Demo Agg Scripts ORCL"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 3" frozen="false" canFreeze="false" break="column" duid="phgej12mbbfcllp3" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="um3nvdrpke4aqicc" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Approximate Size of Airline Aggregate Tables</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" hAlign="center" paddingTop="10"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="il6ibhqq5aeggve3"><sawd:HTML fmt="html">&lt;img src=&quot;/analyticsRes/SampleApp/SampleAppPics/Flight_Agg_Sizes.png&quot;/&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

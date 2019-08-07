@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/a. Overview/Data Models/Rev Budg Actual and Details DM.xdm"/>
+   <description>
+      <![CDATA[Data%20Model:%20Rev%20Budg%20Actual%20and%20Details%20DM%20--Layouts:%20XPT.%20Features:%20Multilingual%20report%20output%20with%20available%20translations%20(for%20report%20locales)%20Arabic%20(Egypt),%20French%20(France)]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="false"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value="false"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Budget Actual and Details">
+      <template label="Budget Actual and Details" url="B-A-D w Ord Stat.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Detail Table" url="Order Forecast and Details.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="pdf" locale="en_US" active="true" viewOnline="true"/>
+   </templates>
+</report>

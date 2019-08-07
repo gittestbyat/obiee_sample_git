@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="pfb6i2ho516soker" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<saw:pageProps orientation="portrait" printRows="visible" disableMargins="false">
+		<saw:pageHeader show="false"/>
+		<saw:pageFooter showOnDashboard="true" show="true">
+			<saw:zone position="top">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="left">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="left" width="33%" fontColor="#999999" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" oldID="kcap12832459_17">
+					<saw:text>OBI EE SampleApp</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="center">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" width="34%"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="right">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="right" width="33%" fontColor="#999999" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="bottom">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center"/>
+				</saw:displayFormat>
+			</saw:zone>
+		</saw:pageFooter>
+	</saw:pageProps>
+	<sawd:dashboardColumn name="Column 0" duid="94apgmot0sbao4qn" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 17" duid="onmrj50qvftd2q2j" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" borderColor="#CCCCCC" borderStyle="single" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="to5r0gq9f1vqa4br"><sawd:HTML fmt="html">[b]&lt;font size=4 align=left color=#0707DB&gt;OBI EE Samples Application Index&lt;/font&gt;[/b]</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 1" duid="nbqleb6doaalbf2l"><sawd:HTML fmt="text">This Page will only update with most recent webcat data if Webcat statistics scripts have been updated recently.</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" break="column" duid="q7q9bjhqcdm9hrh0" frozen="false" canFreeze="false" layoutType="minimumSize"><sawd:dashboardSection name="Section 6" showSectionTitle="false" duid="8k2co034ttvqr031" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>2.10 Descriptive Stats</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:reportView name="Report 2" display="embed" showView="" duid="pojgvknolq8j3jp0"><saw:caption><saw:text>Dashboards Index by Sections Ext</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Indexes/Dashboards Index by Sections Ext"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec width="20%" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

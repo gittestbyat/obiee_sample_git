@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="9f31ti0bhqmedam3"><sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 7" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 4" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1866">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Manage Cache via OBIEE ODBC Functions
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 4" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1865">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 5" duid="9svp7slg5jivcbtp" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" hAlign="left" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 5" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1867">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; Cache can be managed directly from the browser interface using OBIEE ODBC function calls.[br/]</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="hno3th559r6b7rcl" break="column" frozen="false" canFreeze="false" layoutType="minimumSize"><sawd:dashboardSection name="Section 1" duid="t5sbvsn883sik26u" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="1n98418nqflp4mc8"><sawd:HTML fmt="text">[b]Copy the full logical {Call...} command from an example in the logical SQL client window and click issue SQL :[/b]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" width="49%"/></saw:displayFormat><sawd:dashboardSection name="Section 0" duid="ihno4iq3ktaurv1o" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Purge BIEE cache for a selected Query</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="ck189htpnkqsmomq"><sawd:HTML fmt="html">&lt;font size=1&gt;{call [b]SAPurgeCacheByQuery[/b](&#39;[br/]
+&amp;nbsp;&amp;nbsp;SELECT[br/]
+&amp;nbsp;&amp;nbsp;&quot;A - Sample Sales&quot;.&quot;Products&quot;.&quot;P3&amp;nbsp; LOB&quot; s_1,[br/]
+&amp;nbsp;&amp;nbsp;&quot;A - Sample Sales&quot;.&quot;Sales Person&quot;.&quot;E1&amp;nbsp; Sales Rep Name&quot; s_2,[br/]
+&amp;nbsp;&amp;nbsp;&quot;A - Sample Sales&quot;.&quot;Time&quot;.&quot;T05 Per Name Year&quot; s_3,[br/]
+&amp;nbsp;&amp;nbsp;&quot;A - Sample Sales&quot;.&quot;Base Facts&quot;.&quot;1- Revenue&quot; s_4[br/]
+&amp;nbsp;&amp;nbsp;FROM &quot;A - Sample Sales&quot;&lt;/br&gt;&#39;)}&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 6" duid="ihno4iq3ktaurv1o" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Purge Cache for a physical Table</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat><sawd:htmlView name="HTML 6" duid="ck189htpnkqsmomq"><sawd:HTML fmt="html">&lt;font size=1&gt;{call [b]SAPurgeCacheByTable[/b](&lt;/br&gt;&#39;01 - Sample App Data (ORCL)&#39;,, &#39;BISAMPLE&#39;, &#39;SAMP_REVENUE_F&#39;&lt;/br&gt;)}&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 9" duid="ihno4iq3ktaurv1o" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>More Functions</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat><sawd:htmlView name="HTML 8" duid="uabitm7j31p6ssi7"><sawd:HTML fmt="html">&lt;font size=1 color=red&gt;- Call [b]SAPurgeAllCache[/b]()[br/]
+- Call [b]SAPurgeCacheByDatabase[/b]( &#39;DBName&#39; )[br/]&lt;/font&gt;&lt;font size=1&gt;
+- Call [b]SASeedQuery[/b]( &#39;select mytable.mycolumn from mySubjectArea&#39; );[br/]
+- Call [b]SAPurgeMCNCacheByCube [/b]( &#39;DBName&#39;, &#39;CubeName&#39;); Purges all cache entries that are associated with the specified physical cube[br/]
+- Call [b]SAPurgeALLIMCNCache [/b]();  Purges all SAP/BW cache entries. [br/]
+- Call [b]NQSSetSessionValue[/b](&#39;Float MyRepositoryVariable=200;&#39;) :  modify a repository session variable for the entire session scope[br/]&lt;/font&gt;
+
+
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" duid="ha2i4ee8ibhg7e0u" frozen="false" canFreeze="false" layoutType="minimumSize"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" width="49%"/></saw:displayFormat><sawd:dashboardSection name="Section 4" duid="gnhnvmh3mpufj7dj" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec wrapText="true" borderPosition="none"/></saw:displayFormat><sawd:iframeView name="IFrame 0" width="800px" height="600px" scrolling="yes" src="saw.dll?IssueRawSQL" duid="kkcqbuos72o7n2hu"/></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:physicalCriteria" connectionPool="Atomic Connection"><saw:columns><saw:column columnID="c0" xsi:type="saw:physicalColumnRef"><saw:columnHeading><saw:caption><saw:text>CARRIER</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column columnID="c1" xsi:type="saw:physicalColumnRef"><saw:columnHeading><saw:caption><saw:text>FLIGHT</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column columnID="c2" xsi:type="saw:physicalColumnRef"><saw:columnHeading><saw:caption><saw:text>ORIGIN</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column columnID="c3" xsi:type="saw:physicalColumnRef"><saw:columnHeading><saw:caption><saw:text>DEST</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column columnID="c4" xsi:type="saw:physicalColumnRef"><saw:columnHeading><saw:caption><saw:text>FLIGHT_DATE</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column columnID="c5" xsi:type="saw:physicalColumnRef"><saw:columnHeading><saw:caption><saw:text>DELAY</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column columnID="c6" xsi:type="saw:physicalColumnRef"><saw:columnHeading><saw:caption><saw:text>RANK</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns><saw:sql>WITH W0 AS (
+ SELECT CARRIER, FLIGHTNUM, MATCH, RANK() OVER (ORDER BY CNT DESC) AS RK
+  FROM 
+  (SELECT CARRIER,FLIGHTDATE,FLIGHTNUM,ORIGIN, DEST, ARRDELAY 
+   FROM PERFORMANCE 
+   WHERE ORIGIN =&#39;@{Origin}{SFO}&#39; AND DEST = &#39;@{Dest}{ORD}&#39;  )
+   MATCH_RECOGNIZE (
+      PARTITION BY CARRIER,FLIGHTNUM,ORIGIN,DEST
+      ORDER BY FLIGHTDATE ASC
+      MEASURES
+        MATCH_NUMBER() AS MATCH,
+        FINAL COUNT(B.*)+1  AS CNT
+      ONE ROW PER MATCH
+      AFTER MATCH SKIP PAST LAST ROW 
+      PATTERN (A B+) 
+      DEFINE B AS B.ARRDELAY &lt; PREV(B.ARRDELAY,1)*@{Factor}{0.95} )
+   ORDER BY CNT DESC),
+
+W1 AS (
+  SELECT CARRIER, FLIGHTNUM, ORIGIN, DEST, ADELAY,
+  FDATE, MATCH
+  FROM 
+  (SELECT CARRIER,FLIGHTDATE,FLIGHTNUM,ORIGIN, DEST, ARRDELAY 
+   FROM PERFORMANCE 
+   WHERE ORIGIN = &#39;@{Origin}{SFO}&#39; AND DEST = &#39;@{Dest}{ORD}&#39;  )
+   MATCH_RECOGNIZE (
+      PARTITION BY CARRIER,FLIGHTNUM,ORIGIN,DEST
+      ORDER BY FLIGHTDATE ASC
+      MEASURES
+        MATCH_NUMBER() AS MATCH,
+        FLIGHTDATE AS FDATE,
+        ARRDELAY AS ADELAY,
+        FINAL COUNT(B.*)+1  AS CNT
+      ALL ROWS PER MATCH
+      AFTER MATCH SKIP PAST LAST ROW 
+      PATTERN (A B+) 
+      DEFINE B AS B.ARRDELAY &lt; PREV(B.ARRDELAY,1)*@{Factor}{0.95} )
+   ORDER BY CNT DESC, FDATE ASC),
+   
+W2 AS (SELECT CARRIER,FLIGHTDATE,FLIGHTNUM,ORIGIN,DEST,ARRDELAY
+   FROM PERFORMANCE
+   WHERE ORIGIN = &#39;@{Origin}{SFO}&#39; AND DEST = &#39;@{Dest}{ORD}&#39;  )
+
+SELECT 
+W1.CARRIER AS CARRIER, W1.FLIGHTNUM AS FLIGHT, W1.ORIGIN, W1.DEST, W1.FDATE FLIGHT_DATE, W1.ADELAY DELAY, &#39;MATCH&#39; RANK
+FROM W1,W0 WHERE W0.RK&lt;@{Rank}{4}
+and W1.MATCH=W0.MATCH AND W1.CARRIER=W0.CARRIER AND W1.FLIGHTNUM=W0.FLIGHTNUM
+
+UNION ALL 
+SELECT DISTINCT W2.CARRIER,W2.FLIGHTNUM, W2.ORIGIN, W2.DEST, W2.FLIGHTDATE, W2.ARRDELAY, &#39;ALL&#39;
+FROM W0,W2 WHERE W0.RK&lt;@{Rank}{4}
+AND W0.CARRIER=W2.CARRIER AND W0.FLIGHTNUM=W2.FLIGHTNUM
+ORDER BY RANK, CARRIER, FLIGHT</saw:sql></saw:criteria><saw:views currentView="3"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="dvtchart!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c0"/><saw:edgeLayer type="column" columnID="c1"/><saw:edgeLayer type="column" columnID="c2"/><saw:edgeLayer type="column" columnID="c3"/><saw:edgeLayer type="column" columnID="c4"/><saw:edgeLayer type="column" columnID="c5"/><saw:edgeLayer type="column" columnID="c6"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true"><saw:display type="lineTimeSeries" subtype="default" renderFormat="default" mode="online" animateOnDisplay="false"><saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display><saw:canvasFormat height="280" width="640"><saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/><saw:title mode="custom"/></saw:canvasFormat><saw:selections><saw:categories><saw:category><saw:columnRef columnID="c4"/></saw:category></saw:categories><saw:measures showMeasureLabelsOnCategory="false"><saw:column measureType="y"><saw:columnRef columnID="c5"/></saw:column></saw:measures><saw:seriesGenerators><saw:seriesGenerator><saw:columnRef columnID="c6"/></saw:seriesGenerator><saw:measureLabels/></saw:seriesGenerators><saw:page/><saw:sections displayAsSlider="true"><saw:section><saw:columnRef columnID="c0"/></saw:section><saw:section><saw:columnRef columnID="c1"/></saw:section></saw:sections></saw:selections><saw:legendFormat position="none" transparentFill="true"/><saw:axesFormats><saw:axisFormat axis="Y1" displayScaleLabels="true"><saw:title mode="auto"><saw:caption truncate="false" truncateLength="0"/><saw:displayFormat><saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title><saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/><saw:textFormat fontSize="9"/><saw:scaleMarkers><saw:scaleMarker color="#000000" xsi:type="saw:scaleMarkerLine"><saw:lineWidth><sawx:expr xsi:type="xsd:decimal">1</sawx:expr></saw:lineWidth><saw:linePosition><sawx:expr xsi:type="xsd:decimal">0</sawx:expr></saw:linePosition></saw:scaleMarker></saw:scaleMarkers></saw:axisFormat><saw:axisFormat axis="X" displayScaleLabels="true"><saw:title mode="custom"><saw:caption truncate="false" truncateLength="0"><saw:text/></saw:caption><saw:displayFormat><saw:formatSpec fontSize="8"/></saw:displayFormat></saw:title><saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/><saw:textFormat fontSize="9"/></saw:axisFormat></saw:axesFormats><saw:seriesFormats><saw:seriesFormatGroup name="lineTimeSeries"><saw:seriesFormatRule><saw:seriesCondition position="1"/><saw:visualFormats><saw:visualFormat color="#999999" lineStyle="default" lineWidth="1" symbol="off"/></saw:visualFormats></saw:seriesFormatRule><saw:seriesFormatRule><saw:seriesCondition position="2"/><saw:visualFormats><saw:visualFormat color="#CC3333" lineStyle="default" lineWidth="3" symbol="off"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view></saw:views></saw:report>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/d. Applications/Human Resources/Data Models/Veterans Report Datamodel.xdm" cache="true"/>
+   <description>
+      <![CDATA[Data%20model:%20%22Veterans%20Report%20Datamodel%22.%20Layout%20types:%20PDF]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="60"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style=""/>
+   <templates default="VETS 2004 form">
+      <template label="VETS 2004 form" url="VETS2004.pdf" type="pdf" outputFormat="pdf" defaultFormat="pdf" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboard xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" style="" xmlVersion="200810300" promptsAutoComplete="userPref"><sawd:dashboardPageRef path="Expense Analysis" type="catalog" hidden="false"/><sawd:dashboardPageRef path="P &amp; L Allocations" type="catalog" hidden="true"/><sawd:dashboardPageRef path="P &amp; L What If" type="catalog" hidden="true" showAddToBBLink="false"/></sawd:dashboard>

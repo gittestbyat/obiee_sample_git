@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="ovu4ve6o93q03hhu"><sawd:dashboardColumn name="Column 0" canFreeze="true" duid="mgssfchjqai6dk0r" layoutType="specificSize"><sawd:dashboardSection name="Section 1" duid="fcgb5rooqiv4kbiq" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 2" duid="ek3ma3a16t8d9954"><sawd:HTML fmt="html">[br/][b]Targeting best customers[/b]: a data mining process that predicts which existing customers are most likely to purchase insurance.
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/TargetingCustomers.png&#39; /&gt;
+&lt;hr&gt;
+[br/][b]Market Basket Analysis[/b]: a workflow using association rules models to perform market basket analysis of retail customers.
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/MBA.png&#39; /&gt;
+&lt;hr&gt;
+[br/][b]Text Mining with an EM Clustering Model[/b]: a workflow that performs text mining activities with the EM algorithm.
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/EMClustering.png&#39; /&gt;
+&lt;hr&gt;
+[br/][b]Predicting LTV[/b]: a workflow using regression to predict life time value of customers.
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/LTVPrediction.png&#39; /&gt;
+&lt;hr&gt;
+[br/][b]Customer Segmentation[/b]: an example that include joins, transformations and clustering model to identify customer segments.
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/CustomerSegmentation.png&#39; /&gt;
+&lt;hr&gt;
+[br/][b]R Script: Scatterplot Matrix[/b]: an example on invoking R script from a DM workflow.
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/RScript_ Scatterplot.png&#39; /&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec width="50%" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="oe44ev0urvf7bock" layoutType="bestFit"><sawd:dashboardSection name="Section 0" collapsible="false" duid="q17oj9hp3c1d1208" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="9rmu96tcnrthld7r"><sawd:HTML fmt="html">[br/][b]LTV Bin Classification[/b]: an example on using classification model to predict customer LTV and transformations to present decision tree model in a hierarchical BI  presentation hierarchy.
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/LTVBin_Classification.png&#39; /&gt;
+&lt;hr&gt;
+[br/][b]Market Basket Analysis[/b]: an example on Market Basket Analysis (Association Data Mining model).
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/MBA2.png&#39; /&gt;
+&lt;hr&gt;
+[br/][b]Predicting Sales[/b]: a workflow using regression to predict sales (amount sold).
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/PredictingSales.png&#39; /&gt;
+&lt;hr&gt;
+[br/][b]Revenue Regression[/b]: a workflow using clustering and regression models to predict revenue.
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/RevenueRegression.png&#39; /&gt;
+&lt;hr&gt;
+[br/][b]Predictive Queries[/b]: examples of on-the-fly (model-less) datamining techniques in Oracle database 12c.
+[br/]&lt;img src=&#39;/analyticsRes/SampleApp/DMWorkflows/PredictiveQueries.png&#39; /&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

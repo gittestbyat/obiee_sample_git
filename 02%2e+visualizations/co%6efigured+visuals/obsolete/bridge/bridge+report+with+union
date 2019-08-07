@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">	
+   
+   
+   <saw:criteria withinHierarchy="true" xsi:type="saw:derivedCriteria">		
+      
+      
+      <saw:columns>			
+         
+         
+         <saw:column columnID="c34" xsi:type="saw:derivedColumn">				
+            
+            
+            <saw:tableHeading>					
+               
+               
+               <saw:caption fmt="html">						
+                  
+                  
+                  <saw:text>Generic</saw:text></saw:caption></saw:tableHeading>
+				
+            
+            
+            <saw:columnHeading>					
+               
+               
+               <saw:caption fmt="html">						
+                  
+                  
+                  <saw:text>Grain Dimension</saw:text></saw:caption></saw:columnHeading>
+            
+            
+            <saw:dimensionSelection>                              
+               <saw:selectionStep stepID="1" type="startWith" category="member">                                    
+                  <saw:stepMembers xsi:type="saw:staticMemberGroupDef">                                          
+                     <saw:staticMemberGroup>                                                
+                        <saw:members xsi:type="saw:specialValueMembers">                                                      
+                           <saw:value specialValue="all"/></saw:members></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep></saw:dimensionSelection></saw:column>
+         
+         
+         <saw:column columnID="c12" forceGroupBy="true" xsi:type="saw:derivedColumn">				
+            
+            
+            <saw:displayFormat>                                                            
+               <saw:formatSpec suppress="repeat" fontColor="#336633" wrapText="true"/>
+               <saw:conditionalDisplayFormats>                                    
+                  <saw:conditionalDisplayFormat>                                          
+                     <saw:formatRule>                                                
+                        <saw:condition>                                                      
+                           <sawx:expr xsi:type="sawx:comparison" op="lessOrEqual">                                                            
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c12"/>                                                            
+                              <sawx:expr xsi:type="xsd:decimal">0</sawx:expr></sawx:expr></saw:condition>                                                
+                        <saw:formatSpec fontColor="#CC3333" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+            
+            
+            <saw:tableHeading>					
+               
+               
+               <saw:caption fmt="html">						
+                  
+                  
+                  <saw:text>Answers Calc</saw:text></saw:caption></saw:tableHeading>
+				
+            
+            
+            <saw:columnHeading>					
+               
+               
+               <saw:caption fmt="html">						
+                  
+                  
+                  <saw:text>Variations</saw:text></saw:caption>
+               
+               
+               <saw:displayFormat>                                    
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			
+         
+         
+         <saw:column columnID="c16" forceGroupBy="true" xsi:type="saw:derivedColumn">				
+            
+            
+            <saw:tableHeading>					
+               
+               
+               <saw:caption>						
+                  
+                  
+                  <saw:text>Answers Calc</saw:text></saw:caption></saw:tableHeading>
+				
+            
+            
+            <saw:columnHeading>					
+               
+               
+               <saw:caption>						
+                  
+                  
+                  <saw:text>Increases</saw:text></saw:caption></saw:columnHeading></saw:column>
+			
+         
+         
+         <saw:column columnID="c19" forceGroupBy="true" xsi:type="saw:derivedColumn">				
+            
+            
+            <saw:tableHeading>					
+               
+               
+               <saw:caption>						
+                  
+                  
+                  <saw:text>Answers Calc</saw:text></saw:caption></saw:tableHeading>
+				
+            
+            
+            <saw:columnHeading>					
+               
+               
+               <saw:caption>						
+                  
+                  
+                  <saw:text>Decreases</saw:text></saw:caption></saw:columnHeading></saw:column>
+			
+         
+         
+         <saw:column columnID="c22" forceGroupBy="true" xsi:type="saw:derivedColumn">				
+            
+            
+            <saw:displayFormat>                              
+               <saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat>
+            
+            
+            <saw:tableHeading>					
+               
+               
+               <saw:caption fmt="html">						
+                  
+                  
+                  <saw:text>Answers Calc</saw:text></saw:caption></saw:tableHeading>
+				
+            
+            
+            <saw:columnHeading>					
+               
+               
+               <saw:caption fmt="html">						
+                  
+                  
+                  <saw:text>						</saw:text></saw:caption>
+               
+               
+               <saw:displayFormat>                                    
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			
+         
+         
+         <saw:column columnID="cc9f6304835273dd0" xsi:type="saw:derivedColumn">                        
+            <saw:displayFormat>                              
+               <saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat>                        
+            <saw:tableHeading>                              
+               <saw:caption fmt="html">                                    
+                  <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>                        
+            <saw:columnHeading>                              
+               <saw:caption fmt="html">                                    
+                  <saw:text>Begin and End</saw:text></saw:caption>                              
+               <saw:displayFormat>                                    
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         
+         
+         <saw:column columnID="c0d4a84c185804f37" xsi:type="saw:derivedColumn">                        
+            <saw:tableHeading>                              
+               <saw:caption>                                    
+                  <saw:text>Time</saw:text></saw:caption></saw:tableHeading>                        
+            <saw:columnHeading>                              
+               <saw:caption>                                    
+                  <saw:text>T02 Per Name Month</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+		
+      
+      
+      <saw:from>                  
+         <saw:criteria xsi:type="saw:setCriteria" op="union">                        
+            <saw:criteria subjectArea="&quot;A - Sample Sales&quot;" xsi:type="saw:simpleCriteria" withinHierarchy="true">					
+               
+               
+               <saw:columns>						
+                  
+                  
+                  <saw:column columnID="c17e54c508cba0e7b" xsi:type="saw:regularColumn">							
+                     
+                     
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">&#39; &#39;||cast(@{Dim02}{&quot;Customers&quot;.&quot;C4  Customer Segment&quot;} as varchar(30))</sawx:expr></saw:columnFormula>
+                     
+                     
+                     <saw:tableHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Customers</saw:text></saw:caption></saw:tableHeading>
+                     
+                     
+                     <saw:columnHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>@{Dim02}{Customers.C4  Customer ...</saw:text></saw:caption></saw:columnHeading>
+                     
+                     
+                     <saw:dimensionSelection>                                                
+                        <saw:selectionStep stepID="1" type="startWith" category="member">                                                      
+                           <saw:stepMembers xsi:type="saw:staticMemberGroupDef">                                                            
+                              <saw:staticMemberGroup>                                                                  
+                                 <saw:members xsi:type="saw:specialValueMembers">                                                                        
+                                    <saw:value specialValue="all"/></saw:members></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep></saw:dimensionSelection></saw:column>
+                  
+                  
+                  <saw:column columnID="cfd590b5b7a164b3d" xsi:type="saw:regularColumn" forceGroupBy="true">							
+                     
+                     
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">(ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{End_Val}{2013 / 04}&#39; as varchar(50))),0)  - ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{Start_Val}{2013 / 03}&#39; as varchar(50))),0))</sawx:expr></saw:columnFormula>
+                     
+                     
+                     <saw:tableHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+                     
+                     
+                     <saw:columnHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Variations</saw:text></saw:caption></saw:columnHeading></saw:column>
+						
+                  
+                  
+                  <saw:column columnID="c4e6024beeda6d0d9" xsi:type="saw:regularColumn" forceGroupBy="true">							
+                     
+                     
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">case when (ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{End_Val}{2013 / 04}&#39; as varchar(50))),0)  - ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{Start_Val}{2013 / 03}&#39; as varchar(50))),0))&gt;=0 then (ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{End_Val}{2013 / 04}&#39; as varchar(50))),0)  - ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{Start_Val}{2013 / 03}&#39; as varchar(50))),0)) end</sawx:expr></saw:columnFormula>
+                     
+                     
+                     <saw:tableHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+                     
+                     
+                     <saw:columnHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Increases</saw:text></saw:caption></saw:columnHeading></saw:column>
+						
+                  
+                  
+                  <saw:column columnID="c3599b284050664ef" xsi:type="saw:regularColumn" forceGroupBy="true">							
+                     
+                     
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">case when (ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{End_Val}{2013 / 04}&#39; as varchar(50))),0)  - ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{Start_Val}{2013 / 03}&#39; as varchar(50))),0))&lt;0 then -(ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{End_Val}{2013 / 04}&#39; as varchar(50))),0)  - ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{Start_Val}{2013 / 03}&#39; as varchar(50))),0)) end</sawx:expr></saw:columnFormula>
+                     
+                     
+                     <saw:tableHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+                     
+                     
+                     <saw:columnHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Decreases</saw:text></saw:caption></saw:columnHeading></saw:column>
+						
+                  
+                  
+                  <saw:column columnID="cea15146073d4fa1b" xsi:type="saw:regularColumn" forceGroupBy="true">							
+                     
+                     
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">/*    Sart with initial starting value */  sum(ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{Start_Val}{2013 / 03}&#39; as varchar(50))),0)) + /*    Add variation of previous record (RSUM(Var)-Var) */  rsum((ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{End_Val}{2013 / 04}&#39; as varchar(50))),0)  - ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{Start_Val}{2013 / 03}&#39; as varchar(50))),0))) - (ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{End_Val}{2013 / 04}&#39; as varchar(50))),0)  - ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{Start_Val}{2013 / 03}&#39; as varchar(50))),0)) + /*    Remove variation once more incase it&#39;s a negative Variation */ case when ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{End_Val}{2013 / 04}&#39; as varchar(50))),0)  &lt; ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{Start_Val}{2013 / 03}&#39; as varchar(50))),0) then (ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{End_Val}{2013 / 04}&#39; as varchar(50))),0)  - ifnull(filter(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} using cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{Start_Val}{2013 / 03}&#39; as varchar(50))),0)) else 0 end</sawx:expr></saw:columnFormula>
+                     
+                     
+                     <saw:tableHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+                     
+                     
+                     <saw:columnHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Blank</saw:text></saw:caption></saw:columnHeading></saw:column>
+						
+                  
+                  
+                  <saw:column xsi:type="saw:regularColumn" columnID="cb368e06ba0a724cf">                                          
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">NULL</sawx:expr></saw:columnFormula></saw:column>
+                  
+                  
+                  <saw:column xsi:type="saw:regularColumn" columnID="c5493324ca2bc4d2a">                                          
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">null</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+					
+               
+               
+               <saw:filter>                                    
+                  <sawx:expr xsi:type="sawx:logical" op="or">                                          
+                     <sawx:expr xsi:type="sawx:list" op="in">                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">cast(&quot;Time&quot;.&quot;T02 Per Name Month&quot; as varchar(50))</sawx:expr>                                                
+                        <sawx:expr xsi:type="sawx:eval" default="2013 / 03">Start_Val</sawx:expr></sawx:expr>                                          
+                     <sawx:expr xsi:type="sawx:list" op="in">                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr>                                                
+                        <sawx:expr xsi:type="sawx:eval" default="2013 / 04">End_Val</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>				
+            
+            
+            <saw:criteria subjectArea="&quot;A - Sample Sales&quot;" xsi:type="saw:simpleCriteria" withinHierarchy="true">					
+               
+               
+               <saw:columns>						
+                  
+                  
+                  <saw:column columnID="cf9f4291edc816e13" xsi:type="saw:regularColumn">							
+                     
+                     
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">case when cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50))=cast(&#39;@{End_Val}{2013 / 04}&#39; as varchar(50))  then &#39;End - &#39;||cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50)) else &#39;  Beg - &#39;||cast(@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;} as varchar(50)) end</sawx:expr></saw:columnFormula>
+                     
+                     
+                     <saw:tableHeading/>
+                     
+                     
+                     <saw:columnHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Start and End</saw:text></saw:caption></saw:columnHeading></saw:column>
+                  
+                  
+                  <saw:column columnID="c1ef9b9a1935ea161" xsi:type="saw:regularColumn" aggRule="sum">							
+                     
+                     
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">sum(0)</sawx:expr></saw:columnFormula></saw:column>
+						
+                  
+                  
+                  <saw:column columnID="cdfab99be88523d63" xsi:type="saw:regularColumn" forceGroupBy="true">							
+                     
+                     
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">sum(0)</sawx:expr></saw:columnFormula></saw:column>
+						
+                  
+                  
+                  <saw:column columnID="c3572eaa1e4669a06" xsi:type="saw:regularColumn" forceGroupBy="true">							
+                     
+                     
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">sum(0)</sawx:expr></saw:columnFormula></saw:column>
+						
+                  
+                  
+                  <saw:column columnID="c6b1e02a6a7ef0b4b" xsi:type="saw:regularColumn" forceGroupBy="true">							
+                     
+                     
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">sum(0)</sawx:expr></saw:columnFormula></saw:column>
+						
+                  
+                  
+                  <saw:column xsi:type="saw:regularColumn" columnID="cdc9455d323370075">                                          
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}</sawx:expr></saw:columnFormula>                                          
+                     <saw:tableHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>                                          
+                     <saw:columnHeading>                                                
+                        <saw:caption fmt="text">                                                      
+                           <saw:text>Metric</saw:text></saw:caption></saw:columnHeading></saw:column>
+                  
+                  
+                  <saw:column xsi:type="saw:regularColumn" columnID="c829ccb42136d7f83">                                          
+                     <saw:columnFormula>                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+					
+               
+               
+               <saw:filter>                                    
+                  <sawx:expr xsi:type="sawx:logical" op="or">                                          
+                     <sawx:expr xsi:type="sawx:list" op="in">                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">cast(&quot;Time&quot;.&quot;T02 Per Name Month&quot; as varchar(50))</sawx:expr>                                                
+                        <sawx:expr xsi:type="sawx:eval" default="2013 / 03">Start_Val</sawx:expr></sawx:expr>                                          
+                     <sawx:expr xsi:type="sawx:list" op="in">                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr>                                                
+                        <sawx:expr xsi:type="sawx:eval" default="2013 / 04">End_Val</sawx:expr></sawx:expr>                                          
+                     <sawx:expr op="in" xsi:type="sawx:list">                                                
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr>                                                
+                        <sawx:expr xsi:type="xsd:string">2013 / 03</sawx:expr>                                                
+                        <sawx:expr xsi:type="xsd:string">2013 / 04</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+			</saw:criteria></saw:from>
+      
+      
+      <saw:columnOrder>                  
+         <saw:columnOrderRef columnID="c34" direction="ascending"/>                  
+         <saw:columnOrderRef columnID="c12" direction="descending"/></saw:columnOrder></saw:criteria>
+	
+   
+   
+   <saw:views currentView="0">		
+      
+      
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">                  
+         <saw:cvTable>                        
+            <saw:cvRow>                              
+               <saw:cvCell viewName="titleView!1"/></saw:cvRow>                        
+            <saw:cvRow>                              
+               <saw:cvCell viewName="dvtchart!1"/></saw:cvRow>                        
+            <saw:cvRow>                              
+               <saw:cvCell viewName="pivotTableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+		
+      
+      
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">                  
+         <saw:display type="bar" subtype="stacked" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="true" clientEventEnabled="false" animateOnDisplay="false">                        
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>                  
+         <saw:canvasFormat height="330" width="640" showGradient="true">                        
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default">                              
+               <saw:textFormat/></saw:dataLabels>                        
+            <saw:title mode="custom">                              
+               <saw:caption truncate="false" truncateLength="0">                                    
+                  <saw:text>1 - Bridge Chart breaking down total variation by members of selected dimension</saw:text></saw:caption>                              
+               <saw:displayFormat>                                    
+                  <saw:formatSpec fontStyle="bold" fontSize="11"/></saw:displayFormat></saw:title>                        
+            <saw:gridlines default="false">                              
+               <saw:horizontal>                                    
+                  <saw:major visible="false"/>                                    
+                  <saw:minor visible="false"/></saw:horizontal>                              
+               <saw:vertical>                                    
+                  <saw:major visible="true"/>                                    
+                  <saw:minor visible="false"/></saw:vertical></saw:gridlines></saw:canvasFormat>                  
+         <saw:selections>                        
+            <saw:categories>                              
+               <saw:category>                                    
+                  <saw:columnRef columnID="c34"/></saw:category></saw:categories>                        
+            <saw:measures showMeasureLabelsOnCategory="false">                              
+               <saw:column measureType="y">                                    
+                  <saw:columnRef columnID="c16"/></saw:column>                              
+               <saw:column measureType="y">                                    
+                  <saw:columnRef columnID="c19"/></saw:column>                              
+               <saw:column measureType="y">                                    
+                  <saw:columnRef columnID="c22"/></saw:column>                              
+               <saw:column measureType="y">                                    
+                  <saw:columnRef columnID="cc9f6304835273dd0"/></saw:column></saw:measures>                        
+            <saw:seriesGenerators>                              
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>                  
+         <saw:legendFormat position="right" transparentFill="true"/>                  
+         <saw:axesFormats syncAxis="false">                        
+            <saw:axisFormat axis="Y1" displayScaleLabels="true">                              
+               <saw:title mode="custom">                                    
+                  <saw:caption>                                          
+                     <saw:text>Variations</saw:text></saw:caption></saw:title>                              
+               <saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="k" skipLabels="true"/>                              
+               <saw:textFormat fontSize="10"/>                              
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/>                              
+               <saw:scaleMarkers/></saw:axisFormat>                        
+            <saw:axisFormat axis="X">                              
+               <saw:title mode="custom">                                    
+                  <saw:caption>                                          
+                     <saw:text>Dimension</saw:text></saw:caption></saw:title>                              
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/></saw:axisFormat></saw:axesFormats>                  
+         <saw:seriesFormats>                        
+            <saw:seriesFormatGroup name="bar">                              
+               <saw:seriesFormatRule>                                    
+                  <saw:seriesCondition position="1"/>                                    
+                  <saw:visualFormats>                                          
+                     <saw:visualFormat color="#669966"/></saw:visualFormats></saw:seriesFormatRule>                              
+               <saw:seriesFormatRule>                                    
+                  <saw:seriesCondition position="2"/>                                    
+                  <saw:visualFormats>                                          
+                     <saw:visualFormat color="#CC3333"/></saw:visualFormats></saw:seriesFormatRule>                              
+               <saw:seriesFormatRule>                                    
+                  <saw:seriesCondition position="3"/>                                    
+                  <saw:visualFormats>                                          
+                     <saw:visualFormat color="#FFFFFF"/></saw:visualFormats></saw:seriesFormatRule>                              
+               <saw:seriesFormatRule>                                    
+                  <saw:seriesCondition position="4"/>                                    
+                  <saw:visualFormats>                                          
+                     <saw:visualFormat color="#999999"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+      
+      
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true">
+         <saw:logoFormat>                        
+            <saw:displayFormat/></saw:logoFormat>
+         <saw:createdTime>                        
+            <saw:displayFormat>					
+               
+               
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime>
+         <saw:displayFormat>				
+            
+            
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat>
+         <saw:title>                        
+            <saw:displayFormat>					
+               
+               
+               <saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view>
+      
+      
+      <saw:view xsi:type="saw:tableView" name="tableView!1">                  
+         <saw:edges>                        
+            <saw:edge axis="page" showColumnHeader="true"/>                        
+            <saw:edge axis="section"/>                        
+            <saw:edge axis="row" showColumnHeader="true">                              
+               <saw:edgeLayers>                                    
+                  <saw:edgeLayer type="column" columnID="c34"/>                                    
+                  <saw:edgeLayer type="column" columnID="c12"/>                                    
+                  <saw:edgeLayer type="column" columnID="c16"/>                                    
+                  <saw:edgeLayer type="column" columnID="c19"/>                                    
+                  <saw:edgeLayer type="column" columnID="c22"/>                                    
+                  <saw:edgeLayer type="column" columnID="cc9f6304835273dd0"/>                                    
+                  <saw:edgeLayer type="column" columnID="c0d4a84c185804f37"/></saw:edgeLayers></saw:edge>                        
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      
+      
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">                  
+         <saw:edges>                        
+            <saw:edge axis="page" showColumnHeader="true"/>                        
+            <saw:edge axis="section"/>                        
+            <saw:edge axis="row" showColumnHeader="false">                              
+               <saw:displayGrandTotals>                                    
+                  <saw:displayGrandTotal id="t1" grandTotalPosition="after"/></saw:displayGrandTotals>                              
+               <saw:edgeLayers>                                    
+                  <saw:edgeLayer type="column" columnID="c34"/>                                    
+                  <saw:edgeLayer type="column" columnID="c0d4a84c185804f37" visibility="hidden"/></saw:edgeLayers>                              
+               <saw:columnOrder>                                    
+                  <saw:columnOrderRef columnID="c34" direction="ascending"/></saw:columnOrder></saw:edge>                        
+            <saw:edge axis="column">                              
+               <saw:edgeLayers>                                    
+                  <saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges>                  
+         <saw:measuresList>                        
+            <saw:measure columnID="cc9f6304835273dd0" aggRule="last" reportAgg="false"/>                        
+            <saw:measure columnID="c12" aggRule="sum"/></saw:measuresList></saw:view></saw:views></saw:report>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="69e8kelr246bbt19"><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="183v9r8pfuc5rcpf" layoutType="specificSize"><sawd:dashboardSection name="Section 6" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+      <saw:displayFormat>
+        <saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 7" duid="al3aq64l1co3ogrl">
+        <sawd:HTML fmt="html" captionID="kcap12832459_670">&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Auto Clustering
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+      </sawd:htmlView>
+      
+    <sawd:linkView name="Link 1" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+        <sawd:linkCaption>
+          <saw:caption captionID="kcap12832459_669">
+            <saw:text>Return to Main Index page</saw:text>
+          </saw:caption>
+        </sawd:linkCaption>
+        <sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+      </sawd:linkView><sawd:linkView name="Link 4" target="new" type="report" destination="/shared/Workshops/_portal/Workshop - HTML5 Maps/Readme" layout="captionRight" duid="belsmqfl2onr6m8i"><sawd:linkCaption><saw:caption><saw:text>Workshop on building HTML5 maps</saw:text></saw:caption></sawd:linkCaption><sawd:image src="res/sk_blafp/catalog/configure_ena.png"/></sawd:linkView></sawd:dashboardSection><sawd:dashboardSection name="Section 1" duid="hhl1cgtssj0mpbii" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="g7bva51vl3jhj8ks"><sawd:HTML fmt="html">[b]Description:[/b] This is an example on how to automatically group and render densely packed point features based on proximity. Points that are clustered within a specified distance (in pixels) are grouped and displayed using a user defined logarithmic variable marker, such as a circle with a count,also you can define your own bucket range. 
+[br/][br/]
+Parameters: minPointCount and maxClusteringLevel - minPointCount, specifies the minimum number of points in a cluster. maxClusteringLevel, specifies the maximum zoom level at which clustering will occur.
+
+[br/][br/]&lt;font color=blue&gt;Zoom in or click on the bubble to see it in action.&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" duid="94vvvh5s720296uv" showSectionTitle="false" horizontalLayout="true" collapsible="false" layoutType="bestFit"><sawd:globalFilterView name="GFP 0" path="/shared/04. Maps and Spatial/HTML5 JSAPI/AutoCluster/Cluster_Prompt" duid="rcjrq78evmgiio2i" scope="dashboardPage"><saw:caption><saw:text>Cluster_Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 1" display="embed" showView="" duid="2k741lkc79brs7do"><saw:caption><saw:text>AutoClustering</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/04. Maps and Spatial/HTML5 JSAPI/AutoCluster/AutoClustering"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec width="1000" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

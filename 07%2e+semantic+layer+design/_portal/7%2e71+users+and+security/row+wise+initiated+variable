@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="4daobre5a8n37d76" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2560">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Row Wise Variable Initialization
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2559">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" horizontalLayout="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2557">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2561">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; OBIEE server variables can hold a list of values at once by selecting Row Wise initialisation option in the &#39;Init Block&#39;.
+ The variable &lt;b&gt;VISIBILITY_COMPANIES&lt;/b&gt; and &lt;b&gt;VISIBILITY_PRODUCTS&lt;/b&gt; are initiated with a list of values each. This list is used to filter the companies and LOBs that are visible by each user. When login in as [b]Dnoonan [/b]or [b]Gkendal [/b](Admin123) users, the visibility list is reduced to only values that are not part of these variables.</sawd:HTML>
+			</sawd:htmlView>
+			
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2563">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; In this example, the variables are initiated using the Row_Wise Initialisation option, from custom values stored in a db table SAMP_USER_VIS. Updating the values in the  table will impact the datavisibility rules applied (logout/login required).</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" break="column" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" links="" duid="kkab9dsrjsl4abf0"><saw:caption><saw:text>Row Wise Initiated Variable</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Security/Data Level Security/Row Wise Initiated Variable"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec borderPosition="none" hAlign="center" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" duid="8igunudjcnmg57qd" layoutType="bestFit"><sawd:dashboardSection name="Section 4" duid="ub9ic5qaf2vlhlal" showSectionTitle="false" collapsible="false" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" hAlign="center" width="273" paddingLeft="0" paddingRight="0" paddingTop="25" paddingBottom="0" wrapText="true" vAlign="middle"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 5" duid="s2kp4vflimfoel14">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2564">&lt;img src=&quot;/analyticsRes/SampleApp/SampleAppPics/Row_Wise.png&quot;/&gt;</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

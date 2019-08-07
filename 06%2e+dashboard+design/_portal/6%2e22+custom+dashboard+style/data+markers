@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="h171mjov3f2nuice"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="9ne24sb47j6mvc0a" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 1" collapsible="false" duid="eb94lt3m2j24ni9e" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font color=darkblue size=3&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font &gt;
+&lt;font size=3&gt;
+In a chart, default position of data marker labels is at the top of the bars.
+&lt;br/&gt;
+In this example, the custom style has data marker labels at the centre of the bars. 
+&lt;/br&gt;The font color is customized and the label is underlined. 
+&lt;/br&gt;
+This is achieved by changing the properties of markertext attribute in graph.xml of the custom dashboard style.
+&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection layoutType="bestFit" name="Section 0" duid="ilm16ci43g0hq66n" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="77af0ujrbn84h393"><saw:caption><saw:text>Data Markers</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Custom Style/Data Markers"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="5g61eu18vua5k7c3"><sawd:dashboardColumn name="Column 3" frozen="false" canFreeze="false" duid="c39p4onrmki7gkom" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 3" duid="995jou6l0u0rapqb" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="v92l6prei3d4mb9c"><sawd:HTML fmt="html">&lt;font size=3&gt;[b]Introduction to Oracle JET[/b]&lt;/font&gt;
+[br/][br/]
+Oracle JET is a collection of open source JavaScript libraries along with a set of Oracle contributed JavaScript libraries that make it as simple and efficient as possible to build applications that consume and interact with Oracle products and services.
+[br/][br/]
+Oracle JavaScript Extension Toolkit (JET) empowers developers by providing a modular open source toolkit based on modern JavaScript, CSS3 and HTML5 design and development principles.
+[br/][br/]
+For more details refer: http://www.oracle.com/webfolder/technetwork/jet/index.html
+[br/][br/]
+&lt;font size=3&gt;[b]About this Dashboard[/b]&lt;/font&gt;
+[br/][br/]
+These dashboard pages shows how to use some of the Oracle JET library functions to visualize data from OBIEE. JET libraries are already available in OBIEE and it is used in Visual Analyzer charts.
+[br/][br/]
+These samples cover only a small fraction of the visualizations available in JET. For a more exhaustive list, refer: http://www.oracle.com/webfolder/technetwork/jet/uiComponents-dataVisualizations.html
+[br/][br/]
+Here is a preview of some of the other viz available.
+[br/][br/]
+&lt;img src=&#39;saw.dll?downloadfile&amp;Path=/shared/02.%20Visualizations%2FOracle%20JET/jetgallery.jpg&#39; /&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cbd51ab1a46a76870">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P4  Brand&quot;}</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Products</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Level 1</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c14194b2134e2e0e2">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim02}{&quot;Products&quot;.&quot;P3  LOB&quot;}</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Products</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Level 2</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c302b106f4f44f9e9">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim03}{&quot;Products&quot;.&quot;P2  Product Type&quot;}</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Products</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Level 3</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c2a6c5927333ba199">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim04}{&quot;Products&quot;.&quot;P1  Product&quot;}</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Products</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Level 04</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce8424ac964b6fb4e">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;}</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>Metric</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ccffee01549402265"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!1"><saw:displayFormat><saw:formatSpec width="850"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!2"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cbd51ab1a46a76870"/>
+                  <saw:edgeLayer type="column" columnID="c14194b2134e2e0e2"/>
+                  <saw:edgeLayer type="column" columnID="c302b106f4f44f9e9"/>
+                  <saw:edgeLayer type="column" columnID="c2a6c5927333ba199"/>
+                  <saw:edgeLayer type="column" columnID="ce8424ac964b6fb4e"/><saw:edgeLayer type="column" columnID="ccffee01549402265"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:narrativeView" name="narrativeView!1">
+         <saw:narrative rowCount="1000">
+            <saw:caption fmt="html">
+               <saw:text>mydata.push([&quot;@{cbd51ab1a46a76870}&quot;,&quot;@{c14194b2134e2e0e2}&quot;,&quot;@{c302b106f4f44f9e9}&quot;,&quot;@{c2a6c5927333ba199}&quot;,&quot;@{ce8424ac964b6fb4e}&quot;,&quot;@{ccffee01549402265}&quot;]);
+</saw:text></saw:caption></saw:narrative>
+         
+         <saw:postfix>
+            <saw:caption fmt="html">
+               <saw:text>renderchart(&#39;2013 Q1&#39;);
+&lt;/script&gt;
+  </saw:text></saw:caption></saw:postfix><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script&gt;
+var mydata=[];</saw:text></saw:caption></saw:prefix></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;div id=&quot;chart_heading&quot; align=&quot;left&quot;&gt;   &lt;/div&gt;
+&lt;div id=&quot;mychart2&quot;&gt;   &lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/d3/d3.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/d3/d3.layout.js&quot;&gt;&lt;/script&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+
+#chart, #header, #footer {
+  position: absolute;
+  top: 0;
+}
+
+#header, #footer {
+  z-index: 1;
+  display: block;
+  font-size: 36px;
+  font-weight: 300;
+  text-shadow: 0 1px 0 #fff;
+}
+
+#header.inverted, #footer.inverted {
+  color: #fff;
+  text-shadow: 0 1px 4px #000;
+}
+
+#header {
+  top: 80px;
+  left: 140px;
+  width: 1000px;
+}
+
+#footer {
+  top: 680px;
+  right: 140px;
+  text-align: right;
+}
+
+rect {
+  fill: none;
+  pointer-events: all;
+}
+
+pre {
+  font-size: 18px;
+}
+
+line {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.string, .regexp {
+  color: #f39;
+}
+
+.keyword {
+  color: #00c;
+}
+
+.comment {
+  color: #777;
+  font-style: oblique;
+}
+
+.number {
+  color: #369;
+}
+
+.class, .special {
+  color: #1181B8;
+}
+
+a:link, a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+}
+
+.hint {
+  position: absolute;
+  right: 0;
+  width: 1280px;
+  font-size: 12px;
+  color: #999;
+}
+
+svg {
+  font-size: 12px;
+}
+
+rect.background {
+  fill: none;
+  pointer-events: all;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: .5px;
+}
+
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+function down(d, i) {
+  if (!d.children || this.__transition__) return;
+  var duration = d3.event &amp;&amp; d3.event.altKey ? 7500 : 750,
+      delay = duration / d.children.length;
+
+  // Mark any currently-displayed bars as exiting.
+  var exit = svg.selectAll(&quot;.enter&quot;).attr(&quot;class&quot;, &quot;exit&quot;);
+
+  // Entering nodes immediately obscure the clicked-on bar, so hide it.
+  exit.selectAll(&quot;rect&quot;).filter(function(p) { return p === d; })
+      .style(&quot;fill-opacity&quot;, 1e-6);
+
+  // Enter the new bars for the clicked-on data.
+  // Per above, entering bars are immediately visible.
+  var enter = bar(d)
+      .attr(&quot;transform&quot;, stack(i))
+      .style(&quot;opacity&quot;, 1);
+
+  // Have the text fade-in, even though the bars are visible.
+  // Color the bars as parents; they will fade to children if appropriate.
+  enter.select(&quot;text&quot;).style(&quot;fill-opacity&quot;, 1e-6);
+  enter.select(&quot;rect&quot;).style(&quot;fill&quot;, z(true));
+
+  // Update the x-scale domain.
+  x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice();
+
+  // Update the x-axis.
+  svg.selectAll(&quot;.x.axis&quot;).transition()
+      .duration(duration)
+      .call(xAxis);
+
+  // Transition entering bars to their new position.
+  var enterTransition = enter.transition()
+      .duration(duration)
+      .delay(function(d, i) { return i * delay; })
+      .attr(&quot;transform&quot;, function(d, i) { return &quot;translate(0,&quot; + y * i * 1.2 + &quot;)&quot;; });
+
+  // Transition entering text.
+  enterTransition.select(&quot;text&quot;).style(&quot;fill-opacity&quot;, 1);
+
+  // Transition entering rects to the new x-scale.
+  enterTransition.select(&quot;rect&quot;)
+      .attr(&quot;width&quot;, function(d) { return x(d.value); })
+      .style(&quot;fill&quot;, function(d) { return z(!!d.children); });
+
+  // Transition exiting bars to fade out.
+  var exitTransition = exit.transition()
+      .duration(duration)
+      .style(&quot;opacity&quot;, 1e-6)
+      .remove();
+
+  // Transition exiting bars to the new x-scale.
+  exitTransition.selectAll(&quot;rect&quot;).attr(&quot;width&quot;, function(d) { return x(d.value); });
+
+  // Rebind the current node to the background.
+  svg.select(&quot;.background&quot;).data([d]).transition().duration(duration * 2); d.index = i;
+}
+
+// Creates a set of bars for the given data node, at the specified index.
+function bar(d) {
+  var bar = svg.insert(&quot;svg:g&quot;, &quot;.y.axis&quot;)
+      .attr(&quot;class&quot;, &quot;enter&quot;)
+      .attr(&quot;transform&quot;, &quot;translate(0,5)&quot;)
+    .selectAll(&quot;g&quot;)
+      .data(d.children)
+    .enter().append(&quot;svg:g&quot;)
+      .style(&quot;cursor&quot;, function(d) { return !d.children ? null : &quot;pointer&quot;; })
+      .on(&quot;click&quot;, down);
+
+  bar.append(&quot;svg:text&quot;)
+      .attr(&quot;x&quot;, -6)
+      .attr(&quot;y&quot;, y / 2)
+      .attr(&quot;dy&quot;, &quot;.35em&quot;)
+      .attr(&quot;text-anchor&quot;, &quot;end&quot;)
+      .text(function(d) { return d.name; });
+
+  bar.append(&quot;svg:rect&quot;)
+      .attr(&quot;width&quot;, function(d) { return x(d.value); })
+      .attr(&quot;height&quot;, y);
+
+  return bar;
+}
+
+// A stateful closure for stacking bars horizontally.
+function stack(i) {
+  var x0 = 0;
+  return function(d) {
+    var tx = &quot;translate(&quot; + x0 + &quot;,&quot; + y * i * 1.2 + &quot;)&quot;;
+    x0 += x(d.value);
+    return tx;
+  };
+}
+
+function renderchart(qtr){
+       document.getElementById(&quot;chart_heading&quot;).innerHTML = &quot;&lt;b&gt;&lt;font color=blue size=3&gt;&quot; + qtr +&quot;&lt;/font&gt; - Quarterly Revenue by Product&lt;/b&gt;&quot;;
+	myDataObject={&quot;name&quot; : &quot;All Products&quot;,	&quot;children&quot; : []};
+	for(i in mydata){
+	if (mydata[i][5]==qtr)
+		myDataObject.children.push({&quot;name&quot;: mydata[i][3], &quot;size&quot;: mydata[i][4]});
+	}
+	//alert(myDataObject);
+
+	var root = myDataObject;
+	hierarchy.nodes(root);
+	x.domain([0, root.value]).nice();
+	down(root, 0);
+}
+
+var m = [80, 160, 0, 160], // top right bottom left
+	w = 850 - m[1] - m[3], // width
+	h = 530 - m[0] - m[2], // height
+	x = d3.scale.linear().range([0, w]),
+	y = 18, // bar height
+	z = d3.scale.ordinal().range([&quot;steelblue&quot;, &quot;steelblue&quot;]); // bar color
+
+var hierarchy = d3.layout.partition()
+	.value(function(d) { return d.size; });
+
+var xAxis = d3.svg.axis()
+	.scale(x)
+	.orient(&quot;top&quot;);
+
+var svg = d3.select(&quot;#mychart2&quot;).append(&quot;svg:svg&quot;)
+	.attr(&quot;width&quot;, w + m[1] + m[3])
+	.attr(&quot;height&quot;, h + m[0] + m[2])
+  .append(&quot;svg:g&quot;)
+	.attr(&quot;transform&quot;, &quot;translate(&quot; + m[3] + &quot;,&quot; + m[0] + &quot;)&quot;);
+
+svg.append(&quot;svg:rect&quot;)
+	.attr(&quot;class&quot;, &quot;background&quot;)
+	.attr(&quot;width&quot;, w)
+	.attr(&quot;height&quot;, h);
+
+
+svg.append(&quot;svg:g&quot;)
+	.attr(&quot;class&quot;, &quot;x axis&quot;);
+
+svg.append(&quot;svg:g&quot;)
+	.attr(&quot;class&quot;, &quot;y axis&quot;)
+  .append(&quot;svg:line&quot;)
+	.attr(&quot;y1&quot;, &quot;100%&quot;);
+&lt;/script&gt;
+  </saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!2"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;script src=&#39;/analyticsRes/SampleApp/customjs/SAutilsv1.3.js&#39;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+function handleMD(e){
+	qdr = JSON.parse(e.sQDR);
+	qtr = qdr._m[0]._g[&quot;%22Time%22.%22T03%20Per%20Name%20Qtr%22&quot;][0];
+	qtr = qtr.replace(/%20/g,&#39; &#39;).replace(/%22/g,&#39;&quot;&#39;);
+	renderchart(qtr);
+}
+
+SAutils.subscribetoMDEvent(&quot;ch7&quot;,handleMD,&quot;myview1&quot;);
+&lt;/script&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

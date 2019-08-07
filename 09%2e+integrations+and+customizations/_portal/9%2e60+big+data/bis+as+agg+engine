@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlVersion="200810300" isEmpty="false" xmlns:saw="com.siebel.analytics.web/report/v1.1" duid="qddft17lor62bod0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sawd:dashboardColumn name="Column 2" frozen="false" canFreeze="true" duid="68o5m70k1lsusma8" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="all" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4" borderColor="#EEEEEE"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontSize="12" fontFamily="Arial"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			
+		<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font style=&quot;font:12px arial&quot;&gt; &lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot; /&gt;
+&lt;b&gt; Description :&lt;/b&gt; BI Server can act as a federation and aggregation engine that prepare and save results of advanced analytical from slower Hadoop tools [br/]
+to a high performance database such as Oracle DB. Below is an example of using aggregation persistence functionality of OBIEE to query hive tables and saving [br/]
+results into Oracle DB. The standard agg persistance functionality in OBIEE automatically increments its BI metadata and remaps columns so that subsequent [br/]
+queries (and its rollups) are returned from agg store directly and way more faster then Hive/Impala queries.
+&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="q7ocnto0nc1pqigl" layoutType="bestFit" break="column"><sawd:dashboardSection layoutType="bestFit" name="Section 2" horizontalLayout="true" duid="jl57pg6132flrdj5" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="bqj6akltjp716jsd"><sawd:HTML fmt="html">[br/][b][u]Sample aggregate creation script used for this example[/u][/b][br/][br/][br/]
+
+create aggregates &quot;ag_Facts_Hive_Revenue&quot;[br/]
+ for [br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;12 - Big Data Movie&quot;.&quot;Facts (Hive)&quot;(&quot;Price&quot;)[br/]
+ at levels ([br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;12 - Big Data Movie&quot;.&quot;H2 Customer&quot;.&quot;Country&quot;, [br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;12 - Big Data Movie&quot;.&quot;H1 Movie&quot;.&quot;Genre&quot;, [br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;12 - Big Data Movie&quot;.&quot;H0 Time&quot;.&quot;Week&quot;)[br/]
+ using connection pool [br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;23 - Big Data Movie (AGGS)&quot;.&quot;Aggs Connection Pool&quot;[br/]
+ in [br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;23 - Big Data Movie (AGGS)&quot;..&quot;MOVIEDEMO_AGGS&quot;;
+</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 2" duid="evl2i9j444rctbqs"><sawd:HTML fmt="html">[b]Physical Source[/b][br/]
+&lt;img src=&quot;saw.dll?downloadfile&amp;Path=%2Fshared%2F09. Integrations and Customizations%2FBig Data - Hive%2Fhive_aggregate.png&quot; /&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection layoutType="bestFit" name="Section 0" collapsible="false" duid="9hoktv20h9tlob3p" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/09. Integrations and Customizations/Big Data - Hive/Aggregate Prompt" duid="oj1an5aun9t0j6ud"><saw:caption><saw:text>Aggregate Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 0" display="embed" showView="" duid="8eikcdlt44tbgame"><saw:caption><saw:text>Aggregate Report</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Big Data - Hive/Aggregate Report"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

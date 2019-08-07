@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="i4ej297djpajvt11"><sawd:dashboardColumn name="Column 4" canFreeze="true" duid="0qact4ah1b9jlvs7" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+      <saw:displayFormat>
+        <saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 1" duid="al3aq64l1co3ogrl">
+        <sawd:HTML fmt="html" captionID="kcap12832459_670">&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Dynamic Geo Aggregation
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+      </sawd:htmlView>
+      <sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+        <sawd:linkCaption>
+          <saw:caption captionID="kcap12832459_669">
+            <saw:text>Return to Main Index page</saw:text>
+          </saw:caption>
+        </sawd:linkCaption>
+        <sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+      </sawd:linkView>
+    <sawd:linkView name="Link 2" target="new" type="report" destination="/shared/Workshops/_portal/Workshop - HTML5 Maps/Readme" layout="captionRight" duid="belsmqfl2onr6m8i"><sawd:linkCaption><saw:caption><saw:text>Workshop on building HTML5 maps</saw:text></saw:caption></sawd:linkCaption><sawd:image src="res/sk_blafp/catalog/configure_ena.png"/></sawd:linkView></sawd:dashboardSection><sawd:dashboardSection name="Section 4" collapsible="false" duid="c64h1cai70pgtn2s" showSectionTitle="false" layoutType="bestFit"><sawd:htmlView name="HTML 3" duid="kdaooiof27dcp68b"><sawd:HTML fmt="text">[b]Description[/b]: This example demonstrates how to dynamically and interactively aggregate collections of geometries into territories. It also features a thematic map that displays only the relevent info by avoiding other detail themes like highways, streets, waterways, etc. To reassign territories, modify &quot;Territory Definition&quot; below the prompts and then select submit. </sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" canFreeze="false" duid="9q8fvheaet0efhm7" break="column" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" collapsible="false" duid="379mh9k7bs0jiuno" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" hAlign="left" paddingLeft="5" paddingRight="5" paddingBottom="25"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/04. Maps and Spatial/HTML5 JSAPI/Geo Aggregation/prompt" duid="jk2i1tbbo9f1l4pn" scope="dashboardPage"><saw:caption><saw:text>Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:htmlView name="HTML 0" duid="sri3mklosi5m0pr4"><sawd:HTML fmt="html">&lt;br/&gt;
+&lt;font size=1&gt;&lt;b&gt;Territories Definition:&lt;/b&gt;&lt;br/&gt;&lt;/font&gt;
+&lt;textarea id=&quot;territorydef&quot; style=&quot;width:165px;height:250px;border:1px solid #e2e2e2;font-family: Arial;font-size:11px;&quot;&gt;
+&#39;Territory 1:CA,NV,OR&#39;, 
+&#39;Territory 2:WA,ID,MT,ND,UT,CO&#39;,
+&#39;Territory 3:AK,AZ,NM&#39;,
+&#39;Territory 4:MN,IA,MO,AR,SD&#39;,
+&#39;Territory 5:PA,NY,NJ,CT,MD&#39;,
+&#39;Territory 6:VT,NH,ME,MA&#39;,
+&#39;Territory 7:WI,WY,NE,IL,MI,KS&#39;,
+&#39;Territory 8:OK,TX,LA,HI&#39;,
+&#39;Territory 9:IN,OH,KY,WV,VA&#39;,
+&#39;Territory10:FL,AL,MS,TN,SC,GA,NC&#39;
+&lt;/textarea&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a href=&quot;javascript:showTerritories()&quot;&gt;Submit&lt;/a&gt;&lt;/span&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="ft6ek3pjqnspv7am" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="2mdurb21vlid7ol3" showSectionTitle="false" collapsible="false" layoutType="bestFit"><sawd:htmlView name="HTML 2" duid="5mv4h69foi14b770"><sawd:HTML fmt="html">&lt;br/&gt;
+&lt;table border=0&gt;
+&lt;tr&gt;&lt;td&gt;
+	&lt;b&gt;Sales by Territories:&lt;/b&gt;
+	&lt;br/&gt;&lt;DIV class=&quot;AccordionPaneBody&quot; id=map1 style=&quot;width:900px;height:600px;padding:5px;border:1px solid #e2e2e2;&quot;&gt;&lt;/DIV&gt;
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+	&lt;DIV id=&quot;msg&quot;&gt;&lt;/DIV&gt;
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td valign=top style=&quot;padding:10px;&quot;&gt;
+	&lt;table id=&#39;resultstab&#39; width=&quot;700px&quot; cellpadding=&quot;2px&quot; border=&quot;1px&quot; bordercolor=&quot;#e2e2e2&quot; style=&quot;border-collapse:collapse;&quot;&gt;&lt;/table&gt;
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;script src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var territoryArray;
+var baseURL = &quot;http://&quot; + document.location.host + &quot;/mapviewer&quot;;
+var center = new OM.geometry.Point(-96, 38, 8307);
+var states, tlayer, resRowCnt=0, stateFeatures = [];
+
+function getStateGeo(state_abbr) {
+	for (i = 0; i &lt; stateFeatures.length; i++)
+		if (stateFeatures[i].getAttributes()[&quot;_LABEL_&quot;] == state_abbr)
+			return stateFeatures[i].getGeometry();
+	return null;
+}
+
+function getStateName(state_abbr) {
+	for (i = 0; i &lt; stateFeatures.length; i++)
+		if (stateFeatures[i].getAttributes()[&quot;_LABEL_&quot;] == state_abbr)
+			return stateFeatures[i].getAttributes()[&quot;NAME&quot;];
+	return null;
+}
+
+function addtoTableView(tname,tdef,rev){
+	var resHdr = &quot;&lt;tr&gt;&lt;td width=80px&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td width=550px&gt;&lt;b&gt;Members&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Revenue&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&quot;;
+	var resRow = &quot;&lt;tr&gt;&lt;td&gt;NAME&lt;/td&gt;&lt;td&gt;MEMBERS&lt;/td&gt;&lt;td align=right&gt;REVENUE&lt;/td&gt;&lt;/tr&gt;&quot;.replace(&quot;NAME&quot;,tname).replace(&quot;MEMBERS&quot;,tdef).replace(&quot;REVENUE&quot;,toUSD(rev));
+	var resTable = document.getElementById(&#39;resultstab&#39;);
+	if(resRowCnt==0) resTable.innerHTML += resHdr;
+	
+	resTable.innerHTML += resRow;
+	resRowCnt++;
+}
+
+function resetTableView(){
+	var resTable = document.getElementById(&#39;resultstab&#39;);
+	resTable.innerHTML = &quot;&quot;;
+	resRowCnt=0;
+}
+
+
+function showTerritories(evt) {
+	if (!bidata) return;
+	if (stateFeatures.length &lt; 1)	stateFeatures = states.getAllFeatures();
+	if (stateFeatures.length &lt; 1) return;
+	territoryArray = eval (&quot;[&quot; + document.getElementById(&quot;territorydef&quot;).value + &quot;]&quot;);
+	if (!territoryArray) return;
+
+	if(tlayer.getAllFeatures().length&gt;0){	
+		tlayer.removeAllFeatures();
+	}		
+	
+	resetTableView();
+	for (var i=0;i&lt;territoryArray.length;i++){
+		var t = territoryArray[i];
+		var tname = t.substring(0,t.indexOf(&#39;:&#39;));
+		var tstates = t.substring(t.indexOf(&#39;:&#39;)+1).split(&#39;,&#39;);
+		if (tstates.length &gt;0){
+			var c= [];
+			var rev = 0;
+			var tdef = &quot;&quot;;
+			for (var j=0;j&lt;tstates.length;j++){
+				var st = tstates[j];
+				var stgeo = getStateGeo(st);
+				if (bidata[st])	rev += bidata[st];
+				tdef += getStateName(st) + &quot;, &quot;;
+				if (stgeo) c.push(stgeo);
+			}
+			if (tdef.length&gt;2) 
+				tdef = tdef.substring(0,tdef.length-2);
+			
+			var gc= new OM.geometry.GeometryCollection(c,c[0].srid);
+			var fid = tname;
+			var fattr = {attributes:{&quot;_LABEL_&quot;:tname,&quot;REVENUE&quot;:rev,&quot;MEMBERS&quot;:tdef}};
+			var feature = new OM.Feature(fid, gc, fattr);
+			//feature.setLabel(tname);
+			tlayer.addFeature(feature);
+			addtoTableView(tname,tdef,rev);
+		}
+	}
+	setupTerritoryStyles(tlayer);
+	
+	// add drop shadow effect and hover style
+    var shadowFilter = new OM.visualfilter.DropShadow({opacity:0.5, color:&quot;#000000&quot;, offset:6, radius:10});
+    var hoverStyle = new OM.style.Color({stroke:&quot;#FFFFFF&quot;, strokeThickness:0});
+    
+    tlayer.setHoverStyle(hoverStyle);
+    tlayer.setHoverVisualFilter(shadowFilter);
+    tlayer.enableFeatureHover(true);
+    tlayer.enableFeatureSelection(false);
+    //tlayer.addListener(OM.event.MouseEvent.MOUSE_OUT, hideMsg);
+     //tlayer.addListener(OM.event.MouseEvent.MOUSE_OVER, showMsg);
+	tlayer.setToolTipCustomizer(getTooltip);
+	map.addLayer(tlayer);
+}
+
+function getTooltip(feature)
+{
+return &quot;TERRITORY: &quot;+ feature.getAttributes()[&quot;_LABEL_&quot;]+ 
+       &quot;\nREVENUE: &quot;+ toUSD(feature.getAttributes()[&quot;REVENUE&quot;]) + 
+	   &quot;\nMEMBERS: &quot; +feature.getAttributes()[&quot;MEMBERS&quot;];
+}
+
+function showMsg(evt)
+{
+  var feature = evt.feature;
+  document.getElementById(&quot;msg&quot;).innerHTML = &quot;&lt;font color=#5A5A5A style=&#39;font-family: Arial;font-size:11px;&#39;&gt;&lt;b&gt;Territory: &lt;/b&gt;&quot;+ feature.getAttributes()[&quot;_LABEL_&quot;]+ 
+       &quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Revenue: &lt;/b&gt;&quot;+ toUSD(feature.getAttributes()[&quot;REVENUE&quot;]) + &quot;&lt;br/&gt;&lt;b&gt;Members: &lt;/b&gt;&quot; +feature.getAttributes()[&quot;MEMBERS&quot;];
+}
+
+function hideMsg(evt)
+{
+  var feature = evt.feature;
+  document.getElementById(&quot;msg&quot;).innerHTML = &quot;&amp;nbsp;&lt;br/&gt;&amp;nbsp;&quot;;
+}
+
+function toUSD(number) {
+    var number = number.toString(), 
+    dollars = number.split(&#39;.&#39;)[0], 
+    cents = (number.split(&#39;.&#39;)[1] || &#39;&#39;) +&#39;00&#39;;
+    dollars = dollars.split(&#39;&#39;).reverse().join(&#39;&#39;)
+        .replace(/(\d{3}(?!$))/g, &#39;$1,&#39;)
+        .split(&#39;&#39;).reverse().join(&#39;&#39;);
+    return &#39;$&#39; + dollars;  /* + &#39;.&#39; + cents.slice(0, 2);  */
+}
+
+function setupTerritoryStyles(layer) {
+	var colStyles = [];
+	var fillColors = [&#39;#A6CEE3&#39;,&#39;#B2DF8A&#39;,&#39;#FB9A99&#39;,&#39;#FDBF6F&#39;,&#39;#CAB2D6&#39;,&#39;#FF7F00&#39;,&#39;#1F78B4&#39;,&#39;#6A3D9A&#39;,&#39;#E31A1C&#39;,&#39;#33A02C&#39;];
+	for (var i = 0; i &lt; 10; i++) {
+		colStyles[i] = new OM.style.Color({fill:fillColors[i],fillOpacity:0.9,strokeOpacity:0.1,strokeThickness:0,stroke:fillColors[i]});
+	}
+
+	colStyles[10] = new OM.style.Color({fill:&#39;#FFFF2A&#39;,fillOpacity:0.9});
+	var bucketStyle = new OM.style.BucketStyle({
+			styles : colStyles,
+			numClasses : 10,
+			classification : &#39;logarithmic&#39;, 
+			defaultStyle : colStyles[10]
+		});
+
+	layer.setRenderingStyle(bucketStyle, [&quot;REVENUE&quot;]);
+}
+
+function renderMap(){
+    var uni= new OM.universe.Universe(
+	{
+		srid : 32775,
+		bounds : new OM.geometry.Rectangle(-3280000, 170000, 2300000, 3200000, 32775),
+		numberOfZoomLevels: 16
+	});
+    map = new OM.Map(
+    	document.getElementById(&#39;map1&#39;),
+    	{
+          mapviewerURL: baseURL,
+          disableOverviewMap:true,
+    	  universe:uni
+    	}) ;
+        
+	var navigationPanelBar = new OM.control.NavigationPanelBar();
+	map.addMapDecoration(navigationPanelBar);
+	
+	states = new OM.layer.VectorLayer(&quot;stateslayer&quot;, 
+			{
+			  def:
+			  {
+			  type:OM.layer.VectorLayer.TYPE_PREDEFINED, 
+			  dataSource:&quot;mvdemo&quot;, theme:&quot;us_states_bi&quot;, 
+			  url: baseURL,
+			  loadOnDemand: false
+			}
+		  });
+
+	var basecol = new OM.style.Color({
+				fill : &quot;#A5A5A5&quot;,
+				fillOpacity : 0.7,
+				stroke : &quot;#ffffff&quot;,
+				strokeThickness : 1,
+				strokeOpacity : 0.7
+			});
+	
+	tlayer = new OM.layer.VectorLayer(&quot;tlayer&quot;, {
+			def : {
+				type : OM.layer.VectorLayer.TYPE_LOCAL
+			}
+		});
+	states.setRenderingStyle(basecol);
+	states.addListener(OM.event.LayerEvent.FEATURES_DISPLAYED, showTerritories);
+	map.addLayer(states);
+	map.setMapCenter(center);
+	map.setMapZoomLevel(2);
+	map.init();
+}
+&lt;/script&gt;
+
+</sawd:HTML></sawd:htmlView><sawd:reportView name="Report 0" display="embed" showView="" duid="55bo1n3hpav4t1pe"><saw:caption><saw:text>Revenue by State</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/04. Maps and Spatial/HTML5 JSAPI/Geo Aggregation/Revenue by State"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

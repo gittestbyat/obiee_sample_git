@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/6. Published Reporting/Sales/Data Models/North America Sales Datamodel.xdm"/>
+   <description>
+      <![CDATA[North%20America%20Sales]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="false"/>
+   <property name="showReportLinks" value="false"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value="null"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3"/>
+   <templates default="North America Sales">
+      <template label="North America Sales" url="North America Sales.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Default" url="SalesReport.rtf" type="rtf" outputFormat="html,pdf,rtf,excel,pptx" defaultFormat="pdf" locale="en_US" active="true" viewOnline="true"/>
+   </templates>
+</report>

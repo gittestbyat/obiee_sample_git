@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20Source:%20OE%20sample%20schema%20(Oracle%20Database%20-%20Requires%20'demo'%20JDBC%20connection%20to%20be%20configured).%20Structure:%20Flat%20XML.%20Features:%20Parameters%20with%20cascading%20LOVs,%20Bursting.]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="CustomerOrders" type="complex">
+         <sql dataSourceRef="demo">
+            <![CDATA[select	 "CUSTOMERS_VIEW"."CUSTOMER_ID" as "CUSTOMER_ID",
+         ("CUSTOMERS_VIEW"."CUST_LAST_NAME"||' '|| "CUSTOMERS_VIEW"."CUST_FIRST_NAME") as "CUSTOMER_NAME",
+	 "CUSTOMERS_VIEW"."CITY" as "CITY",
+	 "CUSTOMERS_VIEW"."STATE_PROVINCE" as "STATE_PROVINCE",
+	 "CUSTOMERS_VIEW"."COUNTRY_NAME" as "COUNTRY_NAME",
+	 "ORDERS_VIEW"."ORDER_ID" as "ORDER_ID",
+	 "ORDERS_VIEW"."ORDER_MODE" as "ORDER_MODE",
+	 "ORDERS_VIEW"."ORDER_TOTAL" as "ORDER_TOTAL" 
+ from	"ORDERS_VIEW" "ORDERS_VIEW",
+	"CUSTOMERS_VIEW" "CUSTOMERS_VIEW" 
+ where   "CUSTOMERS_VIEW"."CUSTOMER_ID"="ORDERS_VIEW"."CUSTOMER_ID"
+ order by "CUSTOMERS_VIEW"."CUSTOMER_ID"]]>
+         </sql>
+      </dataSet>
+      <dataSet name="Order Count" type="complex">
+         <sql dataSourceRef="demo">
+            <![CDATA[select	 "CUSTOMERS_VIEW"."CUSTOMER_ID" as "CUSTOMER_ID",
+	 count( distinct "ORDERS_VIEW"."ORDER_ID") as "ORDERS_COUNT" 
+ from	"CUSTOMERS_VIEW" "CUSTOMERS_VIEW",
+	"ORDERS_VIEW" "ORDERS_VIEW" 
+ where   "CUSTOMERS_VIEW"."CUSTOMER_ID"="ORDERS_VIEW"."CUSTOMER_ID" 
+group by "CUSTOMERS_VIEW"."CUSTOMER_ID"]]>
+         </sql>
+      </dataSet>
+      <link name="link" parentGroup="G_2" parentColumn="CUSTOMER_ID" childQuery="CustomerOrders" childColumn="&quot;CUSTOMERS_VIEW&quot;.&quot;CUSTOMER_ID&quot;" childColumnAlias="CUSTOMER_ID"/>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+				<group name="G_2" source="Order Count" label="G_2" groupFilter="${G_2.ORDERS_COUNT > 1}">
+					<element name="CUSTOMER_ID" value="CUSTOMER_ID" dataType="xsd:integer" label="CUSTOMER_ID" breakOrder="None" fieldOrder="1"/>
+					<element name="ORDERS_COUNT" value="ORDERS_COUNT" dataType="xsd:integer" label="ORDERS_COUNT" breakOrder="None" fieldOrder="2"/>
+					<group name="G_1" source="CustomerOrders" label="G_1">
+						<element name="CUSTOMER_ID" value="CUSTOMER_ID" dataType="xsd:integer" label="CUSTOMER_ID" breakOrder="None" fieldOrder="1"/>
+						<element name="CITY" value="CITY" dataType="xsd:string" label="CITY" breakOrder="None" fieldOrder="3"/>
+						<element name="STATE_PROVINCE" value="STATE_PROVINCE" dataType="xsd:string" label="STATE_PROVINCE" breakOrder="None" fieldOrder="4"/>
+						<element name="COUNTRY_NAME" value="COUNTRY_NAME" dataType="xsd:string" label="COUNTRY_NAME" breakOrder="None" fieldOrder="5"/>
+						<element name="ORDER_ID" value="ORDER_ID" dataType="xsd:integer" label="ORDER_ID" breakOrder="None" fieldOrder="6"/>
+						<element name="ORDER_MODE" value="ORDER_MODE" dataType="xsd:string" label="ORDER_MODE" breakOrder="None" fieldOrder="7"/>
+						<element name="CUSTOMER_NAME" value="CUSTOMER_NAME" dataType="xsd:string" label="CUSTOMER_NAME" breakOrder="None" fieldOrder="2"/>
+						<element name="ORDER_TOTAL" value="ORDER_TOTAL" dataType="xsd:double" label="ORDER_TOTAL" breakOrder="None" fieldOrder="8"/>
+					</group>
+				</group>
+			</dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting>
+      <burst name="Burst2File" enabled="true">
+         <property name="BURSTING_NODE" value="/DATA_DS/G_2/CUSTOMER_ID"/>
+         <property name="DELIVERY_KEY" value="/DATA_DS/G_2/CUSTOMER_ID"/>
+         <dataSet>
+            <sql>
+               <![CDATA[Select distinct c.custid "KEY",
+     'Customer Orders' TEMPLATE,
+     'XPT' TEMPLATE_FORMAT,
+     'en-US' LOCALE,
+     'PDF' OUTPUT_FORMAT,
+     'FILE' DEL_CHANNEL,
+     'C:\temp' PARAMETER1,
+     c.custname||'_orders.pdf' PARAMETER2
+From (Select  (cv.cust_last_name|| '  ' || cv.cust_first_name ) custname, cv.customer_id custid from customers_view cv, orders_view ov where cv.customer_id = ov.customer_id) c 
+order by  c.custid]]>
+            </sql>
+         </dataSet>
+      </burst>
+   </bursting>
+   <display>
+		<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="Order Count" left="357px" top="39px"/><layout name="CustomerOrders" left="72px" top="105px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+			<groupLink name="link_1" parentGroup="G_2" childGroup="G_1"/>
+		</groupLinks>
+	</display>
+</dataModel>

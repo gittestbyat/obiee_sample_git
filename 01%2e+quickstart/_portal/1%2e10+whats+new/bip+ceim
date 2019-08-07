@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="ddcv0kfop4fmrki7" bipReportPath="./1.00 New Features Demo_BIP Printing.xdo">
+	<saw:pageProps orientation="portrait" printRows="visible" disableMargins="false">
+		<saw:pageHeader show="false"/>
+		<saw:pageFooter show="false"/>
+		<saw:bipLayoutsList><saw:bipLayout>Printable HTML</saw:bipLayout><saw:bipLayout>Printable PDF</saw:bipLayout><saw:bipLayout>Portrait Layout</saw:bipLayout><saw:bipLayout>Landscape Layout</saw:bipLayout><saw:bipLayout>Portrait Layout Grey</saw:bipLayout></saw:bipLayoutsList>
+	</saw:pageProps>
+	<sawd:dashboardColumn name="Column 1" canFreeze="false" duid="6vkrc9cctr1erfkc" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 3" duid="nsdvp100vg674hdv" showSectionTitle="false" drillInline="true" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec wrapText="true" borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+			</saw:displayFormat><sawd:advancedReportingObjectView name="Advanced Report 1" bipPath="/05. Published Reporting/c. Integration/Reports/OBIEESubjectAreaSource.xdo" duid="m3j4ni4sjsnbgbqu" display="link"><saw:caption><saw:text>OBIEESubjectAreaSource</saw:text></saw:caption></sawd:advancedReportingObjectView>
+			
+		<sawd:advancedReportingObjectView name="Advanced Report 0" bipPath="/05. Published Reporting/c. Integration/Reports/Sales History Report w SA Source.xdo" duid="qfr9oheabuov3b3n" display="embedded" height="800px" width="500%"><saw:caption><saw:text>Sales History Report w SA Source</saw:text></saw:caption></sawd:advancedReportingObjectView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec/>
+		</saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

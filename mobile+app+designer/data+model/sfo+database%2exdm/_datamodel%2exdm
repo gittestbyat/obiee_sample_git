@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BIEE">
+   <description>
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Data" type="complex">
+         <sql dataSourceRef="BISAMPLE">
+            <![CDATA[select a.id, b.year current_year, a.year prev_year, a.month, a.operating_airline, a.operating_airline_iata_code, a.geo_summary, a.geo_region, a.activity_type_code, a.price_category_code, 
+a.terminal, a.boarding_area, nvl(b.passenger_count, 0) current_year_count, nvl(a.passenger_count,0) prev_year_count, nvl(b.passenger_count, 0) - nvl(a.passenger_count,0) change_count
+from BISAMPLE_OTHER.SFO_DATA a, BISAMPLE_OTHER.SFO_DATA b
+where a.year = b.year-1
+and a.month = b.month
+and a.operating_airline (+) = b.operating_airline
+and a.operating_airline_iata_code (+)  = b.operating_airline_iata_code
+and a.geo_summary (+)  = b.geo_summary
+and a.geo_region (+)  = b.geo_region
+and a.activity_type_code (+)  = b.activity_type_code 
+and a.price_category_code (+)  = b.price_category_code
+and a.terminal (+)  = b.terminal
+and a.boarding_area (+)  = b.boarding_area
+order by current_year, month]]>
+         </sql>
+      </dataSet>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="Data">
+               <element name="ID" value="ID" label="ID" dataType="xsd:double" breakOrder="" fieldOrder="1"/>
+               <element name="CURRENT_YEAR" value="CURRENT_YEAR" label="CURRENT_YEAR" dataType="xsd:double" breakOrder="" fieldOrder="2"/>
+               <element name="PREV_YEAR" value="PREV_YEAR" label="PREV_YEAR" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="MONTH" value="MONTH" label="MONTH" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+               <element name="OPERATING_AIRLINE" value="OPERATING_AIRLINE" label="OPERATING_AIRLINE" dataType="xsd:string" breakOrder="" fieldOrder="5"/>
+               <element name="OPERATING_AIRLINE_IATA_CODE" value="OPERATING_AIRLINE_IATA_CODE" label="OPERATING_AIRLINE_IATA_CODE" dataType="xsd:string" breakOrder="" fieldOrder="6"/>
+               <element name="GEO_SUMMARY" value="GEO_SUMMARY" label="GEO_SUMMARY" dataType="xsd:string" breakOrder="" fieldOrder="7"/>
+               <element name="GEO_REGION" value="GEO_REGION" label="GEO_REGION" dataType="xsd:string" breakOrder="" fieldOrder="8"/>
+               <element name="ACTIVITY_TYPE_CODE" value="ACTIVITY_TYPE_CODE" label="ACTIVITY_TYPE_CODE" dataType="xsd:string" breakOrder="" fieldOrder="9"/>
+               <element name="PRICE_CATEGORY_CODE" value="PRICE_CATEGORY_CODE" label="PRICE_CATEGORY_CODE" dataType="xsd:string" breakOrder="" fieldOrder="10"/>
+               <element name="TERMINAL" value="TERMINAL" label="TERMINAL" dataType="xsd:string" breakOrder="" fieldOrder="11"/>
+               <element name="BOARDING_AREA" value="BOARDING_AREA" label="BOARDING_AREA" dataType="xsd:string" breakOrder="" fieldOrder="12"/>
+               <element name="CURRENT_YEAR_COUNT" value="CURRENT_YEAR_COUNT" label="CURRENT_YEAR_COUNT" dataType="xsd:double" breakOrder="" fieldOrder="13"/>
+               <element name="PREV_YEAR_COUNT" value="PREV_YEAR_COUNT" label="PREV_YEAR_COUNT" dataType="xsd:double" breakOrder="" fieldOrder="14"/>
+               <element name="CHANGE_COUNT" value="CHANGE_COUNT" label="CHANGE_COUNT" dataType="xsd:double" breakOrder="" fieldOrder="15"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="Data" left="280px" top="28px"/>
+         <layout name="DATA_DS" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

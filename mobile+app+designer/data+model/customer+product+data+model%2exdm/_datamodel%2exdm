@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BIEE">
+   <description xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <dataSet name="Data" type="complex">
+         <sql dataSourceRef="demo">
+            <![CDATA[select * from customers_view]]>
+         </sql>
+      </dataSet>
+      <dataSet name="Order" type="complex">
+         <sql dataSourceRef="demo">
+            <![CDATA[select	 "ORDER_ITEMS"."LINE_ITEM_ID" as "LINE_ITEM_ID",
+	 "ORDER_ITEMS"."UNIT_PRICE" as "UNIT_PRICE",
+	 "ORDER_ITEMS"."QUANTITY" as "QUANTITY",
+	 "ORDERS_VIEW"."ORDER_DATE" as "ORDER_DATE",
+	 "ORDERS_VIEW"."CUSTOMER_ID" as "CUSTOMER_ID",
+	 "ORDERS_VIEW"."ORDER_STATUS" as "ORDER_STATUS",
+	 "PRODUCT_INFORMATION"."PRODUCT_NAME" as "PRODUCT_NAME",
+	 "PRODUCT_INFORMATION"."PRODUCT_DESCRIPTION" as "PRODUCT_DESCRIPTION",
+	 "ORDERS_VIEW"."ORDER_ID" as "ORDER_ID",
+	 "ORDERS_VIEW"."ORDER_MODE" as "ORDER_MODE",
+	 "ORDERS_VIEW"."ORDER_TOTAL" as "ORDER_TOTAL",
+	 "CATEGORIES_TAB"."CATEGORY_DESCRIPTION" as "CATEGORY_DESCRIPTION",
+	 "CATEGORIES_TAB"."CATEGORY_NAME" as "CATEGORY_NAME",
+	 "PRODUCT_INFORMATION"."PRODUCT_STATUS" as "PRODUCT_STATUS" 
+ from	"OE"."CATEGORIES_TAB" "CATEGORIES_TAB",
+	"OE"."PRODUCT_INFORMATION" "PRODUCT_INFORMATION",
+	"OE"."ORDER_ITEMS" "ORDER_ITEMS",
+	"OE"."ORDERS_VIEW" "ORDERS_VIEW" 
+ where   "ORDER_ITEMS"."ORDER_ID"="ORDERS_VIEW"."ORDER_ID"
+ and	 "PRODUCT_INFORMATION"."PRODUCT_ID"="ORDER_ITEMS"."PRODUCT_ID"
+ and	 "PRODUCT_INFORMATION"."CATEGORY_ID"="CATEGORIES_TAB"."CATEGORY_ID"]]>
+         </sql>
+      </dataSet>
+      <link name="dl-4044" parentGroup="G_1" parentColumn="CUSTOMER_ID" childQuery="Order" childColumn="&quot;ORDERS_VIEW&quot;.&quot;CUSTOMER_ID&quot;" childColumnAlias="CUSTOMER_ID"/>
+   </dataSets>
+   <output xmlns="http://xmlns.oracle.com/oxp/xmlp" rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="Data">
+               <element name="CUSTOMER_ID" value="CUSTOMER_ID" label="CUSTOMER_ID" dataType="xsd:integer" breakOrder="" fieldOrder="1"/>
+               <element name="CUST_FIRST_NAME" value="CUST_FIRST_NAME" label="CUST_FIRST_NAME" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="CUST_LAST_NAME" value="CUST_LAST_NAME" label="CUST_LAST_NAME" dataType="xsd:string" breakOrder="" fieldOrder="3"/>
+               <element name="STREET_ADDRESS" value="STREET_ADDRESS" label="STREET_ADDRESS" dataType="xsd:string" breakOrder="" fieldOrder="4"/>
+               <element name="POSTAL_CODE" value="POSTAL_CODE" label="POSTAL_CODE" dataType="xsd:string" breakOrder="" fieldOrder="5"/>
+               <element name="CITY" value="CITY" label="CITY" dataType="xsd:string" breakOrder="" fieldOrder="6"/>
+               <element name="STATE_PROVINCE" value="STATE_PROVINCE" label="STATE_PROVINCE" dataType="xsd:string" breakOrder="" fieldOrder="7"/>
+               <element name="COUNTRY_ID" value="COUNTRY_ID" label="COUNTRY_ID" dataType="xsd:string" breakOrder="" fieldOrder="8"/>
+               <element name="COUNTRY_NAME" value="COUNTRY_NAME" label="COUNTRY_NAME" dataType="xsd:string" breakOrder="" fieldOrder="9"/>
+               <element name="REGION_ID" value="REGION_ID" label="REGION_ID" dataType="xsd:double" breakOrder="" fieldOrder="10"/>
+               <element name="NLS_LANGUAGE" value="NLS_LANGUAGE" label="NLS_LANGUAGE" dataType="xsd:string" breakOrder="" fieldOrder="11"/>
+               <element name="NLS_TERRITORY" value="NLS_TERRITORY" label="NLS_TERRITORY" dataType="xsd:string" breakOrder="" fieldOrder="12"/>
+               <element name="CREDIT_LIMIT" value="CREDIT_LIMIT" label="CREDIT_LIMIT" dataType="xsd:double" breakOrder="" fieldOrder="13"/>
+               <element name="CUST_EMAIL" value="CUST_EMAIL" label="CUST_EMAIL" dataType="xsd:string" breakOrder="" fieldOrder="14"/>
+               <element name="PRIMARY_PHONE_NUMBER" value="PRIMARY_PHONE_NUMBER" label="PRIMARY_PHONE_NUMBER" dataType="xsd:string" breakOrder="" fieldOrder="15"/>
+               <element name="PHONE_NUMBER_2" value="PHONE_NUMBER_2" label="PHONE_NUMBER_2" dataType="xsd:string" breakOrder="" fieldOrder="16"/>
+               <element name="PHONE_NUMBER_3" value="PHONE_NUMBER_3" label="PHONE_NUMBER_3" dataType="xsd:string" breakOrder="" fieldOrder="17"/>
+               <element name="PHONE_NUMBER_4" value="PHONE_NUMBER_4" label="PHONE_NUMBER_4" dataType="xsd:string" breakOrder="" fieldOrder="18"/>
+               <element name="PHONE_NUMBER_5" value="PHONE_NUMBER_5" label="PHONE_NUMBER_5" dataType="xsd:string" breakOrder="" fieldOrder="19"/>
+               <element name="ACCOUNT_MGR_ID" value="ACCOUNT_MGR_ID" label="ACCOUNT_MGR_ID" dataType="xsd:integer" breakOrder="" fieldOrder="20"/>
+               <element name="LOCATION_GTYPE" value="LOCATION_GTYPE" label="LOCATION_GTYPE" dataType="xsd:double" breakOrder="" fieldOrder="21"/>
+               <element name="LOCATION_SRID" value="LOCATION_SRID" label="LOCATION_SRID" dataType="xsd:double" breakOrder="" fieldOrder="22"/>
+               <element name="LOCATION_X" value="LOCATION_X" label="LOCATION_X" dataType="xsd:double" breakOrder="" fieldOrder="23"/>
+               <element name="LOCATION_Y" value="LOCATION_Y" label="LOCATION_Y" dataType="xsd:double" breakOrder="" fieldOrder="24"/>
+               <element name="LOCATION_Z" value="LOCATION_Z" label="LOCATION_Z" dataType="xsd:double" breakOrder="" fieldOrder="25"/>
+               <group name="G_2" label="G_2" source="Order">
+                  <element name="LINE_ITEM_ID" value="LINE_ITEM_ID" label="LINE_ITEM_ID" dataType="xsd:integer" breakOrder="" fieldOrder="1"/>
+                  <element name="UNIT_PRICE" value="UNIT_PRICE" label="UNIT_PRICE" dataType="xsd:double" breakOrder="" fieldOrder="2"/>
+                  <element name="QUANTITY" value="QUANTITY" label="QUANTITY" dataType="xsd:integer" breakOrder="" fieldOrder="3"/>
+                  <element name="ORDER_DATE" value="ORDER_DATE" label="ORDER_DATE" dataType="xsd:date" breakOrder="" fieldOrder="4"/>
+                  <element name="CUSTOMER_ID" value="CUSTOMER_ID" label="CUSTOMER_ID" dataType="xsd:integer" breakOrder="" fieldOrder="5"/>
+                  <element name="ORDER_STATUS" value="ORDER_STATUS" label="ORDER_STATUS" dataType="xsd:integer" breakOrder="" fieldOrder="6"/>
+                  <element name="PRODUCT_NAME" value="PRODUCT_NAME" label="PRODUCT_NAME" dataType="xsd:string" breakOrder="" fieldOrder="7"/>
+                  <element name="PRODUCT_DESCRIPTION" value="PRODUCT_DESCRIPTION" label="PRODUCT_DESCRIPTION" dataType="xsd:string" breakOrder="" fieldOrder="8"/>
+                  <element name="ORDER_ID" value="ORDER_ID" label="ORDER_ID" dataType="xsd:long" breakOrder="" fieldOrder="9"/>
+                  <element name="ORDER_MODE" value="ORDER_MODE" label="ORDER_MODE" dataType="xsd:string" breakOrder="" fieldOrder="10"/>
+                  <element name="ORDER_TOTAL" value="ORDER_TOTAL" label="ORDER_TOTAL" dataType="xsd:double" breakOrder="" fieldOrder="11"/>
+                  <element name="CATEGORY_DESCRIPTION" value="CATEGORY_DESCRIPTION" label="CATEGORY_DESCRIPTION" dataType="xsd:string" breakOrder="" fieldOrder="12"/>
+                  <element name="CATEGORY_NAME" value="CATEGORY_NAME" label="CATEGORY_NAME" dataType="xsd:string" breakOrder="" fieldOrder="13"/>
+                  <element name="PRODUCT_STATUS" value="PRODUCT_STATUS" label="PRODUCT_STATUS" dataType="xsd:string" breakOrder="" fieldOrder="14"/>
+               </group>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <lexicals xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <valueSets xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <parameters xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <bursting xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <display xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <layouts>
+         <layout name="Data" left="280px" top="28px"/>
+         <layout name="Order" left="560px" top="28px"/>
+         <layout name="DATA_DS" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks>
+         <groupLink name="dl-1195" parentGroup="G_1" childGroup="G_2"/>
+      </groupLinks>
+   </display>
+</dataModel>

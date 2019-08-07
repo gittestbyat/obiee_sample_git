@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="u1j5ae1o7dlrkeak"><sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" layoutType="bestFit" canFreeze="true"><sawd:dashboardSection name="Section 7" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 4" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1866">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Tracking OBIEE Source Navigation Path
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 4" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1865">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 5" duid="9svp7slg5jivcbtp" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" hAlign="left" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 5" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1867">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; RPD objects can be configured to indicate the LTS and the source that is used by OBIEE server to query the data from[br/]</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="hno3th559r6b7rcl" break="column" layoutType="minimumSize" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 1" duid="t5sbvsn883sik26u" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 3" display="embed" showView="" duid="aiibiffloj8gvlhi"><saw:caption><saw:text>Which LTS-Alias-Table is used</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/10. Lifecycle and Admin/Admin Features/Source Navigation Tracking/Which LTS-Alias-Table is used"/></sawd:reportView><sawd:reportView name="Report 2" display="embed" showView="" duid="ehrv5l7b5aq77r8n"><saw:caption><saw:text>Which Aggregate is Hit</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/10. Lifecycle and Admin/Admin Features/Source Navigation Tracking/Which Aggregate is Hit"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" width="49%"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

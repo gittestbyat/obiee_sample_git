@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria subjectArea="&quot;A - Sample Sales&quot;" xsi:type="saw:simpleCriteria" withinHierarchy="true">
+		<saw:columns>
+			<saw:column columnID="c1" xsi:type="saw:regularColumn">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D1  Office&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column columnID="c2" xsi:type="saw:regularColumn">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P3  LOB&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column columnID="c0" xsi:type="saw:regularColumn">
+				<saw:displayFormat>
+					<saw:formatSpec wrapText="true" suppress="repeat" hAlign="center">
+						<saw:dataFormat customFormat="@[html]@H" xsi:type="saw:custom"/></saw:formatSpec></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat>
+					<saw:caption fmt="html">
+						<saw:text>Revenue</saw:text></saw:caption></saw:columnHeading>
+				<saw:tableHeading>
+					<saw:caption fmt="html">
+						<saw:text>Answers Calc</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">
+&#39;&lt;table bgcolor=&#39; || (CASE WHEN rank((&quot;Base Facts&quot;.&quot;1- Revenue&quot;)) = 1 THEN &#39;008000&#39; WHEN rank ((&quot;Base Facts&quot;.&quot;1- Revenue&quot;)) &lt; 6 THEN &#39;C4E8CH&#39; WHEN rank((&quot;Base Facts&quot;.&quot;1- Revenue&quot;)) &lt; 11 THEN &#39;F6F7A2&#39; WHEN rank((&quot;Base Facts&quot;.&quot;1- Revenue&quot;)) &lt; 16 THEN &#39;F7DDB5&#39; WHEN rank((&quot;Base Facts&quot;.&quot;1- Revenue&quot;)) &lt; 21 THEN &#39;FBBCA3&#39; WHEN rank((&quot;Base Facts&quot;.&quot;1- Revenue&quot;)) &lt; 26 THEN &#39;F4AEE4&#39; WHEN rank((&quot;Base Facts&quot;.&quot;1- Revenue&quot;)) &lt; 31 THEN &#39;CCCCFF&#39; ELSE &#39;FFFFFF&#39; END) || &#39;&gt;&lt;tr&gt;&lt;td align=right&gt;&lt;font size=1&gt;&#39;||CAST (FLOOR(&quot;Base Facts&quot;.&quot;1- Revenue&quot;/1000) AS VARCHAR(20))|| &#39;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#39;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1">
+						<saw:displayFormat><saw:formatSpec width="500"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1"><saw:displayFormat><saw:formatSpec width="500"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title><saw:logoFormat><saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c1"/>
+						<saw:edgeLayer type="column" columnID="c2"/>
+						<saw:edgeLayer type="column" columnID="c0"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true">
+				</saw:edge>
+				<saw:edge axis="section">
+					<saw:edgeLayers><saw:edgeLayer type="measure"/>
+					</saw:edgeLayers></saw:edge>
+				<saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c1"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c2"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+				<saw:measure columnID="c0"/></saw:measuresList>
+		</saw:view></saw:views></saw:report>

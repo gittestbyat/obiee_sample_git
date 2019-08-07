@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c103e91c15ce38e9b">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">DAYOFWEEK(&quot;Orders Dates&quot;.&quot;R17  Paid Date&quot;)</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Orders Dates</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Order WeekDay</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c27c601976c800c47">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">DAYOFWEEK(&quot;Orders Dates&quot;.&quot;R14  Billed Date&quot;)
+</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>DAYOFWEEK(Orders Dates</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Billed WeekDay</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c664424aa6bd6e02d">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;31  # of Orders  (Cnt Distinct)&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+	</saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="filtersView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat><saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section">
+					<saw:edgeLayers><saw:edgeLayer type="measure"><saw:memberFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="after"/></saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c27c601976c800c47"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column" showColumnHeader="true">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t2" grandTotalPosition="after"/></saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c103e91c15ce38e9b"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+				<saw:measure columnID="c664424aa6bd6e02d"/></saw:measuresList>
+			<saw:sectionContent><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:sectionContent></saw:view><saw:view xsi:type="saw:filtersView" name="filtersView!1"/></saw:views></saw:report>

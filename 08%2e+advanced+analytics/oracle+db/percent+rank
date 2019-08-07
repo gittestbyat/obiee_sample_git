@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="c44687b56ca3ad995">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c9b63d6a7b6bd2076">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D1  Office&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c45b11d8d2e78b27e">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cde90c2ab5a6d40f5">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">CAST(EVALUATE (&#39; PERCENT_RANK() OVER (PARTITION BY %1 ORDER BY %2)&#39;, &quot;Products&quot;.&quot;P4  Brand&quot;,&quot;Base Facts&quot;.&quot;1- Revenue&quot;) AS DOUBLE) * 100</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat minDigits="1" maxDigits="1" commas="true" negativeType="minus" xsi:type="saw:percent"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2220">
+            <saw:text>Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2221">
+            <saw:text>Percent Rank</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+    <saw:columnOrder>
+      <saw:columnOrderRef columnID="c44687b56ca3ad995" direction="ascending"/>
+      <saw:columnOrderRef columnID="cde90c2ab5a6d40f5" direction="ascending"/>
+    </saw:columnOrder>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="tableView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!1"/>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c44687b56ca3ad995"/>
+            <saw:edgeLayer type="column" columnID="c9b63d6a7b6bd2076"/>
+            <saw:edgeLayer type="column" columnID="c45b11d8d2e78b27e"/>
+            <saw:edgeLayer type="column" columnID="cde90c2ab5a6d40f5"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+      <saw:staticText>
+        <saw:caption fmt="text" captionID="kcap12832459_2219">
+          <saw:text>Percent_Rank is defined using the EVALUATE function.
+[br/]
+It uses the database analytic function PERCENT_RANK to compute the values.</saw:text>
+        </saw:caption>
+      </saw:staticText>
+    </saw:view>
+  </saw:views>
+</saw:report>

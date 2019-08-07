@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:view xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="saw:globalFilterPrompt" name="">
+	<saw:prompts scope="dashboard" subjectArea="&quot;A - Sample Sales&quot;">
+		<saw:promptStep labelPosition="above">
+			<saw:individualPrompts>
+				<saw:prompt xsi:type="saw:variablePrompt" columnID="c0" required="false" subjectArea="&quot;A - Sample Sales&quot;">
+					<saw:promptUIControl xsi:type="saw:editBox"/>
+					<saw:promptSource dataType="numeric" xsi:type="saw:choiceList" useCaptionOnly="true">
+						<saw:promptChoices/></saw:promptSource>
+					<saw:setPromptVariables>
+						<saw:setPromptVariable location="value" type="presentationVariable" variableFormula="TopN"/>
+					</saw:setPromptVariables>
+					<saw:promptOperator/>
+					<saw:constrainPrompt type="none"/>
+					<saw:label>
+						<saw:caption oldID="kcap12832459_1110">
+							<saw:text>Enter N for Top N:</saw:text>
+						</saw:caption>
+					</saw:label>
+					<saw:promptDefaultValues type="reportDefault" usingCodeValue="false"/>
+				</saw:prompt>
+			</saw:individualPrompts>
+			<saw:displayFormat/>
+			<saw:title/></saw:promptStep>
+	</saw:prompts>
+</saw:view>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         
+         
+         <saw:column xsi:type="saw:regularColumn" columnID="c7143d604f89fea6b"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P1  Product&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Selected Dimension</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c533cdd1c566290c7" forceGroupBy="true"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">Rank(&quot;Simple Calculations&quot;.&quot;30  Profit Margin&quot;)</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cd847a6a7ecf6bdfd"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c1c3f028414647cd2"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;30  Profit Margin&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+      
+      <saw:filter><sawx:expr xsi:type="sawx:list" op="in"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">2012</sawx:expr><sawx:expr xsi:type="xsd:string">2013</sawx:expr></sawx:expr></saw:filter><saw:columnOrder><saw:columnOrderRef columnID="c533cdd1c566290c7" direction="ascending"/></saw:columnOrder></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="dvtchart!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!2"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="none" includeName="true"><saw:displayFormat>
+            <saw:formatSpec wrapText="true"/></saw:displayFormat><saw:title><saw:displayFormat>
+               <saw:formatSpec wrapText="true" fontFamily="Arial" fontSize="18" fontStyle="regular"/></saw:displayFormat></saw:title></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c83a7549032785555"/>
+                  <saw:edgeLayer type="column" columnID="cdebaf284d27fe191"/>
+                  <saw:edgeLayer type="column" columnID="c4891874c725d5660"/><saw:edgeLayer type="column" columnID="cd847a6a7ecf6bdfd"/><saw:edgeLayer type="column" columnID="cdd733e3aeba2336b"/><saw:edgeLayer type="column" columnID="c725d658e927f7fc5"/><saw:edgeLayer type="column" columnID="c0b6471b38dbbf2c1"/><saw:edgeLayer type="column" columnID="c1c3f028414647cd2"/><saw:edgeLayer type="column" columnID="cd176cc23fed7a4b7"/><saw:edgeLayer type="column" columnID="cba7d0f493f21401f"/><saw:edgeLayer type="column" columnID="c533cdd1c566290c7"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="waterfall" subtype="default" renderFormat="default" mode="online" nullSuppress="false">
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+            <saw:format type="incdecbal">
+               <saw:customFormat position="inc" color="#669933"/>
+               <saw:customFormat position="dec" color="#CC3300"/>
+               <saw:customFormat position="running" color="#006699"/></saw:format></saw:display>
+         <saw:canvasFormat height="250" width="450">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:title mode="custom"/></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               
+               
+               <saw:category runningSum="false"><saw:columnRef columnID="c533cdd1c566290c7"/></saw:category><saw:category runningSum="false"><saw:columnRef columnID="c7143d604f89fea6b"/></saw:category><saw:measureLabels/></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="true">
+               <saw:column measureType="y" endBarSuppressed="false"><saw:columnRef columnID="c1c3f028414647cd2"/></saw:column></saw:measures>
+            <saw:seriesGenerators/>
+            <saw:sections displayAsSlider="true"/></saw:selections>
+         <saw:legendFormat position="none" transparentFill="true">
+            <saw:textFormat fontSize="10"/></saw:legendFormat>
+         <saw:axesFormats>
+            <saw:axisFormat axis="Y1" displayScaleLabels="true">
+               <saw:scaleMarkers>
+                  <saw:scaleMarker color="#000000" xsi:type="saw:scaleMarkerLine">
+                     <saw:markerLabel>
+                        <saw:title mode="custom">
+                           <saw:caption>
+                              <saw:text>0</saw:text></saw:caption></saw:title></saw:markerLabel>
+                     <saw:lineWidth>
+                        <sawx:expr xsi:type="xsd:decimal">1</sawx:expr></saw:lineWidth>
+                     <saw:linePosition>
+                        <sawx:expr xsi:type="xsd:decimal">0</sawx:expr></saw:linePosition></saw:scaleMarker></saw:scaleMarkers>
+               <saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="k" skipLabels="true"/>
+               <saw:textFormat fontSize="9"/></saw:axisFormat>
+            <saw:axisFormat axis="X" displayScaleLabels="true">
+               <saw:title mode="custom"/><saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/><saw:textFormat fontSize="9"/></saw:axisFormat></saw:axesFormats></saw:view>
+      
+      <saw:view xsi:type="saw:tableView" name="tableView!2" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:displayGrandTotals><saw:displayGrandTotal id="gt_row" grandTotalPosition="after"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="c533cdd1c566290c7" visibility="hidden"/><saw:edgeLayer type="column" columnID="c7143d604f89fea6b"/><saw:edgeLayer type="column" columnID="cd847a6a7ecf6bdfd"/><saw:edgeLayer type="column" columnID="c1c3f028414647cd2"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:dvtchart" name="dvtchart!2">
+         <saw:display type="waterfall" subtype="default" renderFormat="default" mode="online" nullSuppress="false">
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+            <saw:format type="incdecbal">
+               <saw:customFormat position="inc" color="#669933"/>
+               <saw:customFormat position="dec" color="#CC3300"/>
+               <saw:customFormat position="running" color="#006699"/></saw:format></saw:display>
+         <saw:canvasFormat height="250" width="400">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:title mode="custom"/></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               
+               
+               <saw:measureLabels/></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="true">
+               <saw:column measureType="y"><saw:columnRef columnID="c1c3f028414647cd2"/></saw:column><saw:column measureType="y"><saw:columnRef columnID="c533cdd1c566290c7"/></saw:column></saw:measures>
+            <saw:seriesGenerators/>
+            <saw:sections displayAsSlider="true"/></saw:selections>
+         <saw:legendFormat position="none" transparentFill="true">
+            <saw:textFormat fontSize="10"/></saw:legendFormat>
+         <saw:axesFormats>
+            <saw:axisFormat axis="Y1" displayScaleLabels="true">
+               <saw:scaleMarkers>
+                  <saw:scaleMarker color="#000000" xsi:type="saw:scaleMarkerLine">
+                     <saw:markerLabel>
+                        <saw:title mode="custom">
+                           <saw:caption>
+                              <saw:text>0</saw:text></saw:caption></saw:title></saw:markerLabel>
+                     <saw:lineWidth>
+                        <sawx:expr xsi:type="xsd:decimal">1</sawx:expr></saw:lineWidth>
+                     <saw:linePosition>
+                        <sawx:expr xsi:type="xsd:decimal">0</sawx:expr></saw:linePosition></saw:scaleMarker></saw:scaleMarkers>
+               <saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="k" skipLabels="true"/>
+               <saw:textFormat fontSize="9"/></saw:axisFormat>
+            <saw:axisFormat axis="X" displayScaleLabels="true">
+               <saw:title mode="custom"/><saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/><saw:textFormat fontSize="9"/></saw:axisFormat></saw:axesFormats></saw:view></saw:views></saw:report>

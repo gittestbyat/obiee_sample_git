@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c0fe927be6dd8e16a"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Date&quot;.&quot;Dep Date&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"><saw:dataFormat xsi:type="saw:date" biFormat="dateODBC"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ce39943d787d470ea"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Delay Facts&quot;.&quot;Delay Perf % (0=Ontime,  &gt;0=Late)&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="1" maxDigits="1" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Delay Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Delay Perf %</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Route&quot;.&quot;Distance Class&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Origin&quot;.&quot;Orig US State Name&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:columnExpression" formulaUse="code" displayUse="display"><saw:columnFormula formulaUse="display"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Origin&quot;.&quot;Orig Airport Name&quot;</sawx:expr></saw:columnFormula></sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Date&quot;.&quot;Dep Qtr&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Schedule&quot;.&quot;Dep Time Blk&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Schedule&quot;.&quot;Arr Time Blk&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest US State Name&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:columnExpression" formulaUse="code" displayUse="display"><saw:columnFormula formulaUse="display"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport Name&quot;</sawx:expr></saw:columnFormula></sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!1"/><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c0fe927be6dd8e16a"/><saw:edgeLayer type="column" columnID="ce39943d787d470ea"/><saw:edgeLayer type="column" columnID="c2da86ee4cf44c069"/><saw:edgeLayer type="column" columnID="c331173aba582e46d"/><saw:edgeLayer type="column" columnID="c3b7175b268ae25e0"/><saw:edgeLayer type="column" columnID="c77973eefd2cb8b13"/><saw:edgeLayer type="column" columnID="c031460fc6b7bb3be"/><saw:edgeLayer type="column" columnID="cdf45625b88eb893d"/><saw:edgeLayer type="column" columnID="c88fc3568c7713e67"/><saw:edgeLayer type="column" columnID="c82112352be3f6d15"/><saw:edgeLayer type="column" columnID="c95e00c42c4eb98ae"/></saw:edgeLayers><saw:columnOrder><saw:columnOrderRef columnID="ce39943d787d470ea" direction="descending"/></saw:columnOrder></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;link rel=&quot;stylesheet&quot; id=&quot;css&quot; href=&quot;&quot;&gt;
+&lt;script src=&quot;/va/api/v1/plugins/resource/oracle-jet/require.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/va/api/v1/plugins/registry/requirejsConfig.js&quot;&gt;&lt;/script&gt; 
+
+&lt;div  id=&quot;chart-container&quot;&gt;
+  &lt;div id=&quot;calMonth-container&quot; class=&quot;oj-flex oj-sm-flex-items-initial oj-flex-items-pad&quot; style=&quot;width:100%; max-width:680px;&quot;&gt;
+    &lt;div class=&quot;oj-flex-item&quot; style=&quot;display:inline-block;max-height:50px;width:100%;&quot; data-bind=&quot;ojComponent: {
+          component: &#39;ojLegend&#39;, 
+          orientation: &#39;horizontal&#39;,
+          sections: legendSections,
+          symbolWidth: 15,
+          symbolHeight: 15,
+          hAlign: &#39;center&#39;
+          }&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+document.getElementById(&quot;css&quot;).href = require.toUrl(&quot;ojs&quot;)+&quot;.css&quot;;
+$( &quot;html&quot; ).css( &quot;font-size&quot;, 14);
+
+function sortByKey(arr, prop, asc) {
+    arr = arr.sort(function(a, b) {
+        if (asc) return (a[prop] &gt; b[prop]) ? 1 : ((a[prop] &lt; b[prop]) ? -1 : 0);
+        else return (b[prop] &gt; a[prop]) ? 1 : ((b[prop] &lt; a[prop]) ? -1 : 0);
+    });
+    return arr;
+}
+
+var bins = [&quot;0-5%&quot;,&quot;5-10%&quot;,&quot;10-15%&quot;,&quot;15-20%&quot;,&quot;Above 20%&quot;];
+var colors = [&quot;#009933&quot;, &quot;#a2bf39&quot;, &quot;#fad55c&quot;, &quot;#ffb54d &quot;, &quot;#ed6647&quot;];
+
+function getColor(v){
+	var c = Math.floor(v/5);
+	if (c &gt;= colors.length) c=colors.length -1;
+	return colors[c];
+}
+
+/*Date expecxted in format: YYYY-MM-DD*/
+var data=[</saw:text></saw:caption></saw:prefix><saw:narrative rowCount="2000"><saw:caption fmt="html"><saw:text>{d:&quot;@{c0fe927be6dd8e16a}&quot;, v:@{ce39943d787d470ea}}</saw:text></saw:caption></saw:narrative><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep><saw:postfix><saw:caption fmt="html"><saw:text>];
+
+data = sortByKey(data,&#39;d&#39;, true);
+
+require([&#39;ojs/ojcore&#39;, &#39;knockout&#39;, &#39;jquery&#39;, &#39;ojs/ojknockout&#39;, &#39;ojs/ojpictochart&#39;, &#39;ojs/ojlegend&#39;], function (oj, ko, $) {
+    function PictoChartModel() {
+      var colorHandler = new oj.ColorAttributeGroupHandler();
+      var legendItems = [];
+	  var mname = [&#39;January&#39;,&#39;February&#39;,&#39;March&#39;,&#39;April&#39;,&#39;May&#39;,&#39;June&#39;,&#39;July&#39;,&#39;August&#39;,&#39;September&#39;,&#39;October&#39;,&#39;November&#39;,&#39;December&#39;];
+	  var i, sid, p_sid = &quot;&quot;;
+	  var monthData = [];	
+	  var divhtml = &quot;&lt;div class=&#39;oj-flex-item&#39; style=&#39;display:inline-block;padding-right:20px;margin-bottom:15px;&#39;&gt;&quot;;
+		  divhtml += &quot;&lt;h3&gt;MONTHHEADING&lt;/h3&gt;&lt;div style=&#39;word-spacing:6px;margin-left:6px;&#39;&gt;S M T W T F S&lt;/div&gt;&quot;;
+		  divhtml += &quot;&lt;div data-bind=\&quot;ojComponent:{component: &#39;ojPictoChart&#39;,items: MONTHITEMS,&quot;;
+		  divhtml += &quot;rowHeight: 20,layout: &#39;horizontal&#39;,columnCount: 7,tooltip: tooltipFunction}\&quot; style=&#39;&#39;&gt;&quot;;
+		  divhtml += &quot;&lt;/div&gt;&lt;/div&gt;&quot;;
+	  var calMonthDiv = document.getElementById(&#39;calMonth-container&#39;);
+	 
+	 for (i = 0; i &lt; data.length;){
+		 var pointer = 0;
+		 var mid=data[i].d.substr(0,7);
+		 var pictoItems = [];
+		 var day = data[i].d;
+		 var y = Number(day.substr(0,4));
+		 var m = Number(day.substr(5,2));
+ 		 var firstDay = (new Date(y, m-1, 1)).getDay();			
+		 var daysinmonth = (new Date(y, m, 0)).getDate();		   
+		 var calMonth = mname[m-1]+y;
+		 var calMonthHead = mname[m-1]+&#39; &#39;+y;		 
+		   
+		 for (var j=0;  j&lt; daysinmonth;) {
+		   if(pointer &lt; firstDay){
+		 	pictoItems.push({name: &#39;&#39;, color: &#39;rgba(0,0,0,0)&#39;});
+		 	pointer++; 	continue;
+		   }
+
+		   if (i&lt; data.length &amp;&amp; mid == data[i].d.substr(0,7) &amp;&amp; Number(data[i].d.substr(8,2))==(j+1)) { 
+		    var val = data[i].v;
+			var col = getColor(val);
+		 	pictoItems.push({name: mname[m-1]+&#39; &#39;+(j+1)+&quot; : &quot;+val+&quot;%&quot;, 
+							color: col}); 
+			i++; 
+		   } else { 
+		 	pictoItems.push({name: mname[m-1]+&#39; &#39;+(j+1)+&#39; : No Data&#39;, color: &#39;#e2e2e2&#39;});			
+		   }
+		   j++;
+		 }
+		 this[calMonth]=pictoItems;
+		 calMonthDiv.innerHTML += divhtml.replace(&quot;MONTHHEADING&quot;,calMonthHead).replace(&quot;MONTHITEMS&quot;,calMonth);
+	  }
+
+      for (var i = 0; i &lt; bins.length; i++) {
+        legendItems.push({text: bins[i] , color: colors[i]});
+      };
+
+      this.legendSections = ko.observableArray([{items: legendItems}]);
+
+      this.tooltipFunction = function (dataContext) {
+        return dataContext.name;
+      }
+    }
+
+    var pictoChartModel = new PictoChartModel();
+
+    $(document).ready(
+      function() {
+        ko.applyBindings(pictoChartModel, document.getElementById(&#39;chart-container&#39;));
+      }
+    );
+  });
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix></saw:view></saw:views></saw:report>

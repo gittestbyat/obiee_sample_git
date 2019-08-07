@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:view xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="saw:globalFilterPrompt" name=""><saw:prompts scope="dashboard" subjectArea="&quot;R - ORE Sample&quot;"><saw:promptStep labelPosition="above" buttonsPosition="side" showResetButton="false" autoApplyPrompt="true"><saw:individualPrompts><saw:prompt xsi:type="saw:columnFilterPrompt" columnID="c3" subjectArea="&quot;R - ORE Sample&quot;" required="false" placedOnNewColumn="true"><saw:formula><sawx:expr xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xsi:type="sawx:sqlExpression">&#39;psql&#39;</sawx:expr></saw:formula><saw:promptOperator op="in"/><saw:promptUIControl xsi:type="saw:editBox"><saw:customWidth width="250" using="custompixels"/></saw:promptUIControl><saw:label><saw:caption><saw:text>Physical SQL</saw:text></saw:caption></saw:label><saw:promptDefaultValues type="sql" usingCodeValue="false"><saw:promptDefaultValue>select &#39;select * from (
+select T42406.PER_NAME_@{dim1} @{dim1}, T191733.@{dim2} @{dim2}, T42409.@{dim3} @{dim3}, sum(T42433.@{metric}) @{metric} 
+from 
+     BISAMPLE.SAMP_OFFICES_D T42412,
+     BISAMPLE.SAMP_ADDRESSES_D T191733,
+     BISAMPLE.SAMP_PRODUCTS_D T42409,
+     BISAMPLE.SAMP_TIME_QTR_D T42406,
+     BISAMPLE.SAMP_REVENUE_F T42433 
+where  ( T42406.QTR_KEY = T42433.Bill_Qtr_Key and T42409.Prod_Key = T42433.Prod_Key and T42412.Office_Key = T42433.Office_Key and T42412.Address_Key = T191733.Address_Key ) 
+group by T42406.PER_NAME_@{dim1}, T42409.@{dim3}, T191733.@{dim2}) 
+where @{cfilter}{1=1} order by 1,2,3&#39; from &quot;R - ORE Sample&quot;</saw:promptDefaultValue></saw:promptDefaultValues><saw:constrainPrompt type="none"/><saw:setPromptVariables><saw:setPromptVariable location="value" type="presentationVariable" variableFormula="psql"/></saw:setPromptVariables><saw:promptSource xsi:type="saw:sqlPromptSource" sourceFormula="SELECT CASE  WHEN &#39;@{scriptname}{}&#39; = &#39;RandomRedDots&#39; THEN &#39;cursor(select 150 n from dual)&#39; WHEN &#39;@{scriptname}{}&#39; = &#39;sincFunction&#39; THEN &#39;cursor(select 30 THETA, 30 PHI, &#39;&#39;red&#39;&#39; COLOR from dual)&#39; ELSE &#39;NULL&#39; END FROM &quot;R - ORE Sample&quot;"/></saw:prompt></saw:individualPrompts><saw:customWidth width="250" using="custompixels"/><saw:title/></saw:promptStep></saw:prompts></saw:view>

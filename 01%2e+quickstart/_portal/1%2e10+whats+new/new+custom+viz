@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="7cf1fev3gdnh8du5"><sawd:dashboardColumn name="Column 4" duid="onnnmu9lefhpv08l" canFreeze="false" layoutType="specificSize" frozen="false"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 3" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1839">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+New Custom Visualizations
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 3" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1838">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			
+			
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle" width="100%"/>
+		</saw:displayFormat><sawd:dashboardSection layoutType="bestFit" name="Section 1" duid="bc0a9g7jdpe06vbj" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="a1vaovenv0pc7pe5"><sawd:HTML fmt="html">&lt;font size=2.5 color=darkblue&gt; Click on the following links for a few more custom visualizations :[br/]  - &lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals&amp;Page=KPI Circle&quot;&gt;KPI Circle&lt;/a&gt;, &lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals&amp;Page=Track Race&quot;&gt;Track Race &lt;/a&gt;, &lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals&amp;Page=G. Sankey&quot;&gt;Sankey Diagram &lt;/a&gt; &lt;/font&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection layoutType="bestFit" name="Section 2" duid="3gupbnhhhjs9u7f3" showSectionTitle="false" collapsible="false" horizontalLayout="true"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 2" display="embed" showView="" duid="tdrud9hn6ksfcnan"><saw:caption><saw:text>Google Sankey</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/02. Visualizations/Google Charts/Google Sankey"/></sawd:reportView><sawd:reportView name="Report 1" display="embed" showView="" duid="7oft3hnv6jovj5pp"><saw:caption><saw:text>Board Diagram</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/02. Visualizations/Java Visuals/Board Diagram"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/b. Features/OLAP Reports/Data Models/XML - OLAP Report RTF Data Model.xdm"/>
+   <description>
+      <![CDATA[Data%20Model:%20OLAP%20Report%20RTF%20Data%20Model.%20Layouts:%20RTF%20example%20layouts%20showing%20how%20to%20display%20hierarchical%20columns%20in%20tables%20or%20crosstabs.]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-vertical;promptLocation:top;displayApply:false;">
+      <parameter id="p_Measure" label="Measure:" defaultValue="" visible="true" rowPlacement="1">
+         <radioButton/>
+      </parameter>
+   </parameters>
+   <templates default="Default">
+      <template label="Default" url="Default.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,xlsx,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Account Totals" url="OLAP_Report_RTF_01.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Product Results" url="OLAP_Report_RTF_02.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Market Results" url="OLAP_Report_RTF_03.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Market Results by Product" url="OLAP_Report_RTF_04.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Report Description" url="ReportDescription-RTF (2).rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

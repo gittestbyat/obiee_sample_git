@@ -1,0 +1,8 @@
+<config version="1.0.0" xmlns="http://xmlns.oracle.com/oxp/config/">
+   <properties>
+      
+      
+      
+      
+   <property name="xdk-secure-io-mode">true</property><property name="flash-page-width">1000</property><property name="flash-page-height">800</property><property name="flash-height">600</property><property name="flash-width">800</property><property name="html-show-footer">true</property><property name="html-show-header">true</property></properties>
+<fonts><font family="Code 128" style="normal" weight="normal"><truetype path="ADUOSC.ttf" ttcno="0"/></font><font family="Aria" style="normal" weight="normal"><truetype path="ADUOSC.ttf"/></font><font family="BC 3of9" style="normal" weight="normal"><truetype path="B39R00.TTF"/></font><font family="times new roman" style="normal" weight="normal"><truetype path="ADUOSC.ttf" ttcno="3"/></font><font-substitute name="Tohama"><type1 name="FONT_COURIER"/></font-substitute><font-substitute name="Times"><truetype path="ADUOSC.ttf"/></font-substitute></fonts></config>

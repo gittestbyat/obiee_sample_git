@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawkpi:kpi xmlns:sawkpi="com.siebel.analytics.web/kpi/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawbsc="com.siebel.analytics.web/scorecard/v1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" subjectArea="&quot;A - Sample Sales&quot;" isTrendEnabled="true" ID="3b757c10-0ba3-1000-8567-0ae4eb530000" name="Avg Revenue per FTE" xmlVersion="201106170"><sawkpi:kpiPeriod changeToleranceType="UNITS">
+		<saw:column columnID="c9b386123b125a5de" xsi:type="saw:regularColumn">
+			<saw:columnFormula>
+				<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr>
+			</saw:columnFormula>
+		</saw:column></sawkpi:kpiPeriod><sawkpi:owner id="prodney"/><sawkpi:relatedDocuments>
+		<sawkpi:relatedDocument>
+			<sawkpi:name>Stock Option performance</sawkpi:name>
+			<sawkpi:description/>
+			<sawkpi:link type="URL">
+				<sawkpi:path>http://finance.yahoo.com/q?s=orcl</sawkpi:path>
+			</sawkpi:link>
+		</sawkpi:relatedDocument>
+		<sawkpi:relatedDocument>
+			<sawkpi:name>Wall Street Journal</sawkpi:name>
+			<sawkpi:description/>
+			<sawkpi:link type="URL">
+				<sawkpi:path>http://www.wallStreetJournal.com</sawkpi:path>
+			</sawkpi:link>
+		</sawkpi:relatedDocument>
+		<sawkpi:relatedDocument>
+			<sawkpi:name>HR Website</sawkpi:name>
+			<sawkpi:description/>
+			<sawkpi:link type="URL">
+				<sawkpi:path>http://www.Oracle.com/PeopleSoft</sawkpi:path>
+			</sawkpi:link>
+		</sawkpi:relatedDocument>
+		<sawkpi:relatedDocument><sawkpi:name>Product Analysis Dashboard</sawkpi:name><sawkpi:description/><sawkpi:link type="CATALOG"><sawkpi:path>/shared/01. QuickStart/_portal/1.30 Quickstart/Product Details</sawkpi:path></sawkpi:link></sawkpi:relatedDocument></sawkpi:relatedDocuments><sawkpi:dimensions><sawkpi:dimension dimensionID="Time.Time Hierarchy">
+			<saw:column columnID="c663d327a2084bf72" xsi:type="saw:hierarchicalColumn" dimensionID="H0 Time" hierarchyID="Time Hierarchy" tableName="Time"/>
+		</sawkpi:dimension><sawkpi:dimension dimensionID="Offices.Offices Hierarchy">
+			<saw:column columnID="cf7379e3be6d42b56" xsi:type="saw:hierarchicalColumn" dimensionID="H3 Offices" hierarchyID="Offices Hierarchy" tableName="Offices"/>
+		</sawkpi:dimension></sawkpi:dimensions><sawkpi:postUpdateBusinessRules><sawkpi:kpiBusinessRule isDefault="true"><sawkpi:businessRule/></sawkpi:kpiBusinessRule></sawkpi:postUpdateBusinessRules><sawkpi:actualValue isWritable="false">
+		<saw:column columnID="cad13a793460f9bb1" xsi:type="saw:regularColumn">
+			<saw:columnFormula>
+				<sawx:expr xsi:type="sawx:sqlExpression">FILTER(&quot;Simple Calculations&quot;.&quot;41  Avg Revenue by FTE&quot; USING (&quot;Time&quot;.&quot;T05 Per Name Year&quot; &gt; &#39;2007&#39;))</sawx:expr>
+			</saw:columnFormula>
+			<saw:displayFormat>
+				<saw:formatSpec suppress="repeat" wrapText="true">
+					<saw:dataFormat xsi:type="saw:currency" currencyTag="int:wrhs" commas="true" negativeType="paren" minDigits="0" maxDigits="0"/>
+				</saw:formatSpec>
+			</saw:displayFormat>
+			<saw:tableHeading>
+			</saw:tableHeading>
+			<saw:columnHeading>
+			</saw:columnHeading>
+		</saw:column>
+	</sawkpi:actualValue><sawkpi:targetSets><sawkpi:targetSet isDefault="true" name="Default">
+			<sawkpi:targetValue isWritable="false">
+				<saw:column columnID="c7492322d91805a60" xsi:type="saw:regularColumn" aggRule="default">
+					<saw:columnFormula>
+						<sawx:expr xsi:type="sawx:sqlExpression">ago(&quot;Simple Calculations&quot;.&quot;41  Avg Revenue by FTE&quot;,
+&quot;A - Sample Sales&quot;.&quot;Time&quot;.&quot;Time Hierarchy&quot;.&quot;Quarter&quot;,1) * 1.05</sawx:expr>
+					</saw:columnFormula>
+					<saw:tableHeading>
+					</saw:tableHeading>
+					<saw:columnHeading>
+					</saw:columnHeading>
+				</saw:column>
+			</sawkpi:targetValue>
+			<sawkpi:thresholds goal="high" treatNoDataAs="NOSTATUS" scoreType="DISCRETE" thresholdType="CUSTOMEXPRESSION">
+				<sawkpi:thresholdRange ID="3b515240-0ba3-1000-8567-0ae4eb530000" value="100" assessmentStateKey="OK"><sawkpi:statusText>
+						<saw:caption captionID="kcap12832459_1444">
+							<saw:text>OK</saw:text>
+						</saw:caption>
+					</sawkpi:statusText><sawkpi:rangeExpression>
+						<sawx:expr xsi:type="sawx:comparison" op="greater">
+							<sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+							<sawx:expr xsi:type="sawx:sqlExpression">ago(FILTER(&quot;Simple Calculations&quot;.&quot;41  Avg Revenue by FTE&quot; USING (&quot;Time&quot;.&quot;T05 Per Name Year&quot; &gt; &#39;2007&#39;)),1) * 1.03</sawx:expr>
+						</sawx:expr>
+					</sawkpi:rangeExpression><sawkpi:iconScheme color="green" icon="fmap:common/kpi_ok_status.gif"/></sawkpi:thresholdRange>
+				<sawkpi:thresholdRange ID="3b515241-0ba3-1000-8567-0ae4eb530000" value="50" assessmentStateKey="WARNING"><sawkpi:statusText>
+						<saw:caption captionID="kcap12832459_1445">
+							<saw:text>WARNING</saw:text>
+						</saw:caption>
+					</sawkpi:statusText><sawkpi:rangeExpression>
+						<sawx:expr xsi:type="sawx:comparison" op="greater">
+							<sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+							<sawx:expr xsi:type="sawx:sqlExpression">ago(FILTER(&quot;Simple Calculations&quot;.&quot;41  Avg Revenue by FTE&quot; USING (&quot;Time&quot;.&quot;T05 Per Name Year&quot; &gt; &#39;2007&#39;)),1) * 1.00</sawx:expr>
+						</sawx:expr>
+					</sawkpi:rangeExpression><sawkpi:iconScheme color="yellow" icon="fmap:common/kpi_warning_status.gif"/></sawkpi:thresholdRange>
+				<sawkpi:thresholdRange ID="3b515242-0ba3-1000-8567-0ae4eb530000" value="0" assessmentStateKey="CRITICAL"><sawkpi:statusText>
+						<saw:caption captionID="kcap12832459_1446">
+							<saw:text>CRITICAL</saw:text>
+						</saw:caption>
+					</sawkpi:statusText><sawkpi:rangeExpression>
+						<sawx:expr xsi:type="sawx:comparison" op="lessOrEqual">
+							<sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+							<sawx:expr xsi:type="sawx:sqlExpression">ago(FILTER(&quot;Simple Calculations&quot;.&quot;41  Avg Revenue by FTE&quot; USING (&quot;Time&quot;.&quot;T05 Per Name Year&quot; &gt; &#39;2007&#39;)),1) * 1.00</sawx:expr>
+						</sawx:expr>
+					</sawkpi:rangeExpression><sawkpi:iconScheme color="red" icon="fmap:common/kpi_critical_status.gif"/></sawkpi:thresholdRange>
+			</sawkpi:thresholds>
+		</sawkpi:targetSet></sawkpi:targetSets></sawkpi:kpi>

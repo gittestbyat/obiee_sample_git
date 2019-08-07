@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BIEE">
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="DS" type="complex">
+         <sql>
+            <![CDATA[SELECT
+   "A - Sample Sales"."Offices"."D4  Company" Company,
+   "A - Sample Sales"."Products"."P3  LOB" LOB,
+   "A - Sample Sales"."Base Facts"."1- Revenue" Revenue,
+   "A - Sample Sales"."Base Facts"."2- Billed Quantity" Quantity
+FROM "A - Sample Sales"
+where Company in (:P_Company) and LOB in (:P_LOB)
+]]>
+         </sql>
+      </dataSet>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="DS">
+               <element name="Company" value="Company" label="Company" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="LOB" value="LOB" label="LOB" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="Revenue" value="Revenue" label="Revenue" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="Quantity" value="Quantity" label="Quantity" dataType="xsd:integer" breakOrder="" fieldOrder="4"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets>
+      <valueSet id="LOB_LOV">
+         <sql dataSourceRef="BIEE">
+            <![CDATA[ SELECT distinct  "A - Sample Sales"."Products"."P3  LOB" FROM "A - Sample Sales"]]>
+         </sql>
+      </valueSet>
+      <valueSet id="Company_LOV">
+         <sql dataSourceRef="BIEE">
+            <![CDATA[ SELECT   distinct "A - Sample Sales"."Offices"."D4  Company" FROM "A - Sample Sales"]]>
+         </sql>
+      </valueSet>
+   </valueSets>
+   <parameters>
+      <parameter name="P_LOB" defaultValue="*" dataType="xsd:string" rowPlacement="1">
+         <select label="LOB" valueSet="LOB_LOV" multiple="true" all="true" allValue="lov"/>
+      </parameter>
+      <parameter name="P_Company" defaultValue="*" dataType="xsd:string" rowPlacement="1">
+         <select label="Company" valueSet="Company_LOV" multiple="true" all="true" allValue="lov"/>
+      </parameter>
+   </parameters>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="DS" left="285px" top="0px"/>
+         <layout name="DATA_DS" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

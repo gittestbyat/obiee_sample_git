@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" cacheControl="bypassCache">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;U - Usage Tracking&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c5592e01d1b5a853d">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Query Key&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" width="40" wrapText="true"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cb6dd535ebc444b60">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">CURRENT_TIMESTAMP(1)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Query</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Last BIEE Server Physical SQLs  : Report Generation Time :</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c5261a892690c98fa">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;div style=&quot;height:90px; width:400px; overflow:auto;&quot;&gt;&#39;||&quot;Physical SQL&quot;.&quot;Physical SQL&quot;||&#39;&lt;/div&gt;&#39;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" fontColor="#000000" fontSize="9">
+						<saw:dataFormat textFormat="html" xsi:type="saw:text"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Query</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Physical SQL</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c02c3072efb7103ba">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Start Time&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" fontSize="10" wrapText="true"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ccb31d0d3d1690785">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">cast(TIMESTAMPDIFF(SQL_TSI_SECOND, &quot;Query Time&quot;.&quot;Start Time&quot;, CURRENT_TIMESTAMP(1)) as varchar (7))||&#39; seconds ago&#39;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" fontSize="10" wrapText="true"/></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Query Time</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Ran</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c0a256a1abfd5bece">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Webcat Path&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" fontSize="9" wrapText="true"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+		</saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:logical" op="and">
+				<sawx:expr xsi:type="sawx:sql">&quot;Query Time&quot;.&quot;Start Date&quot; = CAST(CURRENT_DATE AS DATE)</sawx:expr>
+				<sawx:expr op="notEqual" xsi:type="sawx:comparison">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Presentation Catalog&quot;</sawx:expr>
+					<sawx:expr xsi:type="xsd:string">U - Usage Tracking</sawx:expr></sawx:expr>
+				<sawx:expr op="equal" xsi:type="sawx:comparison">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Query Type&quot;</sawx:expr>
+					<sawx:expr xsi:type="xsd:string">Report</sawx:expr></sawx:expr>
+				<sawx:expr op="less" xsi:type="sawx:comparison">
+					<sawx:expr xsi:type="sawx:sqlExpression">rank(cast(&quot;Query Time&quot;.&quot;Start Time&quot; as varchar(15))||&quot;Query&quot;.&quot;Query Key&quot;)</sawx:expr>
+					<sawx:expr xsi:type="xsd:decimal">5</sawx:expr></sawx:expr></sawx:expr></saw:filter>
+		<saw:columnOrder>
+			<saw:columnOrderRef columnID="c02c3072efb7103ba" direction="descending"/></saw:columnOrder></saw:criteria>
+	<saw:interactionOptions drill="true" movecolumns="true" sortcolumns="true" addremovevalues="true" groupoperations="true" calcitemoperations="true" showhidesubtotal="true" showhiderunningsum="true" inclexclcolumns="true"/>
+	<saw:views currentView="0" textDelivery="compoundView!1" includeNewColumns="true">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable>
+			<saw:pageProps>
+				<saw:pageHeader/>
+				<saw:pageFooter/></saw:pageProps></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1" repeat="true">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true">
+				</saw:edge>
+				<saw:edge axis="section" insertPageBreak="false" showBlankRows="false" showColumnHeader="true">
+					<saw:displayFormat>
+						<saw:formatSpec wrapText="true"/></saw:displayFormat>
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="cb6dd535ebc444b60" insertPageBreak="false" uiTableName="Query">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></saw:memberFormat>
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:columnOrder>
+						<saw:columnOrderRef columnID="cf4c8d835a0830f7b" direction="ascending"/>
+						<saw:columnOrderRef columnID="c02c3072efb7103ba" direction="descending"/></saw:columnOrder>
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c5592e01d1b5a853d" visibility="hidden" uiTableName="Query"/>
+						<saw:edgeLayer type="column" columnID="c02c3072efb7103ba" uiTableName="Query Time">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="ccb31d0d3d1690785" uiTableName="Query Time">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="c0a256a1abfd5bece" uiTableName="Query">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="c5261a892690c98fa" uiTableName="Query">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec fontColor="#660000" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges>
+			<saw:greenBarFormat greenBar="allLayers" enabled="true"/></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="cb6dd535ebc444b60" uiTableName="Query"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c0a256a1abfd5bece" uiTableName="Query"/>
+						<saw:edgeLayer type="column" columnID="c64e32986be800e5d" uiTableName="Query">
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec/></saw:displayFormat></saw:headerFormat>
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="c3a0f22c8e8e91248" uiTableName="Query">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="c74e7ef94a987ba76" uiTableName="Query"/>
+						<saw:edgeLayer type="column" columnID="c59c596c8440d332c" uiTableName="Query"/>
+						<saw:edgeLayer type="column" columnID="c5261a892690c98fa" uiTableName="Query"/>
+						<saw:edgeLayer type="column" columnID="c02c3072efb7103ba" uiTableName="Query Time"/>
+						<saw:edgeLayer type="column" columnID="ccb31d0d3d1690785"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="measure" uiTableName="Measure Labels"/></saw:edgeLayers></saw:edge></saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="c68c75f494031c220" uiTableName="Measures"/></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!1">
+			<saw:staticText>
+				<saw:caption fmt="text">
+					<saw:text>Immediate Last Physical SQLs</saw:text></saw:caption></saw:staticText></saw:view>
+		<saw:view xsi:type="saw:noresultsview" name="noresultsview!1">
+			<saw:headline>
+				<saw:caption>
+					<saw:text>There are no queries that ran in the past 3 minutes</saw:text></saw:caption></saw:headline>
+			<saw:detail>
+				<saw:caption>
+					<saw:text>Re-run any query, and refresh this report wihtin 3 minutes of running.</saw:text></saw:caption></saw:detail></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!2" autoPreview="true">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="cb6dd535ebc444b60"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="ccb31d0d3d1690785"/>
+						<saw:edgeLayer type="column" columnID="c0a256a1abfd5bece"/>
+						<saw:edgeLayer type="column" columnID="c5261a892690c98fa"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view></saw:views></saw:report>

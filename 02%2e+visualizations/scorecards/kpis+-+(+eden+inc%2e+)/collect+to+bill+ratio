@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawkpi:kpi xmlns:sawkpi="com.siebel.analytics.web/kpi/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawbsc="com.siebel.analytics.web/scorecard/v1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" subjectArea="&quot;A - Sample Sales&quot;" isTrendEnabled="true" ID="2d6d69c0-0ba3-1000-8567-0ae4eb530000" name="Collect to Bill Ratio" xmlVersion="201106170"><sawkpi:kpiPeriod changeToleranceType="UNITS">
+		<saw:column columnID="cb0e27c60605d4dbc" xsi:type="saw:regularColumn">
+			<saw:columnFormula>
+				<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr>
+			</saw:columnFormula>
+		</saw:column></sawkpi:kpiPeriod><sawkpi:owner id="25AA0C80A36211E28F0FDF357267F21E"/><sawkpi:relatedDocuments>
+		<sawkpi:relatedDocument>
+			<sawkpi:name>Visit Sales Website</sawkpi:name>
+			<sawkpi:description/>
+			<sawkpi:link type="CATALOG">
+				<sawkpi:path>/shared/02. Visualizations/Report Views/Master Details/Master Detail Events Linking</sawkpi:path>
+			</sawkpi:link>
+		</sawkpi:relatedDocument>
+		<sawkpi:relatedDocument>
+			<sawkpi:name>Go to Fusion A/P</sawkpi:name>
+			<sawkpi:description/>
+			<sawkpi:link type="URL">
+				<sawkpi:path>http://www.oracle.com/bi</sawkpi:path>
+			</sawkpi:link>
+		</sawkpi:relatedDocument>
+	</sawkpi:relatedDocuments><sawkpi:dimensions><sawkpi:dimension dimensionID="&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;"><saw:column xsi:type="saw:regularColumn" columnID="cb5ef52c67ce153a9"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></saw:columnFormula></saw:column></sawkpi:dimension><sawkpi:dimension dimensionID="Products.Products Hierarchy"><saw:column xsi:type="saw:hierarchicalColumn" columnID="c665cd2a55c49e475" dimensionID="H1 Products" hierarchyID="Products Hierarchy" tableName="Products"/></sawkpi:dimension><sawkpi:dimension dimensionID="&quot;Office Regions&quot;.&quot;D50  Region&quot;"><saw:column xsi:type="saw:regularColumn" columnID="cab5190a184c6283e"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Office Regions&quot;.&quot;D50  Region&quot;</sawx:expr></saw:columnFormula></saw:column></sawkpi:dimension></sawkpi:dimensions><sawkpi:postUpdateBusinessRules><sawkpi:kpiBusinessRule isDefault="true"><sawkpi:businessRule/></sawkpi:kpiBusinessRule></sawkpi:postUpdateBusinessRules><sawkpi:actualValue isWritable="false">
+		<saw:column columnID="c1376b6c63e391c5b" xsi:type="saw:regularColumn">
+			<saw:columnFormula>
+				<sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;29  Collect to Bill Ratio&quot;</sawx:expr>
+			</saw:columnFormula>
+			<saw:displayFormat>
+				<saw:formatSpec suppress="repeat" wrapText="true">
+					<saw:dataFormat xsi:type="saw:percent" commas="true" negativeType="paren" minDigits="2" maxDigits="2"/>
+				</saw:formatSpec>
+			</saw:displayFormat>
+			<saw:tableHeading>
+			</saw:tableHeading>
+			<saw:columnHeading>
+			</saw:columnHeading>
+		</saw:column>
+	</sawkpi:actualValue><sawkpi:targetSets><sawkpi:targetSet isDefault="true" name="Default">
+			<sawkpi:targetValue isWritable="false">
+				<saw:column columnID="cc1666d7730f77c09" xsi:type="saw:regularColumn">
+					<saw:columnFormula>
+						<sawx:expr xsi:type="sawx:sqlExpression">1</sawx:expr>
+					</saw:columnFormula>
+					<saw:tableHeading>
+					</saw:tableHeading>
+					<saw:columnHeading>
+					</saw:columnHeading>
+				</saw:column>
+			</sawkpi:targetValue>
+			<sawkpi:thresholds goal="high" treatNoDataAs="NOSTATUS" scoreType="DISCRETE" thresholdType="CUSTOMEXPRESSION">
+				<sawkpi:thresholdRange ID="2d5d6430-0ba3-1000-8567-0ae4eb530000" value="100" assessmentStateKey="OK"><sawkpi:statusText>
+						<saw:caption captionID="kcap12832459_1453">
+							<saw:text>OK</saw:text>
+						</saw:caption>
+					</sawkpi:statusText><sawkpi:rangeExpression>
+						<sawx:expr xsi:type="sawx:comparison" op="greater">
+							<sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+							<sawx:expr xsi:type="sawx:sqlExpression">0.98</sawx:expr>
+						</sawx:expr>
+					</sawkpi:rangeExpression><sawkpi:iconScheme color="green" icon="fmap:common/kpi_ok_status.gif"/></sawkpi:thresholdRange>
+				<sawkpi:thresholdRange ID="2d5d6431-0ba3-1000-8567-0ae4eb530000" value="50" assessmentStateKey="WARNING"><sawkpi:statusText>
+						<saw:caption captionID="kcap12832459_1454">
+							<saw:text>WARNING</saw:text>
+						</saw:caption>
+					</sawkpi:statusText><sawkpi:rangeExpression>
+						<sawx:expr xsi:type="sawx:comparison" op="greater">
+							<sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+							<sawx:expr xsi:type="sawx:sqlExpression">0.90</sawx:expr>
+						</sawx:expr>
+					</sawkpi:rangeExpression><sawkpi:iconScheme color="yellow" icon="fmap:common/kpi_warning_status.gif"/></sawkpi:thresholdRange>
+				<sawkpi:thresholdRange ID="2d5d6432-0ba3-1000-8567-0ae4eb530000" value="0" assessmentStateKey="CRITICAL"><sawkpi:statusText>
+						<saw:caption captionID="kcap12832459_1455">
+							<saw:text>CRITICAL</saw:text>
+						</saw:caption>
+					</sawkpi:statusText><sawkpi:rangeExpression>
+						<sawx:expr xsi:type="sawx:comparison" op="lessOrEqual">
+							<sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+							<sawx:expr xsi:type="sawx:sqlExpression">0.90</sawx:expr>
+						</sawx:expr>
+					</sawkpi:rangeExpression><sawkpi:iconScheme color="red" icon="fmap:common/kpi_critical_status.gif"/></sawkpi:thresholdRange>
+			</sawkpi:thresholds>
+		</sawkpi:targetSet></sawkpi:targetSets></sawkpi:kpi>

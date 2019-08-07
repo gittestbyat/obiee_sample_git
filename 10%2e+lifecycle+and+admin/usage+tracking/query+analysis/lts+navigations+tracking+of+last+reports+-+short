@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" cacheControl="bypassCache">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;U - Usage Tracking&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c5592e01d1b5a853d">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Query Key&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" width="40" wrapText="true"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c5261a892690c98fa">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Navigation&quot;.&quot;Logical Fact Table Name&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" fontColor="#000000" fontSize="9" vAlign="middle">
+						<saw:dataFormat textFormat="html" xsi:type="saw:text"/></saw:formatSpec></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c63d774c6da94e4e3"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Navigation&quot;.&quot;LTS Name&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" fontColor="#660000" hAlign="left" vAlign="middle" fontSize="9" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c02c3072efb7103ba">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Start Time&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ccb31d0d3d1690785"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Ran&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c3a0f22c8e8e91248">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Query Type&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" width="60"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c0a256a1abfd5bece">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Webcat Path&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" fontSize="9" wrapText="true" width="120"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c74e7ef94a987ba76">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Navigation&quot;.&quot;Avg Process Time in Sec&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" hAlign="left" vAlign="top" width="60"/></saw:displayFormat><saw:columnHeading>
+					<saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+		</saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:logical" op="and">
+				<sawx:expr op="equal" xsi:type="sawx:comparison"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Query Type&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">Report</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Topic&quot;.&quot;Subject Area Name&quot;</sawx:expr></sawx:expr><sawx:expr op="lessOrEqual" xsi:type="sawx:comparison"><sawx:expr xsi:type="sawx:sqlExpression">rank(&quot;Query Time&quot;.&quot;Start Time&quot;)</sawx:expr><sawx:expr xsi:type="sawx:eval" default="3">Top</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Users&quot;.&quot;User Name&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Start Date&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Presentation Catalog&quot;</sawx:expr></sawx:expr><sawx:expr op="notEqual" xsi:type="sawx:comparison"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Presentation Catalog&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">U - Usage Tracking</sawx:expr></sawx:expr></sawx:expr></saw:filter><saw:columnOrder><saw:columnOrderRef columnID="c02c3072efb7103ba" direction="descending"/><saw:columnOrderRef columnID="ccb31d0d3d1690785" direction="ascending"/></saw:columnOrder></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" includeName="true"><saw:logoFormat><saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true">
+				</saw:edge><saw:edge axis="section" insertPageBreak="false" showBlankRows="false" showColumnHeader="true">
+					<saw:displayFormat>
+						<saw:formatSpec wrapText="true"/></saw:displayFormat>
+				</saw:edge><saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="ccb31d0d3d1690785" uiTableName="Query Time"><saw:memberFormat><saw:displayFormat><saw:formatSpec hAlign="center" vAlign="middle" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="c0a256a1abfd5bece" uiTableName="Query">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec vAlign="middle" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="c5261a892690c98fa" uiTableName="Navigation"><saw:memberFormat><saw:displayFormat><saw:formatSpec fontColor="#660000" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="c63d774c6da94e4e3" uiTableName="Navigation"/><saw:edgeLayer type="column" columnID="c5592e01d1b5a853d" visibility="hidden" uiTableName="Query"/><saw:edgeLayer type="column" columnID="c74e7ef94a987ba76" uiTableName="Navigation"><saw:memberFormat><saw:displayFormat><saw:formatSpec hAlign="center" vAlign="middle" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges>
+			<saw:greenBarFormat greenBar="allLayers" enabled="true"/></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="text"><saw:text>The report may need to be re-refreshed for a few seconds until UT tables are populated with the most recent server entries.</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

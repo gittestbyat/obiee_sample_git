@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Default" type="complex">
+         <excel dataSourceRef="xdo:local" timezone="America/Dawson" start_rownum="-1">
+            <file>earthquake_lastyear2.xlsx</file>
+            <sheetName>earthquake_lastyear2.csv</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" source="Default" label="G_1">
+               <element name="time" value="time" dataType="xsd:string" label="time" breakOrder="None" fieldOrder="1"/>
+               <element name="latitude" value="latitude" dataType="xsd:double" label="latitude" breakOrder="None" fieldOrder="2"/>
+               <element name="longitude" value="longitude" dataType="xsd:double" label="longitude" breakOrder="None" fieldOrder="3"/>
+               <element name="depth" value="depth" dataType="xsd:double" label="depth" breakOrder="None" fieldOrder="4"/>
+               <element name="mag" value="mag" dataType="xsd:double" label="mag" breakOrder="None" fieldOrder="5"/>
+               <element name="magType" value="magType" dataType="xsd:string" label="magType" breakOrder="None" fieldOrder="6"/>
+               <element name="nst" value="nst" dataType="xsd:double" label="nst" breakOrder="None" fieldOrder="7"/>
+               <element name="gap" value="gap" dataType="xsd:double" label="gap" breakOrder="None" fieldOrder="8"/>
+               <element name="dmin" value="dmin" dataType="xsd:double" label="dmin" breakOrder="None" fieldOrder="9"/>
+               <element name="rms" value="rms" dataType="xsd:double" label="rms" breakOrder="None" fieldOrder="10"/>
+               <element name="net" value="net" dataType="xsd:string" label="net" breakOrder="None" fieldOrder="11"/>
+               <element name="id" value="id" dataType="xsd:string" label="id" breakOrder="None" fieldOrder="12"/>
+               <element name="updated" value="updated" dataType="xsd:string" label="updated" breakOrder="None" fieldOrder="13"/>
+               <element name="place" value="place" dataType="xsd:string" label="place" breakOrder="None" fieldOrder="14"/>
+               <element name="type" value="type" dataType="xsd:string" label="type" breakOrder="None" fieldOrder="15"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="Default" left="274px" top="17px"/>
+         <layout name="DATA_DS" left="28px" top="14px"/>
+         <layout name="dsModalMask" left="" top=""/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

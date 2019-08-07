@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="o3ho6c8q0bormcrc"><sawd:dashboardColumn name="Column 3" frozen="false" canFreeze="false" duid="hqo8estfc4oolv1n" layoutType="bestFit"><sawd:dashboardSection layoutType="specificSize" name="Section 5" collapsible="false" duid="77n98lmebikff5r8" showSectionTitle="false"><saw:displayFormat><saw:formatSpec backgroundColor="#ecf2f8" wrapText="true" borderPosition="all" width="1100" borderColor="#EEEEEE"/></saw:displayFormat><sawd:htmlView name="HTML 3" duid="6k5q6o83867bjsrv"><sawd:HTML fmt="html">On this dashboard, we have examples on how to query one or more external data sources independently or alongside your curated, enterprise data in Subject Areas.
+[br/][br/]
+You can introduce data from external sources (e.g. MS Excel Spreadsheet) directly into a production reporting environment without changing the data model. Visual Analyzer can automatically conform the external data to the curated enterprise data if it finds suitable column matches. 
+[br/][br/]
+Oracle BI Server (12c onwards) can also extract results data from a Logical SELECT statement and persist it as a dataset. This functionality is particularly useful for persisting complex query results (e.g results of a advanced clustering query) and then leveraging that results in another subsequent query. Example of one such &quot;Create Dataset&quot; query is shown below:
+[br/][br/]
+&lt;font color=&quot;#454545&quot;&gt;
+CREATE DATASET &#39;Passenger Count by Location&#39; MODE CREATE AS SELECT[br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;   &quot;X - Airlines Traffic&quot;.&quot;Destination&quot;.&quot;Dest City Name&quot; City,[br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;   &quot;X - Airlines Traffic&quot;.&quot;Destination&quot;.&quot;Dest US State Name&quot; State,[br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;   &quot;X - Airlines Traffic&quot;.&quot;Passengers&quot;.&quot;Passengers&quot; PassengerCount[br/]
+FROM &quot;X - Airlines Traffic&quot;[br/]
+WHERE[br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;(&quot;Passengers&quot;.&quot;Passengers&quot; &gt;= 100)
+&lt;/font&gt;
+[br/][br/]
+These datasets are available for querying in the form of XSA or External Subject Area. These XSAs can be managed from the VA home page as shown in the screenshot below:
+[br/][br/]</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 4" duid="7kn8048huvj3fv36"><sawd:HTML fmt="html">&lt;div align=middle&gt;&lt;img src=&quot;saw.dll?downloadfile&amp;Path=%2Fshared%2F06.%20Dashboard%20Design%2FExternal%20Sources%2Fpics%2Fdata_sources.jpg&quot;/&gt;&lt;/div&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

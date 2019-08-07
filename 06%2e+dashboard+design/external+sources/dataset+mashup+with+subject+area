@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c5381542bb2692313">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">XSA(&#39;prodney&#39;.&#39;Passenger Count by Location&#39;).&quot;Columns&quot;.&quot;State&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c8e628659a9dc45f4">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;7- Shipped Amount&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:currency" minDigits="0" maxDigits="0" commas="true" negativeType="minus" currencyTag="int:$"/></saw:formatSpec>
+               <saw:conditionalDisplayFormats>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="null">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c8e628659a9dc45f4"/></sawx:expr></saw:condition>
+                        <saw:formatSpec backgroundColor="#EEEEEE" wrapText="true" noImage="false" image="fmap:meters/status/priority/04_high.png"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c7bb5fc5ac2b88963">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">XSA(&#39;prodney&#39;.&#39;Passenger Count by Location&#39;).&quot;Columns&quot;.&quot;PassengerCount&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true"/>
+               <saw:conditionalDisplayFormats/></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:logical" op="and">
+            <sawx:expr xsi:type="sawx:comparison" op="notNull">
+               <sawx:expr xsi:type="sawx:sqlExpression">XSA(&#39;prodney&#39;.&#39;Passenger Count by Location&#39;).&quot;Columns&quot;.&quot;State&quot;</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:list" op="notIn">
+               <sawx:expr xsi:type="sawx:sqlExpression">XSA(&#39;prodney&#39;.&#39;Passenger Count by Location&#39;).&quot;Columns&quot;.&quot;State&quot;</sawx:expr>
+               <sawx:expr xsi:type="sawx:untypedLiteral">EN</sawx:expr>
+               <sawx:expr xsi:type="sawx:untypedLiteral">NSW</sawx:expr></sawx:expr></sawx:expr></saw:filter>
+      <saw:columnOrder>
+         <saw:columnOrderRef columnID="c7bb5fc5ac2b88963" direction="descending"/></saw:columnOrder></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!2"/>
+               <saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c5381542bb2692313"/>
+                  <saw:edgeLayer type="column" columnID="c7bb5fc5ac2b88963"/>
+                  <saw:edgeLayer type="column" columnID="c8e628659a9dc45f4"/></saw:edgeLayers>
+               <saw:columnOrder>
+                  <saw:columnOrderRef columnID="c7bb5fc5ac2b88963" direction="descending"/></saw:columnOrder></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:heatmapView" name="heatmapView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="rollover" cellWidthType="max">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c5381542bb2692313"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover" cellWidthType="fixed">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure" visibility="hidden"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c8e628659a9dc45f4" visualType="colorBy"/></saw:measuresList>
+         <saw:heatmapColor binType="percentile" allowThresholdEdit="false" numBins="4">
+            <saw:rampStyle>
+               <saw:rampItem id="0">
+                  <saw:g class="color" fill="#A5CAE0"/>
+                  <saw:caption fmt="text">
+                     <saw:text>First Quartile</saw:text></saw:caption></saw:rampItem>
+               <saw:rampItem id="1">
+                  <saw:g class="color" fill="#60A0C7"/>
+                  <saw:caption fmt="text">
+                     <saw:text>Second Quartile</saw:text></saw:caption></saw:rampItem>
+               <saw:rampItem id="2">
+                  <saw:g class="color" fill="#3883B2"/>
+                  <saw:caption fmt="text">
+                     <saw:text>Third Quartile</saw:text></saw:caption></saw:rampItem>
+               <saw:rampItem id="3">
+                  <saw:g class="color" fill="#1B4C6B"/>
+                  <saw:caption fmt="text">
+                     <saw:text>Fourth Quartile</saw:text></saw:caption></saw:rampItem></saw:rampStyle></saw:heatmapColor></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="scatter" subtype="default" renderFormat="default" mode="online">
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="330" width="640">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="c5381542bb2692313"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="c8e628659a9dc45f4"/></saw:column>
+               <saw:column measureType="x">
+                  <saw:columnRef columnID="c7bb5fc5ac2b88963"/></saw:column>
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="cfe2211e54c5cf11c"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+         <saw:legendFormat position="default" transparentFill="true"/></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!2">
+         <saw:display type="lineBar" subtype="basic" renderFormat="default" mode="online" animateOnDisplay="false">
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="450" width="680">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:title mode="custom"/></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="c5381542bb2692313"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y1" riserType="bar">
+                  <saw:columnRef columnID="c7bb5fc5ac2b88963"/></saw:column>
+               <saw:column measureType="y2" riserType="line">
+                  <saw:columnRef columnID="c8e628659a9dc45f4"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+         <saw:legendFormat position="top" transparentFill="true"/>
+         <saw:axesFormats syncAxis="false">
+            <saw:axisFormat axis="Y2">
+               <saw:scale scaleValues="custom" max="800000" defaultTicks="true"/></saw:axisFormat>
+            <saw:axisFormat axis="X">
+               <saw:title mode="custom"/></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="lineBarBar">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#99CCFF"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup>
+            <saw:seriesFormatGroup name="lineBarLine">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#669966" lineStyle="default" lineWidth="0" symbol="round" symbolColor="#336633"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+      <saw:view xsi:type="saw:heatmapView" name="heatmapView!2" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="rollover" cellWidthType="max">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c5381542bb2692313"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover" cellWidthType="fixed">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure" visibility="hidden"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c8e628659a9dc45f4" visualType="colorBy"/></saw:measuresList>
+         <saw:heatmapColor binType="percentile" numBins="4">
+            <saw:columnRef columnID="c8e628659a9dc45f4"/>
+            <saw:rampStyle>
+               <saw:rampItem id="0">
+                  <saw:caption>
+                     <saw:text>First Quartile</saw:text></saw:caption>
+                  <saw:g class="color" fill="#A5CAE0"/></saw:rampItem>
+               <saw:rampItem id="1">
+                  <saw:caption>
+                     <saw:text>Second Quartile</saw:text></saw:caption>
+                  <saw:g class="color" fill="#60A0C7"/></saw:rampItem>
+               <saw:rampItem id="2">
+                  <saw:caption>
+                     <saw:text>Third Quartile</saw:text></saw:caption>
+                  <saw:g class="color" fill="#3883B2"/></saw:rampItem>
+               <saw:rampItem id="3">
+                  <saw:caption>
+                     <saw:text>Fourth Quartile</saw:text></saw:caption>
+                  <saw:g class="color" fill="#1B4C6B"/></saw:rampItem></saw:rampStyle></saw:heatmapColor></saw:view></saw:views></saw:report>

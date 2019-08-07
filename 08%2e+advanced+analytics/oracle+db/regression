@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="ce81b146587caeb9f">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D1  Office&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c2f41268fbca10b90">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cf67431f2a5106a45">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cd34681db4890ef27">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">CAST(EVALUATE ( &#39;REGR_SLOPE(%1, %2) OVER (ORDER BY %3)&#39;, &quot;Base Facts&quot;.&quot;1- Revenue&quot;,&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;,&quot;Offices&quot;.&quot;D1  Office&quot;) AS DOUBLE)</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12832459_2228">
+            <saw:text>Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12832459_2229">
+            <saw:text>Regr Slope</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="ca3d029d517d5242a">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">CAST(EVALUATE ( &#39;REGR_INTERCEPT(%1, %2) OVER (ORDER BY %3)&#39;, &quot;Base Facts&quot;.&quot;1- Revenue&quot;,&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;,&quot;Offices&quot;.&quot;D1  Office&quot;) AS DOUBLE)</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12832459_2230">
+            <saw:text>Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12832459_2231">
+            <saw:text>Regr Intercept</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cb99923c76388f329">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">CAST(EVALUATE ( &#39;REGR_AVGX(%1, %2) OVER (ORDER BY %3)&#39;, &quot;Base Facts&quot;.&quot;1- Revenue&quot;,&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;,&quot;Offices&quot;.&quot;D1  Office&quot;) AS DOUBLE)</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12832459_2232">
+            <saw:text>Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12832459_2233">
+            <saw:text>Regr AvgX</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c7ca46d50d50260ba">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">CAST(EVALUATE ( &#39;REGR_AVGY(%1, %2) OVER (ORDER BY %3)&#39;, &quot;Base Facts&quot;.&quot;1- Revenue&quot;,&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;,&quot;Offices&quot;.&quot;D1  Office&quot;) AS DOUBLE)</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12832459_2234">
+            <saw:text>Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12832459_2235">
+            <saw:text>Regr AvgY</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="tableView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!1"/>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title>
+        <saw:caption fmt="text" captionID="kcap12832459_2226">
+          <saw:text>Regression b/w Metric 1 and Metric 2</saw:text>
+        </saw:caption>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="ce81b146587caeb9f"/>
+            <saw:edgeLayer type="column" columnID="c2f41268fbca10b90"/>
+            <saw:edgeLayer type="column" columnID="cf67431f2a5106a45"/>
+            <saw:edgeLayer type="column" columnID="cd34681db4890ef27"/>
+            <saw:edgeLayer type="column" columnID="ca3d029d517d5242a"/>
+            <saw:edgeLayer type="column" columnID="cb99923c76388f329"/>
+            <saw:edgeLayer type="column" columnID="c7ca46d50d50260ba"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+      <saw:staticText>
+        <saw:caption fmt="text" captionID="kcap12832459_2227">
+          <saw:text>Uses EVALUATE function to call database analytic functions.</saw:text>
+        </saw:caption>
+      </saw:staticText>
+    </saw:view>
+  </saw:views>
+</saw:report>

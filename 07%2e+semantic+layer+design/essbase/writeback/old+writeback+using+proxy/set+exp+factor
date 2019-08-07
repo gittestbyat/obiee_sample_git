@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;F - Essbase Interaction&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb985eb244a55c279">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{expFactor}{1}</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" interaction="none"/></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Basic</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Set Expense Factor</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec interaction="action">
+                     <saw:actionLinks showPopupMenuForOneLink="false">
+                        <saw:actionLink actionLinkID="cb985eb244a55c279_alc71f8ccc2bcaf13a">
+                           <saw:actionPath>/shared/07. Semantic Layer Design/Essbase/Writeback/Update Expense Factor</saw:actionPath>
+                           <saw:caption>
+                              <saw:text>Update Expense Factor</saw:text></saw:caption>
+                           <saw:paramMapping>
+                              <saw:assign xsi:type="saw:stringAssign" name="lsql" fixed="false" hidden="false">
+                                 <saw:value>UPDATE &quot;F - Essbase Interaction&quot;.&quot;Basic&quot;  SET &quot;Expense Adjustment&quot; = @{p1}  WHERE &quot;F - Essbase Interaction&quot;.&quot;Channels&quot;.&quot;Gen1,Channels&quot; = &#39;Channels&#39; AND  &quot;F - Essbase Interaction&quot;.&quot;Product&quot;.&quot;Gen1,Product&quot; = &#39;Product&#39; AND  &quot;F - Essbase Interaction&quot;.&quot;Customers&quot;.&quot;Gen1,Customers&quot; = &#39;Customers&#39; AND  &quot;F - Essbase Interaction&quot;.&quot;Scenario&quot;.&quot;Gen1,Scenario&quot; = &#39;Scenario&#39; AND  &quot;F - Essbase Interaction&quot;.&quot;Year&quot;.&quot;History&quot; = &#39;Year&#39;</saw:value></saw:assign>
+                              <saw:assign xsi:type="saw:stringAssign" name="p1" fixed="false" hidden="false">
+                                 <saw:mapping xsi:type="saw:contextColumnMappingType">
+                                    <sawx:columnRefExpr columnID="cb985eb244a55c279"/></saw:mapping></saw:assign></saw:paramMapping></saw:actionLink></saw:actionLinks></saw:formatSpec></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+      <saw:columnOrder/></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cb985eb244a55c279" uiTableName="Basic">
+                     <saw:memberFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec wrapText="true" style="display:none"/></saw:displayFormat></saw:memberFormat>
+                     <saw:headerFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec borderColor="#999999" borderPosition="all" width="120" height="15" wrapText="true" hAlign="center"/></saw:displayFormat></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/></saw:views></saw:report>

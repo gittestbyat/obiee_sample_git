@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/b. Features/Barcodes/Data Models/Invoice Batch Report Datamodel.xdm" cache="true"/>
+   <description>
+      <![CDATA[Data%20model:%20%22Invoice%20Batch%20Report%20Datamodel%22.%20Layout%20types:%20RTF;%20Features:%20Fixed%20Row%20Enumeration,%20Barcode]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="false"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value="60"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style=""/>
+   <templates default="Barcode">
+      <template label="Barcode" url="InvoiceBatch2.rtf" type="rtf" outputFormat="html,pdf" defaultFormat="pdf" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

@@ -1,0 +1,29 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20Source:%20ch220_data.xml%20data%20file.]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="DS" type="simple">
+         <file dataSourceRef="demo files">ch220_data.xml</file>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="DS"/>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="DS" left="274px" top="17px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

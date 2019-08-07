@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="1de2kmj7ua3rcn9j"><sawd:dashboardColumn name="Column 0" canFreeze="false" duid="ie4k1ctl578d9iec" frozen="false" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 1" collapsible="false" duid="cp3nrpoofn8u1opv" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" backgroundColor="#f7f7f7"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="vnq8f1tm9mb0vaq4"><sawd:HTML fmt="html">&lt;font size=3 color=#000066&gt;See examples of new Answers visualization Heat Matrix, combined with Binning function in this case :
+
+&lt;br/&gt;&lt;br/&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla and Configured Visuals&amp;Page=Heat Matrix&quot;&gt;Link to the Example Dashboard page&lt;/a&gt;
+
+&lt;/font&gt;
+
+
+
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" duid="u8v8irh1rpjqvgtf" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" hAlign="left"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="gvb3ls92318l27gj"><saw:caption><saw:text>Examples of Heat Matrix 2</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/02. Visualizations/Report Views/Gallery/Examples of Heat Matrix 2"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

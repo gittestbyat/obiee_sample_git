@@ -1,0 +1,223 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<PERVT2KS>
+  <LIST_G_1>
+    <G_1>
+      <TAX_UNIT_ID>202</TAX_UNIT_ID>
+      <ESTABLISHMENT_ID1>202</ESTABLISHMENT_ID1>
+      <LIST_G_2>
+        <G_2>
+          <D_CMPY_NUMBER>001</D_CMPY_NUMBER>
+          <D_UNIT_NUMBER>001</D_UNIT_NUMBER>
+          <D_SIC>1310</D_SIC>
+          <D_CMPY_NAME>VISION CORPORATION</D_CMPY_NAME>
+          <D_CMPY_STATE>NY</D_CMPY_STATE>
+          <D_CMPY_CITY>NEW YORK</D_CMPY_CITY>
+          <D_CMPY_ADDR>500 MADISON AVE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </D_CMPY_ADDR>
+          <D_CMPY_COUNTY>NEW YORK</D_CMPY_COUNTY>
+          <D_CMPY_ZIP>10001</D_CMPY_ZIP>
+          <D_ESTAB_NAME>VISION CORPORATION</D_ESTAB_NAME>
+          <D_ESTAB_ADDR>500 MADISON AVE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </D_ESTAB_ADDR>
+          <D_ESTAB_CITY>NEW YORK</D_ESTAB_CITY>
+          <D_ESTAB_COUNTY>NEW YORK</D_ESTAB_COUNTY>
+          <D_ESTAB_STATE>NY</D_ESTAB_STATE>
+          <D_ESTAB_ZIP>10001</D_ESTAB_ZIP>
+          <ESTABLISHMENT_ID>202</ESTABLISHMENT_ID>
+          <HQ_ORG_ID>202</HQ_ORG_ID>
+          <D_EIN>94-123456</D_EIN>
+          <D_DUN/>
+          <LIST_G_3>
+            <G_3>
+              <CONS_JOB_CATEGORY_NAME>OFFICIALS AND MANAGERS..........1</CONS_JOB_CATEGORY_NAME>
+              <CONS_JOB_CATEGORY_CODE>1</CONS_JOB_CATEGORY_CODE>
+              <LIST_G_4>
+                <G_4>
+                  <NO_DIS_VETS>0</NO_DIS_VETS>
+                  <NO_VIET_VETS>3</NO_VIET_VETS>
+                  <NO_OTHER_VETS>0</NO_OTHER_VETS>
+                </G_4>
+              </LIST_G_4>
+              <LIST_G_5>
+                <G_5>
+                  <TOT_NEW_HIRES>35</TOT_NEW_HIRES>
+                  <NO_NH_DIS_VETS>0</NO_NH_DIS_VETS>
+                  <NO_NH_VIET_VETS>3</NO_NH_VIET_VETS>
+                  <NO_NH_OTHER_VETS>0</NO_NH_OTHER_VETS>
+                </G_5>
+              </LIST_G_5>
+            </G_3>
+            <G_3>
+              <CONS_JOB_CATEGORY_NAME>PROFESSIONALS...................2</CONS_JOB_CATEGORY_NAME>
+              <CONS_JOB_CATEGORY_CODE>2</CONS_JOB_CATEGORY_CODE>
+              <LIST_G_4>
+                <G_4>
+                  <NO_DIS_VETS>2</NO_DIS_VETS>
+                  <NO_VIET_VETS>22</NO_VIET_VETS>
+                  <NO_OTHER_VETS>0</NO_OTHER_VETS>
+                </G_4>
+              </LIST_G_4>
+              <LIST_G_5>
+                <G_5>
+                  <TOT_NEW_HIRES>143</TOT_NEW_HIRES>
+                  <NO_NH_DIS_VETS>2</NO_NH_DIS_VETS>
+                  <NO_NH_VIET_VETS>22</NO_NH_VIET_VETS>
+                  <NO_NH_OTHER_VETS>0</NO_NH_OTHER_VETS>
+                </G_5>
+              </LIST_G_5>
+            </G_3>
+            <G_3>
+              <CONS_JOB_CATEGORY_NAME>TECHNICIANS.....................3</CONS_JOB_CATEGORY_NAME>
+              <CONS_JOB_CATEGORY_CODE>3</CONS_JOB_CATEGORY_CODE>
+              <LIST_G_4>
+                <G_4>
+                  <NO_DIS_VETS>0</NO_DIS_VETS>
+                  <NO_VIET_VETS>0</NO_VIET_VETS>
+                  <NO_OTHER_VETS>0</NO_OTHER_VETS>
+                </G_4>
+              </LIST_G_4>
+              <LIST_G_5>
+                <G_5>
+                  <TOT_NEW_HIRES>0</TOT_NEW_HIRES>
+                  <NO_NH_DIS_VETS>0</NO_NH_DIS_VETS>
+                  <NO_NH_VIET_VETS>0</NO_NH_VIET_VETS>
+                  <NO_NH_OTHER_VETS>0</NO_NH_OTHER_VETS>
+                </G_5>
+              </LIST_G_5>
+            </G_3>
+            <G_3>
+              <CONS_JOB_CATEGORY_NAME>SALES WORKERS...................4</CONS_JOB_CATEGORY_NAME>
+              <CONS_JOB_CATEGORY_CODE>4</CONS_JOB_CATEGORY_CODE>
+              <LIST_G_4>
+                <G_4>
+                  <NO_DIS_VETS>0</NO_DIS_VETS>
+                  <NO_VIET_VETS>2</NO_VIET_VETS>
+                  <NO_OTHER_VETS>0</NO_OTHER_VETS>
+                </G_4>
+              </LIST_G_4>
+              <LIST_G_5>
+                <G_5>
+                  <TOT_NEW_HIRES>44</TOT_NEW_HIRES>
+                  <NO_NH_DIS_VETS>0</NO_NH_DIS_VETS>
+                  <NO_NH_VIET_VETS>2</NO_NH_VIET_VETS>
+                  <NO_NH_OTHER_VETS>0</NO_NH_OTHER_VETS>
+                </G_5>
+              </LIST_G_5>
+            </G_3>
+            <G_3>
+              <CONS_JOB_CATEGORY_NAME>OFFICE AND CLERICAL.............5</CONS_JOB_CATEGORY_NAME>
+              <CONS_JOB_CATEGORY_CODE>5</CONS_JOB_CATEGORY_CODE>
+              <LIST_G_4>
+                <G_4>
+                  <NO_DIS_VETS>0</NO_DIS_VETS>
+                  <NO_VIET_VETS>0</NO_VIET_VETS>
+                  <NO_OTHER_VETS>0</NO_OTHER_VETS>
+                </G_4>
+              </LIST_G_4>
+              <LIST_G_5>
+                <G_5>
+                  <TOT_NEW_HIRES>52</TOT_NEW_HIRES>
+                  <NO_NH_DIS_VETS>0</NO_NH_DIS_VETS>
+                  <NO_NH_VIET_VETS>0</NO_NH_VIET_VETS>
+                  <NO_NH_OTHER_VETS>0</NO_NH_OTHER_VETS>
+                </G_5>
+              </LIST_G_5>
+            </G_3>
+            <G_3>
+              <CONS_JOB_CATEGORY_NAME>CRAFT WORKERS (SKILLED).........6</CONS_JOB_CATEGORY_NAME>
+              <CONS_JOB_CATEGORY_CODE>6</CONS_JOB_CATEGORY_CODE>
+              <LIST_G_4>
+                <G_4>
+                  <NO_DIS_VETS>0</NO_DIS_VETS>
+                  <NO_VIET_VETS>0</NO_VIET_VETS>
+                  <NO_OTHER_VETS>0</NO_OTHER_VETS>
+                </G_4>
+              </LIST_G_4>
+              <LIST_G_5>
+                <G_5>
+                  <TOT_NEW_HIRES>7</TOT_NEW_HIRES>
+                  <NO_NH_DIS_VETS>0</NO_NH_DIS_VETS>
+                  <NO_NH_VIET_VETS>0</NO_NH_VIET_VETS>
+                  <NO_NH_OTHER_VETS>0</NO_NH_OTHER_VETS>
+                </G_5>
+              </LIST_G_5>
+            </G_3>
+            <G_3>
+              <CONS_JOB_CATEGORY_NAME>OPERATIVES (SEMI-SKILLED).......7</CONS_JOB_CATEGORY_NAME>
+              <CONS_JOB_CATEGORY_CODE>7</CONS_JOB_CATEGORY_CODE>
+              <LIST_G_4>
+                <G_4>
+                  <NO_DIS_VETS>0</NO_DIS_VETS>
+                  <NO_VIET_VETS>0</NO_VIET_VETS>
+                  <NO_OTHER_VETS>0</NO_OTHER_VETS>
+                </G_4>
+              </LIST_G_4>
+              <LIST_G_5>
+                <G_5>
+                  <TOT_NEW_HIRES>3</TOT_NEW_HIRES>
+                  <NO_NH_DIS_VETS>0</NO_NH_DIS_VETS>
+                  <NO_NH_VIET_VETS>0</NO_NH_VIET_VETS>
+                  <NO_NH_OTHER_VETS>0</NO_NH_OTHER_VETS>
+                </G_5>
+              </LIST_G_5>
+            </G_3>
+            <G_3>
+              <CONS_JOB_CATEGORY_NAME>LABORERS (UNSKILLED)............8</CONS_JOB_CATEGORY_NAME>
+              <CONS_JOB_CATEGORY_CODE>8</CONS_JOB_CATEGORY_CODE>
+              <LIST_G_4>
+                <G_4>
+                  <NO_DIS_VETS>0</NO_DIS_VETS>
+                  <NO_VIET_VETS>0</NO_VIET_VETS>
+                  <NO_OTHER_VETS>0</NO_OTHER_VETS>
+                </G_4>
+              </LIST_G_4>
+              <LIST_G_5>
+                <G_5>
+                  <TOT_NEW_HIRES>1</TOT_NEW_HIRES>
+                  <NO_NH_DIS_VETS>0</NO_NH_DIS_VETS>
+                  <NO_NH_VIET_VETS>0</NO_NH_VIET_VETS>
+                  <NO_NH_OTHER_VETS>0</NO_NH_OTHER_VETS>
+                </G_5>
+              </LIST_G_5>
+            </G_3>
+            <G_3>
+              <CONS_JOB_CATEGORY_NAME>SERVICE WORKERS.................9</CONS_JOB_CATEGORY_NAME>
+              <CONS_JOB_CATEGORY_CODE>9</CONS_JOB_CATEGORY_CODE>
+              <LIST_G_4>
+                <G_4>
+                  <NO_DIS_VETS>0</NO_DIS_VETS>
+                  <NO_VIET_VETS>1</NO_VIET_VETS>
+                  <NO_OTHER_VETS>0</NO_OTHER_VETS>
+                </G_4>
+              </LIST_G_4>
+              <LIST_G_5>
+                <G_5>
+                  <TOT_NEW_HIRES>4</TOT_NEW_HIRES>
+                  <NO_NH_DIS_VETS>0</NO_NH_DIS_VETS>
+                  <NO_NH_VIET_VETS>1</NO_NH_VIET_VETS>
+                  <NO_NH_OTHER_VETS>0</NO_NH_OTHER_VETS>
+                </G_5>
+              </LIST_G_5>
+            </G_3>
+          </LIST_G_3>
+          <LIST_G_7>
+            <G_7>
+              <MIN_COUNT>0</MIN_COUNT>
+              <C_MAX_COUNT>172</C_MAX_COUNT>
+            </G_7>
+          </LIST_G_7>
+          <C_TOT_DIS_VETS>2</C_TOT_DIS_VETS>
+          <C_TOT_VIET_VETS>28</C_TOT_VIET_VETS>
+          <C_TOT_NH_DIS_VETS>2</C_TOT_NH_DIS_VETS>
+          <C_TOT_NH_VIET_VETS>28</C_TOT_NH_VIET_VETS>
+          <C_TOT_NEW_HIRES>289</C_TOT_NEW_HIRES>
+          <C_COUNT_EMPS>157</C_COUNT_EMPS>
+          <C_TOT_NH_OTHER_VETS>28</C_TOT_NH_OTHER_VETS>
+          <C_TOT_OTHER_VETS>0</C_TOT_OTHER_VETS>
+        </G_2>
+      </LIST_G_2>
+    </G_1>
+  </LIST_G_1>
+  <C_BUSINESS_GROUP_NAME>Vision Corporation                                                                                                                                                                                                                              </C_BUSINESS_GROUP_NAME>
+  <C_ORGANIZATION_HIERARCHY>AAP Reporting Hierarchy       </C_ORGANIZATION_HIERARCHY>
+  <C_ORGANIZATION>Vision Corporation                                                                                                                                                                                                                              </C_ORGANIZATION>
+  <C_FORM_TYPE>Multiple Establishment - Hiring Location (MHL)</C_FORM_TYPE>
+</PERVT2KS>

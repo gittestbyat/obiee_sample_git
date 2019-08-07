@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="p31aqsroa6e9bs1s">
+	<sawd:dashboardColumn name="Column 2" duid="74lp749i5hecekmu" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 0" display="embed" showView="" duid="1hvv0dem4selbo4k"><saw:caption><saw:text>AirRoutes Feature Layers</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/04. Maps and Spatial/Map Views/Feature Layers/AirRoutes Feature Layers"/></sawd:reportView><sawd:globalFilterView name="GFP 0" path="/shared/04. Maps and Spatial/Map Views/Feature Layers/Prt - Orig- Dest" duid="g7bh3q9a85o4cor5"><saw:caption><saw:text>Prt - Orig- Dest</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="05kqqd01dn3bh1gr" links="" overrideParentLinks="true"><sawd:dashboardColumn name="Column 0" canFreeze="false" duid="meu1bcf0frnprnqb" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 7" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+      <saw:displayFormat>
+        <saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 6" duid="al3aq64l1co3ogrl">
+        <sawd:HTML fmt="html" captionID="kcap12832459_670">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+Exclude Outliers
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+      </sawd:htmlView>
+      <sawd:linkView name="Link 1" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+        <sawd:linkCaption>
+          <saw:caption captionID="kcap12832459_669">
+            <saw:text>Return to Main Index page</saw:text>
+          </saw:caption>
+        </sawd:linkCaption>
+        <sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+      </sawd:linkView>
+    </sawd:dashboardSection><sawd:dashboardSection name="Section 2" duid="m0n37rpnl8ob5is7" showSectionTitle="false" collapsible="true" layoutType="bestFit"><sawd:htmlView name="HTML 1" duid="fjqcmae3f92mcbpu"><sawd:HTML fmt="html">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; In this example, we use action framework and custom javascript to select and exclude outliers from an chart. The scatter plot displays various carriers by delay and flight count. Outliers can be selected (or deselected) by clicking on the scatter point. 
+[br/]
+Internally, outliers collection is maintained as an JS array. A hidden presentation server (PS) variable is set when there is a change to this population. The adjacent report is filtered using this PS variable value. Note: Custom JS scripts in this example are not part of OBIEE product and they are not supported by Oracle (e.g. function for setting a prompt). It is provided for demonstration purposes.  </sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 1" duid="cueuvaq60p66qra2" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec paddingTop="30" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 1" display="embed" showView="" duid="05r1u4u8bu8t4k1i"><saw:caption><saw:text>Delay by Carrier</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Exclude Outliers/Delay by Carrier"/></sawd:reportView><sawd:reportView name="Report 0" display="embed" showView="" duid="i03u0vsgbqj662mt" links="" overrideParentLinks="false"><saw:caption><saw:text>Airlines Delay Components</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Exclude Outliers/Airlines Delay Components"/></sawd:reportView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" duid="29cf5m9876gjeva2" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec wrapText="true" style="display:none"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/09. Integrations and Customizations/Custom Interactions/Exclude Outliers/Prompt_Carrier" duid="k257hklaim068a5i"><saw:caption><saw:text>Prompt_Carrier</saw:text></saw:caption></sawd:globalFilterView><sawd:htmlView name="HTML 0" duid="ffiuh4hh0sbi6hv3"><sawd:HTML fmt="html">&lt;script&gt;
+var carriersel = [];
+&lt;/script&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

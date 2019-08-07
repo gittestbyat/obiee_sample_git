@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c6db79fb99ae92d6d">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R64  Latitude&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_279">
+						<saw:text>Ship To Geo Codes</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					<saw:caption fmt="text" captionID="kcap12832459_280">
+						<saw:text>Latitude</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c53f54c4c06d8f3bb">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R65  Longitude&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_281">
+						<saw:text>Ship To Geo Codes</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					<saw:caption fmt="text" captionID="kcap12832459_282">
+						<saw:text>Longitude</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c60694315bab78288" aggRule="max">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R59  Establishment Name&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_283">
+						<saw:text>Ship To Regions</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_284">
+						<saw:text>Establishment</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c0d1f7d54cd3774af">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true" interaction="action"><saw:actionLinks showPopupMenuForOneLink="true"><saw:actionLink actionLinkID="c0d1f7d54cd3774af_al3d81fea3fcf3243b"><saw:actionPath>/shared/01. QuickStart/Simple Demo Dashboard/Visit Pipeline Application</saw:actionPath><saw:caption><saw:text>See Pipeline for this location</saw:text></saw:caption></saw:actionLink></saw:actionLinks></saw:formatSpec></saw:displayFormat><saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_285">
+						<saw:text>Base Facts</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_286">
+						<saw:text>Revenue</saw:text>
+					</saw:caption>
+					<saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c0a3a3c14c26a8e22">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">ntile(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4)</sawx:expr>
+				</saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_287">
+						<saw:text>Base Facts</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_288">
+						<saw:text>Quartile</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c55cce72458c3e872">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C1  Customer Name&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_289">
+						<saw:text>Customers</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_290">
+						<saw:text>Customer</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c801fe92f0b8796b9">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_291">
+						<saw:text>Customers</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_292">
+						<saw:text>Qtr</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c78f0509ee33a9638">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;20  Actual Unit Price&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_293">
+						<saw:text>Simple Calculations</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_294">
+						<saw:text>Unit Price</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cfaffcf4bf45a5234">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;31  # of Orders  (Cnt Distinct)&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_295">
+						<saw:text>Counts</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_296">
+						<saw:text>Orders</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+		</saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:logical" op="and">
+				<sawx:expr xsi:type="sawx:comparison" op="equal">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R55  City&quot;</sawx:expr>
+					<sawx:expr xsi:type="xsd:string">San Francisco</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:comparison" op="greaterOrEqual">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+					<sawx:expr xsi:type="xsd:decimal">3000</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+				</sawx:expr>
+			</sawx:expr>
+		</saw:filter>
+		<saw:columnOrder>
+			<saw:columnOrderRef columnID="c801fe92f0b8796b9" direction="ascending"/>
+		</saw:columnOrder>
+	</saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!1" colSpan="2"/>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="mapview!1" colSpan="2">
+						<saw:displayFormat>
+							<saw:formatSpec/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="tableView!1"/>
+					<saw:cvCell viewName="dvtchart!1"/>
+				</saw:cvRow>
+			</saw:cvTable>
+		</saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view>
+		<saw:view xsi:type="saw:mapview" name="mapview!1">
+			<saw:mapLayout>
+				<saw:splitterLayout orientation="horizontal"/>
+			</saw:mapLayout>
+			<saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_SF_MAP1__~v0"/>
+			<saw:mapWidgets>
+				<saw:mapToolBar>
+					<saw:panTools>
+						<saw:panHand display="true"/>
+					</saw:panTools>
+					<saw:zoomTools>
+						<saw:zoomIn display="true"/>
+						<saw:zoomOut display="true"/>
+					</saw:zoomTools>
+					<saw:selectionTools>
+						<saw:pointTool display="true"/>
+					</saw:selectionTools>
+				</saw:mapToolBar>
+				<saw:mapInformation>
+					<saw:scaleInfo display="true"/>
+					<saw:overview display="true" viewState="collapsed"/>
+				</saw:mapInformation>
+				<saw:mapOverlay>
+					<saw:panButtons display="true"/>
+					<saw:zoomSlider display="true"/>
+				</saw:mapOverlay>
+			</saw:mapWidgets>
+			<saw:infoLegend display="true" viewState="collapsed"/>
+			<saw:viewportInfo>
+				<saw:mapCenter x="-122.428515625" y="37.74150390625" size="0.146484375" zoomLevel="1" srid="8307" yUnitPixels="2048" xUnitPixels="2048"/>
+				<saw:boundingBox coords="-122.56279296875,37.66875,-122.2947265625,37.81474609375"/>
+			</saw:viewportInfo>
+			<saw:spatialLayers>
+				<saw:spatialLayer sid="custom_poi" class="omv_custompoint_layer" layerID="l0">
+					<saw:layerLabelFormat display="false"/>
+					<saw:visuals>
+						<saw:visual visualID="v0" subClass="image" xsi:type="saw:variableMarker" display="true">
+							<saw:tooltip/>
+							<saw:spatials srid="8307" singleXYColumn="false" delimiter="">
+								<saw:columnRef columnID="c53f54c4c06d8f3bb"/>
+								<saw:columnRef columnID="c6db79fb99ae92d6d"/>
+							</saw:spatials>
+							<saw:varyImage binType="percentile" numBins="4">
+								<saw:columnRef columnID="c0d1f7d54cd3774af"/>
+								<saw:rampStyle>
+									<saw:rampItem id="0">
+										<saw:caption captionID="kcap12832459_298">
+											<saw:text>Top Quartile</saw:text>
+										</saw:caption>
+										<saw:g class="marker">
+											<saw:image fmapURL="meters/status/general/checkmark.png"/>
+										</saw:g>
+									</saw:rampItem>
+									<saw:rampItem id="1">
+										<saw:g class="marker">
+											<saw:image fmapURL="meters/status/general/dash.png"/>
+										</saw:g>
+									</saw:rampItem>
+									<saw:rampItem id="2">
+										<saw:g class="marker">
+											<saw:image fmapURL="meters/status/priority/04_high.png"/>
+										</saw:g>
+									</saw:rampItem>
+									<saw:rampItem id="3">
+										<saw:g class="marker">
+											<saw:image fmapURL="meters/status/icons_s/01_critical.png"/>
+										</saw:g>
+									</saw:rampItem>
+								</saw:rampStyle>
+							</saw:varyImage>
+							<saw:g class="marker">
+								<saw:image fmapURL="common/kpi_warning_status.gif"/>
+							</saw:g>
+						</saw:visual>
+					</saw:visuals>
+				</saw:spatialLayer>
+			</saw:spatialLayers>
+			<saw:formatPanel display="true"/>
+			<saw:canvasFormat width="550" height="300"/>
+			<saw:mapInteraction autoCreateFormats="false"/>
+		</saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" autoPreview="true" clientEventChannels="MD1" clientEventEnabled="true">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c60694315bab78288" aggRule="countDistinct">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec hAlign="right" wrapText="true"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+						</saw:edgeLayer><saw:edgeLayer type="column" columnID="c6db79fb99ae92d6d"/><saw:edgeLayer type="column" columnID="c53f54c4c06d8f3bb"/></saw:edgeLayers>
+				</saw:edge><saw:edge axis="section"><saw:edgeLayers/></saw:edge><saw:edge axis="row" showColumnHeader="true">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="after"/>
+					</saw:displayGrandTotals>
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="cba88b67315d985eb"/></saw:edgeLayers>
+				</saw:edge><saw:edge axis="column">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="measure"/></saw:edgeLayers>
+				</saw:edge></saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="c0d1f7d54cd3774af"/>
+			</saw:measuresList>
+		</saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1" clientEventChannels="MD1" clientEventEnabled="true" autoPreview="true">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t2" grandTotalPosition="after"/>
+					</saw:displayGrandTotals>
+					<saw:columnOrder>
+						<saw:columnOrderRef columnID="c801fe92f0b8796b9" direction="descending"/>
+					</saw:columnOrder>
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c60694315bab78288">
+							<saw:levels>
+								<saw:level>
+									<saw:displaySubTotal id="t3" subTotalPosition="after"/>
+								</saw:level>
+							</saw:levels>
+						</saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="c55cce72458c3e872"/>
+						<saw:edgeLayer type="column" columnID="cfaffcf4bf45a5234"/>
+						<saw:edgeLayer type="column" columnID="c0d1f7d54cd3774af"/>
+						<saw:edgeLayer type="column" columnID="c78f0509ee33a9638"/>
+					</saw:edgeLayers>
+				</saw:edge>
+				<saw:edge axis="column"/>
+			</saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="c78f0509ee33a9638"/>
+			</saw:measuresList>
+			<saw:greenBarFormat greenBar="allLayers" enabled="true"/>
+		</saw:view>
+		<saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+			<saw:display type="lineBar" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="true" animateOnDisplay="true" clientEventChannels="MD01">
+				<saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+			</saw:display>
+			<saw:canvasFormat height="250" width="400" showGradient="true">
+				<saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>
+				<saw:title mode="custom">
+					<saw:caption>
+						<saw:text/>
+					</saw:caption>
+				</saw:title>
+				<saw:gridlines default="true">
+					<saw:horizontal>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/>
+					</saw:horizontal>
+					<saw:vertical>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/>
+					</saw:vertical>
+				</saw:gridlines>
+			</saw:canvasFormat>
+			<saw:selections>
+				<saw:categories>
+					<saw:category>
+						<saw:columnRef columnID="c801fe92f0b8796b9"/>
+					</saw:category>
+				</saw:categories>
+				<saw:measures showMeasureLabelsOnCategory="false">
+					<saw:column measureType="y1" riserType="bar">
+						<saw:columnRef columnID="c0d1f7d54cd3774af"/>
+					</saw:column>
+					<saw:column measureType="y2" riserType="line">
+						<saw:columnRef columnID="c78f0509ee33a9638"/>
+					</saw:column>
+				</saw:measures>
+				<saw:seriesGenerators>
+					<saw:measureLabels/>
+				</saw:seriesGenerators>
+				<saw:sections displayAsSlider="true" sectionSliderLimit="50"/>
+			</saw:selections>
+			<saw:legendFormat position="top" transparentFill="true"/>
+			<saw:axesFormats syncAxis="false">
+				<saw:axisFormat axis="Y1" displayScaleLabels="true">
+					<saw:title mode="auto">
+						<saw:caption captionID="kcap12832459_297">
+							<saw:text/>
+						</saw:caption>
+					</saw:title>
+					<saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="k" skipLabels="true"/>
+					<saw:textFormat fontSize="10"/>
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>
+				</saw:axisFormat>
+				<saw:axisFormat axis="X" displayScaleLabels="true">
+					<saw:title mode="custom">
+						<saw:caption>
+							<saw:text/>
+						</saw:caption>
+					</saw:title>
+					<saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/>
+					<saw:textFormat fontSize="10"/>
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>
+				</saw:axisFormat>
+				<saw:axisFormat axis="Y2">
+					<saw:title mode="custom">
+						<saw:caption>
+							<saw:text/>
+						</saw:caption>
+					</saw:title>
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>
+				</saw:axisFormat>
+			</saw:axesFormats>
+			<saw:seriesFormats>
+				<saw:seriesFormatGroup name="lineBarBar">
+					<saw:seriesFormatRule>
+						<saw:seriesCondition position="1"/>
+						<saw:visualFormats>
+							<saw:visualFormat color="#C9BA8F"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+				</saw:seriesFormatGroup>
+			</saw:seriesFormats>
+		</saw:view>
+	</saw:views>
+</saw:report>

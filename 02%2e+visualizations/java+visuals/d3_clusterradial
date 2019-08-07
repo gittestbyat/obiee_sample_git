@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="cbd51ab1a46a76870"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P4  Brand&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Level 1</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c14194b2134e2e0e2"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim02}{&quot;Products&quot;.&quot;P3  LOB&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Level 2</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c302b106f4f44f9e9"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim03}{&quot;Products&quot;.&quot;P2  Product Type&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Level 3</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c2a6c5927333ba199"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim04}{&quot;Products&quot;.&quot;P1  Product&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Level 04</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ce8424ac964b6fb4e"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;}</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Metric</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cbd51ab1a46a76870"/><saw:edgeLayer type="column" columnID="c14194b2134e2e0e2"/><saw:edgeLayer type="column" columnID="c302b106f4f44f9e9"/><saw:edgeLayer type="column" columnID="c2a6c5927333ba199"/><saw:edgeLayer type="column" columnID="ce8424ac964b6fb4e"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:narrative rowCount="300"><saw:caption fmt="html"><saw:text>mydata.push([&quot;@{cbd51ab1a46a76870}&quot;,&quot;@{c14194b2134e2e0e2}&quot;,&quot;@{c302b106f4f44f9e9}&quot;,&quot;@{c2a6c5927333ba199}&quot;,&quot;@{ce8424ac964b6fb4e}&quot;]);
+</saw:text></saw:caption></saw:narrative><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/d3/d3.v3.js&quot;&gt;&lt;/script&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/analyticsRes/d3/examples/cluster/cluster.css&quot;/&gt;
+&lt;div id=&quot;circle_radial_chart&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+mydata=[];</saw:text></saw:caption></saw:prefix><saw:postfix><saw:caption fmt="html"><saw:text>jsonStr=&quot;&quot;;
+v0=&quot;&quot;; v1=&quot;&quot;; v2=&quot;&quot;;
+t=&quot;&quot;;
+for(i in mydata){
+	lMisMatch=0;
+	
+	if(v0!=mydata[i][0])	{lMisMatch=1;	endMarker=&quot;]}]}]}&quot;;}
+    if(v1!=mydata[i][1] &amp;&amp; !lMisMatch)	{lMisMatch=2;	endMarker=&quot;]}]}&quot;;}
+    if(v2!=mydata[i][2] &amp;&amp; !lMisMatch)	{lMisMatch=3;	endMarker=&quot;]}&quot;;}
+	
+    if(i!=0 &amp;&amp; (lMisMatch&gt;0))	jsonStr+= endMarker;
+	if(i!=0)	jsonStr+=&quot;,&quot;;
+	
+    if(v0!=mydata[i][0]){   jsonStr+=&quot;\n{\&quot;name\&quot;: \&quot;&quot;+mydata[i][0]+&quot;\&quot;,\&quot;children\&quot;: [&quot;;}
+    if(v1!=mydata[i][1]){   jsonStr+=&quot;\n\t{\&quot;name\&quot;: \&quot;&quot;+mydata[i][1]+&quot;\&quot;,\&quot;children\&quot;: [&quot;;}
+    if(v2!=mydata[i][2]){   jsonStr+=&quot;\n\t\t{\&quot;name\&quot;: \&quot;&quot;+mydata[i][2]+&quot;\&quot;,\&quot;children\&quot;: [&quot;;}
+
+    jsonStr+=&quot;\n\t\t\t{\&quot;name\&quot;: \&quot;&quot; +mydata[i][3]+ &quot;\&quot;, \&quot;size\&quot;:&quot; + mydata[i][4] + &quot;}&quot;;
+
+    if(v0!=mydata[i][0]){ v0=mydata[i][0];}
+    if(v1!=mydata[i][1]){ v1=mydata[i][1];}
+    if(v2!=mydata[i][2]){ v2=mydata[i][2];}
+
+    if (i==(mydata.length-1)) { jsonStr+=&quot;]}]}]}&quot; };
+}
+jsonStr = &quot;{\&quot;name\&quot;: \&quot;All Products\&quot;, \&quot;children\&quot;: [&quot; + jsonStr + &quot;]}&quot;;
+var myDataObject = eval(&#39;(&#39; + jsonStr + &#39;)&#39;);
+
+var radius = @{Radius}{400};
+
+var cluster = d3.layout.cluster()
+    .size([360, radius - 120]);
+
+var diagonal = d3.svg.diagonal.radial()
+    .projection(function(d) { return [d.y, d.x / 180 * Math.PI]; });
+
+var vis = d3.select(&quot;#circle_radial_chart&quot;).append(&quot;svg&quot;)
+    .attr(&quot;width&quot;, radius * 2)
+    .attr(&quot;height&quot;, radius * 2)
+  .append(&quot;g&quot;)
+    .attr(&quot;transform&quot;, &quot;translate(&quot; + radius + &quot;,&quot; + radius + &quot;)&quot;);
+
+json=myDataObject;
+  var nodes = cluster.nodes(json);
+
+  var link = vis.selectAll(&quot;path.link&quot;)
+      .data(cluster.links(nodes))
+    .enter().append(&quot;path&quot;)
+      .attr(&quot;class&quot;, &quot;link&quot;)
+      .attr(&quot;d&quot;, diagonal);
+
+  var node = vis.selectAll(&quot;g.node&quot;)
+      .data(nodes)
+    .enter().append(&quot;g&quot;)
+      .attr(&quot;class&quot;, &quot;node&quot;)
+      .attr(&quot;transform&quot;, function(d) { return &quot;rotate(&quot; + (d.x - 90) + &quot;)translate(&quot; + d.y + &quot;)&quot;; })
+
+  node.append(&quot;circle&quot;)
+      .attr(&quot;r&quot;, 4.5)
+.style(&quot;fill&quot;,&quot;@{CircleFillColor}{white}&quot;);
+
+  node.append(&quot;text&quot;)
+      .attr(&quot;dx&quot;, function(d) { return d.x &lt; 180 ? 8 : -8; })
+      .attr(&quot;dy&quot;, &quot;.31em&quot;)
+      .attr(&quot;text-anchor&quot;, function(d) { return d.x &lt; 180 ? &quot;start&quot; : &quot;end&quot;; })
+      .attr(&quot;transform&quot;, function(d) { return d.x &lt; 180 ? null : &quot;rotate(180)&quot;; })
+      .style(&quot;fill&quot;,&quot;@{TextColor}{steelblue}&quot;)
+      .text(function(d) { return d.name ; });
+&lt;/script&gt;
+</saw:text></saw:caption></saw:postfix></saw:view></saw:views></saw:report>

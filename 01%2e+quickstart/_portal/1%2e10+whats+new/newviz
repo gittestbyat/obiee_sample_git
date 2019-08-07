@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="3102r1o9jfkjmbg4"><sawd:dashboardColumn name="Column 4" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 5" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This page shows various new visualizations. 
+&lt;/br&gt;
+1) Performance Tles that immediately reveal summary metrics. 2) 100% Stacked Bar charts that can be used to compare distributions within categories. 
+&lt;/br&gt;
+3) Waterfall chart that helps to determine how an initial value is affected by a series of intermediate positive or negative values.4) Breadcrumb - Reveals current context of the dashboard by displaying navigation trail. Allows easy navigation back to a previous state.
+
+</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" canFreeze="false" duid="ie4k1ctl578d9iec" frozen="false" break="column" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="u8v8irh1rpjqvgtf" showSectionTitle="false" collapsible="false" layoutType="bestFit"><sawd:globalFilterView name="GFP 1" path="/shared/01. QuickStart/New Features/11.1.1.7.1/Prompts Company" duid="5nhudlcf71ibidl3" scope="dashboardPage"><saw:caption><saw:text>Prompts Company</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" canFreeze="false" duid="hl6d5b6kv8d3i19e" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="msv1712er1ie2fat" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec paddingTop="10" paddingBottom="10" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="fk123te0l23oggkt"><saw:caption><saw:text>Performance Indicators</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/01. QuickStart/Simple Demo Dashboard/Overview/Performance Indicators"/></sawd:reportView></sawd:dashboardSection><sawd:dashboardSection name="Section 2" duid="an0c2ic12tqo2o4t" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><sawd:reportView name="Report 2" display="embed" showView="" duid="56itfcp6gibaoi62"><saw:caption><saw:text>100% Stacked Bar Chart</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/01. QuickStart/New Features/11.1.1.7.1/100% Stacked Bar Chart"/></sawd:reportView><sawd:reportView name="Report 1" display="embed" showView="" duid="1pdmigqpcakj6kqu"><saw:caption><saw:text>Waterfall Bridge Report</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/01. QuickStart/New Features/11.1.1.7.1/Waterfall Bridge Report"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

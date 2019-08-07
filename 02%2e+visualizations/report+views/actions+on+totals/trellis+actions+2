@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c16b11a450cbb8fd0">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Alternate Calendars&quot;.&quot;T32 Cal Month&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="action"/></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c9bab492af445a45c">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" interaction="action">
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false">
+                     <saw:actionLink actionLinkID="c9bab492af445a45c_ale9d5c1747092b03a">
+                        <saw:actionPath>/shared/01. QuickStart/Simple Demo Dashboard/Navigate to Customers Details Report</saw:actionPath>
+                        <saw:caption>
+                           <saw:text>Navigate to Customers Details Report</saw:text></saw:caption></saw:actionLink>
+                     <saw:actionLink actionLinkID="c9bab492af445a45c_alfc6bb50b7aa572e4">
+                        <saw:actionPath>/shared/01. QuickStart/Simple Demo Dashboard/Navigate to Order Details Report</saw:actionPath>
+                        <saw:caption>
+                           <saw:text>Navigate to Order Details Report</saw:text></saw:caption></saw:actionLink></saw:actionLinks></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c8f37820d30218082_d1">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P3  LOB&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c4d725179552e52e3">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula>
+            <saw:dimensionSelection>
+               <saw:selectionStep stepID="1" type="startWith" category="member">
+                  <saw:stepMembers xsi:type="saw:staticMemberGroupDef">
+                     <saw:staticMemberGroup>
+                        <saw:members xsi:type="saw:specialValueMembers">
+                           <saw:value specialValue="all"/></saw:members></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep></saw:dimensionSelection></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="trellisView!2">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="none" includeName="true"><saw:displayFormat>
+            <saw:formatSpec wrapText="true" borderPosition="8" borderColor="#666666" borderStyle="single" paddingBottom="3"/></saw:displayFormat><saw:title><saw:displayFormat>
+               <saw:formatSpec wrapText="true" fontFamily="Arial" fontSize="15" fontStyle="bold" fontColor="#15164B"/></saw:displayFormat></saw:title></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="ca6ed66bc112460c1"/>
+                  <saw:edgeLayer type="column" columnID="c7099eee48e8285f7"/>
+                  <saw:edgeLayer type="column" columnID="c16b11a450cbb8fd0"/>
+                  <saw:edgeLayer type="column" columnID="c941ffde2db3111ac"/>
+                  <saw:edgeLayer type="column" columnID="c9bab492af445a45c"/>
+                  <saw:edgeLayer type="column" columnID="c7bc1ec88d56b0f32"/>
+                  <saw:edgeLayer type="column" columnID="cb1b367191304f8e1"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:trellisView" name="trellisView!1" scrollingEnabled="false" type="singleviz">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="false">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c8f37820d30218082">
+                     <saw:memberFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec vAlign="middle" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>
+                  <saw:edgeLayer columnID="c8f37820d30218082_d1" type="column">
+                     <saw:memberFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec vAlign="middle" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover" dependent="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c4d725179552e52e3">
+                     <saw:customMembers>
+                        <saw:customMember customMemberID="calc_ca4baffa93dc89aa" displayCustomMember="true"/></saw:customMembers></saw:edgeLayer>
+                  <saw:edgeLayer type="measure" visibility="hidden"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c9bab492af445a45c" name="Trellise250c4cd330aae20" type="view"/></saw:measuresList>
+         <saw:nestedViews>
+            <saw:nestedView position="embedded">
+               <saw:view xsi:type="saw:dvtchart" name="Trellise250c4cd330aae20">
+                  <saw:display type="line" subtype="default" renderFormat="default" mode="online">
+                     <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+                  <saw:canvasFormat height="100" width="100">
+                     <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+                     <saw:gridlines default="false"/></saw:canvasFormat>
+                  <saw:selections>
+                     <saw:categories/>
+                     <saw:measures showMeasureLabelsOnCategory="false">
+                        <saw:column measureType="y">
+                           <saw:columnRef columnID="c9bab492af445a45c"/></saw:column>
+                        <saw:column measureType="y">
+                           <saw:columnRef columnID="c7bc1ec88d56b0f32"/></saw:column>
+                        <saw:column measureType="y">
+                           <saw:columnRef columnID="cb1b367191304f8e1"/></saw:column></saw:measures>
+                     <saw:seriesGenerators>
+                        <saw:seriesGenerator>
+                           <saw:columnRef columnID="c16b11a450cbb8fd0"/></saw:seriesGenerator>
+                        <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+                  <saw:legendFormat position="default" transparentFill="true"/>
+                  <saw:axesFormats>
+                     <saw:axisFormat axis="Y1" displayScaleLabels="true">
+                        <saw:title mode="auto">
+                           <saw:caption truncate="false" truncateLength="0"/>
+                           <saw:displayFormat>
+                              <saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+                        <saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/>
+                        <saw:textFormat fontSize="10"/></saw:axisFormat>
+                     <saw:axisFormat axis="X" displayScaleLabels="true">
+                        <saw:title mode="auto">
+                           <saw:caption truncate="false" truncateLength="0"/>
+                           <saw:displayFormat>
+                              <saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+                        <saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="m" skipLabels="true"/>
+                        <saw:textFormat fontSize="10"/></saw:axisFormat></saw:axesFormats></saw:view></saw:nestedView></saw:nestedViews></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+         <saw:staticText>
+            <saw:caption fmt="text">
+               <saw:text>Bubble size represents profit margin</saw:text></saw:caption></saw:staticText></saw:view>
+      <saw:view xsi:type="saw:trellisView" name="trellisView!2" scrollingEnabled="true" type="multiviz">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="false"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="false">
+               <saw:edgeLayers>
+                  <saw:edgeLayer columnID="c8f37820d30218082_d1" type="column"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover" dependent="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c4d725179552e52e3"/>
+                  <saw:edgeLayer type="measure" visibility="hidden"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c9bab492af445a45c" name="Trellis4db9a46a2320a11d" type="view"/></saw:measuresList>
+         <saw:nestedViews>
+            <saw:nestedView position="embedded">
+               <saw:view xsi:type="saw:dvtmicrochart" name="Trellis4db9a46a2320a11d">
+                  <saw:display type="bar" subtype="default" renderFormat="default" mode="online">
+                     <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+                  <saw:canvasFormat height="20" width="100" sizeType="custom">
+                     <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/></saw:canvasFormat>
+                  <saw:selections>
+                     <saw:categories>
+                        <saw:category>
+                           <saw:columnRef columnID="c16b11a450cbb8fd0"/></saw:category></saw:categories>
+                     <saw:measures showMeasureLabelsOnCategory="false">
+                        <saw:column measureType="y">
+                           <saw:columnRef columnID="c9bab492af445a45c"/></saw:column></saw:measures>
+                     <saw:seriesGenerators>
+                        <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+                  <saw:legendFormat position="default" transparentFill="true"/></saw:view></saw:nestedView></saw:nestedViews></saw:view></saw:views></saw:report>

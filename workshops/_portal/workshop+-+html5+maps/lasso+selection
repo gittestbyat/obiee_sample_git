@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlVersion="200810300" isEmpty="false" xmlns:saw="com.siebel.analytics.web/report/v1.1" duid="k4i294r401njcgeg" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="true" duid="d3cdmjihjj099ali" layoutType="bestFit"><sawd:dashboardSection name="Section 0" collapsible="false" duid="qivlho1bipv00pqu" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit"><sawd:htmlView name="HTML 0" duid="avisa598at7bi2fq"><sawd:HTML fmt="html">&lt;font size=2 color=grey&gt;[b]Airports by Flight Volume[/b]&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;table&gt;&lt;tr&gt;
+&lt;td&gt;&lt;DIV id=&#39;map&#39; style=&quot;width:800px;height:600px;padding:10px;&quot;&gt;&lt;/DIV&gt;&lt;/td&gt;
+&lt;td valign=&#39;top&#39;&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;&lt;b&gt;Selected Airports:&lt;/b&gt;&lt;br/&gt;
+&lt;DIV id=&#39;selectedairports&#39; style=&quot;width:200px;height:600px;padding:10px;overflow-y: scroll;&quot;&gt;&lt;/DIV&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;
+
+&lt;script src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+&lt;script src=&#39;/analyticsRes/SampleApp/customjs/SAutilsv1.3.js&#39;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var map, airportsLayer, highlightLayer;
+var currMapData = &quot;&quot;;
+var highlights=[];
+	
+function setupAirportStyles(layer){
+    var circles = [];
+
+    for(var i=0; i&lt;10; i++)
+    {
+      circles[i] =  new OM.style.Marker({
+	    name:&quot;circle_&quot;+i,
+        vectorDef : [{
+            shape: { type:&quot;circle&quot;, cx:5, cy:5, width:10, height:10 }, 
+            style: {
+              fill:&quot;#AFB6BD&quot;, 
+              stroke:&quot;#6784A3&quot;
+            }
+          }],
+        width: 7 + i*3,
+        height:7 + i*3
+      });
+      highlights[i] =  new OM.style.Marker({
+	    name:&quot;highlight_&quot;+i,
+        vectorDef : [{
+            shape: { type:&quot;circle&quot;, cx:5, cy:5, width:10, height:10 }, 
+            style: {
+              fill:&quot;#FFFF44&quot;, 
+              stroke:&quot;#6784A3&quot;
+            }
+          }],
+        width: 7 + i*3,
+        height:7 + i*3
+      });
+    }
+    
+    var bucketStyle = new OM.style.BucketStyle(
+    {
+      styles: circles,
+      numClasses:10, 
+      classification:&#39;equal&#39;,  //creates equal-ranged buckets
+      defaultStyle: circles[0]
+    });
+
+    layer.setRenderingStyle(bucketStyle, [&quot;#FLIGHTS&quot;]);
+}     
+
+function clearHighlight(e)
+{
+  if (highlightLayer != null)
+  {
+    map.removeLayer(highlightLayer);
+    highlightLayer = null;
+	document.getElementById(&#39;selectedairports&#39;).innerHTML = &quot;&quot;;
+  }
+}
+
+function addHighlight(e)
+{
+  clearHighlight();
+  var tool = e.target;
+  var geom = tool.getGeometry();
+  //to select all the features that interact with a custom drawn geometry
+  //(using the circle, rectangle or polygon tool), we simply apply the
+  //AnyInteract filter on all the current layer. 
+  var filter1 = new OM.filter.AnyInteract(geom);
+  var selectStyle = new OM.style.Color({  fill:&quot;#ffff44&quot;, stroke:&quot;#44ff22&quot; });
+    
+  //The result of applying the filter is returned as a new layer.
+  highlightLayer = airportsLayer.applyFilter(filter1,false);
+  var features=highlightLayer.getAllFeatures();
+  
+  var selStr = &quot;&quot;, selStr1 = &quot;&quot;;  
+  var hlayerStyle = airportsLayer.getRenderingStyle();
+  hlayerStyle = hlayerStyle.clone();
+  hlayerStyle.styles = highlights;
+  highlightLayer.setRenderingStyle(hlayerStyle);
+  for(i=0;i&lt;features.length;i++){
+    selStr += features[i].getAttributeValue(&quot;AIRPORT&quot;) + &quot;&lt;br/&gt;&quot;;
+    selStr1+=&quot;&#39;&quot;+features[i].id + &quot;&#39;,&quot;;
+  }
+  document.getElementById(&#39;selectedairports&#39;).innerHTML = selStr;
+
+  //following is used to set dashboard variable prompt
+  if(selStr1.length&gt;2){
+   selStr1 = selStr1.substring(0,selStr1.length-1);
+   SAutils.setPSVarPrompt(&#39;airport_selection&#39;,selStr1);
+   } 
+
+  map.addLayer(highlightLayer);    
+}
+
+function renderMap(repData){
+  if (currMapData == repData)	 return;
+
+  currMapData = repData;
+  var darray=eval(&#39;[&#39;+repData+&#39;]&#39;);
+  var baseURL  = &quot;http://&quot;+document.location.host+&quot;/mapviewer&quot;;
+  var center = new OM.geometry.Point(-100,36,8307); 
+  map = new OM.Map(document.getElementById(&#39;map&#39;),{mapviewerURL: baseURL}) ;
+  
+  var tilelayer = new OM.layer.ElocationTileLayer(&quot;oracle.maps&quot;);
+  map.addLayer(tilelayer) ;  
+
+  airportsLayer = new OM.layer.VectorLayer(&quot;airports&quot;, { def:{	type:OM.layer.VectorLayer.TYPE_LOCAL } });   
+  
+  /*&quot;Code&quot;,&quot;State&quot;,&quot;Airport&quot;,&quot;Lat&quot;,&quot;Long&quot;,&quot;# Flights&quot;,&quot;Delay Mins&quot;*/
+  for (i=0;i&lt;darray.length; i++){
+  	var fid = darray[i][0];
+  	var mpoint = new OM.geometry.Point(darray[i][4], darray[i][3],8307);
+  	var f_attr = {attributes :{&quot;_LABEL_&quot;:darray[i][0],&quot;AIRPORT&quot;:darray[i][2], &quot;STATE&quot;:darray[i][1], &quot;#FLIGHTS&quot;:darray[i][5]+&quot;&quot;, &quot;DELAY&quot;:darray[i][6]+&quot;&quot;}};
+  	var feature = new OM.Feature(fid,mpoint,f_attr);  
+  	airportsLayer.addFeature(feature);
+  }
+  
+  airportsLayer.setBringToTopOnMouseOver(true);
+  setupAirportStyles(airportsLayer);
+ 
+  map.addLayer(airportsLayer) ;
+  map.setMapCenter( center );
+  map.setMapZoomLevel(3) ;
+
+  var navigationPanelBar = new OM.control.NavigationPanelBar( {style:2 } );
+  map.addMapDecoration(navigationPanelBar);
+            
+  toolbar = new OM.control.ToolBar(&quot;toolbar1&quot;,{ builtInButtons:[OM.control.ToolBar.BUILTIN_ALL] });          
+  toolbar.setPosition(0.4,0.05);
+  map.addToolBar(toolbar);    
+  
+  var circleTool = toolbar.getBuiltInTool(OM.control.ToolBar.BUILTIN_CIRCLE);
+  circleTool.on(OM.event.ToolEvent.TOOL_END, addHighlight);
+  circleTool.on(OM.event.ToolEvent.TOOL_CLEAR, clearHighlight);
+          
+  var rectTool = toolbar.getBuiltInTool(OM.control.ToolBar.BUILTIN_RECTANGLE);
+  rectTool.on(OM.event.ToolEvent.TOOL_END, addHighlight);
+  rectTool.on(OM.event.ToolEvent.TOOL_CLEAR, clearHighlight)
+          
+  var polyTool = toolbar.getBuiltInTool(OM.control.ToolBar.BUILTIN_REDLINE);
+  polyTool.on(OM.event.ToolEvent.TOOL_END, addHighlight);
+  polyTool.on(OM.event.ToolEvent.TOOL_CLEAR, clearHighlight);
+  polyTool.on(OM.event.ToolEvent.REDLINE_EDITED, addHighlight);
+  var copyright = new OM.control.CopyRight({
+            anchorPosition:4,
+            textValue:&quot;©2014 Oracle. Map data ©2013 HERE&quot;,
+            fontSize:9,
+            fontFamily:&quot;Arial&quot;,
+            fontColor:&quot;black&quot;
+    });          
+    map.addMapDecoration(copyright);          
+  map.init() ;
+}
+&lt;/script&gt;
+</sawd:HTML></sawd:htmlView><sawd:reportView name="Report 2" display="embed" showView="" duid="c0ucs9oahrorqku2"><saw:caption><saw:text>Lasso Selection</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/Workshops/HTML5 Maps/3. Lasso Selection/Lasso Selection"/></sawd:reportView><sawd:reportView name="Report 3" display="embed" showView="" duid="b8d468gbs1c7g7q4"><saw:caption><saw:text>Airports Delay by Time Blocks</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/Workshops/HTML5 Maps/3. Lasso Selection/Airports Delay by Time Blocks"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" break="column" frozen="false" canFreeze="false" duid="oq1irvk32eksdahj" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="d6s2m7elrolt4ig6" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec/></saw:displayFormat><sawd:globalFilterView name="GFP 3" path="/shared/Workshops/HTML5 Maps/3. Lasso Selection/Airports Selection" duid="5rcv3jlqteq45k2v"><saw:caption><saw:text>Airports Selection</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec wrapText="true" style="display:none"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

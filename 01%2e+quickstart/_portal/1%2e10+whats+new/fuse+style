@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="iaco3p2ame98kfoo" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit" frozen="false"><sawd:dashboardSection name="Section 5" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="middle" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 5" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1839">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Fuse Dashboard Style
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1838">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			
+			
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 6" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_1834">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 6" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1840">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; 
+[br/]
+A new dashboard style called Fuse is available in vanilla style choices.&lt;/br&gt;
+Visit &lt;a href=&quot;saw.dll?dashboard&amp;PortalPath=%2Fshared%2F02.%20Visualizations%2F_portal%2F2.10%20Vanilla%20Charts&quot;&gt;&lt;b&gt;&lt;u&gt;this &lt;/font&gt;&lt;/b&gt;&lt;/u&gt;&lt;/a&gt; dashboard to see a dashboard configured with this style.</sawd:HTML>
+			</sawd:htmlView>
+			
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 3" frozen="false" canFreeze="false" duid="pahsc2qbi7j997i0" layoutType="bestFit" break="column"><sawd:dashboardSection layoutType="bestFit" name="Section 3" collapsible="false" duid="769duphse4m5629q" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 2" duid="8ugeetit802sluck"><sawd:HTML fmt="html">&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src=&quot;/analyticsRes/SampleApp/SampleAppPics/Fuse.png&quot;/&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

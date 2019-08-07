@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="mi9t3l46jnjo1ac2"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="true" duid="iilthda1utgivqno" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="46gul9in4mgthild" showSectionTitle="false" horizontalLayout="true" showHeading="false" layoutType="bestFit"><saw:caption><saw:text>Explanation</saw:text></saw:caption><sawd:htmlView name="HTML 3" duid="qobt66nm1m1lnj0d"><sawd:HTML fmt="html">[b]The Reason:[/b][br/]
+Following are two important aspects of designing for accessible navigation that require changes from the default layout you get:[br/]
+[br/]
+1) The difference between using the default section layout versus creating visible names for each dashboard section.[br/]
+2) How to preserve the dashboard context when drilling into one of the objects on a dashboard page.[br/]
+[br/]
+Neither of these design requirements is included in a dashboard by default. They are easy to add, but [b][i]must be[/i][/b] explicitly defined [br/]by the content designer by using the included properties available in the Dashboard Editor.[br/]
+[br/]
+[i](The initial state of this dashboard represents the default settings, so you can see what needs to be changed [br/]in order to fully enable accessible screen navigation.)[/i]</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 4" duid="sl4mafns6o8vtf27"><sawd:HTML fmt="html">[b]How-To:[/b][br/]
+[u]Named Sections[/u][br/]
+1) Launch the dashboard editor[br/]
+2) Hover over each Section and click on the Section [b]Properties[/b] menu[br/]
+3) Click on the [b]Rename...[/b] menu and enter a name for the section[br/]
+4) Click on the Section [b]Properties[/b] menu again[br/]
+5) Click on the [b]Show Section Header[/b] and [b]Show Section Title[/b] menu items to turn them on.[br/]
+[br/]
+[u]Drilling in Place[/u][br/]
+6) Click on the Section [b]Properties[/b] menu again[br/]
+7) Click on the [b]Drill in Place[/b] menu item to turn it on.[br/]
+</sawd:HTML></sawd:htmlView><sawd:linkView name="Link 4" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2548">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" break="column" frozen="false" canFreeze="false" duid="sdl70n9pbfl2ig33" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="ptm2ostc73ekg57u" showSectionTitle="false" showHeading="false" layoutType="bestFit"><saw:caption><saw:text>Regional Table</saw:text></saw:caption><sawd:reportView name="Report 3" display="embed" showView="" duid="q7u3kda7h8l98rni"><saw:caption><saw:text>Simple Regional Table</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Accessibility/Simple Regional Table"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" frozen="false" canFreeze="false" duid="vqsi72tf3erlsu08" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="668dqvfi89ac2g1m" showSectionTitle="false" layoutType="bestFit"><saw:caption><saw:text>Office List</saw:text></saw:caption><sawd:reportView name="Report 4" display="embed" showView="" duid="cha9kt3f2q3715ir"><saw:caption><saw:text>List of Offices</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Accessibility/List of Offices"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

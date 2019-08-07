@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;U - Usage Tracking&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c9f61c82a2a7704f5"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Catalog Facts&quot;.&quot;Analysis Counts&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cebf20f6458618901"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Catalog Facts&quot;.&quot;Dashboard Pages Counts&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c40e60a6fec31b38e">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Catalog Facts&quot;.&quot;Objects Count&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ccaebf73f42743354"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Webcat Path&quot;.&quot;Path_L2&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:hierarchicalColumn" columnID="cd0b1316bd9649183" hierarchyID="Object Path Hierarchy" tableName="&quot;Webcat Path&quot;" dimensionID="WS All Objects Dim"><saw:hierarchyLevels><saw:hierarchyLevel levelID="All Folders"/><saw:hierarchyLevel levelID="Path level 2"/><saw:hierarchyLevel levelID="Path level 3"/><saw:hierarchyLevel levelID="Path level 4"/><saw:hierarchyLevel levelID="Path level 5"/><saw:hierarchyLevel levelID="Path level 6"/><saw:hierarchyLevel levelID="Path Detail"/></saw:hierarchyLevels></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Object Attributes&quot;.&quot;Signature&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Webcat Path&quot;.&quot;Path_L2&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Object Attributes&quot;.&quot;Object Type&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Object Attributes&quot;.&quot;Owner&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="dvtchart!1"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section">
+				</saw:edge><saw:edge axis="row" showColumnHeader="false">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t2" grandTotalPosition="after"/></saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="cd0b1316bd9649183"><saw:drillState><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup specialDimension="measure"><saw:members xsi:type="saw:specialValueMembers"><saw:value specialValue="every"/></saw:members></saw:staticMemberGroup><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="cd0b1316bd9649183"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="All Folders"/><saw:members xsi:type="saw:integerMembers"><saw:value>1</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cd0b1316bd9649183"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="cd0b1316bd9649183" groupID="0"/></saw:selectionGroups></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup specialDimension="measure"><saw:members xsi:type="saw:specialValueMembers"><saw:value specialValue="every"/></saw:members></saw:staticMemberGroup><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="cd0b1316bd9649183"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Path level 3"/><saw:members xsi:type="saw:stringMembers"><saw:value>Agents</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cd0b1316bd9649183"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="cd0b1316bd9649183" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="cd0b1316bd9649183" levelID="Path level 2"><saw:members xsi:type="saw:stringMembers"><saw:value>4. Actionable Intelligence</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep></saw:drillState></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="none"/></saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+				<saw:measure columnID="c40e60a6fec31b38e"/><saw:measure columnID="cebf20f6458618901"/><saw:measure columnID="c9f61c82a2a7704f5"/></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+			<saw:display type="bar" subtype="horizontal" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">
+				<saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+			<saw:canvasFormat height="300" width="400" showGradient="true">
+				<saw:dataLabels display="always" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default"><saw:textFormat/></saw:dataLabels><saw:title mode="custom"><saw:caption><saw:text/></saw:caption></saw:title><saw:gridlines default="true"><saw:horizontal><saw:major visible="false"/><saw:minor visible="false"/></saw:horizontal><saw:vertical><saw:major visible="false"/><saw:minor visible="false"/></saw:vertical></saw:gridlines></saw:canvasFormat>
+			<saw:selections>
+				<saw:categories>
+					<saw:category><saw:columnRef columnID="ccaebf73f42743354"/></saw:category></saw:categories>
+				<saw:measures showMeasureLabelsOnCategory="false">
+					<saw:column measureType="x">
+						<saw:columnRef columnID="c40e60a6fec31b38e"/></saw:column></saw:measures>
+				<saw:seriesGenerators>
+					<saw:measureLabels/></saw:seriesGenerators><saw:sections displayAsSlider="true"/></saw:selections>
+			<saw:legendFormat position="default" transparentFill="true"/><saw:axesFormats syncAxis="false"><saw:axisFormat axis="Y1"><saw:title mode="custom"><saw:caption/></saw:title><saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/></saw:axisFormat><saw:axisFormat axis="X"><saw:title mode="auto"/><saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/></saw:axisFormat></saw:axesFormats><saw:seriesFormats><saw:seriesFormatGroup name="bar"><saw:seriesFormatRule><saw:seriesCondition position="1"/><saw:visualFormats><saw:visualFormat color="#666699"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view></saw:views></saw:report>

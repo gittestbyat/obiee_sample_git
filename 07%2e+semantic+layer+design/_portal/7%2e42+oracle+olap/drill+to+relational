@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="bc3n3hc9olrslpub">
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" layoutType="bestFit" canFreeze="true"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2403">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Drilling from Olap sourced Report into Relational source&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2402">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" break="column" layoutType="bestFit" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 0" display="embed" showView="" links="" duid="uehgg04623fs1608"><saw:caption><saw:text>Olap - Drill to Relational</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Oracle Olap/Source Federation/Olap - Drill to Relational"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 2" duid="qmfq1rsbnh7drirt" layoutType="minimumSize" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2399">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2404">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; A report can show information sourced from Oracle OLAP multidimensional model, and, as users drills down a logical hierarchy, transparently switch to relational source. When a level of detail is reached in the hierarchy drill, that is not supported by Oracle OLAP aggregated source, OBIEE server automatically switches to relational model to source the corresponding detailed data.&lt;br/&gt;
+The report shows detail of revenue for product and  time hierarchy. The underlying Oracle OLAP cube grain is at the month level for time, and product level for product.&lt;br/&gt;
+- If the time hierachy column is not expanded below the month level, OBIEE server will only generate queries to Oracle OLAP cube for fulfilling this report.[br/]
+- As soon as detail below month level (week, day) is expanded in the time hierarchy, then the server will retrieve data from the relational source to provide the details.[br/]
+You can check the phyisical SQL logs generated in both cases to see the difference.</sawd:HTML>
+			</sawd:htmlView>
+			
+			
+			<sawd:htmlView name="HTML 4" duid="ii2buh99mauv8ilg">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2407">&amp;nbsp;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2408">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; The setup for this federation is done in the Business Model, by sourcing logical facts table from multiple sources. Based on the context of the answers query, OBIEE will pick the optimal source to retrieve the data.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec vAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="30%"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	
+</sawd:dashboardPage>

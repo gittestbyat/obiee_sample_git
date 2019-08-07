@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="cd19cc396dbd92046"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Carrier&quot;.&quot;Carrier Short&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" interaction="action"><saw:dataFormat xsi:type="saw:custom" customFormat="@[html]&lt;div class=&#39;cell_unselected&#39; id=&#39;@H&#39;&gt;@H&lt;/div&gt;"/><saw:actionLinks showPopupMenuForOneLink="false" appliesToTotal="false"><saw:actionLink actionLinkID="cd19cc396dbd92046_al4df08dc5ed2fc44a"><saw:action><saw:actionName>Invoke a Browser Script</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="p1" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>p1</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments/><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true"><saw:functionName>selectCell</saw:functionName><saw:scriptLanguage>JScript</saw:scriptLanguage><saw:scriptPath/></saw:implementation><saw:clientImplementation><saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action><saw:caption><saw:text>Invoke a Browser Script</saw:text></saw:caption><saw:paramMapping><saw:assign xsi:type="saw:anyTypeAssign" name="p1" fixed="true" hidden="true"><saw:mapping xsi:type="saw:contextColumnMappingType"><sawx:columnRefExpr columnID="cd19cc396dbd92046"/></saw:mapping></saw:assign></saw:paramMapping></saw:actionLink></saw:actionLinks></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="caafa27d4518df9b3" forceGroupBy="true"><saw:columnFormula><sawx:expr xsi:type="sawx:binned"><sawx:baseFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;% Cancel Ratio&quot;</sawx:expr></sawx:baseFormula><sawx:rules><sawx:when><sawx:condition><sawx:expr xsi:type="sawx:comparison" op="between"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;% Cancel Ratio&quot;</sawx:expr><sawx:expr xsi:type="xsd:decimal">0</sawx:expr><sawx:expr xsi:type="xsd:decimal">1</sawx:expr></sawx:expr></sawx:condition><sawx:value><sawx:expr xsi:type="xsd:string">Bin 1: &lt; 1 %</sawx:expr></sawx:value></sawx:when><sawx:when><sawx:condition><sawx:expr xsi:type="sawx:comparison" op="between"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;% Cancel Ratio&quot;</sawx:expr><sawx:expr xsi:type="xsd:decimal">1</sawx:expr><sawx:expr xsi:type="xsd:decimal">2</sawx:expr></sawx:expr></sawx:condition><sawx:value><sawx:expr xsi:type="xsd:string">Bin 2: 1 - 2 %</sawx:expr></sawx:value></sawx:when><sawx:when><sawx:condition><sawx:expr xsi:type="sawx:comparison" op="between"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;% Cancel Ratio&quot;</sawx:expr><sawx:expr xsi:type="xsd:decimal">2</sawx:expr><sawx:expr xsi:type="xsd:decimal">3</sawx:expr></sawx:expr></sawx:condition><sawx:value><sawx:expr xsi:type="xsd:string">Bin 3: 2 - 3 %</sawx:expr></sawx:value></sawx:when><sawx:when><sawx:condition><sawx:expr xsi:type="sawx:comparison" op="between"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;% Cancel Ratio&quot;</sawx:expr><sawx:expr xsi:type="xsd:decimal">3</sawx:expr><sawx:expr xsi:type="xsd:decimal">4</sawx:expr></sawx:expr></sawx:condition><sawx:value><sawx:expr xsi:type="xsd:string">Bin 4: 3 - 4 %</sawx:expr></sawx:value></sawx:when><sawx:otherwise><sawx:value><sawx:expr xsi:type="xsd:string">Bin 5: &gt; 4 %</sawx:expr></sawx:value></sawx:otherwise></sawx:rules></sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:text" textFormat="plain"/></saw:formatSpec><saw:conditionalDisplayFormats><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="lessOrEqual"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="caafa27d4518df9b3"/><sawx:expr xsi:type="xsd:string">Bin 6</sawx:expr></sawx:expr></saw:condition><saw:formatSpec backgroundColor="#AA0606" wrapText="true" fontColor="#FFFFFF" fontStyle="bold"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="lessOrEqual"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="caafa27d4518df9b3"/><sawx:expr xsi:type="xsd:string">Bin 5</sawx:expr></sawx:expr></saw:condition><saw:formatSpec backgroundColor="#F82A2A" wrapText="true" fontColor="#FFFFFF" fontStyle="bold"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="lessOrEqual"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="caafa27d4518df9b3"/><sawx:expr xsi:type="xsd:string">Bin 4</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#FB7777" fontStyle="bold" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="lessOrEqual"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="caafa27d4518df9b3"/><sawx:expr xsi:type="xsd:string">Bin 3</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#FDBFBF" fontStyle="bold" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="lessOrEqual"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="caafa27d4518df9b3"/><sawx:expr xsi:type="xsd:string">Bin 2</sawx:expr></sawx:expr></saw:condition><saw:formatSpec backgroundColor="#FAE8D8" fontStyle="regular" wrapText="true" fontColor="#660000"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Flight Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>% Cancel Ratio</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c547e72505a5a2c55" forceGroupBy="true"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true" fontStyle="bold"/><saw:conditionalDisplayFormats><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="greater"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c547e72505a5a2c55"/><sawx:expr xsi:type="xsd:decimal">1000000</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#094B89" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="between"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c547e72505a5a2c55"/><sawx:expr xsi:type="xsd:decimal">500000</sawx:expr><sawx:expr xsi:type="xsd:decimal">1000000</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#0F7DE3" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="between"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c547e72505a5a2c55"/><sawx:expr xsi:type="xsd:decimal">300000</sawx:expr><sawx:expr xsi:type="xsd:decimal">500000</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#4BA2F3" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="between"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c547e72505a5a2c55"/><sawx:expr xsi:type="xsd:decimal">150000</sawx:expr><sawx:expr xsi:type="xsd:decimal">300000</sawx:expr></sawx:expr></saw:condition><saw:formatSpec backgroundColor="#83BFF7" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="lessOrEqual"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c547e72505a5a2c55"/><sawx:expr xsi:type="xsd:decimal">150000</sawx:expr></sawx:expr></saw:condition><saw:formatSpec backgroundColor="#B6D9FA" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec fontColor="#000080" backgroundColor="#FFFFFF" fontStyle="bold" wrapText="true"/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns><saw:columnOrder><saw:columnOrderRef columnID="c547e72505a5a2c55" direction="ascending"/></saw:columnOrder></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"><saw:displayFormat><saw:formatSpec width="720" borderColor="#666666" borderPosition="8"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1"><saw:displayFormat><saw:formatSpec width="730"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!1"><saw:displayFormat><saw:formatSpec width="720" paddingLeft="5" paddingRight="5"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!2"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="none"><saw:subTitle><saw:caption fmt="text"><saw:text>Select carriers from the table below and then Select Loop Thru button below</saw:text></saw:caption></saw:subTitle></saw:view><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cd19cc396dbd92046"/><saw:edgeLayer type="column" columnID="c547e72505a5a2c55"/><saw:edgeLayer type="column" columnID="caafa27d4518df9b3"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c547e72505a5a2c55"><saw:headerFormat><saw:displayFormat><saw:formatSpec backgroundColor="#DEF2FA" wrapText="true" borderPosition="none" width="80" hAlign="right"/></saw:displayFormat></saw:headerFormat><saw:memberFormat><saw:displayFormat><saw:formatSpec borderColor="#959595" borderPosition="none" wrapText="true" height="20"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"><saw:edgeLayers><saw:edgeLayer type="measure"><saw:memberFormat><saw:displayFormat><saw:formatSpec fontColor="#800000" backgroundColor="#FFFFFF" fontStyle="bold" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="caafa27d4518df9b3"><saw:memberFormat><saw:displayFormat><saw:formatSpec width="125" wrapText="true" borderColor="#959595" borderPosition="none"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="cd19cc396dbd92046" aggRule="max"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true" backgroundColor="#FCEFE4" borderPosition="none" borderColor="#959595"/></saw:displayFormat><saw:caption><saw:text>Cancel Ratio</saw:text></saw:caption></saw:memberFormat><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" hAlign="center"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList><saw:sectionContent><saw:displayFormat><saw:formatSpec borderColor="#959595" borderPosition="12" wrapText="true" borderStyle="single"/></saw:displayFormat></saw:sectionContent></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;table width=100%&gt;&lt;tr&gt;
+&lt;td valign=top&gt;
+&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a href=&quot;javascript:clearSelection()&quot;&gt;Clear Selection&lt;/a&gt;&lt;/span&gt;
+&lt;/td&gt;
+&lt;td align=right valign=top&gt;
+&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a href=&quot;javascript:playSelection()&quot;&gt;Loop Thru Selection&lt;/a&gt;&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;Interval: &lt;input id=&#39;refreshint&#39; type=&#39;text&#39; value=&#39;5&#39; size=2 maxlength=2 style=&#39;font-family: Arial;font-size: 11px;height:14px;&#39;&gt; Secs&amp;nbsp;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!2"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;style&gt; 
+.cell_unselected {
+	background-color:#D7F0F7;
+	padding:1px 4px 1px 5px;
+}
+
+.cell_selected{
+	background-color:#FFF200;
+	padding:1px 4px 1px 5px;
+}
+
+.cell_highlighted{
+	background-color:#FFF200;
+	border:2px solid #F71919;
+	padding:1px 4px 1px 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&#39;/analyticsRes/SampleApp/customjs/SAutilsv1.3.js&#39;&gt;&lt;/script&gt;
+&lt;script&gt;
+var selectedCells = [];
+var currentSelIdx = 0, _setIntId1, highlightedCell=null;
+
+function selectCell(aParams){
+   var v = aParams[&quot;p1&quot;];
+   var idx = selectedCells.indexOf(v);
+
+   if (idx != -1){
+		selectedCells.splice(idx, 1);
+		document.getElementById(v).className = &#39;cell_unselected&#39;;
+	} else {
+		selectedCells.push(v);
+		document.getElementById(v).className = &#39;cell_selected&#39;;
+	}
+   
+    currentSelIdx = 0;
+}
+
+function sendMDEvent(){
+    if(currentSelIdx&gt;=selectedCells.length){
+		_setIntId1=clearInterval(_setIntId1);
+		if(highlightedCell)	document.getElementById(highlightedCell).className = &#39;cell_selected&#39;;
+		highlightedCell=null;
+	} else {
+		var channel = &#39;CR1&#39;;
+		var v= selectedCells[currentSelIdx];
+		var values = [&#39;&quot;Carrier&quot;.&quot;Carrier Short&quot;&#39;,v];
+		if(highlightedCell)	document.getElementById(highlightedCell).className = &#39;cell_selected&#39;;
+		document.getElementById(v).className = &#39;cell_highlighted&#39;;
+		highlightedCell=v;
+		SAutils.publishMDEvent(channel,values);
+		currentSelIdx++;
+	}
+}
+
+function playSelection(){
+    if (selectedCells.length==0){
+		alert(&quot;Error: Empty Selection. Select cells from the table above and try again&quot;);
+	} else {
+		currentSelIdx = 0;
+		var refInterval = document.getElementById(&quot;refreshint&quot;).value;
+		_setIntId1=setInterval(sendMDEvent,1000*refInterval);
+	}
+}
+
+function clearSelection(){
+	for (var i=0; i&lt;selectedCells.length; i++){
+		document.getElementById(selectedCells[i]).className = &#39;cell_unselected&#39;;
+	}
+    selectedCells = [];
+	_setIntId1=clearInterval(_setIntId1);
+	highlightedCell=null;
+}
+&lt;/script&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

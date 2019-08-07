@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" cacheControl="bypassCache"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="cb1e0ac425649b13e"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Weather Check Web Service&quot;.&quot;Report&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"><saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns><saw:prefix>SET VARIABLE DISABLE_CACHE_HIT=1, DISABLE_CACHE_SEED=1;</saw:prefix></saw:criteria><saw:views currentView="1"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"><saw:displayFormat><saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:narrative><saw:caption fmt="html"><saw:text>&lt;div id=&quot;_wsresults&quot; style=&quot;display:none&quot;&gt;@{cb1e0ac425649b13e}&lt;/div&gt;
+&lt;div id=&quot;_wsresultsout&quot;&gt;&lt;/div&gt;
+</saw:text></saw:caption></saw:narrative><saw:postfix><saw:caption fmt="html"><saw:text>&lt;script&gt;
+function displayWSResults() {
+	xmlstring=document.getElementById(&#39;_wsresults&#39;).innerHTML;
+	xmlstring=xmlstring.replace(/&amp;lt;/g,&#39;&lt;&#39;).replace(/&amp;gt;/g,&#39;&gt;&#39;);
+	xmlstring=xmlstring.substring(xmlstring.indexOf(&#39;&lt;CurrentWeather&gt;&#39;),xmlstring.indexOf(&#39;&lt;/CurrentWeather&gt;&#39;)+17);
+	xmlDoc=loadXMLString(xmlstring);
+
+	wOut = &quot;&lt;br/&gt;&lt;table border=0&gt;&quot;;
+	cols = xmlDoc.getElementsByTagName(&quot;CurrentWeather&quot;)[0].childNodes;
+	for (j=0; j&lt;cols.length; j++) {
+               if (cols[j].tagName )
+		wOut += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;&quot; + cols[j].tagName + &quot;&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&quot; + cols[j].textContent + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+	}
+        wOut += &quot;&lt;/table&gt;&quot;;
+    document.getElementById(&#39;_wsresultsout&#39;).innerHTML = wOut;
+}
+
+
+function loadXMLString(txt) {
+	if (window.DOMParser) {
+	  parser=new DOMParser();
+	  xmlDoc=parser.parseFromString(txt,&quot;text/xml&quot;);
+	  }
+	else /*IE*/ {
+	  xmlDoc=new ActiveXObject(&quot;Microsoft.XMLDOM&quot;);
+	  xmlDoc.async=false;
+	  xmlDoc.loadXML(txt); 
+	  }
+	return xmlDoc;
+}
+
+displayWSResults();
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix><saw:displayFormat><saw:formatSpec fontSize="12"/></saw:displayFormat></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none"><saw:title><saw:caption fmt="text"><saw:text>Current Weather</saw:text></saw:caption></saw:title></saw:view></saw:views></saw:report>

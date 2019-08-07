@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c0159e059167f5419"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Schedules&quot;.&quot;Analysis Function&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria><saw:views currentView="1"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;script type=&quot;text/javascript&quot;&gt;
+function getSchedules(){
+	var ndmURL = &quot;http://&quot; + window.location.hostname + &quot;:&quot; + window.location.port + &quot;/airlines/airlinedemoserver?&quot;;
+	ndmURL += &quot;dbUrl=jdbc:oracle:thin:@localhost:1521/pdborcl&amp;dbUser=BI_AIRLINES&amp;dbPassword=BI_AIRLINES&amp;networkName=AIRLINES&amp;&quot;;
+	
+	if (&quot;@{ndmAnalysisFn}{}&quot; == &quot;All Schedule Options&quot;)	ndmFunc = &quot;AllSPWithTimeHopLimit&quot;;
+	else ndmFunc = &quot;SPWithHopLimit&quot;;
+	orgAirport = &quot;@{ndmOrigin}{}&quot;.substring(0,3);
+	destAirport = &quot;@{ndmDest}{}&quot;.substring(0,3);
+	cntHops= @{ndmStops}{0}+1;
+		
+	ndmURL += &quot;analysisFunction=&quot; + ndmFunc + &quot;&amp;numberOfHops=&quot;+ cntHops +&quot;&amp;maxTime=@{ndmMaxTravelTime}{}&amp;&quot;;
+	ndmURL += &quot;origin=&quot; + orgAirport+ &quot;&amp;destination=&quot; + destAirport + &quot;&amp;day=@{ndmDate}{}&amp;time=@{ndmTime}{}&quot;;	
+
+	//alert(ndmURL);
+        if (ndmComputedURL != ndmURL)
+	        displayResults(ndmURL);
+        else
+                document.getElementById(&quot;_ndmOutput&quot;).innerHTML = &quot;Compute params are same as the ones from the previous run. Select different values and retry.&quot;;
+        ndmComputedURL = ndmURL;
+}
+
+function getXMLHTTPObject(){
+	var xmlhttp=false;
+	/*@cc_on @*/
+	/*@if (@_jscript_version &gt;= 5)
+	 try {
+	  xmlhttp = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
+	 } catch (e) {
+	  try {
+	   xmlhttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+	  } catch (E) {
+	   xmlhttp = false;
+	  }
+	}
+	@end @*/
+	if (!xmlhttp &amp;&amp; typeof XMLHttpRequest!=&#39;undefined&#39;) {
+		try {
+			xmlhttp = new XMLHttpRequest();
+		} catch (e) {
+			xmlhttp=false;
+		}
+	}
+	if (!xmlhttp &amp;&amp; window.createRequest) {
+		try {
+			xmlhttp = window.createRequest();
+		} catch (e) {
+			xmlhttp=false;
+		}
+	}
+	return xmlhttp;
+}
+
+function displayResults(strURL){
+   xmlhttp=getXMLHTTPObject();
+   if(!xmlhttp) {
+           alert(&quot;Failed: Unable to cannot create HTTP Object, Check user script&quot;);
+           return;
+   }
+   xmlhttp.open(&quot;GET&quot;, strURL,true);
+   //alert(strURL);
+   document.getElementById(&quot;_ndmOutput&quot;).innerHTML = &quot;Scanning network for possible itineraries. Please wait..&quot;;
+   xmlhttp.onreadystatechange=function() {
+     if (xmlhttp.readyState==4) {
+		 outMsg = xmlhttp.responseText;
+		 startIndex = outMsg.indexOf(&quot;&lt;/H3&gt;&quot;)+5;
+		 if(startIndex&gt;0){
+		    outMsg = outMsg.substring(startIndex); 
+			endIndex = outMsg.indexOf(&quot;&lt;/BODY&gt;&quot;);	
+			outMsg = outMsg.substring(0,endIndex);
+			document.getElementById(&quot;_ndmOutput&quot;).innerHTML = outMsg;
+			if (outMsg.indexOf(&quot;SUCCESS&quot;) &gt;0)
+				refreshReport(&quot;_ndmresultsreport&quot;);
+		} else    
+			document.getElementById(&quot;_ndmOutput&quot;).innerHTML = &quot;Computation Failed!&quot;;
+     }
+   }
+   xmlhttp.send(null)
+}
+
+function refreshReport(idResultsDiv){
+	var refreshObj, indexOfId;
+	refreshObj = document.getElementById(idResultsDiv);
+	if(!refreshObj) return;	
+	while ( !refreshObj.parentNode.getAttribute(&#39;vid&#39;))       
+		refreshObj = refreshObj.parentNode;
+	refreshID=refreshObj.parentNode.getAttribute(&#39;vid&#39;);
+	indexOfId=refreshID.indexOf(&#39;~v:&#39;);
+	if (indexOfId&gt;-1) refreshID = refreshID.substring(0,indexOfId);
+	refFunction = &quot;HereLink(&#39;&quot; + refreshID + &quot;&#39;,&#39;Refresh&#39;)&quot;;
+	eval(refFunction);
+}
+&lt;/script&gt;
+
+&lt;script&gt;
+if (ndmCompute==1) getSchedules();
+ndmCompute = 1;
+&lt;/script&gt;</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c0159e059167f5419"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view></saw:views></saw:report>

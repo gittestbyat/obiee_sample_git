@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce180009b490a2b18">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R63  Geo Ctry State City Name&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c5022e76ba0b14fa8">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R55  City&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c769b5b8dea470f62">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:list" op="notIn">
+            <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R55  City&quot;</sawx:expr>
+            <sawx:expr xsi:type="xsd:string">San Francisco</sawx:expr>
+            <sawx:expr xsi:type="xsd:string">Sydney</sawx:expr>
+            <sawx:expr xsi:type="xsd:string">London</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell>
+               <saw:cvCell viewName="mapview!3" rowSpan="3"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="mapview!2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="mapview!4"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+            <saw:displayFormat/></saw:logoFormat><saw:createdTime>
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>				
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:columnOrder>
+                  <saw:columnOrderRef columnID="c769b5b8dea470f62" direction="descending"/></saw:columnOrder>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c5022e76ba0b14fa8"/>
+                  <saw:edgeLayer type="column" columnID="c769b5b8dea470f62"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!1">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_USA_SMALL__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="true"/>
+               <saw:overview display="true" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingLayer layerID="l0"/>
+            <saw:mapCenter x="-97" y="37.5" size="34.96" zoomLevel="1" srid="8307" yUnitPixels="5.434782608695652" xUnitPixels="5.434782608695652"/>
+            <saw:boundingBox coords="-129.2,20.204,-64.98400000000001,54.980000000000004"/></saw:viewportInfo>
+         <saw:spatialLayers>
+            <saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_CITY__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="false"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="ce180009b490a2b18"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v0" xsi:type="saw:variableMarker" subClass="polygon">
+                     <saw:g class="marker" fill="#FFFFFF" fillOpacity="178">
+                        <saw:circle radius="50"/></saw:g>
+                     <saw:varySize binType="continuous" numBins="1" startSize="5" endSize="60">
+                        <saw:columnRef columnID="c769b5b8dea470f62"/></saw:varySize>
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="percentile" numBins="5">
+                        <saw:columnRef columnID="c769b5b8dea470f62"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>First Fifth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#4D5680" fillOpacity="178"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Second Fifth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#6C78AE" fillOpacity="178"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>Third Fifth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#7296CE" fillOpacity="178"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>Fourth Fifth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#88A6D7" fillOpacity="178"/></saw:rampItem>
+                           <saw:rampItem id="4">
+                              <saw:caption>
+                                 <saw:text>Last Fifth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#AAC0E3" fillOpacity="178"/></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer></saw:spatialLayers>
+         <saw:mapInteraction autoCreateFormats="true"/>
+         <saw:canvasFormat width="350" height="190" enableWrapAround="false"/>
+         <saw:formatPanel width="220" display="false"/></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!4">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP_FAST__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="true"/>
+               <saw:overview display="true" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingLayer layerID="l0"/>
+            <saw:mapCenter x="0" y="0" size="182.8125" srid="8307" zoomLevel="0" xUnitPixels="1.4222222222222223" yUnitPixels="1.4222222222222223"/>
+            <saw:boundingBox coords="-182.8125,-90.703125,182.109375,91.40625"/></saw:viewportInfo>
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_CITY__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="false"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="ce180009b490a2b18"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v1" xsi:type="saw:variableMarker" subClass="polygon">
+                     <saw:g class="marker" fill="#FFFFFF" fillOpacity="153">
+                        <saw:circle radius="50"/></saw:g>
+                     <saw:varySize binType="continuous" numBins="1" startSize="5" endSize="40">
+                        <saw:columnRef columnID="c769b5b8dea470f62"/></saw:varySize>
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="percentile" numBins="4">
+                        <saw:columnRef columnID="c769b5b8dea470f62"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>First Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#8a4a29" fillOpacity="153"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Second Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#9f1d61" fillOpacity="153"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>Third Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#7610be" fillOpacity="153"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>Fourth Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#1848c9" fillOpacity="153"/></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer>
+            </saw:spatialLayers>
+         <saw:canvasFormat width="520" height="260" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="220" display="true" height="585"/></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!2">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_EUROPE_SIMPLE__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="true"/>
+               <saw:overview display="true" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingLayer layerID="l0"/>
+            <saw:mapCenter x="6.5" y="51.5302734375" size="37.060546875" srid="8307" zoomLevel="0" xUnitPixels="7.420289855072464" yUnitPixels="7.420289855072464"/>
+            <saw:boundingBox coords="-12.0302734375,33.134765625,24.8955078125,70.060546875"/></saw:viewportInfo>
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_CITY__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="false"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="ce180009b490a2b18"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v1" xsi:type="saw:variableMarker" subClass="polygon">
+                     <saw:g class="marker" fill="#FFFFFF" fillOpacity="153">
+                        <saw:circle radius="50"/></saw:g>
+                     <saw:varySize binType="continuous" numBins="1" startSize="5" endSize="50">
+                        <saw:columnRef columnID="c769b5b8dea470f62"/></saw:varySize>
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="percentile" numBins="4">
+                        <saw:columnRef columnID="c769b5b8dea470f62"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>First Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#8a4a29" fillOpacity="153"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Second Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#9f1d61" fillOpacity="153"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>Third Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#7610be" fillOpacity="153"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>Fourth Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#1848c9" fillOpacity="153"/></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer>
+            </saw:spatialLayers>
+         <saw:canvasFormat width="275" height="275" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true"/>
+         <saw:formatPanel width="218" display="true" height="521"/></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!3">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_APAC_SIMPLE__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="true"/>
+               <saw:overview display="true" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingLayer layerID="l0"/>
+            <saw:mapCenter x="121.5" y="3.16796875" size="94.3359375" srid="8307" zoomLevel="0" xUnitPixels="7.420289855072464" yUnitPixels="7.420289855072464"/>
+            <saw:boundingBox coords="87.80859375,-43.865234375,155.056640625,50.3359375"/></saw:viewportInfo>
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_CITY__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="false"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="ce180009b490a2b18"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v1" xsi:type="saw:variableMarker" subClass="polygon">
+                     <saw:g class="marker" fill="#FFFFFF" fillOpacity="153">
+                        <saw:circle radius="50"/></saw:g>
+                     <saw:varySize binType="continuous" numBins="1" startSize="10" endSize="60">
+                        <saw:columnRef columnID="c769b5b8dea470f62"/></saw:varySize>
+                     <saw:tooltip>
+                        <saw:columnRef columnID="c5022e76ba0b14fa8"/></saw:tooltip>
+                     <saw:varyFillColor binType="percentile" numBins="4">
+                        <saw:columnRef columnID="c769b5b8dea470f62"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>First Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#8a4a29" fillOpacity="153"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Second Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#9f1d61" fillOpacity="153"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>Third Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#7610be" fillOpacity="153"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>Fourth Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#1848c9" fillOpacity="153"/></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer>
+            </saw:spatialLayers>
+         <saw:canvasFormat width="500" height="700" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true"/>
+         <saw:formatPanel width="0" display="false"/></saw:view></saw:views></saw:report>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c50f162cd35cf748d">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R3  Order Currency&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/><saw:conditionalDisplayFormats><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr op="equal" xsi:type="sawx:comparison"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c50f162cd35cf748d"/><sawx:expr xsi:type="xsd:string">USD</sawx:expr></sawx:expr></saw:condition><saw:formatSpec wrapText="true" fontColor="#000080"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr op="equal" xsi:type="sawx:comparison"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c50f162cd35cf748d"/><sawx:expr xsi:type="xsd:string">AUD</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#CC3333" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr op="equal" xsi:type="sawx:comparison"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c50f162cd35cf748d"/><sawx:expr xsi:type="xsd:string">EUR</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#336633" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:columnHeading>
+					
+					<saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c957812f61dbe9b31">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;FX conversion&quot;.&quot;70  Average FX Rate to Pref Currency&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat minDigits="3" maxDigits="3" commas="true" negativeType="minus" xsi:type="saw:number"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_988">
+						<saw:text>FX conversion</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					<saw:caption fmt="text" oldID="kcap12832459_989">
+						<saw:text>Average FX Rate</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cb6629b4b8fbb7c41">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.PREFERRED_CURRENCY)</sawx:expr>
+				</saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption captionID="kcap12832459_990">
+						<saw:text>NQ_SESSION</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption captionID="kcap12832459_991">
+						<saw:text>Converted Into</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cc9a995eddcb75e44">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;FX conversion&quot;.&quot;120  Converted Rev  (Indexcol)&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true" fontStyle="bold">
+						<saw:dataFormat minDigits="2" maxDigits="2" commas="true" negativeType="minus" xsi:type="saw:currency" currencyTag="int:wrhs"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c903fc3c632ac916a"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">INDEXCOL( CASE  VALUEOF(NQ_SESSION.&quot;PREFERRED_CURRENCY&quot;) WHEN &#39;USD&#39; THEN 0 WHEN &#39;EUR&#39; THEN 1 WHEN &#39;AUD&#39; THEN 2 END , &quot;Base Facts&quot;.&quot;1- Revenue&quot;,&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;,&quot;Simple Calculations&quot;.&quot;20  Actual Unit Price&quot;)
+</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" fontColor="#FF00FF" wrapText="true"/></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>AdHoc Calcs</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Ad Hoc IndexCol Formula</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c966e89c6aa42a8a3">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat minDigits="2" maxDigits="2" commas="true" negativeType="minus" currencyTag="none" xsi:type="saw:currency"/>
+					</saw:formatSpec><saw:conditionalDisplayFormats><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr op="equal" xsi:type="sawx:comparison"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c50f162cd35cf748d"/><sawx:expr xsi:type="xsd:string">USD</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#000080" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr op="equal" xsi:type="sawx:comparison"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c50f162cd35cf748d"/><sawx:expr xsi:type="xsd:string">AUD</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#CC3333" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr op="equal" xsi:type="sawx:comparison"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c50f162cd35cf748d"/><sawx:expr xsi:type="xsd:string">EUR</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#336633" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_994">
+						<saw:text>Base Facts</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_995">
+						<saw:text>Revenue</saw:text>
+					</saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cd374fd9c1126d46f">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R0  Order Key&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_996">
+						<saw:text>Orders</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_997">
+						<saw:text>Order Number</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			
+		</saw:columns>
+		<saw:filter><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R1  Order Status&quot;</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable>
+			</saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1" autoPreview="true" headingDisplay="columns" rowsPerPage="15">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section" insertPageBreak="false" showBlankRows="false" showColumnHeader="true"><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></saw:edge><saw:edge axis="row" showColumnHeader="true">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="after"/>
+					</saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="cd374fd9c1126d46f"/><saw:edgeLayer type="column" columnID="c966e89c6aa42a8a3"/><saw:edgeLayer type="column" columnID="c50f162cd35cf748d"><saw:memberFormat><saw:displayFormat><saw:formatSpec hAlign="right" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="cb6629b4b8fbb7c41"><saw:memberFormat><saw:displayFormat><saw:formatSpec hAlign="right" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="c957812f61dbe9b31"/><saw:edgeLayer type="column" columnID="cc9a995eddcb75e44"/><saw:edgeLayer type="column" columnID="c903fc3c632ac916a"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view>
+	</saw:views>
+</saw:report>

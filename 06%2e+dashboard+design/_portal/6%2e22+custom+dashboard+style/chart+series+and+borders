@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="h4672cvt5ok2j00j"><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="japjlbpabncvkr52" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 0" collapsible="false" duid="rk3ir5bi20gvv3d9" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font color=darkblue size=3&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font &gt;
+&lt;font size=3&gt;
+This chart shows an example of setting custom colors to the chart series. It also sets the bordercolor and fillcolor of the plotarea to custom values. 
+&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection layoutType="bestFit" name="Section 1" duid="e6n8mnh91tt1klda" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="5hb1cs30bvle23rn"><saw:caption><saw:text>Standard Visualizations</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Custom Style/Standard Visualizations"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

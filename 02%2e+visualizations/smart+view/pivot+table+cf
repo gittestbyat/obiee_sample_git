@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="c65e370a6e59fb0d2">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P1  Product&quot;}</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_1144">
+            <saw:text>Products</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_1145">
+            <saw:text>Dimension 1</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c5d590704775b7e9b">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          
+          <saw:formatSpec suppress="repeat" wrapText="true"/><saw:conditionalDisplayFormats>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="equal">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c40ced9f8a2ebd82d"/>
+                    <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec backgroundColor="#CCFFCC" wrapText="true"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="equal">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c40ced9f8a2ebd82d"/>
+                    <sawx:expr xsi:type="xsd:decimal">2</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec backgroundColor="#CCFFFF" wrapText="true"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="equal">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c40ced9f8a2ebd82d"/>
+                    <sawx:expr xsi:type="xsd:decimal">3</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec backgroundColor="#FFFF99" wrapText="true"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="equal">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c40ced9f8a2ebd82d"/>
+                    <sawx:expr xsi:type="xsd:decimal">4</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec backgroundColor="#FFCC99" wrapText="true"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+          </saw:conditionalDisplayFormats>
+        </saw:displayFormat>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c40ced9f8a2ebd82d">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">ntile(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,5)</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_1146">
+            <saw:text>Base Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_1147">
+            <saw:text>Revenue Quintile</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c6f7b352c0980d581">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+    </saw:columns>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="legendView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1"/></saw:cvRow></saw:cvTable>
+      
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c40ced9f8a2ebd82d"/>
+            <saw:edgeLayer type="column" columnID="c65e370a6e59fb0d2"/>
+            <saw:edgeLayer type="column" columnID="c5d590704775b7e9b"/>
+            <saw:edgeLayer type="column" columnID="c6f7b352c0980d581"/>
+          </saw:edgeLayers>
+          <saw:columnOrder>
+            <saw:columnOrderRef columnID="c40ced9f8a2ebd82d" direction="descending"/>
+          </saw:columnOrder>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+      
+      
+    <saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section">
+          
+        <saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge><saw:edge axis="row" showColumnHeader="false">
+          <saw:displayGrandTotals>
+            <saw:displayGrandTotal id="t2" grandTotalPosition="after"/>
+          </saw:displayGrandTotals>
+          
+        <saw:edgeLayers><saw:edgeLayer type="column" columnID="c65e370a6e59fb0d2"/></saw:edgeLayers></saw:edge><saw:edge axis="column">
+          <saw:displayGrandTotals>
+            <saw:displayGrandTotal id="t1" grandTotalPosition="after"/>
+          </saw:displayGrandTotals>
+          
+        <saw:edgeLayers><saw:edgeLayer type="column" columnID="c6f7b352c0980d581"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+        
+      <saw:measure columnID="c5d590704775b7e9b"/></saw:measuresList>
+      <saw:sectionContent>
+        <saw:displayFormat>
+          <saw:formatSpec/>
+        </saw:displayFormat>
+      </saw:sectionContent></saw:view>
+    
+  <saw:view xsi:type="saw:legendView" name="legendView!1" across="5"><saw:captionFormat position="right"/><saw:legendList><saw:legendItem><saw:displayFormat><saw:formatSpec backgroundColor="#CCFFCC" wrapText="true" fontSize="8"/></saw:displayFormat><saw:sampleText/><saw:legendCaption><saw:caption><saw:text>1st Tile</saw:text></saw:caption></saw:legendCaption></saw:legendItem><saw:legendItem><saw:sampleText/><saw:displayFormat><saw:formatSpec wrapText="true" backgroundColor="#CCFFFF" fontSize="8"/></saw:displayFormat><saw:legendCaption><saw:caption><saw:text>2nd Tile</saw:text></saw:caption></saw:legendCaption></saw:legendItem><saw:legendItem><saw:displayFormat><saw:formatSpec backgroundColor="#FFFF99" wrapText="true" fontSize="8"/></saw:displayFormat><saw:legendCaption><saw:caption><saw:text>3rd Tile</saw:text></saw:caption></saw:legendCaption></saw:legendItem><saw:legendItem><saw:displayFormat><saw:formatSpec backgroundColor="#FFCC99" wrapText="true" fontSize="8"/></saw:displayFormat><saw:legendCaption><saw:caption><saw:text>4th Tile</saw:text></saw:caption></saw:legendCaption></saw:legendItem><saw:legendItem><saw:legendCaption><saw:caption><saw:text>5th Tile</saw:text></saw:caption></saw:legendCaption><saw:displayFormat><saw:formatSpec backgroundColor="#FFFFFF" fontSize="8" wrapText="true"/></saw:displayFormat></saw:legendItem></saw:legendList><saw:title/><saw:legendTable><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat></saw:legendTable></saw:view></saw:views>
+</saw:report>

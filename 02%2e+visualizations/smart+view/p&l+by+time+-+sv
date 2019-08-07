@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;G - Sample Essbase GL&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:hierarchicalColumn" columnID="c1e7c610075aaf76e" hierarchyID="Income Statement" tableName="&quot;Income Statement&quot;" dimensionID="Acct Income Statement">
+				<saw:displayFormat>
+					<saw:formatSpec backgroundColor="#FFFFFF" vAlign="bottom" wrapText="true" borderPosition="none"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading>
+				<saw:hierarchyLevels>
+					<saw:hierarchyLevel levelID="Account Level 3">
+						<saw:displayFormat>
+							<saw:formatSpec suppress="suppress" fontStyle="bold" borderPosition="8" borderStyle="thick" vAlign="middle" height="30" wrapText="true"/></saw:displayFormat></saw:hierarchyLevel>
+					<saw:hierarchyLevel levelID="Account Level 4">
+						<saw:displayFormat>
+							<saw:formatSpec suppress="suppress" borderPosition="8" borderStyle="double" wrapText="true"/></saw:displayFormat></saw:hierarchyLevel>
+					<saw:hierarchyLevel levelID="Account Level 5">
+						<saw:displayFormat>
+							<saw:formatSpec suppress="suppress" borderPosition="8" vAlign="bottom" wrapText="true"/></saw:displayFormat></saw:hierarchyLevel>
+					<saw:hierarchyLevel levelID="Account Level 6"/>
+					<saw:hierarchyLevel levelID="Account Level 7">
+						<saw:displayFormat>
+							<saw:formatSpec suppress="suppress" backgroundColor="#EEEEEE" wrapText="true"/></saw:displayFormat></saw:hierarchyLevel>
+					<saw:hierarchyLevel levelID="Account Level 8"/>
+					<saw:hierarchyLevel levelID="Account Level 9"/>
+					<saw:hierarchyLevel levelID="Income Statement Detail"/></saw:hierarchyLevels><saw:dimensionSelection><saw:selectionStep stepID="1" type="startWith" category="member"><saw:stepMembers xsi:type="saw:staticMemberGroupDef"><saw:staticMemberGroup><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 3" levelName="Account Level 3"/><saw:members xsi:type="saw:specialValueMembers"><saw:value specialValue="all"/></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep><saw:selectionStep stepID="2" overridable="false" type="keep" category="member"><saw:stepMembers xsi:type="saw:staticMemberGroupDef"><saw:staticMemberGroup><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelName="Account Level 3" levelID="Account Level 3"/><saw:members xsi:type="saw:stringMembers"><saw:value>300000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep></saw:dimensionSelection></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cbc1a92f6a30a2633">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Facts&quot;.&quot;Balance&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" borderPosition="none" wrapText="true"/><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Account Level 4"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>310000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec fontStyle="bold" borderPosition="8" borderStyle="double" vAlign="bottom" height="25" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Account Level 4"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>320000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec fontStyle="bold" borderPosition="8" borderStyle="double" vAlign="bottom" height="25" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Account Level 4"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>330000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec fontStyle="bold" borderPosition="8" borderStyle="double" vAlign="bottom" height="25" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Account Level 3"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>300000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec fontStyle="bold" borderPosition="8" borderStyle="thick" vAlign="middle" height="30" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Account Level 4"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>340000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec fontStyle="bold" borderPosition="8" borderStyle="double" vAlign="bottom" height="25" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType>
+											<saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 5"/><saw:members xsi:type="saw:stringMembers"><saw:value>311000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec borderPosition="8" vAlign="bottom" height="20" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 5"/><saw:members xsi:type="saw:stringMembers"><saw:value>312000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec borderPosition="8" vAlign="bottom" height="20" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 5"/><saw:members xsi:type="saw:stringMembers"><saw:value>321000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec borderPosition="8" vAlign="bottom" height="20" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 5"/><saw:members xsi:type="saw:stringMembers"><saw:value>322000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec borderPosition="8" vAlign="bottom" height="20" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>410000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec fontColor="#0000FF" wrapText="true" backgroundColor="#EEEEEE"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>450000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>501000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>503000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>502000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>504000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>505000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>507000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>506000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>509000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>510000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>511000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c50447278cdf83d48"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Year"/><saw:members xsi:type="saw:stringMembers"><saw:value>YearTotal</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec fontStyle="bold" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c50447278cdf83d48"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Months"/><saw:members xsi:type="saw:stringMembers"><saw:value>Oct</saw:value><saw:value>Nov</saw:value><saw:value>Dec</saw:value><saw:value>Jul</saw:value><saw:value>Aug</saw:value><saw:value>Sep</saw:value><saw:value>Apr</saw:value><saw:value>May</saw:value><saw:value>Jun</saw:value><saw:value>Jan</saw:value><saw:value>Feb</saw:value><saw:value>Mar</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="cbc1a92f6a30a2633"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec wrapText="true" fontColor="#000080"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cea04eb2603fd44f5">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">0</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" borderPosition="none" width="10" fontSize="1" wrapText="true" fontColor="#FFFFFF" backgroundColor="#FFFFFF"/></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Facts</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>0</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c5300e6f5a79fed5b">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Facts&quot;.&quot;% of Net Rev&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" borderPosition="none" fontSize="10" wrapText="true" fontColor="#666666"/><saw:conditionalDisplayFormats><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 4"/><saw:members xsi:type="saw:stringMembers"><saw:value>310000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c5300e6f5a79fed5b"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec wrapText="true" fontStyle="bold" borderPosition="8" height="25" borderStyle="double" vAlign="bottom"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 4"/><saw:members xsi:type="saw:stringMembers"><saw:value>320000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c5300e6f5a79fed5b"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec borderPosition="8" borderStyle="double" height="25" wrapText="true" fontStyle="bold" vAlign="bottom"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 4"/><saw:members xsi:type="saw:stringMembers"><saw:value>330000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c5300e6f5a79fed5b"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec fontStyle="bold" borderPosition="8" borderStyle="double" vAlign="bottom" height="25" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 3"/><saw:members xsi:type="saw:stringMembers"><saw:value>300000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c5300e6f5a79fed5b"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec fontStyle="bold" borderPosition="8" borderStyle="thick" vAlign="middle" height="30" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 4"/><saw:members xsi:type="saw:stringMembers"><saw:value>340000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c5300e6f5a79fed5b"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec fontStyle="bold" borderPosition="8" borderStyle="double" vAlign="bottom" height="25" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 5"/><saw:members xsi:type="saw:stringMembers"><saw:value>311000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c5300e6f5a79fed5b"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec borderPosition="8" vAlign="bottom" height="20" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 5"/><saw:members xsi:type="saw:stringMembers"><saw:value>312000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c5300e6f5a79fed5b"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec borderPosition="8" vAlign="bottom" height="20" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 5"/><saw:members xsi:type="saw:stringMembers"><saw:value>321000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c5300e6f5a79fed5b"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec borderPosition="8" vAlign="bottom" height="20" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 5"/><saw:members xsi:type="saw:stringMembers"><saw:value>322000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c5300e6f5a79fed5b"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec borderPosition="8" vAlign="bottom" height="20" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:scope xsi:type="saw:QDRScope"><saw:QDRSet><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 7"/><saw:members xsi:type="saw:stringMembers"><saw:value>410000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c5300e6f5a79fed5b"/></saw:target></saw:QDR></saw:QDRSet></saw:scope><saw:formatRule><saw:formatSpec fontColor="#0000FF" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:hierarchicalColumn" columnID="c50447278cdf83d48" hierarchyID="Time Periods" tableName="&quot;Time Periods&quot;" dimensionID="Time Periods">
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="bold" borderPosition="none" hAlign="center" wrapText="true"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading>
+				<saw:hierarchyLevels>
+					<saw:hierarchyLevel levelID="Year"/>
+					<saw:hierarchyLevel levelID="Quarters"/>
+					<saw:hierarchyLevel levelID="Months"/></saw:hierarchyLevels></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cca9f4199b76f84ec">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Scenarios&quot;.&quot;Scenarios&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Scenarios&quot;.&quot;Scenarios&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Entities&quot;.&quot;Region&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time Periods&quot;.&quot;Years&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Entities&quot;.&quot;Country&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Entities&quot;.&quot;Entity&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title><saw:logoFormat><saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" autoPreview="true">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c1e7c610075aaf76e">
+							<saw:drillState>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Account Level 3"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>300000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c1e7c610075aaf76e" groupID="0"/></saw:selectionGroups></saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Account Level 4"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>310000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c1e7c610075aaf76e" groupID="0"/></saw:selectionGroups>
+									<saw:drillParents>
+										<saw:drillParent columnID="c1e7c610075aaf76e" levelID="Account Level 3">
+											<saw:members xsi:type="saw:stringMembers">
+												<saw:value>300000</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 5"/><saw:members xsi:type="saw:stringMembers"><saw:value>311000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c1e7c610075aaf76e" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c1e7c610075aaf76e" levelID="Account Level 4"><saw:members xsi:type="saw:stringMembers"><saw:value>310000</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 6"/><saw:members xsi:type="saw:stringMembers"><saw:value>400000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c1e7c610075aaf76e" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c1e7c610075aaf76e" levelID="Account Level 5"><saw:members xsi:type="saw:stringMembers"><saw:value>311000</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 6"/><saw:members xsi:type="saw:stringMembers"><saw:value>500000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c1e7c610075aaf76e" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c1e7c610075aaf76e" levelID="Account Level 5"><saw:members xsi:type="saw:stringMembers"><saw:value>311000</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 4"/><saw:members xsi:type="saw:stringMembers"><saw:value>320000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c1e7c610075aaf76e" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c1e7c610075aaf76e" levelID="Account Level 3"><saw:members xsi:type="saw:stringMembers"><saw:value>300000</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Account Level 5"/><saw:members xsi:type="saw:stringMembers"><saw:value>312000</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c1e7c610075aaf76e"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c1e7c610075aaf76e" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c1e7c610075aaf76e" levelID="Account Level 4"><saw:members xsi:type="saw:stringMembers"><saw:value>310000</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep></saw:drillState>
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c50447278cdf83d48">
+							<saw:drillState>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c50447278cdf83d48"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Year"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>YearTotal</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c50447278cdf83d48"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c50447278cdf83d48" groupID="0"/></saw:selectionGroups></saw:drillStep></saw:drillState>
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec backgroundColor="#FFFFFF" borderPosition="none" wrapText="true" fontStyle="bold"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>
+						<saw:edgeLayer type="measure" visibility="hidden">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="cea04eb2603fd44f5" aggRule="none"/>
+				<saw:measure columnID="cbc1a92f6a30a2633">
+					<saw:dataBodyFormat>
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:dataBodyFormat></saw:measure>
+				<saw:measure columnID="c5300e6f5a79fed5b"/></saw:measuresList></saw:view>
+		</saw:views><saw:prompts scope="report" subjectArea="&quot;G - Sample Essbase GL&quot;"><saw:promptStep><saw:individualPrompts><saw:prompt xsi:type="saw:columnFilterPrompt" columnID="c11" subjectArea="&quot;G - Sample Essbase GL&quot;" required="false"><saw:formula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Scenarios&quot;.&quot;Scenarios&quot;</sawx:expr></saw:formula><saw:promptOperator op="in"/><saw:promptUIControl xsi:type="saw:browse" maxChoices="-1" includeAllChoices="false"><saw:customWidth width="120" using="custompixels"/></saw:promptUIControl><saw:label><saw:caption><saw:text>Scenarios</saw:text></saw:caption></saw:label><saw:promptDefaultValues type="reportDefault" usingCodeValue="false"/><saw:constrainPrompt type="none"/><saw:setPromptVariables><saw:setPromptVariable location="value" type="none" variableFormula=""/></saw:setPromptVariables><saw:promptSource xsi:type="saw:allChoices"/></saw:prompt><saw:prompt xsi:type="saw:columnFilterPrompt" columnID="c12" subjectArea="&quot;G - Sample Essbase GL&quot;" required="false"><saw:formula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Entities&quot;.&quot;Country&quot;</sawx:expr></saw:formula><saw:promptOperator op="in"/><saw:promptUIControl xsi:type="saw:browse" maxChoices="-1" includeAllChoices="false"><saw:customWidth width="120" using="custompixels"/></saw:promptUIControl><saw:label><saw:caption><saw:text>Country</saw:text></saw:caption></saw:label><saw:promptDefaultValues type="reportDefault" usingCodeValue="false"/><saw:constrainPrompt type="none"/><saw:setPromptVariables><saw:setPromptVariable location="value" type="none" variableFormula=""/></saw:setPromptVariables><saw:promptSource xsi:type="saw:allChoices"/></saw:prompt></saw:individualPrompts><saw:customWidth width="120" using="custompixels"/></saw:promptStep></saw:prompts></saw:report>

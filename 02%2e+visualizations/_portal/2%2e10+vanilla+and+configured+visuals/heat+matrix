@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="qel0mqo32584us95"><sawd:dashboardColumn name="Column 4" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 5" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="specificSize">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontFamily="Arial" fontSize="12"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This page shows a new chart type in 12.2.1 called Heat Matrix
+&lt;/br&gt;
+</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" canFreeze="false" duid="ie4k1ctl578d9iec" frozen="false" layoutType="bestFit" break="column"><sawd:dashboardSection layoutType="bestFit" name="Section 1" collapsible="false" duid="cp3nrpoofn8u1opv" showSectionTitle="false"><saw:displayFormat><saw:formatSpec backgroundColor="#CCCCCC" borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/01. QuickStart/New Features/11.1.1.9.0/Horizontal Prompts" duid="4ghm0bcvc7d2159b"><saw:caption><saw:text>Horizontal Prompts</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" duid="u8v8irh1rpjqvgtf" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" hAlign="left"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="gvb3ls92318l27gj"><saw:caption><saw:text>Examples of Heat Matrix 2</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/02. Visualizations/Report Views/Gallery/Examples of Heat Matrix 2"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

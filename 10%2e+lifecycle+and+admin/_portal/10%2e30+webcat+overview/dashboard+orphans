@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="r3sgqbevn4t275ee"><sawd:dashboardColumn name="Column 0" duid="q8k0p5ilrouelm68" layoutType="bestFit" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 2" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1839">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Webcat Objects Not Exposed in any Dashboards&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1838">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:dashboardSection name="Section 6" duid="0dadj2fuhloe7r5u" showSectionTitle="true" horizontalLayout="true" layoutType="bestFit"><saw:caption><saw:text>Page Information (click to collapse or expand)</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#666699" fontStyle="italic" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 1" duid="1pmoq7qhmirgpne8"><sawd:HTML fmt="html">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; 
+The reports below show all analysis included in selected dashboards.</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 2" duid="jk1n52htjga2m8s9"><sawd:HTML fmt="html">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; &lt;font color = darkred&gt;This content will only show up after Catalog Statistics Scripts are run (or refreshed)&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" collapsible="false" duid="l0gvceapejbl6d92" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/10. Lifecycle and Admin/Webcat Statistics/Unexposed Reports/Prt - Object Type" duid="qs5hkhj1m68cjcqc" scope="dashboardPage"><saw:caption><saw:text>Prt - Object Type</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 0" display="embed" showView="" duid="33ejh74709pcrghb"><saw:caption><saw:text>Objects Not Exposed in any Dashboards</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/10. Lifecycle and Admin/Webcat Statistics/Unexposed Reports/Objects Not Exposed in any Dashboards"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

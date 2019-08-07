@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="j0ooefcr5jk5rf8m" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sawd:dashboardColumn name="Column 2" duid="np45h98r4pi7l7ai" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 5" duid="6becjloofkt9dbo3" showSectionTitle="false" horizontalLayout="true" showHeading="false" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>Hit the Down Arrow key to read Instructions for Keyboard-Only Navigation</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 4" duid="4fmt43li9j9s550j"><sawd:HTML fmt="html">&lt;STYLE&gt;
+.hiddenText
+{position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;}
+&lt;/STYLE&gt;
+&lt;p class=&quot;hiddenText&quot;&gt;
+To select another Dashboard:   Control-Alt-D, then down arrow to the desired dashboard. Hit Enter to select.&lt;br&gt;
+To select a Page:   Control-Alt-P, then TAB to the desired dashboard page.&lt;br&gt;
+To select a Section within the current Page:   Control-Shift-S to select the Next section, or Control-Shift-U to select the previous section.
+&lt;/p&gt;</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 5" duid="soifmuinsmksaknk"><sawd:HTML fmt="html">&lt;p class=&quot;hiddenText&quot;&gt;
+Other Keys:&lt;br&gt;
+Alt-Down or Enter - Invoke a drop down menu&lt;br&gt;
+Escape - Close the current drop down menu
+&lt;/p&gt;</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 6" duid="m31t9fu9mm0ovkbs"><sawd:HTML fmt="html">&lt;p class=&quot;hiddenText&quot;&gt;
+Spacebar - Select/Deselect a check box item&lt;br&gt;
+Arrow keys - Use to navigate cells within a Table/Pivot
+&lt;/p&gt;</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 7" duid="d19dnqva9e53cra8"><sawd:HTML fmt="html">&lt;p class=&quot;hiddenText&quot;&gt;
+Tab - Select next object or menu item&lt;br&gt;
+Shift-Tab - Select previous object or menu item
+&lt;/p&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 6" showHeading="true" showSectionTitle="true" duid="6jte3qvj39e5iinl" drillInline="true" layoutType="bestFit"><saw:caption><saw:text>Using View Selector and other Design Elements to enhance Accessibility</saw:text></saw:caption><sawd:globalFilterView name="GFP 0" path="/shared/06. Dashboard Design/Accessibility/Dashboard Prompts/Calendar Date Prompt" duid="8ofpljch6u4umrd9"><saw:caption><saw:text>Calendar Date Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 0" display="embed" showView="" duid="33gq34mj9f4snl96"><saw:caption><saw:text>My Report (Alternate Views)</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Accessibility/My Report (Alternate Views)"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

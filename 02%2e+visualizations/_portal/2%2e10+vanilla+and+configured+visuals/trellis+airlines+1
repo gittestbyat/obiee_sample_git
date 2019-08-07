@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="9read09util862m1" links="er" overrideParentLinks="true"><sawd:dashboardColumn name="Column 3" duid="656iidftonen8kv0" layoutType="specificSize" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 1" collapsible="false" duid="urjk6gc527k5vfqb" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 2" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_216">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Trellis Charts Examples 1&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 3" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_215">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 0" horizontalLayout="true" collapsible="false" duid="i1k9fv5v6iosm4jm" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 7" display="embed" showView="" duid="ha8r5m3hndqq1n1u"><saw:caption><saw:text>Airlines Delay Performance Matrix</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/02. Visualizations/Report Views/Trellis/Airlines Delay Performance Matrix"/></sawd:reportView><sawd:reportView name="Report 11" display="embed" showView="" duid="b4fu3vueccclm1us"><saw:caption><saw:text>Weekly Delay % Indicator</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/02. Visualizations/Report Views/Trellis/Weekly Delay % Indicator"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="1200"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

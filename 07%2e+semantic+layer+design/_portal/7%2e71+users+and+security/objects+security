@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="g1j25s8rh745qb9b" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2549">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Objects Security&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2548">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" horizontalLayout="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2545">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2550">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; OBIEE server can force any dynamic data security filtering specific to any users, for all or part of their BI activities. Filters values can be dynamic and stored outside of BIEE.</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 2" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2551">&lt;font color=darkblue&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; This Example :&lt;/b&gt;&lt;/font&gt; For most of SampleApp users, the report on the left of the screen shows full datavisibility. When login in as [b]Dnoonan [/b]or [b]Gkendal [/b](Admin123) users, the report  shows different results, with restriction on LOBs or Companies visibility.
+The snapshot of the control report at the very bottom of the screen helps compare current user with original results.
+[br/][br/]
+&lt;b&gt;Proxy User:&lt;/b&gt; Currently logged in user can choose to act as another user by clicking on the &#39;Act As&#39; link which appears in the dropdown under the logged in username. In this example, login as &lt;b&gt;Prodney.&lt;/b&gt; Choose to act as &lt;b&gt;Gkendal &lt;/b&gt;(without logout/login). Note that data filtering gets applied for Gkendal. 
+[br/]
+The proxy users are configured within the SAMP_USERS_PROXIES table</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2552">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; Automatic Data Filtering is setup within properties of the users or users groups. It applies granularly to selected subject areas and, in this example, is initiated from custom filter values stored in a db table. Updating the values in the SAMP_USER_VIS table will impact the datavisibility rules applied (logout/login required)</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" break="column" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 0" display="embed" showView="" links="" duid="01via98i81dl3kt9"><saw:caption><saw:text>Column Access</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Security/Objects Security/Column Access"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec borderPosition="none" hAlign="center" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" duid="8igunudjcnmg57qd" layoutType="bestFit"/>
+</sawd:dashboardPage>

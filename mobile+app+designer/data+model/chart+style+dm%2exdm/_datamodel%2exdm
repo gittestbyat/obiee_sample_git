@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BIEE">
+   <description xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <dataSet name="Data" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Chart_Style_Sample.xls</file>
+            <sheetName>BugDB Data Test_Default.csv</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output xmlns="http://xmlns.oracle.com/oxp/xmlp" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="G_1" source="Data" label="G_1">
+    <element name="Issue_ID" value="Issue_ID" dataType="xsd:double" label="Issue_ID" breakOrder="None" fieldOrder="1"/>
+    <element name="Issue_Count" value="Issue_Count" dataType="xsd:double" label="Issue_Count" breakOrder="None" fieldOrder="2"/>
+    <element name="PRODUCT_NAME" value="PRODUCT_NAME" dataType="xsd:string" label="PRODUCT_NAME" breakOrder="None" fieldOrder="3"/>
+    <element name="PRODUCT_TYPE" value="PRODUCT_TYPE" dataType="xsd:string" label="PRODUCT_TYPE" breakOrder="None" fieldOrder="4"/>
+    <element name="CATEGORY" value="CATEGORY" dataType="xsd:string" label="CATEGORY" breakOrder="None" fieldOrder="5"/>
+    <element name="RPTD_BY" value="RPTD_BY" dataType="xsd:string" label="RPTD_BY" breakOrder="None" fieldOrder="6"/>
+    <element name="RPTWEEK" value="RPTWEEK" dataType="xsd:double" label="RPTWEEK" breakOrder="None" fieldOrder="7"/>
+    <element name="RPTDATE" value="RPTDATE" dataType="xsd:date" label="RPTDATE" breakOrder="None" fieldOrder="8"/>
+    <element name="PRIORITY" value="PRIORITY" dataType="xsd:double" label="PRIORITY" breakOrder="None" fieldOrder="9"/>
+    <element name="SUBJECT" value="SUBJECT" dataType="xsd:string" label="SUBJECT" breakOrder="None" fieldOrder="10"/>
+    <element name="Issue_STATUS" value="Issue_STATUS" dataType="xsd:string" label="Issue_STATUS" breakOrder="None" fieldOrder="11"/>
+    <element name="BUG_TYPE" value="BUG_TYPE" dataType="xsd:string" label="BUG_TYPE" breakOrder="None" fieldOrder="12"/>
+    <element name="OWNER" value="OWNER" dataType="xsd:string" label="OWNER" breakOrder="None" fieldOrder="13"/>
+    <element name="RPT_VERSION" value="RPT_VERSION" dataType="xsd:string" label="RPT_VERSION" breakOrder="None" fieldOrder="14"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <lexicals xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <valueSets xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <parameters xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <bursting xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <display>
+<layouts><layout name="Data" left="277px" top="17px"/><layout name="DATA_DS" left="28px" top="14px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

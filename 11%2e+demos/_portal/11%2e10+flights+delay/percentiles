@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="64ra1vtli76cfl1v" personalSelections="false">
+	<saw:pageProps orientation="portrait" printRows="visible">
+		<saw:pageHeader show="true"/>
+		<saw:pageFooter showOnDashboard="true" show="true">
+			<saw:zone position="top">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" borderColor="#9ABFDC" borderPosition="none" borderStyle="thick" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="left">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="left" width="33%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_207">
+					<saw:text>Samples Sales</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="center">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" width="34%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_208">
+					<saw:text>Page : @{savedName}</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="right">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="right" width="33%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_209">
+					<saw:text>@{pageNumber}</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="bottom">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" fontSize="0" fontStyle="regular" height="0"/>
+				</saw:displayFormat>
+			</saw:zone>
+		</saw:pageFooter>
+	</saw:pageProps>
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 4" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+      <saw:caption captionID="kcap12832459_2462">
+        <saw:text>Page Information (click to collapse or expand)</saw:text>
+      </saw:caption>
+      <saw:displayFormat>
+        <saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+      </saw:displayFormat>
+      <sawd:sectionHeading>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+        </saw:displayFormat>
+      </sawd:sectionHeading>
+      <sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+        <sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; The set of reports in this page simply exhibits value of specific percentiles in the set of Routes data. It shows values for the 90th percentile, as well as values for a user selected percentile on the dashboard prompt. These calculations are built directly in the AdHoc formula interface.</sawd:HTML>
+      </sawd:htmlView>
+      
+      
+    </sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" duid="j74aimoq9u22v556" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 3" collapsible="false" duid="ddik370jp5l06oe2" showSectionTitle="false" layoutType="minimumSize"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" height="30"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/11. Demos/Flights Delay/Descriptive Stats/Percentiles/PCol - Percentile" duid="ll2a02mqluu9utua" scope="dashboardPage"><saw:caption><saw:text>PCol - Percentile</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="4l6e8jbp5nhvichm" frozen="false" canFreeze="false" layoutType="bestFit"><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderPosition="none"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 2" showHeading="false" duid="d0bh29v2b2nspfb4" collapsible="false" drillInline="true" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_205">
+				<saw:text>Reports</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 1" display="embed" showView="" links="" duid="iq74uv2132pdbbb2"><saw:caption><saw:text>Tiles Limit Values</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Descriptive Stats/Percentiles/Tiles Limit Values"/></sawd:reportView><sawd:reportView name="Report 0" display="embed" showView="" links="" duid="ds4mjn7hd1kvfs66"><saw:caption><saw:text>Tiles Cumulated Values</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Descriptive Stats/Percentiles/Tiles Cumulated Values"/></sawd:reportView></sawd:dashboardSection><sawd:dashboardSection name="Section 1" collapsible="false" horizontalLayout="true" duid="hsakce0jbf08c28g" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 4" display="embed" showView="" duid="pise808umpdpc5kb"><saw:caption><saw:text>Tiles Sum Values by Tiles</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Descriptive Stats/Percentiles/Tiles Sum Values by Tiles"/></sawd:reportView><sawd:reportView name="Report 2" display="embed" showView="" links="" duid="80rnn5johhbtjqsv"><saw:caption><saw:text>Tiles Limit Values by Dimension</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Descriptive Stats/Percentiles/Tiles Limit Values by Dimension"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="cffc1ed6f02b2fb2a"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R50  Region&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c846e7f7abd49eef9"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P3  LOB&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ccd13f8b0163477ce"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P2  Product Type&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c68e5880deee47d5a"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cd102f86579877972"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R2  Order Type&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"><saw:displayFormat><saw:formatSpec width="500"/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cffc1ed6f02b2fb2a"/><saw:edgeLayer type="column" columnID="c846e7f7abd49eef9"/><saw:edgeLayer type="column" columnID="ccd13f8b0163477ce"/><saw:edgeLayer type="column" columnID="c68e5880deee47d5a"/><saw:edgeLayer type="column" columnID="cd102f86579877972"/><saw:edgeLayer type="column" columnID="caead27045b1776b0"/><saw:edgeLayer type="column" columnID="c5e20653e062ca22d"/><saw:edgeLayer type="column" columnID="c50a86530d62dc0eb"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:narrative rowCount="500"><saw:caption fmt="html"><saw:text>{lvl1:&quot;@{cffc1ed6f02b2fb2a}&quot;,lvl2:&quot;@{c846e7f7abd49eef9}&quot;,lvl3:&quot;@{ccd13f8b0163477ce}&quot;,Revenue:num(&quot;@{c68e5880deee47d5a}&quot;),Quantity:num(&quot;@{cd102f86579877972}&quot;)}</saw:text></saw:caption></saw:narrative><saw:postfix><saw:caption fmt="html"><saw:text>];
+
+var levels = [&quot;lvl1&quot;,&quot;lvl2&quot;,&quot;lvl3&quot;],	met1label = &quot;Revenue&quot;, met2label = &quot;Quantity&quot;;
+
+require([&#39;ojs/ojcore&#39;, &#39;knockout&#39;, &#39;jquery&#39;, &#39;ojs/ojknockout&#39;,  &#39;ojs/ojsunburst&#39;],
+function(oj, ko, $)
+{   
+    var handler = new oj.ColorAttributeGroupHandler();
+	var newData = {label: &quot;All&quot;, id: &quot;All&quot;, nodes:[]};		
+	var max_val2=0,min_val2=0;
+
+	// For each data row, loop through the expected levels traversing the output tree
+	data.forEach(function(d){
+		// Keep this as a reference to the current level
+		var depthCursor = newData.nodes;
+		
+		if (d[met2label]&gt;max_val2) max_val2=d[met2label];
+		if (d[met2label]&lt;min_val2) min_val2=d[met2label];
+		
+		// Go down one level at a time
+		levels.forEach(function( property, depth ){
+
+			// Look to see if a branch has already been created
+			var index;
+			depthCursor.forEach(function(child,i){
+				if ( d[property] == child.label ) index = i;
+			});
+			// Add a branch if it isn&#39;t there
+			if ( isNaN(index) ) {
+				if ( depth === levels.length - 1 ) 
+					depthCursor.push({ label: d[property], id: d[property], value : d[met1label], value2 : d[met2label]});
+				else
+					depthCursor.push({ label: d[property], id: d[property], nodes : []});
+				index = depthCursor.length - 1;
+			}
+			// Now reference the new child array as we go deeper into the tree
+			depthCursor = depthCursor[index].nodes;
+			// This is a leaf, so add the last element to the specified branch
+			
+		});
+	});
+	
+	var df = (max_val2-min_val2)/4; 	
+	
+	function getColor(met) {
+		if (met &lt; (min_val2+df)) // 1st quartile
+			return handler.getValue(&#39;1stQuartile&#39;);
+		else if (met &lt; (min_val2+2*df)) // 2nd quartile
+			return handler.getValue(&#39;2ndQuartile&#39;);
+		else if (met &lt; (min_val2+3*df)) // 3rd quartile
+			return handler.getValue(&#39;3rdQuartile&#39;);
+		else
+			return handler.getValue(&#39;4thQuartile&#39;);
+	}
+
+	function formatNode(root){	
+		var m1=0,m2=0;
+		
+		if (root.value &amp;&amp; root.value2) {
+			m1=root.value;
+			m2=root.value2;
+		} else {
+			root.nodes.forEach(function(child){
+				var metrics=formatNode(child); //recursive call
+				m1+=metrics[0];
+				m2+=metrics[1];
+				});
+		}
+		
+		root.value=m1;
+		root.color=getColor(m2);
+		root.shortDesc = &quot;&amp;lt;b&amp;gt;&quot; + root.label +
+				  &quot;&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&quot; + met1label + &quot;: &quot; + m1 + 
+				  &quot;&amp;lt;br/&amp;gt;&quot; + met2label + &quot;: &quot; + m2;
+		return [m1,m2];
+	}
+
+	formatNode(newData);
+
+	//alert(JSON.stringify(newData));
+
+    $(document).ready(
+	function()
+	{
+    ko.applyBindings(
+{nodeValues:ko.observableArray(newData.nodes),
+sLabel:met1label,
+cLabel:met2label}, 
+      document.getElementById(&#39;sunburst-container&#39;));
+	}
+    );
+});	
+
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix><saw:prefix><saw:caption fmt="html"><saw:text>&lt;link rel=&quot;stylesheet&quot; id=&quot;css&quot; href=&quot;&quot;&gt;
+&lt;script src=&quot;/va/api/v1/plugins/resource/oracle-jet/require.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/va/api/v1/plugins/registry/requirejsConfig.js&quot;&gt;&lt;/script&gt; 
+&lt;div id=&#39;sunburst-container&#39;&gt;
+    &lt;div data-bind=&quot;ojComponent: {
+            component: &#39;ojSunburst&#39;, 
+            animationOnDisplay: &#39;auto&#39;,                         
+			animationOnDataChange: &#39;auto&#39;,
+            sizeLabel: sLabel,
+            colorLabel: cLabel,
+            nodes: nodeValues
+        }&quot; 
+        style=&quot;max-width:650px;width:100%; height:550px;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+document.getElementById(&quot;css&quot;).href = require.toUrl(&quot;ojs&quot;)+&quot;.css&quot;;
+$( &quot;html&quot; ).css( &quot;font-size&quot;, 14);
+
+function num(s) { return parseFloat(s.replace(/,/g,&#39;&#39;)); }
+
+var data = [</saw:text></saw:caption></saw:prefix><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"/><saw:view xsi:type="saw:htmlview" name="htmlview!2"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;div id=&#39;sunburst-container1&#39;&gt;
+    &lt;div data-bind=&quot;ojComponent: {
+            component: &#39;ojSunburst&#39;, 
+            animationOnDisplay: &#39;auto&#39;,                         
+			animationOnDataChange: &#39;auto&#39;,
+            sizeLabel: sLabel,
+            colorLabel: cLabel,
+            nodes: nodeValues
+        }&quot; 
+        style=&quot;max-width:650px;width:100%; height:650px;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

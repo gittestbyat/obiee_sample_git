@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="udn5pdmse7c7l4v4">
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_406">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Currency
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_405">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			<sawd:linkView name="Link 1" target="new" type="report" destination="/shared/10. Lifecycle and Admin/_portal/10.20 Usage Tracking/Physical SQLs" layout="captionRight" duid="ekkloo9cvqjqcoep"><sawd:linkCaption><saw:caption><saw:text>Physical SQLs</saw:text></saw:caption></sawd:linkCaption><sawd:image src="res/sk_blafp/answers/bpIcon.png"/></sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" duid="6mgngeinff8q7mhl" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 3" duid="hj3bau11a0brb4qu" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:globalFilterView name="GFP 1" path="/shared/07. Semantic Layer Design/Logical Modeling/Currency conversion/Currency Prompt" duid="tdr1sbplo2b3eca0" scope="dashboardPage"><saw:caption captionID="kcap12832459_1853">
+					<saw:text>Currency Prompt</saw:text>
+				</saw:caption>
+				
+			</sawd:globalFilterView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 1" display="embed" showView="" links="" duid="r343ig60l8f0fof4"><saw:caption captionID="kcap12832459_1854">
+					<saw:text>Currency Conversion</saw:text>
+				</saw:caption>
+				
+				<sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Logical Modeling/Currency conversion/Currency Conversion"/>
+			</sawd:reportView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 3" duid="qmfq1rsbnh7drirt" frozen="false" canFreeze="false" layoutType="minimumSize"><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_1852">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1855">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; Oracle BIEE allows specific prompting for currency selection. It enables changing the currency from a list of available currencies and impacts both the format, as well as the values displayed.
+Choose a currency from the available options in the currency prompt and notice how the table changes. The appropriate currency symbol will be displayed in the analysis and the value will be converted to the right currency, using the historical rate in this case.</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 5" duid="9t8q4d5rng42rfv4">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1856">&amp;nbsp;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1859">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; A currency prompt can be created as any other dashboard prompt by using New-&gt;Dashboard Prompt-&gt;Currency Prompt. A user’s currency selection is passed to the Oracle BI Server as a session variable that an RPD administrator can use to handle common currency-handling schemes.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec vAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="30%"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

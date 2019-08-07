@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="hi6ds0n6vnbs7evr"><sawd:dashboardColumn name="Column 1" duid="q8k0p5ilrouelm68" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 1" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1839">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Webcat Objects References/Strings Checker&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 1" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1838">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" break="column" duid="mm1pvjj604npvj9m" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 6" duid="0dadj2fuhloe7r5u" showSectionTitle="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>Page Information (click to collapse or expand)</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#666699" fontStyle="italic" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 3" duid="jk1n52htjga2m8s9"><sawd:HTML fmt="html">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; &lt;font color = darkred&gt;The Webcat Reference checker content will only show up after Webcat Scripts are run (or refreshed). See under /app/oracle/SAScripts/ReferenceChecker directory on the Virtual Box image.[br/]&lt;/font&gt;[br/]The script runs search on the whole webcat XML files, based on any regular expressions as input, checks each result occurrence for being a valid URL (yes/no/unknown), and stores the information in a db table.[br/][br/]
+In its default version, the Checker is searching for references in the webcat (of type /Shared/...). This results in a table with, for each source webcat object, all the references to other webcat objects it includes, and if they are valid references or non-valid references.[br/][br/]
+
+The dashboard pages are assuming that the script is searching for references. [br/]
+However, the search pattern can also be changed to use the script to search for other strings : for instance, you can search for email addresses or web urls or any pattern for that matter within web catalog.[b] Some Regex pattern examples:[/b] [br/]Links to webcat under shared folder (default):[i] [b] /shared/[^&quot;&lt;&#39;]+[/b][/i]
+[br/]Links to webcat under users folder:[i] [b]  /users/[^&quot;&lt;&#39;]+[/b][/i]
+[br/]Internet addresses: [i] [b] www\.[^&quot;&lt;&#39;]+[/b][/i] &amp;nbsp;&amp;nbsp;HTTP Addresses:    [i][b] http[^&quot;&lt;&#39;]+[/b][/i]
+[br/]Email address (general):  [i] [b] ^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$[/b][/i]</sawd:HTML></sawd:htmlView><sawd:reportView name="Report 2" display="embed" showView="" duid="hi4db4gec69m3i24" links="" overrideParentLinks="true"><saw:caption><saw:text>Search Pattern Value</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/10. Lifecycle and Admin/Webcat Checker/References Checker/Search Pattern Value"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

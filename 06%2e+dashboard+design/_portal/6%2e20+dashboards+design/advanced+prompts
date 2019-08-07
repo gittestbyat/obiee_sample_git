@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="odu7c4a69cpt3via">
+	<sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" layoutType="bestFit"><sawd:dashboardSection name="Section 4" horizontalLayout="true" collapsible="false" duid="kni9j95gtidb13uc" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_619">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Advanced Prompts
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView><sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_618">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" break="column" duid="g2kq8jehv572mrda" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="467cskmfvvs03btd" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="4" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderColor="#999999"/>
+			</saw:displayFormat><sawd:globalFilterView name="GFP 1" path="/shared/06. Dashboard Design/Prompts/Advanced Prompts/Prompt_Currency" duid="l4h2ftrqruk9abkc" scope="dashboardPage"><saw:caption><saw:text>Prompt_Currency</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 1" display="embed" showView="" links="" duid="i97b5edqfsfgkt1j"><saw:caption><saw:text>Converted Revenue</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Prompts/Advanced Prompts/Converted Revenue"/></sawd:reportView>
+			<sawd:reportView name="Report 0" display="new" showView="" links="" duid="38asi2vtuoh635tp"><saw:caption><saw:text>Currency Conversion List</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Prompts/Advanced Prompts/Currency Conversion List"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="t60ujn5gc89lkgc5" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="bidr8l3faqtu8ns7" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="4" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderColor="#999999"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/06. Dashboard Design/Prompts/Advanced Prompts/Double Column Prompt" scope="dashboardPage" duid="pmch4hs42vdni240"><saw:caption><saw:text>Double Column Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 2" display="embed" showView="" links="" duid="onmgmfludpcdopb8"><saw:caption><saw:text>Double Column Prompts</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Prompts/Advanced Prompts/Double Column Prompts"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 4" duid="kicg06nlkb9c9s75" layoutType="bestFit"><sawd:dashboardSection name="Section 3" duid="ljjacgrg0pued1hl" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/></saw:displayFormat><sawd:globalFilterView name="GFP 3" path="/shared/06. Dashboard Design/Prompts/Indirect Prompting/Indirect Prompt" duid="59qa7sotejkr0vn2" scope="dashboardPage"><saw:caption><saw:text>Indirect Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 3" display="embed" showView="" links="" duid="iiu07lcbb8cia5qo" overrideParentLinks="true"><saw:caption><saw:text>Criteria Report</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Prompts/Indirect Prompting/Criteria Report"/></sawd:reportView></sawd:dashboardSection><sawd:dashboardSection name="Section 5" collapsible="false" duid="v7uprcn2h1su0170" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 6" display="embed" showView="" links="" duid="7cp31kgt13inf5ue"><saw:caption><saw:text>Results Report</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Prompts/Indirect Prompting/Results Report"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 3" duid="qmfq1rsbnh7drirt" layoutType="minimumSize"><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_615">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_620">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt;This page showcases the following prompting controls.[br/]
+[b]Currency[/b] - This adds a new input option, the &quot;currency prompt&quot;.[br/]
+[b]Listbox[/b] - This feature adds the &quot;List Box user input option&quot; as a new prompting control.[br/]</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 5" duid="9t8q4d5rng42rfv4">
+				<sawd:HTML fmt="html" captionID="kcap12832459_621">&amp;nbsp;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 2" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_622">&lt;font color=darkblue&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; This Example :&lt;/b&gt;&lt;/font&gt;[b]Currency[/b] prompts can be used for changing the currency from a list of available currency options.[br/]
+[b]List Box [/b]option can be used for selecting one or more items from a list.[br/]
+</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 4" duid="ii2buh99mauv8ilg">
+				<sawd:HTML fmt="html" captionID="kcap12832459_623">&amp;nbsp;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_624">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt;[b]Currency [/b]prompt can be created as any other Dashboard prompt by using New-&gt;Dashboard Prompt-&gt;Currency Prompt. [br/]
+RPD and Database Setup : A user’s currency selection is passed to the Oracle BI Server as a session variable which an RPD administrator can use to handle common currency-handling schemes. For example, this variable can be used to:
+&lt;ul&gt;
+    &lt;li&gt;Take advantage of query-time currency conversion tables
+    &lt;li&gt;Select between database fact columns pre-loaded with converted currencies
+    &lt;li&gt;Look up fact rows containing pre-converted currencies or other variations
+&lt;/ul&gt;
+[b]List Box[/b] option can be created as any other dashboard prompt by using New-&gt;Dashboard Prompt-&gt;Column Prompt (User Input = List Box). [br/]
+</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 6" duid="nlkf7898ej0uc7va">
+				<sawd:HTML fmt="html" captionID="kcap12832459_625">&amp;nbsp;</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec vAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="30%"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

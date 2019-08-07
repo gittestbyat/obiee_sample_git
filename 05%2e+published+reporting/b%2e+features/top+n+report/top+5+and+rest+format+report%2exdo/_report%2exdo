@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/b. Features/Top N Report/Data Model/XSL Chart DM.xdm"/>
+   <description>
+      <![CDATA[This%20report%20uses%20XSL%20Sub%20Template%20to%20process%20the%20data%20into%20%E2%80%9CTop%20N%20and%20Rest%E2%80%9D%20format%20before%20rendering%20the%20Chart]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="RTF Layout using XSL S">
+      <template label="RTF Layout using XSL S" url="xslChartSubTemp.rtf" type="rtf" outputFormat="html,pdf,rtf,excel,pptx" defaultFormat="html" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

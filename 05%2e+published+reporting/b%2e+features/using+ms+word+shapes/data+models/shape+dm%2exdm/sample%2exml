@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<CATALOG>
+ <CD>
+  <TITLE>Empire Burlesque</TITLE>
+  <ARTIST>Bob Dylan</ARTIST>
+  <COUNTRY>USA</COUNTRY>
+  <COMPANY>Columbia</COMPANY>
+  <PRICE>10.90</PRICE>
+<YEAR>1985</YEAR>
+<USER_RATING>4</USER_RATING>
+ </CD>
+ <CD>
+  <TITLE>Hide Your Heart</TITLE>
+  <ARTIST>Bonnie Tylor</ARTIST>
+  <COUNTRY>UK</COUNTRY>
+  <COMPANY>CBS Records</COMPANY>
+  <PRICE>9.90</PRICE>
+<YEAR>1988</YEAR>
+<USER_RATING>3</USER_RATING>
+ </CD>
+ <CD>
+  <TITLE>Still got the blues</TITLE>
+  <ARTIST>Gary More</ARTIST>
+  <COUNTRY>UK</COUNTRY>
+  <COMPANY>Virgin Records</COMPANY>
+  <PRICE>10.20</PRICE>
+  <YEAR>1990</YEAR>
+<USER_RATING>5</USER_RATING>
+ </CD>
+ <CD>
+  <TITLE>This is US</TITLE>
+  <ARTIST>Gary Lee</ARTIST>
+  <COUNTRY>UK</COUNTRY>
+  <COMPANY>Virgin Records</COMPANY>
+  <PRICE>12.20</PRICE>
+<YEAR>1990</YEAR>
+<USER_RATING>2</USER_RATING>
+ </CD>
+ <CD>
+  <TITLE>We're all Dancing </TITLE>
+  <ARTIST>Cant Dance, Wont Dance</ARTIST>
+  <COUNTRY>USA</COUNTRY>
+  <COMPANY>Columbia</COMPANY>
+  <PRICE>10.90</PRICE>
+  <YEAR>1984</YEAR>
+  <USER_RATING>1</USER_RATING>
+ </CD>
+ <CD>
+  <TITLE>Flowers in the Rain</TITLE>
+  <ARTIST>The Wet Petunias</ARTIST>
+  <COUNTRY>USA</COUNTRY>
+  <COMPANY>Columbia</COMPANY>
+  <PRICE>10.90</PRICE>
+<YEAR>1912</YEAR>
+<USER_RATING>2</USER_RATING>
+ </CD>
+ <CD>
+  <TITLE>Me and My Dog</TITLE>
+  <ARTIST>Mike and Fido</ARTIST>
+  <COUNTRY>USA</COUNTRY>
+  <COMPANY>Columbia</COMPANY>
+  <PRICE>10.90</PRICE>
+<YEAR>1956</YEAR>
+<USER_RATING>4</USER_RATING>
+ </CD>
+</CATALOG>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="p3uesetif6761ii9"><sawd:dashboardColumn name="Column 2" frozen="false" canFreeze="true" duid="68o5m70k1lsusma8" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="all" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4" borderColor="#EEEEEE"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontSize="12" fontFamily="Arial"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			
+		<sawd:htmlView name="HTML 2" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font style=&quot;font:12px arial&quot;&gt; &lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot; /&gt;
+&lt;b&gt; Description :&lt;/b&gt; This is an example on how to use ore.groupApply() function in an ORE script. The ore.groupApply function invokes an R script with an ore.frame as the input data. The ore.groupApply function passes the ore.frame to the [br/]
+user-defined input function as the first argument to that function. The INDEX argument to the ore.groupApply function specifies the name of a column of the ore.frame by which Oracle Database partitions the rows for processing by the user-defined R [br/]function. The ore.groupApply function can use data-parallel execution, in which one or more R engines perform the same R function, or task, on different partitions of data.
+[br/][br/]
+The syntax of the ore.groupApply function is the following:[br/]
+ore.groupApply(X, INDEX, FUN, ..., FUN.VALUE = NULL, FUN.NAME = NULL,parallel = getOption(&quot;ore.parallel&quot;, NULL))
+&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" canFreeze="false" duid="7m6qn254nucu9jv8" layoutType="bestFit" break="column" frozen="false"><sawd:dashboardSection layoutType="bestFit" name="Section 1" collapsible="false" duid="6hsn9ba8s98i4v2p" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="4" wrapText="true" borderColor="#999999" paddingRight="6"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="mdrtoncb213lmmnm"><sawd:HTML fmt="html">&lt;pre&gt;
+####################################################################
+## Build one Linear Model per Destination to predict Arrival Delay
+## Data Parallel Execution
+####################################################################
+
+options(ore.parallel=4)
+
+## ONTIME per airport modeling using ore.groupApply
+dim(ONTIME_S)
+ore.drop(view=&quot;ONTIME_S_SUBSET&quot;)
+
+# Create a view using flights delayed more than 9 minutes
+ore.create(ONTIME_S[ONTIME_S$ARRDELAY &gt;=9,],view=&quot;ONTIME_S_SUBSET&quot;)
+dim(ONTIME_S_SUBSET)
+
+DAT &lt;- ONTIME_S_SUBSET         
+system.time(
+  res &lt;- ore.groupApply(
+    X=DAT,
+    INDEX=DAT$DEST,
+    function(dat, dsname) {
+      mod &lt;- lm(ARRDELAY ~ DISTANCE + DEPDELAY, dat)
+      mod$fitted.values &lt;- NULL
+      name &lt;- paste(dsname,dat[1,&quot;DEST&quot;],sep=&#39;-&#39;)
+      try(ore.delete(name))
+      desc &lt;- paste(&quot;lm model for airport&quot;,dat[1,&quot;DEST&quot;])
+      ore.save(mod, name=name, envAsEmptyenv=TRUE, description=desc)
+      dim(dat)[1]
+    }, 
+    ore.connect=TRUE, ore.graphics=FALSE, 
+    dsname=&quot;ONTIME-lm-per-dest&quot;, parallel=4)
+)
+class(res)
+length(res)
+res
+res$SFO
+res$BOS
+
+# Inspect the datastore listing
+ore.datastore()[1:20,]
+ore.datastoreSummary(&quot;ONTIME-lm-per-dest-SFO&quot;)
+ore.datastoreSummary(&quot;ONTIME-lm-per-dest-BOS&quot;)
+
+# Load specific data stores and view model
+ore.load(&quot;ONTIME-lm-per-dest-SFO&quot;) 
+mod 
+ore.load(&quot;ONTIME-lm-per-dest-BOS&quot;) 
+mod 
+&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="vndhm2uepn3don0e" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 0" collapsible="false" duid="1aoqj00155v01429" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="6"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="kroa10bdruq03o9d"><sawd:HTML fmt="html">&lt;pre&gt;
+
+# Apply the models to generate Arrival Delay predictions
+# Get a representative row for the structure of the resulting score table
+
+fun.value &lt;- ore.pull(head(DAT,1))
+fun.value$score &lt;- 1
+
+# Group Apply is necessary since the specific destination&#39;s model 
+#    needs to score flights to that destination
+scores &lt;- ore.groupApply(
+  X=DAT,
+  INDEX=DAT$DEST,
+  function(dat,dsname) {
+    ore.load(paste(dsname,dat[1,&quot;DEST&quot;],sep=&#39;-&#39;))
+    dat$score &lt;- predict(mod, dat)
+    dat
+  }, ore.connect=TRUE, ore.graphics=FALSE, dsname=&quot;ONTIME-lm-per-dest&quot;, 
+  FUN.VALUE=fun.value)
+
+ore.drop(table=&quot;ONTIME_ARRDELAY_PREDS&quot;)
+system.time(ore.create(scores, table=&quot;ONTIME_ARRDELAY_PREDS&quot;))
+dim(ONTIME_ARRDELAY_PREDS)
+head(ONTIME_ARRDELAY_PREDS[,c(&quot;DEST&quot;,&quot;ARRDELAY&quot;,&quot;DEPDELAY&quot;,&quot;DISTANCE&quot;,&quot;score&quot;)])
+&lt;/pre&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

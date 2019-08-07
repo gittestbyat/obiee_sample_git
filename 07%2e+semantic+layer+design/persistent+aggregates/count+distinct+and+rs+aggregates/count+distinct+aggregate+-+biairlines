@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="ca44d2ea66e40bf7d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Origin&quot;.&quot;Orig Division Name&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce808204d04e48b36">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">case when &quot;Flight Facts&quot;.&quot;# of Aircrafts&quot; = 0 then null else &quot;Flight Facts&quot;.&quot;# of Aircrafts&quot; end</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"/><saw:conditionalDisplayFormats/></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Flight Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text># of Aircrafts</saw:text></saw:caption></saw:columnHeading></saw:column>
+         
+         <saw:column xsi:type="saw:regularColumn" columnID="c6465da350ee6184c">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Date&quot;.&quot;Dep Month&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c7b59be84e51a0029">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Config&quot;.&quot;Source Fact Table&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="3"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!2"/>
+               <saw:cvCell viewName="htmlview!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell>
+               <saw:cvCell viewName="htmlview!2">
+                  <saw:displayFormat>
+                     <saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="pivotTableView!1" colSpan="3"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="ca44d2ea66e40bf7d"/>
+                  <saw:edgeLayer type="column" columnID="ce808204d04e48b36"/>
+                  <saw:edgeLayer type="column" columnID="c67c473e2a8709696"/>
+                  <saw:edgeLayer type="column" columnID="cceef24d85f708eb1"/>
+                  <saw:edgeLayer type="column" columnID="c6465da350ee6184c"/>
+                  <saw:edgeLayer type="column" columnID="c7d63fd0890bf5186"/><saw:edgeLayer type="column" columnID="cba12afe7a185c05e"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="false">
+         
+         <saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"><saw:edgeLayers><saw:edgeLayer type="measure" uiTableName="Measure Labels"/></saw:edgeLayers></saw:edge><saw:edge axis="row" showColumnHeader="true">
+               <saw:displayGrandTotals><saw:displayGrandTotal id="gt_row" grandTotalPosition="none"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="ca44d2ea66e40bf7d" uiTableName="Origin"/><saw:edgeLayer type="column" columnID="c7b59be84e51a0029" uiTableName="Config"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover">
+               <saw:edgeLayers><saw:edgeLayer type="column" columnID="c6465da350ee6184c" uiTableName="Date"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+            
+            <saw:measure columnID="ce808204d04e48b36" uiTableName="Flight Facts"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text># of distinct Aircrafts</saw:text></saw:caption></saw:memberFormat><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!2" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c7b59be84e51a0029"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+         <saw:staticText>
+            <saw:caption fmt="html">
+               <saw:text>[u][b]Persistent Aggregate Script for Count Distinct Metric[/b]
+[/u][br/][br/]
+Create aggregates 
+&quot;FACT_AGG_OR_CD_05&quot;[br/]
+for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;
+(
+&quot;# of Aircrafts&quot; [b]as_raw_values[/b] )[br/]
+at levels [br/]
+([br/]
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,[br/]
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;,[br/]
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,[br/]
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;[br/]
+)[br/]
+using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;[br/]
+in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;;</saw:text></saw:caption></saw:staticText></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!2">
+         <saw:staticText>
+            <saw:caption fmt="text">
+               <saw:text>[u][b]Aggregate table details[/b][br/][/u]
+Aggregate table in case of a count distinct metric is slightly different from the aggregate tables with regular metrics.[br/]
+In case of a count distinct metric, the non-aggregated actual column value is stored in the aggregate table. [br/]
+During query processing, count distinct is performed on this count distinct metric in the aggregate table. [br/]
+[br/]
+[b]FACT_AGG_OR_CD_05 table definition[/b][br/]
+- Route detail (Dimension) [br/]
+- Month (Dimension) [br/]
+- Orig Airport (Dimension) [br/]
+- Dest Airport (Dimension) [br/]
+- Aircraft number (Count Distinct Metric) - Aircraft numbers are stored as is, without any aggregation[br/]
+[br/][u][/u]</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

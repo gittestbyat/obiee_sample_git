@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="ca9e27b67114c6759"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">cast (right(&quot;Time&quot;.&quot;T02 Per Name Month&quot;,2) as integer)</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Time</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Month Number</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cb0e33ab818b10ac3"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ce4c29df0561b5ada"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R53  State Province&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">2013</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:sqlExpression">cast (right(&quot;Time&quot;.&quot;T02 Per Name Month&quot;,2) as integer)</sawx:expr><sawx:expr xsi:type="xsd:decimal">1</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R52  Country Name&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">United States</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="ce4c29df0561b5ada"/><saw:edgeLayer type="column" columnID="ca9e27b67114c6759"/><saw:edgeLayer type="column" columnID="cb0e33ab818b10ac3"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:narrative rowCount="100"><saw:caption fmt="html"><saw:text>&lt;tr&gt;&lt;td&gt;@{ce4c29df0561b5ada}&lt;/td&gt;&lt;td&gt;@{cb0e33ab818b10ac3}&lt;/td&gt;&lt;/tr&gt;</saw:text></saw:caption></saw:narrative><saw:postfix><saw:caption fmt="html"><saw:text>&lt;/table&gt;&lt;/nsdp_xml&gt;&#39;;
+
+var map = null;
+	var baseURL = &quot;http://&quot; + document.location.host + &quot;/mapviewer&quot;;
+	map = new OM.Map(document.getElementById(&#39;map&#39;), {
+			mapviewerURL : baseURL
+		});
+
+        var mapCenterLon = -98.45;
+        var mapCenterLat =  37.6706;
+        var mapZoom      =  3;  
+        var mpoint = new OM.geometry.Point(mapCenterLon,mapCenterLat,8307);
+        var map = new OM.Map(
+        document.getElementById(&#39;map&#39;),
+        {
+            mapviewerURL: baseURL
+        }) ;   
+        var tileLayer = new OM.layer.TileLayer(
+        &quot;baseMap&quot;, 
+        {
+            dataSource:&quot;mvdemo&quot;, 
+            tileLayer:&quot;demo_map&quot;, 
+            tileServerURL:baseURL+&quot;/mcserver&quot;
+        });    
+        map.addLayer(tileLayer) ;
+        OM.style.StyleStore.getServerSideStyle(&quot;mvdemo&quot;,&quot;V.WHITE SCHEME&quot;,
+        {url:baseURL, 
+            callback:function(style){
+                layer = new OM.layer.VectorLayer(&quot;layer1&quot;, 
+                {def:{type:OM.layer.VectorLayer.TYPE_PREDEFINED, 
+                        dataSource:&quot;mvdemo&quot;, theme:&quot;THEME_DEMO_STATES&quot;, 
+                        url: baseURL},
+                    renderingStyle: style});
+                  
+                layer.setNSDP({keyColumn:&quot;state&quot;, xml:xml_data});
+                var hoverStyle = new OM.style.Color(
+                {
+                    stroke: &quot;#C8F418&quot;,
+                    strokeThickness:3
+                }
+            );
+                layer.setBringToTopOnMouseOver(true);
+                layer.setHoverStyle(hoverStyle );
+		
+                var selectStyle = new OM.style.Color(
+                {
+                    fill: &quot;#18E5F4&quot;
+                }
+            );
+//                layer.setSelectStyle(selectStyle);	
+setupStyles(layer);	
+                map.addLayer(layer) ;        
+                map.setMapCenter(new OM.geometry.Point(mapCenterLon,mapCenterLat,8307) );
+                map.setMapZoomLevel(mapZoom) ;
+                map.init() ;
+            }
+        }
+    )
+&lt;/script&gt; </saw:text></saw:caption></saw:postfix><saw:prefix><saw:caption fmt="html"><saw:text>&lt;DIV id=map style=&quot;width:800px;height:500px;padding:10px;&quot;&gt;&lt;/DIV&gt;
+&lt;script language=&#39;JavaScript&#39; src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+function setupStyles(layer) {
+	var colors = [];
+	var fillColors =
+		// 10 color multihue sequential OrRd
+		//[&#39;#FFF9F2&#39;,&#39;#FFF7EC&#39;,&#39;#FEE8C8&#39;,&#39;#FDD49E&#39;,&#39;#FDBB84&#39;,&#39;#FC8D59&#39;,&#39;#EF6548&#39;,&#39;#D7301F&#39;,&#39;#B30000&#39;,&#39;#7F0000&#39;];
+		// 10 color qualitative paired
+		//[&#39;#A6CEE3&#39;, &#39;#B2DF8A&#39;, &#39;#FB9A99&#39;, &#39;#FDBF6F&#39;, &#39;#CAB2D6&#39;, &#39;#FF7F00&#39;, &#39;#1F78B4&#39;, &#39;#6A3D9A&#39;, &#39;#E31A1C&#39;, &#39;#33A02C&#39;];
+		[&#39;#B2F6A4&#39;,&#39;#82F06C&#39;,&#39;#58EB3B&#39;,&#39;#35D416&#39;,&#39;#289F11&#39;,&#39;#207F0D&#39;,&#39;#175D09&#39;];
+
+	for (var i = 0; i &lt; fillColors.length; i++) {
+		colors[i] = new OM.style.Color({
+				fill : fillColors[i],
+				fillOpacity : 0.8,
+				stroke : &quot;#cc9999&quot;,
+				strokeThickness : 2,
+				strokeOpacity : 0.5
+			});
+	}
+
+	colors[fillColors.length] = new OM.style.Color({
+			fill : &quot;#acacac&quot;,
+			fillOpacity : 0.1,
+			stroke : &quot;#e2e2e2&quot;,
+			strokeThickness : 1,
+			strokeOpacity : 0.5
+		});
+
+	var colorBucketStyle = new OM.style.BucketStyle({
+			styles : colors,
+			numClasses : fillColors.length,
+			classification : &#39;logarithmic&#39;, //creates equal-ranged buckets
+			defaultStyle : colors[fillColors.length]
+		});
+
+	layer.setRenderingStyle(colorBucketStyle, [&quot;REVENUE&quot;]);
+}
+
+
+var xml_data=&#39;&lt;nsdp_xml&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;State&lt;/th&gt;&lt;th&gt;Revenue&lt;/th&gt;&lt;/tr&gt;</saw:text></saw:caption></saw:prefix></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;DIV id=map style=&quot;width:700px;height:600px;padding:10px;&quot;&gt;&lt;/DIV&gt;
+&lt;script language=&#39;JavaScript&#39; src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+
+&lt;script language=&quot;JavaScript&quot; type=&quot;text/javascript&quot;&gt;
+function setupStyles(layer) {
+	var colors = [];
+	var fillColors =
+		// 10 color multihue sequential OrRd
+		//[&#39;#FFF9F2&#39;,&#39;#FFF7EC&#39;,&#39;#FEE8C8&#39;,&#39;#FDD49E&#39;,&#39;#FDBB84&#39;,&#39;#FC8D59&#39;,&#39;#EF6548&#39;,&#39;#D7301F&#39;,&#39;#B30000&#39;,&#39;#7F0000&#39;];
+		// 10 color qualitative paired
+		[&#39;#A6CEE3&#39;, &#39;#B2DF8A&#39;, &#39;#FB9A99&#39;, &#39;#FDBF6F&#39;, &#39;#CAB2D6&#39;, &#39;#FF7F00&#39;, &#39;#1F78B4&#39;, &#39;#6A3D9A&#39;, &#39;#E31A1C&#39;, &#39;#33A02C&#39;];
+
+	for (var i = 0; i &lt; 10; i++) {
+		colors[i] = new OM.style.Color({
+				fill : fillColors[i],
+				fillOpacity : 0.8,
+				stroke : &quot;#cc9999&quot;,
+				strokeThickness : 2,
+				strokeOpacity : 0.5
+			});
+	}
+
+	colors[10] = new OM.style.Color({
+			fill : &quot;#acacac&quot;,
+			fillOpacity : 0.1,
+			stroke : &quot;#e2e2e2&quot;,
+			strokeThickness : 1,
+			strokeOpacity : 0.5
+		});
+
+	var colorBucketStyle = new OM.style.BucketStyle({
+			styles : colors,
+			numClasses : 10,
+			classification : &#39;logarithmic&#39;, //creates equal-ranged buckets
+			defaultStyle : colors[10]
+		});
+
+	layer.setRenderingStyle(colorBucketStyle, [&quot;REVENUE&quot;]);
+}
+
+function renderMap(darray) {
+	var map = null;
+	var baseURL = &quot;http://&quot; + document.location.host + &quot;/mapviewer&quot;;
+	var center = new OM.geometry.Point(-100, 40, 8307);
+	map = new OM.Map(document.getElementById(&#39;map&#39;), {
+			mapviewerURL : baseURL
+		});
+
+	var tilelayer = new OM.layer.ElocationTileLayer(&quot;oracle.maps&quot;);
+	map.addLayer(tilelayer);
+
+	var states = new OM.layer.VectorLayer(&quot;states&quot;, {
+			def : {
+				type : OM.layer.VectorLayer.TYPE_PREDEFINED,
+				dataSource : &quot;mvdemo&quot;,
+				theme : &quot;theme_demo_states&quot;
+			}
+		});
+	map.addLayer(states);
+	states.addListener(OM.event.LayerEvent.FEATURES_LOADED, function () {
+		var features = states.getAllFeatures();
+		for (var i = 0; i &lt; features.length; i++) {
+			s = features[i];
+			stname=s.getAttributeValue(&quot;STATE&quot;);
+			stcode=s.getAttributeValue(&quot;_LABEL_&quot;);
+			var f_attr;
+			if (darray[stcode]){
+				revenue=darray[stcode];
+				f_attr = {attributes :{&quot;STATE&quot;:stname, &quot;ABBR&quot;:stcode, &quot;REVENUE&quot;:revenue}};
+			} else {
+				f_attr = {attributes :{&quot;STATE&quot;:stname, &quot;ABBR&quot;:stcode}};
+			}				
+			features[i].attributes=f_attr;
+		}
+		setupStyles(states);
+	});
+
+	
+	states.setLabelsVisible(false);
+	map.setMapCenter(center);
+	map.setMapZoomLevel(3);
+	map.init();
+}
+&lt;/script&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

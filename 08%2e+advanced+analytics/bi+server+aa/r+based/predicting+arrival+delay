@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c17e3cdaa7d237645">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Carrier&quot;.&quot;Carrier Flight #&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1ffc21e863d7fb92">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Depart Delay&quot;.&quot;Avg Dep Delay (Min)&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat>
+            
+            <saw:columnHeading>
+               
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c99bea0c84ef49d85">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;Avg Distance (Miles)&quot;</sawx:expr></saw:columnFormula></saw:column>
+         
+         <saw:column xsi:type="saw:regularColumn" columnID="c5b973e90597f60d7">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Arrival Delay&quot;.&quot;Avg Arr Delay (Min)&quot;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Flight Facts</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Actual Arrival Delay</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c19de5503a05bcf74">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">EVALUATE_SCRIPT( &#39;filerepo://obiee.AirlineArrDelayPrediction.xml&#39;, &#39;Prediction&#39;, &#39;FLIGHTNO=%1;DEPDELAY=%2;DISTANCE=%3&#39;,  &quot;Carrier&quot;.&quot;Carrier Flight #&quot;,&quot;Depart Delay&quot;.&quot;Avg Dep Delay (Min)&quot;,&quot;Flight Facts&quot;.&quot;Avg Distance (Miles)&quot;)</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Flight Facts</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Predicted Arrival Delay</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Date&quot;.&quot;Dep Date&quot;</sawx:expr><sawx:expr xsi:type="xsd:date">2010-09-01</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!1"/>
+               <saw:cvCell viewName="pivotTableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none">
+         <saw:title>
+            <saw:displayFormat>
+               <saw:formatSpec fontFamily="Arial" fontStyle="bold" fontSize="16" wrapText="true"/></saw:displayFormat>
+            <saw:caption fmt="text">
+               <saw:text>Predicting Flight Arrival Delay</saw:text></saw:caption></saw:title>
+         <saw:displayFormat>
+            <saw:formatSpec borderColor="#CCCCCC" borderPosition="8" wrapText="true"/></saw:displayFormat><saw:subTitle><saw:caption fmt="text"><saw:text>EVALUATE_SCRIPT( &#39;filerepo://obiee.AirlineArrDelayPrediction.xml&#39;, &#39;Prediction&#39;, &#39;FLIGHTNO=%1;DEPDELAY=%2;DISTANCE=%3&#39;,  &quot;Carrier&quot;.&quot;Carrier Flight #&quot;,&quot;Depart Delay&quot;.&quot;Avg Dep Delay (Min)&quot;,&quot;Flight Facts&quot;.&quot;Avg Distance (Miles)&quot;)</saw:text></saw:caption><saw:displayFormat><saw:formatSpec fontSize="12" wrapText="true"/></saw:displayFormat></saw:subTitle></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c17e3cdaa7d237645"/>
+                  <saw:edgeLayer type="column" columnID="c1ffc21e863d7fb92"/>
+                  <saw:edgeLayer type="column" columnID="c99bea0c84ef49d85"/>
+                  <saw:edgeLayer type="column" columnID="c5b973e90597f60d7"/>
+                  <saw:edgeLayer type="column" columnID="c19de5503a05bcf74"/><saw:edgeLayer type="column" columnID="c2589e6c3ccbc9091"/><saw:edgeLayer type="column" columnID="c4d2e515ee44bc972"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="true" height="480">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c17e3cdaa7d237645" aggRule="count">
+                     <saw:headerFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec height="30" wrapText="true"/></saw:displayFormat>
+                        <saw:caption>
+                           <saw:text>Flight Num</saw:text></saw:caption></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure">
+                     <saw:memberFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec width="70" wrapText="true" height="30"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c1ffc21e863d7fb92"/>
+            <saw:measure columnID="c99bea0c84ef49d85"/>
+            <saw:measure columnID="c19de5503a05bcf74"/>
+            <saw:measure columnID="c5b973e90597f60d7"/></saw:measuresList>
+         <saw:displayFormat>
+            <saw:formatSpec/></saw:displayFormat></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="scatter" subtype="default" renderFormat="default" mode="online" animateOnDisplay="false">
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="500" width="500">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:title mode="custom">
+               <saw:caption>
+                  <saw:text>Actual vs Predicted</saw:text></saw:caption></saw:title></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="c17e3cdaa7d237645"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="x">
+                  <saw:columnRef columnID="c99bea0c84ef49d85"/></saw:column>
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="c5b973e90597f60d7"/></saw:column>
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="c19de5503a05bcf74"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+         <saw:legendFormat position="none" transparentFill="true"/>
+         <saw:axesFormats>
+            <saw:axisFormat axis="Y1">
+               <saw:scale scaleValues="custom" min="-10" max="300" defaultTicks="true"/></saw:axisFormat>
+            <saw:axisFormat axis="X">
+               <saw:scale scaleValues="custom" max="2050" defaultTicks="true"/></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="scatter">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#336699" symbol="round" symbolColor="#336699"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="2"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#FF9933" symbol="round" symbolColor="#FF9933"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+      <saw:view xsi:type="saw:sqlview" name="sqlview!1"/><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:columnOrder><saw:columnOrderRef columnID="c17e3cdaa7d237645" direction="ascending"><saw:QDR><saw:staticMemberGroup specialDimension="measure"><saw:members xsi:type="saw:specialValueMembers"><saw:value>c19de5503a05bcf74</saw:value></saw:members></saw:staticMemberGroup></saw:QDR></saw:columnOrderRef><saw:columnOrderRef columnID="c2589e6c3ccbc9091" direction="ascending"><saw:QDR><saw:staticMemberGroup specialDimension="measure"><saw:members xsi:type="saw:specialValueMembers"><saw:value>c19de5503a05bcf74</saw:value></saw:members></saw:staticMemberGroup></saw:QDR></saw:columnOrderRef><saw:columnOrderRef columnID="c4d2e515ee44bc972" direction="ascending"><saw:QDR><saw:staticMemberGroup specialDimension="measure"><saw:members xsi:type="saw:specialValueMembers"><saw:value>c19de5503a05bcf74</saw:value></saw:members></saw:staticMemberGroup></saw:QDR></saw:columnOrderRef></saw:columnOrder><saw:edgeLayers><saw:edgeLayer type="column" columnID="c5b973e90597f60d7"/><saw:edgeLayer type="column" columnID="c2589e6c3ccbc9091"/><saw:edgeLayer type="column" columnID="c4d2e515ee44bc972"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"><saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c19de5503a05bcf74" aggRule="sum"/></saw:measuresList></saw:view></saw:views></saw:report>

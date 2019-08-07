@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="j5v5hmnbsoan3tub" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1839">&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+StdDev&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			
+			</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			
+			<sawd:globalFilterView name="GFP 0" path="/shared/11. Demos/Flights Delay/Descriptive Stats/Standard Deviation/Pcol - StdDev" duid="psqo923v4h5gsv2q"><saw:caption><saw:text>Pcol - StdDev</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 0" display="embed" showView="" duid="3kva0tu2jok56ebp"><saw:caption><saw:text>Std Dev</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Descriptive Stats/Standard Deviation/Std Dev"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

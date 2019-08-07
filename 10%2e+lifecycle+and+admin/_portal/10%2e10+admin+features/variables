@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="f2qta4grbu937qdh"><sawd:dashboardColumn name="Column 0" canFreeze="true" duid="giddemliulafd4u0" layoutType="bestFit"><sawd:dashboardSection name="Section 8" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 7" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_680">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Variables&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_679">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 3" frozen="false" canFreeze="false" duid="viur1ckng1fnrb67" break="column" layoutType="specificSize"><sawd:dashboardSection name="Section 4" duid="k94ejbcu74b9obgu" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec/></saw:displayFormat><sawd:htmlView name="HTML 2" duid="lpv6hbtjm5nmva7n"><sawd:HTML fmt="html">[b]System variable: productVersion[/b][br/][br/]
+Syntax: [b]@ {system.productVersion}[/b][br/]
+Expected Result &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:(your build number, i.e. 11.1.1.2)[br/]
+Real Result&amp;nbsp;:[b]@{system.productVersion}[/b][br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" duid="b8hfsvoeobgk8agh" showSectionTitle="false" collapsible="false" layoutType="bestFit"><sawd:htmlView name="HTML 0" duid="00lgjitfb3bhj6dh"><sawd:HTML fmt="html">[b]System variable: product Time[/b][br/][br/]
+Syntax: [b]@ {system.currentTime}[/b][br/]
+Expected Result &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;: (MM/DD/YY hh:mm:ss AM/PM)[br/]
+Real Result&amp;nbsp;:[b]@{system.currentTime}[/b][br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 1" duid="3o5d2l8fj4i0bl8r" showSectionTitle="false" collapsible="false" layoutType="bestFit"><sawd:htmlView name="HTML 1" duid="q6tdks0i8ua7cbin"><sawd:HTML fmt="html">[b]User variables: id[/b][br/][br/]
+Syntax: [b]@ {user.id}[/b][br/]
+Expected Result:(your login name, i.e. administrator)[br/]
+[b]Real Result  &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:[/b] 
+[b]@{user.id}[/b][br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 2" duid="5el9mpd3p8bng3s1" showSectionTitle="false" collapsible="false" layoutType="bestFit"><sawd:htmlView name="HTML 3" duid="slsggokn9jcvfjtq"><sawd:HTML fmt="html">[b]User variables: displayName[/b][br/][br/]
+Syntax: [b]@ {user.displayName}[/b][br/]
+Expected Result:(your login name, i.e. administrator)[br/]
+[b]Real Result  &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:[/b] 
+[b]@{user.displayName}[/b][br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 6" collapsible="false" duid="c2efb6c7oks0psq1" showSectionTitle="false" layoutType="bestFit"><sawd:htmlView name="HTML 6" duid="7erm31ckipacg170"><sawd:HTML fmt="html">[b]Test Dashboard Variables:[/b][br/]
+@ {dashboard.name}  = @{dashboard.name}[br/]
+@ {dashboard.description}  = @{dashboard.description}[br/]
+@ {dashboard.author}  = @{dashboard.author}[br/]
+@ {dashboard.caption}  = @{dashboard.caption}[br/]
+@ {dashboard.location}  = @{dashboard.location}[br/]
+@ {dashboard.path}  = @{dashboard.path}[br/]
+@ {dashboard.currentPage.name}  = @{dashboard.currentPage.name}[br/]
+@ {dashboard.currentPage.path}  = @{dashboard.currentPage.path}[br/]
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 3" duid="kc9nlt9eva5uakqn" showSectionTitle="false" collapsible="false" layoutType="bestFit"><sawd:htmlView name="HTML 4" duid="k0j5e0fet7ffvkuf"><sawd:HTML fmt="html">[b]User variables: homeDirectory[/b][br/][br/]
+Syntax: [b]@ {user.homeDirectory}[/b][br/]
+Expected Result:(your directory, i.e. &quot;/users/administrator&quot;)[br/]
+[b]Real Result  &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:[/b] 
+[b]@{user.homeDirectory}[/b][br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 5" collapsible="false" duid="ea5kuphn63a0q367" showSectionTitle="false" layoutType="bestFit"><sawd:htmlView name="HTML 5" duid="o7f29big73f4didg"><sawd:HTML fmt="html">[b]Dashboard variables: currentPage[/b][br/][br/]
+Syntax: [b]@ {dashboard.currentPage}[/b][br/]
+Expected Result:(current page name)[br/]
+[b]Real Result  &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:[/b] 
+[b]@{dashboard.currentPage}[/b][br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec width="450" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" duid="qtgamb0hqhqc9rb6" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 7" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 0" display="embed" showView="" duid="ougb2v506f2vb4fp"><saw:caption><saw:text>System Variables</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/10. Lifecycle and Admin/System Variables/System Variables"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec borderPosition="none" hAlign="center" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

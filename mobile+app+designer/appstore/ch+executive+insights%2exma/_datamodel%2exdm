@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel xmlns="http://xmlns.oracle.com/oxp/xmlp" version="2.0" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <dataproperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataproperties>
+   <dataSets>
+      <dataSet name="Default" type="complex">
+         <excel dataSourceRef="xdo:local" timezone="Pacific/Midway" start_rownum="-1">
+            <file>CHMadData.xlsx</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" source="Default" label="G_1">
+               <element name="Objective" value="Objective" dataType="xsd:string" label="Objective" breakOrder="None" fieldOrder="1"/>
+               <element name="Overall_FU" value="Overall FU" dataType="xsd:double" label="Overall FU" breakOrder="None" fieldOrder="2"/>
+               <element name="Overall_TU" value="Overall TU" dataType="xsd:double" label="Overall TU" breakOrder="None" fieldOrder="3"/>
+               <element name="Overall_Score" value="Overall Score" dataType="xsd:double" label="Overall Score" breakOrder="None" fieldOrder="4"/>
+               <element name="Year" value="Year" dataType="xsd:double" label="Year" breakOrder="None" fieldOrder="5"/>
+               <element name="OEM_Category" value="OEM Category" dataType="xsd:string" label="OEM Category" breakOrder="None" fieldOrder="6"/>
+               <element name="OEM_Cat_Score" value="OEM Cat Score" dataType="xsd:string" label="OEM Cat Score" breakOrder="None" fieldOrder="7"/>
+               <element name="OEM_Class" value="OEM Class" dataType="xsd:string" label="OEM Class" breakOrder="None" fieldOrder="8"/>
+               <element name="OEM_Class_Score" value="OEM Class Score" dataType="xsd:double" label="OEM Class Score" breakOrder="None" fieldOrder="9"/>
+               <element name="OEM_Class_Description" value="OEM Class Description" dataType="xsd:string" label="OEM Class Description" breakOrder="None" fieldOrder="10"/>
+               <element name="OEM_Class_FU" value="OEM Class FU" dataType="xsd:double" label="OEM Class FU" breakOrder="None" fieldOrder="11"/>
+               <element name="FU_Description" value="FU Description" dataType="xsd:string" label="FU Description" breakOrder="None" fieldOrder="12"/>
+               <element name="OEM_Class_TU" value="OEM Class TU" dataType="xsd:double" label="OEM Class TU" breakOrder="None" fieldOrder="13"/>
+               <element name="TU_Description" value="TU Description" dataType="xsd:string" label="TU Description" breakOrder="None" fieldOrder="14"/>
+               <element name="State" value="State" dataType="xsd:string" label="State" breakOrder="None" fieldOrder="15"/>
+               <element name="Branch" value="Branch" dataType="xsd:string" label="Branch" breakOrder="None" fieldOrder="16"/>
+               <element name="Longtitude" value="Longtitude" dataType="xsd:double" label="Longtitude" breakOrder="None" fieldOrder="17"/>
+               <element name="Latitude" value="Latitude" dataType="xsd:double" label="Latitude" breakOrder="None" fieldOrder="18"/>
+               <element name="Make" value="Make" dataType="xsd:string" label="Make" breakOrder="None" fieldOrder="19"/>
+               <element name="Model" value="Model" dataType="xsd:string" label="Model" breakOrder="None" fieldOrder="20"/>
+               <element name="Cost" value="Cost" dataType="xsd:double" label="Cost" breakOrder="None" fieldOrder="21"/>
+               <element name="FU" value="FU" dataType="xsd:double" label="FU" breakOrder="None" fieldOrder="22"/>
+               <element name="TU" value="TU" dataType="xsd:double" label="TU" breakOrder="None" fieldOrder="23"/>
+               <element name="Age_" value="Age " dataType="xsd:double" label="Age " breakOrder="None" fieldOrder="24"/>
+               <element name="Days_on_Rent" value="Days on Rent" dataType="xsd:double" label="Days on Rent" breakOrder="None" fieldOrder="25"/>
+               <element name="Net_Revenue" value="Net Revenue" dataType="xsd:double" label="Net Revenue" breakOrder="None" fieldOrder="26"/>
+               <element name="Lost_Sales" value="Lost Sales" dataType="xsd:double" label="Lost Sales" breakOrder="None" fieldOrder="27"/>
+               <element name="Reason" value="Reason" dataType="xsd:string" label="Reason" breakOrder="None" fieldOrder="28"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="DATA_DS" left="28px" top="14px"/>
+         <layout name="Default" left="274px" top="17px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BIEE">
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="customers" type="complex">
+         <sql dataSourceRef="Oracle BI EE">
+            <![CDATA[SELECT
+   0 s_0,
+   "A - Sample Sales"."Customers"."C0  Customer Number" s_1,
+   "A - Sample Sales"."Customers"."C1  Customer Name" s_2,
+   "A - Sample Sales"."Customers"."C19  Months as Customer" s_3,
+   "A - Sample Sales"."Customers"."C21  Customer Age" s_4
+FROM "A - Sample Sales"]]>
+         </sql>
+      </dataSet>
+      <dataSet name="Credit Rating" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>customer.xls</file>
+            <sheetName>Untitled Analysis</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <link name="dl-9656" parentGroup="G_1" parentColumn="s_1" childQuery="Credit Rating" childColumn="C0 Customer Number"/>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="customers">
+               <element name="s_0" value="s_0" label="s_0" dataType="xsd:integer" breakOrder="" fieldOrder="1"/>
+               <element name="s_1" value="s_1" label="Customer Number" dataType="xsd:integer" breakOrder="" fieldOrder="2"/>
+               <element name="s_2" value="s_2" label="Customer Name" dataType="xsd:string" breakOrder="" fieldOrder="3"/>
+               <element name="s_3" value="s_3" label="Months as Customer" dataType="xsd:integer" breakOrder="" fieldOrder="4"/>
+               <element name="s_4" value="s_4" label="Age" dataType="xsd:integer" breakOrder="" fieldOrder="5"/>
+               <group name="G_2" label="G_2" source="Credit Rating">
+                  <element name="C0_Customer_Number" value="C0 Customer Number" label="C0 Customer Number" dataType="xsd:double" breakOrder="" fieldOrder="1"/>
+                  <element name="C6_Credit_Rate" value="C6 Credit Rate" label="C6 Credit Rate" dataType="xsd:double" breakOrder="" fieldOrder="2"/>
+               </group>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="customers" left="285px" top="0px"/>
+         <layout name="Credit Rating" left="565px" top="0px"/>
+         <layout name="DATA_DS" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks>
+         <groupLink name="dl-7078" parentGroup="G_1" childGroup="G_2"/>
+      </groupLinks>
+   </display>
+</dataModel>

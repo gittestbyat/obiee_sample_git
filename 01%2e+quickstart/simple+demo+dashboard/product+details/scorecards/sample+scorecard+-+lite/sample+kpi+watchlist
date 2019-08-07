@@ -1,0 +1,81 @@
+<sawbsc:kpiWatchlistView xmlns:sawbsc="com.siebel.analytics.web/scorecard/v1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sawkpi="com.siebel.analytics.web/kpi/v1">
+  <sawbsc:pinnedKPI>
+    <sawbsc:kpiRef>/shared/01. QuickStart/Simple Demo Dashboard/Product Details/Scorecards/KPIs/Sample KPI</sawbsc:kpiRef>
+    <sawbsc:pinningQDR>
+      <sawkpi:dimensionValue dimensionID="&quot;A - Sample Sales&quot;.&quot;Time&quot;.&quot;T02 Per Name Month&quot;" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.&quot;Time&quot;.&quot;T02 Per Name Month&quot;">
+        <sawkpi:member levelID="">
+          <sawkpi:value>[ALL]</sawkpi:value>
+        </sawkpi:member>
+      </sawkpi:dimensionValue>
+      <sawkpi:dimensionValue dimensionID="&quot;A - Sample Sales&quot;.&quot;Products&quot;.&quot;LOB&quot;" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.&quot;Products&quot;.&quot;LOB&quot;">
+        <sawkpi:member levelID="">
+          <sawkpi:value>[ALL]</sawkpi:value>
+        </sawkpi:member>
+      </sawkpi:dimensionValue>
+      <sawkpi:dimensionValue dimensionID="&quot;A - Sample Sales&quot;.&quot;Offices&quot;.&quot;D3  Organization&quot;" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.&quot;Offices&quot;.&quot;D3  Organization&quot;">
+        <sawkpi:member levelID="">
+          <sawkpi:value>[ALL]</sawkpi:value>
+        </sawkpi:member>
+      </sawkpi:dimensionValue>
+    </sawbsc:pinningQDR>
+    <saw:caption>
+      <saw:text>Sample KPI</saw:text>
+    </saw:caption>
+  </sawbsc:pinnedKPI>
+  <sawbsc:pinnedKPI>
+    <sawbsc:kpiRef>/shared/01. QuickStart/Simple Demo Dashboard/Product Details/Scorecards/KPIs/Unit Price</sawbsc:kpiRef>
+    <sawbsc:pinningQDR>
+      <sawkpi:dimensionValue dimensionID="&quot;Sample Targets Lite&quot;.&quot;Time&quot;.&quot;T02 Per Name Month&quot;" variableType="REQUEST" variableName="&quot;Sample Targets Lite&quot;.&quot;Time&quot;.&quot;T02 Per Name Month&quot;">
+        <sawkpi:member levelID="">
+          <sawkpi:value>[ALL]</sawkpi:value>
+        </sawkpi:member>
+      </sawkpi:dimensionValue>
+      <sawkpi:dimensionValue dimensionID="&quot;Sample Targets Lite&quot;.&quot;Products&quot;.&quot;LOB&quot;" variableType="REQUEST" variableName="&quot;Sample Targets Lite&quot;.&quot;Products&quot;.&quot;LOB&quot;">
+        <sawkpi:member levelID="">
+          <sawkpi:value>[ALL]</sawkpi:value>
+        </sawkpi:member>
+      </sawkpi:dimensionValue>
+      <sawkpi:dimensionValue dimensionID="&quot;Sample Targets Lite&quot;.&quot;Offices&quot;.&quot;D3  Organization&quot;" variableType="REQUEST" variableName="&quot;Sample Targets Lite&quot;.&quot;Offices&quot;.&quot;D3  Organization&quot;">
+        <sawkpi:member levelID="">
+          <sawkpi:value>[ALL]</sawkpi:value>
+        </sawkpi:member>
+      </sawkpi:dimensionValue>
+    </sawbsc:pinningQDR>
+    <saw:caption>
+      <saw:text>Unit Price</saw:text>
+    </saw:caption>
+  </sawbsc:pinnedKPI>
+  <sawbsc:pinnedKPI>
+    <sawbsc:kpiRef>/shared/01. QuickStart/Simple Demo Dashboard/Product Details/Scorecards/KPIs/Avg Order Size</sawbsc:kpiRef>
+    <sawbsc:pinningQDR>
+      <sawkpi:dimensionValue dimensionID="&quot;A - Sample Sales&quot;.&quot;Time&quot;.&quot;T02 Per Name Month&quot;" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.&quot;Time&quot;.&quot;T02 Per Name Month&quot;">
+        <sawkpi:member levelID="">
+          <sawkpi:value>[ALL]</sawkpi:value>
+        </sawkpi:member>
+      </sawkpi:dimensionValue>
+      <sawkpi:dimensionValue dimensionID="&quot;A - Sample Sales&quot;.&quot;Products&quot;.&quot;LOB&quot;" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.&quot;Products&quot;.&quot;LOB&quot;">
+        <sawkpi:member levelID="">
+          <sawkpi:value>[ALL]</sawkpi:value>
+        </sawkpi:member>
+      </sawkpi:dimensionValue>
+      <sawkpi:dimensionValue dimensionID="&quot;A - Sample Sales&quot;.&quot;Offices&quot;.&quot;D3  Organization&quot;" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.&quot;Offices&quot;.&quot;D3  Organization&quot;">
+        <sawkpi:member levelID="">
+          <sawkpi:value>[ALL]</sawkpi:value>
+        </sawkpi:member>
+      </sawkpi:dimensionValue>
+    </sawbsc:pinningQDR>
+    <saw:caption>
+      <saw:text>Avg Order Size</saw:text>
+    </saw:caption>
+  </sawbsc:pinnedKPI>
+  <sawbsc:column id="label" sortOrder="ascendingOrder" />
+  <sawbsc:column id="status" sortOrder="ascendingOrder" />
+  <sawbsc:column id="trend" sortOrder="ascendingOrder" />
+  <sawbsc:column id="value" sortOrder="ascendingOrder" />
+  <sawbsc:column id="target" sortOrder="ascendingOrder" />
+  <sawbsc:column id="variance" sortOrder="ascendingOrder" />
+  <sawbsc:column id="variancePercent" sortOrder="ascendingOrder" />
+  <sawbsc:column id="change" sortOrder="ascendingOrder" />
+  <sawbsc:column id="changePercent" sortOrder="ascendingOrder" />
+  <sawkpi:relatedDocuments />
+</sawbsc:kpiWatchlistView>

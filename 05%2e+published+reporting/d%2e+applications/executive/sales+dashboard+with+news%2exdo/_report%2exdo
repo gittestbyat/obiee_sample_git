@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/d. Applications/Executive/Data Models/XML- Sales Dashboard News Datamodel.xdm" cache="true"/>
+   <description>
+      <![CDATA[Combines%20data%20from%20transactional%20db%20system%20and%20HTTP%20(XML%20feed)%20sources.%20Note:%20This%20report%20requires%20additional%20setup%20by%20the%20administrator%20to%20enable%20proxy%20server%20if%20BI%20Publisher%20server%20is%20inside%20a%20firewall.]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Advanced Sales Dashboard">
+      <template label="Advanced Sales Dashboard" url="Dashboard2.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Report Description" url="ReportDescription (7).rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

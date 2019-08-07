@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="k4b2ft7gheb4211p">
+	<sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2549">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Oracle Identity (OID) Provider Security&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2548">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat><sawd:htmlView name="HTML 2" duid="q2ss1tsqs4jvj9e8"><sawd:HTML fmt="html">[br/]&lt;font color=&quot;#ff0000&quot;&gt;THIS PAGE ASSUMES THAT OID SERVER IS ACTIVE AND CONFIGURED AS A PROVIDER FOR SAMPLEAPP.
+SAMPLEAPP 11.1.1.5 [b]VIRTUAL BOX IMAGE V107[/b] INCLUDES OID INSTALLED AND CONFIGURED BY DEFAULT.&lt;/font&gt;[br/]&amp;nbsp;</sawd:HTML></sawd:htmlView>
+			<sawd:htmlView name="HTML 4" duid="70it00kpd72tfi3i"><sawd:HTML fmt="html">&lt;p&gt;If you are running the &lt;strong&gt;OBIEE SampleApp Preconfigured Virtual Box 
+Image&lt;/strong&gt;, you can leverage both Oracle Internet Directory (OID) provider and 
+Weblogic default provider for security.&lt;/p&gt;
+&lt;p&gt;The table below shows the users you can use to login on the Analytics URL :&lt;/p&gt;
+&lt;blockquote style=&quot;MARGIN-RIGHT: 0px&quot; dir=&quot;ltr&quot;&gt;
+  &lt;p&gt;- OIDuser/Admin123, this user only exists in the Oracle Internet Directory (OID)
+  (not in WLS default security directory)&lt;/p&gt;
+  &lt;p&gt;- Prodney/Admin456. Prodney user exists both under WLS default security 
+  provider &lt;strong&gt;and&lt;/strong&gt; in OID security directory. Only the password is 
+  different : Admin123 for WLS default, and Admin456 for OID&lt;/p&gt;&lt;/blockquote&gt;
+
+
+&lt;p&gt;You can : &lt;/p&gt;
+&lt;blockquote style=&quot;MARGIN-RIGHT: 0px&quot; dir=&quot;ltr&quot;&gt;
+  &lt;p&gt;- Access the list of users in OID and modify their attributes by using a freeware client such as Jxplorer&lt;/p&gt;
+  &lt;p&gt;- View these ODI users from WLS security (WLS Console/Security Realms) and assign them new Roles&lt;/p&gt;</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 5" duid="7jnrc17rn29dcajq">
+        <sawd:HTML fmt="html" captionID="kcap12832459_160">&lt;table border=0 cellspacing=0 cellpadding=0 width=700
+ style=&#39;width:525.0pt;margin-left:-1.15pt;border-collapse:collapse;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0in 3.5pt 0in 3.5pt&#39;&gt;
+ &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes;height:26.25pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border:solid windowtext 1.0pt;
+  border-right:none;background:#DBE5F1;padding:0in 3.5pt 0in 3.5pt;height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;User&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  background:#DBE5F1;padding:0in 3.5pt 0in 3.5pt;height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;Login&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  background:#DBE5F1;padding:0in 3.5pt 0in 3.5pt;height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span class=SpellE&gt;&lt;b&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black;&#39;&gt;Pwd&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;b&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black;&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  background:#DBE5F1;padding:0in 3.5pt 0in 3.5pt;height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;&#39;&gt;Source Directory&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 nowrap style=&#39;width:102.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  background:#DBE5F1;padding:0in 3.5pt 0in 3.5pt;height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;Data &lt;span class=SpellE&gt;Visibility&lt;/span&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 style=&#39;width:116.0pt;border:solid windowtext 1.0pt;border-left:
+  none;background:#DBE5F1;padding:0in 3.5pt 0in 3.5pt;height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;Proxy &lt;span class=SpellE&gt;Rights&lt;/span&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:1;height:12.75pt&#39;&gt;
+  &lt;td width=143 nowrap valign=bottom style=&#39;width:107.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=103 nowrap valign=bottom style=&#39;width:77.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=87 nowrap valign=bottom style=&#39;width:65.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=77 nowrap valign=bottom style=&#39;width:58.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=136 nowrap valign=bottom style=&#39;width:102.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=155 nowrap valign=bottom style=&#39;width:116.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:2;height:12.75pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;MAIN USERS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 nowrap style=&#39;width:58.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;&#39;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 nowrap style=&#39;width:102.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 style=&#39;width:116.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:3;height:24.0pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Paul Rodney &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;PRODNEY&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 style=&#39;width:65.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin123&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;WLS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 nowrap style=&#39;width:102.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 rowspan=2 style=&#39;width:116.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid black .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span lang=EN-US style=&#39;font-size:8.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;mso-ansi-language:EN-US;&#39;&gt;DNOONAN,
+  GKENDAL, HMAYES, SBERGMA, SATKINS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:4;height:24.0pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Paul Rodney &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;PRODNEY&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 style=&#39;width:65.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin456&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;OID&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 nowrap style=&#39;width:102.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:5;height:24.0pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;OID &lt;span class=SpellE&gt;Sample&lt;/span&gt; User&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;OIDUSER&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 style=&#39;width:65.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin123&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;OID&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 nowrap style=&#39;width:102.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 nowrap style=&#39;width:116.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:6;height:12.75pt&#39;&gt;
+  &lt;td width=143 nowrap valign=bottom style=&#39;width:107.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=103 nowrap valign=bottom style=&#39;width:77.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=77 nowrap valign=bottom style=&#39;width:58.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=136 nowrap valign=bottom style=&#39;width:102.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+  &lt;td width=155 nowrap valign=bottom style=&#39;width:116.0pt;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:7;height:12.75pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;ADDITIONAL USERS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 nowrap style=&#39;width:58.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;&#39;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 nowrap style=&#39;width:102.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 nowrap style=&#39;width:116.0pt;background:#EEECE1;padding:0in 3.5pt 0in 3.5pt;
+  height:12.75pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;&#39;&gt;&amp;nbsp;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:8;height:24.0pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Adam Bell &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;ABELL&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 style=&#39;width:65.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:9.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin123&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;WLS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 nowrap style=&#39;width:102.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 nowrap style=&#39;width:116.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0in 3.5pt 0in 3.5pt;height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:9;height:24.0pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Daniel &lt;span class=SpellE&gt;Noonan&lt;/span&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;DNOONAN&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin123&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;WLS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 style=&#39;width:102.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#C0504D;&#39;&gt;Custom LOB &amp;amp; &lt;span class=SpellE&gt;Orgs&lt;/span&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 nowrap style=&#39;width:116.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:10;height:24.0pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Gary Kendall &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;GKENDAL&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin123&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;WLS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 style=&#39;width:102.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#C0504D;&#39;&gt;Custom LOB &amp;amp; &lt;span class=SpellE&gt;Orgs&lt;/span&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 nowrap style=&#39;width:116.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:24.0pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:11;height:26.25pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Helen Mayes&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;HMAYES&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin123&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;WLS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 style=&#39;width:102.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span class=SpellE&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#C0504D;&#39;&gt;Hierarchical&lt;/span&gt;&lt;/span&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#C0504D;&#39;&gt; Data &lt;span
+  class=SpellE&gt;Visibility&lt;/span&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 nowrap style=&#39;width:116.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:12;height:26.25pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Roger James&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;RJAMES&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin123&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;WLS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 style=&#39;width:102.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span class=SpellE&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#C0504D;&#39;&gt;Fully&lt;/span&gt;&lt;/span&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#C0504D;&#39;&gt; &lt;span class=SpellE&gt;Localized&lt;/span&gt;
+  UI&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 nowrap style=&#39;width:116.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:13;height:26.25pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Sophie Bergman&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;SBERGMA&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin123&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;WLS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 style=&#39;width:102.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span class=SpellE&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#C0504D;&#39;&gt;Hierarchical&lt;/span&gt;&lt;/span&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#C0504D;&#39;&gt; Data &lt;span
+  class=SpellE&gt;Visibility&lt;/span&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 nowrap style=&#39;width:116.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:14;height:26.25pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Monica Velasquez&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;MVELASQ&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin123&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;WLS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 style=&#39;width:102.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span class=SpellE&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#C0504D;&#39;&gt;Hierarchical&lt;/span&gt;&lt;/span&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#C0504D;&#39;&gt; Data &lt;span
+  class=SpellE&gt;Visibility&lt;/span&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 nowrap style=&#39;width:116.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:15;mso-yfti-lastrow:yes;height:26.25pt&#39;&gt;
+  &lt;td width=143 nowrap style=&#39;width:107.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Steve Atkins&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=103 nowrap style=&#39;width:77.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;b&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;SATKINS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=87 nowrap style=&#39;width:65.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:black;mso-fareast-language:
+  FR&#39;&gt;Admin123&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=77 style=&#39;width:58.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#0070C0;mso-fareast-language:
+  FR&#39;&gt;WLS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=136 style=&#39;width:102.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span class=SpellE&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#C0504D;&#39;&gt;Hierarchical&lt;/span&gt;&lt;/span&gt;&lt;span
+  style=&#39;font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#C0504D;&#39;&gt; Data &lt;span
+  class=SpellE&gt;Visibility&lt;/span&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=155 nowrap style=&#39;width:116.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0in 3.5pt 0in 3.5pt;
+  height:26.25pt&#39;&gt;
+  &lt;p align=center style=&#39;margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal&#39;&gt;&lt;span style=&#39;font-size:10.0pt;
+  font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+  color:#00B050;&#39;&gt;All&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;</sawd:HTML>
+      </sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	
+	
+</sawd:dashboardPage>

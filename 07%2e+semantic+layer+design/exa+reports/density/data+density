@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;B - Sample Sales Exa&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb46bb6defbfcb236">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P1  Product&quot;}</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Products</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Dimension 1</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c0787d5e450ba9cf6">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim02}{&quot;Offices&quot;.&quot;D1  Office&quot;}</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Offices</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Dimension 2</saw:text></saw:caption></saw:columnHeading></saw:column>
+         
+         <saw:column xsi:type="saw:regularColumn" columnID="cbce05a094730ab83">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;@{Dim01}{&quot;Products&quot;.&quot;P1  Product&quot;}&#39;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Names</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Dimension 1</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb64b7af950f57551">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;@{Dim02}{&quot;Offices&quot;.&quot;D1  Office&quot;}&#39;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Names</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Dimension 2</saw:text></saw:caption></saw:columnHeading></saw:column>
+         
+         <saw:column xsi:type="saw:regularColumn" columnID="c36dd337dc841a3d7">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c0601b930d15017aa">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">COUNT(DISTINCT @{Dim01}{&quot;Products&quot;.&quot;P1  Product&quot;}) *  COUNT(DISTINCT @{Dim02}{&quot;Offices&quot;.&quot;D1  Office&quot;})</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Possible Intersections</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c0549afee54a68797">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">CAST(max(rcount(1)) AS DOUBLE)/(COUNT(DISTINCT @{Dim01}{&quot;Products&quot;.&quot;P1  Product&quot;})* COUNT(DISTINCT @{Dim02}{&quot;Offices&quot;.&quot;D1  Office&quot;}))*100</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:percent" minDigits="1" maxDigits="1" commas="true" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Density</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce9798f72182a3bfd">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">max(rcount(1))</sawx:expr></saw:columnFormula>
+            <saw:tableHeading/>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Actual Intersections</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb0ef4843363c82a1">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">COUNT(DISTINCT @{Dim01}{&quot;Products&quot;.&quot;P1  Product&quot;})
+</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Distinct Dim 1</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c563a0b26eccd195e">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">COUNT(DISTINCT @{Dim02}{&quot;Offices&quot;.&quot;D1  Office&quot;})</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Products</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Distinct Dim 2</saw:text></saw:caption></saw:columnHeading></saw:column>
+         </saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="2">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!2" colSpan="2">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec hAlign="left" paddingLeft="0px" paddingRight="0px" paddingTop="0px" paddingBottom="0px"/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="dvtgauge!1" rowSpan="2">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!3">
+                  <saw:displayFormat>
+                     <saw:formatSpec hAlign="left" paddingLeft="0px" paddingRight="0px" paddingTop="0px" paddingBottom="0px"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" autoPreview="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cbce05a094730ab83"/>
+                  <saw:edgeLayer type="column" columnID="cb0ef4843363c82a1"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!2" autoPreview="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c0601b930d15017aa"/>
+                  <saw:edgeLayer type="column" columnID="ce9798f72182a3bfd"/>
+                  <saw:edgeLayer type="column" columnID="c0549afee54a68797"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:dvtgauge" name="dvtgauge!1" autoPreview="true">
+         <saw:display type="gauge" subtype="default" renderFormat="default" mode="online">
+            <saw:style effect="2d"/></saw:display>
+         <saw:selections>
+            <saw:categories/>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column>
+                  <saw:columnRef columnID="c0549afee54a68797"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:measureLabels/></saw:seriesGenerators>
+            <saw:sections/></saw:selections>
+         <saw:gaugeProperties gaugeSize="medium" showBorder="false" width="150" height="150" bgColor="" borderColor="">
+            <saw:gaugePointers>
+               <saw:gaugePointer>
+                  <saw:pointerFormat color="" needleStyle="needle"/>
+                  <saw:columnRef columnID="c36dd337dc841a3d7"/></saw:gaugePointer>
+               <saw:gaugePointer>
+                  <saw:pointerFormat needleStyle="needle" color=""/>
+                  <saw:columnRef columnID="c0549afee54a68797"/></saw:gaugePointer>
+               <saw:gaugePointer>
+                  <saw:pointerFormat needleStyle="needle"/>
+                  <saw:columnRef columnID="cb0ef4843363c82a1"/></saw:gaugePointer>
+               <saw:gaugePointer>
+                  <saw:pointerFormat needleStyle="needle"/>
+                  <saw:columnRef columnID="c563a0b26eccd195e"/></saw:gaugePointer>
+               </saw:gaugePointers>
+            <saw:scale labelsDisplay="default" defaultTicks="true" scaleDefault="false">
+               <saw:scaleMin>
+                  <sawx:expr xsi:type="xsd:decimal">0</sawx:expr></saw:scaleMin>
+               <saw:scaleMax>
+                  <sawx:expr xsi:type="xsd:decimal">100</sawx:expr></saw:scaleMax></saw:scale>
+            <saw:gaugeRanges>
+               <saw:colorRange color="#FFCC99" rangeType="dynamic" labelType="dynamic">
+                  <saw:markerLabel>
+                     <saw:caption captionID="cp0">
+                        <saw:text>0</saw:text></saw:caption></saw:markerLabel>
+                  <saw:rangeLow>
+                     <sawx:expr xsi:type="xsd:decimal">0</sawx:expr></saw:rangeLow>
+                  <saw:rangeHigh>
+                     <sawx:expr xsi:type="xsd:decimal">20</sawx:expr></saw:rangeHigh></saw:colorRange>
+               <saw:colorRange color="#F1E87D" rangeType="custom" labelType="dynamic">
+                  <saw:markerLabel>
+                     <saw:caption captionID="cp1">
+                        <saw:text>0</saw:text></saw:caption></saw:markerLabel>
+                  <saw:rangeLow>
+                     <sawx:expr xsi:type="xsd:decimal">20</sawx:expr></saw:rangeLow>
+                  <saw:rangeHigh>
+                     <sawx:expr xsi:type="xsd:decimal">40</sawx:expr></saw:rangeHigh></saw:colorRange>
+               <saw:colorRange color="#CCFFCC" rangeType="custom">
+                  <saw:markerLabel>
+                     <saw:caption captionID="cp2">
+                        <saw:text>Critical</saw:text></saw:caption></saw:markerLabel>
+                  <saw:rangeLow>
+                     <sawx:expr xsi:type="xsd:decimal">40</sawx:expr></saw:rangeLow>
+                  <saw:rangeHigh>
+                     <sawx:expr xsi:type="xsd:decimal">60</sawx:expr></saw:rangeHigh></saw:colorRange>
+               <saw:colorRange color="#7EB679" rangeType="custom">
+                  <saw:markerLabel>
+                     <saw:caption captionID="cp3">
+                        <saw:text>Warning</saw:text></saw:caption></saw:markerLabel>
+                  <saw:rangeLow>
+                     <sawx:expr xsi:type="xsd:decimal">60</sawx:expr></saw:rangeLow>
+                  <saw:rangeHigh>
+                     <sawx:expr xsi:type="xsd:decimal">80</sawx:expr></saw:rangeHigh></saw:colorRange>
+               <saw:colorRange color="#336633" rangeType="custom">
+                  <saw:markerLabel>
+                     <saw:caption captionID="cp4">
+                        <saw:text>Good</saw:text></saw:caption></saw:markerLabel>
+                  <saw:rangeLow>
+                     <sawx:expr xsi:type="xsd:decimal">80</sawx:expr></saw:rangeLow>
+                  <saw:rangeHigh/></saw:colorRange></saw:gaugeRanges>
+            <saw:gaugeGoal goalType="high"/>
+            <saw:typeSpecificFormat thickness="1"/>
+            <saw:gaugeTitles>
+               <saw:gaugeTitle name="footer">
+                  <saw:caption>
+                     <saw:text>@4</saw:text></saw:caption></saw:gaugeTitle></saw:gaugeTitles></saw:gaugeProperties>
+         <saw:gaugeCanvasFormat gaugesPerRow="3" showGradient="true" useMeasureNameAsTitle="false" bgColor="" borderColor="">
+            <saw:gaugeTitle name="title">
+               <saw:caption>
+                  <saw:text/></saw:caption></saw:gaugeTitle></saw:gaugeCanvasFormat>
+         <saw:legendFormat transparentFill="true" position="none"/></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!3" autoPreview="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cb64b7af950f57551"/>
+                  <saw:edgeLayer type="column" columnID="c563a0b26eccd195e"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!4" autoPreview="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="ca54d04f5c5bd525e"/>
+                  <saw:edgeLayer type="column" columnID="c6cc3dfbd5eeb2e2d"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+            <saw:displayFormat/></saw:logoFormat><saw:createdTime>
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>				
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view></saw:views></saw:report>

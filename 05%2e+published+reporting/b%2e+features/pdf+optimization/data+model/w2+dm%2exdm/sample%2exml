@@ -1,0 +1,4023 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<root>
+<w2_root>
+<control_number>8126103</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0029</ssn>
+<emp_name>Kelly</emp_name>
+<last_name>Rowland</last_name>
+<emp_suffix/>
+<employee_address>662 Plenton Lane
+Fairplay CO 80456</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CO</state1_code>
+<state1_ein>1337235000</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>172</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended>yes</amended>
+<amended_date>10-jan-2008</amended_date>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126045</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-04-0061</ssn>
+<emp_name>Natalie </emp_name>
+<last_name>2005TermNY</last_name>
+<emp_suffix/>
+<employee_address>674 Tower Street
+Cambria Heights NY 11227</employee_address>
+<wages_tips_compensation>8000</wages_tips_compensation>
+<fit_withheld>1312.84</fit_withheld>
+<ss_wages>8000</ss_wages>
+<ss_withheld>496</ss_withheld>
+<med_wages>8000</med_wages>
+<med_withheld>116</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>NY SDI</box14_codea>
+<box14_meaninga>5.2</box14_meaninga>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>NY</state1_code>
+<state1_ein>8413326776</state1_ein>
+<state1_wages>8000</state1_wages>
+<state1_tax>402.2</state1_tax>
+<local1_wages>8000</local1_wages>
+<local1_tax>239.68</local1_tax>
+<locality1>NYC</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126051</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-04-0062</ssn>
+<emp_name>Oliver </emp_name>
+<last_name>2005TermOH</last_name>
+<emp_suffix/>
+<employee_address>955 Leverwood Street
+Fairlawn OH 44398</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>98.84</state1_tax>
+<local1_wages>4000</local1_wages>
+<local1_tax>40</local1_tax>
+<locality1>Findlay</locality1>
+<state2_code>OH</state2_code>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages>4000</local2_wages>
+<local2_tax>40</local2_tax>
+<locality2>Fairlawn</locality2>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126101</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>234-77-5881</ssn>
+<emp_name>forty four </emp_name>
+<last_name>ASHT_Employee 44</last_name>
+<emp_suffix/>
+<employee_address>4
+San Mateo CA 94066</employee_address>
+<wages_tips_compensation>5226</wages_tips_compensation>
+<fit_withheld>791.13</fit_withheld>
+<ss_wages>5226</ss_wages>
+<ss_withheld>324.01</ss_withheld>
+<med_wages>5226</med_wages>
+<med_withheld>75.78</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>CASDI</box14_codea>
+<box14_meaninga>31.36</box14_meaninga>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CA</state1_code>
+<state1_ein>42676924</state1_ein>
+<state1_wages>5226</state1_wages>
+<state1_tax>188.52</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126069</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>777-78-7880</ssn>
+<emp_name>One </emp_name>
+<last_name>AS_New Exception</last_name>
+<emp_suffix/>
+<employee_address>exception 1
+Aberdeen OH 45101</employee_address>
+<wages_tips_compensation>1000</wages_tips_compensation>
+<fit_withheld>60.17</fit_withheld>
+<ss_wages>500</ss_wages>
+<ss_withheld>31</ss_withheld>
+<med_wages>500</med_wages>
+<med_withheld>7.25</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>1000</state1_wages>
+<state1_tax>26.06</state1_tax>
+<local1_wages>1000</local1_wages>
+<local1_tax>21</local1_tax>
+<locality1>Cincinnati</locality1>
+<state2_code>OH</state2_code>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages>1000</local2_wages>
+<local2_tax>5</local2_tax>
+<locality2>Aberdeen</locality2>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126075</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>777-78-7881</ssn>
+<emp_name>Two </emp_name>
+<last_name>AS_New Exception</last_name>
+<emp_suffix/>
+<employee_address>Two
+Acampo CA 95220</employee_address>
+<wages_tips_compensation>8000</wages_tips_compensation>
+<fit_withheld>1039.71</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CA</state1_code>
+<state1_ein>42676924</state1_ein>
+<state1_wages>8000</state1_wages>
+<state1_tax>188.32</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code>OH</state2_code>
+<state2_ein>523809713</state2_ein>
+<state2_wages>8000</state2_wages>
+<state2_tax>461.62</state2_tax>
+<local2_wages>8000</local2_wages>
+<local2_tax>168</local2_tax>
+<locality2>Cincinnati</locality2>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126073</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>233-32-3322</ssn>
+<emp_name>SuppCalc T </emp_name>
+<last_name>AZ</last_name>
+<emp_suffix/>
+<employee_address>3252 SuppTest
+Avondale-Goodyear AZ 85323</employee_address>
+<wages_tips_compensation>4320</wages_tips_compensation>
+<fit_withheld>287.52</fit_withheld>
+<ss_wages>4920</ss_wages>
+<ss_withheld>305.04</ss_withheld>
+<med_wages>4920</med_wages>
+<med_withheld>71.34</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care>1200</dependent_care>
+<non_qual_plan>108</non_qual_plan>
+<stat_employee>N</stat_employee>
+<retirement_plan>Y</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea>B</box12_codea>
+<box12_meaninga>180</box12_meaninga>
+<box12_codeb>C</box12_codeb>
+<box12_meaningb>120</box12_meaningb>
+<box12_codec>D</box12_codec>
+<box12_meaningc>600</box12_meaningc>
+<box12_coded>E</box12_coded>
+<box12_meaningd>120</box12_meaningd>
+<state1_code>AZ</state1_code>
+<state1_ein>841332677</state1_ein>
+<state1_wages>4320</state1_wages>
+<state1_tax>28.8</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126073</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>233-32-3322</ssn>
+<emp_name>SuppCalc T </emp_name>
+<last_name>AZ</last_name>
+<emp_suffix/>
+<employee_address>3252 SuppTest
+Avondale-Goodyear AZ 85323</employee_address>
+<wages_tips_compensation/>
+<fit_withheld/>
+<ss_wages/>
+<ss_withheld/>
+<med_wages/>
+<med_withheld/>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea>F</box12_codea>
+<box12_meaninga>144</box12_meaninga>
+<box12_codeb>G</box12_codeb>
+<box12_meaningb>168</box12_meaningb>
+<box12_codec>H</box12_codec>
+<box12_meaningc>192</box12_meaningc>
+<box12_coded>M</box12_coded>
+<box12_meaningd>84</box12_meaningd>
+<state1_code/>
+<state1_ein/>
+<state1_wages/>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126073</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>233-32-3322</ssn>
+<emp_name>SuppCalc T </emp_name>
+<last_name>AZ</last_name>
+<emp_suffix/>
+<employee_address>3252 SuppTest
+Avondale-Goodyear AZ 85323</employee_address>
+<wages_tips_compensation/>
+<fit_withheld/>
+<ss_wages/>
+<ss_withheld/>
+<med_wages/>
+<med_withheld/>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea>N</box12_codea>
+<box12_meaninga>108</box12_meaninga>
+<box12_codeb>R</box12_codeb>
+<box12_meaningb>96</box12_meaningb>
+<box12_codec>S</box12_codec>
+<box12_meaningc>156</box12_meaningc>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code/>
+<state1_ein/>
+<state1_wages/>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126079</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>777-78-7882</ssn>
+<emp_name>One </emp_name>
+<last_name>AS_All New</last_name>
+<emp_suffix/>
+<employee_address>gen
+America IL 62996</employee_address>
+<wages_tips_compensation>2000</wages_tips_compensation>
+<fit_withheld>341.42</fit_withheld>
+<ss_wages>2000</ss_wages>
+<ss_withheld>124</ss_withheld>
+<med_wages>2000</med_wages>
+<med_withheld>29</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>IL</state1_code>
+<state1_ein>8413326770001</state1_ein>
+<state1_wages>2000</state1_wages>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code>WV</state2_code>
+<state2_ein>841332677001</state2_ein>
+<state2_wages>2000</state2_wages>
+<state2_tax>104</state2_tax>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126049</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>555-06-0026</ssn>
+<emp_name>Bill </emp_name>
+<last_name>Box14test2006</last_name>
+<emp_suffix/>
+<employee_address>435 6th Street
+Fairview SD 57027</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code/>
+<state1_ein/>
+<state1_wages/>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126021</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>158-00-4717</ssn>
+<emp_name>SHELLEEN </emp_name>
+<last_name>ASHT_Employee 2</last_name>
+<emp_suffix/>
+<employee_address>4
+San Mateo CA 94066</employee_address>
+<wages_tips_compensation>3692.3</wages_tips_compensation>
+<fit_withheld>302.96</fit_withheld>
+<ss_wages>1846.15</ss_wages>
+<ss_withheld>114.46</ss_withheld>
+<med_wages>1846.15</med_wages>
+<med_withheld>26.77</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CA</state1_code>
+<state1_ein>42676924</state1_ein>
+<state1_wages>3692.3</state1_wages>
+<state1_tax>27.08</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code>OH</state2_code>
+<state2_ein>523809713</state2_ein>
+<state2_wages>3692.3</state2_wages>
+<state2_tax>128.16</state2_tax>
+<local2_wages>3692.3</local2_wages>
+<local2_tax>77.54</local2_tax>
+<locality2>Cincinnati</locality2>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126001</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>642-11-6834</ssn>
+<emp_name>three </emp_name>
+<last_name>ASHT_Employee 3</last_name>
+<emp_suffix/>
+<employee_address>4444
+San Mateo CA 94066</employee_address>
+<wages_tips_compensation>3692.3</wages_tips_compensation>
+<fit_withheld>302.96</fit_withheld>
+<ss_wages>1846.15</ss_wages>
+<ss_withheld>114.46</ss_withheld>
+<med_wages>1846.15</med_wages>
+<med_withheld>26.77</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CA</state1_code>
+<state1_ein>42676924</state1_ein>
+<state1_wages>3692.3</state1_wages>
+<state1_tax>27.08</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code>OH</state2_code>
+<state2_ein>523809713</state2_ein>
+<state2_wages>3692.3</state2_wages>
+<state2_tax>128.16</state2_tax>
+<local2_wages>3692.3</local2_wages>
+<local2_tax>77.54</local2_tax>
+<locality2>Cincinnati</locality2>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126105</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0030</ssn>
+<emp_name>Diane </emp_name>
+<last_name>DC-2004NewER-SUI</last_name>
+<emp_suffix/>
+<employee_address>642 Sitris Lane
+Eagle DC 20000</employee_address>
+<wages_tips_compensation>8000</wages_tips_compensation>
+<fit_withheld>1312.84</fit_withheld>
+<ss_wages>8000</ss_wages>
+<ss_withheld>496</ss_withheld>
+<med_wages>8000</med_wages>
+<med_withheld>116</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>DC</state1_code>
+<state1_ein>3000000050819</state1_ein>
+<state1_wages>8000</state1_wages>
+<state1_tax>478.05</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126093</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>100-10-1001</ssn>
+<emp_name> </emp_name>
+<last_name>Indiana 401k Test</last_name>
+<emp_suffix/>
+<employee_address>Address Line 1
+Abington IN 47330</employee_address>
+<wages_tips_compensation>14737.5</wages_tips_compensation>
+<fit_withheld>3322.08</fit_withheld>
+<ss_wages>14887.5</ss_wages>
+<ss_withheld>923.03</ss_withheld>
+<med_wages>14887.5</med_wages>
+<med_withheld>215.87</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>Y</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea>D</box12_codea>
+<box12_meaninga>150</box12_meaninga>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>IN</state1_code>
+<state1_ein>0006772153001</state1_ein>
+<state1_wages>14737.5</state1_wages>
+<state1_tax>501.09</state1_tax>
+<local1_wages>14737.5</local1_wages>
+<local1_tax>221.07</local1_tax>
+<locality1>89C Wayne</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126047</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0031</ssn>
+<emp_name>Leslie </emp_name>
+<last_name>IA-2004NewER-SUI</last_name>
+<emp_suffix/>
+<employee_address>632 Leaser Street
+Wadena IA 52169</employee_address>
+<wages_tips_compensation>6000</wages_tips_compensation>
+<fit_withheld>812.84</fit_withheld>
+<ss_wages>6000</ss_wages>
+<ss_withheld>372</ss_withheld>
+<med_wages>6000</med_wages>
+<med_withheld>87</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>IA</state1_code>
+<state1_ein>8413326770010</state1_ein>
+<state1_wages>6000</state1_wages>
+<state1_tax>252</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126053</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>555-07-0044</ssn>
+<emp_name>Cinthia </emp_name>
+<last_name>Candidate</last_name>
+<emp_suffix/>
+<employee_address>65314 5th Street
+Hartman CO 81043</employee_address>
+<wages_tips_compensation>5454.55</wages_tips_compensation>
+<fit_withheld>848.27</fit_withheld>
+<ss_wages>5454.55</ss_wages>
+<ss_withheld>338.18</ss_withheld>
+<med_wages>5454.55</med_wages>
+<med_withheld>79.09</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CO</state1_code>
+<state1_ein>1337235000</state1_ein>
+<state1_wages>5454.55</state1_wages>
+<state1_tax>242</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126067</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>777-33-1234</ssn>
+<emp_name>New filing status - A </emp_name>
+<last_name>CT 2006</last_name>
+<emp_suffix/>
+<employee_address>123 Any Street
+Stamford CT 06903</employee_address>
+<wages_tips_compensation>10000</wages_tips_compensation>
+<fit_withheld>1812.84</fit_withheld>
+<ss_wages>10000</ss_wages>
+<ss_withheld>620</ss_withheld>
+<med_wages>10000</med_wages>
+<med_withheld>145</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CT</state1_code>
+<state1_ein>873959100</state1_ein>
+<state1_wages>10000</state1_wages>
+<state1_tax>466.68</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126039</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>777-33-1237</ssn>
+<emp_name>New filing status - D </emp_name>
+<last_name>CT 2006</last_name>
+<emp_suffix/>
+<employee_address>123 Any Street
+Stamford CT 06903</employee_address>
+<wages_tips_compensation>10000</wages_tips_compensation>
+<fit_withheld>1812.84</fit_withheld>
+<ss_wages>10000</ss_wages>
+<ss_withheld>620</ss_withheld>
+<med_wages>10000</med_wages>
+<med_withheld>145</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CT</state1_code>
+<state1_ein>873959100</state1_ein>
+<state1_wages>10000</state1_wages>
+<state1_tax>466.68</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126041</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>Applied For</ssn>
+<emp_name>Ellie</emp_name>
+<last_name>Smith</last_name>
+<emp_suffix/>
+<employee_address>7543 Havenwood Avenue
+La Grange GA 30261</employee_address>
+<wages_tips_compensation>3600</wages_tips_compensation>
+<fit_withheld>411.52</fit_withheld>
+<ss_wages>3600</ss_wages>
+<ss_withheld>223.2</ss_withheld>
+<med_wages>3600</med_wages>
+<med_withheld>52.2</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>GA</state1_code>
+<state1_ein>1970607QI</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>185.32</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126029</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>777-33-1238</ssn>
+<emp_name>Mike</emp_name>
+<last_name>Simonz</last_name>
+<emp_suffix/>
+<employee_address>123 Any Street
+Stamford CT 06607</employee_address>
+<wages_tips_compensation>10000</wages_tips_compensation>
+<fit_withheld>1812.84</fit_withheld>
+<ss_wages>10000</ss_wages>
+<ss_withheld>620</ss_withheld>
+<med_wages>10000</med_wages>
+<med_withheld>145</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CT</state1_code>
+<state1_ein>873959100</state1_ein>
+<state1_wages>10000</state1_wages>
+<state1_tax>466.68</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126063</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>777-33-1235</ssn>
+<emp_name>New filing status - B </emp_name>
+<last_name>CT 2006</last_name>
+<emp_suffix/>
+<employee_address>123 Any Street
+Stamford CT 06903</employee_address>
+<wages_tips_compensation>10000</wages_tips_compensation>
+<fit_withheld>1812.84</fit_withheld>
+<ss_wages>10000</ss_wages>
+<ss_withheld>620</ss_withheld>
+<med_wages>10000</med_wages>
+<med_withheld>145</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CT</state1_code>
+<state1_ein>873959100</state1_ein>
+<state1_wages>10000</state1_wages>
+<state1_tax>402</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126027</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0025</ssn>
+<emp_name>Kylie </emp_name>
+<last_name>CO-SheridanRES</last_name>
+<emp_suffix/>
+<employee_address>8566 Quailton Road
+Sheridan CO 80110</employee_address>
+<wages_tips_compensation>8000</wages_tips_compensation>
+<fit_withheld>1312.84</fit_withheld>
+<ss_wages>8000</ss_wages>
+<ss_withheld>496</ss_withheld>
+<med_wages>8000</med_wages>
+<med_withheld>116</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CO</state1_code>
+<state1_ein>1337235000</state1_ein>
+<state1_wages>8000</state1_wages>
+<state1_tax>356</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126037</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>777-33-1236</ssn>
+<emp_name>New filing status - C </emp_name>
+<last_name>CT 2006</last_name>
+<emp_suffix/>
+<employee_address>123 Any Street
+Stamford CT 06903</employee_address>
+<wages_tips_compensation>10000</wages_tips_compensation>
+<fit_withheld>1812.84</fit_withheld>
+<ss_wages>10000</ss_wages>
+<ss_withheld>620</ss_withheld>
+<med_wages>10000</med_wages>
+<med_withheld>145</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CT</state1_code>
+<state1_ein>873959100</state1_ein>
+<state1_wages>10000</state1_wages>
+<state1_tax>300</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126061</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0037</ssn>
+<emp_name>Rebecca </emp_name>
+<last_name>OH-RichmondDaleSDT</last_name>
+<emp_suffix/>
+<employee_address>742 Nethern Road
+Richmond Dale OH 45673</employee_address>
+<wages_tips_compensation>12000</wages_tips_compensation>
+<fit_withheld>1156.42</fit_withheld>
+<ss_wages>6000</ss_wages>
+<ss_withheld>372</ss_withheld>
+<med_wages>6000</med_wages>
+<med_withheld>87</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>12000</state1_wages>
+<state1_tax>475.36</state1_tax>
+<local1_wages>12000</local1_wages>
+<local1_tax>252</local1_tax>
+<locality1>Cincinnati</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126095</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0032</ssn>
+<emp_name>Nora </emp_name>
+<last_name>OH-2004NewER-SUI</last_name>
+<emp_suffix/>
+<employee_address>885 Opel Lane
+Wellston OH 45692</employee_address>
+<wages_tips_compensation>6000</wages_tips_compensation>
+<fit_withheld>812.84</fit_withheld>
+<ss_wages>6000</ss_wages>
+<ss_withheld>372</ss_withheld>
+<med_wages>6000</med_wages>
+<med_withheld>87</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>6000</state1_wages>
+<state1_tax>183.56</state1_tax>
+<local1_wages>6000</local1_wages>
+<local1_tax>135</local1_tax>
+<locality1>Dayton</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126081</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0028</ssn>
+<emp_name>Julia </emp_name>
+<last_name>OH-MillersportRES</last_name>
+<emp_suffix/>
+<employee_address>9442 Solice Lane
+Millersport OH 43046</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>98.84</state1_tax>
+<local1_wages>4000</local1_wages>
+<local1_tax>50</local1_tax>
+<locality1>2308 WALNUT T</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126107</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0036</ssn>
+<emp_name>Lisa </emp_name>
+<last_name>OH-LondonderrySDT</last_name>
+<emp_suffix/>
+<employee_address>727 Hiller Street
+Londonderry OH 45647</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>235.76</fit_withheld>
+<ss_wages>2000</ss_wages>
+<ss_withheld>124</ss_withheld>
+<med_wages>2000</med_wages>
+<med_withheld>29</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>98.84</state1_tax>
+<local1_wages>4000</local1_wages>
+<local1_tax>84</local1_tax>
+<locality1>Cincinnati</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126005</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0027</ssn>
+<emp_name>Sandusky </emp_name>
+<last_name>OH-ForestRES</last_name>
+<emp_suffix/>
+<employee_address>7654 Jilletine Road
+Forest OH 45843</employee_address>
+<wages_tips_compensation>6000</wages_tips_compensation>
+<fit_withheld>812.84</fit_withheld>
+<ss_wages>6000</ss_wages>
+<ss_withheld>372</ss_withheld>
+<med_wages>6000</med_wages>
+<med_withheld>87</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>6000</state1_wages>
+<state1_tax>183.56</state1_tax>
+<local1_wages>6000</local1_wages>
+<local1_tax>75</local1_tax>
+<locality1>Forest</locality1>
+<state2_code>OH</state2_code>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages>6000</local2_wages>
+<local2_tax>75</local2_tax>
+<locality2>8803 UPPER SA</locality2>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126059</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0035</ssn>
+<emp_name>Carmen </emp_name>
+<last_name>OH-ChillicotheSDT</last_name>
+<emp_suffix/>
+<employee_address>633 Jenson Court
+Chillicothe OH 45601</employee_address>
+<wages_tips_compensation>8000</wages_tips_compensation>
+<fit_withheld>656.42</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>8000</state1_wages>
+<state1_tax>277.68</state1_tax>
+<local1_wages>8000</local1_wages>
+<local1_tax>168</local1_tax>
+<locality1>Cincinnati</locality1>
+<state2_code>OH</state2_code>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages>8000</local2_wages>
+<local2_tax>65</local2_tax>
+<locality2>Chillicothe</locality2>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126043</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>555-06-0007</ssn>
+<emp_name>Nolan </emp_name>
+<last_name>NoPaymentMethodSpecified</last_name>
+<emp_suffix/>
+<employee_address>7653 Palmer Avenue
+Oak Hill NY 12460</employee_address>
+<wages_tips_compensation>8000</wages_tips_compensation>
+<fit_withheld>1312.84</fit_withheld>
+<ss_wages>8000</ss_wages>
+<ss_withheld>496</ss_withheld>
+<med_wages>8000</med_wages>
+<med_withheld>116</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>NY SDI</box14_codea>
+<box14_meaninga>5.2</box14_meaninga>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>NY</state1_code>
+<state1_ein>8413326776</state1_ein>
+<state1_wages>8000</state1_wages>
+<state1_tax>402.2</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126031</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>555-06-0015</ssn>
+<emp_name>Nicole </emp_name>
+<last_name>NJdippTest</last_name>
+<emp_suffix/>
+<employee_address>624 Pine Road
+Hackettstown NJ 07840</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>UI/HC/WF</box14_codea>
+<box14_meaninga>17</box14_meaninga>
+<box14_codeb>NJDI</box14_codeb>
+<box14_meaningb>20</box14_meaningb>
+<box14_codec>DI P.P. # 1223334444</box14_codec>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>NJ</state1_code>
+<state1_ein>841332677000</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>63.32</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126015</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0026</ssn>
+<emp_name>Richard </emp_name>
+<last_name>OH-AberdeenRES</last_name>
+<emp_suffix/>
+<employee_address>7865 Driffle Court
+Aberdeen OH 45101</employee_address>
+<wages_tips_compensation>12000</wages_tips_compensation>
+<fit_withheld>2312.84</fit_withheld>
+<ss_wages>12000</ss_wages>
+<ss_withheld>744</ss_withheld>
+<med_wages>12000</med_wages>
+<med_withheld>174</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>12000</state1_wages>
+<state1_tax>475.36</state1_tax>
+<local1_wages>12000</local1_wages>
+<local1_tax>120</local1_tax>
+<locality1>Aberdeen</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126035</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>555-06-0008</ssn>
+<emp_name>Noel </emp_name>
+<last_name>NachaPayMethod</last_name>
+<emp_suffix/>
+<employee_address>3624 Buckner Place
+La Fayette NY 13084</employee_address>
+<wages_tips_compensation>5000</wages_tips_compensation>
+<fit_withheld>589.4</fit_withheld>
+<ss_wages>5000</ss_wages>
+<ss_withheld>310</ss_withheld>
+<med_wages>5000</med_wages>
+<med_withheld>72.5</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>NY SDI</box14_codea>
+<box14_meaninga>6.5</box14_meaninga>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>NY</state1_code>
+<state1_ein>8413326776</state1_ein>
+<state1_wages>5000</state1_wages>
+<state1_tax>166.15</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8125997</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>088-27-1970</ssn>
+<emp_name>Boyd R </emp_name>
+<last_name>Ohio</last_name>
+<emp_suffix/>
+<employee_address>4990 101st Street
+Bar Code OH 43301</employee_address>
+<wages_tips_compensation>40</wages_tips_compensation>
+<fit_withheld/>
+<ss_wages>40</ss_wages>
+<ss_withheld>2.48</ss_withheld>
+<med_wages>40</med_wages>
+<med_withheld>.58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>40</state1_wages>
+<state1_tax/>
+<local1_wages>40</local1_wages>
+<local1_tax>.7</local1_tax>
+<locality1>Marion</locality1>
+<state2_code>WV</state2_code>
+<state2_ein>841332677001</state2_ein>
+<state2_wages>40</state2_wages>
+<state2_tax>2</state2_tax>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126097</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0038</ssn>
+<emp_name>Pattie </emp_name>
+<last_name>PA-LwrSouthamptonTwpRES</last_name>
+<emp_suffix/>
+<employee_address>6211 Castlemount Drive
+Lower Southampton PA 19047</employee_address>
+<wages_tips_compensation>6000</wages_tips_compensation>
+<fit_withheld>812.84</fit_withheld>
+<ss_wages>6000</ss_wages>
+<ss_withheld>372</ss_withheld>
+<med_wages>6000</med_wages>
+<med_withheld>87</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>6000</state1_wages>
+<state1_tax>184.2</state1_tax>
+<local1_wages>6000</local1_wages>
+<local1_tax>60</local1_tax>
+<locality1>Lower Southampton</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126099</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0039</ssn>
+<emp_name>Heather </emp_name>
+<last_name>PA-LwrSouthamptonTwpNR</last_name>
+<emp_suffix/>
+<employee_address>724 Cloverton Way
+Orlando FL 32800</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>122.8</state1_tax>
+<local1_wages>4000</local1_wages>
+<local1_tax>40</local1_tax>
+<locality1>Lower Southampton</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126065</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>100-10-1111</ssn>
+<emp_name> </emp_name>
+<last_name>Ohio-W2 Test</last_name>
+<emp_suffix/>
+<employee_address>Address Line 1
+Dayton OH 45390</employee_address>
+<wages_tips_compensation>1400</wages_tips_compensation>
+<fit_withheld>47.92</fit_withheld>
+<ss_wages>700</ss_wages>
+<ss_withheld>43.4</ss_withheld>
+<med_wages>700</med_wages>
+<med_withheld>10.15</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>1400</state1_wages>
+<state1_tax>13.88</state1_tax>
+<local1_wages>1400</local1_wages>
+<local1_tax>2.12</local1_tax>
+<locality1>Dayton</locality1>
+<state2_code>OH</state2_code>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages>1400</local2_wages>
+<local2_tax>29.4</local2_tax>
+<locality2>Cincinnati</locality2>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126057</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>100-10-1114</ssn>
+<emp_name> </emp_name>
+<last_name>Ohio Testing 2</last_name>
+<emp_suffix/>
+<employee_address>Address Line 1
+Dayton OH 45390</employee_address>
+<wages_tips_compensation>3000</wages_tips_compensation>
+<fit_withheld>321.52</fit_withheld>
+<ss_wages>3000</ss_wages>
+<ss_withheld>186</ss_withheld>
+<med_wages>3000</med_wages>
+<med_withheld>43.5</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>3000</state1_wages>
+<state1_tax>58.84</state1_tax>
+<local1_wages>3000</local1_wages>
+<local1_tax>67.52</local1_tax>
+<locality1>Dayton</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8125995</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0008</ssn>
+<emp_name>Brandon</emp_name>
+<last_name>Espinoza</last_name>
+<emp_suffix/>
+<employee_address>556 Ulandier Drive
+Orlando FL 32800</employee_address>
+<wages_tips_compensation>8000</wages_tips_compensation>
+<fit_withheld>1312.84</fit_withheld>
+<ss_wages>8000</ss_wages>
+<ss_withheld>496</ss_withheld>
+<med_wages>8000</med_wages>
+<med_withheld>116</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>8000</state1_wages>
+<state1_tax>245.6</state1_tax>
+<local1_wages>8000</local1_wages>
+<local1_tax>80</local1_tax>
+<locality1>New Buffalo</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126071</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>100-10-1113</ssn>
+<emp_name>Joe</emp_name>
+<last_name>Thomas</last_name>
+<emp_suffix/>
+<employee_address>Address Line 1
+Dayton OH 45390</employee_address>
+<wages_tips_compensation>5000</wages_tips_compensation>
+<fit_withheld>621.52</fit_withheld>
+<ss_wages>5000</ss_wages>
+<ss_withheld>310</ss_withheld>
+<med_wages>5000</med_wages>
+<med_withheld>72.5</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>5000</state1_wages>
+<state1_tax>141.2</state1_tax>
+<local1_wages>5000</local1_wages>
+<local1_tax>112.52</local1_tax>
+<locality1>Dayton</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126083</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>100-10-1112</ssn>
+<emp_name> </emp_name>
+<last_name>Ohio-W2-Org(All States GRE)</last_name>
+<emp_suffix/>
+<employee_address>Address Line 1
+Dayton OH 45390</employee_address>
+<wages_tips_compensation>3800</wages_tips_compensation>
+<fit_withheld>220.76</fit_withheld>
+<ss_wages>1900</ss_wages>
+<ss_withheld>117.8</ss_withheld>
+<med_wages>1900</med_wages>
+<med_withheld>27.55</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>3800</state1_wages>
+<state1_tax>90.36</state1_tax>
+<local1_wages>3800</local1_wages>
+<local1_tax>5.72</local1_tax>
+<locality1>Dayton</locality1>
+<state2_code>OH</state2_code>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages>3800</local2_wages>
+<local2_tax>79.8</local2_tax>
+<locality2>Cincinnati</locality2>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126003</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-44-0075</ssn>
+<emp_name>WVAWork </emp_name>
+<last_name>OhioLive</last_name>
+<emp_suffix/>
+<employee_address>7009 Green Street
+Aberdeen OH 45101</employee_address>
+<wages_tips_compensation>3500</wages_tips_compensation>
+<fit_withheld>381.52</fit_withheld>
+<ss_wages>3700</ss_wages>
+<ss_withheld>229.4</ss_withheld>
+<med_wages>3700</med_wages>
+<med_withheld>53.65</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care>400</dependent_care>
+<non_qual_plan>64</non_qual_plan>
+<stat_employee>N</stat_employee>
+<retirement_plan>Y</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea>B</box12_codea>
+<box12_meaninga>48</box12_meaninga>
+<box12_codeb>C</box12_codeb>
+<box12_meaningb>100</box12_meaningb>
+<box12_codec>D</box12_codec>
+<box12_meaningc>200</box12_meaningc>
+<box12_coded>E</box12_coded>
+<box12_meaningd>20</box12_meaningd>
+<state1_code>OH</state1_code>
+<state1_ein>523809713</state1_ein>
+<state1_wages>3500</state1_wages>
+<state1_tax/>
+<local1_wages>3500</local1_wages>
+<local1_tax>34</local1_tax>
+<locality1>Aberdeen</locality1>
+<state2_code>WV</state2_code>
+<state2_ein>841332677001</state2_ein>
+<state2_wages>3500</state2_wages>
+<state2_tax>126</state2_tax>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126003</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-44-0075</ssn>
+<emp_name>WVAWork </emp_name>
+<last_name>OhioLive</last_name>
+<emp_suffix/>
+<employee_address>7009 Green Street
+Aberdeen OH 45101</employee_address>
+<wages_tips_compensation/>
+<fit_withheld/>
+<ss_wages/>
+<ss_withheld/>
+<med_wages/>
+<med_withheld/>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea>F</box12_codea>
+<box12_meaninga>40</box12_meaninga>
+<box12_codeb>G</box12_codeb>
+<box12_meaningb>60</box12_meaningb>
+<box12_codec>H</box12_codec>
+<box12_meaningc>80</box12_meaningc>
+<box12_coded>M</box12_coded>
+<box12_meaningd>44</box12_meaningd>
+<state1_code/>
+<state1_ein/>
+<state1_wages/>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126003</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-44-0075</ssn>
+<emp_name>WVAWork </emp_name>
+<last_name>OhioLive</last_name>
+<emp_suffix/>
+<employee_address>7009 Green Street
+Aberdeen OH 45101</employee_address>
+<wages_tips_compensation/>
+<fit_withheld/>
+<ss_wages/>
+<ss_withheld/>
+<med_wages/>
+<med_withheld/>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea>N</box12_codea>
+<box12_meaninga>52</box12_meaninga>
+<box12_codeb>R</box12_codeb>
+<box12_meaningb>60</box12_meaningb>
+<box12_codec>S</box12_codec>
+<box12_meaningc>72</box12_meaningc>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code/>
+<state1_ein/>
+<state1_wages/>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126011</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0007</ssn>
+<emp_name>Cathy </emp_name>
+<last_name>PA-MorelandTwpNR</last_name>
+<emp_suffix/>
+<employee_address>9010 Delong Street
+Orlando FL 32800</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>122.8</state1_tax>
+<local1_wages>4000</local1_wages>
+<local1_tax>40</local1_tax>
+<locality1>Lower Moreland Twp</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126023</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0006</ssn>
+<emp_name>Pauline </emp_name>
+<last_name>PA-MorelandTwpRES</last_name>
+<emp_suffix/>
+<employee_address>785 Kellow Lane
+Lower Moreland Twp PA 19006</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>122.8</state1_tax>
+<local1_wages>4000</local1_wages>
+<local1_tax>20</local1_tax>
+<locality1>Lower Moreland Twp</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126017</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0005</ssn>
+<emp_name>Tony </emp_name>
+<last_name>PA-GreggNR</last_name>
+<emp_suffix/>
+<employee_address>340 Belledone Drive
+Orlando FL 32800</employee_address>
+<wages_tips_compensation>8000</wages_tips_compensation>
+<fit_withheld>1312.84</fit_withheld>
+<ss_wages>8000</ss_wages>
+<ss_withheld>496</ss_withheld>
+<med_wages>8000</med_wages>
+<med_withheld>116</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>8000</state1_wages>
+<state1_tax>245.6</state1_tax>
+<local1_wages>8000</local1_wages>
+<local1_tax>80</local1_tax>
+<locality1>Gregg Twp</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126109</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>300-00-0291</ssn>
+<emp_name>Test9 </emp_name>
+<last_name>SQWLbaseline</last_name>
+<emp_suffix/>
+<employee_address>789 M
+Baton Rouge LA 70888</employee_address>
+<wages_tips_compensation>8148</wages_tips_compensation>
+<fit_withheld>1521.63</fit_withheld>
+<ss_wages>8148</ss_wages>
+<ss_withheld>505.18</ss_withheld>
+<med_wages>8148</med_wages>
+<med_withheld>118.15</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>LA</state1_code>
+<state1_ein>9395393001</state1_ein>
+<state1_wages>8148</state1_wages>
+<state1_tax>327.81</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126055</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0034</ssn>
+<emp_name>Wanda </emp_name>
+<last_name>WY-2004NewER-SUI</last_name>
+<emp_suffix/>
+<employee_address>853 Violet Road
+Afton WY 83110</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code/>
+<state1_ein/>
+<state1_wages/>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126077</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>300-00-0301</ssn>
+<emp_name>Test19 </emp_name>
+<last_name>SQWLbaseline</last_name>
+<emp_suffix/>
+<employee_address>745 F
+Aurora CO 80002</employee_address>
+<wages_tips_compensation>7032</wages_tips_compensation>
+<fit_withheld>1242.63</fit_withheld>
+<ss_wages>7032</ss_wages>
+<ss_withheld>435.98</ss_withheld>
+<med_wages>7032</med_wages>
+<med_withheld>101.96</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CO</state1_code>
+<state1_ein>1337235000</state1_ein>
+<state1_wages>7032</state1_wages>
+<state1_tax>315</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126087</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>300-00-0300</ssn>
+<emp_name>Test18 </emp_name>
+<last_name>SQWLbaseline</last_name>
+<emp_suffix/>
+<employee_address>986 F
+Brookfield CT 06804</employee_address>
+<wages_tips_compensation>5232</wages_tips_compensation>
+<fit_withheld>792.63</fit_withheld>
+<ss_wages>5232</ss_wages>
+<ss_withheld>324.38</ss_withheld>
+<med_wages>5232</med_wages>
+<med_withheld>75.86</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CT</state1_code>
+<state1_ein>873959100</state1_ein>
+<state1_wages>5232</state1_wages>
+<state1_tax>261.6</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126089</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-05-0010</ssn>
+<emp_name>Pauline </emp_name>
+<last_name>PerformanceTest1</last_name>
+<emp_suffix/>
+<employee_address>7624 First Street
+Rackerby CA 95972</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>CASDI</box14_codea>
+<box14_meaninga>24</box14_meaninga>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CA</state1_code>
+<state1_ein>42676924</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>73.92</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126033</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>555-07-0020</ssn>
+<emp_name>Sally </emp_name>
+<last_name>SOE2007</last_name>
+<emp_suffix/>
+<employee_address>7254 3rd Street
+Oakville CT 06779</employee_address>
+<wages_tips_compensation>6000</wages_tips_compensation>
+<fit_withheld>654.06</fit_withheld>
+<ss_wages>6000</ss_wages>
+<ss_withheld>372</ss_withheld>
+<med_wages>6000</med_wages>
+<med_withheld>87</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CT</state1_code>
+<state1_ein>873959100</state1_ein>
+<state1_wages>6000</state1_wages>
+<state1_tax>247.5</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126025</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0024</ssn>
+<emp_name>Gloria </emp_name>
+<last_name>PA-UppGwyneddTwpNR</last_name>
+<emp_suffix/>
+<employee_address>7549 Loile Lane
+Orlando FL 32800</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>122.8</state1_tax>
+<local1_wages>4000</local1_wages>
+<local1_tax>40</local1_tax>
+<locality1>Upper Gwynedd Twp</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126007</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>088-01-1979</ssn>
+<emp_name>Marucha B </emp_name>
+<last_name>Solis</last_name>
+<emp_suffix/>
+<employee_address>4889 62nd Avenue  # 201
+Tualatin OR 97062</employee_address>
+<wages_tips_compensation>58</wages_tips_compensation>
+<fit_withheld/>
+<ss_wages>58</ss_wages>
+<ss_withheld>3.6</ss_withheld>
+<med_wages>58</med_wages>
+<med_withheld>.84</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>OR</state1_code>
+<state1_ein>09116985</state1_ein>
+<state1_wages>58</state1_wages>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126091</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>220-11-4321</ssn>
+<emp_name>Johnathan</emp_name>
+<last_name>Rice</last_name>
+<emp_suffix>Junior</emp_suffix>
+<employee_address>54321 Suffix Street
+Idaville IN 47950</employee_address>
+<wages_tips_compensation>3596.14</wages_tips_compensation>
+<fit_withheld>550.96</fit_withheld>
+<ss_wages>3997.2</ss_wages>
+<ss_withheld>247.83</ss_withheld>
+<med_wages>3997.2</med_wages>
+<med_withheld>57.96</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care>70</dependent_care>
+<non_qual_plan>24</non_qual_plan>
+<stat_employee>Y</stat_employee>
+<retirement_plan>Y</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>14A</box14_codea>
+<box14_meaninga>10</box14_meaninga>
+<box14_codeb>14B</box14_codeb>
+<box14_meaningb>14</box14_meaningb>
+<box14_codec>14C</box14_codec>
+<box14_meaningc>21.5</box14_meaningc>
+<box12_codea>A</box12_codea>
+<box12_meaninga>22</box12_meaninga>
+<box12_codeb>B</box12_codeb>
+<box12_meaningb>20</box12_meaningb>
+<box12_codec>C</box12_codec>
+<box12_meaningc>18</box12_meaningc>
+<box12_coded>D</box12_coded>
+<box12_meaningd>401.06</box12_meaningd>
+<state1_code>IN</state1_code>
+<state1_ein>0006772153001</state1_ein>
+<state1_wages>3596.14</state1_wages>
+<state1_tax>121.66</state1_tax>
+<local1_wages>3596.14</local1_wages>
+<local1_tax>47.24</local1_tax>
+<locality1>91C White</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126091</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>220-11-4321</ssn>
+<emp_name>Johnathan X Sir</emp_name>
+<last_name>Togo</last_name>
+<emp_suffix>Junior</emp_suffix>
+<employee_address>54321 Suffix Street
+Idaville IN 47950</employee_address>
+<wages_tips_compensation/>
+<fit_withheld/>
+<ss_wages/>
+<ss_withheld/>
+<med_wages/>
+<med_withheld/>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>14D</box14_codea>
+<box14_meaninga>25</box14_meaninga>
+<box14_codeb>14E</box14_codeb>
+<box14_meaningb>12</box14_meaningb>
+<box14_codec>14F</box14_codec>
+<box14_meaningc>4.5</box14_meaningc>
+<box12_codea>E</box12_codea>
+<box12_meaninga>50</box12_meaninga>
+<box12_codeb>F</box12_codeb>
+<box12_meaningb>40</box12_meaningb>
+<box12_codec>G</box12_codec>
+<box12_meaningc>30</box12_meaningc>
+<box12_coded>H</box12_coded>
+<box12_meaningd>20</box12_meaningd>
+<state1_code/>
+<state1_ein/>
+<state1_wages/>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126091</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>220-11-4321</ssn>
+<emp_name>Johnathan X Sir</emp_name>
+<last_name>Nightingale</last_name>
+<emp_suffix>Junior</emp_suffix>
+<employee_address>54321 Suffix Street
+Idaville IN 47950</employee_address>
+<wages_tips_compensation/>
+<fit_withheld/>
+<ss_wages/>
+<ss_withheld/>
+<med_wages/>
+<med_withheld/>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>14H</box14_codea>
+<box14_meaninga>8.2</box14_meaninga>
+<box14_codeb>14I</box14_codeb>
+<box14_meaningb>2.3</box14_meaningb>
+<box14_codec>MMIPAA</box14_codec>
+<box14_meaningc>6.7</box14_meaningc>
+<box12_codea>J</box12_codea>
+<box12_meaninga>24</box12_meaninga>
+<box12_codeb>K</box12_codeb>
+<box12_meaningb>28</box12_meaningb>
+<box12_codec>L</box12_codec>
+<box12_meaningc>26</box12_meaningc>
+<box12_coded>M</box12_coded>
+<box12_meaningd>6</box12_meaningd>
+<state1_code/>
+<state1_ein/>
+<state1_wages/>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126091</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>220-11-4321</ssn>
+<emp_name>Johnathan X Sir</emp_name>
+<last_name>Harris</last_name>
+<emp_suffix>Junior</emp_suffix>
+<employee_address>54321 Suffix Street
+Idaville IN 47950</employee_address>
+<wages_tips_compensation/>
+<fit_withheld/>
+<ss_wages/>
+<ss_withheld/>
+<med_wages/>
+<med_withheld/>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea>N</box12_codea>
+<box12_meaninga>8</box12_meaninga>
+<box12_codeb>Q</box12_codeb>
+<box12_meaningb>500</box12_meaningb>
+<box12_codec>R</box12_codec>
+<box12_meaningc>30</box12_meaningc>
+<box12_coded>S</box12_coded>
+<box12_meaningd>32</box12_meaningd>
+<state1_code/>
+<state1_ein/>
+<state1_wages/>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126091</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>220-11-4321</ssn>
+<emp_name>Johnathan</emp_name>
+<last_name>Segel</last_name>
+<emp_suffix>Junior</emp_suffix>
+<employee_address>54321 Suffix Street
+Idaville IN 47950</employee_address>
+<wages_tips_compensation/>
+<fit_withheld/>
+<ss_wages/>
+<ss_withheld/>
+<med_wages/>
+<med_withheld/>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea>W</box12_codea>
+<box12_meaninga>32</box12_meaninga>
+<box12_codeb>Y</box12_codeb>
+<box12_meaningb>200.52</box12_meaningb>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code/>
+<state1_ein/>
+<state1_wages/>
+<state1_tax/>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126019</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0009</ssn>
+<emp_name>Twiggy </emp_name>
+<last_name>PA-OliverTwpNR</last_name>
+<emp_suffix/>
+<employee_address>7337 Olivia Lane
+Orlando FL 32800</employee_address>
+<wages_tips_compensation>12000</wages_tips_compensation>
+<fit_withheld>2312.84</fit_withheld>
+<ss_wages>12000</ss_wages>
+<ss_withheld>744</ss_withheld>
+<med_wages>12000</med_wages>
+<med_withheld>174</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>12000</state1_wages>
+<state1_tax>368.4</state1_tax>
+<local1_wages>12000</local1_wages>
+<local1_tax>120</local1_tax>
+<locality1>Oliver Twp</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8125993</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>888-56-8850</ssn>
+<emp_name>Barbara </emp_name>
+<last_name>Wisconsin</last_name>
+<emp_suffix/>
+<employee_address>1910 South Avenue
+La Crosse WI 54601</employee_address>
+<wages_tips_compensation>1798</wages_tips_compensation>
+<fit_withheld>205.46</fit_withheld>
+<ss_wages>1798</ss_wages>
+<ss_withheld>111.48</ss_withheld>
+<med_wages>1798</med_wages>
+<med_withheld>26.07</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>14A</box14_codea>
+<box14_meaninga>30</box14_meaninga>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>WI</state1_code>
+<state1_ein>5415815</state1_ein>
+<state1_wages>1798</state1_wages>
+<state1_tax>87.54</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8125999</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0021</ssn>
+<emp_name>Troy </emp_name>
+<last_name>PA-PennsburyTwpRES</last_name>
+<emp_suffix/>
+<employee_address>855 Optikale Avenue
+Pennsbury Twp PA 19317</employee_address>
+<wages_tips_compensation>8000</wages_tips_compensation>
+<fit_withheld>1312.84</fit_withheld>
+<ss_wages>8000</ss_wages>
+<ss_withheld>496</ss_withheld>
+<med_wages>8000</med_wages>
+<med_withheld>116</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>8000</state1_wages>
+<state1_tax>245.6</state1_tax>
+<local1_wages>8000</local1_wages>
+<local1_tax>40</local1_tax>
+<locality1>Pennsbury Twp</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126085</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>088-01-1974</ssn>
+<emp_name>Amy </emp_name>
+<last_name>W2 Nonqualified</last_name>
+<emp_suffix/>
+<employee_address>665 24th Street
+San Francisco CA 94103</employee_address>
+<wages_tips_compensation>30000</wages_tips_compensation>
+<fit_withheld>5438.52</fit_withheld>
+<ss_wages>30000</ss_wages>
+<ss_withheld>1860</ss_withheld>
+<med_wages>30000</med_wages>
+<med_withheld>435</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan>3906</non_qual_plan>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea>CASDI</box14_codea>
+<box14_meaninga>180</box14_meaninga>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>CA</state1_code>
+<state1_ein>42676924</state1_ein>
+<state1_wages>30000</state1_wages>
+<state1_tax>1567.08</state1_tax>
+<local1_wages/>
+<local1_tax/>
+<locality1/>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126009</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0020</ssn>
+<emp_name>Francis </emp_name>
+<last_name>PA-PennTwpNR</last_name>
+<emp_suffix/>
+<employee_address>634 Carendell Avenue
+Orlando FL 32800</employee_address>
+<wages_tips_compensation>4000</wages_tips_compensation>
+<fit_withheld>471.52</fit_withheld>
+<ss_wages>4000</ss_wages>
+<ss_withheld>248</ss_withheld>
+<med_wages>4000</med_wages>
+<med_withheld>58</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>4000</state1_wages>
+<state1_tax>122.8</state1_tax>
+<local1_wages>4000</local1_wages>
+<local1_tax>40</local1_tax>
+<locality1>Penn Twp</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>
+<w2_root>
+<control_number>8126013</control_number>
+<federal_ein>99-1234567</federal_ein>
+<employer_name>All States GRE</employer_name>
+<employer_address>1 Market Street
+Suite 1000
+San Francisco CA 94101-1234</employer_address>
+<ssn>444-00-0022</ssn>
+<emp_name>Freeda</emp_name>
+<last_name>Nightingale</last_name>
+<emp_suffix/>
+<employee_address>256 Deer Isle Road
+Orlando FL 32800</employee_address>
+<wages_tips_compensation>6000</wages_tips_compensation>
+<fit_withheld>812.84</fit_withheld>
+<ss_wages>6000</ss_wages>
+<ss_withheld>372</ss_withheld>
+<med_wages>6000</med_wages>
+<med_withheld>87</med_withheld>
+<ss_tips/>
+<allocated_tips/>
+<eic_payment/>
+<dependent_care/>
+<non_qual_plan/>
+<stat_employee>N</stat_employee>
+<retirement_plan>N</retirement_plan>
+<sick_pay>N</sick_pay>
+<box14_codea/>
+<box14_meaninga/>
+<box14_codeb/>
+<box14_meaningb/>
+<box14_codec/>
+<box14_meaningc/>
+<box12_codea/>
+<box12_meaninga/>
+<box12_codeb/>
+<box12_meaningb/>
+<box12_codec/>
+<box12_meaningc/>
+<box12_coded/>
+<box12_meaningd/>
+<state1_code>PA</state1_code>
+<state1_ein>19223189</state1_ein>
+<state1_wages>6000</state1_wages>
+<state1_tax>184.2</state1_tax>
+<local1_wages>6000</local1_wages>
+<local1_tax>30</local1_tax>
+<locality1>Pennsbury Twp</locality1>
+<state2_code/>
+<state2_ein/>
+<state2_wages/>
+<state2_tax/>
+<local2_wages/>
+<local2_tax/>
+<locality2/>
+<year>2007</year>
+<amended/>
+<amended_date/>
+<print_instruction>Y</print_instruction>
+</w2_root>  
+</root>

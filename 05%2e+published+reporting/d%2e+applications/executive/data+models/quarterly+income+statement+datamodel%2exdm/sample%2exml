@@ -1,0 +1,344 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<MasterReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fsg="http://www.oracle.com/fsg/2002-03-20/" xsi:schemaLocation="http://www.oracle.com/2002-03-20/fsg.xsd">
+<fsg:SOBName>Vision Operations (USA)</fsg:SOBName>
+<fsg:ReportName>Quarterly Income Statement</fsg:ReportName>
+<fsg:RowSetName>DBI Row Set</fsg:RowSetName>
+<fsg:ColSetName>Annual QTD Comparitive</fsg:ColSetName>
+<fsg:RowSetId>            3087</fsg:RowSetId>
+<fsg:ColSetId>            3088</fsg:ColSetId>
+<fsg:ContSetId>               0</fsg:ContSetId>
+<fsg:ParamSetId>            3423</fsg:ParamSetId>
+<fsg:ReportCurr>USD</fsg:ReportCurr>
+<fsg:ReportDate>2006/11/27</fsg:ReportDate>
+<fsg:RepCurPeriod>Nov-06</fsg:RepCurPeriod>
+<fsg:RepSysDate>27-NOV-2006 22:48:33</fsg:RepSysDate>
+<fsg:PeriodLabel>Current Period:</fsg:PeriodLabel>
+<fsg:DateLabel>Date:</fsg:DateLabel>
+<fsg:CurrencyLabel>currency</fsg:CurrencyLabel>
+<fsg:PageLabel>Page:</fsg:PageLabel>
+<fsg:RowContext RowId="r100001">
+<fsg:RowName>Revenue</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              10.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100002">
+<fsg:RowName>   Hardware Revenue</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>              15.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100003">
+<fsg:RowName>   Support Revenue</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>              16.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100004">
+<fsg:RowName>   Consulting Revenue</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>              17.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100005">
+<fsg:RowName>   Training</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>              18.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100006">
+<fsg:RowName>   Miscellaneous</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>              19.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100007">
+<fsg:RowName>Total Revenue</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>              20.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100008">
+<fsg:RowName>    COGS</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              21.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100009">
+<fsg:RowName>    Salaries</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              22.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100010">
+<fsg:RowName>    Benefits</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              23.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100011">
+<fsg:RowName>    Commissions</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              24.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100012">
+<fsg:RowName>     T&amp;E</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              25.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100013">
+<fsg:RowName>Other Operating Expenses</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              29.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100014">
+<fsg:RowName>    Computers &amp; IT</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              35.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100015">
+<fsg:RowName>    Advertising &amp; PR</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              36.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100016">
+<fsg:RowName>    Facilities</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              40.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100017">
+<fsg:RowName>    Professional/Recruiting Fees</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              56.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100018">
+<fsg:RowName>    Shipping &amp; Transportation</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              70.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100019">
+<fsg:RowName>    Miscellaneous</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              90.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100020">
+<fsg:RowName>Total Expenses</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>             130.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100021">
+<fsg:RowName>Gross Margin</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>             140.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100022">
+<fsg:RowName>GM%</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>             150.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:ColContext ColId="c1000">
+<fsg:AmountType> </fsg:AmountType>
+<fsg:ColPeriod> </fsg:ColPeriod>
+<fsg:ColPerOffset> </fsg:ColPerOffset>
+<fsg:ColChngSign> </fsg:ColChngSign>
+<fsg:ColHeadLine1> </fsg:ColHeadLine1>
+<fsg:ColHeadLine2>Co     Dpt    Acct   Sub    Prd    </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>------ ------ ------ ------ ------ </fsg:ColHeadLine3>
+<fsg:ColPosition> </fsg:ColPosition>
+<fsg:ColSeq> </fsg:ColSeq>
+<fsg:ColWidth>  35</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1001">
+<fsg:AmountType>QTD-Actual</fsg:AmountType>
+<fsg:ColPeriod/>
+<fsg:ColPerOffset>   -12</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>Same Quarter  </fsg:ColHeadLine1>
+<fsg:ColHeadLine2>   Ending     </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>   Nov-05     </fsg:ColHeadLine3>
+<fsg:ColPosition>    39</fsg:ColPosition>
+<fsg:ColSeq>              10.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  14</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1002">
+<fsg:AmountType>QTD-Actual</fsg:AmountType>
+<fsg:ColPeriod/>
+<fsg:ColPerOffset>     0</fsg:ColPerOffset>
+<fsg:ColChngSign> 0</fsg:ColChngSign>
+<fsg:ColHeadLine1>Current Quarter</fsg:ColHeadLine1>
+<fsg:ColHeadLine2>   Ending     </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>   Nov-06     </fsg:ColHeadLine3>
+<fsg:ColPosition>    57</fsg:ColPosition>
+<fsg:ColSeq>              20.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  14</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1003">
+<fsg:AmountType>YTD-Actual</fsg:AmountType>
+<fsg:ColPeriod/>
+<fsg:ColPerOffset>   -12</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>Year-to-Date  </fsg:ColHeadLine1>
+<fsg:ColHeadLine2>   Ending     </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>   Nov-05     </fsg:ColHeadLine3>
+<fsg:ColPosition>    75</fsg:ColPosition>
+<fsg:ColSeq>              50.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  14</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1004">
+<fsg:AmountType>YTD-Actual</fsg:AmountType>
+<fsg:ColPeriod/>
+<fsg:ColPerOffset>     0</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>Year-to-Date</fsg:ColHeadLine1>
+<fsg:ColHeadLine2>   Ending</fsg:ColHeadLine2>
+<fsg:ColHeadLine3>   Nov-06     </fsg:ColHeadLine3>
+<fsg:ColPosition>    93</fsg:ColPosition>
+<fsg:ColSeq>              60.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  14</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:RptDef RptId="p1001" RptDetName="No specific Company requested">
+<fsg:RptLine RptCnt="p1001" RowCnt="r100001" LinCnt="l100001">
+<fsg:RptCell ColCnt="c1000">Revenue</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100002" LinCnt="l100002">
+<fsg:RptCell ColCnt="c1000">   Hardware Revenue                  </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">15,398,120</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">24,150,192</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">39,628,954</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">73,614,532</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100003" LinCnt="l100003">
+<fsg:RptCell ColCnt="c1000">   Support Revenue                   </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">7,321,697</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">1,034,440</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">17,490,142</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">3,695,656</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100004" LinCnt="l100004">
+<fsg:RptCell ColCnt="c1000">   Consulting Revenue                </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">13,025,108</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">847,785</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">32,137,777</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">4,383,441</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100005" LinCnt="l100005">
+<fsg:RptCell ColCnt="c1000">   Training                          </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">5,923,410</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">616,764</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">14,451,270</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">2,524,239</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100006" LinCnt="l100006">
+<fsg:RptCell ColCnt="c1000">   Miscellaneous                     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">4,965,662</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">733,325</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">12,694,743</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">2,393,843</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100007" LinCnt="l100007">
+<fsg:RptCell ColCnt="c1000">Total Revenue                        </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">46,633,996</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">27,382,507</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">116,402,886</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">86,611,710</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100008" LinCnt="l100008">
+<fsg:RptCell ColCnt="c1000">    COGS                             </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">&lt;31,035></fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">13,288,452</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">215,932</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">31,405,193</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100009" LinCnt="l100009">
+<fsg:RptCell ColCnt="c1000">    Salaries                         </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">28,000</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">303,207</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">167,834</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100010" LinCnt="l100010">
+<fsg:RptCell ColCnt="c1000">    Benefits                         </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">196</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">148</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100011" LinCnt="l100011">
+<fsg:RptCell ColCnt="c1000">    Commissions                      </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">37</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">114,278</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">102,720</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">422,998</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100012" LinCnt="l100012">
+<fsg:RptCell ColCnt="c1000">     T&amp;E                             </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">446,685</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">50,227</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">1,084,779</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">237,973</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100013" LinCnt="l100013">
+<fsg:RptCell ColCnt="c1000">Other Operating Expenses</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100014" LinCnt="l100014">
+<fsg:RptCell ColCnt="c1000">    Computers &amp; IT                   </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">6,300,829</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">678,137</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">17,603,448</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">3,524,327</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100015" LinCnt="l100015">
+<fsg:RptCell ColCnt="c1000">    Advertising &amp; PR                 </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">9,585,124</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">276,426</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">24,357,589</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">1,074,334</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100016" LinCnt="l100016">
+<fsg:RptCell ColCnt="c1000">    Facilities                       </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">5,582,063</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">688,198</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">14,292,099</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">3,028,289</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100017" LinCnt="l100017">
+<fsg:RptCell ColCnt="c1000">    Professional/Recruiting Fees     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">1,206,825</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">220,063</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">3,187,062</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">845,748</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100018" LinCnt="l100018">
+<fsg:RptCell ColCnt="c1000">    Shipping &amp; Transportation        </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">5,976,174</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">1,313,874</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">14,945,138</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">4,284,443</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100019" LinCnt="l100019">
+<fsg:RptCell ColCnt="c1000">    Miscellaneous                    </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">1,008,403</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">141,668</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">2,977,198</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">608,409</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100020" LinCnt="l100020">
+<fsg:RptCell ColCnt="c1000">Total Expenses                       </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">30,075,105</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">16,799,323</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">79,069,369</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">45,599,696</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100020" LinCnt="l100021">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">____________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">____________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">____________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">____________</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100021" LinCnt="l100022">
+<fsg:RptCell ColCnt="c1000">Gross Margin                         </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">&lt;76,709,102></fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">&lt;44,181,830></fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;195,472,254></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">&lt;132,211,406></fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100022" LinCnt="l100023">
+<fsg:RptCell ColCnt="c1000">GM%                                  </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">2</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">2</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">2</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">2</fsg:RptCell>
+</fsg:RptLine>
+</fsg:RptDef>
+</MasterReport>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="fc2tdt070dpi4klq"><sawd:dashboardColumn name="Column 3" duid="402dblmituk86m81" frozen="false" canFreeze="true" layoutType="specificSize"><sawd:dashboardSection name="Section 7" collapsible="false" duid="fafbosgm0dvho8tp" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="10" paddingRight="5" paddingTop="5" paddingBottom="5"/></saw:displayFormat><sawd:htmlView name="HTML 3" duid="ab8ct6hvk8k0j4ku">
+				<sawd:HTML fmt="html" captionID="kcap12832459_159">[b]&lt;font size=4 align=left color=#0707DB&gt;Default BIEE EPM Configuration Details&lt;/font&gt;[/b]</sawd:HTML>
+			</sawd:htmlView><sawd:htmlView name="HTML 5" duid="vsc3ll7mo0nc9urk"><sawd:HTML fmt="html">&lt;body lang=EN-US link=blue vlink=purple style=&#39;tab-interval:.5in&#39;&gt;
+&lt;p class=MsoNormal&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;span
+style=&#39;mso-tab-count:1&#39;&gt;&lt;/span&gt;As part of the Enterprise deployment of BIEE the following EPM &lt;b style=&#39;mso-bidi-font-weight:
+normal&#39;&gt;&lt;span style=&#39;color:#C00000&#39;&gt;11.1.2.4&lt;/span&gt;&lt;/b&gt; components are included and start automatically when services for BIEE are started.&lt;br&gt;
+ &lt;b style=&#39;mso-bidi-font-weight:normal&#39;&gt;&lt;span
+style=&#39;color:#C00000&#39;&gt;&lt;/span&gt;&lt;/b&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;span style=&#39;font-size:11.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin;color:#0070C0;font-style:normal;mso-bidi-font-style:italic&#39;&gt;Products
+Installed and Configured&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;br&gt;
+&lt;ul style=&#39;margin-top:0in&#39; type=disc&gt;
+ &lt;li class=MsoNormal style=&#39;color:black;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:normal;mso-list:l0 level1 lfo3&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:
+     Arial;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+     mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+     Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Calculation Manager&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/li&gt;
+ &lt;li class=MsoNormal style=&#39;color:black;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:normal;mso-list:l0 level1 lfo3&#39;&gt;&lt;span class=SpellE&gt;&lt;span
+     style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+     mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+     mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+     minor-latin&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;
+     mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+     mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+     Arial;mso-bidi-theme-font:minor-latin&#39;&gt; Financial Reports&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/li&gt;
+ &lt;li class=MsoNormal style=&#39;color:black;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:normal;mso-list:l0 level1 lfo3&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:
+     Arial;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+     mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+     Arial;mso-bidi-theme-font:minor-latin&#39;&gt;EPM Workspace&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul style=&#39;margin-top:0in&#39; type=disc&gt;
+ &lt;li class=MsoNormal style=&#39;color:black;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:normal;mso-list:l0 level1 lfo3&#39;&gt;&lt;span class=SpellE&gt;&lt;span
+     style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+     mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+     mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+     minor-latin&#39;&gt;Essbase&lt;/span&gt;&lt;/span&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;
+     mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+     mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+     Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=MsoNormal style=&#39;margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l1 level1 lfo2&#39;&gt;&lt;![if !supportLists]&gt;&lt;span style=&#39;mso-bidi-font-family:
+Arial;color:black&#39;&gt;&lt;span style=&#39;mso-list:Ignore&#39;&gt;-&lt;span style=&#39;font:7.0pt &quot;Times New Roman&quot;&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span class=SpellE&gt;&lt;span style=&#39;mso-ascii-font-family:
+Arial;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+Arial;mso-bidi-theme-font:minor-latin;color:black&#39;&gt;Essbase&lt;/span&gt;&lt;/span&gt;&lt;span
+style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-latin;color:black&#39;&gt; Server&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=MsoNormal style=&#39;margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l1 level1 lfo2&#39;&gt;&lt;![if !supportLists]&gt;&lt;span style=&#39;mso-bidi-font-family:
+Arial;color:black&#39;&gt;&lt;span style=&#39;mso-list:Ignore&#39;&gt;-&lt;span style=&#39;font:7.0pt &quot;Times New Roman&quot;&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+Arial;mso-bidi-theme-font:minor-latin;color:black&#39;&gt;Provider Services Web
+Application&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoNormal style=&#39;margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l1 level1 lfo2&#39;&gt;&lt;![if !supportLists]&gt;&lt;span style=&#39;mso-bidi-font-family:
+Arial;color:black&#39;&gt;&lt;span style=&#39;mso-list:Ignore&#39;&gt;-&lt;span style=&#39;font:7.0pt &quot;Times New Roman&quot;&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+Arial;mso-bidi-theme-font:minor-latin;color:black&#39;&gt;Essbase Studio&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoNormal style=&#39;margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l1 level1 lfo2&#39;&gt;&lt;![if !supportLists]&gt;&lt;span style=&#39;mso-bidi-font-family:
+Arial;color:black&#39;&gt;&lt;span style=&#39;mso-list:Ignore&#39;&gt;-&lt;span style=&#39;font:7.0pt &quot;Times New Roman&quot;&#39;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;![endif]&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+Arial;mso-bidi-theme-font:minor-latin;color:black&#39;&gt;Essbase Administration Services&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p class=MsoNormal&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;h2&gt;&lt;span style=&#39;font-size:11.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin;color:#0070C0;font-style:normal;mso-bidi-font-style:italic&#39;&gt;Usernames and Passwords&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
+use weblogic/Admin123 for all BIEE EPM components and window clients
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;h2&gt;&lt;span style=&#39;font-size:11.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin;color:#0070C0;font-style:normal;mso-bidi-font-style:italic&#39;&gt;Client Tools&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
+Client tools for EAS, Essbase Studio, Smartview and Financial Reporting can all be downloaded from BIEE home page
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2&gt;&lt;span style=&#39;font-size:11.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin;color:#0070C0;font-style:normal;mso-bidi-font-style:italic&#39;&gt;Links&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;br&gt;
+&lt;table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style=&#39;margin-left:.5in;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext&#39;&gt;
+ &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+  &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin&#39;&gt;APS&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+  minor-latin;color:black&#39;&gt;&lt;a
+  href=&quot;http://demo.us.oracle.com:7780/easconsole/console.html&quot;&gt;http://demo.us.oracle.com:7780/aps/APS&lt;/a&gt;&lt;/span&gt;&lt;span
+  style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:1&#39;&gt;
+  &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin&#39;&gt;EPM Workspace&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=316 valign=top style=&#39;width:237.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+  minor-latin;color:black&#39;&gt;&lt;a href=&quot;http://demo.us.oracle.com:7780/workspace/index.hmtl&quot;&gt;http://demo.us.oracle.com:7780/workspace/index.hmtl&lt;/a&gt;
+  &lt;span style=&#39;mso-spacerun:yes&#39;&gt; &lt;/span&gt;&lt;a
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:2&#39;&gt;
+  &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Essbase Administration Services&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=316 valign=top style=&#39;width:237.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span lang=FR style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:
+  minor-latin;mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR&#39;&gt;&lt;a
+  href=&quot;http://demo.us.oracle.com:7780/easconsole&quot;&gt;http://demo.us.oracle.com:7780/easconsole&lt;/a&gt;&lt;/span&gt;&lt;span
+  style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+  minor-latin;color:black&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:3;mso-yfti-lastrow:yes&#39;&gt;
+  &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Smartview&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=316 valign=top style=&#39;width:237.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+  minor-latin;color:black&#39;&gt;&lt;a href=&quot;Running on Port 9799&lt;/a&gt;&lt;/span&gt;&lt;span
+  lang=FR style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;  
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:3;mso-yfti-lastrow:yes&#39;&gt;
+   &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+   padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+   &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+   normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+   mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+   mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+   Arial;mso-bidi-theme-font:minor-latin&#39;&gt;SmartView&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+   &lt;/td&gt;
+   &lt;td width=316 valign=top style=&#39;width:237.25pt;border-top:none;border-left:
+   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+   &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+   normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+   mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+   mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+   minor-latin;color:black&#39;&gt;&lt;a href=&quot;http://demo.us.oracle.com:7780/aps/workspace&quot;&gt;http://demo.us.oracle.com:7780/aps/workspace&lt;/a&gt;
+   &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+     &lt;p class=MsoNormal style=&#39;mso-margin-top-alt:auto&#39;&gt;&lt;span style=&#39;mso-fareast-font-family:
+     &quot;Times New Roman&quot;&#39;&gt;Note&lt;span class=GramE&gt;:-&lt;/span&gt; In order to use &lt;span
+     class=SpellE&gt;SmartView&lt;/span&gt;, first install &lt;span class=SpellE&gt;Smartview&lt;/span&gt;
+     client on your desktop. Then launch &lt;span class=GramE&gt;an&lt;/span&gt; Microsoft Office
+     product like Excel. Create a Private Connection by providing the URL as &lt;a
+     href=&quot;http://demo.us.oracle.com:7780/aps/SmartView&quot;&gt;http://demo.us.oracle.com:7780/aps/SmartView&lt;/a&gt;or for OBI  &lt;a href=&quot;http://demo.us.oracle.com:7780/analytics/jbips&quot;&gt;http://demo.us.oracle.com:7780/analytics/jbips&lt;/a&gt;
+   &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+     Add the server name as demo.us.oracle.com:9799. When prompted for credentials,
+     enter &lt;/span&gt;&lt;b style=&#39;mso-bidi-font-weight:normal&#39;&gt;&lt;span style=&#39;font-family:
+     &quot;Calibri&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+     minor-latin;mso-bidi-theme-font:minor-latin;color:#C00000&#39;&gt;weblogic/Admin123&lt;/span&gt;&lt;/b&gt;&lt;span
+     style=&#39;mso-fareast-font-family:&quot;Times New Roman&quot;&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+     &lt;p class=MsoNormal style=&#39;mso-margin-top-alt:auto&#39;&gt;&lt;span style=&#39;mso-fareast-font-family:
+     &quot;Times New Roman&quot;&#39;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+     &lt;p class=MsoNormal style=&#39;mso-margin-top-alt:auto&#39;&gt;&lt;span style=&#39;mso-fareast-font-family:
+     &quot;Times New Roman&quot;&#39;&gt;&lt;span style=&#39;mso-spacerun:yes&#39;&gt;&amp;nbsp;&lt;/span&gt;&lt;span
+     style=&#39;mso-spacerun:yes&#39;&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#39;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
+     mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+  mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;color:black&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;
+   &lt;/span&gt;&lt;/p&gt;
+   &lt;/td&gt;  
+  &lt;/tr&gt; 
+&lt;/table&gt;
+
+&lt;p class=MsoNormal style=&#39;margin-left:.5in&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:
+Arial;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Arial;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-latin&#39;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;/body&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec width="50%" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" duid="f75sa83vqngnh969" canFreeze="false" frozen="false" layoutType="specificSize"><saw:displayFormat>
+			<saw:formatSpec wrapText="false" vAlign="top" width="50%"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="5agc41ngkqd9odl2" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec paddingLeft="10" paddingRight="5" wrapText="true" paddingTop="5" paddingBottom="5"/></saw:displayFormat><sawd:htmlView name="HTML 2" duid="ab8ct6hvk8k0j4ku">
+				<sawd:HTML fmt="html" captionID="kcap12832459_159">[b]&lt;font size=4 align=left color=red&gt;Standalone (plug and play) EPM 11.1.2.4Install and Configuration Details&lt;/font&gt;[/b]</sawd:HTML>
+			</sawd:htmlView><sawd:htmlView name="HTML 0" duid="13sjhcrvk924p713"><sawd:HTML fmt="html">&lt;body lang=EN-US link=blue vlink=purple style=&#39;tab-interval:.5in&#39;&gt;
+&lt;p class=MsoNormal&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;span
+style=&#39;mso-tab-count:1&#39;&gt;&lt;/span&gt;EPM version &lt;b style=&#39;mso-bidi-font-weight:
+normal&#39;&gt;&lt;span style=&#39;color:#C00000&#39;&gt;11.1.2.4 standalone&lt;/span&gt;&lt;/b&gt; is available 
+as seperate 6GB download from OTN.[br/] Please refer to the deployment documenation for full details on downloading and deploying your Standalone EPM deployment.&lt;br&gt;
+ &lt;b style=&#39;mso-bidi-font-weight:normal&#39;&gt;&lt;span
+style=&#39;color:#C00000&#39;&gt;&lt;/span&gt;&lt;/b&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;span style=&#39;font-size:11.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin;color:#0070C0;font-style:normal;mso-bidi-font-style:italic&#39;&gt;Products
+Installed&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/h2&gt;</sawd:HTML></sawd:htmlView><sawd:linkView name="Link 2" target="_self" type="url" destination="http://www.oracle.com/technetwork/middleware/bi-foundation/obiee-samples-167534.html" layout="captionLeft" duid="8pr0cvpf96ncgddc"><sawd:linkCaption><saw:caption><saw:text>Download EPM plug and play from  OTN- scroll down to the plug-ins section</saw:text></saw:caption></sawd:linkCaption><sawd:image src="fmap:meters/status/icons_s/03_targetdown.png"/></sawd:linkView><sawd:linkView name="Link 0" target="_self" type="report" destination="" layout="captionRight" duid="aocgeg5ntegjnrvf"><sawd:linkCaption/><sawd:image src="/analyticsRes/SampleApp/SampleAppPics/EPMComponents.jpg"/></sawd:linkView><sawd:htmlView name="HTML 1" duid="33thc85j2l0mqlis"><sawd:HTML fmt="html">
+&lt;h2&gt;&lt;span style=&#39;font-size:11.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin;color:#0070C0;font-style:normal;mso-bidi-font-style:italic&#39;&gt;Usernames and Passwords&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
+all EPM product logons are admin/Admin123, for access to the EPM WLS components including the WLS console and EM use webloigc/Admin123
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2&gt;&lt;span style=&#39;font-size:11.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin;color:#0070C0;font-style:normal;mso-bidi-font-style:italic&#39;&gt;Windows Clients&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/h2&gt;&lt;br&gt;
+All available EPM client tools including FR studio and Smartview, HSF client, Taxonomy designer, 
+[br/]Offline Planning, OBI for office can be download from the EPM workspace /install menu options.  
+[br/][b]Import you can not use EPM client tools that are packaged with OBIEE, they must be the 
+[br/]version packaged with your Standalone EPM deployment[/b]
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2&gt;&lt;span style=&#39;font-size:11.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin;color:#0070C0;font-style:normal;mso-bidi-font-style:italic&#39;&gt;Links&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/h2&gt; &lt;BR&gt;
+&lt;br&gt;
+
+[b]WLS Console[/b][br/]
+http://demo.us.oracle.com:5000/console[br/][br/]
+
+[b]APS[/b][br/]
+http://demo.us.oracle.com:9001/aps/APS[br/][br/]
+
+[b]Workspace and all installed EPM Webapps[/b][br/]
+http://demo.us.oracle.com:9001/workspace/index.hmtl[br/][br/]
+
+
+[b]Smartview[/b][br/]
+http://demo.us.oracle.com:9001/aps/workspace[br/]
+Note:- In order to use SmartView, first install Smartview client on your desktop. Then launch an Microsoft Office product like Excel. 
+[br/]Create a Private Connection by providing the URL as http://localhost:9001/aps/SmartView 
+[br/]Add the server name as demo.us.oracle.com:1423. 
+[br/]When prompted for credentials, enter [i]admin/Admin123[/i]</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	</sawd:dashboardPage>

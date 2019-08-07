@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="77gv7mgteupfimdo" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2549">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Using WLST scripts to automate interactions with Weblogic Server
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2548">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2545">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2550">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; [br/]This page points you to few examples of Oracle BI Systems Management API Methods included within SampleApp and explains how to execute them.[br/][br/]
+
+The Oracle BI Systems Management API is a programming interface that provides access to Oracle Business Intelligence JMX Admin MBeans, enabling a developer to programmatically perform system administration tasks for Oracle Business Intelligence. The system administration tasks that can be performed using the Oracle BI Systems Management API are also available using Fusion Middleware Control. [br/][br/]
+
+The Oracle BI Systems Management API centralizes the management of system configuration by automatically propagating changes to all of the files that require updates in multiple locations. For more information, refer “Oracle Fusion Middleware System Administrator&#39;s Guide” for Oracle Business Intelligence Enterprise Edition 11g under the section “Automating Management of Oracle Business Intelligence”.[br/][br/]
+
+We have included the following example WLST scripts in SampleApp. They can be found under &quot;/home/oracle/scripts/wlst_scripts&quot; directory. You may navigate to this folder under the OBIEE installation and execute the wlst scripts as described in the usage column in the table below. 
+</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 2" duid="p8j2n10sd7969qu0"><sawd:HTML fmt="html">&lt;body bgcolor=&quot;#ffffff&quot;&gt;
+&lt;p&gt;
+&lt;table style=&quot;WIDTH: 933pt; BORDER-COLLAPSE: collapse&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; 
+cellPadding=0 width=1243&gt;
+  &lt;colgroup&gt;
+  &lt;col style=&quot;WIDTH: 386pt; mso-width-source: userset; mso-width-alt: 18797&quot; 
+  width=514&gt;
+  &lt;col style=&quot;WIDTH: 547pt; mso-width-source: userset; mso-width-alt: 26660&quot; 
+  width=729&gt;
+  &lt;tbody&gt;
+  &lt;tr style=&quot;HEIGHT: 27pt; mso-yfti-firstrow: yes; mso-yfti-irow: 0&quot; 
+    height=36&gt;&lt;td 
+    style=&quot;BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: #c2d69b; WIDTH: 386pt; HEIGHT: 27pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl65 height=36 width=514&gt;&lt;strong&gt;&lt;font size=&quot;2&quot; 
+      face=Arial&gt;Description&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: #c2d69b; WIDTH: 547pt; BORDER-TOP: windowtext 1pt solid; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl66 width=729&gt;&lt;strong&gt;&lt;font size=&quot;2&quot; 
+    face=Arial&gt;Usage&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15pt; mso-yfti-irow: 1&quot; height=&quot;20&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: white; HEIGHT: 15pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl67 height=20&gt;&lt;strong&gt;&lt;font size=&quot;2&quot; 
+      face=Arial&gt;wlst_connect.py:&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl68&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Linux: ./wlst.sh wlst_connect.py 
+      &amp;lt;hostname&amp;gt; &amp;lt;port number&amp;gt; &amp;lt;username&amp;gt; 
+      &amp;lt;password&amp;gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15pt&quot; height=&quot;20&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: white; WIDTH: 386pt; HEIGHT: 30.75pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl71 height=41 rowSpan=2 width=514&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Example 
+      to demonstrate connecting to a BIEE domain using WLST&lt;/font&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl68&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Windows: ./wlst wlst_connect.py 
+      &amp;lt;hostname&amp;gt; &amp;lt;port number&amp;gt; &amp;lt;username&amp;gt; 
+      &amp;lt;password&amp;gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15.75pt&quot; height=&quot;21&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; HEIGHT: 15.75pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl69 height=21&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Example: ./wlst.sh 
+      wlst_connect.py localhost 7001&amp;nbsp;prodney Admin123&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15pt; mso-yfti-irow: 2&quot; height=&quot;20&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: white; HEIGHT: 15pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl70 height=20&gt;&lt;strong&gt;&lt;font size=&quot;2&quot; 
+      face=Arial&gt;wlst_email_disp_name_obi.py :&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl68&gt;&lt;font size=&quot;2&quot;&gt;&lt;font face=&quot;Arial&quot;&gt;Linux: ./wlst.sh 
+      wlst_email_disp_name_obi.py &amp;lt;hostname&amp;gt; &amp;lt;port number&amp;gt; 
+      &amp;lt;username&amp;gt; &amp;lt;password&amp;gt; &lt;font class=&quot;font6&quot;&gt;&lt;em&gt;&amp;lt;new 
+      name&amp;gt;&lt;/em&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15pt&quot; height=&quot;20&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: white; WIDTH: 386pt; HEIGHT: 30.75pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl71 height=41 rowSpan=2 width=514&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Example 
+      to demonstrate connecting to a BIEE domain using WLST, and changing a 
+      simple configuration setting&lt;/font&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl68&gt;&lt;font size=&quot;2&quot;&gt;&lt;font face=&quot;Arial&quot;&gt;Windows: ./wlst 
+      wlst_email_disp_name_obi.py &amp;lt;hostname&amp;gt; &amp;lt;port number&amp;gt; 
+      &amp;lt;username&amp;gt; &amp;lt;password&amp;gt; &lt;font class=&quot;font6&quot;&gt;&lt;em&gt;&amp;lt;new 
+      name&amp;gt;&lt;/em&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15.75pt&quot; height=&quot;21&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; HEIGHT: 15.75pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl69 height=21&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Example: ./wlst.sh 
+      wlst_email_disp_name_obi.py localhost 7001 prodney Admin123 
+      OracleBI11g&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15pt; mso-yfti-irow: 3&quot; height=&quot;20&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: white; HEIGHT: 15pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl70 height=20&gt;&lt;strong&gt;&lt;font size=&quot;2&quot; 
+      face=Arial&gt;wlst_stop_start_obi.py:&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl68&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Linux: ./wlst.sh wlst_stop_start_obi.py 
+      &amp;lt;hostname&amp;gt; &amp;lt;port number&amp;gt; &amp;lt;username&amp;gt; 
+      &amp;lt;password&amp;gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15pt&quot; height=&quot;20&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: white; WIDTH: 386pt; HEIGHT: 30.75pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl71 height=41 rowSpan=2 width=514&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Example 
+      to demonstrate connecting to a BIEE domain using WLST and stopping and 
+      restarting the instance&lt;/font&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl68&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Windows: ./wlst wlst_stop_start_obi.py 
+      &amp;lt;hostname&amp;gt; &amp;lt;port number&amp;gt; &amp;lt;username&amp;gt; 
+      &amp;lt;password&amp;gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15.75pt&quot; height=&quot;21&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; HEIGHT: 15.75pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl69 height=21&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Example: ./wlst.sh 
+      wlst_stop_start_obi.py localhost 7001 prodney Admin123&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15pt; mso-yfti-irow: 4&quot; height=&quot;20&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: white; HEIGHT: 15pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl70 height=20&gt;&lt;strong&gt;&lt;font size=&quot;2&quot; 
+      face=Arial&gt;dumpmetric_avg_query_time.py:&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl68&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Linux: ./wlst.sh 
+      dumpmetric_avg_query_time.py &amp;lt;hostname&amp;gt; &amp;lt;port number&amp;gt; 
+      &amp;lt;username&amp;gt; &amp;lt;password&amp;gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15pt&quot; height=&quot;20&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: white; WIDTH: 386pt; HEIGHT: 30.75pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl71 height=41 rowSpan=2 width=514&gt;&lt;font size=&quot;2&quot;&gt;&lt;font 
+      face=Arial&gt;Script to dump timestamp (in milliseconds) for a single Oracle 
+      BI metric to a file. Output of this script gets dumped into a file with 
+      the name ‘&lt;font class=&quot;font6&quot;&gt;&lt;em&gt;&amp;lt;timestamp&amp;gt;&lt;/em&gt;&lt;/font&gt;&lt;font 
+      class=font5&gt;_Avg_Qry_Elapse_dump.txt’.&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl68&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Windows: ./wlst 
+      dumpmetric_avg_query_time.py &amp;lt;hostname&amp;gt; &amp;lt;port number&amp;gt; 
+      &amp;lt;username&amp;gt; &amp;lt;password&amp;gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15.75pt&quot; height=&quot;21&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; HEIGHT: 15.75pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl69 height=21&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Example: ./wlst.sh 
+      dumpmetric_avg_query_time.py localhost 7001 prodney Admin123&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15pt; mso-yfti-irow: 5; mso-yfti-lastrow: yes&quot; height=&quot;20&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: white; HEIGHT: 15pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl70 height=20&gt;&lt;strong&gt;&lt;font size=&quot;2&quot; 
+      face=Arial&gt;dumpmetric_avg_req_sec.py:&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl68&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Linux: ./wlst.sh 
+      dumpmetric_avg_req_sec.py &amp;lt;hostname&amp;gt; &amp;lt;port number&amp;gt; 
+      &amp;lt;username&amp;gt; &amp;lt;password&amp;gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 15pt&quot; height=&quot;20&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: black 1pt solid; BORDER-LEFT: windowtext 1pt solid; BACKGROUND-COLOR: white; WIDTH: 386pt; HEIGHT: 54pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl71 height=72 rowSpan=2 width=514&gt;&lt;font size=&quot;2&quot;&gt;&lt;font 
+      face=Arial&gt;Script to dump timestamp (in milliseconds) and a single Oracle 
+      BI metric to a file for metrics with multiple sections (for two 
+      dimensional metric tables such as Oracle_BI_Thread_Pool). Output of this 
+      script gets dumped into a file with the name ‘&lt;font 
+      class=font6&gt;&lt;em&gt;&amp;lt;timestamp&amp;gt;&lt;/em&gt;&lt;/font&gt;&lt;font 
+      class=font5&gt;_Avg_Req_Sec_dump.txt’.&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/td&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: #d4d0c8; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl68&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Windows: ./wlst 
+      dumpmetric_avg_req_sec.py &amp;lt;hostname&amp;gt; &amp;lt;port number&amp;gt; 
+      &amp;lt;username&amp;gt; &amp;lt;password&amp;gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr style=&quot;HEIGHT: 39pt; mso-height-source: userset&quot; height=&quot;52&quot;&gt;
+    &lt;td 
+    style=&quot;BORDER-BOTTOM: windowtext 1pt solid; BORDER-LEFT: #d4d0c8; BACKGROUND-COLOR: transparent; HEIGHT: 39pt; BORDER-TOP: #d4d0c8; BORDER-RIGHT: windowtext 1pt solid&quot; 
+    class=xl73 height=52&gt;&lt;font size=&quot;2&quot; face=&quot;Arial&quot;&gt;Example: ./wlst.sh 
+      dumpmetric_avg_req_sec.py localhost 7001 prodney 
+  Admin123&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec borderPosition="none" hAlign="center" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

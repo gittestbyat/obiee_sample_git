@@ -1,0 +1,633 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<ATTENDANCE_SHEET_LTR>
+   <letter from_email="manjushree.mishra@company.com" to_email="manjushree.mishra@company.com" reply_to_email="manjushree.mishra@company.com" cc_email="manjushree.mishra@company.com" bcc_email="manjushree.mishra@company.com" subject="Test Subject for Attendance Sheet" charset="" local_charset="">
+      <event>
+      <activity_name heading="Activity Version">Oracle Database 10g: New Features for Administrators Ed 1</activity_name>
+      <event_title heading="Event Title">1128228</event_title>
+      <event_start_date heading="Course Start Date">28-NOV-2005</event_start_date>
+      <event_end_date heading="Course End Date">02-DEC-2005</event_end_date>
+      <multiple_day>Y</multiple_day>
+      <student_details_head>
+         <student_details_student_name>Student Name</student_details_student_name>
+         <student_details_company_name>Company Name</student_details_company_name>
+         <student_details_booking_id>Enrollment NUmber</student_details_booking_id>
+         <student_details_paid>Paid</student_details_paid>         
+	 <student_details_signature>Signature</student_details_signature>  
+	 <student_details_add_column>Additional Col.</student_details_add_column>        
+      </student_details_head>
+      <student_details_record>
+         <student_details_student_name>Gop Subbu</student_details_student_name>
+         <student_details_company_name>Gop Subbu</student_details_company_name>
+         <student_details_booking_id>2209554</student_details_booking_id>
+         <student_details_paid>N</student_details_paid>
+	 <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>	
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>Oracle corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>	 
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Leslie Mcdonald</student_details_student_name>
+         <student_details_company_name>Microsoft Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>	 
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Sandhya Rao</student_details_student_name>
+         <student_details_company_name>Digital Soft</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>	 
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Ling Zhang</student_details_student_name>
+         <student_details_company_name>Oracle Canada</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      <student_details_record>
+         <student_details_student_name>Vince Cheema</student_details_student_name>
+         <student_details_company_name>IBM Corp</student_details_company_name>
+         <student_details_booking_id>2153604</student_details_booking_id>
+         <student_details_paid>Y</student_details_paid>
+         <signature>
+	 <day_hdr>DAY1</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY2</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY3</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY4</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY5</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+	 <signature>
+	 <day_hdr>DAY6</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature> 
+	 <signature>
+	 <day_hdr>Additional Col.</day_hdr>
+	 <day_val>-----------</day_val>
+	 </signature>
+      </student_details_record>
+      </event>
+
+   </letter>
+</ATTENDANCE_SHEET_LTR>

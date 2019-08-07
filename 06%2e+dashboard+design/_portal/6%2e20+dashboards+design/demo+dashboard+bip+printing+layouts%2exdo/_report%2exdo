@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/06. Dashboard Design/_portal/6.20 Dashboards Design/Demo Dashboard BIP Printing.xdm"/>
+   <description>
+      <![CDATA[Report%20associated%20with%20/shared/1.%20Quick%20Demos/_portal/1.00%20New%20Features%20Demo/BIP%20Printing]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="false"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Portrait Layout">
+      <template label="Portrait Layout" url="Portrait Layout.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Landscape Layout" url="Landscape Layout.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Portrait Layout Grey" url="Portrait Layout Grey.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+   </templates>
+</report>

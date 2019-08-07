@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20Source:%20Local%20Excel%20file.%0AThis%20data%20model%20sources%20data%20saved%20to%20an%20Excel%20file.%20%0ADo%20NOT%20delete%20the%20Excel%20file%20from%20the%20data%20model.]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="SFO Data" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>SFO_passenger_data.xls</file>
+            <sheetName>SFO Passengers Report - DB_Insi</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="G_1" source="SFO Data" label="G_1">
+    <element name="ID" value="ID" dataType="xsd:double" label="ID" breakOrder="None" fieldOrder="1"/>
+    <element name="YEAR" value="YEAR" dataType="xsd:double" label="Year" breakOrder="None" fieldOrder="2"/>
+    <element name="MONTH" value="MONTH" dataType="xsd:double" label="Month" breakOrder="None" fieldOrder="3"/>
+    <element name="OPERATING_AIRLINE" value="OPERATING_AIRLINE" dataType="xsd:string" label="Operating Airline" breakOrder="None" fieldOrder="4"/>
+    <element name="OPERATING_AIRLINE_IATA_CODE" value="OPERATING_AIRLINE_IATA_CODE" dataType="xsd:string" label="Operating Airline IATA Code" breakOrder="None" fieldOrder="5"/>
+    <element name="GEO_SUMMARY" value="GEO_SUMMARY" dataType="xsd:string" label="Geo Category" breakOrder="None" fieldOrder="6"/>
+    <element name="GEO_REGION" value="GEO_REGION" dataType="xsd:string" label="Geo Region" breakOrder="None" fieldOrder="7"/>
+    <element name="ACTIVITY_TYPE_CODE" value="ACTIVITY_TYPE_CODE" dataType="xsd:string" label="Activity Type Code" breakOrder="None" fieldOrder="8"/>
+    <element name="PRICE_CATEGORY_CODE" value="PRICE_CATEGORY_CODE" dataType="xsd:string" label="Price Category Code" breakOrder="None" fieldOrder="9"/>
+    <element name="TERMINAL" value="TERMINAL" dataType="xsd:string" label="Terminal" breakOrder="None" fieldOrder="10"/>
+    <element name="BOARDING_AREA" value="BOARDING_AREA" dataType="xsd:string" label="Boarding Area" breakOrder="None" fieldOrder="11"/>
+    <element name="CURRENT_COUNT" value="CURRENT_COUNT" dataType="xsd:double" label="Passenger Count" breakOrder="None" fieldOrder="12"/>
+    <element name="PREVIOUS_COUNT" value="PREVIOUS_COUNT" dataType="xsd:double" label="Previous Yr Passenger Count" breakOrder="None" fieldOrder="13"/>
+    <element name="CHANGE_COUNT" value="CHANGE_COUNT" dataType="xsd:double" label="Previous Yr Count Difference" breakOrder="None" fieldOrder="14"/>
+    <element name="PERCENT_CHANGE" value="PERCENT_CHANGE" dataType="xsd:double" label="Yr Ago Percent Change" breakOrder="None" fieldOrder="15"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="SFO Data" left="274px" top="17px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

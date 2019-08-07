@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="XSA(&#39;prodney&#39;.&#39;Global Innovators&#39;)" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="ce01fe080e1275f11"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Columns&quot;.&quot;Company&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c05cf21b893ce6288"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Columns&quot;.&quot;Country&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cdb9200377b26f497"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Columns&quot;.&quot;Industry&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"><saw:displayFormat><saw:formatSpec width="800" height="700"/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true" height="700" repeat="false"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c05cf21b893ce6288"/><saw:edgeLayer type="column" columnID="cdb9200377b26f497"/><saw:edgeLayer type="column" columnID="ce01fe080e1275f11"/></saw:edgeLayers><saw:columnOrder><saw:columnOrderRef columnID="c05cf21b893ce6288" direction="descending"/></saw:columnOrder></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:narrative rowCount="200"><saw:caption fmt="html"><saw:text>{&quot;company&quot;:&quot;@{ce01fe080e1275f11}&quot;.replace(&quot;&amp;amp;&quot;,&quot;&amp;&quot;),&quot;country&quot;:&quot;@{c05cf21b893ce6288}&quot;,&quot;industry&quot;:&quot;@{cdb9200377b26f497}&quot;.replace(&quot;&amp;amp;&quot;,&quot;&amp;&quot;)}</saw:text></saw:caption></saw:narrative><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep><saw:prefix><saw:caption fmt="html"><saw:text>&lt;link rel=&quot;stylesheet&quot; id=&quot;css&quot; href=&quot;&quot;&gt;
+&lt;script src=&quot;/va/api/v1/plugins/resource/oracle-jet/require.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/va/api/v1/plugins/registry/requirejsConfig.js&quot;&gt;&lt;/script&gt; 
+
+&lt;div id=&#39;diagram-container&#39;&gt;
+    &lt;div id=&quot;diagram&quot; data-bind=&quot;ojComponent: {
+            component: &#39;ojDiagram&#39;,
+            layout: layoutFunc,
+            selectionMode: &#39;none&#39;,
+            highlightMatch: &#39;any&#39;,
+            highlightedCategories: highlightedCategoriesValue,
+            hoverBehavior : hoverBehaviorValue,
+            linkHighlightMode : &#39;linkAndNodes&#39;,
+            nodeHighlightMode : &#39;nodeAndLinks&#39;,
+            styleDefaults : styleDefaults,
+            nodes : nodes,
+            links : links
+        }&quot;
+        style=&quot;max-width:800px;width:100%; height:700px;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+document.getElementById(&quot;css&quot;).href = require.toUrl(&quot;ojs&quot;)+&quot;.css&quot;;
+$( &quot;html&quot; ).css( &quot;font-size&quot;, 15);
+
+var data =[</saw:text></saw:caption></saw:prefix><saw:postfix><saw:caption fmt="html"><saw:text>];
+
+var map = {
+  &quot;Canada&quot;:&quot;North America&quot;,
+  &quot;China&quot;:&quot;Asia&quot;,
+  &quot;France&quot;:&quot;Europe&quot;,
+  &quot;Germany&quot;:&quot;Europe&quot;,
+  &quot;Japan&quot;:&quot;Asia&quot;,
+  &quot;Netherlands&quot;:&quot;Europe&quot;,
+  &quot;S. Korea&quot;:&quot;Asia&quot;,
+  &quot;Sweden&quot;:&quot;Europe&quot;,
+  &quot;Switzerland&quot;:&quot;Europe&quot;,
+  &quot;Taiwan&quot;:&quot;Asia&quot;,
+  &quot;USA&quot;:&quot;North America&quot; 
+};
+
+require([&#39;ojs/ojcore&#39;, &#39;knockout&#39;, &#39;jquery&#39;, &#39;/analyticsRes/ojet-demo/DemoSankeyLayout.js&#39;,
+&#39;ojs/ojknockout&#39;,  &#39;ojs/ojdiagram&#39;], function(oj, ko, $, layout) {
+  function model(data, continents) {
+    var self = this;
+    self.layoutFunc = layout.layout;
+    self.highlightedCategoriesValue = ko.observable(null);
+    self.hoverBehaviorValue = ko.observable(&quot;dim&quot;);
+    var colorHandler = new oj.ColorAttributeGroupHandler();
+    this.nodes = [];
+    this.links = [];
+    if (data) {
+      var industries = {};
+      var countries = {};
+      var connections = {};
+      for (var i = 0; i &lt; data.length; i++) {
+        var company = data[i].company;
+        var country = data[i].country;
+        var industry = data[i].industry;
+        var connectionKey = country + &quot;:&quot;+ industry;
+        countries[country] = countries[country] ? countries[country].concat([company]) : [company];
+        industries[industry] = industries[industry] ? industries[industry].concat([company]) : [company];
+        connections[connectionKey] = connections[connectionKey] ? connections[connectionKey].concat([company]) : [company];
+      }
+      //create nodes
+      for (var key in countries) {
+        this.nodes.push(createNode(key, countries[key] , continents[key]));
+      }
+      for (var key in industries) {
+        this.nodes.push(createNode(key, industries[key], &quot;Industry&quot;));
+      }
+      //create links
+      var linkIdx = 0;
+      for (var key in connections) {
+        this.links.push(createLink(linkIdx++, key, connections[key]));
+      }
+    }
+    function createNode(key, data, category) {
+      var nodeSize = data.length * 5;
+      var color = colorHandler.getValue(category);
+      var shortDesc = &quot;&lt;b&gt;&quot; + key + (category === &quot;Industry&quot; ? &quot; &quot; + category : &quot;, &quot; + category) + &quot;&lt;/b&gt;:\\n&quot; +  data.join(&quot;\\n&quot;);
+      return {id: &quot;id_&quot;+key.replace(/\s+/g, &#39;&#39;),
+              //categories: continents[key] ? [continents[key]] : null, //uncomment to highlight by continents
+              label : key,
+              shortDesc : shortDesc,
+              icon : {height : nodeSize, color : color, borderColor: color}
+              };
+    }
+    function createLink(index, connection, data) {
+      var endpoints = connection.split(&quot;:&quot;);
+      return {
+        id: &quot;link_&quot; + index,
+        shortDesc : &quot;&lt;b&gt;&quot; + endpoints[1] + &quot; companies from &quot; + endpoints[0] + &quot;, &quot; + continents[endpoints[0]] + &quot;:&lt;/b&gt;\\n&quot; + data.join(&quot;\\n&quot;),
+        startNode : &quot;id_&quot; + endpoints[0].replace(/\s+/g, &#39;&#39;),
+        endNode : &quot;id_&quot; + endpoints[1].replace(/\s+/g, &#39;&#39;),
+        width : data.length * 5,
+        color : getColor(continents[endpoints[0]])
+      };
+    }
+    function getColor (category) {
+      return colorHandler.getValue(category)
+                    .replace(&quot;rgb&quot;, &quot;rgba&quot;)
+                    .replace(&quot;)&quot;, &quot;, .4)&quot;);
+    }
+    this.styleDefaults = {
+      nodeDefaults : {
+        icon : {width :70, shape : &quot;rectangle&quot;}
+      }
+    };
+  }
+  $(document).ready(
+    function() {
+		ko.applyBindings(new model(data, map), document.getElementById(&#39;diagram-container&#39;));
+    }
+  );
+});
+&lt;/script&gt;
+
+</saw:text></saw:caption></saw:postfix></saw:view></saw:views></saw:report>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;U - Usage Tracking&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="cb2129b0f77f3388c">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Dashboards&quot;.&quot;Dashboard Folder&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent"><saw:clientEventSpec channel="CH15"/></saw:formatSpec></saw:displayFormat><saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Dashboard</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Dashboard Folder</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf3f59699516771d9">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Dashboards&quot;.&quot;Dashboard Name&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cfebf067e5b158f9d"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Dashboard&quot;.&quot;Dashboard Page Name&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ca4458fc3b0371a8a">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Dashboard&quot;.&quot;Dashboard Page Path&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cc606ec184ccc1a34">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Dashboard&quot;.&quot;Analysis Path&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cdf018b4c99b30757"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Dashboard&quot;.&quot;Analysis Name&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Dashboards&quot;.&quot;Dashboard Folder&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Dashboards&quot;.&quot;Dashboard Name&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Dashboard&quot;.&quot;Dashboard Page Name&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable>
+		</saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1" autoPreview="true" clientEventChannels="CH15" clientEventEnabled="true" rowsPerPage="15"><saw:edges><saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cb2129b0f77f3388c" uiTableName="Dashboard"/></saw:edgeLayers></saw:edge><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="cf3f59699516771d9" uiTableName="Dashboard"/><saw:edgeLayer type="column" columnID="cfebf067e5b158f9d" uiTableName="Dashboard"/><saw:edgeLayer type="column" columnID="cdf018b4c99b30757" uiTableName="Dashboard"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges>
+			<saw:pageEdgeState><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="cb2129b0f77f3388c"/></saw:groupType><saw:members xsi:type="saw:stringMembers"><saw:value>/shared/2. Functional Examples</saw:value></saw:members></saw:staticMemberGroup></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="cb2129b0f77f3388c" groupID="0"/></saw:selectionGroups></saw:pageEdgeState></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2" rowsPerPage="50" autoPreview="false">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cb2129b0f77f3388c"/><saw:edgeLayer type="column" columnID="cf3f59699516771d9"/></saw:edgeLayers></saw:edge><saw:edge axis="row" showColumnHeader="true">
+					<saw:columnOrder>
+						<saw:columnOrderRef columnID="cb2129b0f77f3388c" direction="ascending">
+							<saw:QDR>
+								<saw:staticMemberGroup specialDimension="measure">
+									<saw:members xsi:type="saw:specialValueMembers">
+										<saw:value>cc606ec184ccc1a34</saw:value></saw:members></saw:staticMemberGroup></saw:QDR></saw:columnOrderRef></saw:columnOrder>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="cfebf067e5b158f9d"/></saw:edgeLayers></saw:edge><saw:edge axis="column">
+					<saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+				<saw:measure columnID="cc606ec184ccc1a34" aggRule="countDistinct">
+					<saw:memberFormat>
+						<saw:displayFormat>
+							<saw:formatSpec wrapText="true"/></saw:displayFormat>
+						<saw:caption>
+							<saw:text>Count of Analyses</saw:text></saw:caption></saw:memberFormat></saw:measure></saw:measuresList><saw:nestedViews><saw:nestedView position="chart only"><saw:view xsi:type="saw:dvtchart" name="pivotTableView!2::GridChart"><saw:display type="bar" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false"><saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display><saw:canvasFormat height="300" width="400" showGradient="true"><saw:dataLabels display="always" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default"><saw:textFormat fontSize="11"/></saw:dataLabels><saw:gridlines default="true"><saw:horizontal><saw:major visible="false"/><saw:minor visible="false"/></saw:horizontal><saw:vertical><saw:major visible="false"/><saw:minor visible="false"/></saw:vertical></saw:gridlines><saw:title mode="custom"><saw:caption/></saw:title></saw:canvasFormat><saw:legendFormat position="default" transparentFill="true"/><saw:axesFormats syncAxis="false"><saw:axisFormat axis="Y1"><saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/><saw:title mode="custom"><saw:caption/></saw:title></saw:axisFormat><saw:axisFormat axis="X"><saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/><saw:title mode="auto"><saw:caption/></saw:title></saw:axisFormat></saw:axesFormats><saw:selections><saw:categories><saw:category><saw:columnRef columnID="cfebf067e5b158f9d"/></saw:category></saw:categories><saw:measures showMeasureLabelsOnCategory="false"><saw:column measureType="y"><saw:columnRef columnID="cc606ec184ccc1a34"/></saw:column></saw:measures><saw:seriesGenerators><saw:measureLabels/></saw:seriesGenerators></saw:selections></saw:view></saw:nestedView></saw:nestedViews></saw:view></saw:views></saw:report>

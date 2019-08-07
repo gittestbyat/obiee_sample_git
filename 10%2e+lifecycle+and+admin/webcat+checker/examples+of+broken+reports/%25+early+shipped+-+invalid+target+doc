@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawkpi:kpi xmlns:sawkpi="com.siebel.analytics.web/kpi/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawbsc="com.siebel.analytics.web/scorecard/v1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" subjectArea="&quot;A - Sample Sales&quot;" isTrendEnabled="true" ID="347779e0-0ba3-1000-8567-0ae4eb530000" name="% Early Shipped" xmlVersion="201106170"><sawkpi:kpiPeriod changeToleranceType="UNITS">
+    
+  <saw:column columnID="cc64390e641496411" xsi:type="saw:regularColumn">
+      <saw:columnFormula>
+        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr>
+      </saw:columnFormula>
+    </saw:column></sawkpi:kpiPeriod><sawkpi:owner id="2E0D21908C3611E0BFDA63D046FC78B0"/><sawkpi:relatedDocuments>
+    <sawkpi:relatedDocument>
+      <sawkpi:name>Supply Chain Website</sawkpi:name>
+      <sawkpi:description/>
+      <sawkpi:link type="URL">
+        <sawkpi:path>http://www.oracle.com/bi</sawkpi:path>
+      </sawkpi:link>
+    </sawkpi:relatedDocument>
+    <sawkpi:relatedDocument>
+      <sawkpi:name>Hot Products List</sawkpi:name>
+      <sawkpi:description/>
+      <sawkpi:link type="CATALOG">
+        <sawkpi:path>/shared/3. Analysis and Dashboards/Answers Queries/Big Selling Products</sawkpi:path>
+      </sawkpi:link>
+    </sawkpi:relatedDocument>
+    <sawkpi:relatedDocument>
+      <sawkpi:name>Order Status Summary Report</sawkpi:name>
+      <sawkpi:description/>
+      <sawkpi:link type="CATALOG">
+        <sawkpi:path>/shared/3. Analysis and Dashboards/Answers Queries/Order Status</sawkpi:path>
+      </sawkpi:link>
+    </sawkpi:relatedDocument>
+  </sawkpi:relatedDocuments><sawkpi:dimensions><sawkpi:dimension dimensionID="Products.Products Hierarchy">
+      <saw:column columnID="cfb22789f0318317a" xsi:type="saw:hierarchicalColumn" dimensionID="H1 Products" hierarchyID="Products Hierarchy" tableName="Products"/>
+    </sawkpi:dimension><sawkpi:dimension dimensionID="&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;"><saw:column xsi:type="saw:regularColumn" columnID="c66c7d4aea15d4cc6"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></saw:columnFormula></saw:column></sawkpi:dimension><sawkpi:dimension dimensionID="&quot;Office Regions&quot;.&quot;D50  Region&quot;"><saw:column xsi:type="saw:regularColumn" columnID="cea6420c67be02fd4"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Office Regions&quot;.&quot;D50  Region&quot;</sawx:expr></saw:columnFormula></saw:column></sawkpi:dimension></sawkpi:dimensions><sawkpi:postUpdateBusinessRules><sawkpi:kpiBusinessRule isDefault="true"><sawkpi:businessRule/></sawkpi:kpiBusinessRule></sawkpi:postUpdateBusinessRules><sawkpi:actualValue isWritable="false">
+    <saw:column columnID="c0c035a5103fa1096" xsi:type="saw:regularColumn">
+      <saw:columnFormula>
+        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;45  Early Shipped Pct&quot;</sawx:expr>
+      </saw:columnFormula>
+      <saw:displayFormat>
+        <saw:formatSpec suppress="repeat" wrapText="true">
+          <saw:dataFormat xsi:type="saw:percent" commas="false" negativeType="paren" minDigits="2" maxDigits="2"/>
+        </saw:formatSpec>
+      </saw:displayFormat>
+      <saw:tableHeading>
+        
+      </saw:tableHeading>
+      <saw:columnHeading>
+        
+      </saw:columnHeading>
+    </saw:column>
+  </sawkpi:actualValue><sawkpi:targetSets><sawkpi:targetSet isDefault="true" name="Default">
+      <sawkpi:targetValue isWritable="false">
+        <saw:column columnID="c742ad68e338865a2" xsi:type="saw:regularColumn">
+          <saw:columnFormula>
+            <sawx:expr xsi:type="sawx:sqlExpression">33</sawx:expr>
+          </saw:columnFormula>
+          <saw:tableHeading>
+            
+          </saw:tableHeading>
+          <saw:columnHeading>
+            
+          </saw:columnHeading>
+        </saw:column>
+      </sawkpi:targetValue>
+      <sawkpi:thresholds goal="high" treatNoDataAs="OK" scoreType="DISCRETE" thresholdType="CUSTOMEXPRESSION">
+        <sawkpi:thresholdRange ID="345e73a0-0ba3-1000-8567-0ae4eb530000" value="100" assessmentStateKey="OK"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1431">
+              <saw:text>OK</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="greater">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">33 * 0.95</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="green" icon="fmap:common/kpi_ok_status.gif"/></sawkpi:thresholdRange>
+        <sawkpi:thresholdRange ID="345e73a1-0ba3-1000-8567-0ae4eb530000" value="50" assessmentStateKey="WARNING"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1432">
+              <saw:text>WARNING</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="greater">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">33 * 0.80</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="yellow" icon="fmap:common/kpi_warning_status.gif"/></sawkpi:thresholdRange>
+        <sawkpi:thresholdRange ID="345e73a2-0ba3-1000-8567-0ae4eb530000" value="0" assessmentStateKey="CRITICAL"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1433">
+              <saw:text>CRITICAL</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="lessOrEqual">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">33 * 0.80</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="red" icon="fmap:common/kpi_critical_status.gif"/></sawkpi:thresholdRange>
+      </sawkpi:thresholds>
+    </sawkpi:targetSet></sawkpi:targetSets></sawkpi:kpi>

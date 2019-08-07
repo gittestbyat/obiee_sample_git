@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="dbjdrufcgvfsviaa"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="if1rgfpbok1ia5ui" layoutType="specificSize"><sawd:dashboardSection name="Section 2" showHeading="true" showSectionTitle="true" duid="lsddlp3u6iq5inve" layoutType="bestFit"><saw:caption><saw:text>Description</saw:text></saw:caption><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 1" duid="9jplu8ttt4eus57d"><sawd:HTML fmt="text">This page demonstrates how to set different types of dashboard prompts using custom javascript functions. Note: Custom JS scripts that are included in this example are not part of OBIEE product and they are not supported by Oracle. It is provided for demonstration purposes.  </sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 1" collapsible="false" duid="7qonj9dllah70qa1" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/09. Integrations and Customizations/Custom Interactions/Prompt Setting/Prompt" duid="ukvv6h8sim5vscon"><saw:caption><saw:text>Prompt</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" duid="rv6avlvgfsoh4f4e" showSectionTitle="true" collapsible="false" showHeading="true" horizontalLayout="true" layoutType="bestFit"><saw:caption><saw:text>Use custom JavaScript to set prompt value</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#9999CC" fontStyle="bold" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 0" duid="fcubcrj4i1o30mn8"><sawd:HTML fmt="html">[br/]&lt;script src=&#39;/analyticsRes/SampleApp/customjs/SAutilsv1.3.js&#39;&gt;&lt;/script&gt;
+&lt;script&gt;
+function setprompt(type){
+var val = document.getElementById(&quot;pValue&quot;).value;
+
+if (!val){
+alert(&quot;Error: no value specified&quot;);
+return; }
+
+if (type==&#39;col&#39;)
+	SAutils.setColumnPrompt(&#39;&quot;Time&quot;.&quot;T05 Per Name Year&quot;&#39;,val);
+if (type==&#39;ps&#39;)
+	SAutils.setPSVarPrompt(&#39;PSVAR&#39;,val);
+if (type==&#39;req&#39;)
+	SAutils.setRequestVarPrompt(&#39;DYNAMIC_VAR_EXAMPLE&#39;,val);
+}
+&lt;/script&gt;
+
+&lt;table&gt; 
+&lt;tr&gt;
+&lt;td width=500 colspan=3&gt;Enter the value to be set in prompt: &lt;input id=&#39;pValue&#39; type=&#39;text&#39; size=30&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td &gt;&lt;br/&gt;&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a href=&quot;javascript:setprompt(&#39;ps&#39;)&quot;&gt;Set PS Variable Prompt&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td &gt;&lt;br/&gt;&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a href=&quot;javascript:setprompt(&#39;req&#39;)&quot;&gt;Set Request Variable Prompt&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td &gt;&lt;br/&gt;&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a href=&quot;javascript:setprompt(&#39;col&#39;)&quot;&gt;Set Column Prompt&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+[br/]</sawd:HTML></sawd:htmlView><sawd:reportView name="Report 2" display="embed" showView="" duid="actv44a7tjc3asa8"><saw:caption><saw:text>Display Prompt Values</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Prompt Setting/Display Prompt Values"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec wrapText="true" width="1200"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:derivedCriteria" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:derivedColumn" columnID="cf0e50d11e1936b94" aggRule="avg">
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="suppress" fontSize="10" wrapText="true">
+						<saw:dataFormat xsi:type="saw:number" commas="true" negativeType="minus" minDigits="0" maxDigits="0"/></saw:formatSpec><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="greater">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c6c17f1bccd74d8f2"/>
+										<sawx:expr xsi:type="xsd:string">R</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec fontColor="#000080" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:tableHeading/>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>All Flts :</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec fontSize="10" wrapText="true"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:derivedColumn" columnID="c6c17f1bccd74d8f2">
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="suppress" wrapText="true"/><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="equal">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c6c17f1bccd74d8f2"/>
+										<sawx:expr xsi:type="xsd:string">Report</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec fontColor="#000080" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Route</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Scope</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+		<saw:from>
+			<saw:criteria xsi:type="saw:setCriteria" op="union">
+				<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">
+					<saw:columns>
+						<saw:column xsi:type="saw:regularColumn" columnID="c00b01caaa0f18652" aggRule="avg">
+							<saw:columnFormula>
+								<sawx:expr xsi:type="sawx:sqlExpression">6235242</sawx:expr></saw:columnFormula></saw:column>
+						<saw:column xsi:type="saw:regularColumn" columnID="cf8619accf71ae323">
+							<saw:columnFormula>
+								<sawx:expr xsi:type="sawx:sqlExpression">&#39;All Flights :&#39;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>
+				<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;">
+					<saw:columns>
+						<saw:column xsi:type="saw:regularColumn" columnID="c4cd6da755b8cc3c0">
+							<saw:columnFormula>
+								<sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></saw:columnFormula></saw:column>
+						<saw:column xsi:type="saw:regularColumn" columnID="cfc182a4cd4347d9e">
+							<saw:columnFormula>
+								<sawx:expr xsi:type="sawx:sqlExpression">&#39;Report :&#39;</sawx:expr></saw:columnFormula>
+							<saw:tableHeading>
+								<saw:caption fmt="text">
+									<saw:text>Route</saw:text></saw:caption></saw:tableHeading>
+							<saw:columnHeading>
+								<saw:caption fmt="text">
+									<saw:text>Scop</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+					<saw:filter>
+						<sawx:expr xsi:type="sawx:savedFilter" path="/shared/11. Demos/_filters/X - Airlines Delay/Prt Filters - All Dims" name="Prt Filters - All Dims"/></saw:filter></saw:criteria></saw:criteria></saw:from>
+		<saw:columnOrder>
+			<saw:columnOrderRef columnID="cf0e50d11e1936b94" direction="descending"/></saw:columnOrder></saw:criteria>
+	<saw:interactionOptions drill="true" movecolumns="true" sortcolumns="true" addremovevalues="true" groupoperations="true" calcitemoperations="true" showhidesubtotal="true" showhiderunningsum="true" inclexclcolumns="true"/>
+	<saw:views textDelivery="compoundView!1" includeNewColumns="true" currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable><saw:cvRow><saw:cvCell viewName="tableView!1">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="htmlview!2"/></saw:cvRow></saw:cvTable><saw:pageProps>
+				<saw:pageHeader/>
+				<saw:pageFooter/></saw:pageProps></saw:view>
+		<saw:view xsi:type="saw:noresultsview" name="noresultsview!1">
+			<saw:headline/>
+			<saw:detail>
+				<saw:caption>
+					<saw:text>No Results</saw:text></saw:caption></saw:detail></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges><saw:edge axis="page" showColumnHeader="false"/><saw:edge axis="section" insertPageBreak="false" showBlankRows="false" showColumnHeader="false">
+					<saw:displayFormat>
+						<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></saw:edge><saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c6c17f1bccd74d8f2" uiTableName="Route">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true" borderColor="#999999" borderPosition="none"/></saw:displayFormat></saw:memberFormat>
+							<saw:levels>
+								<saw:level>
+									<saw:displaySubTotal id="t1" subTotalPosition="none">
+										<saw:memberFormat>
+											<saw:displayFormat>
+												<saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:displaySubTotal></saw:level></saw:levels>
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec/></saw:displayFormat></saw:headerFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="cf0e50d11e1936b94" uiTableName="">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec borderColor="#999999" borderPosition="none" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges>
+			<saw:sectionContent>
+				<saw:displayFormat>
+					<saw:formatSpec borderPosition="none" wrapText="true" paddingTop="0" paddingBottom="0" paddingLeft="0" paddingRight="0"/></saw:displayFormat></saw:sectionContent></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!2">
+			<saw:staticText>
+				<saw:caption fmt="html">
+					<saw:text>&lt;style&gt;.PTCC {   background-color: white;   border-top: white;   border-left: white;}&lt;/style&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="adc3ht2orkn3t3ou"><sawd:dashboardColumn name="Column 2" frozen="false" canFreeze="false" duid="5evqq70jufhcund8" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 4" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2549">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Data Inflators&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_215">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView></sawd:dashboardSection><sawd:dashboardSection name="Section 3" duid="eap6anh523omhtdh" showSectionTitle="false" collapsible="false" layoutType="bestFit"><sawd:htmlView name="HTML 2" duid="7nrv7e3ms97a4j5j"><sawd:HTML fmt="html">&lt;br/&gt;
+&lt;font color=darkblue size=2&gt;
+&lt;b&gt; Overview &lt;/b&gt;
+&lt;/font&gt;
+
+
+&lt;br/&gt;
+OBIEE SampleApp Data inflation scripts enable you to dramatically expand the volume of data in OBIEE SampleApp upto tens of millions rows.
+These scripts are written in PL/SQL and are specifically meant to run on SampleApp databases.
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;font color=darkblue size=2&gt;
+&lt;b&gt;Coverage &lt;/b&gt;
+&lt;/font&gt;
+
+&lt;br/&gt;
+The scripts sequentially allow to increase data volume in some dimension tables, in revenue fact table, and/or to change the time window period of the main fact tables within BISAMPLE or BISAMPLE_EXA schema.
+&lt;br/&gt;
+&lt;br/&gt;
+-	The data inflation scripts allow to inflate data volume on the following tables :
+&lt;br/&gt;
+1) Employee (Value based dimension)
+&lt;br/&gt;
+2) Customers
+&lt;br/&gt;
+3) Products (Regular and Ragged/Skiplevel)
+&lt;br/&gt;
+4) Time
+&lt;br/&gt;
+5) Main revenue facts (SAMP_REVENUE_F and relational aggregates)
+&lt;br/&gt;
+&lt;br/&gt;
+-	The scripts also allow to age facts data : shift ahead or back in time the exact time period initially covered by original fact data. Facts impacted by aging scripts are :
+&lt;br/&gt;
+
+1) SAMP_REVENUE_F and relational aggregates
+&lt;br/&gt;
+2) SAMP_HEADCOUNT_F
+&lt;br/&gt;
+3) SAMP_QUOTAS_F
+&lt;br/&gt;
+4) SAMP_TARGETS_F
+&lt;br/&gt;
+5) SAMP_CUSTOMERS_D (Dimension table)
+&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;font color=darkblue size=2&gt;
+&lt;b&gt;
+Script Location
+&lt;/b&gt;
+&lt;/font&gt;
+&lt;br/&gt;
+All the data inflator procedures are compiled and available for execution in BISAMPLE and BISAMPLE_EXA schemas.
+&lt;br/&gt;
+The scripts are available under the folder /home/oracle/scripts/SampleDataInflator.
+&lt;br/&gt;
+Refer to the document &lt;font color=darkred&gt;&lt;b&gt;SampleApp_Data_Inflation_Guide.pdf&lt;/font&gt;&lt;/b&gt; available under the same folder for details on execution sequence of the various procedures, input parameters to be provided and other details.
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;font color=darkblue size=2&gt;
+&lt;b&gt; Limitation &lt;/b&gt;
+&lt;br/&gt;
+&lt;/font&gt;
+
+
+These scripts only impact SampleApp main oracle datasource. No multidimensional sources (Essbase / OLAP ), or alternative sources (Timesten, XML files) is impacted.
+&lt;br/&gt;
+As there are no loading scripts for these datasources, once these scripts are executed, the data within BISAMPLE schema will no longer be in sync with the rest of the data sources and some federation examples may show discrepancy between the sources after relational data is inflated.
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

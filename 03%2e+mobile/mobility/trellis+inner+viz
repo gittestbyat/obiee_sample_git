@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:hierarchicalColumn" columnID="c3f685a441d2b8c36" hierarchyID="Time Hierarchy" tableName="&quot;Time&quot;" dimensionID="H0 Time">
+        <saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading><saw:hierarchyLevels>
+          <saw:hierarchyLevel levelID="Total Time"/>
+          <saw:hierarchyLevel levelID="Year"/>
+          <saw:hierarchyLevel levelID="Quarter"/>
+          <saw:hierarchyLevel levelID="Month"/>
+          <saw:hierarchyLevel levelID="Week"/>
+          <saw:hierarchyLevel levelID="Day"/>
+        </saw:hierarchyLevels>
+        <saw:dimensionSelection>
+          <saw:selectionStep stepID="1" type="startWith" category="member" overridable="false">
+            
+          <saw:stepMembers xsi:type="saw:staticMemberGroupDef"><saw:staticMemberGroup><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelName="Year" levelID="Year"/><saw:members xsi:type="saw:stringMembers"><saw:value>2012</saw:value><saw:value>2010</saw:value><saw:value>2011</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep>
+        </saw:dimensionSelection>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cdb1151d7e4213b5e"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T01 Per Name Week&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:hierarchicalColumn" columnID="c252d45c2b16016aa" hierarchyID="Products Hierarchy" tableName="&quot;Products&quot;" dimensionID="H1 Products">
+        <saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading><saw:hierarchyLevels>
+          <saw:hierarchyLevel levelID="Total Products"/>
+          <saw:hierarchyLevel levelID="Brand"/>
+          <saw:hierarchyLevel levelID="LOB"/>
+          <saw:hierarchyLevel levelID="Type"/>
+          <saw:hierarchyLevel levelID="Product"/>
+        </saw:hierarchyLevels>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c980964d3cd2eb2e1">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Cust Regions&quot;.&quot;C50  Region&quot;</sawx:expr>
+        </saw:columnFormula>
+      <saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent"><saw:clientEventSpec channel="MD1"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c60eea83df2f4c9f8">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true" interaction="action">
+            
+          <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false"><saw:actionLink actionLinkID="c60eea83df2f4c9f8_al35a0e2bc199d8a55">
+                <saw:action>
+                  <saw:actionName>Navigate - www.google.com/finance</saw:actionName>
+                  <saw:parameters allowExtraParameters="true"/>
+                  <saw:assignments/>
+                  <saw:implementation xsi:type="saw:URLActionType" executeOnClient="true">
+                    <saw:url aliasedLocation="false">www.google.com/finance</saw:url>
+                    <saw:request>GET</saw:request>
+                  </saw:implementation>
+                  <saw:clientImplementation>
+                    <saw:customisation invokeConfirmation="false"/>
+                  </saw:clientImplementation>
+                </saw:action>
+                <saw:caption>
+                  <saw:text>Navigate to Finance Summary</saw:text>
+                </saw:caption>
+              </saw:actionLink><saw:actionLink actionLinkID="c60eea83df2f4c9f8_aleca4b328e6f4d0ba">
+                
+                <saw:action><saw:actionName>Order Details</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/01. QuickStart/Simple Demo Dashboard/Orders Details/Order Details</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+                    <saw:functionName>__navigateToBIContent__</saw:functionName>
+                    <saw:scriptLanguage>JScript</saw:scriptLanguage>
+                    <saw:scriptPath/>
+                  </saw:implementation><saw:clientImplementation>
+                    <saw:customisation invokeConfirmation="false"/>
+                  </saw:clientImplementation></saw:action><saw:caption>
+                  <saw:text>Launch Order Details</saw:text>
+                </saw:caption>
+              </saw:actionLink></saw:actionLinks></saw:formatSpec>
+        </saw:displayFormat>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c8f48cecd84dda4a9"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cc7659815f58d0331"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;3- Discount Amount&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c4529941d7e7c59e2"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;4- Paid Amount&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c8c7804c7dd1aa04d">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D2  Department&quot;</sawx:expr>
+        </saw:columnFormula>
+      <saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+    </saw:columns>
+  <saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+  <saw:interactionOptions drill="true" movecolumns="true" sortcolumns="true" addremovevalues="true" groupoperations="true" calcitemoperations="true" showhidesubtotal="true" showhiderunningsum="true" inclexclcolumns="true" hidecolumns="true"/>
+  <saw:views textDelivery="compoundView!1" parentsBefore="true" includeNewColumns="false" nullSuppress="true" currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      
+    <saw:cvTable><saw:cvRow><saw:cvCell viewName="headlineView!3"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="trellisView!1" rowSpan="3"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="headlineView!2"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="headlineView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="headlineView!4"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="dvtchart!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+    <saw:view xsi:type="saw:trellisView" name="trellisView!1" scrollingEnabled="true" type="multiviz"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true">
+          
+        <saw:edgeLayers><saw:edgeLayer type="column" columnID="c252d45c2b16016aa">
+              <saw:drillState>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="c252d45c2b16016aa"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Total Products"/>
+                          <saw:members xsi:type="saw:integerMembers">
+                            <saw:value>1</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="c252d45c2b16016aa"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="c252d45c2b16016aa" groupID="0"/>
+                  </saw:selectionGroups>
+                </saw:drillStep>
+              </saw:drillState>
+            <saw:memberFormat><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#000000" fontSize="12" wrapText="true"/></saw:displayFormat></saw:memberFormat><saw:headerFormat><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#000000" fontStyle="bold" fontSize="14" wrapText="true"/></saw:displayFormat></saw:headerFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="c3f685a441d2b8c36">
+              <saw:drillState>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="c3f685a441d2b8c36"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Total Time"/>
+                          <saw:members xsi:type="saw:integerMembers">
+                            <saw:value>1</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="c3f685a441d2b8c36"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="c3f685a441d2b8c36" groupID="0"/>
+                  </saw:selectionGroups>
+                </saw:drillStep>
+              </saw:drillState>
+            <saw:memberFormat><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#000000" fontSize="12" wrapText="true"/></saw:displayFormat></saw:memberFormat><saw:headerFormat><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#000000" fontStyle="bold" fontSize="14" wrapText="true"/></saw:displayFormat></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover" dependent="true">
+          
+        <saw:edgeLayers><saw:edgeLayer columnID="c980964d3cd2eb2e1" type="column"><saw:memberFormat><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#000000" fontSize="12" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+        
+      <saw:measure columnID="c60eea83df2f4c9f8" name="Trellis64099a67407be5a6" type="view"><saw:memberFormat><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#000000" fontStyle="bold" fontSize="14" wrapText="true"/></saw:displayFormat></saw:memberFormat><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#000000" fontSize="12" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList>
+    
+      
+      
+      <saw:nestedViews>
+        <saw:nestedView position="embedded">
+          <saw:view xsi:type="saw:dvtmicrochart" name="Trellis64099a67407be5a6">
+            <saw:display type="bar" subtype="default" renderFormat="default" mode="online">
+              <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+            </saw:display>
+            <saw:canvasFormat height="20" width="100" sizeType="custom">
+              <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            </saw:canvasFormat>
+            <saw:selections>
+              <saw:categories><saw:category><saw:columnRef columnID="c8c7804c7dd1aa04d"/></saw:category></saw:categories>
+              <saw:measures showMeasureLabelsOnCategory="false">
+                <saw:column measureType="y">
+                  <saw:columnRef columnID="c60eea83df2f4c9f8"/>
+                </saw:column>
+              </saw:measures>
+              <saw:seriesGenerators><saw:measureLabels/></saw:seriesGenerators>
+            </saw:selections>
+            <saw:legendFormat position="default" transparentFill="true"/>
+          <saw:markerFormats><saw:markerFormat type="riser" color="#EEEEEE"/><saw:markerFormat type="high" color="#00FF00"/><saw:markerFormat type="low" color="#FF0000"/></saw:markerFormats></saw:view>
+        </saw:nestedView>
+      </saw:nestedViews></saw:view>
+    <saw:view xsi:type="saw:trellisView" name="trellisView!2" scrollingEnabled="false" type="singleviz">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c252d45c2b16016aa">
+              <saw:drillState>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="c252d45c2b16016aa"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Total Products"/>
+                          <saw:members xsi:type="saw:integerMembers">
+                            <saw:value>1</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="c252d45c2b16016aa"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="c252d45c2b16016aa" groupID="0"/>
+                  </saw:selectionGroups>
+                </saw:drillStep>
+              </saw:drillState>
+            </saw:edgeLayer>
+            <saw:edgeLayer type="column" columnID="c980964d3cd2eb2e1"/>
+          <saw:edgeLayer type="column" columnID="c7c630a93a11eabfc"/></saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column" showColumnHeader="rollover" dependent="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer columnID="c3f685a441d2b8c36" type="column">
+              <saw:drillState>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="c3f685a441d2b8c36"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Total Time"/>
+                          <saw:members xsi:type="saw:integerMembers">
+                            <saw:value>1</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="c3f685a441d2b8c36"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="c3f685a441d2b8c36" groupID="0"/>
+                  </saw:selectionGroups>
+                </saw:drillStep>
+              </saw:drillState>
+            </saw:edgeLayer>
+            <saw:edgeLayer type="measure" visibility="hidden"/>
+          </saw:edgeLayers>
+        </saw:edge>
+      </saw:edges>
+      <saw:measuresList>
+        <saw:measure columnID="c60eea83df2f4c9f8" name="Trellisb4c4c5cd008752e9" type="view"/>
+      </saw:measuresList>
+      <saw:nestedViews>
+        <saw:nestedView position="embedded">
+          <saw:view xsi:type="saw:dvtchart" name="Trellisb4c4c5cd008752e9">
+            <saw:display type="bar" subtype="default" renderFormat="default" mode="online">
+              <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+            </saw:display>
+            <saw:canvasFormat height="100" width="100">
+              <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            </saw:canvasFormat>
+            <saw:selections>
+              <saw:categories>
+                <saw:category>
+                  <saw:columnRef columnID="c8c7804c7dd1aa04d"/>
+                </saw:category>
+              </saw:categories>
+              <saw:measures showMeasureLabelsOnCategory="false">
+                <saw:column measureType="y">
+                  <saw:columnRef columnID="c60eea83df2f4c9f8"/>
+                </saw:column>
+              <saw:column measureType="y"><saw:columnRef columnID="c8f48cecd84dda4a9"/></saw:column></saw:measures>
+              <saw:seriesGenerators>
+                <saw:measureLabels/>
+              </saw:seriesGenerators>
+            </saw:selections>
+            <saw:legendFormat position="default" transparentFill="true"/>
+          </saw:view>
+        </saw:nestedView>
+      </saw:nestedViews>
+    </saw:view>
+  <saw:view xsi:type="saw:mapview" name="mapview!1"><saw:viewCaption><saw:caption><saw:text>Oracle Maps</saw:text></saw:caption></saw:viewCaption><saw:mapLayout><saw:splitterLayout orientation="horizontal"/></saw:mapLayout><saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__ELOC_WORLD_MAP__~v0"/><saw:mapWidgets><saw:mapToolBar><saw:panTools><saw:panHand display="true"/></saw:panTools><saw:zoomTools><saw:zoomIn display="true"/><saw:zoomOut display="true"/></saw:zoomTools><saw:selectionTools><saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar><saw:mapInformation><saw:scaleInfo display="false"/><saw:overview display="false" viewState="collapsed"/></saw:mapInformation><saw:mapOverlay><saw:panButtons display="false"/><saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets><saw:infoLegend display="true" viewState="collapsed"/><saw:viewportInfo boundingType="layer"><saw:boundingLayer layerID="l0"/><saw:mapCenter x="0" y="5431100.734140888" size="23481454.6875" zoomLevel="0" srid="54004" yUnitPixels="0.000012776039814931079" xUnitPixels="0.000012776039814931079"/><saw:boundingBox coords="-18785163.75,-6231355.093984112,18706892.234375,17171828.077890888"/></saw:viewportInfo><saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_REGION__~v0" class="omv_predefined_layer" layerID="l0"><saw:layerLabelFormat display="true"/><saw:spatials><saw:columnRef columnID="c980964d3cd2eb2e1"/></saw:spatials><saw:visuals><saw:visual visualID="v0" xsi:type="saw:colorScheme"><saw:varyFillColor binType="percentile" numBins="3" allowThresholdEdit="false"><saw:columnRef columnID="c60eea83df2f4c9f8"/><saw:rampStyle><saw:rampItem id="0"><saw:caption><saw:text>First Third</saw:text></saw:caption><saw:g class="color" fill="#b53725"/></saw:rampItem><saw:rampItem id="1"><saw:caption><saw:text>Second Third</saw:text></saw:caption><saw:g class="color" fill="#ffcc00"/></saw:rampItem><saw:rampItem id="2"><saw:caption><saw:text>Last Third</saw:text></saw:caption><saw:g class="color" fill="#629f03"/></saw:rampItem></saw:rampStyle></saw:varyFillColor><saw:g class="color" fill="#3243ae"/><saw:title mode="custom"><saw:caption><saw:text>Revenue</saw:text></saw:caption></saw:title><saw:tooltip/></saw:visual><saw:visual visualID="v1" xsi:type="saw:barChart"><saw:tooltip/><saw:varySliceSize width="60" height="60"><saw:columnRef columnID="c60eea83df2f4c9f8"/></saw:varySliceSize><saw:slices><saw:columnRef columnID="c8c7804c7dd1aa04d"/></saw:slices></saw:visual></saw:visuals></saw:spatialLayer></saw:spatialLayers><saw:canvasFormat width="480" height="300" enableWrapAround="false"/><saw:mapInteraction autoCreateFormats="true" clientEventEnabled="true" clientEventChannels="MD1"/><saw:formatPanel width="212" height="576"/></saw:view><saw:view xsi:type="saw:mapview" name="mapview!2"><saw:viewCaption><saw:caption><saw:text>Nokia World Map</saw:text></saw:caption></saw:viewCaption><saw:mapLayout><saw:splitterLayout orientation="horizontal"/></saw:mapLayout><saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__NOKIA_MAP_TEST__~v0"/><saw:mapWidgets><saw:mapToolBar><saw:panTools><saw:panHand display="true"/></saw:panTools><saw:zoomTools><saw:zoomIn display="true"/><saw:zoomOut display="true"/></saw:zoomTools><saw:selectionTools><saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar><saw:mapInformation><saw:scaleInfo display="false"/><saw:overview display="false" viewState="collapsed"/></saw:mapInformation><saw:mapOverlay><saw:panButtons display="false"/><saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets><saw:infoLegend display="true" viewState="collapsed"/><saw:viewportInfo boundingType="layer"><saw:boundingLayer layerID="l0"/><saw:mapCenter x="0" y="5434644.631640965" size="23481454.6875" zoomLevel="0" srid="3785" yUnitPixels="0.000012776039814931079" xUnitPixels="0.000012776039814931079"/><saw:boundingBox coords="-18785163.75,-6227811.196484035,18706892.234375,17175371.975390963"/></saw:viewportInfo><saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_REGION__~v0" class="omv_predefined_layer" layerID="l0"><saw:layerLabelFormat display="true"/><saw:spatials><saw:columnRef columnID="c980964d3cd2eb2e1"/></saw:spatials><saw:visuals><saw:visual visualID="v0" xsi:type="saw:colorScheme"><saw:varyFillColor binType="percentile" numBins="3" allowThresholdEdit="false"><saw:columnRef columnID="c60eea83df2f4c9f8"/><saw:rampStyle><saw:rampItem id="0"><saw:caption><saw:text>First Third</saw:text></saw:caption><saw:g class="color" fill="#b53725"/></saw:rampItem><saw:rampItem id="1"><saw:caption><saw:text>Second Third</saw:text></saw:caption><saw:g class="color" fill="#ffcc00"/></saw:rampItem><saw:rampItem id="2"><saw:caption><saw:text>Last Third</saw:text></saw:caption><saw:g class="color" fill="#629f03"/></saw:rampItem></saw:rampStyle></saw:varyFillColor><saw:g class="color" fill="#3243ae"/><saw:title mode="custom"><saw:caption><saw:text>Revenue</saw:text></saw:caption></saw:title><saw:tooltip/></saw:visual><saw:visual visualID="v1" xsi:type="saw:barChart"><saw:tooltip/><saw:varySliceSize width="60" height="60"><saw:columnRef columnID="c60eea83df2f4c9f8"/></saw:varySliceSize><saw:slices><saw:columnRef columnID="c8c7804c7dd1aa04d"/></saw:slices></saw:visual></saw:visuals></saw:spatialLayer></saw:spatialLayers><saw:canvasFormat width="480" height="300" enableWrapAround="false"/><saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/><saw:formatPanel width="214" height="576"/></saw:view><saw:view xsi:type="saw:mapview" name="mapview!3"><saw:viewCaption><saw:caption><saw:text>Bing World Map</saw:text></saw:caption></saw:viewCaption><saw:mapLayout><saw:splitterLayout orientation="horizontal"/></saw:mapLayout><saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__BING_MAP_TEST__~v0"/><saw:mapWidgets><saw:mapToolBar><saw:panTools><saw:panHand display="true"/></saw:panTools><saw:zoomTools><saw:zoomIn display="true"/><saw:zoomOut display="true"/></saw:zoomTools><saw:selectionTools><saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar><saw:mapInformation><saw:scaleInfo display="false"/><saw:overview display="false" viewState="collapsed"/></saw:mapInformation><saw:mapOverlay><saw:panButtons display="false"/><saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets><saw:infoLegend display="true" viewState="collapsed"/><saw:viewportInfo boundingType="layer"><saw:boundingLayer layerID="l0"/><saw:mapCenter x="0" y="5434644.631640965" size="23481454.6875" zoomLevel="0" srid="3785" yUnitPixels="0.000012776039814931079" xUnitPixels="0.000012776039814931079"/><saw:boundingBox coords="-18785163.75,-6227811.196484035,18706892.234375,17175371.975390963"/></saw:viewportInfo><saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_REGION__~v0" class="omv_predefined_layer" layerID="l0"><saw:layerLabelFormat display="true"/><saw:spatials><saw:columnRef columnID="c980964d3cd2eb2e1"/></saw:spatials><saw:visuals><saw:visual visualID="v0" xsi:type="saw:colorScheme"><saw:varyFillColor binType="percentile" numBins="3" allowThresholdEdit="false"><saw:columnRef columnID="c60eea83df2f4c9f8"/><saw:rampStyle><saw:rampItem id="0"><saw:caption><saw:text>First Third</saw:text></saw:caption><saw:g class="color" fill="#b53725"/></saw:rampItem><saw:rampItem id="1"><saw:caption><saw:text>Second Third</saw:text></saw:caption><saw:g class="color" fill="#ffcc00"/></saw:rampItem><saw:rampItem id="2"><saw:caption><saw:text>Last Third</saw:text></saw:caption><saw:g class="color" fill="#629f03"/></saw:rampItem></saw:rampStyle></saw:varyFillColor><saw:g class="color" fill="#3243ae"/><saw:title mode="custom"><saw:caption><saw:text>Revenue</saw:text></saw:caption></saw:title><saw:tooltip/></saw:visual><saw:visual visualID="v1" xsi:type="saw:barChart"><saw:tooltip/><saw:varySliceSize width="60" height="60"><saw:columnRef columnID="c60eea83df2f4c9f8"/></saw:varySliceSize><saw:slices><saw:columnRef columnID="c8c7804c7dd1aa04d"/></saw:slices></saw:visual></saw:visuals></saw:spatialLayer></saw:spatialLayers><saw:canvasFormat width="480" height="300" enableWrapAround="false"/><saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/><saw:formatPanel width="214" height="576"/></saw:view><saw:view xsi:type="saw:viewSelector" name="viewSelector!1"><saw:viewSelectorCaption position="left"><saw:caption><saw:text>Select Background Map</saw:text></saw:caption></saw:viewSelectorCaption><saw:viewList><saw:viewItem type="view" name="mapview!1"/><saw:viewItem type="view" name="mapview!2"/><saw:viewItem type="view" name="mapview!3"/></saw:viewList></saw:view><saw:view xsi:type="saw:headlineView" name="headlineView!1"><saw:viewCaption><saw:caption><saw:text>Revenue Tile</saw:text></saw:caption></saw:viewCaption><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"/><saw:edge axis="column" showColumnHeader="rollover"><saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c60eea83df2f4c9f8"><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec hAlign="center" fontColor="#FFFFFF" fontStyle="bold"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList><saw:headlineLabelOne useMeasurePropertyAsLabel="false"><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption><saw:text>Revenue</saw:text></saw:caption></saw:headlineLabelOne><saw:headlineLabelTwo useMeasurePropertyAsLabel="true"><saw:displayFormat><saw:formatSpec fontColor="#EEEEEE" fontSize="9"/></saw:displayFormat></saw:headlineLabelTwo><saw:headlineProperties style="style1" size="large" bgColor="#666666" compress="true"/></saw:view><saw:view xsi:type="saw:headlineView" name="headlineView!2"><saw:viewCaption><saw:caption><saw:text>Billed Qty Tile</saw:text></saw:caption></saw:viewCaption><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"/><saw:edge axis="column" showColumnHeader="rollover"><saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c8f48cecd84dda4a9"><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec hAlign="center" fontColor="#993333" backgroundColor="#FFCC99"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList><saw:headlineLabelOne useMeasurePropertyAsLabel="false"><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption><saw:text>Billed Qty</saw:text></saw:caption></saw:headlineLabelOne><saw:headlineLabelTwo useMeasurePropertyAsLabel="true"><saw:displayFormat><saw:formatSpec fontSize="9"/></saw:displayFormat></saw:headlineLabelTwo><saw:headlineProperties style="style3" size="large" compress="true"/></saw:view><saw:view xsi:type="saw:headlineView" name="headlineView!3"><saw:viewCaption><saw:caption><saw:text>Discount Tile</saw:text></saw:caption></saw:viewCaption><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"/><saw:edge axis="column" showColumnHeader="rollover"><saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="cc7659815f58d0331"><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec hAlign="center" fontColor="#FFFFFF" fontStyle="bold" fontSize="20" backgroundColor="#CC3333"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList><saw:headlineLabelOne useMeasurePropertyAsLabel="false"><saw:displayFormat><saw:formatSpec fontColor="#000000" fontStyle="bold" fontSize="14"/></saw:displayFormat><saw:caption><saw:text>Discount Amt</saw:text></saw:caption></saw:headlineLabelOne><saw:headlineLabelTwo useMeasurePropertyAsLabel="true"><saw:displayFormat><saw:formatSpec fontSize="9" fontColor="#FFFFFF"/></saw:displayFormat></saw:headlineLabelTwo><saw:headlineProperties style="style3" size="large" compress="true"/></saw:view><saw:view xsi:type="saw:headlineView" name="headlineView!4"><saw:viewCaption><saw:caption><saw:text>Paid Amount Tile</saw:text></saw:caption></saw:viewCaption><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"/><saw:edge axis="column" showColumnHeader="rollover"><saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c4529941d7e7c59e2"><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec hAlign="center"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList><saw:headlineLabelOne useMeasurePropertyAsLabel="false"><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption><saw:text>Paid Amount</saw:text></saw:caption></saw:headlineLabelOne><saw:headlineLabelTwo useMeasurePropertyAsLabel="true"><saw:displayFormat><saw:formatSpec fontSize="9"/></saw:displayFormat></saw:headlineLabelTwo><saw:headlineProperties style="style2" size="large" compress="true"/></saw:view><saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true"><saw:display type="waterfall" subtype="default" renderFormat="default" mode="online"><saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/><saw:format type="custom" useIncDecColor="false"><saw:customFormat position="first" color="#666666"/><saw:customFormat position="inc" color="#336699"/><saw:customFormat position="dec" color="#FF0000"/><saw:customFormat position="running" color="#000000"/></saw:format></saw:display><saw:canvasFormat height="300" width="400"><saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/><saw:gridlines default="false"/><saw:title mode="custom"><saw:caption><saw:text/></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:title></saw:canvasFormat><saw:selections><saw:categories><saw:category><saw:columnRef columnID="c8c7804c7dd1aa04d"/></saw:category><saw:measureLabels/></saw:categories><saw:measures showMeasureLabelsOnCategory="true"><saw:column measureType="y"><saw:columnRef columnID="cc7659815f58d0331"/></saw:column></saw:measures><saw:seriesGenerators/><saw:page/><saw:sections displayAsSlider="true"/></saw:selections><saw:legendFormat position="none" transparentFill="true"><saw:textFormat/></saw:legendFormat><saw:plotAreaFormat/><saw:axesFormats><saw:axisFormat axis="X"><saw:title mode="custom"><saw:caption/><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:title></saw:axisFormat><saw:axisFormat axis="Y1"><saw:title mode="custom"/></saw:axisFormat></saw:axesFormats></saw:view></saw:views>
+</saw:report>

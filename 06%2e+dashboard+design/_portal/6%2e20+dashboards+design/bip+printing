@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="1tej92dnml5sp3hc" bipReportPath="./Demo Dashboard BIP Printing Layouts.xdo">
+  <saw:pageProps orientation="portrait" printRows="visible" disableMargins="false">
+    <saw:pageHeader show="false"/>
+    <saw:pageFooter show="false"/>
+    <saw:bipLayoutsList>
+      <saw:bipLayout>Printable HTML</saw:bipLayout>
+      <saw:bipLayout>Printable PDF</saw:bipLayout>
+      <saw:bipLayout>Portrait Layout</saw:bipLayout>
+      <saw:bipLayout>Landscape Layout</saw:bipLayout>
+      <saw:bipLayout>Portrait Layout Grey</saw:bipLayout>
+    </saw:bipLayoutsList>
+  </saw:pageProps>
+  <sawd:dashboardColumn name="Column 1" canFreeze="false" duid="6vkrc9cctr1erfkc" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 3" duid="nsdvp100vg674hdv" showSectionTitle="false" drillInline="true" collapsible="false" layoutType="bestFit">
+      <saw:displayFormat>
+        <saw:formatSpec wrapText="true" borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+      </saw:displayFormat>
+      <sawd:globalFilterView name="GFP 0" path="/shared/02. Visualizations/BIP Printing/BIP Prompt" duid="mp5ec5m5pong80gt"><saw:caption>
+          <saw:text>BIP Prompt</saw:text>
+        </saw:caption>
+        
+      </sawd:globalFilterView>
+      <sawd:reportView name="Report 0" display="embed" showView="" duid="7e40n6kes0ivakhs"><saw:caption>
+          <saw:text>Dasbhoard BIP Printing</saw:text>
+        </saw:caption>
+        
+        <sawd:reportRef type="catalog" path="/shared/02. Visualizations/BIP Printing/Dasbhoard BIP Printing"/>
+      </sawd:reportView>
+    </sawd:dashboardSection><saw:displayFormat>
+      <saw:formatSpec/>
+    </saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

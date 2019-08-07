@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawbsc:initiativeTree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawbsc="com.siebel.analytics.web/scorecard/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sawkpi="com.siebel.analytics.web/kpi/v1"><sawbsc:initiativeNode id="2" perspectiveID=""><sawbsc:initiativeRef qualifiedPath="Initiatives"/><sawbsc:assessmentRule ruleType="WORST_CASE"/><sawbsc:childNodes/></sawbsc:initiativeNode><sawkpi:relatedDocuments/></sawbsc:initiativeTree>

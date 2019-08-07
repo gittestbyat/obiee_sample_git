@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb55bf55e383a8b1d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;32  # of Cust with Orders  (Cnt Distinct)&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Counts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>32  # of Cust</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c3841e8e2292abddf">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;33  # of Empl with Orders  (Cnt Distinct)&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Counts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>33  # of Empl</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cfd8afc942a2dcc04">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;34  # of Offices with Orders  (Cnt Distinct)&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Counts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>34  # of Offices</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c4378660dc25bffa5">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;35  # of Products with Orders  (Cnt Distinct)&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Counts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>35  # of Products</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c3f67d6bf45be8afc">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;31  # of Orders  (Cnt Distinct)&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Counts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>31  # of Orders</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cebbabf60e44744b9">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;23  Avg # of Orders by Customer&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Simple Calculations</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>23  Avg Orders by Cust</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1c9c30546c91c18f">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;28  # of Customers by Sales Rep&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="1" maxDigits="1" commas="true" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading><saw:caption fmt="text"><saw:text>Simple Calculations</saw:text></saw:caption></saw:tableHeading><saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>28  # of Cust by Sales Rep</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="tableView!2">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="bar" subtype="basic" renderFormat="default" mode="online">
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="330" width="640">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="cb9db740ea5cec566"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="c2d28e1e9b10034e8"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+         <saw:legendFormat position="default" transparentFill="true"/></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true"/>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!2">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c3f67d6bf45be8afc"/>
+                  <saw:edgeLayer type="column" columnID="cb55bf55e383a8b1d"/>
+                  <saw:edgeLayer type="column" columnID="c4378660dc25bffa5"/>
+                  <saw:edgeLayer type="column" columnID="cfd8afc942a2dcc04"/>
+                  <saw:edgeLayer type="column" columnID="c3841e8e2292abddf"/>
+                  <saw:edgeLayer type="column" columnID="c1c9c30546c91c18f"/>
+                  <saw:edgeLayer type="column" columnID="cebbabf60e44744b9"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view></saw:views></saw:report>

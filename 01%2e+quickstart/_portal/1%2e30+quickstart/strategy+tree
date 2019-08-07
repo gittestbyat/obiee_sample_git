@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="aptfnoerpm5pc587" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sawd:dashboardColumn name="Column 0" duid="8kqqbdfcqsa0u7sh" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="vt1cpiofk9qefq3s" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+			</saw:displayFormat>
+			<sawd:strategyTreeView name="Scorecard Strategy Tree View 0" width="100%" height="450px" scroll="no" duid="52bei2s5enkq0psb">
+				<saw:caption captionID="kcap12832459_198">
+					<saw:text>Strategy Tree: Eden Inc  Scorecard</saw:text>
+				</saw:caption>
+				<sawd:scorecardViewRef type="catalog" path="/shared/02. Visualizations/Scorecards/Eden Inc. Scorecard/Strategy Tree: Eden Inc. Scorecard"/>
+				<sawd:dimensionPinnings xmlns="com.siebel.analytics.web/dashboard/v1.1">
+					<sawd:dimensionValue dimensionID="Customers.Cust Region Hier" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.Customers.Cust Region Hier" subjectArea="&quot;A - Sample Sales&quot;">
+						<sawd:member levelID="">
+							<sawd:value>[ALL]</sawd:value>
+						</sawd:member>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/# Orders</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Avg Order Size</sawd:kpiRef>
+					</sawd:dimensionValue>
+					<sawd:dimensionValue dimensionID="Customers.Cust Segments Hier" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.Customers.Cust Segments Hier" subjectArea="&quot;A - Sample Sales&quot;">
+						<sawd:member levelID="">
+							<sawd:value>[ALL]</sawd:value>
+						</sawd:member>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Billed Qty</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Collect to Bill Ratio</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Revenue KPI</sawd:kpiRef>
+					</sawd:dimensionValue>
+					<sawd:dimensionValue dimensionID="Offices.Offices Hierarchy" variableType="REQUEST" variableName="&quot;C - Sample Headcount&quot;.Offices.Offices Hierarchy" subjectArea="&quot;C - Sample Headcount&quot;">
+						<sawd:member levelID="">
+							<sawd:value>[ALL]</sawd:value>
+						</sawd:member>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/# Employees</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Attrition Rate</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Avg Revenue per FTE</sawd:kpiRef>
+					</sawd:dimensionValue>
+					<sawd:dimensionValue dimensionID="Products.Products Hierarchy" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.Products.Products Hierarchy" subjectArea="&quot;A - Sample Sales&quot;">
+						<sawd:member levelID="">
+							<sawd:value>[ALL]</sawd:value>
+						</sawd:member>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/# Orders</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/% Early Shipped</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Avg Order Size</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Billed Qty</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Fulfillment Days</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Revenue KPI</sawd:kpiRef>
+					</sawd:dimensionValue>
+					<sawd:dimensionValue dimensionID="Time.Time Hierarchy" variableType="REQUEST" variableName="&quot;C - Sample Headcount&quot;.Time.Time Hierarchy" subjectArea="&quot;C - Sample Headcount&quot;">
+						<sawd:member levelID="">
+							<sawd:value>[ALL]</sawd:value>
+						</sawd:member>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/# Employees</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Attrition Rate</sawd:kpiRef>
+						<sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Avg Revenue per FTE</sawd:kpiRef>
+					</sawd:dimensionValue>
+				</sawd:dimensionPinnings>
+			</sawd:strategyTreeView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

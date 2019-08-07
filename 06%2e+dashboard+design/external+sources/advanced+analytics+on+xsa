@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">      
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="XSA(&#39;prodney&#39;.&#39;State Pop Inc&#39;)" withinHierarchy="true">            
+      <saw:columns>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c4057b687c410ddf9">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">XSA(&#39;prodney&#39;.&#39;State Pop Inc&#39;).&quot;Columns&quot;.&quot;State Name&quot;</sawx:expr></saw:columnFormula></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c5f00c197732426a3">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">XSA(&#39;prodney&#39;.&#39;State Pop Inc&#39;).&quot;Columns&quot;.&quot;Population&quot;</sawx:expr></saw:columnFormula></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="ce73514bff36373e4">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">XSA(&#39;prodney&#39;.&#39;State Pop Inc&#39;).&quot;Columns&quot;.&quot;Household Income&quot;</sawx:expr></saw:columnFormula></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c736964a24599f0f8">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">outlier((XSA(&#39;prodney&#39;.&#39;State Pop Inc&#39;).&quot;Columns&quot;.&quot;State Name&quot;),(XSA(&#39;prodney&#39;.&#39;State Pop Inc&#39;).&quot;Columns&quot;.&quot;Population&quot;, XSA(&#39;prodney&#39;.&#39;State Pop Inc&#39;).&quot;Columns&quot;.&quot;Household Income&quot;), &#39;isOutlier&#39;, &#39;algorithm=mvoutlier&#39;)</sawx:expr></saw:columnFormula>                        
+            <saw:tableHeading>                              
+               <saw:caption fmt="text">                                    
+                  <saw:text>Columns</saw:text></saw:caption></saw:tableHeading>                        
+            <saw:columnHeading>                              
+               <saw:caption fmt="text">                                    
+                  <saw:text>Is Outlier</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns></saw:criteria>      
+   <saw:views currentView="0">            
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">                  
+         <saw:cvTable>                        
+            <saw:cvRow>                              
+               <saw:cvCell viewName="titleView!1" colSpan="2">                                    
+                  <saw:displayFormat>                                          
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>                        
+            <saw:cvRow>                              
+               <saw:cvCell viewName="dvtchart!1"/>                              
+               <saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable></saw:view>            
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="none">                  
+         <saw:title>                        
+            <saw:displayFormat>                              
+               <saw:formatSpec fontFamily="Arial" fontSize="16" wrapText="true"/></saw:displayFormat></saw:title></saw:view>            
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">                  
+         <saw:edges>                        
+            <saw:edge axis="page" showColumnHeader="true"/>                        
+            <saw:edge axis="section"/>                        
+            <saw:edge axis="row" showColumnHeader="true">                              
+               <saw:edgeLayers>                                    
+                  <saw:edgeLayer type="column" columnID="c4057b687c410ddf9"/>                                    
+                  <saw:edgeLayer type="column" columnID="c5f00c197732426a3"/>                                    
+                  <saw:edgeLayer type="column" columnID="ce73514bff36373e4"/>                                    
+                  <saw:edgeLayer type="column" columnID="c736964a24599f0f8"/></saw:edgeLayers></saw:edge>                        
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>            
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">                  
+         <saw:display type="scatter" subtype="default" renderFormat="default" mode="online">                        
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>                  
+         <saw:canvasFormat height="400" width="500">                        
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>                        
+            <saw:title mode="custom">                              
+               <saw:caption truncate="false" truncateLength="0">                                    
+                  <saw:text>Higlighting outliers</saw:text></saw:caption>                              
+               <saw:displayFormat>                                    
+                  <saw:formatSpec fontColor="#666666" fontFamily="Arial" fontStyle="bold"/></saw:displayFormat></saw:title></saw:canvasFormat>                  
+         <saw:selections>                        
+            <saw:categories>                              
+               <saw:category>                                    
+                  <saw:columnRef columnID="c4057b687c410ddf9"/></saw:category></saw:categories>                        
+            <saw:measures showMeasureLabelsOnCategory="false">                              
+               <saw:column measureType="y">                                    
+                  <saw:columnRef columnID="c5f00c197732426a3"/></saw:column>                              
+               <saw:column measureType="x">                                    
+                  <saw:columnRef columnID="ce73514bff36373e4"/></saw:column></saw:measures>                        
+            <saw:seriesGenerators>                              
+               <saw:seriesGenerator>                                    
+                  <saw:columnRef columnID="c736964a24599f0f8"/></saw:seriesGenerator>                              
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>                  
+         <saw:legendFormat position="default" transparentFill="true"/>                  
+         <saw:axesFormats>                        
+            <saw:axisFormat axis="X">                              
+               <saw:scale scaleValues="custom" min="40000" max="80000" defaultTicks="true"/></saw:axisFormat></saw:axesFormats>                  
+         <saw:seriesFormats>                        
+            <saw:seriesFormatGroup name="scatter">                              
+               <saw:seriesFormatRule>                                    
+                  <saw:seriesCondition position="1"/>                                    
+                  <saw:visualFormats>                                          
+                     <saw:visualFormat color="#999999" symbol="default" symbolColor="#999999"/></saw:visualFormats></saw:seriesFormatRule>                              
+               <saw:seriesFormatRule>                                    
+                  <saw:seriesCondition position="2"/>                                    
+                  <saw:visualFormats>                                          
+                     <saw:visualFormat color="#993333" symbol="default" symbolColor="#993333"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view></saw:views></saw:report>

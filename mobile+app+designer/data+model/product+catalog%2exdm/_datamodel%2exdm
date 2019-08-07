@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <dataSet name="Data" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Product_Catalog.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output xmlns="http://xmlns.oracle.com/oxp/xmlp" rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="Data">
+               <element name="Name" value="Name" label="Name" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="Price" value="Price" label="Price" dataType="xsd:double" breakOrder="" fieldOrder="2"/>
+               <element name="Brand" value="Brand" label="Brand" dataType="xsd:string" breakOrder="" fieldOrder="3"/>
+               <element name="Category" value="Category" label="Category" dataType="xsd:string" breakOrder="" fieldOrder="4"/>
+               <element name="Availability" value="Availability" label="Availability" dataType="xsd:string" breakOrder="" fieldOrder="5"/>
+               <element name="Shipping" value="Shipping" label="Shipping" dataType="xsd:string" breakOrder="" fieldOrder="6"/>
+               <element name="Short_Description" value="Short_Description" label="Short_Description" dataType="xsd:string" breakOrder="" fieldOrder="7"/>
+               <element name="Long_Description" value="Long_Description" label="Long_Description" dataType="xsd:string" breakOrder="" fieldOrder="8"/>
+               <element name="URL" value="URL" label="URL" dataType="xsd:string" breakOrder="" fieldOrder="9"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <lexicals xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <valueSets xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <parameters xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <bursting xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <display xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <layouts>
+         <layout name="Data" left="280px" top="0px"/>
+         <layout name="DATA_DS" left="0px" top="30px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

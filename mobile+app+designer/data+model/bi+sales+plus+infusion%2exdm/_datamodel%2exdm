@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BISAMPLE">
+   <description>
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Sales" type="complex">
+         <sql dataSourceRef="BIEE">
+            <![CDATA[SELECT
+   "A - Sample Sales"."Products"."P1  Product" as "Product",
+   "A - Sample Sales"."Products"."P2  Product Type" as "Product Type",
+   "A - Sample Sales"."Products"."P3  LOB" as "LOB",
+   "A - Sample Sales"."Products"."P4  Brand" as "Brand",
+   "A - Sample Sales"."Time"."T02 Per Name Month" as "Per Name Month",
+   "A - Sample Sales"."Time"."T03 Per Name Qtr" as "Per Name Qtr",
+   "A - Sample Sales"."Time"."T05 Per Name Year" as "Per Name Year",
+   "A - Sample Sales"."Base Facts"."1- Revenue" as "Revenue",
+   "A - Sample Sales"."Base Facts"."2- Billed Quantity" as "Billed Quantity",
+   "A - Sample Sales"."Base Facts"."5- Target Revenue" as "Target Revenue",
+   "A - Sample Sales"."Base Facts"."6- Target Quantity" as "Target Quantity",
+   "A - Sample Sales"."Time Series"."121  Period Ago Rev" as "Period Ago Revenue",
+   "A - Sample Sales"."Time Series"."122  Rev Var to Period Ago" as "Revenue Variation to Last Period",
+   "A - Sample Sales"."Time Series"."127  Mth Ago Rev  (Fix Time Lvl)" as "Month Ago Revenue",
+   "A - Sample Sales"."Time Series"."128  Qtr Ago Rev  (Fix Time Lvl)" as "Quarter Ago Revenue",
+   "A - Sample Sales"."Time Series"."129  Year Ago Rev  (Fix Time Lvl)" as "Year Ago Revenue"
+FROM "A - Sample Sales"
+ORDER BY 1, 5 ASC NULLS LAST, 4 ASC NULLS LAST, 2 ASC NULLS LAST, 3 ASC NULLS LAST, 8 ASC NULLS LAST, 7 ASC NULLS LAST, 6 ASC NULLS LAST]]>
+         </sql>
+      </dataSet>
+      <dataSet name="Oracle" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>infusion_aquisition.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="Executives" type="complex">
+         <sql dataSourceRef="BISAMPLE">
+            <![CDATA[select	 "ORACLE_EXECUTIVES"."ID" as "ID",
+	 "ORACLE_EXECUTIVES"."EXECTIVE_NAME" as "EXECTIVE_NAME",
+	 "ORACLE_EXECUTIVES"."TITLE" as "TITLE",
+	 "ORACLE_EXECUTIVES"."BIOGRAPHY" as "BIOGRAPHY",
+	 "ORACLE_EXECUTIVES"."FACE_URL" as "FACE_URL" 
+ from	"BISAMPLE_OTHER"."ORACLE_EXECUTIVES" "ORACLE_EXECUTIVES"
+order by ID]]>
+         </sql>
+      </dataSet>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="Sales">
+               <element name="Revenue" value="Revenue" label="Revenue" dataType="xsd:double" breakOrder="None" fieldOrder="8"/>
+               <element name="Target_Revenue" value="Target Revenue" label="Target_Revenue" dataType="xsd:double" breakOrder="None" fieldOrder="10"/>
+               <element name="Brand" value="Brand" label="Brand" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="LOB" value="LOB" label="LOB" dataType="xsd:string" breakOrder="None" fieldOrder="3"/>
+               <element name="Product" value="Product" label="Product" dataType="xsd:string" breakOrder="None" fieldOrder="1"/>
+               <element name="Product_Type" value="Product Type" label="Product_Type" dataType="xsd:string" breakOrder="None" fieldOrder="2"/>
+               <element name="Per_Name_Year" value="Per Name Year" label="Per_Name_Year" dataType="xsd:string" breakOrder="None" fieldOrder="7"/>
+               <element name="Per_Name_Qtr" value="Per Name Qtr" label="Per_Name_Qtr" dataType="xsd:string" breakOrder="None" fieldOrder="6"/>
+               <element name="Billed_Quantity" value="Billed Quantity" label="Billed_Quantity" dataType="xsd:integer" breakOrder="None" fieldOrder="9"/>
+               <element name="Target_Quantity" value="Target Quantity" label="Target_Quantity" dataType="xsd:double" breakOrder="None" fieldOrder="11"/>
+               <element name="Per_Name_Month" value="Per Name Month" label="Per_Name_Month" dataType="xsd:string" breakOrder="None" fieldOrder="5"/>
+               <element name="Month_Ago_Revenue" value="Month Ago Revenue" label="Month_Ago_Revenue" dataType="xsd:double" breakOrder="None" fieldOrder="14"/>
+               <element name="Quarter_Ago_Revenue" value="Quarter Ago Revenue" label="Quarter_Ago_Revenue" dataType="xsd:double" breakOrder="None" fieldOrder="15"/>
+               <element name="Year_Ago_Revenue" value="Year Ago Revenue" label="Year_Ago_Revenue" dataType="xsd:double" breakOrder="None" fieldOrder="16"/>
+               <element name="Revenue_Variation_to_Last_Period" value="Revenue Variation to Last Period" label="Revenue_Variation_to_Last_Period" dataType="xsd:double" breakOrder="None" fieldOrder="13" ifNull="0"/>
+               <element name="Period_Ago_Revenue" value="Period Ago Revenue" label="Period_Ago_Revenue" dataType="xsd:double" breakOrder="None" fieldOrder="12" ifNull="0"/>
+               <element name="Quarter" value="${SUBSTRING(G_1.Per_Name_Qtr,6,7)}" label="Quarter" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Variation_Percent" value="${G_1.Revenue_Variation_to_Last_Period /  G_1.Period_Ago_Revenue}" label="Variation_Percent" dataType="xsd:double" breakOrder="None" fieldOrder="0"/>
+            </group>
+            <group name="G_2" label="G_2" source="Oracle">
+               <element name="Category" value="Category" label="Category" dataType="xsd:string" breakOrder="None" fieldOrder="1"/>
+               <element name="Company" value="Company" label="Company" dataType="xsd:string" breakOrder="None" fieldOrder="2"/>
+               <element name="Month" value="Month" label="Month" dataType="xsd:double" breakOrder="None" fieldOrder="3"/>
+               <element name="Year" value="Year" label="Year" dataType="xsd:double" breakOrder="None" fieldOrder="4"/>
+               <element name="URL" value="URL" label="URL" dataType="xsd:string" breakOrder="None" fieldOrder="5"/>
+            </group>
+            <group name="G_3" label="G_3" source="Executives">
+               <element name="ID" value="ID" label="ID" dataType="xsd:double" breakOrder="None" fieldOrder="1"/>
+               <element name="EXECTIVE_NAME" value="EXECTIVE_NAME" label="EXECTIVE_NAME" dataType="xsd:string" breakOrder="None" fieldOrder="2"/>
+               <element name="TITLE" value="TITLE" label="TITLE" dataType="xsd:string" breakOrder="None" fieldOrder="3"/>
+               <element name="BIOGRAPHY" value="BIOGRAPHY" label="BIOGRAPHY" dataType="xsd:clob" breakOrder="None" fieldOrder="4"/>
+               <element name="FACE_URL" value="FACE_URL" label="FACE_URL" dataType="xsd:string" breakOrder="None" fieldOrder="5"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="Sales" left="274px" top="264px"/>
+         <layout name="Oracle" left="552px" top="264px"/>
+         <layout name="Executives" left="798px" top="264px"/>
+         <layout name="DATA_DS" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

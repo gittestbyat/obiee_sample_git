@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;U - Usage Tracking&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c08cfaf11e47dcaa3">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">Measures.&quot;# of Queries&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" commas="true" negativeType="minus" minDigits="0" maxDigits="0"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cc8005f8f5f226321">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">cast(@{system.currentTime} as varchar(10))||&#39; &#39;||cast(hour(@{system.currentTime}) as varchar(2))||&#39;:&#39;||cast(minute(@{system.currentTime}) as varchar(2))</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>UT Lite</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Current Time</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c123ab2cb98fff6e2">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">left(&quot;Query Time&quot;.&quot;Start Hour Min&quot;,2)</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>UT Lite</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Hit Hour</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c94dac085c555311b">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Start Date&quot;</sawx:expr></saw:columnFormula></saw:column>
+         
+         <saw:column xsi:type="saw:regularColumn" columnID="c0bc748cfefda15d7">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Day Name&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+      <saw:filter><sawx:expr xsi:type="sawx:savedFilter" path="/shared/10. Lifecycle and Admin/_filters/U - Usage Tracking/UT Filters" name="UT Filters"/></saw:filter></saw:criteria>
+   <saw:interactionOptions drill="true" movecolumns="true" sortcolumns="true" addremovevalues="true" groupoperations="true" calcitemoperations="true" showhidesubtotal="true" showhiderunningsum="true" inclexclcolumns="true"/>
+   <saw:views parentsBefore="true" includeNewColumns="false" nullSuppress="true" currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2">
+                  <saw:displayFormat>
+                     <saw:formatSpec vAlign="middle"/></saw:displayFormat></saw:cvCell>
+               <saw:cvCell viewName="narrativeView!1"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell>
+               <saw:cvCell viewName="pivotTableView!1" rowSpan="2">
+                  <saw:displayFormat>
+                     <saw:formatSpec vAlign="top"/></saw:displayFormat></saw:cvCell>
+               <saw:cvCell viewName="dvtchart!2" rowSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!3"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="none"><saw:displayFormat>
+            <saw:formatSpec paddingBottom="10" wrapText="true"/></saw:displayFormat><saw:title><saw:displayFormat>
+               <saw:formatSpec fontSize="16" wrapText="true" fontStyle="bold" borderPosition="8"/></saw:displayFormat></saw:title></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="false">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cc8005f8f5f226321">
+                     <saw:headerFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec wrapText="true"/></saw:displayFormat>
+                        <saw:caption>
+                           <saw:text>Current Server Time :</saw:text></saw:caption></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" rowsPerPage="40">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="false">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="gt_row" grandTotalPosition="before"/></saw:displayGrandTotals>
+               <saw:columnOrder>
+                  <saw:columnOrderRef columnID="c94dac085c555311b" direction="descending"/></saw:columnOrder>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c94dac085c555311b" uiTableName="UT Lite">
+                     <saw:memberFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec fontSize="9" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>
+                  <saw:edgeLayer type="column" columnID="c0bc748cfefda15d7" uiTableName="UT Lite">
+                     <saw:memberFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec fontSize="9" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure" uiTableName="Measure Labels"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c08cfaf11e47dcaa3" uiTableName="UT Lite">
+               <saw:memberFormat>
+                  <saw:displayFormat>
+                     <saw:formatSpec wrapText="true"/></saw:displayFormat>
+                  <saw:caption>
+                     <saw:text>Hits</saw:text></saw:caption></saw:memberFormat>
+               <saw:dataBodyFormat>
+                  <saw:displayFormat>
+                     <saw:formatSpec fontSize="9" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList>
+         <saw:greenBarFormat greenBar="innerLayer" enabled="true"/></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="lineTimeSeries" subtype="default" renderFormat="default" mode="online" animateOnDisplay="false">
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="320" width="600">
+            <saw:dataLabels display="always" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default">
+               <saw:textFormat fontSize="10"/></saw:dataLabels>
+            <saw:title mode="custom">
+               <saw:caption>
+                  <saw:text>Daily Hits Timeline</saw:text></saw:caption></saw:title></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="c94dac085c555311b"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="c08cfaf11e47dcaa3"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:measureLabels/></saw:seriesGenerators>
+            <saw:page/></saw:selections>
+         <saw:legendFormat position="none" transparentFill="true"/>
+         <saw:axesFormats>
+            <saw:axisFormat axis="Y1" displayScaleLabels="true">
+               <saw:title mode="auto">
+                  <saw:caption truncate="false" truncateLength="0"/>
+                  <saw:displayFormat>
+                     <saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+               <saw:labels rotate="0" rotateLabels="false" skipLabels="true" abbreviation="default"/>
+               <saw:textFormat fontSize="9"/>
+               <saw:scale showMajorTicks="true" majorTicks="5" defaultTicks="false" scaleValues="datarangezoom"/></saw:axisFormat>
+            <saw:axisFormat axis="X" displayScaleLabels="true">
+               <saw:title mode="auto">
+                  <saw:caption truncate="false" truncateLength="0"/>
+                  <saw:displayFormat>
+                     <saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+               <saw:labels rotate="0" rotateLabels="false" skipLabels="false" abbreviation="default"/>
+               <saw:textFormat fontSize="10"/></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="lineTimeSeries">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#333366" lineStyle="default" lineWidth="1" symbol="off"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!2">
+         <saw:display type="bar" subtype="horizontalStacked" renderFormat="default" mode="online" animateOnDisplay="false">
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="600" width="250">
+            <saw:dataLabels display="always" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default">
+               <saw:textFormat fontSize="9"/></saw:dataLabels>
+            <saw:title mode="custom">
+               <saw:caption>
+                  <saw:text>Visits by Hour (Server Time)</saw:text></saw:caption></saw:title></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="c123ab2cb98fff6e2"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="x">
+                  <saw:columnRef columnID="c08cfaf11e47dcaa3"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               
+               <saw:measureLabels/></saw:seriesGenerators>
+            <saw:page/></saw:selections>
+         <saw:legendFormat position="none" transparentFill="true">
+            <saw:textFormat fontSize="10"/></saw:legendFormat>
+         <saw:axesFormats>
+            <saw:axisFormat axis="Y1" displayScaleLabels="true">
+               <saw:title mode="custom">
+                  <saw:caption truncate="false" truncateLength="0"/>
+                  <saw:displayFormat>
+                     <saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+               <saw:labels rotate="0" rotateLabels="false" skipLabels="true" abbreviation="default"/>
+               <saw:textFormat fontSize="9"/>
+               <saw:scale showMajorTicks="true" majorTicks="4" defaultTicks="false"/></saw:axisFormat>
+            <saw:axisFormat axis="X" displayScaleLabels="true">
+               <saw:title mode="custom">
+                  <saw:caption truncate="false" truncateLength="0"/>
+                  <saw:displayFormat>
+                     <saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+               <saw:labels rotate="0" rotateLabels="false" skipLabels="false" abbreviation="default"/>
+               <saw:textFormat fontSize="10"/></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="bar">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#666666"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="2"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#666699"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="3"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#CC99CC"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="4"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#99CCFF"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="5"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#CCCCCC"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+      <saw:view xsi:type="saw:narrativeView" name="narrativeView!1">
+         <saw:narrative rowCount="1">
+            <saw:caption fmt="text">
+               <saw:text>Current Server Time : [b]@{cc8005f8f5f226321}[/b]</saw:text></saw:caption></saw:narrative></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!3">
+         <saw:display type="line" subtype="default" renderFormat="default" mode="online" animateOnDisplay="false">
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="320" width="600">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default">
+               <saw:textFormat fontSize="10"/></saw:dataLabels>
+            <saw:title mode="custom">
+               <saw:caption>
+                  <saw:text>Hourly Hits Timeline</saw:text></saw:caption></saw:title></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="c94dac085c555311b"/></saw:category>
+               <saw:category>
+                  <saw:columnRef columnID="c123ab2cb98fff6e2"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="c08cfaf11e47dcaa3"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:measureLabels/></saw:seriesGenerators>
+            <saw:page/></saw:selections>
+         <saw:legendFormat position="none" transparentFill="true"/>
+         <saw:axesFormats>
+            <saw:axisFormat axis="Y1" displayScaleLabels="true">
+               <saw:title mode="auto">
+                  <saw:caption truncate="false" truncateLength="0"/>
+                  <saw:displayFormat>
+                     <saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+               <saw:labels rotate="0" rotateLabels="false" skipLabels="true" abbreviation="default"/>
+               <saw:textFormat fontSize="9"/>
+               <saw:scale showMajorTicks="true" majorTicks="5" defaultTicks="false" scaleValues="datarangezoom" logarithmic="false"/></saw:axisFormat>
+            <saw:axisFormat axis="X" displayScaleLabels="false">
+               <saw:title mode="auto">
+                  <saw:caption truncate="false" truncateLength="0"/>
+                  <saw:displayFormat>
+                     <saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+               <saw:labels rotate="0" rotateLabels="false" skipLabels="false" abbreviation="default"/>
+               <saw:textFormat fontSize="8"/></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="line">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#0000FF" lineStyle="default" lineWidth="1" symbol="off"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view></saw:views></saw:report>

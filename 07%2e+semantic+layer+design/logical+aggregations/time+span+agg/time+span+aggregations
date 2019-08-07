@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c8957f1c19a65fc73">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;}</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Time</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>T03 Per Name Qtr</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c4513d71b8bb36561">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;9- Full Time Empl  (Beg Period)&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c273f34a6739d7698">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;9- Full Time Empl  (End Period)&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c9b37cc7e90c1f352">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;A - Sample Sales&quot;.&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cc860830ae52470d5">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;More Time Objects&quot;.&quot;T62  # of Days&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf780b99e6e7e4c0d">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;More Time Objects&quot;.&quot;T24  First Day Dt in Period&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c25603c5820c81038">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;More Time Objects&quot;.&quot;T25  Last Day Dt in Period&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" hAlign="right" wrapText="true">
+						<saw:dataFormat customFormat="dd MMMM, yyyy" xsi:type="saw:custom"/></saw:formatSpec></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c05947d7d9cc8e549">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;More Time Objects&quot;.&quot;T64  # of Months&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ca17d1880af596007">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;More Time Objects&quot;.&quot;T66  # of Years&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c2fd9bef0df3a108a">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;More Time Objects&quot;.&quot;T65  # of Qtrs&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cbda0424472d49a56">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time Span Variations&quot;.&quot;954  FTE Headcount  (Value Var)&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ce2968684c9efdab0">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time Span Variations&quot;.&quot;956  FTE Headcount  (Cmpd Yrly Gwth)&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c68a7f652f53c8209">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;41  Avg Revenue by FTE&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ce1d20600ae8128dc">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;47  Avg FTE over Period&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ca507f372ab355a98">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;40  Avg Monthly Revenue by FTE&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+		<saw:filter>
+			<sawx:expr op="between" xsi:type="sawx:comparison">
+				<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T00 Calendar Date&quot;</sawx:expr>
+				
+				<sawx:expr xsi:type="xsd:date">2013-02-15</sawx:expr><sawx:expr xsi:type="xsd:date">2015-11-15</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!1" colSpan="2">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="pivotTableView!1"/>
+					<saw:cvCell viewName="dvtchart!1"/></saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="tableView!3" colSpan="2"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!3">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="after"/></saw:displayGrandTotals>
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c8957f1c19a65fc73" uiTableName="Time"/>
+						<saw:edgeLayer type="column" columnID="cf780b99e6e7e4c0d" uiTableName="More Time Objects"/>
+						<saw:edgeLayer type="column" columnID="c25603c5820c81038" uiTableName="More Time Objects"/>
+						<saw:edgeLayer type="column" columnID="ca17d1880af596007" uiTableName="More Time Objects"/>
+						<saw:edgeLayer type="column" columnID="c2fd9bef0df3a108a" uiTableName="More Time Objects"/>
+						<saw:edgeLayer type="column" columnID="c05947d7d9cc8e549" uiTableName="More Time Objects"/>
+						<saw:edgeLayer type="column" columnID="cc860830ae52470d5" uiTableName="More Time Objects"/>
+						<saw:edgeLayer type="column" columnID="c4513d71b8bb36561" uiTableName="Base Facts"/>
+						<saw:edgeLayer type="column" columnID="c273f34a6739d7698" uiTableName="Base Facts"/>
+						<saw:edgeLayer type="column" columnID="ce1d20600ae8128dc" uiTableName="Simple Calculations"/>
+						<saw:edgeLayer type="column" columnID="cbda0424472d49a56" uiTableName="Time Span Variations"/>
+						<saw:edgeLayer type="column" columnID="ca507f372ab355a98" uiTableName="Simple Calculations"/>
+						<saw:edgeLayer type="column" columnID="c68a7f652f53c8209" uiTableName="Simple Calculations"/>
+						<saw:edgeLayer type="column" columnID="c9b37cc7e90c1f352" uiTableName="Base Facts"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="cbda0424472d49a56" uiTableName="Time Span Variations"/>
+				<saw:measure columnID="ca507f372ab355a98" uiTableName="Simple Calculations"/>
+				<saw:measure columnID="c68a7f652f53c8209" uiTableName="Simple Calculations"/>
+				<saw:measure columnID="cf780b99e6e7e4c0d" uiTableName="More Time Objects"/>
+				<saw:measure columnID="c25603c5820c81038" uiTableName="More Time Objects"/>
+				<saw:measure columnID="c05947d7d9cc8e549" uiTableName="More Time Objects"/>
+				<saw:measure columnID="ca17d1880af596007" uiTableName="More Time Objects"/>
+				<saw:measure columnID="c2fd9bef0df3a108a" uiTableName="More Time Objects"/>
+				<saw:measure columnID="c9b37cc7e90c1f352" uiTableName="Base Facts"/>
+				<saw:measure columnID="ce1d20600ae8128dc" uiTableName="Simple Calculations"/></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="none"/></saw:displayGrandTotals>
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="cf780b99e6e7e4c0d"/>
+						<saw:edgeLayer type="column" columnID="c25603c5820c81038"/>
+						<saw:edgeLayer type="column" columnID="ca17d1880af596007"/>
+						<saw:edgeLayer type="column" columnID="c2fd9bef0df3a108a"/>
+						<saw:edgeLayer type="column" columnID="c05947d7d9cc8e549"/>
+						<saw:edgeLayer type="column" columnID="cc860830ae52470d5"/>
+						<saw:edgeLayer type="column" columnID="c4513d71b8bb36561"/>
+						<saw:edgeLayer type="column" columnID="c273f34a6739d7698"/>
+						<saw:edgeLayer type="column" columnID="ce1d20600ae8128dc"/>
+						<saw:edgeLayer type="column" columnID="cbda0424472d49a56"/>
+						<saw:edgeLayer type="column" columnID="ca507f372ab355a98"/>
+						<saw:edgeLayer type="column" columnID="c68a7f652f53c8209"/>
+						<saw:edgeLayer type="column" columnID="c9b37cc7e90c1f352"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="cbda0424472d49a56"/>
+				<saw:measure columnID="ca507f372ab355a98"/>
+				<saw:measure columnID="c68a7f652f53c8209"/>
+				<saw:measure columnID="cf780b99e6e7e4c0d"/>
+				<saw:measure columnID="c25603c5820c81038"/>
+				<saw:measure columnID="c05947d7d9cc8e549"/>
+				<saw:measure columnID="ca17d1880af596007"/>
+				<saw:measure columnID="c2fd9bef0df3a108a"/>
+				<saw:measure columnID="c9b37cc7e90c1f352"/>
+				<saw:measure columnID="ce1d20600ae8128dc"/></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section" insertPageBreak="false" showBlankRows="false" showColumnHeader="true">
+					<saw:displayFormat>
+						<saw:formatSpec wrapText="true"/></saw:displayFormat>
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="cf780b99e6e7e4c0d" insertPageBreak="false">
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true"/></saw:displayFormat>
+								<saw:caption>
+									<saw:text>From </saw:text></saw:caption></saw:headerFormat></saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="c25603c5820c81038" insertPageBreak="false">
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true"/></saw:displayFormat>
+								<saw:caption>
+									<saw:text>To </saw:text></saw:caption></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+				<saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="measure">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec backgroundColor="#FFFFFF" borderColor="#999999" borderPosition="2" wrapText="true" hAlign="right"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="c4513d71b8bb36561"/>
+				<saw:measure columnID="c273f34a6739d7698"/>
+				<saw:measure columnID="cbda0424472d49a56"/>
+				<saw:measure columnID="ce2968684c9efdab0"/>
+				<saw:measure columnID="cc860830ae52470d5"/>
+				<saw:measure columnID="c05947d7d9cc8e549"/>
+				<saw:measure columnID="ca17d1880af596007"/>
+				<saw:measure columnID="c2fd9bef0df3a108a"/>
+				<saw:measure columnID="c9b37cc7e90c1f352"/>
+				<saw:measure columnID="c68a7f652f53c8209"/>
+				<saw:measure columnID="ce1d20600ae8128dc"/>
+				<saw:measure columnID="ca507f372ab355a98"/></saw:measuresList>
+			<saw:sectionContent>
+				<saw:displayFormat>
+					<saw:formatSpec borderColor="#999999" borderPosition="all" wrapText="true"/></saw:displayFormat></saw:sectionContent></saw:view>
+		<saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+			<saw:display type="lineBar" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="true">
+				<saw:style barStyle="rectangle" lineStyle="curve" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+			<saw:canvasFormat height="330" width="640" showGradient="true">
+				<saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>
+				<saw:title mode="auto">
+					<saw:caption/></saw:title>
+				<saw:gridlines default="true">
+					<saw:horizontal>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/></saw:horizontal>
+					<saw:vertical>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/></saw:vertical></saw:gridlines></saw:canvasFormat>
+			<saw:selections>
+				<saw:categories>
+					<saw:category>
+						<saw:columnRef columnID="c8957f1c19a65fc73"/></saw:category></saw:categories>
+				<saw:measures showMeasureLabelsOnCategory="false">
+					<saw:column measureType="y2" riserType="line">
+						<saw:columnRef columnID="c273f34a6739d7698"/></saw:column>
+					<saw:column measureType="y2" riserType="line">
+						<saw:columnRef columnID="c4513d71b8bb36561"/></saw:column>
+					<saw:column measureType="y1" riserType="bar">
+						<saw:columnRef columnID="cbda0424472d49a56"/></saw:column></saw:measures>
+				<saw:seriesGenerators>
+					<saw:measureLabels/></saw:seriesGenerators></saw:selections>
+			<saw:legendFormat position="default" transparentFill="true"/>
+			<saw:axesFormats syncAxis="true">
+				<saw:axisFormat axis="Y1">
+					<saw:title mode="auto">
+						<saw:caption/></saw:title>
+					<saw:scale scaleValues="datarangezoom" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/></saw:axisFormat>
+				<saw:axisFormat axis="X">
+					<saw:title mode="auto">
+						<saw:caption/></saw:title>
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/></saw:axisFormat>
+				<saw:axisFormat axis="Y2">
+					<saw:title mode="auto">
+						<saw:caption>
+							<saw:text>09- Full Time Empl  (Beg Period)</saw:text></saw:caption></saw:title></saw:axisFormat></saw:axesFormats>
+			<saw:seriesFormats>
+				<saw:seriesFormatGroup name="lineBarLine">
+					<saw:seriesFormatRule>
+						<saw:seriesCondition position="1"/>
+						<saw:visualFormats>
+							<saw:visualFormat lineStyle="default" lineWidth="1" symbol="off"/></saw:visualFormats></saw:seriesFormatRule>
+					<saw:seriesFormatRule>
+						<saw:seriesCondition position="2"/>
+						<saw:visualFormats>
+							<saw:visualFormat lineStyle="default" lineWidth="1" symbol="off"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view></saw:views></saw:report>

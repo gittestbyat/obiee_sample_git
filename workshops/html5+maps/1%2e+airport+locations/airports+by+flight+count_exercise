@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c74a4bc41084ba1f0">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport&quot;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Destination</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Airport Code</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ca8115943b69ba612">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">SUBSTRING(&quot;Destination&quot;.&quot;Dest US State Name&quot; FROM 5)</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Destination</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>State</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c55629c04e6f6d9d4">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">SUBSTRING(&quot;Destination&quot;.&quot;Dest Airport Name&quot; FROM 7)</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Destination</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Airport Name</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf4e6239d609985fc">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport Lat&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="6" maxDigits="6" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c03631745e775a6f5">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport Long&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="6" maxDigits="6" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c177162d943092884">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce8a79559118eaafc">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Delay Facts&quot;.&quot;Delay Perf % (0=Ontime,  &gt;0=Late)&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Delay Facts</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>Delay Perf %</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:logical" op="and">
+            <sawx:expr xsi:type="sawx:comparison" op="equal">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Date&quot;.&quot;Dep Year&quot;</sawx:expr>
+               <sawx:expr xsi:type="xsd:string">2010</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Region Name&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         </saw:view>
+      
+      
+      
+      </saw:views></saw:report>

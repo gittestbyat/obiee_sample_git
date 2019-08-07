@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<xliff version="1.0">
+   <file source-language="en" target-language="fr" datatype="xml" product-version="11.1.1.3.0" product-name="BI Publisher">
+      <body>
+         <trans-unit id="16">
+            <source>[&amp;0][&amp;1][&amp;2]Oracle Corporation[&amp;2][&amp;3]500 Oracle Parkway[&amp;4]Redwood Shores, CA[&amp;1][&amp;0]</source>
+            <target>[&amp;0][&amp;1][&amp;2]Oracle Corporation[&amp;2][&amp;3]500 Oracle Parkway[&amp;4]Redwood Shores, CA[&amp;1][&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="18">
+            <source>[&amp;0][&amp;1][&amp;0]</source>
+            <target>[&amp;0][&amp;1][&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="598">
+            <source>[&amp;0][&amp;1]Confidential and Internal[&amp;1][&amp;0]</source>
+            <target>[&amp;0][&amp;1]Confidentiel et Interne[&amp;1][&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="67">
+            <source>[&amp;0]Page [&amp;1] of [&amp;2][&amp;0]</source>
+            <target>[&amp;0]Page [&amp;1] de [&amp;2][&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="168">
+            <source>[&amp;0][&amp;1]Revenue Budget, Actual and Details[&amp;2][&amp;1][&amp;0]</source>
+            <target>[&amp;0][&amp;1]Budget de revenu, réel et détails[&amp;2][&amp;1][&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="601">
+            <source>[&amp;0]Total Revenue, Quarter to Date is [&amp;0]</source>
+            <target>[&amp;0]Le revenu total, divisent est jusqu'ici [&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="1306">
+            <source>[&amp;0] in USD.[&amp;0]</source>
+            <target>[&amp;0] en USD.[&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="604">
+            <source>[&amp;0]Note -- Revenue numbers are for Vice President level and above.  Please do not distribute.[&amp;0]</source>
+            <target>[&amp;0]Note -- Les nombres de revenu sont pour le niveau de vice-président et en haut.  Svp ne distribuez pas.[&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="1305">
+            <source>[&amp;0]Revenue Details Quarter to Date[&amp;0]</source>
+            <target>[&amp;0]Le revenu détaille le quart jusqu'ici[&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="195">
+            <source>[&amp;0][&amp;1]Brand[&amp;1][&amp;0]</source>
+            <target>[&amp;0][&amp;1]Marque[&amp;1][&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="610">
+            <source>[&amp;0][&amp;1]Total[&amp;1][&amp;0]</source>
+            <target>[&amp;0][&amp;1]Total[&amp;1][&amp;0]</target>
+         </trans-unit>
+         <trans-unit id="182">
+            <source>Order Number</source>
+            <target>Numéro de commande</target>
+         </trans-unit>
+         <trans-unit id="187">
+            <source>Product Description</source>
+            <target>Description de Produit</target>
+         </trans-unit>
+         <trans-unit id="192">
+            <source>Paid Date</source>
+            <target>Date payée</target>
+         </trans-unit>
+         <trans-unit id="1812">
+            <source>Order Status</source>
+            <target>Statut d'ordre</target>
+         </trans-unit>
+         <trans-unit id="312">
+            <source>Units</source>
+            <target>Unités</target>
+         </trans-unit>
+         <trans-unit id="205">
+            <source>Revenue</source>
+            <target>Revenu</target>
+         </trans-unit>
+         <trans-unit id="1030_tclt">
+            <source>Total</source>
+            <target>Total</target>
+         </trans-unit>
+         <trans-unit id="1030_trlt">
+            <source>Total</source>
+            <target>Total</target>
+         </trans-unit>
+         <trans-unit id="1034_tmlt">
+            <source>Total</source>
+            <target>Total</target>
+         </trans-unit>
+         <trans-unit id="1034_smlt">
+            <source>Total</source>
+            <target>Total</target>
+         </trans-unit>
+         <trans-unit id="1037_mlt">
+            <source>Budget</source>
+            <target>Budget</target>
+         </trans-unit>
+         <trans-unit id="1039_mlt">
+            <source>Actual</source>
+            <target>Réel</target>
+         </trans-unit>
+      </body>
+   </file>
+</xliff>

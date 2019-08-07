@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:hierarchicalColumn" columnID="c08ffed3ed3639523" hierarchyID="Orig Airport" tableName="&quot;Origin&quot;" dimensionID="11 Orig Airport Map">
+				<saw:displayFormat>
+					<saw:formatSpec wrapText="true" interaction="clientEvent">
+						<saw:clientEventSpec channel="MD01"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				<saw:hierarchyLevels>
+					<saw:hierarchyLevel levelID="All Orig Airports">
+						<saw:displayFormat>
+							<saw:formatSpec suppress="suppress" wrapText="true" backgroundColor="#bbd2ea" fontStyle="regular"/>
+						</saw:displayFormat>
+					</saw:hierarchyLevel>
+					<saw:hierarchyLevel levelID="Orig Region">
+						<saw:displayFormat>
+							<saw:formatSpec suppress="suppress" wrapText="true" backgroundColor="#EEEEEE"/>
+						</saw:displayFormat>
+					</saw:hierarchyLevel>
+					<saw:hierarchyLevel levelID="Orig Division"/>
+					<saw:hierarchyLevel levelID="Orig State">
+						<saw:displayFormat>
+							<saw:formatSpec suppress="suppress" backgroundColor="#FFFFcc" wrapText="true"/>
+						</saw:displayFormat>
+					</saw:hierarchyLevel>
+					<saw:hierarchyLevel levelID="Orig Airport"/>
+				</saw:hierarchyLevels>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c81b37f08956bf918">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="repeat" wrapText="true" fontSize="11"/><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="All Orig Airports"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c81b37f08956bf918"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#bbd2ea" fontStyle="regular" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Orig Region"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>Midwest Region</saw:value>
+														<saw:value>Northeast Region</saw:value>
+														<saw:value>South Region</saw:value>
+														<saw:value>West Region</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c81b37f08956bf918"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Orig State"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>USA_Hawaii</saw:value>
+														<saw:value>USA_Nebraska</saw:value>
+														<saw:value>USA_Texas</saw:value>
+														<saw:value>USA_Alaska</saw:value>
+														<saw:value>USA_Minnesota</saw:value>
+														<saw:value>USA_Montana</saw:value>
+														<saw:value>USA_New Mexico</saw:value>
+														<saw:value>USA_Oregon</saw:value>
+														<saw:value>USA_Virginia</saw:value>
+														<saw:value>USA_Alabama</saw:value>
+														<saw:value>USA_Arizona</saw:value>
+														<saw:value>USA_Idaho</saw:value>
+														<saw:value>USA_Massachusetts</saw:value>
+														<saw:value>USA_Missouri</saw:value>
+														<saw:value>USA_Ohio</saw:value>
+														<saw:value>USA_West Virginia</saw:value>
+														<saw:value>USA_Illinois</saw:value>
+														<saw:value>USA_Mississippi</saw:value>
+														<saw:value>USA_Nevada</saw:value>
+														<saw:value>USA_New Jersey</saw:value>
+														<saw:value>USA_North Dakota</saw:value>
+														<saw:value>USA_Rhode Island</saw:value>
+														<saw:value>USA_Wyoming</saw:value>
+														<saw:value>USA_Delaware</saw:value>
+														<saw:value>USA_District of Columbia</saw:value>
+														<saw:value>USA_Georgia</saw:value>
+														<saw:value>USA_Kansas</saw:value>
+														<saw:value>USA_Maryland</saw:value>
+														<saw:value>USA_New Hampshire</saw:value>
+														<saw:value>USA_Pennsylvania</saw:value>
+														<saw:value>USA_Tennessee</saw:value>
+														<saw:value>USA_Vermont</saw:value>
+														<saw:value>USA_Washington</saw:value>
+														<saw:value>USA_California</saw:value>
+														<saw:value>USA_Colorado</saw:value>
+														<saw:value>USA_Connecticut</saw:value>
+														<saw:value>USA_Iowa</saw:value>
+														<saw:value>USA_Maine</saw:value>
+														<saw:value>USA_New York</saw:value>
+														<saw:value>USA_North Carolina</saw:value>
+														<saw:value>USA_Utah</saw:value>
+														<saw:value>USA_Florida</saw:value>
+														<saw:value>USA_Kentucky</saw:value>
+														<saw:value>USA_Louisiana</saw:value>
+														<saw:value>USA_Michigan</saw:value>
+														<saw:value>USA_Puerto Rico</saw:value>
+														<saw:value>USA_South Carolina</saw:value>
+														<saw:value>USA_South Dakota</saw:value>
+														<saw:value>USA_Wisconsin</saw:value>
+														<saw:value>USA_Arkansas</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c81b37f08956bf918"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#FFFFcc" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Flight Facts</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text># of Flights</saw:text>
+					</saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c81a0c22cf7ddfb88">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot; / sum(&quot;Flight Facts&quot;.&quot;# of Flights&quot;)*100</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="repeat" fontColor="#000080" wrapText="true" fontSize="11">
+						<saw:dataFormat xsi:type="saw:percent" minDigits="1" maxDigits="1" commas="true" negativeType="redMinus"/>
+					</saw:formatSpec><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="All Orig Airports"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c81a0c22cf7ddfb88"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#bbd2ea" wrapText="true" fontStyle="regular"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Orig Region"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>Midwest Region</saw:value>
+														<saw:value>Northeast Region</saw:value>
+														<saw:value>South Region</saw:value>
+														<saw:value>West Region</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c81a0c22cf7ddfb88"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Orig State"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>USA_Hawaii</saw:value>
+														<saw:value>USA_Nebraska</saw:value>
+														<saw:value>USA_Texas</saw:value>
+														<saw:value>USA_Alaska</saw:value>
+														<saw:value>USA_Minnesota</saw:value>
+														<saw:value>USA_Montana</saw:value>
+														<saw:value>USA_New Mexico</saw:value>
+														<saw:value>USA_Oregon</saw:value>
+														<saw:value>USA_Virginia</saw:value>
+														<saw:value>USA_Alabama</saw:value>
+														<saw:value>USA_Arizona</saw:value>
+														<saw:value>USA_Idaho</saw:value>
+														<saw:value>USA_Massachusetts</saw:value>
+														<saw:value>USA_Missouri</saw:value>
+														<saw:value>USA_Ohio</saw:value>
+														<saw:value>USA_West Virginia</saw:value>
+														<saw:value>USA_Illinois</saw:value>
+														<saw:value>USA_Mississippi</saw:value>
+														<saw:value>USA_Nevada</saw:value>
+														<saw:value>USA_New Jersey</saw:value>
+														<saw:value>USA_North Dakota</saw:value>
+														<saw:value>USA_Rhode Island</saw:value>
+														<saw:value>USA_Wyoming</saw:value>
+														<saw:value>USA_Delaware</saw:value>
+														<saw:value>USA_District of Columbia</saw:value>
+														<saw:value>USA_Georgia</saw:value>
+														<saw:value>USA_Kansas</saw:value>
+														<saw:value>USA_Maryland</saw:value>
+														<saw:value>USA_New Hampshire</saw:value>
+														<saw:value>USA_Pennsylvania</saw:value>
+														<saw:value>USA_Tennessee</saw:value>
+														<saw:value>USA_Vermont</saw:value>
+														<saw:value>USA_Washington</saw:value>
+														<saw:value>USA_California</saw:value>
+														<saw:value>USA_Colorado</saw:value>
+														<saw:value>USA_Connecticut</saw:value>
+														<saw:value>USA_Iowa</saw:value>
+														<saw:value>USA_Maine</saw:value>
+														<saw:value>USA_New York</saw:value>
+														<saw:value>USA_North Carolina</saw:value>
+														<saw:value>USA_Utah</saw:value>
+														<saw:value>USA_Florida</saw:value>
+														<saw:value>USA_Kentucky</saw:value>
+														<saw:value>USA_Louisiana</saw:value>
+														<saw:value>USA_Michigan</saw:value>
+														<saw:value>USA_Puerto Rico</saw:value>
+														<saw:value>USA_South Carolina</saw:value>
+														<saw:value>USA_South Dakota</saw:value>
+														<saw:value>USA_Wisconsin</saw:value>
+														<saw:value>USA_Arkansas</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c81a0c22cf7ddfb88"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#FFFFcc" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Flight Facts</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>% of Total</saw:text>
+					</saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf6248225934e174f">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;X - Airlines Traffic&quot;.&quot;Passengers&quot;.&quot;Passengers x Miles&quot;/1000000</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="repeat" wrapText="true" hAlign="right" vAlign="top" imagePlacement="right" width="60"/><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="All Orig Airports"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="cf6248225934e174f"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#bbd2ea" fontStyle="regular" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Orig Region"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>Midwest Region</saw:value>
+														<saw:value>Northeast Region</saw:value>
+														<saw:value>South Region</saw:value>
+														<saw:value>West Region</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="cf6248225934e174f"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec wrapText="true" backgroundColor="#EEEEEE"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Orig State"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>USA_Hawaii</saw:value>
+														<saw:value>USA_Nebraska</saw:value>
+														<saw:value>USA_Texas</saw:value>
+														<saw:value>USA_Alaska</saw:value>
+														<saw:value>USA_Minnesota</saw:value>
+														<saw:value>USA_Montana</saw:value>
+														<saw:value>USA_New Mexico</saw:value>
+														<saw:value>USA_Oregon</saw:value>
+														<saw:value>USA_Virginia</saw:value>
+														<saw:value>USA_Alabama</saw:value>
+														<saw:value>USA_Arizona</saw:value>
+														<saw:value>USA_Idaho</saw:value>
+														<saw:value>USA_Massachusetts</saw:value>
+														<saw:value>USA_Missouri</saw:value>
+														<saw:value>USA_Ohio</saw:value>
+														<saw:value>USA_West Virginia</saw:value>
+														<saw:value>USA_Illinois</saw:value>
+														<saw:value>USA_Mississippi</saw:value>
+														<saw:value>USA_Nevada</saw:value>
+														<saw:value>USA_New Jersey</saw:value>
+														<saw:value>USA_North Dakota</saw:value>
+														<saw:value>USA_Rhode Island</saw:value>
+														<saw:value>USA_Wyoming</saw:value>
+														<saw:value>USA_Delaware</saw:value>
+														<saw:value>USA_District of Columbia</saw:value>
+														<saw:value>USA_Georgia</saw:value>
+														<saw:value>USA_Kansas</saw:value>
+														<saw:value>USA_Maryland</saw:value>
+														<saw:value>USA_New Hampshire</saw:value>
+														<saw:value>USA_Pennsylvania</saw:value>
+														<saw:value>USA_Tennessee</saw:value>
+														<saw:value>USA_Vermont</saw:value>
+														<saw:value>USA_Washington</saw:value>
+														<saw:value>USA_California</saw:value>
+														<saw:value>USA_Colorado</saw:value>
+														<saw:value>USA_Connecticut</saw:value>
+														<saw:value>USA_Iowa</saw:value>
+														<saw:value>USA_Maine</saw:value>
+														<saw:value>USA_New York</saw:value>
+														<saw:value>USA_North Carolina</saw:value>
+														<saw:value>USA_Utah</saw:value>
+														<saw:value>USA_Florida</saw:value>
+														<saw:value>USA_Kentucky</saw:value>
+														<saw:value>USA_Louisiana</saw:value>
+														<saw:value>USA_Michigan</saw:value>
+														<saw:value>USA_Puerto Rico</saw:value>
+														<saw:value>USA_South Carolina</saw:value>
+														<saw:value>USA_South Dakota</saw:value>
+														<saw:value>USA_Wisconsin</saw:value>
+														<saw:value>USA_Arkansas</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="cf6248225934e174f"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#FFFFcc" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Traffic Facts</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					<saw:caption fmt="text">
+						<saw:text>Passenger - Miles (M)</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c3b02cd72ff8e1ce6">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Delay Facts&quot;.&quot;Delay Perf % (0=Ontime,  &gt;0=Late)&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="repeat" wrapText="true" width="60">
+						<saw:dataFormat minDigits="1" maxDigits="1" commas="true" negativeType="redMinus" xsi:type="saw:percent"/>
+					</saw:formatSpec><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="All Orig Airports"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c3b02cd72ff8e1ce6"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#bbd2ea" fontStyle="regular" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Orig Region"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>Midwest Region</saw:value>
+														<saw:value>Northeast Region</saw:value>
+														<saw:value>South Region</saw:value>
+														<saw:value>West Region</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c3b02cd72ff8e1ce6"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Orig State"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>USA_Hawaii</saw:value>
+														<saw:value>USA_Nebraska</saw:value>
+														<saw:value>USA_Texas</saw:value>
+														<saw:value>USA_Alaska</saw:value>
+														<saw:value>USA_Minnesota</saw:value>
+														<saw:value>USA_Montana</saw:value>
+														<saw:value>USA_New Mexico</saw:value>
+														<saw:value>USA_Oregon</saw:value>
+														<saw:value>USA_Virginia</saw:value>
+														<saw:value>USA_Alabama</saw:value>
+														<saw:value>USA_Arizona</saw:value>
+														<saw:value>USA_Idaho</saw:value>
+														<saw:value>USA_Massachusetts</saw:value>
+														<saw:value>USA_Missouri</saw:value>
+														<saw:value>USA_Ohio</saw:value>
+														<saw:value>USA_West Virginia</saw:value>
+														<saw:value>USA_Illinois</saw:value>
+														<saw:value>USA_Mississippi</saw:value>
+														<saw:value>USA_Nevada</saw:value>
+														<saw:value>USA_New Jersey</saw:value>
+														<saw:value>USA_North Dakota</saw:value>
+														<saw:value>USA_Rhode Island</saw:value>
+														<saw:value>USA_Wyoming</saw:value>
+														<saw:value>USA_Delaware</saw:value>
+														<saw:value>USA_District of Columbia</saw:value>
+														<saw:value>USA_Georgia</saw:value>
+														<saw:value>USA_Kansas</saw:value>
+														<saw:value>USA_Maryland</saw:value>
+														<saw:value>USA_New Hampshire</saw:value>
+														<saw:value>USA_Pennsylvania</saw:value>
+														<saw:value>USA_Tennessee</saw:value>
+														<saw:value>USA_Vermont</saw:value>
+														<saw:value>USA_Washington</saw:value>
+														<saw:value>USA_California</saw:value>
+														<saw:value>USA_Colorado</saw:value>
+														<saw:value>USA_Connecticut</saw:value>
+														<saw:value>USA_Iowa</saw:value>
+														<saw:value>USA_Maine</saw:value>
+														<saw:value>USA_New York</saw:value>
+														<saw:value>USA_North Carolina</saw:value>
+														<saw:value>USA_Utah</saw:value>
+														<saw:value>USA_Florida</saw:value>
+														<saw:value>USA_Kentucky</saw:value>
+														<saw:value>USA_Louisiana</saw:value>
+														<saw:value>USA_Michigan</saw:value>
+														<saw:value>USA_Puerto Rico</saw:value>
+														<saw:value>USA_South Carolina</saw:value>
+														<saw:value>USA_South Dakota</saw:value>
+														<saw:value>USA_Wisconsin</saw:value>
+														<saw:value>USA_Arkansas</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c3b02cd72ff8e1ce6"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#FFFFcc" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="between">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c3b02cd72ff8e1ce6"/>
+										<sawx:expr xsi:type="xsd:decimal">10</sawx:expr>
+										<sawx:expr xsi:type="xsd:decimal">12</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								<saw:formatSpec wrapText="true" imagePlacement="left" noImage="true" backgroundColor="#F1E87D"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="greater">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c3b02cd72ff8e1ce6"/>
+										<sawx:expr xsi:type="xsd:decimal">11</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								<saw:formatSpec wrapText="true" imagePlacement="left" fontColor="#FFFFFF" backgroundColor="#CC3333" image="fmap:meters/status/priority/04_high.png"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Delay Facts</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Delay Perf %</saw:text>
+					</saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+		</saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:savedFilter" path="/shared/11. Demos/_filters/X - Airlines Delay/Prt Filters - All Dims" name="Prt Filters - All Dims"/>
+		</saw:filter>
+	</saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!2">
+						<saw:displayFormat>
+							<saw:formatSpec paddingTop="5"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="tableView!2">
+						<saw:displayFormat>
+							<saw:formatSpec/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+			</saw:cvTable>
+		</saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!2">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="false"/>
+				<saw:edge axis="section" insertPageBreak="false" showBlankRows="false" showColumnHeader="false">
+					<saw:displayFormat>
+						<saw:formatSpec wrapText="true"/>
+					</saw:displayFormat>
+				</saw:edge>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t2" grandTotalPosition="none">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec fontStyle="bold" wrapText="true"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+						</saw:displayGrandTotal>
+					</saw:displayGrandTotals>
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c08ffed3ed3639523" uiTableName="Origin">
+							<saw:drillState>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="All Orig Airports"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+										</saw:target>
+									</saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c08ffed3ed3639523" groupID="0"/>
+									</saw:selectionGroups>
+								</saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Orig Region"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>Midwest Region</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+										</saw:target>
+									</saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c08ffed3ed3639523" groupID="0"/>
+									</saw:selectionGroups>
+									<saw:drillParents>
+										<saw:drillParent columnID="c08ffed3ed3639523" levelID="All Orig Airports">
+											<saw:members xsi:type="saw:integerMembers">
+												<saw:value>1</saw:value>
+											</saw:members>
+										</saw:drillParent>
+									</saw:drillParents>
+								</saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Orig Region"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>South Region</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c08ffed3ed3639523"/>
+										</saw:target>
+									</saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c08ffed3ed3639523" groupID="0"/>
+									</saw:selectionGroups>
+									<saw:drillParents>
+										<saw:drillParent columnID="c08ffed3ed3639523" levelID="All Orig Airports">
+											<saw:members xsi:type="saw:integerMembers">
+												<saw:value>1</saw:value>
+											</saw:members>
+										</saw:drillParent>
+									</saw:drillParents>
+								</saw:drillStep>
+							</saw:drillState>
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true" backgroundColor="#fcfcfc" borderPosition="all" borderColor="#CCCCCC" borderStyle="single"/>
+								</saw:displayFormat>
+								<saw:caption>
+									<saw:text/>
+								</saw:caption>
+							</saw:headerFormat>
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec paddingTop="4" wrapText="true" paddingBottom="4" borderColor="#CCCCCC" borderPosition="28" borderStyle="single"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+						</saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="c81b37f08956bf918" uiTableName="Flight Facts">
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true" borderColor="#CCCCCC" borderPosition="all" borderStyle="single" backgroundColor="#fcfcfc"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec borderColor="#CCCCCC" borderPosition="28" borderStyle="single" wrapText="true" paddingTop="4" paddingBottom="4"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+						</saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="c81a0c22cf7ddfb88" uiTableName="Flight Facts">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec borderColor="#CCCCCC" borderPosition="28" borderStyle="single" wrapText="true" paddingTop="4" paddingBottom="4"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec borderColor="#CCCCCC" borderPosition="all" borderStyle="single" wrapText="true" backgroundColor="#fcfcfc"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+						</saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="cf6248225934e174f" uiTableName="Traffic Facts">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec borderColor="#CCCCCC" borderPosition="28" borderStyle="single" wrapText="true" paddingTop="4" paddingBottom="4"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec borderColor="#CCCCCC" borderPosition="all" borderStyle="single" wrapText="true" backgroundColor="#fcfcfc" paddingTop="2" paddingBottom="2"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+						</saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="c3b02cd72ff8e1ce6" uiTableName="Delay Facts">
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec wrapText="true" borderColor="#CCCCCC" borderPosition="all" borderStyle="single" backgroundColor="#fcfcfc"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec borderColor="#CCCCCC" borderPosition="28" borderStyle="single" wrapText="true" paddingTop="4" paddingBottom="4"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+						</saw:edgeLayer>
+					</saw:edgeLayers>
+				</saw:edge>
+				<saw:edge axis="column"/>
+			</saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="c81a0c22cf7ddfb88" uiTableName="Flight Facts"/>
+			</saw:measuresList>
+			<saw:sectionContent>
+				<saw:displayFormat>
+					<saw:formatSpec borderPosition="none" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:sectionContent>
+		</saw:view>
+		<saw:view xsi:type="saw:filtersView" name="filtersView!1"/>
+		<saw:view xsi:type="saw:titleView" name="titleView!2" includeName="false" startedDisplay="none"><saw:displayFormat>
+				<saw:formatSpec borderPosition="none" wrapText="true"/>
+			</saw:displayFormat><saw:title>
+				<saw:caption fmt="text">
+					<saw:text>Delay Performance by Geography</saw:text>
+				</saw:caption>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#000000" fontSize="16" wrapText="true" fontFamily="Arial" fontStyle="bold"/>
+				</saw:displayFormat>
+			</saw:title><saw:subTitle>
+				<saw:caption fmt="text">
+					<saw:text>Key Metrics and Associated Delays</saw:text>
+				</saw:caption>
+				<saw:displayFormat>
+					<saw:formatSpec fontSize="14" wrapText="true" fontFamily="Arial" fontColor="#000080"/>
+				</saw:displayFormat>
+			</saw:subTitle></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!1">
+			<saw:staticText>
+				<saw:caption fmt="html">
+					<saw:text>&lt;style&gt;.PTCC {   background-color: white;   border-top: white;   border-left: white;}&lt;/style&gt;</saw:text>
+				</saw:caption>
+			</saw:staticText>
+		</saw:view>
+	</saw:views>
+</saw:report>

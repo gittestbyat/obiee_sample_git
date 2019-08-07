@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Default" type="complex">
+         <excel dataSourceRef="xdo:local" timezone="America/Dawson" start_rownum="-1">
+            <file>Sales_SampleData_v2.xlsx</file>
+            <sheetName>Sales_SampleData_v2.csv</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" source="Default" label="G_1">
+               <element name="Order_Priority" value="Order Priority" dataType="xsd:string" label="Order Priority" breakOrder="None" fieldOrder="1"/>
+               <element name="Customer_Name" value="Customer Name" dataType="xsd:string" label="Customer Name" breakOrder="None" fieldOrder="2"/>
+               <element name="Ship_Mode" value="Ship Mode" dataType="xsd:string" label="Ship Mode" breakOrder="None" fieldOrder="3"/>
+               <element name="Customer_Segment" value="Customer Segment" dataType="xsd:string" label="Customer Segment" breakOrder="None" fieldOrder="4"/>
+               <element name="Product_Category" value="Product Category" dataType="xsd:string" label="Product Category" breakOrder="None" fieldOrder="5"/>
+               <element name="Product_Sub_Category" value="Product Sub-Category" dataType="xsd:string" label="Product Sub-Category" breakOrder="None" fieldOrder="6"/>
+               <element name="Product_Name" value="Product Name" dataType="xsd:string" label="Product Name" breakOrder="None" fieldOrder="7"/>
+               <element name="Product_Base_Margin" value="Product Base Margin" dataType="xsd:double" label="Product Base Margin" breakOrder="None" fieldOrder="8"/>
+               <element name="Region" value="Region" dataType="xsd:string" label="Region" breakOrder="None" fieldOrder="9"/>
+               <element name="Sub_Region" value="Sub_Region" dataType="xsd:string" label="Sub_Region" breakOrder="None" fieldOrder="10"/>
+               <element name="State" value="State" dataType="xsd:string" label="State" breakOrder="None" fieldOrder="11"/>
+               <element name="State_Short" value="State_Short" dataType="xsd:string" label="State_Short" breakOrder="None" fieldOrder="12"/>
+               <element name="City" value="City" dataType="xsd:string" label="City" breakOrder="None" fieldOrder="13"/>
+               <element name="Postal_Code" value="Postal Code" dataType="xsd:double" label="Postal Code" breakOrder="None" fieldOrder="14"/>
+               <element name="Latitude" value="Latitude" dataType="xsd:double" label="Latitude" breakOrder="None" fieldOrder="15"/>
+               <element name="Longitude" value="Longitude" dataType="xsd:double" label="Longitude" breakOrder="None" fieldOrder="16"/>
+               <element name="Order_Date" value="Order Date" dataType="xsd:date" label="Order Date" breakOrder="None" fieldOrder="17"/>
+               <element name="Ship_Date" value="Ship Date" dataType="xsd:date" label="Ship Date" breakOrder="None" fieldOrder="18"/>
+               <element name="Profit" value="Profit" dataType="xsd:double" label="Profit" breakOrder="None" fieldOrder="19"/>
+               <element name="Quantity" value="Quantity" dataType="xsd:double" label="Quantity" breakOrder="None" fieldOrder="20"/>
+               <element name="Revenue" value="Revenue" dataType="xsd:double" label="Revenue" breakOrder="None" fieldOrder="21"/>
+               <element name="Discount" value="Discount" dataType="xsd:double" label="Discount" breakOrder="None" fieldOrder="22"/>
+               <element name="Unit_Price" value="Unit Price" dataType="xsd:double" label="Unit Price" breakOrder="None" fieldOrder="23"/>
+               <element name="Shipping_Cost" value="Shipping Cost" dataType="xsd:double" label="Shipping Cost" breakOrder="None" fieldOrder="24"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="Default" left="274px" top="17px"/>
+         <layout name="DATA_DS" left="28px" top="14px"/>
+         <layout name="dsModalMask" left="" top=""/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

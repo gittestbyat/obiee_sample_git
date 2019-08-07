@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="ksva8khr5ameg7vo">
+  <sawd:dashboardColumn name="Column 0" duid="ckeo8e78qj919r7r" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+      <saw:displayFormat>
+        <saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+        <sawd:HTML fmt="html" captionID="kcap12832459_1668">[br/]&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Published Reports :
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+      </sawd:htmlView>
+      <sawd:advancedReportingObjectView name="Advanced Report 7" bipPath="/05. Published Reporting/b. Features/Interactive Sorting/Interactive Sorting.xdo" display="link" duid="8c4d834ikhh3hhch"><saw:caption><saw:text>Interactive Sorting</saw:text></saw:caption></sawd:advancedReportingObjectView><sawd:advancedReportingObjectView name="Advanced Report 8" bipPath="/05. Published Reporting/b. Features/Interactive Sorting/Sort on Interactive View .xdo" display="link" duid="cbm9k0bpk38nn58t"><saw:caption><saw:text>Sort on Interactive View </saw:text></saw:caption></sawd:advancedReportingObjectView><sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+        <sawd:linkCaption>
+          <saw:caption captionID="kcap12832459_1667">
+            <saw:text>Return to Main Index page</saw:text>
+          </saw:caption>
+        </sawd:linkCaption>
+        <sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+      </sawd:linkView>
+    </sawd:dashboardSection><sawd:dashboardSection name="Section 6" duid="0dadj2fuhloe7r5u" showSectionTitle="true" layoutType="bestFit"><saw:caption><saw:text>Page Information (click to collapse or expand)</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#666699" fontStyle="italic" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 1" duid="1pmoq7qhmirgpne8"><sawd:HTML fmt="html">&lt;font color=darkblue&gt;
+&lt;img src=res/sk_blafp/common/rightarrow.gif&gt;&lt;b&gt; Description : &lt;/b&gt;&lt;/font&gt; 
+This report shows how Interactive Sorting can be achieved in BI Publisher using RTF template. The report allows user to select the Sort Criteria from a drop down list and based on the Column name selected, the data in the report is sorted.
+To see more detailed description, please click  
+&lt;a href=&#39;/analytics/saw.dll?bipublisherEntry&amp;Action=open&amp;itemType=.xdo&amp;bipPath=%2F05.%20Published%20Reporting%2Fb.%20Features%2FInteractive%20Sorting%2FInteractive%20Sorting.xdo&amp;bipParams={_xmode:2,_xpf:,_xpt:0,_xdo:%2F05.%20Published%20Reporting%2Fb.%20Features%2FInteractive%20Sorting%2FInteractive%20Sorting.xdo,xdo%3Axdo%3A_paramssortCriteria_div_input:Country,_paramssortCriteria:Country,_xt:Report%20Description,_xf:html,_xautorun:false}&#39; target=_blank &gt; &lt;font size = 2 color= red&gt;here&lt;/font&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 2" duid="q058cfqft0p7tarv" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit">
+      <saw:displayFormat>
+        <saw:formatSpec borderPosition="none" wrapText="true"/>
+      </saw:displayFormat>
+      
+    <sawd:advancedReportingObjectView name="Advanced Report 2" bipPath="/05. Published Reporting/b. Features/Interactive Sorting/Interactive Sorting.xdo" duid="af2v67j2cp3vh1go" display="embedded" height="800" width="100%"><saw:caption><saw:text>Interactive Sorting</saw:text></saw:caption></sawd:advancedReportingObjectView><sawd:advancedReportingObjectView name="Advanced Report 6" bipPath="/05. Published Reporting/b. Features/Interactive Sorting/Sort on Interactive View .xdo" duid="difroa17ch4j2snt" display="embedded" height="800" width="100%"><saw:caption><saw:text>Sort on Interactive View </saw:text></saw:caption></sawd:advancedReportingObjectView></sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

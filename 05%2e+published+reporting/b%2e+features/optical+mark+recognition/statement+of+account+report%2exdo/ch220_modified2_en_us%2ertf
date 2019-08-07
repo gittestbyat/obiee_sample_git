@@ -1,0 +1,825 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman{\*\falt Times};}{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f16\froman\fcharset129\fprq2{\*\panose 02030600000101010101}Batang{\*\falt \'a1\'a7IoUAA};}{\f28\fswiss\fcharset128\fprq2{\*\panose 020b0604020202020204}Arial Unicode MS;}{\f29\fswiss\fcharset128\fprq2{\*\panose 020b0604020202020204}@Arial Unicode MS;}
+{\f30\froman\fcharset129\fprq2{\*\panose 02030600000101010101}@Batang;}{\f39\froman\fcharset238\fprq2 Times New Roman CE{\*\falt Times};}{\f40\froman\fcharset204\fprq2 Times New Roman Cyr{\*\falt Times};}
+{\f42\froman\fcharset161\fprq2 Times New Roman Greek{\*\falt Times};}{\f43\froman\fcharset162\fprq2 Times New Roman Tur{\*\falt Times};}{\f44\froman\fcharset177\fprq2 Times New Roman (Hebrew){\*\falt Times};}
+{\f45\froman\fcharset178\fprq2 Times New Roman (Arabic){\*\falt Times};}{\f46\froman\fcharset186\fprq2 Times New Roman Baltic{\*\falt Times};}{\f55\fmodern\fcharset238\fprq1 Courier New CE;}{\f56\fmodern\fcharset204\fprq1 Courier New Cyr;}
+{\f58\fmodern\fcharset161\fprq1 Courier New Greek;}{\f59\fmodern\fcharset162\fprq1 Courier New Tur;}{\f60\fmodern\fcharset177\fprq1 Courier New (Hebrew);}{\f61\fmodern\fcharset178\fprq1 Courier New (Arabic);}
+{\f62\fmodern\fcharset186\fprq1 Courier New Baltic;}{\f169\froman\fcharset0\fprq2 Batang Western{\*\falt \'a1\'a7IoUAA};}{\f167\froman\fcharset238\fprq2 Batang CE{\*\falt \'a1\'a7IoUAA};}{\f168\froman\fcharset204\fprq2 Batang Cyr{\*\falt \'a1\'a7IoUAA};}
+{\f170\froman\fcharset161\fprq2 Batang Greek{\*\falt \'a1\'a7IoUAA};}{\f171\froman\fcharset162\fprq2 Batang Tur{\*\falt \'a1\'a7IoUAA};}{\f174\froman\fcharset186\fprq2 Batang Baltic{\*\falt \'a1\'a7IoUAA};}
+{\f265\fswiss\fcharset0\fprq2 Arial Unicode MS Western;}{\f263\fswiss\fcharset238\fprq2 Arial Unicode MS CE;}{\f264\fswiss\fcharset204\fprq2 Arial Unicode MS Cyr;}{\f266\fswiss\fcharset161\fprq2 Arial Unicode MS Greek;}
+{\f267\fswiss\fcharset162\fprq2 Arial Unicode MS Tur;}{\f268\fswiss\fcharset177\fprq2 Arial Unicode MS (Hebrew);}{\f269\fswiss\fcharset178\fprq2 Arial Unicode MS (Arabic);}{\f270\fswiss\fcharset186\fprq2 Arial Unicode MS Baltic;}
+{\f273\fswiss\fcharset0\fprq2 @Arial Unicode MS Western;}{\f271\fswiss\fcharset238\fprq2 @Arial Unicode MS CE;}{\f272\fswiss\fcharset204\fprq2 @Arial Unicode MS Cyr;}{\f274\fswiss\fcharset161\fprq2 @Arial Unicode MS Greek;}
+{\f275\fswiss\fcharset162\fprq2 @Arial Unicode MS Tur;}{\f276\fswiss\fcharset177\fprq2 @Arial Unicode MS (Hebrew);}{\f277\fswiss\fcharset178\fprq2 @Arial Unicode MS (Arabic);}{\f278\fswiss\fcharset186\fprq2 @Arial Unicode MS Baltic;}
+{\f281\froman\fcharset0\fprq2 @Batang Western;}{\f279\froman\fcharset238\fprq2 @Batang CE;}{\f280\froman\fcharset204\fprq2 @Batang Cyr;}{\f282\froman\fcharset161\fprq2 @Batang Greek;}{\f283\froman\fcharset162\fprq2 @Batang Tur;}
+{\f286\froman\fcharset186\fprq2 @Batang Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;
+\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red255\green255\blue255;\red0\green51\blue0;}{\stylesheet{
+\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\f0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}{\s15\ql \li0\ri0\widctlpar
+\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\f0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext15 header;}{\s16\ql \li0\ri0\widctlpar
+\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\f0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext16 footer;}{\*\cs17 \additive \fs20\loch\f28\hich\af28\dbch\af28 \sbasedon10 
+HTML Typewriter;}{\*\cs18 \additive \f0\ulnone\cf0\animtext0 \sbasedon10 Hyperlink;}}{\info{\title G}{\author vivek}{\operator pksharma}{\creatim\yr2007\mo7\dy25\hr17\min4}{\revtim\yr2007\mo7\dy25\hr17\min28}{\version12}{\edmins28}{\nofpages2}
+{\nofwords4792}{\nofchars27317}{\*\company Oracle Corporation}{\nofcharsws33547}{\vern8229}}\paperw23818\paperh16834\margl360\margr259\margt994\margb1800 
+\widowctrl\ftnbj\aenddoc\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\hyphcaps0\horzdoc\dgmargin\dghspace180\dgvspace180\dghorigin360\dgvorigin994\dghshow1\dgvshow1
+\jexpand\viewkind1\viewscale100\pgbrdrhead\pgbrdrfoot\splytwnine\ftnlytwnine\htmautsp\nolnhtadjtbl\useltbaln\alntblind\lytcalctblwd\lyttblrtgr\lnbrkrule \fet0{\*\ftnsep \pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 
+\fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 {\chftnsep 
+\par }}{\*\ftnsepc \pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 {\chftnsepc 
+\par }}{\*\aftnsep \pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 {\chftnsep 
+\par }}{\*\aftnsepc \pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 {\chftnsepc 
+\par }}\sectd \lndscpsxn\binfsxn7\psz8\linex0\endnhere\titlepg\sectlinegrid360\sectdefaultcl {\header \pard\plain \s15\ql \li0\ri0\widctlpar\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 
+\fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af16\loch\f0 <?call:Detail1?>
+\par }}{\footer \pard\plain \s16\qc \li0\ri0\widctlpar\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 {\f2\fs10 \hich\af2\dbch\af16\loch\f2 
+%%CH220.out
+\par }}{\headerf \pard\plain \s15\ql \li0\ri0\widctlpar\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af16\loch\f0 <?call:Detail?>
+
+\par }}{\footerf \pard\plain \s16\ql \li0\ri0\widctlpar\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af16\loch\f0  
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \ql \li0\ri0\widctlpar\faauto\rin0\lin0\itap0 
+\fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af16\cgrid\langnp1033\langfenp1033 {\f2\fs17 \hich\af2\dbch\af16\loch\f2  {\*\bkmkstart Text33}}{\field{\*\fldinst {\fs16 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs16 {\*\datafield 
+00010000000000000000123135206c696e65732070657220706167653b00000000002e3c78736c3a7661726961626c65206e616d653d226c7070222073656c6563743d226e756d62657228313529222f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext 15 lines per page\'3b}
+{\*\ffstattext <xsl:variable name="lpp" select="number(15)"/>}}}}}{\fldrslt {\fs16\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 15 lines per page;}}}{\field\flddirty{\*\fldinst {\fs16 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs16 {\*\datafield 
+00010000000000000654657874333300077661726172673100000000002e3c3f78646f78736c743a7365745f7661726961626c6528245f58444f4354582c9276617261726731922c30293f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text33}{\*\ffdeftext vararg1}
+{\*\ffstattext <?xdoxslt:set_variable($_XDOCTX,\'92vararg1\'92,0)?>}}}}}{\fldrslt {\fs16\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 vararg1}}}{\*\bkmkend Text33}{\field\flddirty{\*\fldinst {\fs16 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs16 
+{\*\datafield 000100000000000000000673746172743100000000002d3c3f78646f78736c743a7365745f7661726961626c6528245f58444f4354582c92737461727431922c30293f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext start1}{\*\ffstattext 
+<?xdoxslt:set_variable($_XDOCTX,\'92start1\'92,0)?>}}}}}{\fldrslt {\fs16\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 start1}}}{\fs16 
+\par }{\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?template:Detail?>
+\par }\trowd \trgaph108\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth23508 \cellx23400\pard \qc \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs18 \hich\af2\dbch\af16\loch\f2  }{\f2\fs10 \hich\af2\dbch\af16\loch\f2 STATEMENT OF ACCOUNT}{\f2\fs17 \hich\af2\dbch\af16\loch\f2  
+{\*\bkmkstart Text1}\hich\af2\dbch\af16\loch\f2  {\*\bkmkend Text1}}{\field{\*\fldinst {\f2\fs11 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs11 {\*\datafield 
+001100000000000000000a30362f30312f32303031000a64642f4d4d2f79797979000000243c3f737562737472696e67282e2f4441545f53544d4e545f46524f4d2c312c3130293f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt2{\*\ffdeftext 06/01/2001}{\*\ffformat dd/MM/yyyy}
+{\*\ffstattext <?substring(./DAT_STMNT_FROM,1,10)?>}}}}}{\fldrslt {\f2\fs11\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 06/01/2001}}}{\f2\fs17 
+\par }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth23508 \cellx23400\row }\trowd \trgaph108\trrh122\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \cell }\pard \qj \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16 \hich\af2\dbch\af16\loch\f2 
+Period From     }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \hich\af2\dbch\af16\loch\f2  \cell }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\*\bkmkstart Text2}{\field{\*\fldinst {\f2\fs18 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs18 
+{\*\datafield 0011000000000000055465787432000a30362f30312f32303031000a64642f4d4d2f79797979000000243c3f737562737472696e67282e2f4441545f53544d4e545f46524f4d2c312c3130293f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt2{\*\ffname Text2}{\*\ffdeftext 
+06/01/2001}{\*\ffformat dd/MM/yyyy}{\*\ffstattext <?substring(./DAT_STMNT_FROM,1,10)?>}}}}}{\fldrslt {\f2\fs18\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 06/01/2001}}}{\f2\fs17 {\*\bkmkend Text2}\hich\af2\dbch\af16\loch\f2  \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh122\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 
+\cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd \trgaph108\trrh167\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \cell }\pard \qj \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16 \hich\af2\dbch\af16\loch\f2 
+To              }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \cell }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\*\bkmkstart Text3}{\field{\*\fldinst {\f2\fs18 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs18 {\*\datafield 
+0011000000000000055465787433000a30362f30362f32303037000a64642f4d4d2f79797979000000223c3f737562737472696e67282e2f4441545f53544d4e545f544f2c312c3130293f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt2{\*\ffname Text3}{\*\ffdeftext 06/06/2007}
+{\*\ffformat dd/MM/yyyy}{\*\ffstattext <?substring(./DAT_STMNT_TO,1,10)?>}}}}}{\fldrslt {\f2\fs18\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 06/06/2007}}}{\f2\fs17 {\*\bkmkend Text3}\cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh167\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 
+\cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd \trgaph108\trrh158\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?./TXT_CUSTADR_ADD1?>\cell \cell }\pard \qj \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16 \hich\af2\dbch\af16\loch\f2 Page Number     }{\f2\fs18 
+\hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \cell }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\field{\*\fldinst {\f2\fs17 \hich\af2\dbch\af16\loch\f2  PAGE  \\* Arabic  \\* MERGEFORMAT }}{\fldrslt {\f2\fs17\lang1024\langfe1024\noproof 
+\hich\af2\dbch\af16\loch\f2 1}}}{\f2\fs17 \hich\af2\dbch\af16\loch\f2  \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh158\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh122\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 
+\hich\af2\dbch\af16\loch\f2 <?./TXT_CUSTADR_ADD2?>                                                                                                      \cell \cell }{\f2\fs16 \hich\af2\dbch\af16\loch\f2 Account No      }{\f2\fs18 
+\hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \cell }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?./COD_ACCT_NO?>\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh122\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh95\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl
+\tx2625\tx2865\tx3240\faauto\rin0\lin0 {\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?./NAM_CC_CITY?>      \cell \cell }{\f2\fs16 \hich\af2\dbch\af16\loch\f2 Product Name    }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \cell }{\f2\fs18 
+\hich\af2\dbch\af16\loch\f2 <?./NAM_PRODUCT?>\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh95\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh185\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 
+\hich\af2\dbch\af16\loch\f2                                                                                                                                                                         \cell \cell }{\f2\fs16 \hich\af2\dbch\af16\loch\f2 
+Currency Name   }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \cell }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?./NAM_CURRENCY?>\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh185\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh158\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs20\cf1 
+\hich\af2\dbch\af16\loch\f2 <?./JT_HOLD_NAM_1?>                                                                                                                                                                     }{\f2\fs20 \cell }{\f2\fs16 
+\hich\af2\dbch\af16\loch\f2                    {\*\bkmkstart Text20}}{\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 {\*\datafield 000100000000000006546578743230000452454c3100000000000a3c3f2e2f52454c313f3e0000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text20}{\*\ffdeftext REL1}{\*\ffstattext <?./REL1?>}}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 REL1}}}{\f2\fs17 {\*\bkmkend Text20}\cell }{\f2\fs16\cf1 
+\hich\af2\dbch\af16\loch\f2 Branch Code     }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2  }{\f2\fs16 \cell }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?./COD_CC_BRN?>\cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh158\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 
+\cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd \trgaph108\trrh113\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs20\cf1 \hich\af2\dbch\af16\loch\f2 <?./JT_HOLD_NAM_2?>       \cell }{\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2                    {\*\bkmkstart Text21}}{\field{\*\fldinst {\f2\fs16 
+\hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 {\*\datafield 000100000000000006546578743231000452454c3200000000000a3c3f2e2f52454c323f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text21}{\*\ffdeftext REL2}{\*\ffstattext <?./REL2?>}
+}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 REL2}}}{\f2\fs16\cf1 {\*\bkmkend Text21}\cell \hich\af2\dbch\af16\loch\f2 Branch Name     }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16\cf1 \cell }{\f2\fs18 
+\hich\af2\dbch\af16\loch\f2 <?./NAM_BRANCH?>}{\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh113\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh248\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs20\cf1 
+\hich\af2\dbch\af16\loch\f2 <?./JT_HOLD_NAM_3?>       \cell }{\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2                    {\*\bkmkstart Text22}}{\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 {\*\datafield 
+000100000000000006546578743232000452454c3300000000000a3c3f2e2f52454c333f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text22}{\*\ffdeftext REL3}{\*\ffstattext <?./REL3?>}}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof 
+\hich\af2\dbch\af16\loch\f2 REL3}}}{\f2\fs16\cf1 {\*\bkmkend Text22}\cell \hich\af2\dbch\af16\loch\f2 Cust Short Name }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2  \cell }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 
+<?./NAM_CUST_SHRT?>}{\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh248\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh-20\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs10\cf1 
+\cell }{\f2\fs16\cf1 \cell \cell }{\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh-20\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh216\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16\cf1 
+\hich\af2\dbch\af16\loch\f2 Customer ID      :\cell \hich\af2\dbch\af16\loch\f2         <?./COD_CUST?>                    \cell \cell }{\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh216\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {
+\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2 Customer Name    :\cell \hich\af2\dbch\af16\loch\f2         <?./NAM_CUST_FULL?> \cell \cell }{\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh216\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {
+\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2 Customer Address :\cell \hich\af2\dbch\af16\loch\f2         }{\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?./TXT_CUSTADR_ADD1?>}{\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2  \cell \cell }{\f2\fs18\cf1 \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh216\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 
+\cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd \trgaph108\trrh108\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16\cf1 \cell \hich\af2\dbch\af16\loch\f2         }{\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?./TXT_CUSTADR_ADD2?>}{\f2\fs16\cf1 \cell \cell }{\f2\fs18\cf1 \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh108\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 
+\cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd \trgaph108\trrh80\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16\cf1 \cell \hich\af2\dbch\af16\loch\f2         }{\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?./TXT_CUSTADR_ADD3?>}{\f2\fs16\cf1 \cell \cell }{\f2\fs18\cf1 \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh80\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt
+\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 
+\cellx23400\row }\trowd \trgaph108\trrh243\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone 
+\clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {
+\f2\fs16\cf1 \cell \hich\af2\dbch\af16\loch\f2         }{\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?./NAM_CUSTADR_CITY?>}{\f2\fs16\cf1 \cell \cell }{\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 
+\trowd \trgaph108\trrh243\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh162\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16\cf1 
+\cell \cell \cell }{\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh162\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16\cf1 
+\hich\af2\dbch\af16\loch\f2 Account Title    :\cell }\pard \ql \li0\ri0\widctlpar\intbl\tx1047\faauto\rin0\lin0 {\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2         }{\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?./COD_ACCT_TITLE?>}{\f2\fs16\cf1 \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16\cf1 \cell }{\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2390\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13776\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15741\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh-144\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth23508 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\tx10455\faauto\rin0\lin0 {\f2\fs18\cf1 
+\par }\pard \ql \li0\ri0\widctlpar\intbl\tx10950\faauto\rin0\lin0 {\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh-144\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth23508 \cellx23400\row }\trowd \trgaph108\trrh-483\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth23508 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs10\cf1 \hich\af2\dbch\af16\loch\f2   
+\par \hich\af2\dbch\af16\loch\f2    
+\par }\pard \ql \li0\ri0\widctlpar\intbl\tx735\tx2250\tx2370\tx2505\tx2685\tx4305\tx4680\tx9375\tx9690\tx10035\tx11880\tx12045\tx15525\tx15675\tx18030\tx18165\tx18285\tx18390\tx21090\tx21270\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs10\cf1 
+\hich\af2\dbch\af16\loch\f2             DATE                            }{\f2\fs10 \hich\af2\dbch\af16\loch\f2 
+BRANCH                           DESCRIPTION                                                                               REFERENCE                         VALUE DATE                                                DEBITS                                  
+\hich\af2\dbch\af16\loch\f2  \hich\af2\dbch\af16\loch\f2     CREDITS                                           }{\f2\fs10\cf1 \hich\af2\dbch\af16\loch\f2 BALANCE\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {
+\f2\fs17 \trowd \trgaph108\trrh-483\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth23508 \cellx23400\row }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?end template?>{\*\bkmkstart Text4}\hich\af2\dbch\af16\loch\f2  
+{\*\bkmkend Text4}}{\field{\*\fldinst {\b\fs20 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\b\fs20 {\*\datafield 
+0001000000000000000003494e4900000000005a3c3f78646f78736c743a7365745f7661726961626c6528245f58444f4354582c92526e756d922c30293f3e20203c3f78646f78736c743a7365745f7661726961626c6528245f58444f4354582c2027526e756d31272c31293f3e0000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext INI}{\*\ffstattext <?xdoxslt:set_variable($_XDOCTX,\'92Rnum\'92,0)?>  <?xdoxslt:set_variable($_XDOCTX, 'Rnum1',1)?>}}}}}{\fldrslt {\b\fs20\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 INI
+}}}{\field{\*\fldinst {\f2\fs17\cf9 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17\cf9 {\*\datafield 
+0001000000000000000001470000000000733c3f666f722d656163682d67726f75704073656374696f6e3a2e2f41505f43485f523232302f4c4953545f4e4c4c2f4e4c4c3b2e2f434f445f43435f42524e3f3e3c3f736f72743a2e2f434f445f43435f42524e3b27617363656e64696e67273b646174612d747970653d2774
+657874273f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext G}{\*\ffstattext <?for-each-group@section:./AP_CH_R220/LIST_NLL/NLL\'3b./COD_CC_BRN?><?sort:./COD_CC_BRN\'3b'ascending'\'3bdata-type='text'?>}}}}}{\fldrslt {
+\f2\fs17\cf9\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 G}}}{\field{\*\fldinst {\f2\fs17\cf18 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17\cf18 {\*\datafield 
+0001000000000000000001470000000000733c3f666f722d656163682d67726f75703a63757272656e742d67726f757028293b2e2f434f445f434f505f414343545f4354523f3e3c3f736f72743a63757272656e742d67726f757028292f434f445f50524f443b27617363656e64696e67273b646174612d747970653d2774
+657874273f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext G}{\*\ffstattext <?for-each-group:current-group()\'3b./COD_COP_ACCT_CTR?><?sort:current-group()/COD_PROD\'3b'ascending'\'3bdata-type='text'?>}}}}}{\fldrslt {
+\f2\fs17\cf18\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 G}}}{\f2\fs17 \hich\af2\dbch\af16\loch\f2  }{\fs16 
+\par }\trowd \trleft-180\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth23379 \cellx23199\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\field{\*\fldinst {\fs16 \hich\af0\dbch\af16\loch\f0  \hich\af0\dbch\af16\loch\f0 FORMTEXT\hich\af0\dbch\af16\loch\f0  }{\fs16 {\*\datafield 
+800100000000000000001253656374696f6e3b506167656e6174696f6e000000c43c78736c3a7661726961626c652078646f666f3a6374783d22696e636f6e7465787422206e616d653d2267726f7570222073656c6563743d2763757272656e742d67726f75702829272f3e3c3f666f722d656163683a2467726f75703f3e
+3c3f69663a28706f736974696f6e28292d3129206d6f6420246c70703d303f3e3c78736c3a7661726961626c65206e616d653d227374617274222078646f666f3a6374783d22696e636f6e74657874222073656c6563743d22706f736974696f6e2829222f3e00763c3f666f722d656163682d67726f75703a63757272656e
+742d67726f757028293b2e2f4a545f484f4c445f4e414d5f313f3e3c3f736f72743a63757272656e742d67726f757028292f4a545f484f4c445f4e414d5f313b2764657363656e64696e67273b646174612d747970653d2774657874273f3e0000000000}{\*\formfield{\fftype0\ffownhelp\ffownstat\fftypetxt0
+{\*\ffdeftext Section\'3bPagenation}{\*\ffhelptext <xsl:variable xdofo:ctx="incontext" name="group" select='current-group()'/><?for-each:$group?><?if:(position()-1) mod $lpp=0?><xsl:variable name="start" xdofo:ctx="incontext" select="position()"/>}
+{\*\ffstattext <?for-each-group:current-group()\'3b./JT_HOLD_NAM_1?><?sort:current-group()/JT_HOLD_NAM_1\'3b'descending'\'3bdata-type='text'?>}}}}}{\fldrslt {\fs16\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 Section;Pagenation}}}{
+\par }\pard \qc \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\field{\*\fldinst {\b\fs18\cf6 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\b\fs18\cf6 {\*\datafield 
+0001000000000000000001230000000000473c3f666f722d656163683a2467726f75703f3e3c3f69663a706f736974696f6e28293e3d24737461727420616e6420706f736974696f6e28293c2473746172742b246c70703f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext #}
+{\*\ffstattext <?for-each:$group?><?if:position()>=$start and position()<$start+$lpp?>}}}}}{\fldrslt {\b\fs18\cf6\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 #}}}{\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 
+{\*\datafield 001100000000000000000a30362f30312f32303031000a64642f4d4d2f797979790000001e3c3f737562737472696e67282e2f4441545f504f53542c312c3130293f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt2{\*\ffdeftext 06/01/2001}{\*\ffformat dd/MM/yyyy}
+{\*\ffstattext <?substring(./DAT_POST,1,10)?>}}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 06/01/2001}}}{\f2\fs16 \nestcell{\nonesttables
+\par }}{\field{\*\fldinst {\f2\fs16 {\*\bkmkstart Text18}\hich\af2\dbch\af16\loch\f2  \hich\af2\dbch\af16\loch\f2 FORMTEXT\hich\af2\dbch\af16\loch\f2  }{\f2\fs16 {\*\datafield 
+000100000000000006546578743138000a434f445f43435f42524e0000000000103c3f2e2f434f445f43435f42524e3f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text18}{\*\ffdeftext COD_CC_BRN}{\*\ffstattext <?./COD_CC_BRN?>}}}}}{\fldrslt {
+\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 COD_CC_BRN}}}{\f2\fs16 {\*\bkmkend Text18}\nestcell{\nonesttables
+\par }}\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\f2\fs16 {\*\bkmkstart Text10}\hich\af2\dbch\af16\loch\f2          {\*\bkmkend Text10}}{\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 
+{\*\datafield 000100000000000000000c5458545f54584e5f444553430000000000123c3f2e2f5458545f54584e5f444553433f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext TXT_TXN_DESC}{\*\ffstattext <?./TXT_TXN_DESC?>}}}}}{\fldrslt {
+\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 TXT_TXN_DESC}}}{\f2\fs16 \nestcell{\nonesttables
+\par }}\pard \qc \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 {\*\datafield 
+000100000000000000000e5245465f4348515f4e4f5f54584e0000000000143c3f2e2f5245465f4348515f4e4f5f54584e3f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext REF_CHQ_NO_TXN}{\*\ffstattext <?./REF_CHQ_NO_TXN?>}}}}}{\fldrslt {
+\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 REF_CHQ_NO_TXN}}}{\f2\fs16 \nestcell{\nonesttables
+\par }}\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\f2\fs16 {\*\bkmkstart Text12}\hich\af2\dbch\af16\loch\f2          {\*\bkmkend Text12}}{\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 
+{\*\datafield 001100000000000000000a30362f30312f32303031000a64642f4d4d2f797979790000001f3c3f737562737472696e67282e2f4441545f56414c55452c312c3130293f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt2{\*\ffdeftext 06/01/2001}{\*\ffformat dd/MM/yyyy}
+{\*\ffstattext <?substring(./DAT_VALUE,1,10)?>}}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 06/01/2001}}}{\f2\fs16 \nestcell{\nonesttables
+\par }}\pard \qr \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 {\*\datafield 
+0009000000000000000001300000000000153c3f63616c6c3a44425f414d545f54584e3f3e20200000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt1{\*\ffdeftext 0}{\*\ffstattext <?call:DB_AMT_TXN?>  }}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof 
+\hich\af2\dbch\af16\loch\f2 0}}}{\f2\fs16 \nestcell{\nonesttables
+\par }}{\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 {\*\datafield 0009000000000000000001300000000000153c3f63616c6c3a43525f414d545f54584e3f3e20200000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt1{\*\ffdeftext 0}
+{\*\ffstattext <?call:CR_AMT_TXN?>  }}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 0}}}{\f2\fs16 \nestcell{\nonesttables
+\par }\nestcell{\nonesttables
+\par }}{\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 {\*\datafield 
+80010000000000000000055374617274000000753e3c3f78646f78736c743a7365745f7661726961626c6528245f58444f4354582c9262616c922c78646f78736c743a6765745f7661726961626c6528245f58444f4354582c9262616c92292b2e2f43525f414d545f54584e293f3e3c3f63616c6c3a42414c414e43453f3e
+3c3f656e642069663f3e00873c3f69663a706f736974696f6e28293d313f3e3c3f78646f78736c743a7365745f7661726961626c6528245f58444f4354582c9262616c922c2d202e2f44425f414d545f54584e202b202e2f43525f414d545f54584e293f3e3c3f63616c6c3a42414c414e43453f3e203c3f656e642069663f
+3e3c3f69663a706f736974696f6e2829213d313f0000000000}{\*\formfield{\fftype0\ffownhelp\ffownstat\fftypetxt0{\*\ffdeftext Start}{\*\ffhelptext 
+><?xdoxslt:set_variable($_XDOCTX,\'92bal\'92,xdoxslt:get_variable($_XDOCTX,\'92bal\'92)+./CR_AMT_TXN)?><?call:BALANCE?><?end if?>}{\*\ffstattext 
+<?if:position()=1?><?xdoxslt:set_variable($_XDOCTX,\'92bal\'92,- ./DB_AMT_TXN + ./CR_AMT_TXN)?><?call:BALANCE?> <?end if?><?if:position()!=1?}}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 Start}}}{\f2\fs16 
+\nestcell{\nonesttables
+\par }}\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\f2\fs17 {\*\nesttableprops\trowd \trgaph108\trrh-144\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalc\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2499 \cellx2497\clvertalc\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1541 
+\cellx4038\clvertalc\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth5369 \cellx9403\clvertalc\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth1960 \cellx11363\clvertalc\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth3521 \cellx14882\clvertalc\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw10 
+\clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1670 \cellx16551\clvertalc\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2700 \cellx19249\clvertalc\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb
+\brdrs\brdrw10 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1800 \cellx21047\clvertalc\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2319 \cellx23364\nestrow}{\nonesttables
+\par }}\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\*\bkmkstart Text31}{\field\flddirty{\*\fldinst {\fs20 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs20 {\*\datafield 
+0001000000000000065465787433310002494600000000001a3c3f69663a706f736974696f6e2829206d6f642031353d303f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text31}{\*\ffdeftext IF}{\*\ffstattext <?if:position() mod 15=0?>}}}}}{\fldrslt {
+\fs20\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 IF}}}{\*\bkmkend Text31}{\field{\*\fldinst {\fs20 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs20 {\*\datafield 
+800100000000000000000970616765436f756e74000000ef292b2031293f3e3c3f656e642069663f3e3c3f69663a282e2f434f445f434f505f414343545f4354525b6e6f74282e3d2e2f707265636564696e673a3a434f445f434f505f414343545f435452295d293f3e3c3f78646f78736c743a7365745f7661726961626c
+6528245f58444f4354582c2027526e756d272c78646f78736c743a6765745f7661726961626c6528245f58444f4354582c2027526e756d31272920293f3e3c3f656e642069663f3e0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d
+0d0d0d0d0d0d0d0d0d00883c3f69663a282e2f434f445f434f505f414343545f4354525b2e3d2e2f707265636564696e673a3a434f445f434f505f414343545f4354525d293f3e3c3f78646f78736c743a7365745f7661726961626c6528245f58444f4354582c92526e756d922c2078646f78736c743a6765745f76617269
+61626c6528245f58444f4354582c92526e756d920000000000}{\*\formfield{\fftype0\ffownhelp\ffownstat\fftypetxt0{\*\ffdeftext pageCount}{\*\ffhelptext 
+)+ 1)?><?end if?><?if:(./COD_COP_ACCT_CTR[not(.=./preceding::COD_COP_ACCT_CTR)])?><?xdoxslt:set_variable($_XDOCTX, 'Rnum',xdoxslt:get_variable($_XDOCTX, 'Rnum1') )?><?end if?>\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d
+\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d\'0d}{\*\ffstattext 
+<?if:(./COD_COP_ACCT_CTR[.=./preceding::COD_COP_ACCT_CTR])?><?xdoxslt:set_variable($_XDOCTX,\'92Rnum\'92, xdoxslt:get_variable($_XDOCTX,\'92Rnum\'92}}}}}{\fldrslt {\fs20\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 pageCount}}}{\fs20 
+\hich\af0\dbch\af16\loch\f0    {\*\bkmkstart Text14}}{\field{\*\fldinst {\fs20 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs20 {\*\datafield 00010000000000000654657874313400034f4d5200000000000c3c3f63616c6c3a4f4d523f3e0000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text14}{\*\ffdeftext OMR}{\*\ffstattext <?call:OMR?>}}}}}{\fldrslt {\fs20\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 OMR}}}{\fs20 {\*\bkmkend Text14}\hich\af0\dbch\af16\loch\f0 <?end if?>}
+{\f2\fs17\cf18 \hich\af2\dbch\af16\loch\f2  {\*\bkmkstart Text32}}{\field{\*\fldinst {\fs20 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs20 {\*\datafield 
+000100000000000006546578743332000670627265616b00000000004f3c3f69663a706f736974696f6e2829206d6f642031353d303f3e3c78736c3a617474726962757465206e616d653d22627265616b2d6166746572223e706167653c2f78736c3a61747472627574653e0000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text32}{\*\ffdeftext pbreak}{\*\ffstattext <?if:position() mod 15=0?><xsl:attribute name="break-after">page</xsl:attrbute>}}}}}{\fldrslt {\fs20\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 
+pbreak}}}{\*\bkmkend Text32}{\field\flddirty{\*\fldinst {\cf6 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\cf6 {\*\datafield 00010000000000000000012300000000001a3c3f656e642069663f3e3c3f656e6420666f722d656163683f3e0000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext #}{\*\ffstattext <?end if?><?end for-each?>}}}}}{\fldrslt {\cf6\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 #}}}{\f2\fs17\cf18 \hich\af2\dbch\af16\loch\f2  }{\f2\fs17 
+\nestcell{\nonesttables
+\par }}\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\f2\fs17 {\*\nesttableprops\trowd \trgaph108\trrh-312\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth23379 \cellx23364\nestrow}{\nonesttables
+\par }}\trowd \trleft-180\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth23379 \cellx23199\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\fs16 
+\par }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\field{\*\fldinst {\fs20 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs20 {\*\datafield 
+800100000000000000001146696c6c696e67204f7574205370616365000000443c3f666f722d656163683a2467726f75703f3e3c3f69663a706f736974696f6e28293c246c7070202d2028636f756e74282467726f757029206d6f6420246c7070293f3e00443c3f69663a6e6f7428636f756e74282467726f757029206d6f
+6420246c70703d302920616e6420282473746172742b246c70703e636f756e74282467726f757029293f3e0000000000}{\*\formfield{\fftype0\ffownhelp\ffownstat\fftypetxt0{\*\ffdeftext Filling Out Space}{\*\ffhelptext 
+<?for-each:$group?><?if:position()<$lpp - (count($group) mod $lpp)?>}{\*\ffstattext <?if:not(count($group) mod $lpp=0) and ($start+$lpp>count($group))?>}}}}}{\fldrslt {\fs20\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 Filling Out Space}}}{
+\fs20 \hich\af0\dbch\af16\loch\f0   }{\field\flddirty{\*\fldinst {\fs20 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs20 {\*\datafield 
+000100000000000000000b456e642046696c6c696e670000000000243c3f656e642069663f3e3c3f656e6420666f722d656163683f3e3c3f656e642069663f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext End Filling}{\*\ffstattext 
+<?end if?><?end for-each?><?end if?>}}}}}{\fldrslt {\fs20\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 End Filling}}}{\fs20 \nestcell{\nonesttables
+\par }}\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\fs20 {\*\nesttableprops\trowd \trgaph108\trrh144\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth23415 \cellx23364\nestrow}{\nonesttables
+\par }}\trowd \trleft-180\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth23379 \cellx23199\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\*\bkmkstart Text34}{\field{\*\fldinst {\f2\fs17\cf18 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17\cf18 {\*\datafield 
+800100000000000006546578743334000e73657474696e675f766172617267000000323c3f78646f78736c743a7365745f7661726961626c6528245f58444f4354582c92737461727431922c247374617274293f3e003a3c3f78646f78736c743a7365745f7661726961626c6528245f58444f4354582c9276617261726731
+922c636f756e74282467726f757029293f3e0000000000}{\*\formfield{\fftype0\ffownhelp\ffownstat\fftypetxt0{\*\ffname Text34}{\*\ffdeftext setting_vararg}{\*\ffhelptext <?xdoxslt:set_variable($_XDOCTX,\'92start1\'92,$start)?>}{\*\ffstattext 
+<?xdoxslt:set_variable($_XDOCTX,\'92vararg1\'92,count($group))?>}}}}}{\fldrslt {\f2\fs17\cf18\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 setting_vararg}}}{\*\bkmkend Text34}{\field\flddirty{\*\fldinst {\f2\fs17\cf18 
+\hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17\cf18 {\*\datafield 0001000000000000000001450000000000163c3f656e6420666f722d656163682d67726f75703f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext E}{\*\ffstattext <?end for-each-group?>
+}}}}}{\fldrslt {\f2\fs17\cf18\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 E}}}{\fs16 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\fs16 \trowd 
+\trleft-180\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth23379 \cellx23199\row }\pard 
+\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\fs16 
+\par }\trowd \trgaph108\trrh216\trleft-108\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth6202 \cellx6094\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2478 \cellx8572\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth1796 \cellx10368\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth8262 \cellx18630\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth4677 \cellx23307\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs10 \hich\af2\dbch\af16\loch\f2 Opening Balance  :\cell }{\field{\*\fldinst {\f2\fs17 
+\hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17 {\*\datafield 0009000000000000000001300000000000153c3f63616c6c3a5052455f42414c3f3e20202020200000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt1{\*\ffdeftext 0}{\*\ffstattext <?call:PRE_BAL?>     }}}}
+}{\fldrslt {\f2\fs17\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 0}}}{\f2\fs17 \hich\af2\dbch\af16\loch\f2  \cell {\*\bkmkstart Text24}}{\field{\*\fldinst {\f2\fs17 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17 {\*\datafield 
+000100000000000006546578743234000c465f61637475616c5f5052450000000000463c3f78646f66783a6966202e2f5052455f42414c5f434f445f44524352203c3e20273027207468656e20202e2f5052455f42414c5f434f445f4452435220656e642069663f3e0000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text24}{\*\ffdeftext F_actual_PRE}{\*\ffstattext <?xdofx:if ./PRE_BAL_COD_DRCR <> '0' then  ./PRE_BAL_COD_DRCR end if?>}}}}}{\fldrslt {\f2\fs17\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 
+F_actual_PRE}}}{\f2\fs17 {\*\bkmkend Text24}\cell \cell \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh216\trleft-108\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth6202 \cellx6094\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2478 \cellx8572\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth1796 \cellx10368\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth8262 \cellx18630\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth4677 \cellx23307\row }\trowd \trgaph108\trrh216\trleft-108\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth6202 \cellx6094\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2478 \cellx8572\clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1796 \cellx10368\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth8262 \cellx18630\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4677 \cellx23307\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs10 \hich\af2\dbch\af16\loch\f2 Total Debit Amt  :\cell 
+{\*\bkmkstart Text30}}{\field{\*\fldinst {\f2\fs17 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17 {\*\datafield 0009000000000000065465787433300001300000000000163c3f63616c6c3a544f545f44423f3e202020202020200000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt1{\*\ffname Text30}{\*\ffdeftext 0}{\*\ffstattext <?call:TOT_DB?>       }}}}}{\fldrslt {\f2\fs17\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 0}}}{\f2\fs17 {\*\bkmkend Text30}\cell \cell }{\f2\fs10 
+\hich\af2\dbch\af16\loch\f2 Dr.Count :\cell }{\f2\fs17 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh216\trleft-108\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth6202 \cellx6094\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2478 \cellx8572\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth1796 \cellx10368\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth8262 \cellx18630\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth4677 \cellx23307\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs10 \hich\af2\dbch\af16\loch\f2 Total Credit Amt :\cell {\*\bkmkstart Text29}}{\field{\*\fldinst {\f2\fs17 
+\hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17 {\*\datafield 0009000000000000065465787432390001300000000000123c3f63616c6c3a544f545f43523f3e2020200000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt1{\*\ffname Text29}{\*\ffdeftext 0}{\*\ffstattext 
+<?call:TOT_CR?>   }}}}}{\fldrslt {\f2\fs17\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 0}}}{\f2\fs17 {\*\bkmkend Text29}\cell \cell }{\f2\fs10 \hich\af2\dbch\af16\loch\f2 Cr.Count :\cell }{\f2\fs17 \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh216\trleft-108\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt
+\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth6202 \cellx6094\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2478 \cellx8572\clvertalt\clbrdrt
+\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1796 \cellx10368\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth8262 \cellx18630\clvertalt
+\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4677 \cellx23307\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs10 \hich\af2\dbch\af16\loch\f2 
+Closing Balance  :\cell {\*\bkmkstart Text28}}{\field\flddirty{\*\fldinst {\f2\fs17 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17 {\*\datafield 8009000000000000065465787432380001300000000000133c3f63616c6c3a465f414d545f42414c3f3e200000000000}
+{\*\formfield{\fftype0\ffownhelp\ffownstat\fftypetxt1{\*\ffname Text28}{\*\ffdeftext 0}{\*\ffstattext <?call:F_AMT_BAL?> }}}}}{\fldrslt {\f2\fs17\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 0}}}{\f2\fs17 {\*\bkmkend Text28}\cell \cell \cell 
+\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh216\trleft-108\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt
+\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth6202 \cellx6094\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2478 \cellx8572\clvertalt
+\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1796 \cellx10368\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth8262 \cellx18630
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4677 \cellx23307\row }\trowd 
+\trgaph108\trleft-108\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth6202 
+\cellx6094\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2478 \cellx8572\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1796 
+\cellx10368\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth8262 \cellx18630\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth4677 \cellx23307\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\*\bkmkstart Text19}{\field{\*\fldinst {\f2\fs17 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17 {\*\datafield 
+8001000000000000065465787431390012464c475f484f4c445f4d41494c5f444553430000003c27202a20202a202a20484f4c44204d41494c202a20202a20202a272020656c736520272a202a202a202a202a202a202a202a2720656e642069663f3e006d3c3f78646f66783a6966202e2f464c475f484f4c445f4d41494c
+5f44455343203d2027592720207468656e2027202a20202a202a20484f4c44204d41494c202a20202a20202a2720656c7365206966202e2f464c475f484f4c445f4d41494c5f444553433d277927207468656e0000000000}{\*\formfield{\fftype0\ffownhelp\ffownstat\fftypetxt0{\*\ffname Text19}
+{\*\ffdeftext FLG_HOLD_MAIL_DESC}{\*\ffhelptext ' *  * * HOLD MAIL *  *  *'  else '* * * * * * * *' end if?>}{\*\ffstattext <?xdofx:if ./FLG_HOLD_MAIL_DESC = 'Y'  then ' *  * * HOLD MAIL *  *  *' else if ./FLG_HOLD_MAIL_DESC='y' then}}}}}{\fldrslt {
+\f2\fs17\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 FLG_HOLD_MAIL_DESC}}}{\f2\fs17 {\*\bkmkend Text19}\hich\af2\dbch\af16\loch\f2   \cell \cell \cell \cell \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trleft-108\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth6202 \cellx6094\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2478 \cellx8572\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1796 \cellx10368\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth8262 \cellx18630\clvertalt\clbrdrt
+\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth4677 \cellx23307\row }\trowd 
+\trgaph108\trrh210\trleft-108\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth23415 \cellx23307\pard \ql \li0\ri0\widctlpar\intbl\tx8295\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \hich\af2\dbch\af16\loch\f2                                                                                    
+}{\f2\fs10 \hich\af2\dbch\af16\loch\f2 ****************END OF STATEMENT****************\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh210\trleft-108\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth23415 \cellx23307\row }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\*\bkmkstart Text25}{\*\bkmkstart Text16}{\field{\*\fldinst {\fs16 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs16 
+{\*\datafield 
+000100000000000000001e5461626c6520466f6f7465723b20636f6e646974696f6e20666f7220534900000000005c3c3f69663a78646f78736c743a6765745f7661726961626c6528245f58444f4354582c927661726172673127293c78646f78736c743a6765745f7661726961626c6528245f58444f4354582c92737461
+72743127292b246c70703f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext Table Footer\'3b condition for SI}{\*\ffstattext <?if:xdoxslt:get_variable($_XDOCTX,\'92vararg1')<xdoxslt:get_variable($_XDOCTX,\'92start1')+$lpp?>}}}}}{\fldrslt {
+\fs16\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 Table Footer; condition for SI}}}{\fs16 {\*\bkmkend Text25}\hich\af0\dbch\af16\loch\f0  {\*\bkmkstart Text27}}{\field{\*\fldinst {\fs20 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs20 
+{\*\datafield 00010000000000000000034f4d5200000000005f3c3f78646f78736c743a7365745f7661726961626c6528245f58444f4354582c92526e756d922c78646f78736c743a6765745f7661726961626c6528245f58444f4354582c92526e756d92292b31293f3e20203c3f63616c6c3a4f4d523f3e0000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext OMR}{\*\ffstattext <?xdoxslt:set_variable($_XDOCTX,\'92Rnum\'92,xdoxslt:get_variable($_XDOCTX,\'92Rnum\'92)+1)?>  <?call:OMR?>}}}}}{\fldrslt {\fs20\lang1024\langfe1024\noproof 
+\hich\af0\dbch\af16\loch\f0 OMR}}}{\fs20 \hich\af0\dbch\af16\loch\f0  }{\field\flddirty{\*\fldinst {\fs16 \hich\af0\dbch\af16\loch\f0  FORMTEXT }{\fs16 {\*\datafield 
+0001000000000000065465787432370010656e64206f6620636f6e646974696f6e00000000000a3c3f656e642069663f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text27}{\*\ffdeftext end of condition}{\*\ffstattext <?end if?>}}}}}{\fldrslt {
+\fs16\lang1024\langfe1024\noproof \hich\af0\dbch\af16\loch\f0 end of condition}}}{\fs16 {\*\bkmkend Text27}\hich\af0\dbch\af16\loch\f0  }{\field\flddirty{\*\fldinst {\f2\fs17\cf18 \hich\af2\dbch\af16\loch\f2  FORMT\hich\af2\dbch\af16\loch\f2 EXT }{
+\f2\fs17\cf18 {\*\datafield 8001000000000000065465787431360001450000000000163c3f656e6420666f722d656163682d67726f75703f3e0000000000}{\*\formfield{\fftype0\ffownhelp\ffownstat\fftypetxt0{\*\ffname Text16}{\*\ffdeftext E}{\*\ffstattext <?end for-each-group?>
+}}}}}{\fldrslt {\f2\fs17\cf18\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 E}}}{\*\bkmkstart Text17}{\*\bkmkend Text16}{\field\flddirty{\*\fldinst {\f2\fs17\cf9 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs17\cf9 {\*\datafield 
+8001000000000000065465787431370001450000000000163c3f656e6420666f722d656163682d67726f75703f3e0000000000}{\*\formfield{\fftype0\ffownhelp\ffownstat\fftypetxt0{\*\ffname Text17}{\*\ffdeftext E}{\*\ffstattext <?end for-each-group?>}}}}}{\fldrslt {
+\f2\fs17\cf9\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 E}}}{\f2\fs17\cf9 {\*\bkmkend Text17}
+\par }{\hich\af0\dbch\af16\loch\f0               }{\f2\fs17 \hich\af2\dbch\af16\loch\f2                        }{\f2\fs11 \hich\af2\dbch\af16\loch\f2         }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?xdofx:if ./SESSION_ID=\hich\f2 \rquote \rquote \loch\f2 
+ then \hich\f2 \lquote }{\f2\fs11 \loch\af2\dbch\af16\hich\f2 \'93\loch\f2 \hich\f2 Statement of Account\'94}{\f2\fs18 \loch\af2\dbch\af16\hich\f2 \rquote \loch\f2  else \hich\f2 \lquote \rquote \loch\f2  end if?>}{\f2\fs11 \hich\af2\dbch\af16\loch\f2    
+
+\par \hich\af2\dbch\af16\loch\f2                                      }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?xdofx:if ./SESSION_ID!=\hich\f2 \rquote \rquote \loch\f2  then \hich\f2 \lquote \rquote \hich\af2\dbch\af16\loch\f2  else \hich\f2 \lquote }{
+\f2\fs11 \hich\af2\dbch\af16\loch\f2 ****No data for this statement****}{\f2\fs18 \loch\af2\dbch\af16\hich\f2 \rquote \loch\f2  end if?>}{\f2\fs11 \hich\af2\dbch\af16\loch\f2 
+                                                                                                                 
+\par }{\f2\fs18 
+\par }{\f2\fs2 \hich\af2\dbch\af16\loch\f2 <?template:OMR?> <?xdoxslt:set_variable($_XDOCTX, 'omr',\hich\f2 \rquote \rquote \loch\f2 )?> <?xdoxslt:set_variable($_XDO\hich\af2\dbch\af16\loch\f2 CTX, 'cnt',0)?><?if:./NAM_CUSTADR_CNTRY!=./NAM_BANK_COUNTRY?> 
+
+\par \hich\af2\dbch\af16\loch\f2  <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'|'))?> <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?>
+\par \hich\af2\dbch\af16\loch\f2 <?end if?> <?if:./NAM_\hich\af2\dbch\af16\loch\f2 CUSTADR_CNTRY=./NAM_BANK_COUNTRY?> <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?> 
+\par \hich\af2\dbch\af16\loch\f2 <?end if?><?if:./TOTPAGES >8?> <?if:xdoxslt:get_variable($_XDOCTX,'Rnum')=1?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:\hich\af2\dbch\af16\loch\f2 get_variable($_XDOCTX,'omr'),'|'))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?> <?end if?><?end if?><?if:./TOTPAGES <8?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?> 
+\par \hich\af2\dbch\af16\loch\f2 <?end if\hich\af2\dbch\af16\loch\f2 ?> <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?><?if:not(./COD_CC_BRN[not(.=./preceding::COD_CC_BRN)][./preceding::COD_CC_BRN=\hich\f2 \rquote 
+\rquote \loch\f2 ])?> 
+\par \hich\af2\dbch\af16\loch\f2  <?if:(./COD_CC_BRN[not(.=./preceding::COD_CC_BRN)])?><?xdoxslt:set_variable($\hich\af2\dbch\af16\loch\f2 
+_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' |'))?> <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?>
+\par \hich\af2\dbch\af16\loch\f2 <?end if?><?if:(./COD_CC_BRN[.=./preceding::COD_CC_BRN])?> <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxs\hich\af2\dbch\af16\loch\f2 lt:get_variable($_XDOCTX,'omr'),' '))?><?end if?> <?end if?> 
+\par \hich\af2\dbch\af16\loch\f2 <?if:(\hich\af2\dbch\af16\loch\f2 ./\hich\af2\dbch\af16\loch\f2 COD_CC_BRN[not(.=./preceding::COD_CC_BRN)][./preceding::COD_CC_BRN=\hich\f2 \rquote \rquote \loch\f2 
+])?> <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' |'))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable(\hich\af2\dbch\af16\loch\f2 
+$_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?> <?end if?> <?if:./COD_STMT_FLIER=1?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'|'))?> 
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt\hich\af2\dbch\af16\loch\f2 
+')+1)?> <?end if?><?if:./COD_STMT_FLIER!=1?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?> 
+\par \hich\af2\dbch\af16\loch\f2 <?end if?><?if:./COD_STMT_FLIER=2?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'|')\hich\af2\dbch\af16\loch\f2 
+)?> <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?> 
+\par \hich\af2\dbch\af16\loch\f2 <?end if?><?if:./COD_STMT_FLIER!=2?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?> <?end if?><?if:xdoxslt:get_variable($_XDOCTX,\hich\af2\dbch\af16\loch\f2 'Rnum')<8?> 
+\par \hich\af2\dbch\af16\loch\f2 <?choose:?> <?when:xdoxslt:get_variable($_XDOCTX,'Rnum')=1?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?><?xd\hich\af2\dbch\af16\loch\f2 oxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'|'))?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:xdoxslt:get_variable($_XDOCTX,'Rnum')=2?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_varia\hich\af2\dbch\af16\loch\f2 ble($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'|'))?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:xdoxslt:get_variable($_XDOCTX,'Rnum')=3?><?xdoxslt:set_variable($_XDOCTX,'omr\hich\af2\dbch\af16\loch\f2 ',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| |'))?> <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?> 
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:xdoxslt:ge\hich\af2\dbch\af16\loch\f2 t_variable($_XDOCTX,'Rnum')=4?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(\hich\af2\dbch\af16\loch\f2 xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:xdoxslt:get_variable($_XDOCTX,'Rnum')=5?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_var\hich\af2\dbch\af16\loch\f2 iable($_XDOCTX,'omr'),' '))?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?> 
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?> <?end when?><?when:xdoxslt:get_variable($_XDOCTX,'Rnum'\hich\af2\dbch\af16\loch\f2 )=6?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?> 
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_\hich\af2\dbch\af16\loch\f2 XDOCTX,'omr'),'  '))?><?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?> 
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:xdoxslt:get_variable($_XDOCTX,'Rnum')=7?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?\hich\af2\dbch\af16\loch\f2 xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?> <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+2\hich\af2\dbch\af16\loch\f2 )?> <?end when?><?otherwise:?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'ERROR'))?>
+
+\par \hich\af2\dbch\af16\loch\f2 <?end otherwise?><?end choose?> <?end if?> <?if:xdoxslt:get_variable($_XDOCTX,'Rnum')>8?><?choose:?> <?\hich\af2\dbch\af16\loch\f2 when:xdoxslt:get_variable($_XDOCTX,'Rnum') mod 7=1?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?><?xdoxslt:set_variable($\hich\af2\dbch\af16\loch\f2 _XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'|'))?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:xdoxslt:get_variable($_XDOCTX,'Rnum') mod 7=2?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'o\hich\af2\dbch\af16\loch\f2 mr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'|'))?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:xdoxslt:get_variable($_XDOCTX,'Rnum') mod 7=3?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(\hich\af2\dbch\af16\loch\f2 xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| |'))?><?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:xdoxslt:get_variable\hich\af2\dbch\af16\loch\f2 ($_XDOCTX,'Rnum') mod 7=4?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdox\hich\af2\dbch\af16\loch\f2 slt:get_variable($_XDOCTX,'omr'),' '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:xdoxslt:get_variable($_XDOCTX,'Rnum') mod 7=5?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_v\hich\af2\dbch\af16\loch\f2 ariable($_XDOCTX,'omr'),' '))?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?><?end when?><?when:xdoxslt:get_variable($_XDOCTX,'Rnum'\hich\af2\dbch\af16\loch\f2 ) mod 7=6?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variab\hich\af2\dbch\af16\loch\f2 le($_XDOCTX,'omr'),'  '))?><?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:xdoxslt:get_variable($_XDOCTX,'Rnum') mod 7=0?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'\hich\af2\dbch\af16\loch\f2 | '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'| '))?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX\hich\af2\dbch\af16\loch\f2 ,'cnt')+2)?><?end when?> <?otherwise:?>
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'ERROR'))?><?end otherwise?><?end choose?> 
+\par \hich\af2\dbch\af16\loch\f2 <?end if?><?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?><\hich\af2\dbch\af16\loch\f2 
+?if:xdoxslt:get_variable($_XDOCTX,'Rnum')=1?> <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' |'))?> 
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?><?end if?><?if:xdoxslt:get_variable($_X\hich\af2\dbch\af16\loch\f2 DOCTX,'Rnum')!=1?>
+\par \hich\af2\dbch\af16\loch\f2 
+<?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?> <?end if?> <?if:xdoxslt:get_variable($_XDOCTX,'Rnum')!=1?> <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' |'))
+\hich\af2\dbch\af16\loch\f2 ?> 
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?><?end if?><?if:xdoxslt:get_variable($_XDOCTX,'Rnum')=1?> <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>
+
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_X\hich\af2\dbch\af16\loch\f2 DOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),' '))?>  <?end if?> <?xdoxslt:set_variable($_XDOCTX,'omr',concat(xdoxslt:get_variable($_XDOCTX,'omr'),'|'))?> 
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?><?if:xdoxs\hich\af2\dbch\af16\loch\f2 lt:get_variable($_XDOCTX,'cnt') mod 2 = 0?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(\hich\f2 \lquote 
+\loch\f2  \hich\f2 \rquote \loch\f2 ,xdoxslt:get_variable($_XDOCTX,'omr')))?>
+\par \hich\af2\dbch\af16\loch\f2 <?end if?><?if:xdoxslt:get_variable($_XDOCTX,'cnt') mod 2 != 0?><?xdoxslt:set_variable($_XDOCTX,'omr',concat(\hich\f2 \lquote \loch\f2 |\hich\f2 \rquote \loch\f2 ,xdoxslt:ge\hich\af2\dbch\af16\loch\f2 
+t_variable($_XDOCTX,'omr')))?> 
+\par \hich\af2\dbch\af16\loch\f2 <?xdoxslt:set_variable($_XDOCTX,'cnt',xdoxslt:get_variable($_XDOCTX,'cnt')+1)?> <?end if?>}{\f2\fs16 
+\par }{\f2\fs20 \hich\af2\dbch\af16\loch\f2 <?xdoxslt:get_variable($_XDOCTX,'omr')?>}{\f2\fs2 \hich\af2\dbch\af16\loch\f2 <?end template?>}{\f2\fs20 
+\par }{\f2\fs2 \hich\af2\dbch\af16\loch\f2 <?template:F_AMT_BAL?><?choose:?><?when:./NAM_CURRENCY='SWISS FRANKS'?><?for\hich\af2\dbch\af16\loch\f2 mat-number:sum(current-group()/CR_AMT_TXN)- sum(current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='USD'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'999G990G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='JPY'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='GBP'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/\hich\af2\dbch\af16\loch\f2 DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='EUR'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='MRO'?><?format-number: sum (current-group()/CR\hich\af2\dbch\af16\loch\f2 _AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SDR '?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CAD '?><?format\hich\af2\dbch\af16\loch\f2 -number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='DKK '?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when\hich\af2\dbch\af16\loch\f2 :./NAM_CURRENCY='AUD'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SEK'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99\hich\af2\dbch\af16\loch\f2 G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='NOK'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CYP'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (curr\hich\af2\dbch\af16\loch\f2 ent-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='MTL'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='EGP'?><?format-number: sum (current-\hich\af2\dbch\af16\loch\f2 group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CHF'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CFA'?>\hich\af2\dbch\af16\loch\f2 <?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:./NAM_CURRENCY='TND'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when\hich\af2\dbch\af16\loch\f2 ?> <?when:./NAM_CURRENCY='MAD'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SAR'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT\hich\af2\dbch\af16\loch\f2 _TXN);'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='DZD'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='KWD'?><?format-number: sum (current-group()/CR_A\hich\af2\dbch\af16\loch\f2 MT_TXN)- sum (current-group()/DB_AMT_TXN);'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='BHD'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='AED'?><?form\hich\af2\dbch\af16\loch\f2 at-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='LBP'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>\hich\af2\dbch\af16\loch\f2  <?when:./NAM_CURRENCY='LYD'?><?format-number: sum (current-group()/CR_AMT_TXN)- sum (current-group()/DB_AMT_TXN);'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?otherwise:?><?end otherwise?><?end choose?><?end template?>
+\par 
+\par \hich\af2\dbch\af16\loch\f2 <?template:TOT_CR?><?choose:?><?when:./NAM_CURR\hich\af2\dbch\af16\loch\f2 ENCY='SWISS FRANKS'?><?format-number:./TOT_CR;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='USD'?><?format-number:./TOT_CR;'999G990G990D00'?><?end when?><?when: ./NAM_CURRENCY ='JPY'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_CR;'99G99G990'?><?end when?><?when: ./NAM\hich\af2\dbch\af16\loch\f2 _CURRENCY ='GBP'?><?format-number:./TOT_CR;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:./NAM_CURRENCY='EUR'?><?format-number:./TOT_CR;'99G99G990D00'?><?end when?><?when: ./NAM_CURRENCY ='MRO'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_CR;'99G99G990D00'\hich\af2\dbch\af16\loch\f2 ?><?end when?> <?when:./NAM_CURRENCY='SDR '?><?format-number:./TOT_CR;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CAD '?><?format-number:./TOT_CR;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='DKK '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_CR;'99G99G990D00'?>\hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='AUD'?><?format-number:./TOT_CR;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SEK'?><?format-number:./TOT_CR;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='NOK'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_CR;'99G99G990D00'?><?end\hich\af2\dbch\af16\loch\f2  when?> <?when:./NAM_CURRENCY='CYP'?><?format-number:./TOT_CR;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='MTL'?><?format-number:./TOT_CR;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='EGP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_CR;'99G99G990D00'?><?end when\hich\af2\dbch\af16\loch\f2 ?> <?when:./NAM_CURRENCY='CHF'?><?format-number:./TOT_CR;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CFA'?><?format-number:./TOT_CR;'99G99G990D00'?><?end when?><?when:./NAM_CURRENCY='TND'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_CR;'999G990G990D000'?><?end when?> \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='MAD'?><?format-number:./TOT_CR;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SAR'?><?format-number:./TOT_CR;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='DZD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_CR;'999G990G990D000'?><?end whe\hich\af2\dbch\af16\loch\f2 n?> <?when:./NAM_CURRENCY='KWD'?><?format-number:./TOT_CR;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='BHD'?><?format-number:./TOT_CR;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='AED'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_CR;'999G990G990D000'?><?end\hich\af2\dbch\af16\loch\f2  when?> <?when:./NAM_CURRENCY='LBP'?><?format-number:./TOT_CR;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='LYD'?><?format-number:./TOT_CR;'999G990G990D000'?><?end when?><?otherwise:?><?end otherwise?>
+\par \hich\af2\dbch\af16\loch\f2 <?end choose?><?end template?>
+\par \hich\af2\dbch\af16\loch\f2 <?template:TO\hich\af2\dbch\af16\loch\f2 T_DB?><?choose:?><?when:./NAM_CURRENCY='SWISS FRANKS'?><?format-number:./TOT_DB;'99G99G990D00'?><?end when?><?when: ./NAM_CURRENCY ='USD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_DB;'999G990G990D00'?><?end when?><?when: ./NAM_CURRENCY ='JPY'?><?format-number:./TOT_DB;'99G9\hich\af2\dbch\af16\loch\f2 9G990'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='GBP'?><?format-number:./TOT_DB;'99G99G990D00'?><?end when?><?when:./NAM_CURRENCY='EUR'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_DB;'99G99G990D00'?><?end when?><?when: ./NAM_CURRENCY ='MRO'?><?format-number:./TOT_DB;'99G99G990D0\hich\af2\dbch\af16\loch\f2 0'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SDR '?><?format-number:./TOT_DB;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='CAD '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_DB;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='DKK '?><?format-number:./TOT_DB;'99G99G990D00'\hich\af2\dbch\af16\loch\f2 ?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='AUD'?><?format-number:./TOT_DB;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='SEK'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_DB;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='NOK'?><?format-number:./TOT_DB;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?\hich\af2\dbch\af16\loch\f2 end when?> <?when:./NAM_CURRENCY='CYP'?><?format-number:./TOT_DB;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='MTL'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_DB;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='EGP'?><?format-number:./TOT_DB;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end w\hich\af2\dbch\af16\loch\f2 hen?> <?when:./NAM_CURRENCY='CHF'?><?format-number:./TOT_DB;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='CFA'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_DB;'99G99G990D00'?><?end when?><?when:./NAM_CURRENCY='TND'?><?format-number:./TOT_DB;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when\hich\af2\dbch\af16\loch\f2 ?> <?when:./NAM_CURRENCY='MAD'?><?format-number:./TOT_DB;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='SAR'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_DB;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='DZD'?><?format-number:./TOT_DB;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end \hich\af2\dbch\af16\loch\f2 when?> <?when:./NAM_CURRENCY='KWD'?><?format-number:./TOT_DB;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='BHD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_DB;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='AED'?><?format-number:./TOT_DB;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?\hich\af2\dbch\af16\loch\f2 end when?> <?when:./NAM_CURRENCY='LBP'?><?format-number:./TOT_DB;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='LYD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./TOT_DB;'999G990G990D000'?><?end when?><?otherwise:?><?end otherwise?><?end choose?><?end template?>
+\par \hich\af2\dbch\af16\loch\f2 <?template:\hich\af2\dbch\af16\loch\f2 PRE_BAL?>
+\par \hich\af2\dbch\af16\loch\f2 <?choose:?><?when:./NAM_CURRENCY='SWISS FRANKS'?><?format-number:./PRE_BAL;'99G99G990D00'?><?end when?><?when: ./NAM_CURRENCY ='USD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'999G990G990D00'?><?end when?><?when: ./NAM_CURRENCY ='JPY'?><?format-number:./PRE_BA\hich\af2\dbch\af16\loch\f2 L;'99G99G990'?><?end when?><?when: ./NAM_CURRENCY ='GBP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'99G99G990D00'?><?end when?><?when:./NAM_CURRENCY='EUR'?><?format-number:./PRE_BAL;'99G99G990D00'?><?end when?><?when: ./NAM_CURRENCY ='MRO'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'9\hich\af2\dbch\af16\loch\f2 9G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='SDR '?><?format-number:./PRE_BAL;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='CAD '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='DKK '?><?format-number:./PRE_BAL;'9\hich\af2\dbch\af16\loch\f2 9G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='AUD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='SEK'?><?format-number:./PRE_BAL;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='NOK'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'99G\hich\af2\dbch\af16\loch\f2 99G990D00'?><?end when?> <?when:./NAM_CURRENCY='CYP'?><?format-number:./PRE_BAL;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='MTL'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='EGP'?><?format-number:./PRE_BAL;'99G99G\hich\af2\dbch\af16\loch\f2 990D00'?><?end when?> <?when:./NAM_CURRENCY='CHF'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'99G99G990D00'?><?end when?> <?when:./NAM_CURRENCY='CFA'?><?format-number:./PRE_BAL;'99G99G990D00'?><?end when?><?when:./NAM_CURRENCY='TND'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'999G990G9\hich\af2\dbch\af16\loch\f2 90D000'?><?end when?> <?when:./NAM_CURRENCY='MAD'?><?format-number:./PRE_BAL;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='SAR'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='DZD'?><?format-number:./PRE_BAL;'999\hich\af2\dbch\af16\loch\f2 G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='KWD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='BHD'?><?format-number:./PRE_BAL;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='AED'?><?format-number:./PRE_BA\hich\af2\dbch\af16\loch\f2 
+L;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='LBP'?><?format-number:./PRE_BAL;'999G990G990D000'?><?end when?> <?when:./NAM_CURRENCY='LYD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./PRE_BAL;'999G990G990D000'?><?end when?><?otherwise:?><?end otherwise?><?end choose?><?e\hich\af2\dbch\af16\loch\f2 nd template?>}{\f2\fs16 
+\par 
+\par 
+\par }{\f2\fs2 \hich\af2\dbch\af16\loch\f2 <?template:DB_AMT_TXN?>
+\par \hich\af2\dbch\af16\loch\f2 <?choose:?>
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='SWISS FRANKS'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='USD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'999G990G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_C\hich\af2\dbch\af16\loch\f2 URRENCY ='JPY'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='GBP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:./NAM_CURRENCY='EUR'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='MRO'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SDR '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CAD '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99\hich\af2\dbch\af16\loch\f2 G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='DKK '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='AUD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SEK'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB\hich\af2\dbch\af16\loch\f2 _AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='NOK'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CYP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='MTL'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-\hich\af2\dbch\af16\loch\f2 number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='EGP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CHF'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CFA'?\hich\af2\dbch\af16\loch\f2 >
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:./NAM_CURRENCY='TND'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='MAD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SAR'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='DZD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='KWD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;\hich\af2\dbch\af16\loch\f2 '999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='BHD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='AED'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='LBP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-\hich\af2\dbch\af16\loch\f2 number:./DB_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='LYD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./DB_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?otherwise:?><?end otherwise?>
+\par \hich\af2\dbch\af16\loch\f2 <?end choose?>
+\par \hich\af2\dbch\af16\loch\f2 <?end template?>
+\par 
+\par 
+\par \hich\af2\dbch\af16\loch\f2 <?template:CR_AMT_TXN?>
+\par \hich\af2\dbch\af16\loch\f2 <?choose:?>
+\par \hich\af2\dbch\af16\loch\f2 <?when:./N\hich\af2\dbch\af16\loch\f2 AM_CURRENCY='SWISS FRANKS'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='USD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'999G990G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='JPY'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='GBP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:./NAM_CURRENCY='EUR'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when: ./NAM_CURRENCY ='MRO'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G9\hich\af2\dbch\af16\loch\f2 9G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SDR '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CAD '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='DKK '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR\hich\af2\dbch\af16\loch\f2 _AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='AUD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SEK'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='NOK'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-\hich\af2\dbch\af16\loch\f2 number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CYP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='MTL'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='EGP'?\hich\af2\dbch\af16\loch\f2 >
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CHF'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='CFA'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?when:./NAM_CURRENCY='TND'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='MAD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='SAR'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'\hich\af2\dbch\af16\loch\f2 999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='DZD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='KWD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='BHD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-n\hich\af2\dbch\af16\loch\f2 umber:./CR_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='AED'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENCY='LBP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> <?when:./NAM_CURRENC\hich\af2\dbch\af16\loch\f2 Y='LYD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:./CR_AMT_TXN;'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?><?otherwise:?><?end otherwise?>
+\par \hich\af2\dbch\af16\loch\f2 <?end choose?>
+\par \hich\af2\dbch\af16\loch\f2 <?end template?>
+\par \tab 
+\par \hich\af2\dbch\af16\loch\f2 <?template:BALANCE?>
+\par \hich\af2\dbch\af16\loch\f2 <?choose:?>
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='SWISS FRANKS'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \hich\af2\dbch\af16\loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2 <?when: ./NAM_CURRENCY ='USD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'999G990G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2 <?when: ./NAM_CURRENCY ='JPY'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2 <?when: ./NAM_CURRENCY ='GBP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2 <?when: ./NAM_CURRENCY ='EUR'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2 <?when: ./NAM\hich\af2\dbch\af16\loch\f2 _CURRENCY ='MRO'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> 
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='SDR '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> 
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='CAD '?>
+\par \hich\af2\dbch\af16\loch\f2 <?forma\hich\af2\dbch\af16\loch\f2 t-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> 
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='DKK '?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> 
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='AUD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variab\hich\af2\dbch\af16\loch\f2 le($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> 
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='SEK'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> 
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='NOK'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \hich\af2\dbch\af16\loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> 
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='CYP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> 
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='MTL'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end\hich\af2\dbch\af16\loch\f2  when?>
+\par \hich\af2\dbch\af16\loch\f2  <?when:./NAM_CURRENCY='EGP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> 
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='CHF'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2  <?when:./NAM_CURREN\hich\af2\dbch\af16\loch\f2 CY='CFA'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'99G99G990D00'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='TND'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2  <?when:./NAM_CURRENCY='MAD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number\hich\af2\dbch\af16\loch\f2 :xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2  <?when:./NAM_CURRENCY='SAR'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2  <?when:./NAM_CURRENCY='DZD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable(\hich\af2\dbch\af16\loch\f2 $_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2  <?when:./NAM_CURRENCY='KWD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2  <?when:./NAM_CURRENCY='BHD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \hich\af2\dbch\af16\loch\f2 bal');'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2  <?when:./NAM_CURRENCY='AED'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?> 
+\par \hich\af2\dbch\af16\loch\f2 <?when:./NAM_CURRENCY='LBP'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'999G990G990D000\hich\af2\dbch\af16\loch\f2 '?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>
+\par \hich\af2\dbch\af16\loch\f2  <?when:./NAM_CURRENCY='LYD'?>
+\par \hich\af2\dbch\af16\loch\f2 <?format-number:xdoxslt:get_variable($_XDOCTX,\hich\f2 \rquote \loch\f2 bal');'999G990G990D000'?>
+\par \hich\af2\dbch\af16\loch\f2 <?end when?>}{\fs2 
+\par }{\f2\fs2 \hich\af2\dbch\af16\loch\f2 <?otherwise:?><?end otherwise?>
+\par \hich\af2\dbch\af16\loch\f2 <?end choose?>
+\par \hich\af2\dbch\af16\loch\f2 <?end template?>
+\par }{\f2\fs17 
+\par }\pard \ql \li0\ri0\widctlpar\faauto\rin0\lin0\itap0 {\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?template:Detail1?>
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\fs2 
+\par 
+\par }\trowd \trgaph108\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth23508 \cellx23400\pard \qc \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs10 \hich\af2\dbch\af16\loch\f2 STATEMENT OF ACCOUNT}{\f2\fs17 \hich\af2\dbch\af16\loch\f2   }{\field{\*\fldinst {\f2\fs11 
+\hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs11 {\*\datafield 001100000000000000000a30362f30312f32303031000a64642f4d4d2f79797979000000243c3f737562737472696e67282e2f4441545f53544d4e545f46524f4d2c312c3130293f3e0000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt2{\*\ffdeftext 06/01/2001}{\*\ffformat dd/MM/yyyy}{\*\ffstattext <?substring(./DAT_STMNT_FROM,1,10)?>}}}}}{\fldrslt {\f2\fs11\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 06/01/2001}}}{\f2\fs17 
+\par }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth23508 \cellx23400\row }\trowd \trgaph108\trrh158\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \cell }\pard \qj \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16 \hich\af2\dbch\af16\loch\f2 
+Period From     }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \hich\af2\dbch\af16\loch\f2  \cell }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\field\flddirty{\*\fldinst {\f2\fs18 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs18 
+{\*\datafield 0011000000000000055465787432000a30362f30312f32303031000a64642f4d4d2f79797979000000243c3f737562737472696e67282e2f4441545f53544d4e545f46524f4d2c312c3130293f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt2{\*\ffname Text2}{\*\ffdeftext 
+06/01/2001}{\*\ffformat dd/MM/yyyy}{\*\ffstattext <?substring(./DAT_STMNT_FROM,1,10)?>}}}}}{\fldrslt {\f2\fs18\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 06/01/2001}}}{\f2\fs17 \hich\af2\dbch\af16\loch\f2  \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh158\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 
+\cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd \trgaph108\trrh185\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \cell }\pard \qj \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16 \hich\af2\dbch\af16\loch\f2 
+To              }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \cell }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\field\flddirty{\*\fldinst {\f2\fs18 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs18 {\*\datafield 
+0011000000000000055465787433000a30362f30362f32303037000a64642f4d4d2f79797979000000223c3f737562737472696e67282e2f4441545f53544d4e545f544f2c312c3130293f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt2{\*\ffname Text3}{\*\ffdeftext 06/06/2007}
+{\*\ffformat dd/MM/yyyy}{\*\ffstattext <?substring(./DAT_STMNT_TO,1,10)?>}}}}}{\fldrslt {\f2\fs18\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 06/06/2007}}}{\f2\fs17 \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh185\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 
+\cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd \trgaph108\trrh158\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 \hich\af2\dbch\af16\loch\f2 <?./TXT_CUSTADR_ADD1?>\cell \cell }\pard \qj \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16 \hich\af2\dbch\af16\loch\f2 Page Number     }{\f2\fs18 
+\hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \cell }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\field\flddirty{\*\fldinst {\f2\fs17 \hich\af2\dbch\af16\loch\f2  PAGE  \\* Arabic  \\* MERGEFORMAT }}{\fldrslt {\f2\fs17\lang1024\langfe1024\noproof 
+\hich\af2\dbch\af16\loch\f2 1}}}{\f2\fs17 \hich\af2\dbch\af16\loch\f2  \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh158\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh140\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 
+\hich\af2\dbch\af16\loch\f2 <?./TXT_CUSTADR_ADD2?>                                                                                                      \cell \cell }{\f2\fs16 \hich\af2\dbch\af16\loch\f2 Account No      }{\f2\fs18 
+\hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \cell }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?./COD_ACCT_NO?>\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh140\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh113\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl
+\tx2625\tx2865\tx3240\faauto\rin0\lin0 {\f2\fs17 \hich\af2\dbch\af16\loch\f2 <\hich\af2\dbch\af16\loch\f2 ?./NAM_CC_CITY?>      \cell \cell }{\f2\fs16 \hich\af2\dbch\af16\loch\f2 Product Name    }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \cell }{
+\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?./NAM_PRODUCT?>\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh113\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh185\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs17 
+\hich\af2\dbch\af16\loch\f2                                                                                                                                                                         \cell \cell }{\f2\fs16 \hich\af2\dbch\af16\loch\f2 
+Currency Name   }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16 \cell }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?./NAM_CURRENCY?>\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh185\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh80\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs20\cf1 
+\hich\af2\dbch\af16\loch\f2 <?./JT_HOLD_NAM_1?>                                                                                                                                                                     }{\f2\fs20 \cell }{\f2\fs16 
+\hich\af2\dbch\af16\loch\f2                    }{\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 {\*\datafield 000100000000000000000452454c3100000000000a3c3f2e2f52454c313f3e0000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext REL1}{\*\ffstattext <?./REL1?>}}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 REL1}}}{\f2\fs17 \cell }{\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2 Branch Code     }{
+\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2  }{\f2\fs16 \cell }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?./COD_CC_BRN?>\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 
+\trowd \trgaph108\trrh80\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh203\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs20\cf1 
+\hich\af2\dbch\af16\loch\f2 <?./JT_HOLD_NAM_2?>       \cell }{\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2                    }{\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{\f2\fs16 {\*\datafield 
+000100000000000000000452454c3200000000000a3c3f2e2f52454c323f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext REL2}{\*\ffstattext <?./REL2?>}}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof \hich\af2\dbch\af16\loch\f2 REL2}}}{
+\f2\fs16\cf1 \cell \hich\af2\dbch\af16\loch\f2 Branch Name     }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16\cf1 \cell }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?./NAM_BRANCH?>}{\f2\fs18\cf1 \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd \trgaph108\trrh203\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 
+\cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd \trgaph108\trrh158\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl
+\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone 
+\clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\pard 
+\ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs20\cf1 \hich\af2\dbch\af16\loch\f2 <?./JT_HOLD_NAM_3?>       \cell }{\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2                    }{\field{\*\fldinst {\f2\fs16 \hich\af2\dbch\af16\loch\f2  FORMTEXT }{
+\f2\fs16 {\*\datafield 000100000000000000000452454c3300000000000a3c3f2e2f52454c333f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext REL3}{\*\ffstattext <?./REL3?>}}}}}{\fldrslt {\f2\fs16\lang1024\langfe1024\noproof 
+\hich\af2\dbch\af16\loch\f2 REL3}}}{\f2\fs16\cf1 \cell \hich\af2\dbch\af16\loch\f2 Cust Short Name }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 :}{\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2  \cell }{\f2\fs18 \hich\af2\dbch\af16\loch\f2 <?./NAM_CUST_SHRT?>}{
+\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh158\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth2268 \cellx2389\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11520 \cellx13765\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth1980 \cellx15732\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth7740 \cellx23400\row }\trowd 
+\trgaph108\trrh230\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth23508 \cellx23400\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\f2\fs16\cf1 \hich\af2\dbch\af16\loch\f2         
+\par }\pard \ql \li0\ri0\widctlpar\intbl\tx720\tx2670\tx4320\tx11910\tx12060\tx15480\tx15615\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs10\cf1 \hich\af2\dbch\af16\loch\f2            DATE                             }{\f2\fs10 
+\hich\af2\dbch\af16\loch\f2 BRANCH\hich\af2\dbch\af16\loch\f2 
+                            DESCRIPTION                                                                               REFERENCE                        VALUE DATE                                                 DEBITS                                      C
+\hich\af2\dbch\af16\loch\f2 R\hich\af2\dbch\af16\loch\f2 EDITS                                            }{\f2\fs10\cf1 \hich\af2\dbch\af16\loch\f2 BALANCE
+\par }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs18\cf1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f2\fs17 \trowd 
+\trgaph108\trrh230\trleft-108\trftsWidth3\trwWidth23508\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth23508 \cellx23400\row }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\hich\af0\dbch\af16\loch\f0 <?end template?>}{\fs20 \hich\af0\dbch\af16\loch\f0  
+\par 
+\par }}

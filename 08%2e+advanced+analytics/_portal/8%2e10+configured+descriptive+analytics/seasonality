@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="th3veeos69s8aplu">
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1839">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Seasonality&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1838">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			<sawd:linkView name="Link 1" target="new" type="report" destination="/shared/08. Advanced Analytics/Trending/Seasonality/Seasonality Month Help" layout="captionLeft" duid="udogu46sbv3ijdcr"><sawd:linkCaption><saw:caption><saw:text>Help on this report</saw:text></saw:caption></sawd:linkCaption></sawd:linkView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 6" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; In this example, the second prompt selecting the value for Index Base will show a list of values that are dependent on the dimension that  was selected in the first prompt. This is done by leveraging presentation variable in the prompt choices definition. Select a value on the list prompt to become the base 100 for the index chart. The chart will then show you comparative curves of all the members with a base 100 on the selected value.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 2" break="column" duid="h42geu01nsa5a4fr" frozen="false" canFreeze="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:dashboardSection name="Section 3" collapsible="false" duid="03konhadh3koqbg7" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/08. Advanced Analytics/Trending/Seasonality/PCol - Seasonality" scope="dashboardPage" duid="1ja6ide20en3ufei"><saw:caption><saw:text>PCol - Seasonality</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 0" display="new" showView="" links="" duid="rs4mldq7tgh485b3"><saw:caption><saw:text>Seasonality Day</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Trending/Seasonality/Seasonality Day"/></sawd:reportView><sawd:globalFilterView name="GFP 1" path="/shared/08. Advanced Analytics/Trending/Prt - Product" duid="632is85ggdej80jt"><saw:caption><saw:text>Prt - Product</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 1" display="embed" showView="" links="" duid="6u6tgpcio5pq8rcm"><saw:caption><saw:text>Seasonality Month</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Trending/Seasonality/Seasonality Month"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

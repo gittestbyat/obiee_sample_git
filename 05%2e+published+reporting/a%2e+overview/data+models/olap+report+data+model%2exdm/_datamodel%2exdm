@@ -1,0 +1,218 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20Source:%20OLAP%20(Essbase);%20Structure:%20Concatenated%20flat%20%20XML;%20Features:%20Supports%20multiple%20views%20on%20data%20stored%20in%20Essbase%20or%20other%20OLAP%20sources.%20MDX%20Query%20examples%20(work%20with%20Sample.Basic)]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="G_1 MeasOnCol-Yr" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT 
+  NON EMPTY {[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]} ON COLUMNS,
+  NON EMPTY [Year].Generations(2).Members ON ROWS
+FROM Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G_2 MeasOnRows-Yr" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT 
+  NON EMPTY {[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]} ON ROWS,
+  NON EMPTY [Year].Generations(2).Members ON COLUMNS
+FROM Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G_3 Meas-Prod-Yr" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT 
+  NON EMPTY {[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]} ON COLUMNS, NON EMPTY CROSSJOIN([Year].Generations(2).Members, {EXCEPT(DESCENDANTS(Product),CHILDREN([Diet]))}) PROPERTIES MEMBER_ALIAS, GEN_NUMBER, LEVEL_NUMBER ON ROWS
+FROM Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G_4 Meas-Mrkt-Yr" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT 
+  NON EMPTY {[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]} ON COLUMNS, NON EMPTY CROSSJOIN([Year].Generations(2).Members, DESCENDANTS(Market)) PROPERTIES MEMBER_ALIAS, GEN_NUMBER, LEVEL_NUMBER ON ROWS
+FROM Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G_5 Meas-Prod-Mrkt-Yr" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[WITH 
+MEMBER [Measures].[New_Sales] AS 'IIF(IsEmpty(Sales), 0, Sales)',Solve_order=100
+SELECT 
+NON EMPTY {[Measures].[New_Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]} ON COLUMNS,
+  NON EMPTY 
+CROSSJOIN(
+          [Market].generations(2).members, 
+          DESCENDANTS(Product)
+          )
+PROPERTIES  MEMBER_ALIAS, LEVEL_NUMBER, GEN_NUMBER ON ROWS
+FROM Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G_6 MeasOnRows-Prod-Yr" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT 
+  NON EMPTY CROSSJOIN (
+                      {[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]}, 
+                      [Year].Generations(2).Members
+                      ) ON ROWS, 
+  NON EMPTY EXCEPT(DESCENDANTS(Product), UNION({[Diet]},CHILDREN(Diet))) ON COLUMNS
+FROM Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G_7 Meas-Product-Time" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT 
+NON EMPTY {[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]} ON COLUMNS,
+  NON EMPTY 
+CROSSJOIN(
+          [Product].generations(2).members, 
+          DESCENDANTS(Year)
+          )
+PROPERTIES  MEMBER_ALIAS, LEVEL_NUMBER, GEN_NUMBER ON ROWS
+FROM Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="G_1 MeasOnCol-Yr">
+               <element name="Year" value="Year" label="Year" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Sales" value="Sales" label="Sales" dataType="xsd:double" breakOrder="None" fieldOrder="1"/>
+               <element name="COGS" value="COGS" label="COGS" dataType="xsd:double" breakOrder="None" fieldOrder="2"/>
+               <element name="Margin" value="Margin" label="Margin" dataType="xsd:double" breakOrder="None" fieldOrder="3"/>
+               <element name="Total_Expenses" value="Total Expenses" label="Total Expenses" dataType="xsd:double" breakOrder="None" fieldOrder="4"/>
+               <element name="Profit" value="Profit" label="Profit" dataType="xsd:double" breakOrder="None" fieldOrder="5"/>
+            </group>
+            <group name="G_2" label="G_2" source="G_2 MeasOnRows-Yr">
+               <element name="Measures" value="Measures" label="Measures" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Qtr1" value="Qtr1" label="Qtr1" dataType="xsd:double" breakOrder="None" fieldOrder="1"/>
+               <element name="Qtr2" value="Qtr2" label="Qtr2" dataType="xsd:double" breakOrder="None" fieldOrder="2"/>
+               <element name="Qtr3" value="Qtr3" label="Qtr3" dataType="xsd:double" breakOrder="None" fieldOrder="3"/>
+               <element name="Qtr4" value="Qtr4" label="Qtr4" dataType="xsd:double" breakOrder="None" fieldOrder="4"/>
+            </group>
+            <group name="G_3" label="G_3" source="G_3 Meas-Prod-Yr">
+               <element name="Year" value="Year" label="Year" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Year_MEMBER_ALIAS" value="Year.MEMBER_ALIAS" label="Year.MEMBER_ALIAS" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Year_GEN_NUMBER" value="Year.GEN_NUMBER" label="Year.GEN_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Year_LEVEL_NUMBER" value="Year.LEVEL_NUMBER" label="Year.LEVEL_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Product" value="Product" label="Product" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Product_MEMBER_ALIAS" value="Product.MEMBER_ALIAS" label="Product.MEMBER_ALIAS" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Product_GEN_NUMBER" value="Product.GEN_NUMBER" label="Product.GEN_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Product_LEVEL_NUMBER" value="Product.LEVEL_NUMBER" label="Product.LEVEL_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Sales" value="Sales" label="Sales" dataType="xsd:double" breakOrder="None" fieldOrder="8"/>
+               <element name="COGS" value="COGS" label="COGS" dataType="xsd:double" breakOrder="None" fieldOrder="9"/>
+               <element name="Margin" value="Margin" label="Margin" dataType="xsd:double" breakOrder="None" fieldOrder="10"/>
+               <element name="Total_Expenses" value="Total Expenses" label="Total Expenses" dataType="xsd:double" breakOrder="None" fieldOrder="11"/>
+               <element name="Profit" value="Profit" label="Profit" dataType="xsd:double" breakOrder="None" fieldOrder="12"/>
+            </group>
+            <group name="G_4" label="G_4" source="G_4 Meas-Mrkt-Yr">
+               <element name="Year" value="Year" label="Year" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Year_MEMBER_ALIAS" value="Year.MEMBER_ALIAS" label="Year.MEMBER_ALIAS" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Year_GEN_NUMBER" value="Year.GEN_NUMBER" label="Year.GEN_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Year_LEVEL_NUMBER" value="Year.LEVEL_NUMBER" label="Year.LEVEL_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Market" value="Market" label="Market" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Market_MEMBER_ALIAS" value="Market.MEMBER_ALIAS" label="Market.MEMBER_ALIAS" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Market_GEN_NUMBER" value="Market.GEN_NUMBER" label="Market.GEN_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Market_LEVEL_NUMBER" value="Market.LEVEL_NUMBER" label="Market.LEVEL_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Sales" value="Sales" label="Sales" dataType="xsd:double" breakOrder="None" fieldOrder="8"/>
+               <element name="COGS" value="COGS" label="COGS" dataType="xsd:double" breakOrder="None" fieldOrder="9"/>
+               <element name="Margin" value="Margin" label="Margin" dataType="xsd:double" breakOrder="None" fieldOrder="10"/>
+               <element name="Total_Expenses" value="Total Expenses" label="Total Expenses" dataType="xsd:double" breakOrder="None" fieldOrder="11"/>
+               <element name="Profit" value="Profit" label="Profit" dataType="xsd:double" breakOrder="None" fieldOrder="12"/>
+            </group>
+            <group name="G_5" label="G_5" source="G_5 Meas-Prod-Mrkt-Yr">
+               <element name="Market" value="Market" label="Market" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Market_MEMBER_ALIAS" value="Market.MEMBER_ALIAS" label="Market.MEMBER_ALIAS" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Market_LEVEL_NUMBER" value="Market.LEVEL_NUMBER" label="Market.LEVEL_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Market_GEN_NUMBER" value="Market.GEN_NUMBER" label="Market.GEN_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Product" value="Product" label="Product" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Product_MEMBER_ALIAS" value="Product.MEMBER_ALIAS" label="Product.MEMBER_ALIAS" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Product_LEVEL_NUMBER" value="Product.LEVEL_NUMBER" label="Product.LEVEL_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Product_GEN_NUMBER" value="Product.GEN_NUMBER" label="Product.GEN_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Sales" value="New_Sales" label="Sales" dataType="xsd:double" breakOrder="None" fieldOrder="8"/>
+               <element name="COGS" value="COGS" label="COGS" dataType="xsd:double" breakOrder="None" fieldOrder="9"/>
+               <element name="Margin" value="Margin" label="Margin" dataType="xsd:double" breakOrder="None" fieldOrder="10"/>
+               <element name="Total_Expenses" value="Total Expenses" label="Total Expenses" dataType="xsd:double" breakOrder="None" fieldOrder="11"/>
+               <element name="Profit" value="Profit" label="Profit" dataType="xsd:double" breakOrder="None" fieldOrder="12"/>
+            </group>
+            <group name="G_6" label="G_6" source="G_6 MeasOnRows-Prod-Yr">
+               <element name="Measures" value="Measures" label="Measures" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Year" value="Year" label="Year" dataType="xsd:string" breakOrder="None" fieldOrder="1"/>
+               <element name="Product" value="Product" label="Product" dataType="xsd:double" breakOrder="None" fieldOrder="2"/>
+               <element name="_100" value="100" label="100" dataType="xsd:double" breakOrder="None" fieldOrder="3"/>
+               <element name="_100_10" value="100-10" label="100-10" dataType="xsd:double" breakOrder="None" fieldOrder="4"/>
+               <element name="_100_20" value="100-20" label="100-20" dataType="xsd:double" breakOrder="None" fieldOrder="5"/>
+               <element name="_100_30" value="100-30" label="100-30" dataType="xsd:double" breakOrder="None" fieldOrder="6"/>
+               <element name="_200" value="200" label="200" dataType="xsd:double" breakOrder="None" fieldOrder="7"/>
+               <element name="_200_10" value="200-10" label="200-10" dataType="xsd:double" breakOrder="None" fieldOrder="8"/>
+               <element name="_200_20" value="200-20" label="200-20" dataType="xsd:double" breakOrder="None" fieldOrder="9"/>
+               <element name="_200_30" value="200-30" label="200-30" dataType="xsd:double" breakOrder="None" fieldOrder="10"/>
+               <element name="_200_40" value="200-40" label="200-40" dataType="xsd:double" breakOrder="None" fieldOrder="11"/>
+               <element name="_300" value="300" label="300" dataType="xsd:double" breakOrder="None" fieldOrder="12"/>
+               <element name="_300_10" value="300-10" label="300-10" dataType="xsd:double" breakOrder="None" fieldOrder="13"/>
+               <element name="_300_20" value="300-20" label="300-20" dataType="xsd:double" breakOrder="None" fieldOrder="14"/>
+               <element name="_300_30" value="300-30" label="300-30" dataType="xsd:double" breakOrder="None" fieldOrder="15"/>
+               <element name="_400" value="400" label="400" dataType="xsd:double" breakOrder="None" fieldOrder="16"/>
+               <element name="_400_10" value="400-10" label="400-10" dataType="xsd:double" breakOrder="None" fieldOrder="17"/>
+               <element name="_400_20" value="400-20" label="400-20" dataType="xsd:double" breakOrder="None" fieldOrder="18"/>
+               <element name="_400_30" value="400-30" label="400-30" dataType="xsd:double" breakOrder="None" fieldOrder="19"/>
+            </group>
+            <group name="G_7" label="G_7" source="G_7 Meas-Product-Time">
+               <element name="Product" value="Product" label="Product" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Product_MEMBER_ALIAS" value="Product.MEMBER_ALIAS" label="Product Categoty" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Product_LEVEL_NUMBER" value="Product.LEVEL_NUMBER" label="Product.LEVEL_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Product_GEN_NUMBER" value="Product.GEN_NUMBER" label="Product.GEN_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Year" value="Year" label="Year" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Year_MEMBER_ALIAS" value="Year.MEMBER_ALIAS" label="Year.MEMBER_ALIAS" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Year_LEVEL_NUMBER" value="Year.LEVEL_NUMBER" label="Year.LEVEL_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Year_GEN_NUMBER" value="Year.GEN_NUMBER" label="Year.GEN_NUMBER" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Sales" value="Sales" label="Sales" dataType="xsd:double" breakOrder="None" fieldOrder="8"/>
+               <element name="COGS" value="COGS" label="COGS" dataType="xsd:double" breakOrder="None" fieldOrder="9"/>
+               <element name="Margin" value="Margin" label="Margin" dataType="xsd:double" breakOrder="None" fieldOrder="10"/>
+               <element name="Total_Expenses" value="Total Expenses" label="Total Expenses" dataType="xsd:double" breakOrder="None" fieldOrder="11"/>
+               <element name="Profit" value="Profit" label="Profit" dataType="xsd:double" breakOrder="None" fieldOrder="12"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="G_1 MeasOnCol-Yr" left="18px" top="79px"/>
+         <layout name="G_2 MeasOnRows-Yr" left="239px" top="27px"/>
+         <layout name="G_3 Meas-Prod-Yr" left="240px" top="199px"/>
+         <layout name="G_4 Meas-Mrkt-Yr" left="13px" top="256px"/>
+         <layout name="G_5 Meas-Prod-Mrkt-Yr" left="460px" top="28px"/>
+         <layout name="G_6 MeasOnRows-Prod-Yr" left="673px" top="28px"/>
+         <layout name="G_7 Meas-Product-Time" left="462px" top="338px"/>
+         <layout name="DATA_DS" left="4px" top="6px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" cacheControl="bypassCache">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X6 - Warranty Claims&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c6da0127f951db90b">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Complaint Classification&quot;.&quot;Id&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" fontSize="12" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c52eb42521437b758">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Complaint Classification&quot;.&quot;Classification&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true" fontColor="#0000FF" width="180" fontSize="12">
+                  <sawwb:writeBack xmlns:sawwb="com.siebel.analytics.web/writeback/v1" required="false" xsi:type="sawwb:editBox" inputSize="20" inputHeight="1"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c790108af8b5a9c48">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Complaint Classification&quot;.&quot;Search Query String&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true" width="300" fontSize="12">
+                  <sawwb:writeBack xmlns:sawwb="com.siebel.analytics.web/writeback/v1" required="false" xsi:type="sawwb:editBox" inputSize="45" inputHeight="1"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+      <saw:prefix>SET VARIABLE DISABLE_CACHE_HIT=1;</saw:prefix></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec borderColor="#000080" borderPosition="8"/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="none"><saw:subTitle><saw:caption fmt="text"><saw:text>Select update button to change the categories</saw:text></saw:caption></saw:subTitle></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c6da0127f951db90b" uiTableName="Complaint Classification"/>
+                  <saw:edgeLayer type="column" columnID="c52eb42521437b758" uiTableName="Complaint Classification"/>
+                  <saw:edgeLayer type="column" columnID="c790108af8b5a9c48" uiTableName="Complaint Classification"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges>
+         <saw:displayFormat>
+            <saw:formatSpec>
+               <sawwb:writeBack xmlns:sawwb="com.siebel.analytics.web/writeback/v1" xsi:type="sawwb:tableProperties" enabled="true" toggleTableMode="true" templateName="wb_classification" useTemplate="true" buttonPos="right"/></saw:formatSpec></saw:displayFormat></saw:view></saw:views></saw:report>

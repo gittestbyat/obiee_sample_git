@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf0e50d11e1936b94" aggRule="avg">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">6235242</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" fontSize="10" wrapText="true">
+						<saw:dataFormat xsi:type="saw:number" commas="true" negativeType="minus" minDigits="0" maxDigits="0"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading/>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>All Flights:</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec fontSize="10" wrapText="true"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ca9575f7dec200705">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true" fontSize="10">
+						<saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="true" negativeType="redMinus"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Flight Facts</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec fontSize="10" wrapText="true"/></saw:displayFormat>
+					<saw:caption fmt="text">
+						<saw:text>Report:</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c6013db13f493103a">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td width= 90 bgcolor=#CCCCCC height=10&gt;&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;&lt;table cellspacing=&quot;0&quot;  cellpadding=&quot;0&quot;&gt;&lt;tr&gt; &lt;td width=  &#39;||cast(round(cast(&quot;Flight Facts&quot;.&quot;# of Flights&quot; as double) / 6235242 *90,2) as varchar(20))||&#39;   bgcolor=#9999FF height=10&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;font size = &quot;-4&quot; color=#0000cc&gt;&#39;||cast(round(cast(&quot;Flight Facts&quot;.&quot;# of Flights&quot; as double) / 6235242 *100,2) as varchar(20))||&#39;%&lt;/font&gt;&#39;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Flight Facts</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Fill Bar</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:savedFilter" path="/shared/11. Demos/_filters/X - Airlines Delay/Prt Filters - All Dims" name="Prt Filters - All Dims"/></saw:filter></saw:criteria>
+	<saw:interactionOptions drill="true" movecolumns="true" sortcolumns="true" addremovevalues="true" groupoperations="true" calcitemoperations="true" showhidesubtotal="true" showhiderunningsum="true" inclexclcolumns="true"/>
+	<saw:views textDelivery="compoundView!1" includeNewColumns="true" currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable><saw:cvRow><saw:cvCell viewName="narrativeView!1"><saw:displayFormat><saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!2">
+						<saw:displayFormat>
+							<saw:formatSpec paddingTop="0" paddingBottom="0" paddingLeft="0" paddingRight="0" hAlign="left" vAlign="top"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable><saw:pageProps>
+				<saw:pageHeader/>
+				<saw:pageFooter/></saw:pageProps></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="false"/>
+				<saw:edge axis="section" insertPageBreak="false" showBlankRows="false" showColumnHeader="false">
+					<saw:displayFormat>
+						<saw:formatSpec borderPosition="none" wrapText="true" backgroundColor="#FFFFFF" borderColor="#FFFFFF"/></saw:displayFormat></saw:edge>
+				<saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column" showColumnHeader="false"/></saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="cf0e50d11e1936b94" aggRule="max" reportAgg="false">
+					<saw:memberFormat>
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="none" wrapText="true" backgroundColor="#FFFFFF" hAlign="right"/></saw:displayFormat></saw:memberFormat>
+					<saw:dataBodyFormat>
+						<saw:displayFormat>
+							<saw:formatSpec wrapText="true" borderPosition="none" hAlign="left"/></saw:displayFormat></saw:dataBodyFormat></saw:measure>
+				<saw:measure columnID="ca9575f7dec200705">
+					<saw:memberFormat>
+						<saw:displayFormat>
+							<saw:formatSpec fontColor="#000080" wrapText="true" borderPosition="none" backgroundColor="#FFFFFF" hAlign="right"/></saw:displayFormat></saw:memberFormat>
+					<saw:dataBodyFormat>
+						<saw:displayFormat>
+							<saw:formatSpec fontColor="#000080" wrapText="true" borderPosition="none" hAlign="left"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList>
+			<saw:sectionContent>
+				<saw:displayFormat>
+					<saw:formatSpec borderPosition="none" wrapText="true" backgroundColor="#FFFFFF" borderColor="#FFFFFF" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat></saw:sectionContent></saw:view>
+		<saw:view xsi:type="saw:filtersView" name="filtersView!1"/>
+		<saw:view xsi:type="saw:noresultsview" name="noresultsview!1">
+			<saw:headline/>
+			<saw:detail>
+				<saw:caption>
+					<saw:text>No Results</saw:text></saw:caption></saw:detail></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!1">
+			<saw:staticText>
+				<saw:caption fmt="html">
+					<saw:text>&lt;style&gt;.PTCC {   background-color: white;   border-top: white;   border-left: white;}&lt;/style&gt;</saw:text></saw:caption></saw:staticText></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2">
+			<saw:edges><saw:edge axis="page" showColumnHeader="false"/>
+				<saw:edge axis="section" insertPageBreak="false" showBlankRows="false" showColumnHeader="false">
+					<saw:displayFormat>
+						<saw:formatSpec borderPosition="none" wrapText="true" backgroundColor="#FFFFFF" borderColor="#FFFFFF"/></saw:displayFormat></saw:edge>
+				<saw:edge axis="row" showColumnHeader="false"/>
+				<saw:edge axis="column" showColumnHeader="false"/></saw:edges><saw:measuresList>
+				<saw:measure columnID="c6013db13f493103a">
+					<saw:memberFormat>
+						<saw:displayFormat>
+							<saw:formatSpec fontColor="#000080" backgroundColor="#FFFFFF" borderPosition="none" hAlign="right" wrapText="true"/></saw:displayFormat>
+						<saw:caption>
+							<saw:text>
+							</saw:text></saw:caption></saw:memberFormat>
+					<saw:dataBodyFormat>
+						<saw:displayFormat>
+							<saw:formatSpec fontColor="#000080" borderPosition="none" hAlign="left" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList>
+			<saw:sectionContent>
+				<saw:displayFormat>
+					<saw:formatSpec borderPosition="none" wrapText="true" backgroundColor="#FFFFFF" borderColor="#FFFFFF"/></saw:displayFormat></saw:sectionContent></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="cf0e50d11e1936b94">
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec/></saw:displayFormat></saw:headerFormat></saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="ca9575f7dec200705">
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec/></saw:displayFormat></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!2">
+			<saw:staticText>
+				<saw:caption fmt="html">
+					<saw:text>&lt;style&gt;.PTCC {   background-color: white;   border-top: white;   border-left: white;}&lt;/style&gt;</saw:text></saw:caption></saw:staticText>
+			<saw:displayFormat>
+				<saw:formatSpec fontSize="11"/></saw:displayFormat></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!2"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section" insertPageBreak="false" showBlankRows="false" showColumnHeader="false">
+					<saw:displayFormat>
+						<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></saw:edge><saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c6013db13f493103a">
+							<saw:headerFormat>
+								<saw:displayFormat>
+									<saw:formatSpec backgroundColor="#FFFFFF" borderPosition="none" wrapText="true" paddingBottom="5"/></saw:displayFormat>
+								<saw:caption>
+									<saw:text>% of All Rows :</saw:text></saw:caption></saw:headerFormat>
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges>
+			
+			<saw:sectionContent>
+				<saw:displayFormat>
+					<saw:formatSpec paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></saw:sectionContent></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:narrative><saw:caption fmt="html"><saw:text>All flights: @{cf0e50d11e1936b94} [br/]
+&lt;font color=#000080&gt;Report : @{ca9575f7dec200705}&lt;/font&gt;</saw:text></saw:caption></saw:narrative><saw:displayFormat><saw:formatSpec fontSize="11"/></saw:displayFormat></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!2"><saw:narrative><saw:caption fmt="html"><saw:text>@{ca9575f7dec200705} &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Selected Flights: [b]@{cf0e50d11e1936b94}[/b]</saw:text></saw:caption></saw:narrative></saw:view><saw:view xsi:type="saw:compoundView" name="compoundView!2">
+			<saw:cvTable><saw:cvRow><saw:cvCell viewName="narrativeView!1"><saw:displayFormat><saw:formatSpec hAlign="left" vAlign="middle"/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="pivotTableView!2"/></saw:cvRow></saw:cvTable><saw:pageProps>
+				<saw:pageHeader/>
+				<saw:pageFooter/></saw:pageProps></saw:view>
+	</saw:views></saw:report>

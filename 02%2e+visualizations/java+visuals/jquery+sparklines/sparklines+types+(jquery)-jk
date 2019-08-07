@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c67e596ea3ac11fe5">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P2  Product Type&quot;}</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" vAlign="middle" wrapText="true"/></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Selected Dimension</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>Dimension</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cab6d7636047377b4">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cc2a51181a7dd7bcd">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cd204f3a8d95436b3">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/SampleApp/Scripts/jquery-1.4.2.min.js&quot;&gt;&lt;/script&gt; &lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/SampleApp/Scripts/jquery.sparkline.js&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt; /*                                                                                                                                                                    This defines bar chart functions (one for each row of report)       */ $(function() { $(&#39;&#39;.a1&#39;||cast(rcount(1) as varchar(3))||&#39;&#39;&#39;).sparkline(&#39;&#39;html&#39;&#39;, {type: &#39;&#39;bar&#39;&#39;,  barColor: &#39;&#39;#CBC29F&#39;&#39;}); });  /*                                                                                                                                                                    This defines line functions (one for each row of report)       */$(function() { $(&#39;&#39;.b1&#39;||cast(rcount(1) as varchar(3))||&#39;&#39;&#39;).sparkline(&#39;&#39;html&#39;&#39;, {type: &#39;&#39;line&#39;&#39;, width:&#39;&#39;40px&#39;&#39;, minSpotColor:&#39;&#39;red&#39;&#39;, maxSpotColor:&#39;&#39;green&#39;&#39;}); }); /*                                                                                                                                                                    This defines tristate bar functions (one for each row of report) */$(function() { $(&#39;&#39;.c1&#39;||cast(rcount(1) as varchar(3))||&#39;&#39;&#39;).sparkline(&#39;&#39;html&#39;&#39;, {type: &#39;&#39;tristate&#39;&#39;, negBarColor:&#39;&#39;red&#39;&#39; , posBarColor:&#39;&#39;green&#39;&#39;}); }); /*                                                                                                                                                                    This defines discrete chart functions (one for each row of report) */$(function() { $(&#39;&#39;.d1&#39;||cast(rcount(1) as varchar(3))||&#39;&#39;&#39;).sparkline(&#39;&#39;html&#39;&#39;, {type: &#39;&#39;discrete&#39;&#39;}); }); /*                                                                                                                                                                    This defines Pie chart functions (one for each row of report) */$(function() { $(&#39;&#39;.e1&#39;||cast(rcount(1) as varchar(3))||&#39;&#39;&#39;).sparkline(&#39;&#39;html&#39;&#39;, {type: &#39;&#39;pie&#39;&#39;}); }); /*                                                                                                                                                                    This defines Pie chart functions (one for each row of report) */$(function() { $(&#39;&#39;.f1&#39;||cast(rcount(1) as varchar(3))||&#39;&#39;&#39;).sparkline(&#39;&#39;html&#39;&#39;, {type: &#39;&#39;box&#39;&#39;}); }); /*                                                                                                                                                                    This defines Pie chart functions (one for each row of report) */$(function() { $(&#39;&#39;.g1&#39;||cast(rcount(1) as varchar(3))||&#39;&#39;&#39;).sparkline(&#39;&#39;html&#39;&#39;, {type: &#39;&#39;bullet&#39;&#39;}); }); &lt;/script&gt;&#39;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sparklines</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>Spark Functions Definition</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c59fabb568a93adf4">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;span class=&quot;b1&#39;||cast(rcount(1)  as varchar(3))||&#39;&quot;&gt;&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,0) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,2) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,3) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,5) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,6) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,7) as varchar(10))||&#39;&lt;/span&gt;&#39;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" hAlign="center" vAlign="middle" fontSize="15">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sparklines</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Line</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ca7e013da13ba300b">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;span class=&quot;a1&#39;||cast(rcount(1)  as varchar(3))||&#39;&quot;&gt;&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,0) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,2) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,3) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,5) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,6) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,7) as varchar(10))||&#39;&lt;/span&gt;&#39;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" hAlign="center" vAlign="middle" fontSize="15">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sparklines</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Chart</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce2741e9330a03564">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;span class=&quot;c1&#39;||cast(rcount(1)  as varchar(3))||&#39;&quot;&gt;&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,0)/ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1)-1 as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1)/ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,2)-1 as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,2)/ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,3)-1 as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,3)/ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4)-1 as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4)/ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,5)-1 as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,5)/ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,6)-1 as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,6)/ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,7)-1 as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,7)/ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,8)-1 as varchar(10))||&#39;&lt;/span&gt;&#39;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" hAlign="center" vAlign="middle" fontSize="15">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sparklines</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Tristate</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1c0ba8b5cd8e6c58">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;span class=&quot;d1&#39;||cast(rcount(1)  as varchar(3))||&#39;&quot;&gt;&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,0) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,2) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,3) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,5) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,6) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,7) as varchar(10))||&#39;&lt;/span&gt;&#39;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" hAlign="center" vAlign="middle" fontSize="15">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sparklines</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Discrete</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ccdedb254ee455501">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;span class=&quot;e1&#39;||cast(rcount(1)  as varchar(3))||&#39;&quot;&gt;&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,0) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,2) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,3) as varchar(10))||&#39;&lt;/span&gt;&#39;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" hAlign="center" vAlign="middle" fontSize="15">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sparklines</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Pie Charts</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb5cad7c275b5b13d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;span class=&quot;f1&#39;||cast(rcount(1)  as varchar(3))||&#39;&quot;&gt;&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,0) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,2) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,3) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,5) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,6) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,7) as varchar(10))||&#39;&lt;/span&gt;&#39;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" hAlign="center" vAlign="middle" fontSize="15" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sparklines</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Box</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cffb00daaa0874aa5">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;span class=&quot;g1&#39;||cast(rcount(1)  as varchar(3))||&#39;&quot;&gt;&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,0) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,2) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,3) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,5) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,6) as varchar(10))||&#39;,&#39;||cast(ago(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,7) as varchar(10))||&#39;&lt;/span&gt;&#39;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" hAlign="center" vAlign="middle" fontSize="15" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sparklines</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>Bullet</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:comparison" op="equal">
+            <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr>
+            <sawx:expr xsi:type="xsd:string">2013 / 08</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!3"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!3">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section" insertPageBreak="false" showBlankRows="false" showColumnHeader="true">
+               <saw:displayFormat>
+                  <saw:formatSpec wrapText="true"/></saw:displayFormat>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cab6d7636047377b4" visibility="visible" insertPageBreak="false">
+                     <saw:headerFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec wrapText="true"/></saw:displayFormat>
+                        <saw:caption>
+                           <saw:text>As Of :</saw:text></saw:caption></saw:headerFormat>
+                     <saw:memberFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="t1" grandTotalPosition="none"/></saw:displayGrandTotals>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c67e596ea3ac11fe5"/>
+                  <saw:edgeLayer type="column" columnID="cc2a51181a7dd7bcd"/>
+                  <saw:edgeLayer type="column" columnID="c59fabb568a93adf4"/>
+                  <saw:edgeLayer type="column" columnID="ca7e013da13ba300b"/>
+                  <saw:edgeLayer type="column" columnID="ce2741e9330a03564"/>
+                  <saw:edgeLayer type="column" columnID="c1c0ba8b5cd8e6c58"/>
+                  <saw:edgeLayer type="column" columnID="ccdedb254ee455501"/>
+                  <saw:edgeLayer type="column" columnID="cb5cad7c275b5b13d"/>
+                  <saw:edgeLayer type="column" columnID="cffb00daaa0874aa5"/>
+                  <saw:edgeLayer type="column" columnID="cd204f3a8d95436b3">
+                     <saw:headerFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec wrapText="true"/></saw:displayFormat>
+                        <saw:caption>
+                           <saw:text> </saw:text></saw:caption></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="cc2a51181a7dd7bcd"/></saw:measuresList></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title>
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title><saw:logoFormat>
+            <saw:displayFormat/></saw:logoFormat><saw:createdTime>
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>				
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view></saw:views></saw:report>

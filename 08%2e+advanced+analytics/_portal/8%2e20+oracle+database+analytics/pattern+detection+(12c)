@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="db9ul1s84rqfhbm1">
+	<sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" canFreeze="true" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2365">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Pattern Match
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2364">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" horizontalLayout="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2361">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2366">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This report leverages the PATTERN Match recognition capability of the Oracle 12c Database. Specific patterns such as increases or decreases in of a metric over time can be detected among millions of records. In this example, a specific air route is selected, and the report identifies the top X flight numbers that were able to keep reducing their flightime over consecutive days, for that route. Ie, best consecutive reduction of delay for that route. Select a route, a value for Top, and a value for Factor which indicates the minimum time reduction from one travel iteration to the next one.</sawd:HTML>
+			</sawd:htmlView>
+			
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2368">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; This report leverages direct physical SQL to the database, combined with presentation variables.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 2" collapsible="false" duid="i055lode1f0p5jhs" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec backgroundColor="#F9F9F4" borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 1" path="/shared/08. Advanced Analytics/Oracle DB/Pattern Recognition/Pattern Prompt" duid="vgcaqon38rs1tf3l" scope="dashboardPage"><saw:caption><saw:text>Pattern Prompt</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" break="column" duid="nbgegnsq7ogbv9d2" layoutType="bestFit"><sawd:dashboardSection name="Section 3" duid="hj3bau11a0brb4qu" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 2" display="embed" showView="" duid="iua2snhmmlcuvlq7" links="" overrideParentLinks="true"><saw:caption><saw:text>Overall Stat</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Pattern Recognition/Overall Stat"/></sawd:reportView><sawd:reportView name="Report 0" display="embed" showView="" duid="knna5mjc4nmt2ukk"><saw:caption><saw:text>Pattern Table</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Pattern Recognition/Pattern Table"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="qqanuju6iqs7rl6m" layoutType="bestFit"><sawd:dashboardSection name="Section 4" duid="39uvv4gbfsg7hrv3" showSectionTitle="false" collapsible="false" layoutType="bestFit"><sawd:reportView name="Report 1" display="embed" showView="" duid="onrm2kq1kbittfd9"><saw:caption><saw:text>Pattern Lines</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Pattern Recognition/Pattern Lines"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:dashboardColumn>
+	
+</sawd:dashboardPage>

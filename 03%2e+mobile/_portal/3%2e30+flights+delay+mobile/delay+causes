@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="fpb4f1uhhh184p7t" personalSelections="false">
+	<saw:pageProps orientation="portrait" printRows="visible" disableMargins="false">
+		<saw:pageHeader show="false"/>
+		<saw:pageFooter showOnDashboard="true" show="false">
+			<saw:zone position="top">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" borderColor="#9ABFDC" borderPosition="none" borderStyle="thick" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="left">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="left" width="33%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" oldID="kcap12832459_207">
+					<saw:text>Samples Sales</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="center">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" width="34%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_208">
+					<saw:text>Page : @{savedName}</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="right">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="right" width="33%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_209">
+					<saw:text>@{pageNumber}</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="bottom">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" fontSize="0" fontStyle="regular" height="0"/>
+				</saw:displayFormat>
+			</saw:zone>
+		</saw:pageFooter>
+	</saw:pageProps>
+	<sawd:dashboardColumn name="Column 0" duid="p1p15o1hidi18abo" frozen="false" canFreeze="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" vAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:dashboardSection name="Section 3" duid="il8e9b1rf77ti69v" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 4" display="embed" showView="titleView!1" duid="8vcsio2rm9v8m9ll"><saw:caption><saw:text>Delay Bridge Analysis</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Bridge Reports/Delay Bridge Analysis"/></sawd:reportView><sawd:reportView name="Report 0" display="embed" showView="" duid="14hlvk1gjt1p8s0c"><saw:caption><saw:text>Counter Line</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Counters/Counter Line"/></sawd:reportView></sawd:dashboardSection><sawd:dashboardSection name="Section 1" showHeading="false" duid="dudpiidqt2i0p1f4" drillInline="true" collapsible="false" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit"><saw:caption captionID="kcap12832459_204">
+				<saw:text>Prompts</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="8" paddingLeft="0" paddingRight="0" paddingTop="5" paddingBottom="0" wrapText="true" borderColor="#CCCCCC"/>
+			</saw:displayFormat><sawd:reportView name="Report 1" display="embed" showView="" duid="ueeqdedh418t2oq2"><saw:caption><saw:text>Delay Bridge Analysis</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Bridge Reports/Delay Bridge Analysis"/></sawd:reportView><sawd:reportView name="Report 2" display="embed" showView="" duid="ch4luubksbbi1g81"><saw:caption><saw:text>Delay Bridge Analysis Unfiltered</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Bridge Reports/Delay Bridge Analysis Unfiltered"/></sawd:reportView></sawd:dashboardSection><sawd:dashboardSection name="Section 2" duid="7e653jqvqm9o07dm" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="3" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 3" display="embed" showView="" duid="5c1eble6ddpnfibl"><saw:caption><saw:text>Delay Cause Analysis</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/11. Demos/Flights Delay/Bridge Reports/Delay Cause Analysis"/></sawd:reportView><sawd:globalFilterView name="GFP 1" path="/shared/11. Demos/Flights Delay/Prompts/Prt - 005" duid="aqo36aarfp8hjf8k"><saw:caption><saw:text>Prt - 005</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

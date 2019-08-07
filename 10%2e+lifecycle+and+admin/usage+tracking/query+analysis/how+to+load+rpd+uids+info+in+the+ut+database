@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="cede4e21c554c97c4"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="titleView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!1"><saw:displayFormat><saw:formatSpec hAlign="left" paddingTop="15"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cede4e21c554c97c4"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="text"><saw:text>[b]How to refresh data for RPD objects UIDs in the UT database :[/b][br/]
+
+Follow the two manual steps below if you need to create/refresh UIDs data in the databse for this dashboard to show latest RPD data :[br/][br/]
+
+[b]1 - Exporting Upgrade IDs to CSV format :[/b][br/]
+- Open RPD (online or offline)[br/]
+- Navigate to tools-&gt;Options, select tab &#39;General&#39;, click the option &#39;Show Upgrade ID in Query Repository&#39;. Click OK[br/]
+- Navigate to tools-&gt;Query Repository, run this query :  Name = *, Type = All Types, Filter = No Filter Set[br/]
+- When the query returns (~20K objects), scroll right and confirm field UpgradeID is there. Then Click Save, give a name to the file, select CSV as the format.[br/][br/]
+
+[b]2 - Importing Upgrade IDs in the database[/b][br/]
+- copy the CSV file on the SampleApp image, or on a machine where you have a SQLDeveloper connection to the SampleApp image database.[br/]
+- open SQLDeveloper, connect to SampleApp image database (orcl-1521) with user BIRCU_BIPLATFORM/Admin123 [br/]
+- Scroll down the Tables folder, navigate to table S_NQ_SAMPLE_RPD_UIDS. Right click that table and select import Data. In the dialog box, select the .csv file you just created, click ok.[br/]
+- In the Data Import Wizard : [br/]
+ -- accept defaults on on first and second steps[br/]
+ -- on third step, keep only Type, Name and Upgraded ID as selected columns[br/]
+ -- accept defaults on on following steps and click finish.[br/][br/]
+Once the import successfully completes and commits, you can run OBIEE reports with most recent RPD data.</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!2"><saw:staticText><saw:caption fmt="text"><saw:text>[br/][br/]</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!3"/></saw:views></saw:report>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding='utf-8'?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" version="2.0">
+<xsl:output method="xml" encoding="UTF-8"/>
+<xsl:variable name="ContractsRoot" select="/ContractTermsAM|/*/ContractTermsAM"/>
+	
+
+<xsl:template name="others">
+  <xsl:variable name="list">
+   <xsl:for-each-group select="/ROWSET/ROW" group-by="Markets.District">
+    <xsl:sort select="sum(current-group()/Measures.Dollars)" order="descending" data-type="number"/>
+      <v><xsl:value-of select="sum(current-group()/Measures.Dollars)"/></v>
+   </xsl:for-each-group>
+  </xsl:variable>
+  <xsl:value-of select="sum($list/v[position()&gt;5])"/>
+</xsl:template>
+</xsl:stylesheet>

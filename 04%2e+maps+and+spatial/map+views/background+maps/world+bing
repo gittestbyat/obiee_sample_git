@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c2079af1d7014b569">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c2c691d3bd594e690">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R69  Area Code&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1848b98b1cc40dac">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R51  Area&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!4"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="mapview!5"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      
+      <saw:view xsi:type="saw:mapview" name="mapview!5">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__BING_MAP_TEST__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-16123932.21875,-6020046.347361989,15106402.515625,13469561.04326301"/><saw:mapCenter x="-469629.09375" y="3685621.59013801" size="19567878.90625" srid="3785" zoomLevel="0" xUnitPixels="0.000012776039814931079" yUnitPixels="0.000012776039814931079"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!4"><saw:staticText><saw:caption fmt="text"><saw:text>BING Map</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

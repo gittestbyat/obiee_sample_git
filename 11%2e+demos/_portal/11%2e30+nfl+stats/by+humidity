@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="sb7qd2grbug3nvo1">
+  <sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="jd53urkdak156sj6" layoutType="bestFit">
+    <sawd:dashboardSection name="Section 1" collapsible="false" duid="51ukubvocs0qicvr" showSectionTitle="false" layoutType="bestFit">
+      <saw:displayFormat>
+        <saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+      </saw:displayFormat>
+      <sawd:reportView name="Report 0" display="embed" showView="" duid="6t133dlo5llhul24">
+        <saw:caption>
+          <saw:text>Teams Humidity Sensitivity Trellis</saw:text>
+        </saw:caption>
+        <sawd:reportRef type="catalog" path="/shared/11. Demos/Sports Demo/NFL/Weather Sensitivity Trellis/Teams Humidity Sensitivity Trellis"/>
+      </sawd:reportView>
+    </sawd:dashboardSection>
+    <saw:displayFormat>
+      <saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+    </saw:displayFormat>
+    
+  </sawd:dashboardColumn>
+</sawd:dashboardPage>

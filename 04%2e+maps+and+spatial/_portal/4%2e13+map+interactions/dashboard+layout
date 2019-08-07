@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboard xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" style="" xmlVersion="200810300" links="merfdc" promptsAutoComplete="userPref"><sawd:dashboardPageRef path="Map Drilling" type="catalog" hidden="false"/><sawd:dashboardPageRef path="Master Detail 1" type="catalog" hidden="false"/><sawd:dashboardPageRef path="Master Detail 2" type="catalog" hidden="false"/><sawd:dashboardPageRef path="Descriptive Geo IDs" type="catalog" hidden="false"/></sawd:dashboard>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X3 - Sample BPM&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="cbbfeeb8551418e39">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;SOA Composite&quot;.&quot;Composite Name&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="action">
+						<saw:actionLinks showPopupMenuForOneLink="true">
+							<saw:actionLink actionLinkID="cbbfeeb8551418e39_al24558cd0575d4729">
+								<saw:actionPath>/shared/BPM Analytics Sample/Navigate to BPM Workspace</saw:actionPath>
+								<saw:caption>
+									<saw:text>Navigate to BPM Workspace</saw:text></saw:caption></saw:actionLink></saw:actionLinks></saw:formatSpec><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="equal">
+										<sawx:expr xsi:type="sawx:sqlExpression">&quot;Processes&quot;.&quot;Process Name&quot;</sawx:expr>
+										<sawx:expr xsi:type="xsd:string">DefectResolutionFlow</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec interaction="action">
+									<saw:actionLinks showPopupMenuForOneLink="true">
+										<saw:actionLink actionLinkID="cbbfeeb8551418e39_ald562c6a2d00d6c47">
+											<saw:actionPath>/shared/BPM Analytics Sample/Initiate Defect Resolution Process</saw:actionPath>
+											<saw:caption>
+												<saw:text>Initiate Defect Resolution Process</saw:text></saw:caption>
+											<saw:paramMapping>
+												<saw:assign xsi:type="saw:intAssign" name="start40_DefectResolutionRequest_defect_severity" fixed="false" hidden="false">
+													<saw:value>3</saw:value></saw:assign></saw:paramMapping></saw:actionLink></saw:actionLinks></saw:formatSpec></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cc7996d66ee34f1be">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Processes&quot;.&quot;Process Name&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c457f1f7de9702975">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Processes&quot;.&quot;Process Id&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c7784738e00294f22">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Activities&quot;.&quot;Activity Label&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c8db71c18d6f7fc77">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Activities&quot;.&quot;Activity Id&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="caa3caa8e0031d5a1">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Activities&quot;.&quot;Activity Type&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf3ee7d370c88768f">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Tasks&quot;.&quot;Task Discriminator&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cedc328a6ea3f3b48">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Process Instances&quot;.&quot;Process Instance&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c4b5f8d94e338c2a1">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Tasks&quot;.&quot;Task Sequence Id&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c7b6cdd8cc50cb945">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Facts Tasks&quot;.&quot;# Of Proc Instances&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c1ebceb8081c54a33">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Task Start Time&quot;.&quot;Time Task Started&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c3aa238126f0fa860">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Task Start Time&quot;.&quot;Task End Time&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c8c615082377e7db7">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Duration&quot;.&quot;Task Avg Duratn Seconds&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c2aa253eae47b03dc">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Duration&quot;.&quot;Task Total Duratn Seconds&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c677ca4438da38d0d" aggRule="min">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Duration&quot;.&quot;Task Total Duratn Seconds&quot;</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Duration</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Task Total Duration Seconds (min)</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cb931a88bfd756d34" aggRule="max">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Duration&quot;.&quot;Task Total Duratn Seconds&quot;</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Duration</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Task Total Duration Seconds (max)</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:logical" op="and">
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;SOA Composite&quot;.&quot;Composite Name&quot;</sawx:expr></sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Processes&quot;.&quot;Process Name&quot;</sawx:expr></sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Activities&quot;.&quot;Activity Label&quot;</sawx:expr></sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Process Instances&quot;.&quot;Process Instance&quot;</sawx:expr></sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Activities&quot;.&quot;Activity Type&quot;</sawx:expr></sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Task Start Time&quot;.&quot;Time Task Started&quot;</sawx:expr></sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Task Start Time&quot;.&quot;Task End Time&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="tableView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="cbbfeeb8551418e39"/>
+						<saw:edgeLayer type="column" columnID="cc7996d66ee34f1be"/>
+						<saw:edgeLayer type="column" columnID="c457f1f7de9702975"/>
+						<saw:edgeLayer type="column" columnID="c7784738e00294f22"/>
+						<saw:edgeLayer type="column" columnID="c8db71c18d6f7fc77"/>
+						<saw:edgeLayer type="column" columnID="caa3caa8e0031d5a1"/>
+						<saw:edgeLayer type="column" columnID="cf3ee7d370c88768f"/>
+						<saw:edgeLayer type="column" columnID="cedc328a6ea3f3b48"/>
+						<saw:edgeLayer type="column" columnID="c4b5f8d94e338c2a1"/>
+						<saw:edgeLayer type="column" columnID="c7b6cdd8cc50cb945"/>
+						<saw:edgeLayer type="column" columnID="c3aa238126f0fa860"/>
+						<saw:edgeLayer type="column" columnID="c1ebceb8081c54a33"/>
+						<saw:edgeLayer type="column" columnID="c2aa253eae47b03dc"/>
+						<saw:edgeLayer type="column" columnID="c8c615082377e7db7"/>
+						<saw:edgeLayer type="column" columnID="c677ca4438da38d0d"/>
+						<saw:edgeLayer type="column" columnID="cb931a88bfd756d34"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view></saw:views></saw:report>

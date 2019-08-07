@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BISAMPLE">
+   <description>
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="hotel" type="complex">
+         <csv dataSourceRef="xdo:local" delimiter="COMMA" header="true">
+            <file>sample_upload3.csv</file>
+         </csv>
+      </dataSet>
+      <dataSet name="occupancy" type="complex">
+         <csv dataSourceRef="xdo:local" delimiter="COMMA" header="true">
+            <file>occupancy3.csv</file>
+         </csv>
+      </dataSet>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="hotel">
+               <element name="Customer_Name" value="Customer Name" label="Customer Name" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="Alias" value="Alias" label="Alias" dataType="xsd:string" breakOrder="" fieldOrder="3"/>
+               <element name="Gender" value="Gender" label="Gender" dataType="xsd:string" breakOrder="" fieldOrder="4"/>
+               <element name="Age_Band" value="Age Band" label="Age Band" dataType="xsd:string" breakOrder="" fieldOrder="5"/>
+               <element name="Marital_Status" value="Marital Status" label="Marital Status" dataType="xsd:string" breakOrder="" fieldOrder="6"/>
+               <element name="Highest_Education" value="Highest Education" label="Highest Education" dataType="xsd:string" breakOrder="" fieldOrder="7"/>
+               <element name="Quarter" value="Quarter" label="Quarter" dataType="xsd:string" breakOrder="" fieldOrder="8"/>
+               <element name="Month" value="Month" label="Month" dataType="xsd:string" breakOrder="" fieldOrder="9"/>
+               <element name="Date" value="Date" label="Date" dataType="xsd:date" breakOrder="" fieldOrder="10"/>
+               <element name="Reward_Member" value="Reward Member" label="Reward Member" dataType="xsd:string" breakOrder="" fieldOrder="11"/>
+               <element name="Brand" value="Brand" label="Brand" dataType="xsd:string" breakOrder="" fieldOrder="12"/>
+               <element name="Hotel" value="Hotel" label="Hotel" dataType="xsd:string" breakOrder="" fieldOrder="13"/>
+               <element name="Channel" value="Channel" label="Channel" dataType="xsd:string" breakOrder="" fieldOrder="14"/>
+               <element name="Booking_Segment" value="Booking Segment" label="Booking Segment" dataType="xsd:string" breakOrder="" fieldOrder="15"/>
+               <element name="Travel_Type" value="Travel Type" label="Travel Type" dataType="xsd:string" breakOrder="" fieldOrder="16"/>
+               <element name="__of_Visits" value="# of Visits" label="# of Visits" dataType="xsd:integer" breakOrder="" fieldOrder="17"/>
+               <element name="__of_Bookings" value="# of Bookings" label="# of Bookings" dataType="xsd:integer" breakOrder="" fieldOrder="18"/>
+               <element name="__of_Cancellations" value="# of Cancellations" label="# of Cancellations" dataType="xsd:integer" breakOrder="" fieldOrder="19"/>
+               <element name="Revenue" value="Revenue" label="Revenue" dataType="xsd:integer" breakOrder="" fieldOrder="20"/>
+            </group>
+            <group name="G_2" label="G_2" source="occupancy">
+               <element name="Year" value="Year" label="Year" dataType="xsd:integer" breakOrder="" fieldOrder="2"/>
+               <element name="Qtr" value="Qtr" label="Qtr" dataType="xsd:string" breakOrder="" fieldOrder="3"/>
+               <element name="Month" value="Month" label="Month" dataType="xsd:string" breakOrder="" fieldOrder="4"/>
+               <element name="Region" value="Region" label="Region" dataType="xsd:string" breakOrder="" fieldOrder="5"/>
+               <element name="Brand" value="Brand" label="Brand" dataType="xsd:string" breakOrder="" fieldOrder="6"/>
+               <element name="Hotel" value="Hotel" label="Hotel" dataType="xsd:string" breakOrder="" fieldOrder="7"/>
+               <element name="Occupied_Rooms" value="Occupied Rooms" label="Occupied Rooms" dataType="xsd:double" breakOrder="" fieldOrder="8"/>
+               <element name="Available_Rooms" value="Available Rooms" label="Available Rooms" dataType="xsd:double" breakOrder="" fieldOrder="9"/>
+               <element name="RevPar" value="RevPar" label="RevPar" dataType="xsd:double" breakOrder="" fieldOrder="10"/>
+               <element name="Occupancy" value="Occupancy" label="Occupancy" dataType="xsd:double" breakOrder="" fieldOrder="11"/>
+               <element name="Rate" value="Rate" label="Rate" dataType="xsd:double" breakOrder="" fieldOrder="12"/>
+            </group>
+            <element name="CS_1" value="G_2.Rate" label="Average Rate" dataType="xsd:double" breakOrder="None" fieldOrder="1" function="AVG" round="3"/>
+            <element name="CS_2" value="G_2.RevPar" label="Average RevPar" dataType="xsd:double" breakOrder="None" fieldOrder="1" function="AVG" round="3"/>
+            <element name="CS_3" value="G_2.Occupancy" label="Average Occupancy" dataType="xsd:double" breakOrder="None" fieldOrder="1" function="AVG" round="3"/>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="hotel" left="265px" top="28px"/>
+         <layout name="occupancy" left="543px" top="69px"/>
+         <layout name="DATA_DS" left="5px" top="20px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

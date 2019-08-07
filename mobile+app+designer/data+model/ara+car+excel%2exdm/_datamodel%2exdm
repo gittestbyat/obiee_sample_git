@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Car Static" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>CarSampleData_Static.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="Car Static">
+               <element name="Promotion" value="Promotion" label="Promotion" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="CarNum" value="CarNum" label="CarNum" dataType="xsd:double" breakOrder="" fieldOrder="2"/>
+               <element name="Brand" value="Brand" label="Brand" dataType="xsd:string" breakOrder="" fieldOrder="3"/>
+               <element name="Model" value="Model" label="Model" dataType="xsd:string" breakOrder="" fieldOrder="4"/>
+               <element name="MSRP" value="MSRP" label="MSRP" dataType="xsd:double" breakOrder="" fieldOrder="6"/>
+               <element name="SalesPrice" value="SalesPrice" label="SalesPrice" dataType="xsd:double" breakOrder="" fieldOrder="7"/>
+               <element name="Financed" value="Financed" label="Financed" dataType="xsd:double" breakOrder="" fieldOrder="8"/>
+               <element name="AmtFinanced" value="AmtFinanced" label="AmtFinanced" dataType="xsd:double" breakOrder="" fieldOrder="9"/>
+               <element name="Rate" value="Rate" label="Rate" dataType="xsd:double" breakOrder="" fieldOrder="10"/>
+               <element name="CreditScore" value="CreditScore" label="CreditScore" dataType="xsd:double" breakOrder="" fieldOrder="11"/>
+               <element name="CityName" value="CityName" label="CityName" dataType="xsd:string" breakOrder="" fieldOrder="12"/>
+               <element name="CityNum" value="CityNum" label="CityNum" dataType="xsd:double" breakOrder="" fieldOrder="13"/>
+               <element name="Sales_Date" value="Sales Date" label="Sales Date" dataType="xsd:date" breakOrder="" fieldOrder="14"/>
+               <element name="SalesMonth" value="SalesMonth" label="SalesMonth" dataType="xsd:double" breakOrder="" fieldOrder="15"/>
+               <element name="SalesYear" value="SalesYear" label="SalesYear" dataType="xsd:double" breakOrder="" fieldOrder="16"/>
+               <element name="SalesToMSRP" value="SalesToMSRP" label="SalesToMSRP" dataType="xsd:double" breakOrder="" fieldOrder="18"/>
+               <element name="PlanRev" value="PlanRev" label="PlanRev" dataType="xsd:double" breakOrder="" fieldOrder="19"/>
+               <element name="PlanUnits" value="PlanUnits" label="PlanUnits" dataType="xsd:double" breakOrder="" fieldOrder="20"/>
+               <element name="LYRev" value="LYRev" label="LYRev" dataType="xsd:double" breakOrder="" fieldOrder="21"/>
+               <element name="LYUnits" value="LYUnits" label="LYUnits" dataType="xsd:double" breakOrder="" fieldOrder="22"/>
+               <element name="TotRev" value="TotRev" label="TotRev" dataType="xsd:double" breakOrder="" fieldOrder="23"/>
+               <element name="LYTotRev" value="LYTotRev" label="LYTotRev" dataType="xsd:double" breakOrder="" fieldOrder="24"/>
+               <element name="MSRPGroup" value="MSRPGroup" label="MSRPGroup" dataType="xsd:string" breakOrder="" fieldOrder="5"/>
+               <element name="DiscGroup" value="DiscGroup" label="DiscGroup" dataType="xsd:string" breakOrder="" fieldOrder="17"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="Car Static" left="285px" top="28px"/>
+         <layout name="DATA_DS" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

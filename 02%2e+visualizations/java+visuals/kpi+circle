@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c91bb7c48bb60947d"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">round(@{Met01}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;}/@{Met02}{&quot;Base Facts&quot;.&quot;6- Target Quantity&quot;}*100,0)</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:percent" minDigits="0" maxDigits="0" commas="true" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Percent string</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c5e9343adb005ba0e"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">round(@{Met01}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;}/@{Met02}{&quot;Base Facts&quot;.&quot;6- Target Quantity&quot;}*100,0)</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Achievement Percent</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c02a4dfa58bdc4767"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN  round(@{Met01}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;}/@{Met02}{&quot;Base Facts&quot;.&quot;6- Target Quantity&quot;}*100,0) &lt; 30  THEN &#39;red&#39;  when round(@{Met01}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;}/@{Met02}{&quot;Base Facts&quot;.&quot;6- Target Quantity&quot;}*100,0) between 30 and 60 then &#39;orange&#39; ELSE &#39;green&#39;  END</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Color</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c2eac18888864808b"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Offices&quot;.&quot;D3  Organization&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>P4  Brand</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c6e4924389c53d5dc"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">rsum(1)</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Row nr</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c1c24f9e145ff85fd"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">max(rcount(1))</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>count(distinct 1)</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Nr rows</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns><saw:columnOrder/></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none"><saw:title><saw:caption fmt="text"><saw:text>Achievement: @{Met01}{&quot;Billed&quot;} vs @{Met02}{&quot;Target Quantity&quot;}</saw:text></saw:caption></saw:title></saw:view><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="false"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c91bb7c48bb60947d"/><saw:edgeLayer type="column" columnID="c5e9343adb005ba0e"/><saw:edgeLayer type="column" columnID="c02a4dfa58bdc4767"/><saw:edgeLayer type="column" columnID="c6e4924389c53d5dc"/><saw:edgeLayer type="column" columnID="c1c24f9e145ff85fd"/><saw:edgeLayer type="column" columnID="c2eac18888864808b"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;canvas id=&quot;myCanvas&quot; width=&quot;@{canvasWidth}{1000}&quot; height=&quot;@{canvasHeight}{250}&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+
+  var canvas = document.getElementById(&#39;myCanvas&#39;);
+  var context = canvas.getContext(&#39;2d&#39;);
+
+  var params = [];
+
+  params[&#39;canvasWidth&#39;] = canvas.width;
+  params[&#39;canvasHeight&#39;] = canvas.height;
+
+
+  function drawKPI(label, value, color, name, count, rows) {
+
+    params[&#39;middleY&#39;] = (params[&#39;canvasHeight&#39;] / 2.5) + 50;
+    params[&#39;middleX&#39;] = params[&#39;canvasWidth&#39;] / rows * (count - 0.5);
+
+    outerRadius = params[&#39;canvasHeight&#39;] / @{outerRadius}{5} ;
+
+    innerRadius = @{innerRadius}{20};
+
+    context.beginPath();
+    context.arc(params[&#39;middleX&#39;], params[&#39;middleY&#39;], outerRadius, 0, 2 * Math.PI, false);
+    context.fillStyle = &#39;lightgrey&#39;;
+    context.fill();
+
+    rad= innerRadius + (outerRadius - innerRadius)/2;
+    width= outerRadius - innerRadius;
+    context.beginPath();
+    context.strokeStyle= color;
+    context.lineWidth=width;
+
+    context.arc(params[&#39;middleX&#39;], params[&#39;middleY&#39;],rad ,(Math.PI/180)*0,(Math.PI/180)*(360 / 100*value),false);
+    context.stroke();
+    context.closePath();
+
+    context.beginPath();
+    context.arc(params[&#39;middleX&#39;], params[&#39;middleY&#39;], innerRadius, 0, 2 * Math.PI, false);
+    context.fillStyle = &#39;white&#39;;
+    context.fill();
+
+    context.font = &#39;20pt Calibri&#39;;
+    context.fillStyle = &#39;black&#39;;
+    context.textAlign = &#39;center&#39;;
+    context.textBaseline = &#39;middle&#39;;
+    context.fillText(label, params[&#39;middleX&#39;], params[&#39;middleY&#39;]);
+
+    context.font = &#39;15pt Calibri&#39;;
+    context.fillStyle = &#39;red&#39;;
+    context.textAlign = &#39;center&#39;;
+    context.fillText(name, params[&#39;middleX&#39;], 20);
+  }</saw:text></saw:caption></saw:prefix><saw:narrative><saw:caption fmt="html"><saw:text>drawKPI(&#39;@{c91bb7c48bb60947d}&#39;, &#39;@{c5e9343adb005ba0e}&#39;, &#39;@{c02a4dfa58bdc4767}&#39;, &#39;@{c2eac18888864808b}&#39;, &#39;@{c6e4924389c53d5dc}&#39;, &#39;@{c1c24f9e145ff85fd}&#39;);</saw:text></saw:caption></saw:narrative><saw:postfix><saw:caption fmt="html"><saw:text>&lt;/script&gt;</saw:text></saw:caption></saw:postfix></saw:view><saw:view xsi:type="saw:tableView" name="tableView!2" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c2eac18888864808b"/><saw:edgeLayer type="column" columnID="c91bb7c48bb60947d"/><saw:edgeLayer type="column" columnID="c5e9343adb005ba0e"/><saw:edgeLayer type="column" columnID="c02a4dfa58bdc4767"/><saw:edgeLayer type="column" columnID="c6e4924389c53d5dc"/><saw:edgeLayer type="column" columnID="c1c24f9e145ff85fd"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view></saw:views></saw:report>

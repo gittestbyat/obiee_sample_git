@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboard xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" style="" xmlVersion="200810300"><sawd:dashboardPageRef path="Insight Into Action" type="catalog" hidden="false"/><sawd:dashboardPageRef path="Customer View" type="catalog" hidden="false"/><sawd:dashboardPageRef path="Investigate to Invest" type="catalog" hidden="false"/></sawd:dashboard>

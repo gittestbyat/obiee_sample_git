@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="gjio6oo62rer2fgg"><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="joclfii1vvrh9i82" layoutType="bestFit"><sawd:dashboardSection layoutType="specificSize" name="Section 1" duid="6qptrlgkk4cunafq" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" width="1000" backgroundColor="#e6f7ff" paddingLeft="10"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="fir2ph0lilqfuale"><sawd:HTML fmt="html">[br/]
+&lt;font style=&quot;font:16px arial;&quot;&gt;[b]What&#39;s New in SampleApp V606 - Big Data Components[/b]&lt;/font&gt;
+[br/][br/]
+&lt;font style=&quot;font:14px arial;&quot;&gt;&lt;b&gt;Cloudera Hadoop 5.7 &lt;/b&gt;&lt;/font&gt; 
+[br/]SampleApp 606 ships with CDH 5.7. CDH 5.7 has lot of new upgrades and improvements on Apache Hive, Hue, YARN and Spark etc, which in short means,now users can read data of even more data types and can store &amp; retrieve data on an even massive scale, with enhanced security. For detailed information on CDH 5.7 please refer to the following link:[br/][br/]
+http://www.cloudera.com/documentation/enterprise/release-notes/topics/cdh_rn_new_in_cdh_57.html
+[br/][br/]
+&lt;font style=&quot;font:14px arial;&quot;&gt;&lt;b&gt;Spark&lt;/b&gt;&lt;/font&gt; 
+[br/]With CDH 5.7 Spark is configured on YARN which helps in performing memory management efficiently ensuring that Spark is not starved for memory. Spark-SQL also comes pre-configured with CDH 5.7 and allows the user to directly invoke Spark-SQL without having to do any additional configurations
+[br/][br/]
+&lt;font style=&quot;font:14px arial;&quot;&gt;&lt;b&gt;Spark Thrift Server&lt;/b&gt;&lt;/font&gt;
+[br/] CDH 5.7 ships with Spark Thrift Server which is configured on YARN and it allows JDBC, ODBC connections to Spark Database. This means that now users can connect to Spark Database from various Oracle Analytic tools like Data Visualization Desktop, BICS, DVCS &amp; OBIEE
+ [br/] [br/]
+&lt;font style=&quot;font:14px arial;&quot;&gt;&lt;b&gt;Updated BDSQL &lt;/b&gt;&lt;/font&gt; 
+[br/]With the latest April-2016 Database Bundle Patch on the underlying Oracle Database. BDSQL is enabled on Oracle Database in SampleApp and it now supports CDH 5.7.
+[br/][br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection layoutType="bestFit" name="Section 0" collapsible="false" duid="ldicnrsf4qd74ocr" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="o1o2f8g9sq4ie6eb"><sawd:HTML fmt="html">&lt;font size=3 color=#000066&gt;
+&lt;a class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=%2Fshared%2F09.%20Integrations%20and%20Customizations%2F_portal%2F9.60%20Big%20Data&amp;Page=Overview&quot;&gt;
+Visit this Dashboard for complete content &lt;/a&gt;
+&lt;/font&gt;
+</sawd:HTML></sawd:htmlView><sawd:linkView name="Link 0" target="_self" type="report" destination="" layout="captionLeft" duid="0ihint97msmjcu13"><sawd:linkCaption/><sawd:image src="cmap:/shared/01. QuickStart/New Features/img/606_BD.jpg"/></sawd:linkView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/b. Features/Crosstab Report/Data Models/Crosstab DM.xdm"/>
+   <description>
+      <![CDATA[Example%20of%20cross%20tab%20reports%20created%20by%20using%20Pivot%20Table%20Wizard%20or%20by%20using%20Dynamic%20Column%20feature.]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Cross Tab - Outline">
+      <template label="Cross Tab - Outline" url="crosstaboutline.rtf" type="rtf" outputFormat="html,pdf,rtf,excel,pptx" defaultFormat="html" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Cross Tab - Inline" url="crosstabInline.rtf" type="rtf" outputFormat="html,pdf,rtf,excel,pptx" defaultFormat="html" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Cross Tab - I" url="CrossTab_simple.rtf" type="rtf" outputFormat="html,pdf,rtf,excel,pptx" defaultFormat="html" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Cross Tab - II" url="CrossTab II.rtf" type="rtf" outputFormat="html,pdf,rtf,excel,pptx" defaultFormat="html" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Cross Tab - Complex" url="CrossTab_complex.rtf" type="rtf" outputFormat="html,pdf,rtf,excel,pptx" defaultFormat="html" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;U - Usage Tracking&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c40e60a6fec31b38e">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Catalog Facts&quot;.&quot;Objects Count&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c084f82fcfda4ab88"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Object Attributes&quot;.&quot;Owner&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:hierarchicalColumn" columnID="c85e1b97d44dbd559" hierarchyID="Object Type Hier" tableName="&quot;Object Attributes&quot;" dimensionID="WS All Objects Dim"><saw:hierarchyLevels><saw:hierarchyLevel levelID="Object Type"/><saw:hierarchyLevel levelID="Signature"/></saw:hierarchyLevels></saw:column>
+		</saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Object Attributes&quot;.&quot;Signature&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Webcat Path&quot;.&quot;Path_L2&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Object Attributes&quot;.&quot;Object Type&quot;</sawx:expr></sawx:expr><sawx:expr op="prompted" xsi:type="sawx:special"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Object Attributes&quot;.&quot;Owner&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="3">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="dvtchart!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section">
+					<saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge><saw:edge axis="row" showColumnHeader="false">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t2" grandTotalPosition="after"/></saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c85e1b97d44dbd559"/></saw:edgeLayers></saw:edge><saw:edge axis="column">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="after"/></saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c084f82fcfda4ab88"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+				<saw:measure columnID="c40e60a6fec31b38e"/></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+			<saw:display type="pie" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="true">
+				<saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+			<saw:canvasFormat height="250" width="500" showGradient="true">
+				<saw:dataLabels display="always" label="nameValue" position="below" transparentBackground="true" valueAs="default" abbreviation="default"><saw:textFormat/></saw:dataLabels><saw:title mode="custom"><saw:caption><saw:text/></saw:caption></saw:title><saw:gridlines default="true"><saw:horizontal><saw:major visible="false"/><saw:minor visible="false"/></saw:horizontal><saw:vertical><saw:major visible="false"/><saw:minor visible="false"/></saw:vertical></saw:gridlines></saw:canvasFormat>
+			<saw:selections>
+				<saw:seriesGenerators>
+					<saw:seriesGenerator><saw:columnRef columnID="c85e1b97d44dbd559"/></saw:seriesGenerator></saw:seriesGenerators>
+				<saw:measures showMeasureLabelsOnCategory="false">
+					<saw:column measureType="pie"><saw:columnRef columnID="c40e60a6fec31b38e"/></saw:column></saw:measures>
+				<saw:categories>
+					<saw:measureLabels/></saw:categories><saw:sections displayAsSlider="true"/></saw:selections>
+			<saw:legendFormat position="none" transparentFill="true"/><saw:axesFormats syncAxis="false"><saw:axisFormat axis="Y1"><saw:title mode="auto"><saw:caption><saw:text>Objects Count</saw:text></saw:caption></saw:title><saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/></saw:axisFormat><saw:axisFormat axis="X"><saw:title mode="custom"><saw:caption><saw:text/></saw:caption></saw:title><saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/></saw:axisFormat></saw:axesFormats></saw:view></saw:views></saw:report>

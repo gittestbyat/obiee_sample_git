@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cbf6d0054ff5f743c">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula>
+            
+            </saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cfb495df7438fd5eb">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">forecast(&quot;Base Facts&quot;.&quot;1- Revenue&quot;, (&quot;Time&quot;.&quot;T02 Per Name Month&quot; @{(genTimeSeq==&#39;Yes&#39;)? &#39;timeMonth&#39;:&#39;&#39;}), &#39;forecast&#39;,  &#39;numPeriods=@{numperiods}{5}&#39; )</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>FACT</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Forecast</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c712a003c06618db6">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Time</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Month</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c28b3f87ae97d9150">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></saw:columnFormula>
+            
+            <saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Brand</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="htmlview!1" colSpan="2">
+                  <saw:displayFormat>
+                     <saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!1"/>
+               <saw:cvCell viewName="pivotTableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none">
+         <saw:title>
+            <saw:caption fmt="text">
+               <saw:text>Forecasting Revenue by Month</saw:text></saw:caption>
+            <saw:displayFormat>
+               <saw:formatSpec fontSize="16" wrapText="true"/></saw:displayFormat></saw:title></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c712a003c06618db6"/>
+                  <saw:edgeLayer type="column" columnID="cbf6d0054ff5f743c"/>
+                  <saw:edgeLayer type="column" columnID="cfb495df7438fd5eb"/>
+                  <saw:edgeLayer type="column" columnID="c28b3f87ae97d9150"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+         <saw:display type="bar" subtype="stacked" renderFormat="default" mode="online" animateOnDisplay="false">
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="250" width="550">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:title mode="custom"/></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="c712a003c06618db6"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="cbf6d0054ff5f743c"/></saw:column>
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="cfb495df7438fd5eb"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:measureLabels/></saw:seriesGenerators>
+            <saw:sections>
+               <saw:section>
+                  <saw:columnRef columnID="c28b3f87ae97d9150"/></saw:section></saw:sections></saw:selections>
+         <saw:legendFormat position="top" transparentFill="true"/>
+         <saw:axesFormats>
+            <saw:axisFormat axis="Y1">
+               <saw:title mode="custom">
+                  <saw:caption>
+                     <saw:text># of Students Reached</saw:text></saw:caption></saw:title></saw:axisFormat>
+            <saw:axisFormat axis="X">
+               <saw:title mode="custom"/></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="bar">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#6699CC"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="2"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#CC99CC"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="false">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:columnOrder>
+                  <saw:columnOrderRef columnID="c712a003c06618db6" direction="descending"/></saw:columnOrder>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c712a003c06618db6"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure"/>
+                  <saw:edgeLayer type="column" columnID="c28b3f87ae97d9150">
+                     <saw:memberFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec width="70" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="cbf6d0054ff5f743c"/>
+            <saw:measure columnID="cfb495df7438fd5eb"/></saw:measuresList></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+         <saw:staticText>
+            <saw:caption fmt="text">
+               <saw:text>[b]Formula:[/b]
+forecast(&quot;Base Facts&quot;.&quot;1- Revenue&quot;, (&quot;Time&quot;.&quot;T02 Per Name Month&quot; @{(genTimeSeq==&#39;Yes&#39;)? &#39;timeMonth&#39;:&#39;&#39;}), &#39;forecast&#39;,  &#39;numPeriods=@{numperiods}{6}&#39; )</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

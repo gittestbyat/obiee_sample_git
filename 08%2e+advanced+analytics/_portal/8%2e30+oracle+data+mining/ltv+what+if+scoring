@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="tm2k9lern2s0nc53"><sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2509">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+What If Scoring
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2508">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		<sawd:linkView name="Link 1" target="new" type="report" destination="/shared/10. Lifecycle and Admin/_portal/10.20 Usage Tracking/Physical SQLs" layout="captionRight" duid="ekkloo9cvqjqcoep"><sawd:linkCaption><saw:caption><saw:text>Physical SQLs</saw:text></saw:caption></sawd:linkCaption><sawd:image src="res/sk_blafp/answers/bpIcon.png"/></sawd:linkView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 3" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2504">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2510">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; OBIEE can interact on the fly with Oracle Databse Datamining models, by directly generating specific SQL statements to the datamining models in the database. OBIEE can make these interactions dynamic and allow users to pass specific values in their requests to the database. In this example, for a set of customers, the black left column in the table shows the value of predicted LTV, the red right column shows the value of prediction using user entered values for selected attributes. Change the attribute values on the prompt to see the what if effect on the ODM model prediction on the fly.&lt;br/&gt;</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" duid="d91qjgcj984da4vl" break="column" frozen="false" canFreeze="false" layoutType="specificSize"><sawd:dashboardSection name="Section 1" collapsible="false" duid="0jcv7efaanpbq54h" showSectionTitle="false" layoutType="minimumSize"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="70"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/08. Advanced Analytics/Oracle Datamining/Classification Model/Whatif/Prt_Customer" duid="36kbu856d1adqg9s" scope="dashboardPage"><saw:caption><saw:text>Prt_Customer</saw:text></saw:caption></sawd:globalFilterView><sawd:globalFilterView name="GFP 1" path="/shared/08. Advanced Analytics/Oracle Datamining/Classification Model/Whatif/Prt_odm_whatif_Values" duid="oste5j71qc4dgvaq" scope="dashboardPage"><saw:caption><saw:text>Prt_odm_whatif_Values</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec width="200" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="uqj590l0nltrvi04" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" collapsible="false" duid="tstohm555rtd4ba9" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" links="efrdc" duid="187235b3hjn6grl2" overrideParentLinks="true"><saw:caption><saw:text>LTV Attribute What If</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle Datamining/Classification Model/Whatif/LTV Attribute What If"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

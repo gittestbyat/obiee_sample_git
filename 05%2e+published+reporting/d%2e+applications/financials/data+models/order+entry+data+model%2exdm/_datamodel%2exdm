@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20sources:%20SQL%20query%20against%20Oracle%20DB%20sample%20schemas.%20Features:%20Parameters,%20LOVs.]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="QUERY" type="complex">
+         <sql>
+            <![CDATA[/* For Java DB 
+SELECT wh.quantity_on_hand,
+       order_items.quantity,
+       cv.street_address, cv.postal_code,
+       cv.city, cv.state_province,
+       cv.country_name, cv.credit_limit,
+       cv.cust_email, cv.primary_phone_number,
+       cv.customer_id,
+       ov.order_total, ov.order_status,
+       ov.order_date, order_items.unit_price, 
+       product_information.product_name,
+       product_information.product_description,
+       (cv.cust_first_name || ' ' || cv.cust_last_name) customer_name,
+       (employees.first_name || ' ' || employees.last_name) sales_mgr,
+       order_items.order_id, order_items.line_item_id
+  FROM customers_view cv,
+       orders_view ov,
+       order_items,
+       product_information,
+       employees,
+       (select sum(inventories.quantity_on_hand) quantity_on_hand,
+       inventories.product_id
+       from inventories
+       group by inventories.product_id) wh
+ WHERE     (cv.customer_id = ov.customer_id)
+        AND (ov.order_id = order_items.order_id)
+        AND (order_items.product_id = product_information.product_id)
+        AND (cv.account_mgr_id = employees.employee_id)
+	AND wh.product_id = order_items.product_id
+	AND ov.order_id = case when cast(:ordid as INTEGER) is null then ov.order_id else cast(:ordid as INTEGER) end
+        AND cv.customer_id = case when cast(:cstid as INTEGER) is null then cv.customer_id else cast(:cstid as INTEGER) end
+*/
+
+/* For Oracle Database */
+SELECT nvl(wh.quantity_on_hand,0) quantity_on_hand,
+       order_items.quantity,
+       cv.street_address, cv.postal_code,
+       cv.city, cv.state_province,
+       cv.country_name, cv.credit_limit,
+       cv.cust_email, cv.primary_phone_number,
+       cv.customer_id,
+       ov.order_total, ov.order_status,
+       to_char(ov.order_date,'YYYY-MM-DD') ORDER_DATE, order_items.unit_price, 
+       product_information.product_name,
+       product_information.product_description,
+       (cv.cust_first_name || ' ' || cv.cust_last_name
+       ) customer_name,
+       (employees.first_name || ' ' || employees.last_name) sales_mgr,
+       order_items.order_id, order_items.line_item_id
+  FROM customers_view cv,
+       orders_view ov,
+       order_items,
+       product_information,
+       hr.employees,
+       (select sum(nvl(inventories.quantity_on_hand,0))quantity_on_hand,
+       inventories.product_id
+       from inventories
+       group by inventories.product_id) wh
+ WHERE     (cv.customer_id = ov.customer_id)
+        AND (ov.order_id = order_items.order_id)
+        AND (order_items.product_id = product_information.product_id)
+        AND (cv.account_mgr_id = employees.employee_id)
+	AND wh.product_id(+) = order_items.product_id
+	AND ov.order_id = nvl(:ordid,ov.order_id)
+        AND cv.customer_id = nvl(:cstid,cv.customer_id)]]>
+         </sql>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="ROWSET">
+  <group name="ROW" source="QUERY" label="ROW">
+    <element name="QUANTITY_ON_HAND" value="QUANTITY_ON_HAND" dataType="xsd:integer" label="QUANTITY_ON_HAND" breakOrder="None" fieldOrder="1"/>
+    <element name="QUANTITY" value="QUANTITY" dataType="xsd:integer" label="QUANTITY" breakOrder="None" fieldOrder="2"/>
+    <element name="STREET_ADDRESS" value="STREET_ADDRESS" dataType="xsd:string" label="STREET_ADDRESS" breakOrder="None" fieldOrder="3"/>
+    <element name="POSTAL_CODE" value="POSTAL_CODE" dataType="xsd:string" label="POSTAL_CODE" breakOrder="None" fieldOrder="4"/>
+    <element name="CITY" value="CITY" dataType="xsd:string" label="CITY" breakOrder="None" fieldOrder="5"/>
+    <element name="STATE_PROVINCE" value="STATE_PROVINCE" dataType="xsd:string" label="STATE_PROVINCE" breakOrder="None" fieldOrder="6"/>
+    <element name="COUNTRY_NAME" value="COUNTRY_NAME" dataType="xsd:string" label="COUNTRY_NAME" breakOrder="None" fieldOrder="7"/>
+    <element name="CREDIT_LIMIT" value="CREDIT_LIMIT" dataType="xsd:double" label="CREDIT_LIMIT" breakOrder="None" fieldOrder="8"/>
+    <element name="CUST_EMAIL" value="CUST_EMAIL" dataType="xsd:string" label="CUST_EMAIL" breakOrder="None" fieldOrder="9"/>
+    <element name="PRIMARY_PHONE_NUMBER" value="PRIMARY_PHONE_NUMBER" dataType="xsd:string" label="PRIMARY_PHONE_NUMBER" breakOrder="None" fieldOrder="10"/>
+    <element name="CUSTOMER_ID" value="CUSTOMER_ID" dataType="xsd:integer" label="CUSTOMER_ID" breakOrder="None" fieldOrder="11"/>
+    <element name="ORDER_TOTAL" value="ORDER_TOTAL" dataType="xsd:double" label="ORDER_TOTAL" breakOrder="None" fieldOrder="12"/>
+    <element name="ORDER_STATUS" value="ORDER_STATUS" dataType="xsd:integer" label="ORDER_STATUS" breakOrder="None" fieldOrder="13"/>
+    <element name="ORDER_DATE" value="ORDER_DATE" dataType="xsd:string" label="ORDER_DATE" breakOrder="None" fieldOrder="14"/>
+    <element name="UNIT_PRICE" value="UNIT_PRICE" dataType="xsd:double" label="UNIT_PRICE" breakOrder="None" fieldOrder="15"/>
+    <element name="PRODUCT_NAME" value="PRODUCT_NAME" dataType="xsd:string" label="PRODUCT_NAME" breakOrder="None" fieldOrder="16"/>
+    <element name="PRODUCT_DESCRIPTION" value="PRODUCT_DESCRIPTION" dataType="xsd:string" label="PRODUCT_DESCRIPTION" breakOrder="None" fieldOrder="17"/>
+    <element name="CUSTOMER_NAME" value="CUSTOMER_NAME" dataType="xsd:string" label="CUSTOMER_NAME" breakOrder="None" fieldOrder="18"/>
+    <element name="SALES_MGR" value="SALES_MGR" dataType="xsd:string" label="SALES_MGR" breakOrder="None" fieldOrder="19"/>
+    <element name="ORDER_ID" value="ORDER_ID" dataType="xsd:integer" label="ORDER_ID" breakOrder="None" fieldOrder="20"/>
+    <element name="LINE_ITEM_ID" value="LINE_ITEM_ID" dataType="xsd:integer" label="LINE_ITEM_ID" breakOrder="None" fieldOrder="21"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets>
+      <valueSet id="order-list">
+         <sql dataSourceRef="demo">
+            <![CDATA[select orders_view.order_id ordid
+from orders_view
+where orders_view.customer_id = nvl(:cstid,orders_view.customer_id)]]>
+         </sql>
+         <input id="cstid" value="${cstid}" dataType="xsd:string"/>
+      </valueSet>
+      <valueSet id="customer-list">
+         <sql dataSourceRef="demo">
+            <![CDATA[select (customers_view.cust_last_name|| ', ' || customers_view.cust_first_name ) cstname,
+       customers_view.CUSTOMER_ID cstid
+from customers_view order by customers_view.cust_last_name]]>
+         </sql>
+      </valueSet>
+   </valueSets>
+   <parameters>
+      <parameter name="cstid" dataType="xsd:string" rowPlacement="1">
+         <select label="Customer " valueSet="customer-list" noOfRecords="" multiple="false" all="true" allValue="null" refreshParameters="true"/>
+      </parameter>
+      <parameter name="ordid" dataType="xsd:string" rowPlacement="1">
+         <select label="Order Number " valueSet="order-list" multiple="false" all="true" allValue="null"/>
+      </parameter>
+   </parameters>
+   <bursting/>
+   <display>
+<layouts><layout name="ROWSET" left="28px" top="14px"/><layout name="QUERY" left="274px" top="17px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

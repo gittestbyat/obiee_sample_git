@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c3852bb67e9ce862f">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.USER)</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" fontStyle="bold" wrapText="true"/></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>USER</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c2ba217e0c7e5e614">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.DISPLAYNAME)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>DISPLAYNAME</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c3ad97d7465cce33f">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.USER_HIER_ID)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>USER_HIER_ID</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c1143748cb23fd299">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.USERLOCALE)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>USERLOCALE</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c79c63b3a291ba2b0"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.DYNAMIC_PRODUCT_TABLE)</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>DYNAMIC_PRODUCT_TABLE</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c8af9e4affdaeeae3"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.CUBE_NAME)</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>CUBE_NAME</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf17b659b3dbae942"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.ESSB_SERVER)</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>ESSB_SERVER</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c4ad39993c9821c65">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.LOGLEVEL)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>LOGLEVEL</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf41fcea6efa31db9">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.USERGUID)</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" fontSize="10" wrapText="true"/></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>USERGUID</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf3150aaf7f2c9550">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.ROLES)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>ROLES</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c8bf20309ff326322">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;div style=&quot;height:100px; width:300px;overflow:auto;&quot;&gt;&#39;||REPLACE(VALUEOF(NQ_SESSION.PERMISSIONS),&#39;;&#39;,&#39; &#39;)||&#39;&lt;/div&gt;&#39;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true">
+						<saw:dataFormat textFormat="html" xsi:type="saw:text"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>NQ_SESSION</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>PERMISSIONS</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c1699b6a6e1bc107a">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.DSN)</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" fontSize="10"/></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>DSN</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c8618560aa6dc7486">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.LAST_REFRESH_DT)</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" width="60" wrapText="true"/></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>LAST_REFRESH_DT</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			
+			
+			<saw:column xsi:type="saw:regularColumn" columnID="c2e3dfd8a10885129"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.PREFERRED_CURRENCY)</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>PREFERRED_CURRENCY</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c9ce73d654df014e8"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(NQ_SESSION.SERVER_IP)</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>NQ_SESSION</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>SERVER_IP</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cd1819b8d46f403de">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(&quot;BI_EE_HOME&quot;)</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>REPOSITORY</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>BI_EE_HOME</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="caa26ecc294293b8b">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(&quot;DB_HOST&quot;)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>REPOSITORY</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>DB_HOST</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c722b96c127293637">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">VALUEOF(&quot;WLS_HOST&quot;)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>REPOSITORY</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>WLS_HOST</saw:text></saw:caption></saw:columnHeading></saw:column>
+		</saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:comparison" op="equal">
+				<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+				<sawx:expr xsi:type="xsd:string">2010</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="2">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!1"/><saw:cvCell viewName="htmlview!3"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!2">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="pivotTableView!3"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!2" colSpan="2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1" colSpan="2"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges><saw:measuresList>
+				<saw:measure columnID="cd1819b8d46f403de" aggRule="last"><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:dataBodyFormat></saw:measure><saw:measure columnID="caa26ecc294293b8b" aggRule="last"/><saw:measure columnID="c722b96c127293637" aggRule="last"/></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges><saw:measuresList>
+				<saw:measure columnID="c3852bb67e9ce862f" aggRule="last"/><saw:measure columnID="c2ba217e0c7e5e614" aggRule="last"/><saw:measure columnID="c3ad97d7465cce33f" aggRule="last"><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec hAlign="left" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure><saw:measure columnID="c1143748cb23fd299" aggRule="last"/><saw:measure columnID="c2e3dfd8a10885129" aggRule="last"/><saw:measure columnID="c4ad39993c9821c65" aggRule="last">
+					<saw:dataBodyFormat>
+						<saw:displayFormat>
+							<saw:formatSpec hAlign="left" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure><saw:measure columnID="cf41fcea6efa31db9" aggRule="last"/><saw:measure columnID="cf3150aaf7f2c9550" aggRule="last"/><saw:measure columnID="c8bf20309ff326322" aggRule="last"/></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!1">
+			<saw:staticText>
+				<saw:caption fmt="text">
+					<saw:text>[b]Value of selected Session Variables[/b]</saw:text></saw:caption></saw:staticText></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!2">
+			<saw:staticText>
+				<saw:caption fmt="text">
+					<saw:text>[b]Value of selected Repository Variables[/b]</saw:text></saw:caption></saw:staticText></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!3" autoPreview="true">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges><saw:measuresList>
+				<saw:measure columnID="c1699b6a6e1bc107a" aggRule="last"/><saw:measure columnID="cf17b659b3dbae942" aggRule="last"/><saw:measure columnID="c8af9e4affdaeeae3" aggRule="last"/><saw:measure columnID="c79c63b3a291ba2b0" aggRule="last"/><saw:measure columnID="c8618560aa6dc7486" aggRule="last"/><saw:measure columnID="c9ce73d654df014e8" aggRule="last"/></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!3">
+			<saw:staticText>
+				<saw:caption fmt="text">
+					<saw:text>[b]Value of configured Session Variables[/b]</saw:text></saw:caption></saw:staticText></saw:view></saw:views>
+	<saw:prompts scope="report" subjectArea="&quot;A - Sample Sales&quot;"/></saw:report>

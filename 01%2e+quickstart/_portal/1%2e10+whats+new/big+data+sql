@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="15ahs9sf09rvv08d"><sawd:dashboardColumn name="Column 2" frozen="false" canFreeze="true" duid="68o5m70k1lsusma8" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="all" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4" borderColor="#EEEEEE"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontSize="12" fontFamily="Arial"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			
+		<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font style=&quot;font:12px arial&quot;&gt; &lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot; /&gt;&lt;b&gt; Description :&lt;/b&gt; This report analyse revenues and number of distinct customers for each movie genre. Oracle Big Data SQL is used to read application activity logs residing in HDFS, [br/]
+
+which contains the movie purchase details. That is joined with Customer and Movie attributes data in Oracle database to present this report. 
+[br/][br/]
+[b]For more examples on how OBIEE can directly query and analyze Big Data  - &lt;a target=_blank href=&#39;saw.dll?Dashboard&amp;PortalPath=/shared/09.%20Integrations%20and%20Customizations/_portal/9.60%20Big%20Data&amp;Page=Overview&#39;&gt;Refer to this dashboard&lt;/a&gt;
+&lt;/font&gt;[/b]</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" canFreeze="false" duid="ef2vkk928glad8qs" layoutType="bestFit" break="column" frozen="false"><sawd:dashboardSection layoutType="bestFit" name="Section 2" collapsible="false" duid="9r5qrbtt8v1ln1ga" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="4" wrapText="true" backgroundColor="#EEEEEE" borderColor="#CCCCCC"/></saw:displayFormat><sawd:globalFilterView name="GFP 6" path="/shared/09. Integrations and Customizations/Big Data SQL/Revenue Analysis Prompt" duid="250pon7803s6jatr"><saw:caption><saw:text>Revenue Analysis Prompt</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 3" frozen="false" canFreeze="false" duid="ku9ll3ncgf2lh6l6" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 3" collapsible="false" duid="m488ogah9c9uj3p3" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 4" display="embed" showView="" duid="s02m7p9jjqabdsnd"><saw:caption><saw:text>Revenue Analysis</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Big Data SQL/Revenue Analysis"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

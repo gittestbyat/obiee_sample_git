@@ -1,0 +1,232 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff17\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman{\*\falt Times};}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f17\fnil\fcharset134\fprq2{\*\panose 02010600030101010101}SimSun{\*\falt ????????????\'a1\'a7???????};}{\f29\fnil\fcharset134\fprq2{\*\panose 02010600030101010101}@SimSun;}{\f37\fswiss\fcharset0\fprq2{\*\panose 020b0a04020102020204}Arial Black;}
+{\f38\froman\fcharset0\fprq0{\*\panose 00000000000000000000}TimesNewRomanPS-BoldMT;}{\f220\froman\fcharset238\fprq2 Times New Roman CE{\*\falt Times};}{\f221\froman\fcharset204\fprq2 Times New Roman Cyr{\*\falt Times};}
+{\f223\froman\fcharset161\fprq2 Times New Roman Greek{\*\falt Times};}{\f224\froman\fcharset162\fprq2 Times New Roman Tur{\*\falt Times};}{\f225\froman\fcharset177\fprq2 Times New Roman (Hebrew){\*\falt Times};}
+{\f226\froman\fcharset178\fprq2 Times New Roman (Arabic){\*\falt Times};}{\f227\froman\fcharset186\fprq2 Times New Roman Baltic{\*\falt Times};}{\f228\fswiss\fcharset238\fprq2 Arial CE;}{\f229\fswiss\fcharset204\fprq2 Arial Cyr;}
+{\f231\fswiss\fcharset161\fprq2 Arial Greek;}{\f232\fswiss\fcharset162\fprq2 Arial Tur;}{\f233\fswiss\fcharset177\fprq2 Arial (Hebrew);}{\f234\fswiss\fcharset178\fprq2 Arial (Arabic);}{\f235\fswiss\fcharset186\fprq2 Arial Baltic;}
+{\f358\fnil\fcharset0\fprq2 SimSun Western{\*\falt ????????????\'a1\'a7???????};}{\f454\fnil\fcharset0\fprq2 @SimSun Western;}{\f516\fswiss\fcharset238\fprq2 Arial Black CE;}{\f517\fswiss\fcharset204\fprq2 Arial Black Cyr;}
+{\f519\fswiss\fcharset161\fprq2 Arial Black Greek;}{\f520\fswiss\fcharset162\fprq2 Arial Black Tur;}{\f523\fswiss\fcharset186\fprq2 Arial Black Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;
+\red192\green192\blue192;\red255\green255\blue255;}{\stylesheet{\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\f0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 \snext0 Normal;}{
+\s1\ql \li0\ri0\keepn\widctlpar\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\fs18\lang1033\langfe2052\loch\f1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp2052 \sbasedon0 \snext0 heading 1;}{
+\s2\ql \li0\ri0\keepn\widctlpar\aspalpha\aspnum\faauto\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs24\lang1033\langfe2052\loch\f1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp2052 \sbasedon0 \snext0 heading 2;}{
+\s3\qc \li0\ri0\keepn\widctlpar\faauto\outlinelevel2\rin0\lin0\itap0 \b\fs28\cf1\lang1033\langfe1033\loch\f38\hich\af38\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext0 heading 3;}{
+\s4\qc \li0\ri0\keepn\widctlpar\aspalpha\aspnum\faauto\outlinelevel3\adjustright\rin0\lin0\itap0 \b\fs28\lang1033\langfe2052\loch\f0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 \sbasedon0 \snext0 heading 4;}{
+\s5\ql \li0\ri0\keepn\widctlpar\faauto\outlinelevel4\rin0\lin0\itap0 \b\i\fs24\lang1033\langfe1033\loch\f0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}{
+\s15\ql \li0\ri0\widctlpar\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\f0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 \sbasedon0 \snext15 header;}{\s16\ql \li0\ri0\widctlpar
+\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\f0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 \sbasedon0 \snext16 footer;}{\*\cs17 \additive \f0\ul\cf2 \sbasedon10 Hyperlink;}{
+\s18\qj \li0\ri0\sb120\sa120\widctlpar\faauto\rin0\lin0\itap0 \fs24\cf1\lang1033\langfe1033\loch\f17\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext18 Body Text;}{\s19\qj \li0\ri0\widctlpar\faauto\rin0\lin0\itap0 
+\fs20\cf1\lang1033\langfe1033\loch\f1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext19 Body Text 2;}}{\info{\title aaa}{\author EJ}{\operator tdexter}{\creatim\yr2006\mo12\dy1\hr12\min22}{\revtim\yr2006\mo12\dy1\hr12\min22}{\version3}
+{\edmins1}{\nofpages2}{\nofwords902}{\nofchars5147}{\*\company Oracle Corporation}{\nofcharsws0}{\vern8247}}\margl1987\margr1080\margb720 \widowctrl\ftnbj\aenddoc\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\hyphcaps0\formshade\horzdoc\dgmargin
+\dghspace180\dgvspace180\dghorigin1987\dgvorigin1440\dghshow1\dgvshow1\jexpand\viewkind1\viewscale100\pgbrdrhead\pgbrdrfoot\splytwnine\ftnlytwnine\htmautsp\nolnhtadjtbl\useltbaln\alntblind\lytcalctblwd\lyttblrtgr\lnbrkrule \fet0{\*\ftnsep \pard\plain 
+\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\chftnsep 
+\par }}{\*\ftnsepc \pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\chftnsepc 
+\par }}{\*\aftnsep \pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\chftnsep 
+\par }}{\*\aftnsepc \pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\chftnsepc 
+\par }}\sectd \psz1\linex0\endnhere\pgbrdropt32\sectlinegrid360\sectdefaultcl {\header \trowd \trgaph108\trleft-108\trftsWidth1\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth3888 \cellx3780\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2371 \cellx6151\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr
+\brdrnone \cltxlrtb\clftsWidth3\clwWidth3130 \cellx9281\pard\plain \s15\ql \li0\ri0\widctlpar\intbl\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {
+\b\scaps\f37\cf6 \cell }{\cell }\pard \s15\qr \li0\ri0\widctlpar\intbl\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f1\fs20 \hich\af1\dbch\af17\loch\f1 Date:}{\field{\*\fldinst {\f1\fs20 \hich\af1\dbch\af17\loch\f1  DATE \\
+@ "M/d/yyyy" }}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 12\hich\af1\dbch\af17\loch\f1 /\hich\af1\dbch\af17\loch\f1 1\hich\af1\dbch\af17\loch\f1 /\hich\af1\dbch\af17\loch\f1 2006}}}{\f1\fs20 \cell }\pard\plain 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\trowd \trgaph108\trleft-108\trftsWidth1\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth3888 \cellx3780\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2371 \cellx6151
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth3130 \cellx9281\row }\pard\plain \s15\ql \li0\ri0\widctlpar\tqc\tx4320\tqr\tx8640\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 
+\fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {
+\par }}{\*\pnseclvl1\pnucrm\pnqc\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnqc\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnqc\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnqc\pnstart1\pnindent720\pnhang
+{\pntxta )}}{\*\pnseclvl5\pndec\pnqc\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnqc\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnqc\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnqc\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnqc\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 
+\fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\*\bkmkstart Text2}{\field\flddirty{\*\fldinst {\f1\fs18 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs18 {\*\datafield 
+0001000000000000055465787432000d667367206e616d6573706163650000000000373c3f6e616d6573706163653a6673673d687474703a2f2f7777772e6f7261636c652e636f6d2f6673672f323030322d30332d32302f3f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text2}
+{\*\ffdeftext fsg namespace}{\*\ffstattext <?namespace:fsg=http://www.oracle.com/fsg/2002-03-20/?>}}}}}{\fldrslt {\f1\fs18\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 fsg namespace}}}{\f1\fs18 {\*\bkmkend Text2}
+\par }\pard\plain \s4\qr \li0\ri0\keepn\widctlpar\aspalpha\aspnum\faauto\outlinelevel3\adjustright\rin0\lin0\itap0 \b\fs28\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\f1 \hich\af1\dbch\af17\loch\f1 Sample 
+\hich\af1\dbch\af17\loch\f1 News Release
+\par }\pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\b\scaps\f37\fs28\cf6 {\*\shppict
+{\pict{\*\picprop\shplid1025{\sp{\sn shapeType}{\sv 75}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn pibFlags}{\sv 2}}{\sp{\sn fLine}{\sv 0}}{\sp{\sn fLayoutInCell}{\sv 1}}{\sp{\sn fLayoutInCell}{\sv 1}}}
+\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw4630\pich741\picwgoal2625\pichgoal420\pngblip\bliptag-210762287{\*\blipuid f37005d1b70073f2638061036ab27f8a}
+89504e470d0a1a0a0000000d49484452000000af0000001c0403000000e5e2f29d00000030504c5445ff5454ffd7d7ff8c8cff0000ff7777ffffffffe7e7ffc9
+c9ff1414ffa2a2ff3b3bfff1f1ff2424ffb8b8ff0a0afffafa4df1dcb500000001624b47440088051d480000000c636d50504a436d7030373132000000074f6d
+b7a5000003854944415448c7d5965f48935114c017a21493b268506264c8c8286c78f6f039e61e124129e6265ed7586b454e48020b320baca841292c49454c42
+4367492622c49e7aa898a085d21f12ec0f212ee8a5a0c0113d449dfbeffbeee8839e7af03c8c7befb9f7f79d7bfedd59c8ff119f654d82bf17cf7532898fbda7
+6b5aa79027b7c5b68857b3cbe19b49a1ed0a76bb1454644bbe507c0af5ee9946b0bf067459be8c6063eab0f143f569a814c70bd252991b0415dc14938aa781c1
+c1d308ee0045ba322a1846f821dce28eb2d14ffdb8db164c2b607f422ab4fe1f17865e5a4820059ee7134c26f1543f82dd7c3a91024792999983fbebd8f96180
+3857de2759e022802f5c3196f10fbd2eb0d095d173cd4c8edf4cc367043bf9b4f91dc0223d148c410a6ed0115ab1dcc395d12c7028075cbbb9a295442e0ef82c
+912a58b6e901280557d207e5c6f5989d85e0ea0017f5c534780eea30155c0fb0ce30bf31e9b3f863603556304a8b6871464ccb980ebffd1515d5385c02273105
+9fe21f56d22d885150722601b90af8160387635087579dc5610e3c30070f33b50af6a936d00d2f1470156cc2df16faed4b3490a104d8cdc15530fe6ab3902803
+1f862e15bc0dae18600cda7ee6898a0c69008f9dc6ce660ac6bc89cf4bb133f0511e6ec357d711dcd84e657b0d7353200679188f145e361cd392a6e05042a9aa
+a80067595cc4c1eb596d0294a3edc7c04d93ae0f7d114e79a2ff04cf721f1f8115157c1eae515734894d985b91329e7eab5852fe144fecbf7d9c03331621fd1c
+dc000e15ec85bb141c2a61dc677871ccc7711a921d2918c1a4a936077be1de2321190e0ea321c65ea4d859f0b02768076a5b71e91b686f59eb4b8333e9c5ca34
+052f655f1cc1e89d05635e089a8d674587acb13e747942b6972270d94cc1be2cfb583fee03ed8eccdb5f09cc6a0ec672660c74eb08f9209b1d16e042c60c8ca9
+73f571367815c055cb33bb17bb985580b12c1883c68cd4b3a84c81f337ee181d60c9d87e269876ef9245b113dbde4cbb9028038736aafd182b5e80715ddb4bc8
+47704813d1db8b2d7a9f0767d01883b521ad32d8d3b41a33f45a1e9160baee8cb2ba90d745af848ce7c6aa80b536b24f9fcd12f1e69d9d136b9ef80662804929
+b642b4d22ec1112fe64538bf5bbc206dfe291dbc9221814342e1b14b303959222ed7c3fc3e3fc3416180ca87509ed42372022049fcc57c7305215b7530fa8c340a053bb046ff57fc17f01f1d97539628b09dd40000000049454e44ae426082}}{\nonshppict
+{\pict\picscalex100\picscaley100\piccropl0\piccropr0\piccropt0\piccropb0\picw4630\pich741\picwgoal2625\pichgoal420\wmetafile8\bliptag-210762287{\*\blipuid f37005d1b70073f2638061036ab27f8a}
+0100090000033605000000001205000000000400000003010800050000000b0200000000050000000c021c00af000500000007010400000012050000430f2000
+cc0000001c00af00000000001c00af000000000028000000af0000001c0000000100040000000000a0090000c40e0000c40e000010000000100000000000ff00
+0a0aff001414ff002424ff003b3bff005454ff007777ff008c8cff00a2a2ff00b8b8ff00c9c9ff00d7d7ff00e7e7ff00f1f1ff00fafaff00ffffff00ffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffff0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffff0ffffffffd880000000000000068bfffffffff53336fffffffffffff900000ad00007ffffffffffffffffffffd00000dffffb8500000000000008ffff
+b60000000000000000008dfffffffd7500000000000008dffffffff0ffffffa63200000000000000002358fffffff50006ffffffffffff8200004af500027fff
+ffffffffffffffff600006dff9532000000000000003affb4000000000000000000007fffffa7320000000000000007ffffffff0fffff6200000000000000000
+0000025dfffff50006fffffffffff6200006dffd20003afffffffffffffffffa30004bff620000000000000000005ff82000000000000000000002bfff730000
+000000000000003afffffff0ffff5000000000000000000000000004dffff50006dfffffffff5000007dffff900005fffffffffffffffff500028fd400000000
+00000000000006f800000000000000000000004ff62000000000000000000004bffffff0fff600000468abbbabbabbab874000005ffff50006ffffffffd40000
+29fffffff600028ffff75555555555400006ff500000478aaaaaaaaaaaaaabf800037bbbbbbbbbbbbbbbbbbf80000026aaaaaaaaaaaaaaaadffffff0ff800000
+8ffffffffffffffffff9400006fff50006fffffffb400004bffffffffb30004bff93000000000000004bf8000029fffffffffffffffffff82004ffffffffffff
+fffffffa200007dffffffffffffffffffffffff0ff400039ffffffffffffffffffffb40002bff50006ffffffa300006fffffffffff800006fd40000000000000
+028fb30004bffffffffffffffffffff80004fffffffffffffffffff500028ffffffffffffffffffffffffff0f900028ffffffffffffffffffffffb20007ff500
+06fffff82000026768dffffffff50002982222222223000006ff60000afffffffffffffffffffff82004ffffffffffffffffff920007ffffffffffffffffffff
+fffffff0f60005ffffffffffffffffffffffff60004ff50006fffd70000000000038fffffffb00004abbbbbbbbb930004bff40006ffffffffffffffffffffff8
+0004ffffffffffffffffff60004ddfdfddfddfddfddffffffffffff0f30007ffffffffffffffffffffffffa2002df50006ffd7000000000000006dfffffd8000
+07fffffffff600008ffb30009ffffffffffffffffffffff80004ffffffffffffffffff50003655555555555555558ffffffffff0f00028ffffffffffffffffff
+ffffffb3002af50006fd420202222222000007ffffffd400039fffffff800005fff93000dffffffffffffffffffffff82004fffffffffffffffffd4000000000
+0000000000003bfffffffff0f00029ffffffffffffffffffffffffd3002af50006fbaaaaaaa9aaa8620003bffffffa20005dfffffd30003afff92002dfffffff
+fffffffffffffff80004ffffffffffffffffff400000000000000000000004dffffffff0f20028ffffffffffffffffffffffffb2002bf50006ffffffffffffff
+f800008fffffff600008fffff600007ffffa2000bffffffffffffffffffffff80004ffffffffffffffffff4000233323333333333333337ffffffff0f50006ff
+ffffffffffffffffffffff80002ff50006dfffffffffffffff60004fffffffd40003bfffa00005dfffff40007ffffffffffffffffffffff82004ffffffffffff
+ffffff60004a9bbbbbabbabbabbabbbffffffff0f80003bffffffffffffffffffffffd40005ff50006ffffffffffffffff82005dfffffff920006ffd50003aff
+ffff50004ffffffffffffffffffffff80004ffffffffffffffffff80003afffffffffffffffffffffffffff0fb20005ffffffffffffffffffffff800009ff500
+06ffffffffffffffff80005dffffffff600009f800006fffffff920006fffffffffffffffffffff82004ffffffffffffffffffd30004dfffffffffffffffffff
+fffffff0ff600005bfffffdffdffdfffffff820004fff50007ffdffdffdffffffb40006fffffffffb40004a30004dffffffff400007dffffdffdffdffffffff8
+0004fffffffffffffffffff700005bfffffdffdffdfffffffffddff0ffb3000047addddddddddddddb8500000afff50006dddddddddddddd9400009fffffffff
+f82000300029fffffffffa3000058bdddddddddddddffff80004ffffffffffffffffffff5000047adddddddddddddfffffa98af0fffa30000034444444444444
+432000008ffff5000344444444444444300005ffffffffffff500000006fffffffffff8000002344444444444448fff82004ffffffffffffffffffffb3000003
+44444444444446fffb8997b0ffffa300000000000000000000000008fffff500000000000000000000004bffffffffffffa3000002dffffffffffff820000000
+000000000003bff80004fffffffffffffffffffffb400000000000000000028ffaa88990fffffb620000000000000000000005affffff5000000000000000000
+0004bffffffffffffff7000009ffffffffffffffb50000000000000000005ff80004ffffffffffffffffffffffd62000000000000000003bfa8888a0fffffffb
+753222222222222223469ffffffff5022222222222222222358fffffffffffffffff60027fffffffffffffffff96432222222222222228f82004ffffffffffff
+ffffffffffffb7532222222222222206ff8778f0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffff0fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff005000000070101000000030000000000}}}{\b\scaps\f37\fs28\cf6 
+\par }{\f1\fs18 
+\par }\trowd \trgaph108\trleft180\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2724 \cellx2904
+\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2676 \cellx5580\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth3600 \cellx9180
+\pard \qr \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f1\fs18 \hich\af1\dbch\af17\loch\f1 Contacts:\cell }\pard \ql \li0\ri0\widctlpar\intbl\faauto\rin0\lin0 {\b\f1 \hich\af1\dbch\af17\loch\f1 Joelle Fitzgerald 
+\par }{\f1\fs20 \hich\af1\dbch\af17\loch\f1 Director 
+\par \hich\af1\dbch\af17\loch\f1 Investor Relations 
+\par \hich\af1\dbch\af17\loch\f1 Oracle Corporation 
+\par \hich\af1\dbch\af17\loch\f1 (650) 506-4073}{\f1 \hich\af1\dbch\af17\loch\f1  }{\f1\fs20 
+\par }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f1\fs20 \cell }\pard\plain \s2\ql \li0\ri0\keepn\widctlpar\intbl\aspalpha\aspnum\faauto\outlinelevel1\adjustright\rin0\lin0 
+\b\fs24\lang1033\langfe2052\loch\af1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp2052 {\hich\af1\dbch\af17\loch\f1 Jim Finn
+\par }\pard\plain \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\f1\fs20 \hich\af1\dbch\af17\loch\f1 Vice President
+\par \hich\af1\dbch\af17\loch\f1 Corporate Communications
+\par \hich\af1\dbch\af17\loch\f1 Oracle Corporation
+\par \hich\af1\dbch\af17\loch\f1 (650) 506-1691}{\f1 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\b\f1\fs18 \trowd 
+\trgaph108\trleft180\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2724 \cellx2904\clvertalt
+\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth2676 \cellx5580\clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth3600 \cellx9180\row 
+}\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\f1\fs18 
+\par }\pard \qj \li0\ri0\widctlpar\faauto\rin0\lin0\itap0 {\b\cf1\lang1033\langfe1033\loch\af1\hich\af1\dbch\af0\langfenp1033 
+\par ORACLE CORPORATION REPORTS FISCAL Q2 EARNINGS PER SHARE OF $0.12
+\par }\pard\plain \s5\ql \li0\ri0\keepn\widctlpar\faauto\outlinelevel4\rin0\lin0\itap0 \b\i\fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 
+Applications New License Sales Up 27%; Database New License Sales Up 11%}{\cf1 
+\par }\pard\plain \qj \li0\ri0\sb120\sa120\widctlpar\faauto\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\cf1\lang1033\langfe1033\loch\af1\hich\af1\dbch\af0\langfenp1033 Foster
+ City, Calif., December 15, 2009 [http://www.Oracle.com/tellmemore/?2635188]
+\par }\pard \qj \li0\ri0\sb120\sa120\sl360\slmult1\widctlpar\faauto\rin0\lin0\itap0 {\f1 \hich\af1\dbch\af17\loch\f1 
+Today, Oracle Solutions announced that second quarter revenues were up 8% to $2.5 billion while net income grew 15% to $617 million as compared to the second quarter last year. Earnings per share were $0.12 compared with $0.10 la
+\hich\af1\dbch\af17\loch\f1 
+st year. New software license sales were up 13% to $849 million, while software license updates and product support revenues were up 17% to $1,114 million. Second quarter operating margin was 37%, a 300 basis point improvement over last year. Operating ca
+\hich\af1\dbch\af17\loch\f1 s\hich\af1\dbch\af17\loch\f1 \hich\f1 h flow in the first half of the fiscal year was $1.6 billion.\'93\loch\f1 
+We are extremely pleased with the strong performance we saw this quarter. Solid execution in the field, a strengthening competitive position, and an improving economy contributed to results tha\hich\af1\dbch\af17\loch\f1 t\hich\af1\dbch\af17\loch\f1 
+\hich\f1  were above expectations. The growth was also balanced. All major software product categories and geographic regions posted growth.\'94\loch\f1 \hich\f1  said Oracle CFO Jeff Henley. \'93\loch\f1 
+Our applications growth of 27% exceeded the growth rates of many of our competitors, in thei\hich\af1\dbch\af17\loch\f1 r\hich\af1\dbch\af17\loch\f1 \hich\f1 
+ most recently reported quarters. For example, new license sales at the combined PeopleSoft and JD Edwards company declined 18% as compared to their results when they were operating as separate companies,\'94\loch\f1 \hich\f1  said Oracle CEO John Doe. 
+\'93\loch\f1 But the very fastest g\hich\af1\dbch\af17\loch\f1 r\hich\af1\dbch\af17\loch\f1 \hich\f1 owing part of our applications business is outsourcing, which increased 82% in the quarter.\'94\loch\f1 \hich\f1  \'93\loch\f1 
+Our database technology business depends on our ability to innovate. In the next few weeks we will complete delivery of Oracle 10g, the first database and applic\hich\af1\dbch\af17\loch\f1 a\hich\af1\dbch\af17\loch\f1 tion server }{
+\cf1\lang1033\langfe1033\loch\af1\hich\af1\dbch\af0\langfenp1033 esigned to run on a Grid of low cost computers. Grid technology improves performance and reliability while dramatically lowering the cost of computing infrastructure. That\rquote 
+s the kind of innovation that customers find compelling. Oracle is the world\rquote 
+s largest enterprise software company. For more information about Oracle, including supplemental financial information, please call Investor Relations at (650) 506-4073 or visit Oracle on the web at }{\field\flddirty{\*\fldinst {
+\cf2\lang1033\langfe1033\loch\af1\hich\af1\dbch\af0\langfenp1033  HYPERLINK "http://www.oracle.com/investor" }{\cf2\lang1033\langfe1033\loch\af1\hich\af1\dbch\af0\langfenp1033 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000017000000180000007700770077002e006f007200610063006c0065002e0063006f006d002f0069006e0076006500730074006f0072000000e0c9ea79f9bace118c8200aa004ba90b3e00000068007400740070003a002f002f007700770077002e006f00720061006300
+6c0065002e0063006f006d002f0069006e0076006500730074006f00720000000000000000}}}{\fldrslt {\cs17\ul\cf2\lang1033\langfe1033\loch\af1\hich\af1\dbch\af0\langfenp1033 www.oracle.com/investor}}}{\cf1\lang1033\langfe1033\loch\af1\hich\af1\dbch\af0\langfenp1033 .
+
+\par }\pard \qj \li0\ri0\widctlpar\faauto\rin0\lin0\itap0 {\b\cf1\lang1033\langfe1033\loch\af1\hich\af1\dbch\af0\langfenp1033 
+\par }\pard \qc \li0\ri0\widctlpar\faauto\rin0\lin0\itap0 {\b\fs28\cf1\lang1033\langfe1033\loch\af38\hich\af38\dbch\af0\langfenp1033 
+\par }\pard\plain \s3\qc \li0\ri0\keepn\widctlpar\faauto\outlinelevel2\rin0\lin0\itap0 \b\fs28\cf1\lang1033\langfe1033\loch\af38\hich\af38\dbch\af17\cgrid\langnp1033\langfenp1033 {\f1\fs32 \hich\af1\dbch\af17\loch\f1 ORACLE CORPORATION
+\par }\pard\plain \qc \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\f1\fs20 \hich\af1\dbch\af17\loch\f1 Quarterly Earnings Report
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f1\fs18 
+\par }\trowd \trgaph108\trleft-1440\trhdr\trftsWidth3\trwWidth11340\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth11340 \cellx9900\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f1\fs18 
+\par \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f1\fs18 \trowd 
+\trgaph108\trleft-1440\trhdr\trftsWidth3\trwWidth11340\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth11340 \cellx9900\row }\pard \qr \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\*\bkmkstart Text11}{\field\flddirty{\*\fldinst {\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 
+{\*\datafield 0001000000000000000017486f72697a6f6e74616c20427265616b205461626c653b00000000001c3c3f686f72697a6f6e74616c2d627265616b2d7461626c653a313f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext Horizontal Break Table\'3b}
+{\*\ffstattext <?horizontal-break-table:1?>}}}}}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 Horizontal Break Table;}}}{\field\flddirty{\*\fldinst {\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 {\*\datafield 
+000100000000000000000d53706c6974204865616465723b0000000000703c3f73706c69742d636f6c756d6e2d6865616465723a2f2f6673673a436f6c436f6e746578743f3e3c3f73706c69742d636f6c756d6e2d77696474683a6673673a436f6c57696474683f3e3c3f73706c69742d636f6c756d6e2d77696474682d75
+6e69743a6e756d6265722836293f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext Split Header\'3b}{\*\ffstattext <?split-column-header://fsg:ColContext?><?split-column-width:fsg:ColWidth?><?split-column-width-unit:number(6)?>}}}}
+}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 Split Header;}}}{\*\bkmkend Text11}{\field\flddirty{\*\fldinst {\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 {\*\datafield 
+0001000000000000000017466972737420436f6c756d6e20416c69676e6d656e743b00000000006f3c78736c3a696620746573743d22706f736974696f6e28293d31222078646f666f3a6374783d22696e626c6f636b223e3c78736c3a617474726962757465206e616d653d22746578742d616c69676e223e73746172743c
+2f78736c3a6174747269627574653e3c2f78736c3a69663e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext First Column Alignment\'3b}{\*\ffstattext 
+<xsl:if test="position()=1" xdofo:ctx="inblock"><xsl:attribute name="text-align">start</xsl:attribute></xsl:if>}}}}}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 First Column Alignment;}}}{\field\flddirty{\*\fldinst {
+\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 {\*\datafield 000100000000000000000b416d6f756e74205479706500000000001b3c3f76616c75652d6f663a6673673a416d6f756e74547970653f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext 
+Amount Type}{\*\ffstattext <?value-of:fsg:AmountType?>}}}}}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 Amount Type}}}{\f1\fs20 \hich\af1\dbch\af17\loch\f1  
+\par }{\field\flddirty{\*\fldinst {\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 {\*\datafield 
+0001000000000000000017466972737420436f6c756d6e20416c69676e6d656e743b00000000006f3c78736c3a696620746573743d22706f736974696f6e28293d31222078646f666f3a6374783d22696e626c6f636b223e3c78736c3a617474726962757465206e616d653d22746578742d616c69676e223e73746172743c
+2f78736c3a6174747269627574653e3c2f78736c3a69663e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext First Column Alignment\'3b}{\*\ffstattext 
+<xsl:if test="position()=1" xdofo:ctx="inblock"><xsl:attribute name="text-align">start</xsl:attribute></xsl:if>}}}}}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 First Column Alignment;}}}{\field\flddirty{\*\fldinst {
+\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 {\*\datafield 000100000000000000000d436f6c756d6e20506572696f6400000000001a3c3f76616c75652d6f663a6673673a436f6c506572696f643f3e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext 
+Column Period}{\*\ffstattext <?value-of:fsg:ColPeriod?>}}}}}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 Column Period}}}{\f1\fs20 
+\par }{\field\flddirty{\*\fldinst {\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 {\*\datafield 
+0001000000000000000017466972737420436f6c756d6e20416c69676e6d656e743b00000000006f3c78736c3a696620746573743d22706f736974696f6e28293d31222078646f666f3a6374783d22696e626c6f636b223e3c78736c3a617474726962757465206e616d653d22746578742d616c69676e223e73746172743c
+2f78736c3a6174747269627574653e3c2f78736c3a69663e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext First Column Alignment\'3b}{\*\ffstattext 
+<xsl:if test="position()=1" xdofo:ctx="inblock"><xsl:attribute name="text-align">start</xsl:attribute></xsl:if>}}}}}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 First Column Alignment;}}}{\field\flddirty{\*\fldinst {
+\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 {\*\datafield 
+00010000000000000000165468697264204c6162656c206973204d697373696e670000000000383c78736c3a696620746573743d22706f736974696f6e28293e31222078646f666f3a6374783d22696e6c696e65223e3c2f78736c3a69663e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0
+{\*\ffdeftext Third Label is Missing}{\*\ffstattext <xsl:if test="position()>1" xdofo:ctx="inline"></xsl:if>}}}}}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 Third Label is Missing}}}{\f1\fs20 
+\par }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\field{\*\fldinst {\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 {\*\datafield 
+0001000000000000000016466972737420436f6c756d6e20416c69676e6d656e7400000000006f3c78736c3a696620746573743d22706f736974696f6e28293d31222078646f666f3a6374783d22696e626c6f636b223e3c78736c3a617474726962757465206e616d653d22746578742d616c69676e223e73746172743c2f
+78736c3a6174747269627574653e3c2f78736c3a69663e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext First Column Alignment}{\*\ffstattext 
+<xsl:if test="position()=1" xdofo:ctx="inblock"><xsl:attribute name="text-align">start</xsl:attribute></xsl:if>}}}}}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 First Column Alignment}}}{\b\f1\fs20 
+\hich\af1\dbch\af17\loch\f1  \nestcell{\nonesttables
+\par }}\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\f1\fs20 {\*\nesttableprops\trowd 
+\trgaph108\trleft8\trhdr\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11224 
+\cellx11124\nestrow}{\nonesttables
+\par }}\pard \qr \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\field\flddirty{\*\fldinst {\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 {\*\datafield 
+0001000000000000000017466972737420436f6c756d6e20416c69676e6d656e743b00000000006f3c78736c3a696620746573743d22706f736974696f6e28293d31222078646f666f3a6374783d22696e626c6f636b223e3c78736c3a617474726962757465206e616d653d22746578742d616c69676e223e73746172743c
+2f78736c3a6174747269627574653e3c2f78736c3a69663e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext First Column Alignment\'3b}{\*\ffstattext 
+<xsl:if test="position()=1" xdofo:ctx="inblock"><xsl:attribute name="text-align">start</xsl:attribute></xsl:if>}}}}}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 First Column Alignment;}}}{\field\flddirty{\*\fldinst {
+\f1\fs20 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{\f1\fs20 {\*\datafield 
+000100000000000000001447726f757020616e642053706c6974204461746100000000004a3c3f666f722d656163683a6673673a5270744c696e653f3e3c3f73706c69742d636f6c756d6e2d646174613a6673673a52707443656c6c5b335d3f3e3c3f76616c75652d6f663a2e3f3e0000000000}
+{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffdeftext Group and Split Data}{\*\ffstattext <?for-each:fsg:RptLine?><?split-column-data:fsg:RptCell[3]?><?value-of:.?>}}}}}{\fldrslt {\f1\fs20\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 
+Group and Split Data}}}{\f1\fs20 \hich\af1\dbch\af17\loch\f1  \nestcell{\nonesttables
+\par }}\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap2 {\f1\fs20 {\*\nesttableprops\trowd \trgaph108\trleft8\trftsWidth1\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 
+\clvertalb\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone \cltxlrtb\clftsWidth3\clwWidth11224 \cellx11124\nestrow}{\nonesttables
+\par }}\trowd \trgaph108\trleft-1440\trftsWidth3\trwWidth11340\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth11340 \cellx9900\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f1\fs18 \cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\f1\fs18 \trowd 
+\trgaph108\trleft-1440\trftsWidth3\trwWidth11340\trftsWidthB3\trftsWidthA3\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3 \clvertalt\clbrdrt\brdrnone \clbrdrl\brdrnone \clbrdrb\brdrnone \clbrdrr\brdrnone 
+\cltxlrtb\clftsWidth3\clwWidth11340 \cellx9900\row }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\*\bkmkstart Text14}{\*\bkmkstart Text6}{\field\flddirty{\*\fldinst {\f1\fs18 \hich\af1\dbch\af17\loch\f1  FORMTEXT }{
+\f1\fs18 {\*\datafield 
+000100000000000006546578743134000e416464205061676520427265616b0000000000823c78736c3a69662078646f666f3a6374783d22696e626c6f636b2220746573743d22706f736974696f6e28293c636f756e74282f2f6673673a52707444656629223e3c78736c3a617474726962757465206e616d653d22627265
+616b2d6265666f7265223e706167653c2f78736c3a6174747269627574653e3c2f78736c3a69663e0000000000}{\*\formfield{\fftype0\ffownstat\fftypetxt0{\*\ffname Text14}{\*\ffdeftext Add Page Break}{\*\ffstattext 
+<xsl:if xdofo:ctx="inblock" test="position()<count(//fsg:RptDef)"><xsl:attribute name="break-before">page</xsl:attribute></xsl:if>}}}}}{\fldrslt {\f1\fs18\lang1024\langfe1024\noproof \hich\af1\dbch\af17\loch\f1 Add Page Break}}}{\f1\fs18 
+{\*\bkmkend Text14}{\*\bkmkend Text6}\hich\af1\dbch\af17\loch\f1  
+\par 
+\par }\pard\plain \s19\qj \li0\ri0\widctlpar\faauto\rin0\lin0\itap0 \fs20\cf1\lang1033\langfe1033\loch\af1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 {\fs16 \hich\af1\dbch\af17\loch\f1 
+"Safe Harbor" Statement Under the Private Securities Litigation Reform Act of 1995: Information in this release relating to Oracle's future prospects which are "forward-looking statements" are subject to certain risks and uncertainties that c
+\hich\af1\dbch\af17\loch\f1 
+ould cause actual results to differ materially, including, but not necessarily limited to, the following: (1) Economic, political and market conditions could adversely affect purchasing decisions for computer software and services throughout the world. Al
+\hich\af1\dbch\af17\loch\f1 t\hich\af1\dbch\af17\loch\f1 
+hough there are signs of an improving economic environment in the US, it is too early to determine whether an economic recovery will be broad, substantial and sustained, and whether any such recovery would translate into higher levels of IT spending. The 
+\hich\af1\dbch\af17\loch\f1 w\hich\af1\dbch\af17\loch\f1 
+ar on terrorism and the potential for other hostilities in various parts of the world continues to contribute to a climate of uncertainty that could adversely affect revenues. Delays in closing of sales, reductions in size of individual sales without an o
+\hich\af1\dbch\af17\loch\f1 f\hich\af1\dbch\af17\loch\f1 
+fsetting increase in volume, or delays in product delivery can cause quarterly revenues and income to fall significantly short of anticipated levels. (2) Management's ability to forecast revenues and control expenses, especially on a quarterly basis, cont
+\hich\af1\dbch\af17\loch\f1 i\hich\af1\dbch\af17\loch\f1 
+nues to be a challenge. An unexpected decline in revenues without a corresponding and timely slowdown in expense growth could have a material adverse effect on results of operations. (3) Oracle continues to introduce new or enhanced versions of its produc
+\hich\af1\dbch\af17\loch\f1 t\hich\af1\dbch\af17\loch\f1 
+s and services, such as Oracle Database 10g, Oracle Application Server 10g, Oracle E-Business Suite, Oracle Collaboration Suite and Outsourcing. The market acceptance and contribution to Oracle's revenues of these new versions or products and services can
+\hich\af1\dbch\af17\loch\f1 n\hich\af1\dbch\af17\loch\f1 
+ot be assured. (4) Oracle periodically has made changes to its pricing model and sales organization, which could lead to a decline or delay in sales as its sales force and customers adjust to the new pricing policies and organizational changes. Intense co
+\hich\af1\dbch\af17\loch\f1 m\hich\af1\dbch\af17\loch\f1 
+petition in the various markets in which Oracle competes may also put pressure on Oracleto reduce prices on certain products. (5) The market for Oracle's products is intensely competitive and is characterized by rapid technological advances and frequent n
+\hich\af1\dbch\af17\loch\f1 e\hich\af1\dbch\af17\loch\f1 
+w product introductions. There can be no assurances that Oracle will continue to introduce new products and new versions of existing products that keep pace with technological developments, satisfy increasingly sophisticated customer requirements and achi
+\hich\af1\dbch\af17\loch\f1 e\hich\af1\dbch\af17\loch\f1 
+ve market acceptance. Oracle undertakes no obligation to update information contained in this release. For further information regarding risks and uncertainties associated with Oracle's business, please refer to the "Risk Factors" section of Oracle Soluti
+\hich\af1\dbch\af17\loch\f1 o\hich\af1\dbch\af17\loch\f1 
+ns SEC filings, including, but not limited to, its annual report on Form 10-K and quarterly reports on Form 10-Q, copies of which may be obtained by contacting Oracle Solutions investor Relations Department at (650) 506-4073 or Oracle's Investor Relations
+\hich\af1\dbch\af17\loch\f1  \hich\af1\dbch\af17\loch\f1 website at http://www.Oraclenvestor.
+\par }\pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe2052\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp2052 {\f1\fs18 
+\par }}

@@ -1,0 +1,207 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<Feedback>
+  <Trainings>
+    <Training>
+      <Title>Oracle BI Publisher</Title>
+      <Duration>3 Days</Duration>
+      <Trainer>Ramon Davis</Trainer>
+      <Trainees>
+         <Trainee>
+           <Name>Tiffany Smith</Name>
+           <Company>Sintel Inc.</Company>
+           <Designation>Sr. Reports Developer</Designation>
+           <Ratings>
+               <Rating>
+                  <Item>Course Content</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Training Materials Supplied</Item>
+                  <Assessment>Excellent</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Hands On Session</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Trainers Technical Knowledge</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Presentation Style</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Speed/Length of Course</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Voice Quality</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Response to Queries</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments>Really Helped me resolve a problem I was working on. Thank You!!</Comments>   
+               </Rating>
+               <Rating>
+                  <Item>Overall Evaluation</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+           </Ratings>
+           <Questionnaire>
+               <Question>Would you refer this training to your friends/ Colleagues</Question>
+               <Comments>Y</Comments>
+           </Questionnaire>   
+           <Questionnaire>
+               <Question>Did the Training meet your expectations</Question>
+               <Comments>Y</Comments>
+           </Questionnaire>
+           <Questionnaire>
+               <Question>Any other Feedback?</Question>
+               <Comments/>
+           </Questionnaire>
+         </Trainee>   
+         <Trainee>
+           <Name>Emily Randolf</Name>
+           <Company>Sintel Inc.</Company>
+           <Designation>Sr. Reports Developer</Designation>
+           <Ratings>
+               <Rating>
+                  <Item>Course Content</Item>
+                  <Assessment>Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Training Materials Supplied</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Hands On Session</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Trainers Technical Knowledge</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Presentation Style</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Speed/Length of Course</Item>
+                  <Assessment>Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Voice Quality</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Response to Queries</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Overall Evaluation</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+           </Ratings>
+           <Questionnaire>
+               <Question>Would you refer this training to your friends/ Colleagues</Question>
+               <Comments>Y</Comments>
+           </Questionnaire>   
+           <Questionnaire>
+               <Question>Did the Training meet your expectations</Question>
+               <Comments>Y</Comments>
+           </Questionnaire>
+           <Questionnaire>
+               <Question>Any other Feedback?</Question>
+               <Comments>The course Content can be updated with information on Apps Integration</Comments>
+           </Questionnaire>
+         </Trainee>   
+
+         <Trainee>
+           <Name>Timothy McDermott</Name>
+           <Company>Sintel Inc.</Company>
+           <Designation>Sr. Reports Developer</Designation>
+           <Ratings>
+               <Rating>
+                  <Item>Course Content</Item>
+                  <Assessment>Excellent</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Training Materials Supplied</Item>
+                  <Assessment>Excellent</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Hands On Session</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Trainers Technical Knowledge</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments>He knows BI Publisher and even OBIEE pretty Good. Great Job!</Comments>   
+               </Rating>
+               <Rating>
+                  <Item>Presentation Style</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments>Very Interactive and entertaining, loved it.</Comments>   
+               </Rating>
+               <Rating>
+                  <Item>Speed/Length of Course</Item>
+                  <Assessment>Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Voice Quality</Item>
+                  <Assessment>Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Response to Queries</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+               <Rating>
+                  <Item>Overall Evaluation</Item>
+                  <Assessment>Very Good</Assessment>
+                  <Comments/>   
+               </Rating>
+           </Ratings>
+           <Questionnaire>
+               <Question>Would you refer this training to your friends/ Colleagues</Question>
+               <Comments>Y</Comments>
+           </Questionnaire>   
+           <Questionnaire>
+               <Question>Did the Training meet your expectations</Question>
+               <Comments>Y</Comments>
+           </Questionnaire>
+           <Questionnaire>
+               <Question>Any other Feedback?</Question>
+               <Comments>Introduction to BI Publisher - Fusion Apps Integration will be Helpful</Comments>
+           </Questionnaire>
+         </Trainee>   
+
+      </Trainees>      
+    </Training> 
+  
+  </Trainings>
+</Feedback>

@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20Sources:%20SQL%20query%20against%20customers_view,%20orders_view,%20hr.employees,%20order_items,%20product_information.%20%0AHTTP%20(RSS%20feeds):%20(1)%20http://rss.news.yahoo.com/rss/topstories,%20(2)%20http://www.nytimes.com/services/xml/rss/userland/Business.xml,%20(3)%20http://www.weather.gov/data/current_obs/KSFO.xml.]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="true"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="scalable_mode" value="on"/>
+      <property name="xml_tag_case" value="as_are"/>
+      <property name="db_fetch_size" value="300"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="SalesData" type="complex">
+         <sql dataSourceRef="demo">
+            <![CDATA[/* For JavaDB 
+SELECT customers_view.city, customers_view.state_province,customers_view.customer_id,orders_view.order_id,
+       orders_view.order_date, orders_view.order_mode,
+       orders_view.order_status, orders_view.order_total,
+       (employees.first_name || ' ' || employees.last_name) salesrep,
+       (orders_view.order_total * employees.commission_pct) salecomm,
+       (customers_view.cust_first_name || ' ' || customers_view.cust_last_name
+       ) customer_name,
+       employees.employee_id, customers_view.customer_id as customer_id_1,
+       customers_view.street_address, customers_view.postal_code,
+       customers_view.credit_limit, customers_view.cust_email,
+       year(orders_view.order_date) AS order_year,
+       product_categories.category_name AS prod_cat
+  FROM customers_view,
+       orders_view,
+       employees,
+       order_items,
+       product_information,
+       product_categories
+ WHERE (    (customers_view.customer_id = orders_view.customer_id)
+        AND (orders_view.sales_rep_id = employees.employee_id)
+        AND (orders_view.order_id = order_items.order_id)
+        AND (order_items.product_id = product_information.product_id)
+        AND (product_information.category_id = product_categories.category_id)
+       )
+*/
+/* Oracle Database */
+SELECT customers_view.city, customers_view.state_province,customers_view.customer_id,orders_view.order_id,
+       orders_view.order_date, orders_view.order_mode,
+       orders_view.order_status, orders_view.order_total,
+       decode((employees.first_name || ' ' || employees.last_name),' ','Online',(employees.first_name || ' ' || employees.last_name)) salesrep,
+       (orders_view.order_total * employees.commission_pct) salecomm,
+       (customers_view.cust_first_name || ' ' || customers_view.cust_last_name
+       ) customer_name,
+       employees.employee_id,
+       customers_view.street_address, customers_view.postal_code,
+       customers_view.credit_limit, customers_view.cust_email,
+       TO_CHAR(orders_view.order_date, 'YYYY') AS order_year,
+       product_information.product_name,
+              (DECODE (category_id,
+                11, 'Monitors',
+                12, 'Printers',
+                13, 'Drives',
+                14, 'Memory',
+                15, 'CPUs',
+                19, 'Sundries',
+                21, 'Software',
+                22, 'Software',
+                24, 'Software',
+                25, 'Software',
+                29, 'Software',
+                'Office Furniture'
+               )
+       ) prod_cat
+  FROM customers_view,
+       orders_view,
+       hr.employees,
+       order_items,
+       product_information
+ WHERE (    (customers_view.customer_id = orders_view.customer_id)
+        AND (orders_view.sales_rep_id = employees.employee_id)
+        AND (orders_view.order_id = order_items.order_id)
+        AND (order_items.product_id = product_information.product_id)
+       )]]>
+         </sql>
+      </dataSet>
+      <dataSet name="news" type="simple">
+         <http method="GET">
+            <url>http://rss.news.yahoo.com/rss/topstories</url>
+         </http>
+      </dataSet>
+      <dataSet name="newsny" type="simple">
+         <http method="GET">
+            <url>http://www.nytimes.com/services/xml/rss/userland/Business.xml</url>
+         </http>
+      </dataSet>
+      <dataSet name="weather" type="simple">
+         <http method="GET">
+            <url>http://www.weather.gov/data/current_obs/KSFO.xml</url>
+         </http>
+      </dataSet>
+   </dataSets>
+   <output rootName="SalesData" uniqueRowName="false">
+      <nodeList name="news"/>
+      <nodeList name="newsny"/>
+      <nodeList name="weather"/>
+      <nodeList name="data-structure">
+         <dataStructure tagName="SalesData">
+  <group name="ROW" source="SalesData" label="Sales_Data">
+    <element name="CITY" value="CITY" dataType="xsd:string" label="City" breakOrder="None" fieldOrder="1"/>
+    <element name="STATE_PROVINCE" value="STATE_PROVINCE" dataType="xsd:string" label="State or Province" breakOrder="None" fieldOrder="2"/>
+    <element name="CUSTOMER_ID" value="CUSTOMER_ID" dataType="xsd:integer" label="Customer Id" breakOrder="None" fieldOrder="3"/>
+    <element name="ORDER_ID" value="ORDER_ID" dataType="xsd:integer" label="Order Id" breakOrder="None" fieldOrder="4"/>
+    <element name="ORDER_DATE" value="ORDER_DATE" dataType="xsd:date" label="Order Date" breakOrder="None" fieldOrder="5"/>
+    <element name="ORDER_MODE" value="ORDER_MODE" dataType="xsd:string" label="Order Mode" breakOrder="None" fieldOrder="6"/>
+    <element name="ORDER_STATUS" value="ORDER_STATUS" dataType="xsd:integer" label="Order Status" breakOrder="None" fieldOrder="7"/>
+    <element name="ORDER_TOTAL" value="ORDER_TOTAL" dataType="xsd:double" label="Order Total Amount" breakOrder="None" fieldOrder="8"/>
+    <element name="SALESREP" value="SALESREP" dataType="xsd:string" label="Sales Representative" breakOrder="None" fieldOrder="9"/>
+    <element name="SALECOMM" value="SALECOMM" dataType="xsd:integer" label="Sales Commission" breakOrder="None" fieldOrder="10"/>
+    <element name="CUSTOMER_NAME" value="CUSTOMER_NAME" dataType="xsd:string" label="Customer" breakOrder="None" fieldOrder="11"/>
+    <element name="EMPLOYEE_ID" value="EMPLOYEE_ID" dataType="xsd:integer" label="Sales Representative Id" breakOrder="None" fieldOrder="12"/>
+    <element name="STREET_ADDRESS" value="STREET_ADDRESS" dataType="xsd:string" label="Address Line" breakOrder="None" fieldOrder="13"/>
+    <element name="POSTAL_CODE" value="POSTAL_CODE" dataType="xsd:string" label="ZIP Code" breakOrder="None" fieldOrder="14"/>
+    <element name="CREDIT_LIMIT" value="CREDIT_LIMIT" dataType="xsd:double" label="Customer Creidt Limit" breakOrder="None" fieldOrder="15"/>
+    <element name="CUST_EMAIL" value="CUST_EMAIL" dataType="xsd:string" label="Customer Email" breakOrder="None" fieldOrder="16"/>
+    <element name="PROD_CAT" value="PROD_CAT" dataType="xsd:string" label="Product Category" breakOrder="None" fieldOrder="19"/>
+    <element name="CUSTOMER_ID_1" value="CUSTOMER_ID_1" dataType="xsd:integer" label="CUSTOMER_ID_1" breakOrder="None" fieldOrder="13"/>
+    <element name="PRODUCT_NAME" value="PRODUCT_NAME" dataType="xsd:string" label="PRODUCT_NAME" breakOrder="None" fieldOrder="18"/>
+    <element name="ORDER_YEAR" value="ORDER_YEAR" dataType="xsd:string" label="Order Year" breakOrder="null" fieldOrder="17"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+<layouts><layout name="SalesData" left="47px" top="210px"/><layout name="weather" left="40px" top="93px"/><layout name="newsny" left="265px" top="95px"/><layout name="news" left="35px" top="13px"/><layout name="SalesData" left="496px" top="41px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

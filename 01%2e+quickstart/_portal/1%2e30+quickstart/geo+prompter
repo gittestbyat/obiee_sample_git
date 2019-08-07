@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="7qfsvnimivvqmmul" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sawd:dashboardColumn name="Column 0" duid="uvefjn1fu5taigvg" layoutType="bestFit"><sawd:dashboardSection name="Section 0" collapsible="false" duid="4go3btqqt3bsvis1" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:globalFilterView name="GFP 1" path="/shared/01. QuickStart/Simple Demo Dashboard/Geo Prompter/Map Prompt Revenue" duid="cooln3nv0t8vg9hq" scope="dashboardPage"><saw:caption><saw:text>Map Prompt Revenue</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 1" display="embed" showView="" links="" duid="pmgdi8pt8sjnhu7i"><saw:caption><saw:text>Geo Prompter</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/01. QuickStart/Simple Demo Dashboard/Geo Prompter/Geo Prompter"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

@@ -1,0 +1,5126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">	
+   
+   
+   
+   <saw:criteria subjectArea="&quot;A - Sample Sales&quot;" xsi:type="saw:simpleCriteria" withinHierarchy="true">		
+      
+      
+      
+      <saw:columns>			
+         
+         
+         
+         <saw:column columnID="c3" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2875" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Generic Columns</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2876" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Dimension</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true">					</saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;}</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c1" xsi:type="saw:regularColumn">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2877" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Generic Columns</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2878" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Metric</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true" suppress="repeat">						
+                  
+                  
+                  
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false">                                                               							
+                     
+                     
+                     
+						
+                     <saw:actionLink xsi:type="saw:actionLink" actionLinkID="b2f92952033d9f93">								
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action>
+                           <saw:actionName>Distribution</saw:actionName>
+                           <saw:parameters allowExtraParameters="true">
+                              <saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false">
+                                 <saw:prompt>__navigateToBIContent__</saw:prompt>
+                                 <saw:description/></saw:parameter></saw:parameters>
+                           <saw:assignments>
+                              <saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign">
+                                 <saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Distribution</saw:value></saw:assign></saw:assignments>
+                           <saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation>
+                           <saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action>
+                        <saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Distribution</saw:text>
+								</saw:caption>
+							</saw:actionLink>
+                     <saw:actionLink xsi:type="saw:actionLink" actionLinkID="3ba0fa0b95d2d755">								
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action>
+                           <saw:actionName>8020</saw:actionName>
+                           <saw:parameters allowExtraParameters="true">
+                              <saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false">
+                                 <saw:prompt>__navigateToBIContent__</saw:prompt>
+                                 <saw:description/></saw:parameter></saw:parameters>
+                           <saw:assignments>
+                              <saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign">
+                                 <saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/8020</saw:value></saw:assign></saw:assignments>
+                           <saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation>
+                           <saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action>
+                        <saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Eighty Twenty</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c15" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2879" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2880" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>LCL</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true" suppress="repeat">						
+                  
+                  
+                  
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false">                                                               
+                     							
+                     
+                     
+                     
+                     
+						<saw:actionLink xsi:type="saw:actionLink" actionLinkID="b2f92952033d9f93">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>Distribution</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Distribution</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Distribution</saw:text>
+								</saw:caption>
+							</saw:actionLink><saw:actionLink xsi:type="saw:actionLink" actionLinkID="3ba0fa0b95d2d755">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>8020</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/8020</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Eighty Twenty</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">AVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;})-(@{Sigmas}{0.5}*stddev (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}))</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c19" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2881" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2882" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Avg</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true" suppress="repeat">						
+                  
+                  
+                  
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false">                                                               
+                     							
+                     
+                     
+                     
+                     
+						<saw:actionLink xsi:type="saw:actionLink" actionLinkID="b2f92952033d9f93">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>Distribution</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Distribution</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Distribution</saw:text>
+								</saw:caption>
+							</saw:actionLink><saw:actionLink xsi:type="saw:actionLink" actionLinkID="3ba0fa0b95d2d755">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>8020</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/8020</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Eighty Twenty</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">AVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;})</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c20" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2883" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2884" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>UCL</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true" suppress="repeat">						
+                  
+                  
+                  
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false">                                                               
+                     							
+                     
+                     
+                     
+                     
+						<saw:actionLink xsi:type="saw:actionLink" actionLinkID="b2f92952033d9f93">								
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <saw:action><saw:actionName>Distribution</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Distribution</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">                                                                                          
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>                                                                                          
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>                                                                                          
+                              <saw:scriptPath/></saw:implementation><saw:clientImplementation>                                                                                          
+                              <saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Distribution</saw:text>
+								</saw:caption>
+							</saw:actionLink><saw:actionLink xsi:type="saw:actionLink" actionLinkID="3ba0fa0b95d2d755">								
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <saw:action><saw:actionName>8020</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/8020</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">                                                                                          
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>                                                                                          
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>                                                                                          
+                              <saw:scriptPath/></saw:implementation><saw:clientImplementation>                                                                                          
+                              <saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Eighty Twenty</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">AVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;})+(@{Sigmas}{0.5}*stddev (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}))</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c24" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec backgroundColor="#FFFFFF" fontSize="9" wrapText="true">						
+                  
+                  
+                  
+                  <saw:dataFormat commas="false" negativeType="minus" minDigits="2" maxDigits="2" xsi:type="saw:number"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2885" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Coeff of Var</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2886" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">stddev(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;})/cast(avg(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}) as double)</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c37" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2887" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2888" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Cluster #</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec backgroundColor="#FFFFFF" fontSize="9" wrapText="true"/>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c21" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2889" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc (Chart)</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2890" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Cluster UCL</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true" suppress="repeat">						
+                  
+                  
+                  
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false">                                                               
+                     							
+                     
+                     
+                     
+                     
+						<saw:actionLink xsi:type="saw:actionLink" actionLinkID="b2f92952033d9f93">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>Distribution</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Distribution</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Distribution</saw:text>
+								</saw:caption>
+							</saw:actionLink><saw:actionLink xsi:type="saw:actionLink" actionLinkID="3ba0fa0b95d2d755">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>8020</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/8020</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Eighty Twenty</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">Avg(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end) + @{Sigmas}{2} * STDDEV(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end)</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c33" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2891" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc (Chart)</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2892" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Cluster LCL</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true">						
+                  
+                  
+                  
+                  <saw:actionLinks showPopupMenuForOneLink="true">                                                               
+                     <saw:actionLink xsi:type="saw:actionLink" actionLinkID="b2f92952033d9f93">								
+                        
+                        
+                        
+                        <saw:action>									
+                           
+                           
+                           
+                           <saw:actionName>Navigate To BI Content</saw:actionName>
+									
+                           
+                           
+                           
+                           <saw:parameters allowExtraParameters="true">										
+                              
+                              
+                              
+                              <saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="999" multiValues="false">											
+                                 
+                                 
+                                 
+                                 <saw:prompt>__navigateToBIContent__</saw:prompt>
+										</saw:parameter>
+									</saw:parameters>
+									
+                           
+                           
+                           
+                           <saw:assignments>										
+                              
+                              
+                              
+                              <saw:assign xsi:type="saw:stringAssign" name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true">											
+                                 
+                                 
+                                 
+                                 <saw:value>/shared/08. Advanced Analytics/_portal/8.10 Binning and Tiling/Distribution</saw:value>
+										</saw:assign>
+									</saw:assignments>
+									
+                           
+                           
+                           
+                           <saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation>
+									
+                           
+                           
+                           
+                           <saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation>
+								</saw:action>
+								
+                        
+                        
+                        
+                        <saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Distribution</saw:text>
+								</saw:caption>
+							</saw:actionLink>							
+                     
+                     
+                     
+                     <saw:actionLink xsi:type="saw:actionLink" actionLinkID="3ba0fa0b95d2d755">								
+                        
+                        
+                        
+                        <saw:action>									
+                           
+                           
+                           
+                           <saw:actionName>Navigate To BI Content</saw:actionName>
+									
+                           
+                           
+                           
+                           <saw:parameters allowExtraParameters="true">										
+                              
+                              
+                              
+                              <saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="999" multiValues="false">											
+                                 
+                                 
+                                 
+                                 <saw:prompt>__navigateToBIContent__</saw:prompt>
+										</saw:parameter>
+									</saw:parameters>
+									
+                           
+                           
+                           
+                           <saw:assignments>										
+                              
+                              
+                              
+                              <saw:assign xsi:type="saw:stringAssign" name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true">											
+                                 
+                                 
+                                 
+                                 <saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/8020</saw:value>
+										</saw:assign>
+									</saw:assignments>
+									
+                           
+                           
+                           
+                           <saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation>
+									
+                           
+                           
+                           
+                           <saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation>
+								</saw:action>
+								
+                        
+                        
+                        
+                        <saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Eighty Twenty</saw:text>
+								</saw:caption>
+							</saw:actionLink>
+						</saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">/*4*/Avg(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end) - @{Sigmas}{2} * STDDEV(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end)</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c22" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2893" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc (Chart)</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2894" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Cluster Avg</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true" suppress="repeat">						
+                  
+                  
+                  
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false">                                                               
+                     							
+                     
+                     
+                     
+                     
+						<saw:actionLink xsi:type="saw:actionLink" actionLinkID="b2f92952033d9f93">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>Distribution</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Distribution</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Distribution</saw:text>
+								</saw:caption>
+							</saw:actionLink><saw:actionLink xsi:type="saw:actionLink" actionLinkID="3ba0fa0b95d2d755">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>8020</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/8020</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Eighty Twenty</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">/*2*/Avg(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end)</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c27" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2895" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2896" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Cluster Dist to Avg</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+					
+               
+               
+               
+               
+               
+               <saw:formatSpec fontColor="#000080" backgroundColor="#FFFFFF" fontSize="9" wrapText="true">						
+                  
+                  
+                  
+                  <saw:dataFormat commas="true" negativeType="minus" minDigits="2" maxDigits="2" xsi:type="saw:number"/>
+					</saw:formatSpec>
+               <saw:conditionalDisplayFormats>						
+                  
+                  
+                  
+                  <saw:conditionalDisplayFormat>							
+                     
+                     
+                     
+                     <saw:formatRule>								
+                        
+                        
+                        
+                        <saw:condition>									
+                           
+                           
+                           
+                           <sawx:expr xsi:type="sawx:comparison" op="less">										
+                              
+                              
+                              
+                              <saw:columnRef columnID="c27"/>
+										
+                              
+                              
+                              
+                              <sawx:expr xsi:type="xsd:decimal">0</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								
+                        
+                        
+                        
+                        <saw:formatSpec fontColor="#CC3333"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">(Avg(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end) - avg(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}))/ cast(stddev(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}) as double)</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c26" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2897" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2898" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Cluster Coeff of Var</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec backgroundColor="#FFFFFF" fontSize="9" wrapText="true">						
+                  
+                  
+                  
+                  <saw:dataFormat commas="false" negativeType="minus" minDigits="3" maxDigits="3" xsi:type="saw:number"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">abs((stddev(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end)) / (Avg(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end)))</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c32" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2899" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2900" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Break Point</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true" suppress="repeat">						
+                  
+                  
+                  
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false">                                                               
+                     							
+                     
+                     
+                     
+                     
+						<saw:actionLink xsi:type="saw:actionLink" actionLinkID="b2f92952033d9f93">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>Distribution</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Distribution</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Distribution</saw:text>
+								</saw:caption>
+							</saw:actionLink><saw:actionLink xsi:type="saw:actionLink" actionLinkID="3ba0fa0b95d2d755">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>8020</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/8020</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Eighty Twenty</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">case when rank ( 2*(case   when rcount(rsum(1)) &lt;=3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 end</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c23" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2901" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2902" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Start</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true" suppress="repeat">						
+                  
+                  
+                  
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false">                                                               
+                     							
+                     
+                     
+                     
+                     
+						<saw:actionLink xsi:type="saw:actionLink" actionLinkID="b2f92952033d9f93">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>Distribution</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Distribution</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Distribution</saw:text>
+								</saw:caption>
+							</saw:actionLink><saw:actionLink xsi:type="saw:actionLink" actionLinkID="3ba0fa0b95d2d755">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>8020</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/8020</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Eighty Twenty</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">case when rcount(rsum(1)) =3+1 then 1 end</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+         
+         
+         <saw:column columnID="c36" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            
+            
+            
+            <saw:tableHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2903" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            
+            
+            
+            <saw:columnHeading>					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2904" fmt="html">						
+                  
+                  
+                  
+                  <saw:text>Devi-ants</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec interaction="action" backgroundColor="#FFFFFF" fontSize="9" wrapText="true" suppress="repeat">						
+                  
+                  
+                  
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false">                                                               
+                     							
+                     
+                     
+                     
+                     
+						<saw:actionLink xsi:type="saw:actionLink" actionLinkID="b2f92952033d9f93">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>Distribution</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Distribution</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Distribution</saw:text>
+								</saw:caption>
+							</saw:actionLink><saw:actionLink xsi:type="saw:actionLink" actionLinkID="3ba0fa0b95d2d755">								
+                        
+                        
+                        
+                        
+								
+                        
+                        
+                        
+                        <saw:action><saw:actionName>8020</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="true" parentHidden="true" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/8020</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              
+                              
+                              
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              
+                              
+                              
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              
+                              
+                              
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              
+                              
+                              
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           
+                           
+                           
+                           <saw:text>Eighty Twenty</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            
+            
+            
+            <saw:columnFormula>					
+               
+               
+               
+               <sawx:expr xsi:type="sawx:sqlExpression">case when abs(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}-Avg(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end))&gt; @{Sigmas}{2} * STDDEV(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by case when rcount(rsum(1)) &lt;=3 then  0 else 1+rsum(case when rank ( 2*(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end) - msum(case   when rcount(rsum(1)) &lt;3 then  null  else abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) -(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) + abs(MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3) - (MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 2) + MAVG (@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}, 3)) /2) end,2) ) &lt;(@{Clusters}{3}) then 1 else 0 end) end) then @{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} end</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+		</saw:columns>
+		
+      
+      
+      
+      <saw:filter>                           
+         <sawx:expr xsi:type="sawx:logical" op="and">                                    
+            <sawx:expr xsi:type="sawx:special" op="prompted">                                             
+               <sawx:expr xsi:type="sawx:columnExpression" formulaUse="code" displayUse="display">                                                      
+                  <saw:columnFormula formulaUse="display">                                                               
+                     <sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C4  Customer Segment&quot;</sawx:expr></saw:columnFormula></sawx:expr></sawx:expr>                                    
+            <sawx:expr xsi:type="sawx:special" op="prompted">                                             
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></sawx:expr>                                    
+            <sawx:expr xsi:type="sawx:special" op="prompted">                                             
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter>
+      
+      
+      
+      <saw:columnOrder>			
+         
+         
+         
+         <saw:columnOrderRef columnID="c3" direction="ascending"/>
+		</saw:columnOrder>
+	</saw:criteria>
+	
+   
+   
+   
+   <saw:views currentView="0">		
+      
+      
+      
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">			
+         
+         
+         
+         <saw:cvTable>				
+            
+            
+            
+            <saw:cvRow>					
+               
+               
+               
+               <saw:cvCell viewName="titleView!1" colSpan="3">						
+                  
+                  
+                  
+                  <saw:displayFormat/>
+					</saw:cvCell></saw:cvRow>
+				
+            
+            
+            
+            <saw:cvRow>					
+               
+               
+               
+               <saw:cvCell colSpan="3" viewName="legendView!1">						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec height="9"/>
+						</saw:displayFormat>
+					</saw:cvCell></saw:cvRow>
+				
+            
+            
+            
+            <saw:cvRow>					
+               
+               
+               
+               <saw:cvCell colSpan="3" viewName="viewSelector!1"/></saw:cvRow>
+				
+            
+            
+            
+            <saw:cvRow>					
+               
+               
+               
+               <saw:cvCell viewName="pivotTableView!1"/>
+					
+               
+               
+               
+               <saw:cvCell viewName="staticchart!5" colSpan="2"/></saw:cvRow>
+				
+            
+            
+            
+            <saw:cvRow>					
+               
+               
+               
+               <saw:cvCell viewName="pivotTableView!2" rowSpan="2"/>
+					
+               
+               
+               
+               <saw:cvCell viewName="staticchart!1" rowSpan="2"/>
+					
+               
+               
+               
+               <saw:cvCell viewName="staticchart!3"/></saw:cvRow>
+				
+            
+            
+            
+            <saw:cvRow>					
+               
+               
+               
+               <saw:cvCell viewName="staticchart!4"/></saw:cvRow></saw:cvTable></saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none" logoUrl="fmap:images/report_medicalResearch.jpg" helpUrl="saw.dll?GO&amp;Path=/shared/08. Advanced Analytics/AdHoc Calculations/Control Chart/SPC Control Chart - Help">
+         <saw:createdTime>				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec fontColor="#666666" borderPosition="none"/>
+				</saw:displayFormat>
+			</saw:createdTime>
+         <saw:displayFormat>				
+            
+            
+            
+            <saw:formatSpec borderColor="#660000" borderPosition="8" borderStyle="double" vAlign="middle" width="95%" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+			</saw:displayFormat>
+         <saw:logoFormat>				
+            
+            
+            
+            <saw:displayFormat/>
+			</saw:logoFormat>
+         <saw:title>				
+            
+            
+            
+            <saw:caption fmt="text" captionID="kcap12851338_2872">					
+               
+               
+               
+               <saw:text>SPC Control Chart (Statistical Process Control)</saw:text>
+				</saw:caption>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec fontColor="#000000" borderPosition="none" fontStyle="bold,italic" paddingLeft="15" paddingRight="0" paddingTop="2" paddingBottom="0" vAlign="top"/>
+				</saw:displayFormat>
+			</saw:title>
+         <saw:subTitle>				
+            
+            
+            
+            <saw:caption fmt="text" captionID="kcap12851338_2873">					
+               
+               
+               
+               <saw:text>Dynamic detection of breaking points in distribution of @{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} values over @{Dim01}{&quot;Time&quot;.&quot;T02 Per Name Month&quot;}</saw:text>
+				</saw:caption>
+				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec fontStyle="italic" borderPosition="none" paddingLeft="5" paddingRight="0" paddingTop="0" paddingBottom="0" vAlign="middle" fontColor="#505050"/>
+				</saw:displayFormat>
+			</saw:subTitle></saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:tableView" name="tableView!1" deck="bottom" headingDisplay="table2Rows" sortable="true" rowsPerPage="500">			
+         
+         
+         
+         <saw:edges>				
+            
+            
+            
+            <saw:edge axis="page" showColumnHeader="true"/>
+				
+            
+            
+            
+            <saw:edge axis="section"/>
+				
+            
+            
+            
+            <saw:edge axis="row" showColumnHeader="true">					
+               
+               
+               
+               <saw:edgeLayers>						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c3"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c1"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c15"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c19"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c20"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c24"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c37"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c21"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c33"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c22"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c27"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c26"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c32"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c23"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c36"/>
+						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c25"/>
+					</saw:edgeLayers>
+				</saw:edge>
+				
+            
+            
+            
+            <saw:edge axis="column"/>
+			</saw:edges>
+		</saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:dvtchart" name="staticchart!1">			
+         
+         
+         
+         <saw:canvasFormat width="320" height="300" showGradient="false">				
+            
+            
+            
+            <saw:dataLabels/>
+				
+            
+            
+            
+            <saw:title mode="custom">					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2907">						
+                  
+                  
+                  
+                  <saw:text>Bubble size = # of individuals</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:textFormat fontStyle="bold" fontSize="10"/>
+				
+               
+               
+               
+               <saw:displayFormat>                                                      
+                  <saw:formatSpec/></saw:displayFormat></saw:title>
+				
+            
+            
+            
+            <saw:gridlines default="false">					
+               
+               
+               
+               <saw:vertical>						
+                  
+                  
+                  
+                  <saw:major visible="true"/>
+						
+                  
+                  
+                  
+                  <saw:minor color="#EEEEEE" visible="true"/>
+					</saw:vertical>
+					
+               
+               
+               
+               <saw:horizontal>						
+                  
+                  
+                  
+                  <saw:major visible="true"/>
+						
+                  
+                  
+                  
+                  <saw:minor color="#EEEEEE" visible="true"/>
+					</saw:horizontal>
+				</saw:gridlines>
+			</saw:canvasFormat>
+			
+         
+         
+         
+         <saw:axesFormats syncAxis="false">				
+            
+            
+            
+            <saw:axisFormat axis="Y1" displayScaleLabels="true">					
+               
+               
+               
+               <saw:scaleMarkers>						
+					</saw:scaleMarkers>
+					
+               
+               
+               
+               <saw:scale min="0" max="1" majorTicks="6" minorTicks="1" scaleValues="custom" defaultTicks="false" showMinorTicks="true" showMajorTicks="true" logarithmic="false"/>
+					
+               
+               
+               
+               <saw:title mode="custom">						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2910">							
+                     
+                     
+                     
+                     <saw:text>Coeff of Variation (blue line = whole report)</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec fontStyle="bold" fontSize="10"/>
+						</saw:displayFormat>
+					</saw:title>
+					
+               
+               
+               
+               <saw:labels>						
+                  
+                  
+                  
+                  <saw:dataFormat xsi:type="saw:number" negativeType="minus" minDigits="1" maxDigits="1" commas="false"/>
+					</saw:labels>
+				</saw:axisFormat>
+				
+            
+            
+            
+            <saw:axisFormat axis="X">					
+               
+               
+               
+               <saw:scale min="-3" max="3" majorTicks="7" minorTicks="1" scaleValues="custom" defaultTicks="false" showMinorTicks="true" showMajorTicks="true" logarithmic="false"/>
+					
+               
+               
+               
+               <saw:scaleMarkers>						
+                  
+                  
+                  
+                  <saw:scaleMarker color="#FFE5E5" xsi:type="saw:scaleMarkerRange">							
+                     
+                     
+                     
+                     <saw:rangeLow>								
+                        
+                        
+                        
+                        <sawx:expr xsi:type="xsd:decimal">-3</sawx:expr>
+							</saw:rangeLow>
+							
+                     
+                     
+                     
+                     <saw:rangeHigh>								
+                        
+                        
+                        
+                        <sawx:expr xsi:type="xsd:decimal">0</sawx:expr>
+							</saw:rangeHigh>
+						</saw:scaleMarker>
+						
+                  
+                  
+                  
+                  <saw:scaleMarker color="#EEEEF9" xsi:type="saw:scaleMarkerRange">							
+                     
+                     
+                     
+                     <saw:rangeLow>								
+                        
+                        
+                        
+                        <sawx:expr xsi:type="xsd:decimal">0</sawx:expr>
+							</saw:rangeLow>
+							
+                     
+                     
+                     
+                     <saw:rangeHigh>								
+                        
+                        
+                        
+                        <sawx:expr xsi:type="xsd:decimal">3</sawx:expr>
+							</saw:rangeHigh>
+						</saw:scaleMarker>
+						
+                  
+                  
+                  
+                  <saw:scaleMarker color="#0000FF" xsi:type="saw:scaleMarkerLine">							
+                     
+                     
+                     
+                     <saw:lineWidth>								
+                        
+                        
+                        
+                        <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+							</saw:lineWidth>
+							
+                     
+                     
+                     
+                     <saw:linePosition>								
+                        
+                        
+                        
+                        <sawx:expr xsi:type="xsd:decimal">0</sawx:expr>
+							</saw:linePosition>
+						</saw:scaleMarker>
+					</saw:scaleMarkers>
+					
+               
+               
+               
+               <saw:title mode="custom">						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2911">							
+                     
+                     
+                     
+                     <saw:text>Distance to Report Average (expressed in StdDev)</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec fontStyle="bold" fontSize="10"/>
+						</saw:displayFormat>
+					</saw:title>
+				</saw:axisFormat>
+			</saw:axesFormats>
+			
+         
+         
+         
+         <saw:legendFormat position="none" transparentFill="true"/>
+			
+         
+         
+         
+         <saw:selections>				
+            
+            
+            
+            <saw:categories>					
+               
+               
+               
+               <saw:category>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c19"/>
+					</saw:category>
+				</saw:categories>
+				
+            
+            
+            
+            <saw:measures>					
+               
+               
+               
+               <saw:column measureType="z">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c3"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="x">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c27"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c26"/>
+					</saw:column>
+				</saw:measures>
+				
+            
+            
+            
+            <saw:seriesGenerators>					
+               
+               
+               
+               <saw:seriesGenerator>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c37"/>
+					</saw:seriesGenerator>
+					
+               
+               
+               
+               <saw:measureLabels/>
+				</saw:seriesGenerators>
+			</saw:selections>
+			
+         
+         
+         
+         <saw:seriesFormats>				
+            
+            
+            
+            <saw:seriesFormatGroup name="bar"/>
+			</saw:seriesFormats>
+			
+         
+         
+         
+         <saw:display type="bubble" subtype="default" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">				
+            
+            
+            
+            <saw:style effect="2d" fillStyle="default"/>
+			</saw:display>
+		</saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:dvtchart" name="staticchart!2">			
+         
+         
+         
+         <saw:canvasFormat width="1000" height="350" showGradient="false">				
+            
+            
+            
+            <saw:title mode="custom"/>
+				
+            
+            
+            
+            <saw:gridlines default="false">					
+               
+               
+               
+               <saw:vertical>						
+                  
+                  
+                  
+                  <saw:major visible="false"/>
+						
+                  
+                  
+                  
+                  <saw:minor color="#EEEEEE" visible="false"/>
+					</saw:vertical>
+					
+               
+               
+               
+               <saw:horizontal>						
+                  
+                  
+                  
+                  <saw:major visible="true"/>
+						
+                  
+                  
+                  
+                  <saw:minor color="#EEEEEE" visible="true"/>
+					</saw:horizontal>
+				</saw:gridlines>
+			</saw:canvasFormat>
+			
+         
+         
+         
+         <saw:axesFormats>				
+            
+            
+            
+            <saw:axisFormat axis="X">					
+               
+               
+               
+               <saw:title mode="custom"/>
+					
+               
+               
+               
+               <saw:labels stagger="true" rotate="45" skipLabels="true"/>
+					
+               
+               
+               
+               <saw:textFormat fontStyle="regular" fontSize="8"/>
+				</saw:axisFormat>
+				
+            
+            
+            
+            <saw:axisFormat axis="Y1">					
+               
+               
+               
+               <saw:title mode="custom"/>
+					
+               
+               
+               
+               <saw:scaleMarkers>						
+                  
+                  
+                  
+                  <saw:scaleMarker color="#FFFFE7" xsi:type="saw:scaleMarkerRange">							
+                     
+                     
+                     
+                     <saw:rangeLow>								
+                        
+                        
+                        
+                        <saw:columnRef columnID="c15"/>
+							</saw:rangeLow>
+							
+                     
+                     
+                     
+                     <saw:rangeHigh>								
+                        
+                        
+                        
+                        <saw:columnRef columnID="c20"/>
+							</saw:rangeHigh>
+							
+                     
+                     
+                     
+                     <saw:markerLabel>								
+                        
+                        
+                        
+                        <saw:title mode="custom">									
+                           
+                           
+                           
+                           <saw:caption captionID="kcap12851338_2945">										
+                              
+                              
+                              
+                              <saw:text>.</saw:text>
+									</saw:caption>
+								</saw:title>
+							</saw:markerLabel>
+						</saw:scaleMarker>
+					</saw:scaleMarkers>
+				</saw:axisFormat>
+			</saw:axesFormats>
+			
+         
+         
+         
+         <saw:legendFormat position="none"/>
+			
+         
+         
+         
+         <saw:selections>				
+            
+            
+            
+            <saw:categories>					
+               
+               
+               
+               <saw:category>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c3"/>
+					</saw:category>
+				</saw:categories>
+				
+            
+            
+            
+            <saw:measures>					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c1"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c15"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c19"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c20"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c32"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c23"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c36"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c21"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c33"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column measureType="y">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c22"/>
+					</saw:column>
+				</saw:measures>
+				
+            
+            
+            
+            <saw:seriesGenerators>					
+               
+               
+               
+               <saw:measureLabels/>
+				</saw:seriesGenerators>
+			</saw:selections>
+			
+         
+         
+         
+         <saw:seriesFormats>				
+            
+            
+            
+            <saw:seriesFormatGroup name="line">					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="1"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" lineWidth="1" symbol="off" color="#0000FF"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="2"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" symbol="off" lineWidth="1" color="#FFCC99"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="3"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" symbol="off" lineWidth="1" color="#000000" lineStyle="dotted"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="4"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" symbol="off" lineWidth="1" color="#FFCC99"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="5"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" symbol="diamond" lineWidth="0" symbolColor="#FF00FF"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="6"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" symbol="triangle" lineWidth="1" symbolColor="#7EB679"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="7"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" lineWidth="0" symbolColor="#FF00FF"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="8"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" lineWidth="1" symbol="off" color="#CC3333"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="9"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" lineWidth="1" symbol="off" color="#CC3333"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="10"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" color="#336633" lineWidth="1" symbol="off"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+				</saw:seriesFormatGroup>
+			</saw:seriesFormats>
+			
+         
+         
+         
+         <saw:display type="line" subtype="default">				
+            
+            
+            
+            <saw:style lineStyle="standardLine" effect="2d"/>
+			</saw:display>
+			
+         
+         
+         
+         <saw:viewCaption>				
+            
+            
+            
+            <saw:caption>					
+               
+               
+               
+               <saw:text>Classic (works with any dimension)</saw:text></saw:caption></saw:viewCaption></saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2" autoPreview="true">			
+         
+         
+         
+         <saw:edges>				
+            
+            
+            
+            <saw:edge axis="page" showColumnHeader="true">				</saw:edge>
+				
+            
+            
+            
+            <saw:edge axis="section">				</saw:edge>
+				
+            
+            
+            
+            <saw:edge axis="row" showColumnHeader="false">					
+               
+               
+               
+               <saw:displayGrandTotals>						
+                  
+                  
+                  
+                  <saw:displayGrandTotal grandTotalPosition="after" id="t1">							
+                     
+                     
+                     
+                     <saw:memberFormat>								
+                        
+                        
+                        
+                        <saw:caption>									
+                           
+                           
+                           
+                           <saw:text/>
+								</saw:caption>
+								
+                        
+                        
+                        
+                        <saw:displayFormat>									
+                           
+                           
+                           
+                           <saw:formatSpec fontSize="9" fontColor="#333366" backgroundColor="#f5f3d9"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+							
+                     
+                     
+                     
+                     <saw:dataBodyFormat>								
+                        
+                        
+                        
+                        <saw:displayFormat>									
+                           
+                           
+                           
+                           <saw:formatSpec backgroundColor="#f5f3d9" fontColor="#333366" fontSize="9"/>
+								</saw:displayFormat>
+							</saw:dataBodyFormat>
+						</saw:displayGrandTotal>
+					</saw:displayGrandTotals>
+					
+               
+               
+               
+               <saw:edgeLayers>						
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c37" insertPageBreak="false" uiTableName="Answers Calc">							
+                     
+                     
+                     
+                     <saw:headerFormat>								
+                        
+                        
+                        
+                        <saw:caption captionID="kcap12851338_2943">									
+                           
+                           
+                           
+                           <saw:text>#</saw:text>
+								</saw:caption>
+								
+                        
+                        
+                        
+                        <saw:displayFormat>									
+                           
+                           
+                           
+                           <saw:formatSpec borderColor="#CCCCCC" borderPosition="8"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+						</saw:edgeLayer></saw:edgeLayers></saw:edge>
+				
+            
+            
+            
+            <saw:edge axis="column">					
+               
+               
+               
+               <saw:edgeLayers>						
+                  
+                  
+                  
+                  <saw:edgeLayer type="measure" insertPageBreak="false" uiTableName="Measure Labels"/></saw:edgeLayers></saw:edge></saw:edges>
+			
+         
+         
+         
+         <saw:measuresList>				
+            
+            
+            
+            <saw:measure columnID="c3" aggRule="min" uiTableName="Generic Columns">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2912">							
+                     
+                     
+                     
+                     <saw:text>From</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat/>
+					</saw:memberFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c3" duplicateID="d1" aggRule="max" uiTableName="Generic Columns">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2913">							
+                     
+                     
+                     
+                     <saw:text>To</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat/>
+					</saw:memberFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c1" aggRule="count" uiTableName="Generic Columns">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2914">							
+                     
+                     
+                     
+                     <saw:text>Count</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat/>
+					</saw:memberFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c36" aggRule="count" uiTableName="Answers Calc"/>
+				
+            
+            
+            
+            <saw:measure columnID="c19" aggRule="none" uiTableName="Answers Calc">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2915">							
+                     
+                     
+                     
+                     <saw:text>S</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec fontColor="#FFFFFF" fontSize="1" backgroundColor="#FFFFFF" borderPosition="16" borderColor="#CCCCCC"/>
+						</saw:displayFormat>
+					</saw:memberFormat>
+					
+               
+               
+               
+               <saw:dataBodyFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec borderColor="#999999" borderPosition="16" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c33" uiTableName="Answers Calc (Chart)">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+					
+               
+               
+               
+               <saw:dataBodyFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec borderColor="#999999" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c1" duplicateID="d1" aggRule="avg" uiTableName="Generic Columns">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2916">							
+                     
+                     
+                     
+                     <saw:text>Avg</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+					
+               
+               
+               
+               <saw:dataBodyFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec wrapText="true"/>
+						</saw:displayFormat>
+					</saw:dataBodyFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c21" uiTableName="Answers Calc (Chart)">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+					
+               
+               
+               
+               <saw:dataBodyFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec wrapText="true"/>
+						</saw:displayFormat>
+					</saw:dataBodyFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c19" duplicateID="d1" aggRule="none" uiTableName="Answers Calc">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2917">							
+                     
+                     
+                     
+                     <saw:text>S</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec fontColor="#FFFFFF" fontSize="1" backgroundColor="#FFFFFF" borderPosition="16" borderColor="#CCCCCC"/>
+						</saw:displayFormat>
+					</saw:memberFormat>
+					
+               
+               
+               
+               <saw:dataBodyFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec wrapText="true" borderPosition="16" borderColor="#999999"/></saw:displayFormat></saw:dataBodyFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c1" duplicateID="d2" uiTableName="Generic Columns">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2918">							
+                     
+                     
+                     
+                     <saw:text>Sum</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+					
+               
+               
+               
+               <saw:dataBodyFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c1" duplicateID="d3" uiTableName="Generic Columns">					
+               
+               
+               
+               <saw:showAs type="percentOfAxis" axis="column">						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec>								
+                        
+                        
+                        
+                        <saw:dataFormat xsi:type="saw:percent" minDigits="1" maxDigits="1" scale="2"/></saw:formatSpec></saw:displayFormat></saw:showAs>
+					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption oldID="kcap12851338_2918">							
+                     
+                     
+                     
+                     <saw:text>% of Total</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec wrapText="true"/></saw:displayFormat>
+					</saw:memberFormat>
+					
+               
+               
+               
+               <saw:dataBodyFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c19" duplicateID="d2" aggRule="none" uiTableName="Answers Calc">					
+               
+               
+               
+               <saw:showAs type="percentOfAxis" axis="column">						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec>								
+                        
+                        
+                        
+                        <saw:dataFormat xsi:type="saw:percent" minDigits="1" maxDigits="1" scale="2"/></saw:formatSpec></saw:displayFormat></saw:showAs>
+					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2920">							
+                     
+                     
+                     
+                     <saw:text>S</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec fontColor="#FFFFFF" fontSize="1" backgroundColor="#FFFFFF" borderPosition="16" borderColor="#CCCCCC"/>
+						</saw:displayFormat>
+					</saw:memberFormat>
+					
+               
+               
+               
+               <saw:dataBodyFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec fontColor="#FFFFFF" backgroundColor="#FFFFFF" borderColor="#999999" fontSize="1" borderPosition="16" wrapText="true"/>
+						</saw:displayFormat>
+					</saw:dataBodyFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c27" uiTableName="Answers Calc">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec wrapText="true"/></saw:displayFormat>
+						
+                  
+                  
+                  
+                  <saw:caption>							
+                     
+                     
+                     
+                     <saw:text>Dist to Avg</saw:text></saw:caption></saw:memberFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c26" uiTableName="Answers Calc">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec wrapText="true"/></saw:displayFormat>
+						
+                  
+                  
+                  
+                  <saw:caption>							
+                     
+                     
+                     
+                     <saw:text>Coeff of Variation</saw:text></saw:caption></saw:memberFormat></saw:measure></saw:measuresList></saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:dvtchart" name="staticchart!3">			
+         
+         
+         
+         <saw:canvasFormat height="150" width="230" showGradient="false">				
+            
+            
+            
+            <saw:title mode="custom">					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2908">						
+                  
+                  
+                  
+                  <saw:text>Individuals</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:textFormat fontStyle="regular"/>
+				</saw:title>
+				
+            
+            
+            
+            <saw:dataLabels display="always">					
+               
+               
+               
+               <saw:textFormat fontStyle="regular" fontSize="9"/>
+				</saw:dataLabels>
+			</saw:canvasFormat>
+			
+         
+         
+         
+         <saw:selections>				
+            
+            
+            
+            <saw:seriesGenerators>					
+               
+               
+               
+               <saw:seriesGenerator>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c37"/>
+					</saw:seriesGenerator>
+					
+               
+               
+               
+               <saw:measureLabels/>
+				</saw:seriesGenerators>
+				
+            
+            
+            
+            <saw:measures>					
+               
+               
+               
+               <saw:column measureType="pie">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c3"/>
+					</saw:column>
+				</saw:measures>
+				
+            
+            
+            
+            <saw:categories>				</saw:categories>
+			</saw:selections>
+			
+         
+         
+         
+         <saw:legendFormat position="none"/>
+			
+         
+         
+         
+         <saw:display type="pie" subtype="default">				
+            
+            
+            
+            <saw:style effect="2d" fillStyle="solidFill"/>
+			</saw:display>
+		</saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:dvtchart" name="staticchart!4">			
+         
+         
+         
+         <saw:canvasFormat height="150" width="230" showGradient="false">				
+            
+            
+            
+            <saw:title mode="custom">					
+               
+               
+               
+               <saw:caption captionID="kcap12851338_2909">						
+                  
+                  
+                  
+                  <saw:text>Values</saw:text>
+					</saw:caption>
+					
+               
+               
+               
+               <saw:textFormat fontStyle="regular"/>
+				</saw:title>
+				
+            
+            
+            
+            <saw:dataLabels display="always">					
+               
+               
+               
+               <saw:textFormat fontStyle="regular" fontSize="9"/>
+				</saw:dataLabels>
+			</saw:canvasFormat>
+			
+         
+         
+         
+         <saw:selections>				
+            
+            
+            
+            <saw:seriesGenerators>					
+               
+               
+               
+               <saw:seriesGenerator>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c37"/>
+					</saw:seriesGenerator>
+					
+               
+               
+               
+               <saw:measureLabels/>
+				</saw:seriesGenerators>
+				
+            
+            
+            
+            <saw:measures>					
+               
+               
+               
+               <saw:column measureType="pie">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c1"/>
+					</saw:column>
+				</saw:measures>
+				
+            
+            
+            
+            <saw:categories>				</saw:categories>
+			</saw:selections>
+			
+         
+         
+         
+         <saw:legendFormat position="none"/>
+			
+         
+         
+         
+         <saw:display type="pie" subtype="default">				
+            
+            
+            
+            <saw:style effect="2d" fillStyle="solidFill"/>
+			</saw:display>
+		</saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:dvtchart" name="staticchart!5">			
+         
+         
+         
+         <saw:canvasFormat height="25" width="550" showGradient="false">				
+            
+            
+            
+            <saw:dataLabels display="never">					
+               
+               
+               
+               <saw:textFormat fontStyle="regular" fontSize="9"/>
+				</saw:dataLabels>
+				
+            
+            
+            
+            <saw:title mode="custom">					
+               
+               
+               
+               <saw:textFormat fontStyle="regular"/>
+				</saw:title>
+			</saw:canvasFormat>
+			
+         
+         
+         
+         <saw:selections>				
+            
+            
+            
+            <saw:seriesGenerators>					
+               
+               
+               
+               <saw:seriesGenerator>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c37"/>
+					</saw:seriesGenerator>
+					
+               
+               
+               
+               <saw:measureLabels/>
+				</saw:seriesGenerators>
+				
+            
+            
+            
+            <saw:measures>					
+               
+               
+               
+               <saw:column measureType="pie">						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c1"/>
+					</saw:column>
+				</saw:measures>
+				
+            
+            
+            
+            <saw:categories>				</saw:categories>
+			</saw:selections>
+			
+         
+         
+         
+         <saw:legendFormat position="top"/>
+			
+         
+         
+         
+         <saw:display type="pie" subtype="default">				
+            
+            
+            
+            <saw:style effect="2d" fillStyle="solidFill"/>
+			</saw:display>
+		</saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:legendView" name="legendView!1" across="10">			
+         
+         
+         
+         <saw:captionFormat position="right">				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec fontSize="9"/>
+				</saw:displayFormat>
+			</saw:captionFormat>
+			
+         
+         
+         
+         <saw:legendList>				
+            
+            
+            
+            <saw:legendItem>					
+               
+               
+               
+               <saw:legendCaption>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2923">							
+                     
+                     
+                     
+                     <saw:text>Values</saw:text>
+						</saw:caption>
+					</saw:legendCaption>
+					
+               
+               
+               
+               <saw:sampleText>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2924">							
+                     
+                     
+                     
+                     <saw:text>____</saw:text>
+						</saw:caption>
+					</saw:sampleText>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontSize="4" height="5" vAlign="top" fontColor="#0000FF" backgroundColor="#FFFFFF" borderPosition="none" fontStyle="bold"/>
+					</saw:displayFormat>
+				</saw:legendItem>
+				
+            
+            
+            
+            <saw:legendItem>					
+               
+               
+               
+               <saw:sampleText>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2925">							
+                     
+                     
+                     
+                     <saw:text>-  -  -  -</saw:text>
+						</saw:caption>
+					</saw:sampleText>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontSize="5" fontColor="#000000" backgroundColor="#FFFFFF" borderPosition="none" vAlign="top" height="5" fontStyle="bold"/>
+					</saw:displayFormat>
+					
+               
+               
+               
+               <saw:legendCaption>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2926">							
+                     
+                     
+                     
+                     <saw:text>Average</saw:text>
+						</saw:caption>
+					</saw:legendCaption>
+				</saw:legendItem>
+				
+            
+            
+            
+            <saw:legendItem>					
+               
+               
+               
+               <saw:legendCaption>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2927">							
+                     
+                     
+                     
+                     <saw:text>Control Zone</saw:text>
+						</saw:caption>
+					</saw:legendCaption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#996600" backgroundColor="#FFFFD4" borderColor="#FF9933" fontSize="4" borderPosition="10" vAlign="middle" height="5"/>
+					</saw:displayFormat>
+					
+               
+               
+               
+               <saw:sampleText>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2928">							
+                     
+                     
+                     
+                     <saw:text>-  -  -  -</saw:text>
+						</saw:caption>
+					</saw:sampleText>
+				</saw:legendItem>
+				
+            
+            
+            
+            <saw:legendItem>					
+               
+               
+               
+               <saw:sampleText/>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec backgroundColor="#FFFFFF" fontSize="4" borderPosition="none" height="5"/>
+					</saw:displayFormat>
+				</saw:legendItem>
+				
+            
+            
+            
+            <saw:legendItem>					
+               
+               
+               
+               <saw:sampleText>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2929">							
+                     
+                     
+                     
+                     <saw:text>____</saw:text>
+						</saw:caption>
+					</saw:sampleText>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec backgroundColor="#FFFFFF" fontSize="4" borderPosition="none" height="5" fontColor="#008000" fontStyle="bold" vAlign="top"/>
+					</saw:displayFormat>
+					
+               
+               
+               
+               <saw:legendCaption>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2930">							
+                     
+                     
+                     
+                     <saw:text>Cluster Average</saw:text>
+						</saw:caption>
+					</saw:legendCaption>
+				</saw:legendItem>
+				
+            
+            
+            
+            <saw:legendItem>					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#FF0000" backgroundColor="#FFFFFF" fontSize="4" fontStyle="bold" borderPosition="none" vAlign="top" height="5"/>
+					</saw:displayFormat>
+					
+               
+               
+               
+               <saw:legendCaption>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2931">							
+                     
+                     
+                     
+                     <saw:text>Cluster Control Zone</saw:text>
+						</saw:caption>
+					</saw:legendCaption>
+					
+               
+               
+               
+               <saw:sampleText>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2932">							
+                     
+                     
+                     
+                     <saw:text>____</saw:text>
+						</saw:caption>
+					</saw:sampleText>
+				</saw:legendItem>
+				
+            
+            
+            
+            <saw:legendItem>					
+               
+               
+               
+               <saw:sampleText/>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#FF00FF" backgroundColor="#FFFFFF" fontSize="4" fontStyle="bold" borderPosition="none" vAlign="top" height="5"/>
+					</saw:displayFormat>
+				</saw:legendItem>
+				
+            
+            
+            
+            <saw:legendItem>					
+               
+               
+               
+               <saw:sampleText>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2933">							
+                     
+                     
+                     
+                     <saw:text>^</saw:text>
+						</saw:caption>
+					</saw:sampleText>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#008000" backgroundColor="#FFFFFF" fontSize="10" fontStyle="bold" borderPosition="none" vAlign="middle" height="5" fontEffects="strikethrough"/>
+					</saw:displayFormat>
+					
+               
+               
+               
+               <saw:legendCaption>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2934">							
+                     
+                     
+                     
+                     <saw:text>Analysis Starting Mark</saw:text>
+						</saw:caption>
+					</saw:legendCaption>
+				</saw:legendItem>
+				
+            
+            
+            
+            <saw:legendItem>					
+               
+               
+               
+               <saw:sampleText>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2935">							
+                     
+                     
+                     
+                     <saw:text>^</saw:text>
+						</saw:caption>
+					</saw:sampleText>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#FF00FF" backgroundColor="#FFFFFF" fontSize="10" fontStyle="bold" fontEffects="strikethrough" borderPosition="none" vAlign="middle" height="5"/>
+					</saw:displayFormat>
+					
+               
+               
+               
+               <saw:legendCaption>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2936">							
+                     
+                     
+                     
+                     <saw:text>Breaking Individual</saw:text>
+						</saw:caption>
+					</saw:legendCaption>
+				</saw:legendItem>
+				
+            
+            
+            
+            <saw:legendItem>					
+               
+               
+               
+               <saw:sampleText>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2937">							
+                     
+                     
+                     
+                     <saw:text>[]</saw:text>
+						</saw:caption>
+					</saw:sampleText>
+					
+               
+               
+               
+               <saw:legendCaption>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2938">							
+                     
+                     
+                     
+                     <saw:text>Cluster Deviant Individual</saw:text>
+						</saw:caption>
+					</saw:legendCaption>
+					
+               
+               
+               
+               <saw:displayFormat>						
+                  
+                  
+                  
+                  <saw:formatSpec fontColor="#FF00FF" backgroundColor="#FFFFFF" fontSize="7" fontStyle="bold" borderPosition="none" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:legendItem>
+			</saw:legendList>
+			
+         
+         
+         
+         <saw:title/>
+			
+         
+         
+         
+         <saw:legendTable>				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec backgroundColor="#FFFFFF" borderPosition="none" height="9"/>
+				</saw:displayFormat>
+			</saw:legendTable>
+		</saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:viewSelector" name="viewSelector!1">			
+         
+         
+         
+         <saw:viewSelectorCaption position="left">				
+            
+            
+            
+            <saw:caption captionID="kcap12851338_2874">					
+               
+               
+               
+               <saw:text>Select Classic or Timeline Chart</saw:text>
+				</saw:caption>
+			</saw:viewSelectorCaption>
+			
+         
+         
+         
+         <saw:viewList>				
+            
+            
+            
+            <saw:viewItem type="view" name="staticchart!2"/>
+				
+            
+            
+            
+            <saw:viewItem type="view" name="staticchart!7"/>
+			</saw:viewList>
+		</saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:dvtchart" name="staticchart!7">			
+         
+         
+         
+         <saw:canvasFormat width="1000" height="350" showGradient="false">				
+            
+            
+            
+            <saw:title mode="custom"/>
+				
+            
+            
+            
+            <saw:gridlines default="false">					
+               
+               
+               
+               <saw:vertical>						
+                  
+                  
+                  
+                  <saw:major visible="false"/>
+						
+                  
+                  
+                  
+                  <saw:minor color="#EEEEEE" visible="false"/>
+					</saw:vertical>
+					
+               
+               
+               
+               <saw:horizontal>						
+                  
+                  
+                  
+                  <saw:major visible="true"/>
+						
+                  
+                  
+                  
+                  <saw:minor color="#EEEEEE" visible="true"/>
+					</saw:horizontal>
+				</saw:gridlines>
+			</saw:canvasFormat>
+			
+         
+         
+         
+         <saw:axesFormats>				
+            
+            
+            
+            <saw:axisFormat axis="Y1">					
+               
+               
+               
+               <saw:title mode="custom"/>
+					
+               
+               
+               
+               <saw:scaleMarkers>						
+                  
+                  
+                  
+                  <saw:scaleMarker color="#FFFFE7" xsi:type="saw:scaleMarkerRange">							
+                     
+                     
+                     
+                     <saw:rangeLow>								
+                        
+                        
+                        
+                        <saw:columnRef columnID="c15"/>
+							</saw:rangeLow>
+							
+                     
+                     
+                     
+                     <saw:rangeHigh>								
+                        
+                        
+                        
+                        <saw:columnRef columnID="c20"/>
+							</saw:rangeHigh>
+							
+                     
+                     
+                     
+                     <saw:markerLabel>								
+                        
+                        
+                        
+                        <saw:title mode="custom">									
+                           
+                           
+                           
+                           <saw:caption captionID="kcap12851338_2946">										
+                              
+                              
+                              
+                              <saw:text>.</saw:text>
+									</saw:caption>
+								</saw:title>
+							</saw:markerLabel>
+						</saw:scaleMarker>
+					</saw:scaleMarkers>
+				</saw:axisFormat>
+				
+            
+            
+            
+            <saw:axisFormat axis="X">					
+               
+               
+               
+               <saw:title mode="custom"/>
+					
+               
+               
+               
+               <saw:labels stagger="true" rotate="45" skipLabels="true"/>
+					
+               
+               
+               
+               <saw:textFormat fontStyle="regular" fontSize="8"/>
+				</saw:axisFormat>
+			</saw:axesFormats>
+			
+         
+         
+         
+         <saw:legendFormat position="none"/>
+			
+         
+         
+         
+         <saw:selections>				
+            
+            
+            
+            <saw:categories>					
+               
+               
+               
+               <saw:category>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c3"/>
+					</saw:category>
+				</saw:categories>
+				
+            
+            
+            
+            <saw:measures>					
+               
+               
+               
+               <saw:column>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c1"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c15"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c19"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c20"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c32"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c23"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c36"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c21"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c33"/>
+					</saw:column>
+					
+               
+               
+               
+               <saw:column>						
+                  
+                  
+                  
+                  <saw:columnRef columnID="c22"/>
+					</saw:column>
+				</saw:measures>
+				
+            
+            
+            
+            <saw:seriesGenerators>					
+               
+               
+               
+               <saw:measureLabels/>
+				</saw:seriesGenerators>
+			</saw:selections>
+			
+         
+         
+         
+         <saw:seriesFormats>				
+            
+            
+            
+            <saw:seriesFormatGroup name="">					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="1"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" color="#0000FF" lineWidth="1" symbol="off"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="2"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" color="#CCCCCC" lineWidth="1" symbol="off"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="3"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" color="#666666" lineWidth="1" lineStyle="dotted" symbol="off"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="4"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" color="#CCCCCC" lineWidth="1" symbol="off"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="5"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" lineWidth="0" symbol="diamond" symbolColor="#FF00FF"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="6"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" lineWidth="0" symbol="triangle" symbolColor="#7EB679"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="7"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" lineWidth="0" symbolColor="#FF00FF"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="8"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" color="#FF0000" lineWidth="1" symbol="off"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="9"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" color="#FF0000" lineWidth="1" symbol="off"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               
+               
+               
+               <saw:seriesFormatRule>						
+                  
+                  
+                  
+                  <saw:seriesCondition position="10"/>
+						
+                  
+                  
+                  
+                  <saw:visualFormats>							
+                     
+                     
+                     
+                     <saw:visualFormat className="lineProp" name="straightLine" color="#336633" lineWidth="1" symbol="off"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+				</saw:seriesFormatGroup>
+			</saw:seriesFormats>
+			
+         
+         
+         
+         <saw:display type="lineTimeSeries" subtype="default">				
+            
+            
+            
+            <saw:style lineStyle="standardLine" effect="2d"/>
+			</saw:display>
+			
+         
+         
+         
+         <saw:viewCaption>				
+            
+            
+            
+            <saw:caption>					
+               
+               
+               
+               <saw:text>Time Line (requires day date dimension)</saw:text></saw:caption></saw:viewCaption></saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" autoPreview="true">			
+         
+         
+         
+         <saw:edges>				
+            
+            
+            
+            <saw:edge axis="page" showColumnHeader="true">				</saw:edge>
+				
+            
+            
+            
+            <saw:edge axis="section">				</saw:edge>
+				
+            
+            
+            
+            <saw:edge axis="row" showColumnHeader="true">				</saw:edge>
+				
+            
+            
+            
+            <saw:edge axis="column">					
+               
+               
+               
+               <saw:edgeLayers>						
+                  
+                  
+                  
+                  <saw:edgeLayer type="measure" insertPageBreak="false"/></saw:edgeLayers></saw:edge></saw:edges>
+			
+         
+         
+         
+         <saw:measuresList>				
+            
+            
+            
+            <saw:measure columnID="c3">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2941">							
+                     
+                     
+                     
+                     <saw:text>Whole report :</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec fontColor="#000000" backgroundColor="#FFFFFF" borderPosition="none" fontSize="9"/>
+						</saw:displayFormat>
+					</saw:memberFormat>
+					
+               
+               
+               
+               <saw:dataBodyFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec hAlign="right" borderPosition="none"/>
+						</saw:displayFormat>
+					</saw:dataBodyFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c3" duplicateID="d1" aggRule="count">					
+               
+               
+               
+               <saw:memberFormat>						
+                  
+                  
+                  
+                  <saw:caption captionID="kcap12851338_2942">							
+                     
+                     
+                     
+                     <saw:text>Count</saw:text>
+						</saw:caption>
+						
+                  
+                  
+                  
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+					
+               
+               
+               
+               <saw:dataBodyFormat>						
+                  
+                  
+                  
+                  <saw:displayFormat>							
+                     
+                     
+                     
+                     <saw:formatSpec hAlign="right"/>
+						</saw:displayFormat>
+					</saw:dataBodyFormat></saw:measure>
+				
+            
+            
+            
+            <saw:measure columnID="c1"/>
+				
+            
+            
+            
+            <saw:measure columnID="c19"/>
+				
+            
+            
+            
+            <saw:measure columnID="c15"/>
+				
+            
+            
+            
+            <saw:measure columnID="c20"/>
+				
+            
+            
+            
+            <saw:measure columnID="c24"/></saw:measuresList>			
+         
+         
+         
+         <saw:sectionContent>				
+            
+            
+            
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec borderPosition="none"/>
+				</saw:displayFormat>
+			</saw:sectionContent></saw:view>
+		
+      
+      
+      
+      <saw:view xsi:type="saw:filtersView" name="filtersView!1"/>
+	</saw:views></saw:report>

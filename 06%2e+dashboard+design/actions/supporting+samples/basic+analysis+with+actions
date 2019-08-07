@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c99203772ee47e561">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="none"/></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c0a8b9ca2a58efc60">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" interaction="action">
+                  <saw:actionLinks showPopupMenuForOneLink="true">
+                     <saw:actionLink actionLinkID="c0a8b9ca2a58efc60_al75ac4ddab789e61f">
+                        <saw:actionPath>/shared/06. Dashboard Design/Actions/Actions to Navigate to a Web Page/Navigate to Google</saw:actionPath>
+                        <saw:caption>
+                           <saw:text>Navigate to Google</saw:text></saw:caption>
+                        <saw:paramMapping>
+                           <saw:assign xsi:type="saw:stringAssign" name="1" fixed="false" hidden="false">
+                              <saw:mapping xsi:type="saw:contextColumnMappingType">
+                                 <sawx:columnRefExpr columnID="c2bf04bde5b7fddea"/></saw:mapping></saw:assign></saw:paramMapping></saw:actionLink></saw:actionLinks></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c2bf04bde5b7fddea">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;A - Sample Sales&quot;.&quot;Offices&quot;.&quot;D3  Organization&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+            <saw:displayFormat/></saw:logoFormat><saw:createdTime>
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/></saw:displayFormat></saw:createdTime><saw:displayFormat>				
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/></saw:displayFormat><saw:title>
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#333366" wrapText="true"/></saw:displayFormat></saw:title></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c99203772ee47e561"/>
+                  <saw:edgeLayer type="column" columnID="c2bf04bde5b7fddea"/>
+                  <saw:edgeLayer type="column" columnID="c0a8b9ca2a58efc60"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view></saw:views></saw:report>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/b. Features/RTF SubTemplate/Data Model/Sales DM.xdm"/>
+   <description>
+      <![CDATA[This%20report%20uses%20Sub%20Template%20to%20separate%20Header%20and%20Footer%20from%20the%20report%20body.%20Several%20reports%20can%20use%20the%20same%20report%20Header%20and%20Footer%20and%20any%20change%20in%20future%20will%20require%20only%20the%20Sub%20Template%20to%20be%20changed.]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="false"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="RTF - Annual Sales">
+      <template label="RTF - Annual Sales" url="AnnualSales.rtf" type="rtf" outputFormat="html,pdf,rtf,excel,pptx" defaultFormat="html" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

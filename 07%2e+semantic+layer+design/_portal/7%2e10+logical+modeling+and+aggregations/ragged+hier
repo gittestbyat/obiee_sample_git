@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="s49sah1mn484ufof">
+	<sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" layoutType="bestFit" canFreeze="true"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1895">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Ragged - Skipped Levels Hierarchies (Level based)
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1894">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" horizontalLayout="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_1892">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1896">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; Oracle BIEE allows displaying of asymmetrical information from level based hierarchies that are skipped levels and/or are ragged. The picture on the right displays the data as it is in the supporting database, and the report on the left shows how the Oracle BIEE report renders this information. Expanding the levels of the hierarchy will properly show the branches that have skipped levels, or ragged branches (when the leaf level is not the lowest level of the hierarchy).</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1898">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; Ragged and skip level settings are logical hierarchy properties that are set in the Oracle BIEE business model, within the dimension definition.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" duid="uf5jbfuau8p66q2e" break="column" layoutType="minimumSize" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 0" collapsible="false" duid="end256hfefiraf7c" showSectionTitle="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 0" display="embed" showView="" links="" duid="9bp44tmjqaluf282"><saw:caption captionID="kcap12832459_1893">
+					<saw:text>Ragged Hierarchy</saw:text>
+				</saw:caption>
+				
+				<sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Logical Modeling/Ragged Hierarchy/Ragged Hierarchy"/>
+			</sawd:reportView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec width="400" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 3" duid="ce8462j84v5057fq" layoutType="bestFit" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 2" collapsible="false" duid="4nbtjf4bpctctn66" showSectionTitle="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 4" duid="jchrs9lpinbekas5">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1899">&lt;img src=&quot;/analyticsRes/SampleApp/SampleAppPics/Rgd_Hier.png&quot;/&gt;</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec/>
+		</saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

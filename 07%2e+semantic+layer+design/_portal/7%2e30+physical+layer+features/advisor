@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="7nlm4c9jhn0ahldm"><sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 7" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 4" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1866">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Summary Advisor Re Run Script
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 4" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1865">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			<sawd:linkView name="Link 3" target="new" type="report" destination="/shared/10. Lifecycle and Admin/_portal/10.20 Usage Tracking/Physical SQLs" layout="captionRight" duid="ekkloo9cvqjqcoep"><sawd:linkCaption><saw:caption><saw:text>Physical SQLs</saw:text></saw:caption></sawd:linkCaption><sawd:image src="res/sk_blafp/answers/bpIcon.png"/></sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 6" duid="tc8jgu68jioop6o7" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 5" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1867">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; Summary Advisor can be run directly from the Tools utilities menu of your online RPD. It will create Persistent Aggregate Scripts depending on what Usage Queries have been stored by UT.[br/] You can use the script below to re-run summary advisor and create ad hoc Aggregates[br/][br/]</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="hno3th559r6b7rcl" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="um3nvdrpke4aqicc" showSectionTitle="true" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Save this XML as a file on your machine  and use it as a parameters load file for Summary Advisor Re-Running</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" hAlign="left"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="99j9023ue3u6lss1"><sawd:HTML fmt="text">&lt;SummaryAdvisorSession version=&#39;1&#39;&gt;[br/]
+&lt;CommonSettings aggrScriptLocation=&#39;C:\Sample_Summ_Advi_SQL.sql&#39; maxRunTime=&#39;4&#39; improvementThreshold=&#39;0&#39; maxAggSize=&#39;1000&#39; minCumulativeLTSQueryTime=&#39;0&#39;/&gt;[br/]
+&lt;FactFilters&gt;[br/]
+	&lt;Fact path=&#39;&quot;01 - Sample App Exa&quot;.&quot;F0 Sales Base Measures&quot;&#39;/&gt;[br/]
+	&lt;Fact path=&#39;&quot;01 - Sample App Exa&quot;.&quot;F5 Time Series and Level Based Examples&quot;&#39;/&gt;[br/]
+&lt;/FactFilters&gt;[br/]
+&lt;TargetContainers&gt;[br/]
+	&lt;Container container=&#39;&quot;02 - Sample App Exa Data (ORCL)&quot;..&quot;BISAMPLE_AGGS&quot;&#39; connectionPool=&#39;&quot;02 - Sample App Exa Data (ORCL)&quot;.&quot;Aggs Sample Connection&quot;&#39; capacity=&#39;1000&#39; /&gt;[br/]
+&lt;/TargetContainers&gt;[br/]
+&lt;/SummaryAdvisorSession&gt;[br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

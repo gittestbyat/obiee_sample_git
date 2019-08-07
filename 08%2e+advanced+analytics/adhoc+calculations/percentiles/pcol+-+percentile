@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:view xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="saw:globalFilterPrompt" name="">
+  <saw:prompts scope="dashboard" subjectArea="&quot;A - Sample Sales&quot;">
+    <saw:promptStep setWidthToAllPrompts="true" labelPosition="above">
+      <saw:individualPrompts>
+        <saw:prompt xsi:type="saw:columnFilterPrompt" columnID="c4" subjectArea="&quot;A - Sample Sales&quot;" required="true">
+          <saw:formula>
+            <sawx:expr xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;</sawx:expr>
+          </saw:formula>
+          <saw:promptOperator op="in"/>
+          <saw:promptUIControl xsi:type="saw:slider" orientation="vertical" sliderSpinbox="hide" labelLocation="logicalLeftOfControl" controlSize="mediumSize" labelFormat="fulllabel" increamentSize="1" numValueLabels="5" numTicksBetweenLabels="3"/>
+          <saw:label>
+            <saw:caption>
+              <saw:text>Percentile</saw:text>
+            </saw:caption>
+          </saw:label>
+          <saw:promptDefaultValues type="specificValue" usingCodeValue="false">
+            <saw:promptDefaultValue>75</saw:promptDefaultValue>
+          </saw:promptDefaultValues>
+          <saw:constrainPrompt type="none"/>
+          <saw:setPromptVariables>
+            <saw:setPromptVariable location="value" type="presentationVariable" variableFormula="Tile"/>
+          </saw:setPromptVariables>
+          <saw:promptSource xsi:type="saw:specificLimits" rangeLowLimit="0" rangeHighLimit="100"/>
+        </saw:prompt>
+      </saw:individualPrompts>
+      <saw:displayFormat>
+        <saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderPosition="none" fontSize="10"/>
+      </saw:displayFormat>
+      <saw:title/>
+    </saw:promptStep>
+  </saw:prompts>
+</saw:view>

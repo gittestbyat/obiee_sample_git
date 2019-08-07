@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/08. Advanced Analytics/Oracle R Enterprise/Data Models/Flight Delay by Airport.xdm"/>
+   <description/>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-vertical;promptLocation:side;">
+      <parameter id="SIDEBYSIDE" label="Layout Option" defaultValue="" visible="true" rowPlacement="1">
+         <radioButton/>
+      </parameter>
+      <parameter id="VARWIDTH" label="Box Width" defaultValue="" visible="true" rowPlacement="2">
+         <radioButton/>
+      </parameter>
+      <parameter id="BUSIESTA" label="Graph A: Airport Category" defaultValue="" visible="true" rowPlacement="4">
+         <radioButton/>
+      </parameter>
+      <parameter id="COLA" label="Graph A: Color" defaultValue="" visible="true" rowPlacement="5">
+         <radioButton/>
+      </parameter>
+      <parameter id="BUSIESTB" label="Graph B: Airport Category" defaultValue="" visible="true" rowPlacement="7">
+         <radioButton/>
+      </parameter>
+      <parameter id="COLB" label="Graph B: Color" defaultValue="" visible="true" rowPlacement="7">
+         <radioButton/>
+      </parameter>
+   </parameters>
+   <templates default="Boxplot">
+      <template label="Boxplot" url="OracleRGraphics.rtf" type="rtf" outputFormat="html,pdf,rtf,excel,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

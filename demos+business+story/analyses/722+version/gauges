@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="c372326e9f4fe182f">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cb299e12b3458f69d">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c24746ae273b115f6">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double)/(&quot;Level Based Measures&quot;.&quot;162  Rev  (Sum for All Products)&quot; /3)</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="true" negativeType="minus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_275">
+            <saw:text>Base Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_276">
+            <saw:text>Performance Index to Total</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+    
+  <saw:filter><sawx:expr xsi:type="sawx:logical" op="and">
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T04 Per Name Half&quot;</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T01 Per Name Week&quot;</sawx:expr>
+				</sawx:expr>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:columnExpression" formulaUse="display" displayUse="display">
+						<saw:columnFormula formulaUse="display">
+							<sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C3  Customer Type&quot;</sawx:expr>
+						</saw:columnFormula>
+					</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:columnExpression" formulaUse="display" displayUse="display">
+						<saw:columnFormula formulaUse="display">
+							<sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C4  Customer Segment&quot;</sawx:expr>
+						</saw:columnFormula>
+					</sawx:expr>
+				</sawx:expr>
+				<sawx:expr op="prompted" xsi:type="sawx:special">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R0  Order Key&quot;</sawx:expr></sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;More Customer Objects&quot;.&quot;C12  First Contact Date&quot;</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R1  Order Status&quot;</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R2  Order Type&quot;</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Alternate Calendars&quot;.&quot;T31 Cal Week&quot;</sawx:expr>
+				</sawx:expr>
+			<sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P1  Product&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P2  Product Type&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P3  LOB&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D4  Company&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D3  Organization&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D2  Department&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D1  Office&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:columnExpression" formulaUse="code" displayUse="display"><saw:columnFormula formulaUse="display"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C2  Customer Status&quot;</sawx:expr></saw:columnFormula></sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C1  Customer Name&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C0  Customer Number&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      
+    <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="dvtgauge!1"/></saw:cvRow></saw:cvTable></saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="cb299e12b3458f69d"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c372326e9f4fe182f"/>
+            <saw:edgeLayer type="column" columnID="cae408274039e130d"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:dvtgauge" name="dvtgauge!1" autoPreview="true">
+      <saw:display type="gauge" subtype="filledBar" renderFormat="default" mode="online" clientEventEnabled="true" clientEventChannels="MD1">
+        <saw:style effect="2d"/>
+      </saw:display>
+      <saw:selections>
+        <saw:categories>
+          <saw:category>
+            <saw:columnRef columnID="cb299e12b3458f69d"/>
+          </saw:category>
+        </saw:categories>
+        <saw:measures showMeasureLabelsOnCategory="false">
+          <saw:column>
+            <saw:columnRef columnID="c24746ae273b115f6"/>
+          </saw:column>
+        </saw:measures>
+        <saw:seriesGenerators>
+          <saw:measureLabels/>
+        </saw:seriesGenerators>
+        <saw:sections displayAsSlider="true">
+          <saw:section>
+            <saw:columnRef columnID="c372326e9f4fe182f"/>
+          </saw:section>
+        </saw:sections>
+      </saw:selections>
+      <saw:gaugeProperties gaugeSize="custom" showBorder="false" width="120" height="175" bgColor="" borderColor="">
+        <saw:gaugePointers>
+          <saw:gaugePointer>
+            <saw:pointerFormat needleStyle="needle"/>
+            <saw:columnRef columnID="c372326e9f4fe182f"/>
+          </saw:gaugePointer>
+          <saw:gaugePointer>
+            <saw:pointerFormat needleStyle="needle" color=""/>
+            <saw:columnRef columnID="c24746ae273b115f6"/>
+          </saw:gaugePointer>
+        </saw:gaugePointers>
+        <saw:scale labelsDisplay="actual" defaultTicks="false" scaleDefault="false">
+          <saw:scaleMin>
+            <sawx:expr xsi:type="xsd:decimal">0</sawx:expr>
+          </saw:scaleMin>
+          <saw:scaleMax>
+            <sawx:expr xsi:type="xsd:decimal">2</sawx:expr>
+          </saw:scaleMax>
+          <saw:majorTicks display="true" number="5"/>
+          <saw:minorTicks display="false"/>
+          <saw:labels abbreviation="none">
+            <saw:textFormat fontSize="9"/>
+            <saw:dataFormat xsi:type="saw:number" commas="false" negativeType="minus" minDigits="1" maxDigits="1"/>
+          </saw:labels>
+        </saw:scale>
+        <saw:gaugeRanges>
+          <saw:colorRange color="#FF9933" rangeType="dynamic" labelType="custom">
+            <saw:markerLabel>
+              <saw:caption captionID="cp0">
+                <saw:text>Less than 1</saw:text>
+              </saw:caption>
+            </saw:markerLabel>
+            <saw:rangeLow>
+              <sawx:expr xsi:type="xsd:decimal">0</sawx:expr>
+            </saw:rangeLow>
+            <saw:rangeHigh>
+              <sawx:expr xsi:type="xsd:decimal">.5</sawx:expr>
+            </saw:rangeHigh>
+          </saw:colorRange>
+          <saw:colorRange color="#F1E87D" rangeType="custom" labelType="custom">
+            <saw:markerLabel>
+              <saw:caption captionID="cp1">
+                <saw:text>Betw 1 and 2</saw:text>
+              </saw:caption>
+            </saw:markerLabel>
+            <saw:rangeLow>
+              <sawx:expr xsi:type="xsd:decimal">.5</sawx:expr>
+            </saw:rangeLow>
+            <saw:rangeHigh>
+              <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+            </saw:rangeHigh>
+          </saw:colorRange>
+          <saw:colorRange color="#7EB679" rangeType="custom" labelType="custom">
+            <saw:markerLabel>
+              <saw:caption captionID="cp2">
+                <saw:text>Betw 2 and 43</saw:text>
+              </saw:caption>
+            </saw:markerLabel>
+            <saw:rangeLow>
+              <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+            </saw:rangeLow>
+            <saw:rangeHigh>
+              <sawx:expr xsi:type="xsd:decimal">1.5</sawx:expr>
+            </saw:rangeHigh>
+          </saw:colorRange>
+          <saw:colorRange color="#336633" rangeType="custom" labelType="custom">
+            <saw:markerLabel>
+              <saw:caption captionID="cp3">
+                <saw:text>Over 4</saw:text>
+              </saw:caption>
+            </saw:markerLabel>
+            <saw:rangeLow>
+              <sawx:expr xsi:type="xsd:decimal">1.5</sawx:expr>
+            </saw:rangeLow>
+            <saw:rangeHigh/>
+          </saw:colorRange>
+        </saw:gaugeRanges>
+        <saw:gaugeGoal goalType="high"/>
+        <saw:typeSpecificFormat thickness="1" arcLength="220"/>
+        <saw:gaugeTitles>
+          <saw:gaugeTitle name="footer">
+            <saw:caption truncate="false" truncateLength="0" captionID="kcap12832459_277">
+              <saw:text>@1</saw:text>
+            </saw:caption>
+            <saw:textFormat fontSize="10"/>
+          </saw:gaugeTitle>
+        </saw:gaugeTitles>
+      </saw:gaugeProperties>
+      <saw:gaugeCanvasFormat gaugesPerRow="3" showGradient="true" useMeasureNameAsTitle="false" bgColor="" borderColor="">
+        <saw:dataLabels>
+          <saw:textFormat/>
+        </saw:dataLabels>
+        <saw:gaugeTitle name="title">
+          <saw:caption truncate="false" truncateLength="0">
+            <saw:text/>
+          </saw:caption>
+          <saw:textFormat fontStyle="regular" fontSize="11"/>
+        </saw:gaugeTitle>
+      </saw:gaugeCanvasFormat>
+      <saw:legendFormat transparentFill="true" position="none"/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+      <saw:staticText>
+        <saw:caption fmt="text" captionID="kcap12832459_274">
+          <saw:text>Performance Index to Company Avg</saw:text>
+        </saw:caption>
+      </saw:staticText>
+      <saw:displayFormat>
+        <saw:formatSpec fontStyle="bold"/>
+      </saw:displayFormat>
+    </saw:view>
+    
+  <saw:view xsi:type="saw:titleView" name="titleView!2" includeName="false" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title><saw:caption fmt="text"><saw:text>Performance Index to Company Average</saw:text></saw:caption><saw:displayFormat><saw:formatSpec fontColor="#333366" wrapText="true"/></saw:displayFormat></saw:title><saw:createdTime><saw:displayFormat><saw:formatSpec fontColor="#666666" fontStyle="italic" wrapText="true"/></saw:displayFormat></saw:createdTime><saw:displayFormat><saw:formatSpec borderColor="#EDE8CA" borderPosition="8" wrapText="true" borderStyle="thick"/></saw:displayFormat><saw:logoFormat><saw:displayFormat/></saw:logoFormat></saw:view></saw:views>
+</saw:report>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;L - Geo Loc&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c5fb9d726da633e02"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;POI Details&quot;.&quot;POI Name&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c73280becb436592e"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;POI Details&quot;.&quot;POI Sub Category&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent"><saw:clientEventSpec channel="ch3"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c2f316c4ddf44b664"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;POI Details&quot;.&quot;Loc Lat&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="6" maxDigits="6" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c8e6bd802c84e6747"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;POI Details&quot;.&quot;Loc Long&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="6" maxDigits="6" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:sqlExpression">&quot;POI Details&quot;.&quot;POI Category&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">ACTIVITY</sawx:expr></sawx:expr></saw:filter></saw:criteria><saw:views currentView="5"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="pivotTableView!1"/><saw:cvCell viewName="htmlview!1" rowSpan="3"><saw:displayFormat><saw:formatSpec paddingLeft="10" paddingRight="5"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="true" autoPreview="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:displayGrandTotals><saw:displayGrandTotal id="gt_row" grandTotalPosition="after"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="c73280becb436592e"><saw:headerFormat><saw:displayFormat><saw:formatSpec width="170" wrapText="true"/></saw:displayFormat></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges><saw:measuresList><saw:measure columnID="c5fb9d726da633e02" aggRule="count"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text>POI Count</saw:text></saw:caption></saw:memberFormat><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2" scrollingEnabled="true" autoPreview="true" clientEventChannels="ch3" clientEventEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c73280becb436592e"><saw:headerFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text> </saw:text></saw:caption></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c5fb9d726da633e02"><saw:memberFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:memberFormat><saw:headerFormat><saw:displayFormat><saw:formatSpec width="220" wrapText="true"/></saw:displayFormat></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges><saw:pageEdgeState><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c73280becb436592e"/></saw:groupType><saw:members xsi:type="saw:stringMembers"><saw:value>CINEMA</saw:value></saw:members></saw:staticMemberGroup></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c73280becb436592e" groupID="0"/></saw:selectionGroups></saw:pageEdgeState></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script&gt;
+var repData= &#39;</saw:text></saw:caption></saw:prefix><saw:narrative rowCount="6000"><saw:caption fmt="html"><saw:text>[&quot;@{c5fb9d726da633e02}&quot;,&quot;@{c73280becb436592e}&quot;,@{c2f316c4ddf44b664},@{c8e6bd802c84e6747}]</saw:text></saw:caption></saw:narrative><saw:postfix><saw:caption fmt="html"><saw:text>&#39;;
+rendermap(repData);
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;script src=&quot;/mvdemo/jslib/v2/jquery/jquery-1.7.2.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mvdemo/gv.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mvdemo/common.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+&lt;script src=&#39;/analyticsRes/SampleApp/customjs/SAutilsv1.3.js&#39;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var baseURL= &quot;http://&quot;+document.location.host+&quot;/mapviewer&quot;;
+var layer1,map1;
+OM.gv.setResourcePath(&quot;/mapviewer/jslib/v2/&quot;);  
+
+function addPoints(darray,layer,filter){
+  /*POINAME, CATEGORY, LAT, LONG*/
+  for (i=0;i&lt;darray.length; i++){
+		var fid = i;
+		var mpoint = new OM.geometry.Point(darray[i][3], darray[i][2],8307);
+		var f_attr = {attributes :{&quot;NAME&quot;:darray[i][0], &quot;SUBCATEGORY&quot;:darray[i][1]}};
+		var feature = new OM.Feature(fid,mpoint,f_attr);  
+		layer.addFeature(feature);
+  	}
+}
+
+function rendermap(repData){
+	var darray=eval(&#39;[&#39;+repData+&#39;]&#39;);
+	map1 = new OM.Map(document.getElementById(&#39;map1&#39;), {mapviewerURL: baseURL}) ;
+  map1.addLayer(new OM.layer.ElocationTileLayer(&quot;background&quot;) ) ;  
+  
+  
+  layer1 = new OM.layer.VectorLayer(&quot;cluster&quot;,{
+      def:
+          {
+          type: OM.layer.VectorLayer.TYPE_LOCAL
+      }
+  });
+  
+
+  addPoints(darray,layer1);
+  var markerStyle = new OM.style.Marker({width: 16, height: 16, src: &quot;/mvdemo/icons/target.png&quot;});
+  layer1.setRenderingStyle(markerStyle);
+
+  var center = new OM.geometry.Point(-122.457733,37.764201,8307); 
+  map1.setMapCenter( center );
+  map1.setMapZoomLevel(9) ;
+  map1.addLayer(layer1);
+
+  var navigationPanelBar = new OM.control.NavigationPanelBar( {
+    style:1
+  } );
+  map1.addMapDecoration(navigationPanelBar);
+  map1.init();
+
+}
+
+function filterFeatures(category){
+	var f=layer1.getAllFeatures();
+	for (i=0;i&lt;f.length;i++){
+		if (f[i].getAttributes()[&quot;SUBCATEGORY&quot;]!=category){
+			f[i].setVisible(false);
+		} else {
+			f[i].setVisible(true);
+		}
+		
+	}
+}
+
+function handleMD(e){
+	qdr = JSON.parse(e.sQDR);
+	cat = qdr._m[0]._g[&quot;%22POI%20Details%22.%22POI%20Sub%20Category%22&quot;][0];
+	cat = cat.replace(/%20/g,&#39; &#39;).replace(/%22/g,&#39;&quot;&#39;);
+	filterFeatures(cat);
+}
+
+SAutils.subscribetoMDEvent(&quot;ch3&quot;,handleMD,&quot;mapview1&quot;);
+&lt;/script&gt;
+
+&lt;DIV id=map1 style=&quot;width:720px;height:700px;padding:10px;border:1px solid grey;&quot; &gt;&lt;/DIV&gt;
+</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

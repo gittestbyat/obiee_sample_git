@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="71ht17nuhotp1fm1" links="me" overrideParentLinks="true"><sawd:dashboardColumn name="Column 0" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 8" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 6" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2365">[br/]&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Text Filtering
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 6" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2364">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 0" duid="ehchfheondctnfgk" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2366">[br/]&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This is an example of querying text using CONTAINS operator. Oracle Text query takes a query expression, usually a word with or without operators, as input. [br/]Oracle Text returns all documents (previously indexed) that satisfy the expression along with a relevance score for each document. Scores can be used to order the documents in the result set.</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="tp3dsdpjbgo6i7ma" break="column" layoutType="bestFit"><sawd:dashboardSection name="Section 1" collapsible="false" duid="pr2i1phgl7uo0q1s" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5" wrapText="true" borderPosition="none"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="aur52cnhnsr7vnjn" links="" overrideParentLinks="true"><saw:caption><saw:text>Text Search Scope</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Text Analytics/Text Search Scope"/></sawd:reportView><sawd:htmlView name="HTML 0" duid="drvamfugr1jgnmgn"><sawd:HTML fmt="html">[br/][br/]&lt;table border=0 cellpadding=5 style=&quot;margin:auto&quot; width=400&gt;
+&lt;tr&gt;
+	&lt;td&gt;&lt;font size=3 color=steelblue&gt;&lt;b&gt;Search Query Operators Examples&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;Refer the following page for complete details of Oracle Text &#39;Contains&#39; Query Operators: &lt;b&gt;&lt;a href=&#39;http://docs.oracle.com/cd/E16655_01/text.121/e17747/cqoper.htm&#39;&gt;Oracle® Text Reference 12c Release 1 (12.1)&lt;/a&gt;&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;table border=1 cellpadding=5 style=&quot;margin:auto&quot; width=400&gt;
+&lt;tr&gt;
+	&lt;th width=20%&gt;Name&lt;/th&gt;
+	&lt;th width=50%&gt;Description&lt;/th&gt;
+	&lt;th width=30%&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;AND, OR, NOT&lt;/td&gt;
+	&lt;td&gt;Conditional operators to join various search terms or expressions&lt;/td&gt;
+	&lt;td&gt;((sienna OR tacoma) AND problem) not battery&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;Fuzzy&lt;/td&gt;
+	&lt;td&gt;Include words that are spelled similarly to the specified term. Syntax: fuzzy(term, score, numresults, weight)&lt;/td&gt;
+	&lt;td&gt;fuzzy(tayota, 60, 100, weight)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;Near&lt;/td&gt;
+	&lt;td&gt;Returns a score based on the proximity of two or more query terms. Syntax: NEAR((word1, word2,..., wordn) [, max_span [, order]])&lt;/td&gt;
+	&lt;td&gt;near((oil, change), 3, false) &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;Stem&lt;/td&gt;
+	&lt;td&gt;Searchs for terms that have the same linguistic root as the query term&lt;/td&gt;
+	&lt;td&gt;$break&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;Soundex&lt;/td&gt;
+	&lt;td&gt;Include words that sound like other words.&lt;/td&gt;
+	&lt;td&gt;!hewsten&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;EQUIValence (=)&lt;/td&gt;
+	&lt;td&gt;Use EQUIV to specify an acceptable substitution for a word in a query.&lt;/td&gt;
+	&lt;td&gt;sienna=van&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;Minus&lt;/td&gt;
+	&lt;td&gt;MINUS operator to lower the score of documents that contain unwanted noise terms.&lt;/td&gt;
+	&lt;td&gt;Ford - Toyota&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+	&lt;td&gt;About&lt;/td&gt;
+	&lt;td&gt;Returns records that are related to a query term or phrase. In English and French, ABOUT enables you to query on concepts, even if a concept is not actually part of a query.&lt;/td&gt;
+	&lt;td&gt;about(heat)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" frozen="false" canFreeze="false" duid="50q1mjpu20ed8fa1" layoutType="bestFit"><sawd:dashboardSection name="Section 3" collapsible="false" duid="s5knhsvfrhugvms8" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 1" path="/shared/08. Advanced Analytics/Oracle DB/Text Analytics/Text Search Prompt" duid="u759e0dgi1f9m0je" scope="dashboardPage"><saw:caption><saw:text>Text Search Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 1" display="embed" showView="" duid="2a8us9tqj6bo6iqp"><saw:caption><saw:text>Text Search1</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Text Analytics/Text Search1"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

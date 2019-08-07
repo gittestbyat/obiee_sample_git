@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="cede4e21c554c97c4"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!1"><saw:displayFormat><saw:formatSpec hAlign="left" paddingTop="15"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none"><saw:title><saw:caption fmt="text"><saw:text>Persistent Aggregates Scripts</saw:text></saw:caption></saw:title></saw:view><saw:view xsi:type="saw:tableView" name="tableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cede4e21c554c97c4"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>[u][b]ORACLE Aggregates[/b][/u]
+
+&lt;pre&gt;Copy and Paste this text into the logical SQL command on the dashboard, then click &#39;Issue SQL&#39;.
+Wait a few seconds until the return message &#39;No columns returned&#39; appears. That means that the 
+command completed successfuly. At this point, refresh the report on he left and check that it now sources 
+from the newly created table.-&gt;
+
+&lt;pre&gt;
+set variable LOGLEVEL=7: create aggregates 
+/*===========================================================*/ 
+[b]FACT_AGG_OR_01[/b] 
+for &quot;01 - Sample App Exa&quot;.&quot;F0 Sales Base Measures&quot;
+( 
+&quot;1- Revenue&quot;,
+&quot;2- Billed Quantity&quot;,
+&quot;3- Discount Amount&quot;, 
+&quot;4- Paid Amount&quot;, 
+&quot;7- Shipped Amount&quot;, 
+&quot;7- Shipped Quantity&quot;) 
+at levels (
+&quot;01 - Sample App Exa&quot;.&quot;H1 Products&quot;.&quot;Products Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H3 Offices&quot;.&quot;Offices Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H0 Time&quot;.&quot;Month&quot; 
+) 
+using connection pool &quot;02 - Sample App Exa Data (ORCL)&quot;.&quot;Aggs Sample Connection&quot; 
+in &quot;02 - Sample App Exa Data (ORCL)&quot;..&quot;BISAMPLE_AGGS&quot;,  
+
+/*===========================================================*/ 
+[b]FACT_AGG_OR_02 [/b]
+for &quot;01 - Sample App Exa&quot;.&quot;F0 Sales Base Measures&quot;
+( 
+&quot;1- Revenue&quot;,
+&quot;2- Billed Quantity&quot;,
+&quot;3- Discount Amount&quot;, 
+&quot;4- Paid Amount&quot;, 
+&quot;7- Shipped Amount&quot;, 
+&quot;7- Shipped Quantity&quot;) 
+at levels (
+&quot;01 - Sample App Exa&quot;.&quot;H1 Products&quot;.&quot;Products Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H3 Offices&quot;.&quot;Offices Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H6 Customers&quot;.&quot;Customers Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H0 Time&quot;.&quot;Month&quot;
+) 
+using connection pool &quot;02 - Sample App Exa Data (ORCL)&quot;.&quot;Aggs Sample Connection&quot; 
+in &quot;02 - Sample App Exa Data (ORCL)&quot;..&quot;BISAMPLE_AGGS&quot;,  
+
+/*===========================================================*/ 
+[b]FACT_AGG_OR_03[/b]
+for &quot;01 - Sample App Exa&quot;.&quot;F0 Sales Base Measures&quot;
+( 
+&quot;1- Revenue&quot;,
+&quot;2- Billed Quantity&quot;,
+&quot;3- Discount Amount&quot;, 
+&quot;4- Paid Amount&quot;, 
+&quot;7- Shipped Amount&quot;, 
+&quot;7- Shipped Quantity&quot;) 
+at levels (
+&quot;01 - Sample App Exa&quot;.&quot;H1 Products&quot;.&quot;Products Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H3 Offices&quot;.&quot;Offices Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H0 Time&quot;.&quot;Day Detail&quot;
+) 
+using connection pool &quot;02 - Sample App Exa Data (ORCL)&quot;.&quot;Aggs Sample Connection&quot; 
+in &quot;02 - Sample App Exa Data (ORCL)&quot;..&quot;BISAMPLE_AGGS&quot;;
+&lt;/pre&gt;</saw:text></saw:caption></saw:staticText><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!2"><saw:staticText><saw:caption fmt="text"><saw:text>[br/][br/]</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!3"/><saw:view xsi:type="saw:htmlview" name="htmlview!4"><saw:staticText><saw:caption fmt="html"><saw:text>[u][b]ESSBASE Aggregates[/b][/u]
+
+&lt;pre&gt;
+set variable LOGLEVEL=7: create aggregates 
+/*===========================================================*/ 
+[b]EXA_ESSB[/b] 
+for &quot;01 - Sample App Exa&quot;.&quot;F0 Sales Base Measures&quot; ( 
+&quot;1- Revenue&quot;,
+&quot;2- Billed Quantity&quot;,
+&quot;3- Discount Amount&quot;, 
+&quot;11- Fixed Costs&quot;
+)    
+[b]at levels[/b] (
+&quot;01 - Sample App Exa&quot;.&quot;H1 Products&quot;.&quot;Products Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H3 Offices&quot;.&quot;Offices Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H0 Time&quot;.&quot;Month&quot; 
+) 
+[b]using connection pool[/b] &quot;02 - Sample App Exa Data (ESSB)&quot;.&quot;Aggr Connection&quot; 
+[b]in[/b] &quot;02 - Sample App Exa Data (ESSB)&quot;..&quot;EXA_ESSB&quot;;
+&lt;/pre&gt;
+[br/][br/]
+[u][b]TimesTen Aggregates[/b][/u]
+&lt;pre&gt;
+set variable LOGLEVEL=7:
+create aggregates 
+[b]FACT_AGG_TT_01  [/b]
+for &quot;01 - Sample App Exa&quot;.&quot;F0 Sales Base Measures&quot;
+(
+&quot;1- Revenue&quot;,
+&quot;2- Billed Quantity&quot;,
+&quot;3- Discount Amount&quot;, 
+&quot;4- Paid Amount&quot;, 
+&quot;7- Shipped Amount&quot;, 
+&quot;7- Shipped Quantity&quot;, 
+&quot;10- Variable Costs&quot;
+) 
+[b]at levels ([/b]
+&quot;01 - Sample App Exa&quot;.&quot;H1 Products&quot;.&quot;Products Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H3 Offices&quot;.&quot;Offices Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H0 Time&quot;.&quot;Month&quot;  [b])
+using connection pool[/b] &quot;02 - Sample App Exa Data (TT)&quot;.&quot;Exa Aggs TT Connection&quot; 
+[b]in[/b] &quot;02 - Sample App Exa Data (TT)&quot;..&quot;EXA_TT&quot;;
+&lt;/pre&gt;</saw:text></saw:caption></saw:staticText><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!5"><saw:staticText><saw:caption fmt="html"><saw:text>[b]TimesTen Aggregates[/b]
+&lt;pre&gt;
+set variable LOGLEVEL=7:
+create aggregates 
+[b]FACT_AGG_TT_01  [/b]
+for &quot;01 - Sample App Exa&quot;.&quot;F0 Sales Base Measures&quot;
+(
+&quot;1- Revenue&quot;,
+&quot;2- Billed Quantity&quot;,
+&quot;3- Discount Amount&quot;, 
+&quot;4- Paid Amount&quot;, 
+&quot;7- Shipped Amount&quot;, 
+&quot;7- Shipped Quantity&quot;, 
+&quot;10- Variable Costs&quot;
+) 
+[b]at levels ([/b]
+&quot;01 - Sample App Exa&quot;.&quot;H1 Products&quot;.&quot;Products Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H3 Offices&quot;.&quot;Offices Detail&quot;, 
+&quot;01 - Sample App Exa&quot;.&quot;H0 Time&quot;.&quot;Month&quot;  [b])
+using connection pool[/b] &quot;02 - Sample App Exa Data (TT)&quot;.&quot;Exa Aggs TT Connection&quot; 
+[b]in[/b] &quot;02 - Sample App Exa Data (TT)&quot;..&quot;EXA_TT&quot;;
+&lt;/pre&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

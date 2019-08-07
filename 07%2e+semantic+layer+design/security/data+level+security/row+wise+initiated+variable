@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="ca8c351619c85cc85">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">USER()</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="suppress" vAlign="middle" wrapText="true"/>
+        </saw:displayFormat>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c1daad58f56b07867">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;More Office Objects&quot;.&quot;D4k  Company Key&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true"/>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2579">
+            <saw:text>More Office Objects</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2580">
+            <saw:text>D4k  Company Key : &lt;br/&gt; Value Filtered on Row Wise Variable : &lt;br/&gt;&lt;b&gt;&#39;&lt;font color= darkred&gt;VISIBILITY_COMPANIES&lt;/font&gt;&#39;&lt;/b&gt;</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec hAlign="center" vAlign="top" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c3eca4a2fa1980b93">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Double Column Products&quot;.&quot;P3k  LOB Key&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2581">
+            <saw:text>More Product Objects</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2582">
+            <saw:text>P3k  LOB Key : &lt;br/&gt; Value Filtered on Row Wise Variable : &lt;br/&gt;&lt;b&gt;&#39;&lt;font color= darkred&gt;VISIBILITY_PRODUCTS&lt;/font&gt;&#39;&lt;/b&gt;</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec hAlign="center" vAlign="middle" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c579a1e344c22bbea">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">1</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+    </saw:columns>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="tableView!2"/>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!2">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:displayGrandTotals>
+            <saw:displayGrandTotal id="t1" grandTotalPosition="after"/>
+          </saw:displayGrandTotals>
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="ca8c351619c85cc85"/>
+            <saw:edgeLayer type="column" columnID="c1daad58f56b07867" aggRule="countDistinct"/>
+            <saw:edgeLayer type="column" columnID="c3eca4a2fa1980b93" aggRule="countDistinct"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+  </saw:views>
+</saw:report>

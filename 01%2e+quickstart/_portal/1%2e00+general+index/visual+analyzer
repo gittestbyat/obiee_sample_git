@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="ue3t0rfvgat5n7pc"><sawd:dashboardColumn name="Column 1" canFreeze="false" duid="rp262uq3qlholl6v" layoutType="specificSize" frozen="false"><saw:displayFormat><saw:formatSpec wrapText="true" borderPosition="none" vAlign="middle" width="1000"/></saw:displayFormat><sawd:dashboardSection name="Section 1" collapsible="false" duid="ae4ergsq0si9f56m" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" borderColor="#999999"/></saw:displayFormat><sawd:htmlView name="HTML 5" duid="38dan3j57cuue2sb"><sawd:HTML fmt="html">&lt;style&gt;
+.lvl3 {
+	vertical-align:middle;
+	color:#012146;
+	height:20px;
+	width:100%;
+	padding: 0px 0px 8px 0px;
+	font-family: Arial;
+	font-size: 24px;
+	font-weight:normal;
+}
+
+.lvl2 {
+	background-color: #CDE5FD;
+	vertical-align:middle;
+	display:inline-block;
+	color:#012146;
+	width:100%;
+	padding: 5px 0px 2px 5px;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight:bold;
+}
+
+.lvl1 {
+	vertical-align:middle;
+	display:inline-block;
+	color:#333333;
+	padding: 6px 0px 0px 0px;
+	font-family: Arial;
+	font-size: 13px;
+	font-weight:bold;
+}
+
+.lvl1div  a{
+	color:#333366;
+	padding: 0px 0px 0px 0px;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight:normal;
+}
+
+.lvl1div  a.new{
+
+	color:#2A2AFF;
+	padding: 0px 0px 0px 0px;
+	font-family: Arial;
+	font-size: 13px;
+	font-weight:normal;
+}
+
+.lvl1div  a.newb{
+
+	color:#669966;
+	padding: 0px 0px 0px 0px;
+	font-family: Arial;
+	font-size: 13px;
+	font-weight:normal;
+}
+
+
+.lvl3div {
+	padding: 10px 15px 15px 15px;
+}
+
+.lvl2div {
+	padding: 10px 0px 3px 0px;
+}
+
+.lvl1div {
+	padding: 6px 0px 0px 20px;
+}
+
+.section_button {
+	background-color: #CDE5FD;
+	display:table-cell; 
+	vertical-align:middle;
+	color:#012146;
+	width:210px;
+	height:30px;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight:normal;
+	cursor:pointer;
+	padding: 0px 5px 0px 5px;
+}
+
+
+.fullindex_button {
+	background-color: #DEEEFE;
+        border:1px solid #959595;
+	display:table-cell; 
+	vertical-align:middle;
+        text-align:center;
+	color:#012146;
+	width:200px;
+	height:20px;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight:normal;
+	cursor:pointer;
+	padding: 0px 5px 0px 5px;
+}
+
+.section_div {
+	padding: 6px 10px 4px 10px;
+	vertical-align:middle;
+}
+&lt;/style&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 2" collapsible="false" duid="i2g6im1o67a7km61" showSectionTitle="true" layoutType="bestFit" showHeading="true"><saw:caption><saw:text>Embedding Visual Analyzer Projects into BIEE Dashboards</saw:text></saw:caption><saw:displayFormat><saw:formatSpec wrapText="true" hAlign="left" borderPosition="16" borderColor="#6699CC" borderStyle="thick" paddingLeft="10"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#6699CC" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 0" duid="jfuoa5l3h6i7mja6"><sawd:HTML fmt="html">&lt;div id=&quot;BI Search&quot; class=lvl2div&gt;
+&lt;a class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=%2Fshared%2F02.%20Visualizations%2F_portal%2F2.00%20Embedded%20VA%20Projects&amp;page=Default in Presentation Mode&quot;&gt;Default as Presentation Mode,&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;a class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=%2Fshared%2F02.%20Visualizations%2F_portal%2F2.00%20Embedded%20VA%20Projects&amp;page=Default into Edit Mode&quot;&gt;Default as Edit Mode&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;/div&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 3" collapsible="false" duid="i2g6im1o67a7km61" showSectionTitle="true" layoutType="bestFit" showHeading="true"><saw:caption><saw:text>Visual Analyzer Projects</saw:text></saw:caption><saw:displayFormat><saw:formatSpec wrapText="true" hAlign="left" borderPosition="16" borderColor="#003366" borderStyle="thick" paddingLeft="10" paddingTop="5"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#003366" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 8" duid="jfuoa5l3h6i7mja6"><sawd:HTML fmt="html">		&lt;div id=&quot;1. Advanced Analytics&quot; class=lvl2div&gt;
+		&lt;span class=lvl2&gt;Advanced Analytics&lt;/span&gt;
+		&lt;/br&gt;
+		&lt;/br&gt;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FAA%20-%20Binning%20I&quot;&gt;Binning&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FAA%20-%20Binning%20with%20Filter&quot;&gt;Binning with Filter&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?pageid=visualAnalyzer&amp;reportpath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FAA%20-%20Clustering&quot;&gt;Clustering&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?pageid=visualAnalyzer&amp;reportpath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FAA%20-%20Collabarative%20Filtering&quot;&gt;Collabarative Filtering&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?pageid=visualAnalyzer&amp;reportpath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FAA%20-%20Forecast&quot;&gt;Forecast&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?pageid=visualAnalyzer&amp;reportpath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FAA%20-%20Outliers&quot;&gt;Outliers&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?pageid=visualAnalyzer&amp;reportpath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FAA%20-%20Trendline&quot;&gt;Trendline&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FMarket%20Basket%20Analysis&quot;&gt;Market Basket Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FTerm%20Frequency%20Analysis&quot;&gt;Term Frequency Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FText%20Analytics-%20Sentiment%20Analytics&quot;&gt;Text Analytics-Sentiment Analytics&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FTime%20Series%20Decomposition&quot;&gt;Time Series Decomposition&lt;/a&gt;&amp;nbsp;&amp;nbsp; 
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%2FVanilla%20Advanced%20Analytics&quot;&gt;Vanilla Advanced Analytics&lt;/a&gt;&amp;nbsp;&amp;nbsp; 
+		 &lt;a href=&quot;saw.dll?catalog#%7B%22location%22%3A%22%2Fshared%2F00.%20VA%20Projects%2FAdvanced%20Analytics%22%7D&quot;&gt;More Examples ..&lt;/a&gt;&amp;nbsp;&amp;nbsp; 
+
+		&lt;/div&gt;
+		&lt;/br&gt;
+
+		&lt;div id=&quot;2. Datasets Examples&quot; class=lvl2div&gt;
+		&lt;span class=lvl2&gt;Datasets Examples&lt;/span&gt;
+		&lt;/br&gt;
+		&lt;/br&gt;
+		 &lt;a href=&quot;saw.dll?catalog#%7B%22location%22%3A%22%2Fshared%2F00.%20VA%20Projects%2FDatasets%20Examples%2FXSA%20World%20Economics%22%7D&quot;&gt;XSA World Economics&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a href=&quot;saw.dll?catalog#%7B%22location%22%3A%22%2Fshared%2F00.%20VA%20Projects%2FDatasets%20Examples%2FXSA%20US%20Economics%22%7D&quot;&gt;XSA US Economics&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a href=&quot;saw.dll?catalog#%7B%22location%22%3A%22%2Fshared%2F00.%20VA%20Projects%2FDatasets%20Examples%2FXSA%20SFO%20Traffic%22%7D&quot;&gt;XSA SFO Traffic&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a href=&quot;saw.dll?catalog#%7B%22location%22%3A%22%2Fshared%2F00.%20VA%20Projects%2FDatasets%20Examples%2FXSA%20Other%22%7D&quot;&gt;XSA Other&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+
+		&lt;/div&gt;
+		&lt;/br&gt;
+
+		&lt;div id=&quot;3. Datasources Examples&quot; class=lvl2div&gt;
+		&lt;span class=lvl2&gt;Datasources Examples&lt;/span&gt;
+		&lt;/br&gt;
+		&lt;/br&gt;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?pageid=visualAnalyzer&amp;reportpath=%2Fshared%2F00.%20VA%20Projects%2FDatasources%20Examples%2FHive%20-%20Customer%20Sales%20Analysis&quot;&gt;Hive - Customer Sales Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FDatasources%20Examples%2FHive%20-%20Log%20Analysis&quot;&gt;Hive - Log Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FDatasources%20Examples%2FImpala-Inventory%20Analysis&quot;&gt;Impala-Inventory Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ 		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?pageid=visualAnalyzer&amp;reportpath=%2Fshared%2F00.%20VA%20Projects%2FDatasources%20Examples%2FImpala-Log%20Analysis&quot;&gt;Impala Log Analysis,&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FDatasources%20Examples%2FOBIEE-Sales%20Analysis&quot;&gt;OBIEE-Sales Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FDatasources%20Examples%2FOracleDB-Flight%20Delay%20Analysis(Inbuilt%20DB%20Functions)&quot;&gt;OracleDB-Flight Delay Analysis(Inbuilt DB Functions)&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FDatasources%20Examples%2FOracleDB-Target%20Revenue%20Analysis&quot;&gt;OracleDB-Target Revenue Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?pageid=visualAnalyzer&amp;reportpath=%2Fshared%2F00.%20VA%20Projects%2FDatasources%20Examples%2FSpark-Online%20Sales%20Analysis&quot;&gt;Spark-Online Sales Analysis&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+		 &lt;a href=&quot;saw.dll?catalog#%7B%22location%22%3A%22%2Fshared%2F00.%20VA%20Projects%2FDatasources%20Examples%22%7D&quot;&gt;More Examples..&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+		&lt;/div&gt;
+		&lt;/br&gt;
+
+		&lt;div id=&quot;4. Generic Examples &quot; class=lvl2div&gt;
+		&lt;span class=lvl2&gt;Generic Examples&lt;/span&gt;
+		&lt;/br&gt;
+		&lt;/br&gt;		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FGeneral%20Examples%2FMetric%20as%20an%20attribute&quot;&gt;Metric as an Attribute &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?pageid=visualAnalyzer&amp;reportpath=%2Fshared%2F00.%20VA%20Projects%2FGeneral%20Examples%2FExample%20of%20Bar%20Chart%20Width&quot;&gt;Bar Chart Width &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FGeneral%20Examples%2FExample%20of%20Geographical%20Metrics&quot;&gt;Geographical Metrics &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FGeneral%20Examples%2FExample%20of%20Lat-Long%20Maps%20Visualization&quot;&gt;Lat-Long Maps &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FGeneral%20Examples%2FExample%20of%20VA%20Master-Details&quot;&gt;Master Detail &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FGeneral%20Examples%2FExample%20of%20VA%20Zooming&quot;&gt;Zooming &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FGeneral%20Examples%2FCustomers%20Orders%20Pattern&quot;&gt;Customers Orders Pattern&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FGeneral%20Examples%2FExample%20of%20Data%20Blending&quot;&gt;Data Blending &lt;/a&gt;&amp;nbsp;&amp;nbsp;
+		 &lt;a href=&quot;saw.dll?catalog#%7B%22location%22%3A%22%2Fshared%2F00.%20VA%20Projects%2FGeneral%20Examples%22%7D&quot;&gt;More Examples.. &lt;/a&gt;&amp;nbsp;&amp;nbsp;
+
+		&lt;/br&gt;
+		&lt;div id=&quot;5. Custom Maps Examples &quot; class=lvl2div&gt;
+		&lt;span class=lvl2&gt;Custom Maps Examples &lt;/span&gt;
+		&lt;/br&gt;
+		&lt;/br&gt;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FCustom%20Maps%20Examples%2FCustom Map - Arena Seating&quot;&gt;Custom Map - Arena Seating&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FCustom%20Maps%20Examples%2FCustom Map - NY Precincts&quot;&gt;Custom Map - NY Precincts&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		 &lt;a target=&quot;_blank&quot; href=&quot;/va/project.jsp?reportPath=%2Fshared%2F00.%20VA%20Projects%2FCustom%20Maps%20Examples%2FCustom Map - Remittances Line Geos&quot;&gt;Custom Map - Remittances Line Geos&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+		&lt;/div&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" collapsible="false" duid="i2g6im1o67a7km61" showSectionTitle="true" layoutType="bestFit" showHeading="true"><saw:caption><saw:text>BI Search</saw:text></saw:caption><saw:displayFormat><saw:formatSpec wrapText="true" hAlign="left" borderPosition="16" borderColor="#336666" borderStyle="thick" paddingLeft="10"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#336666" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 1" duid="jfuoa5l3h6i7mja6"><sawd:HTML fmt="html">&lt;div id=&quot;BI Search&quot; class=lvl2div&gt;
+&lt;/br&gt;
+ &lt;a target=&quot;_blank&quot; href=&quot;/va/home.jsp&quot;&gt;BI Search&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+&lt;a target=&quot;_blank&quot; href=&quot;https://www.youtube.com/watch?v=EZUtNNAKCDg&amp;feature=youtu.be&quot;&gt;Watch BISearch Live&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;/div&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

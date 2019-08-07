@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawbsc:objective xmlns:sawbsc="com.siebel.analytics.web/scorecard/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sawkpi="com.siebel.analytics.web/kpi/v1" indicatorType="lagging" changeApprovalRequired="false">
+  <sawkpi:relatedDocuments>
+    <sawkpi:relatedDocument>
+      <sawkpi:name>** New Refund Policy</sawkpi:name>
+      <sawkpi:description/>
+      <sawkpi:link type="EXTERNAL">
+        <sawkpi:path>http://www.oracle.com</sawkpi:path>
+      </sawkpi:link>
+    </sawkpi:relatedDocument>
+    <sawkpi:relatedDocument>
+      <sawkpi:name>Top Customers Bookings Ticker</sawkpi:name>
+      <sawkpi:description/>
+      <sawkpi:link type="CATALOG">
+        <sawkpi:path>/shared/06. Dashboard Design/Prompts/Hier Column Prompt/Top Customer Type Time Var Prompt</sawkpi:path>
+      </sawkpi:link>
+    </sawkpi:relatedDocument>
+    <sawkpi:relatedDocument>
+      <sawkpi:name>Regional Performance Map</sawkpi:name>
+      <sawkpi:description/>
+      <sawkpi:link type="CATALOG">
+        <sawkpi:path>/shared/01. QuickStart/Simple Demo Dashboard/Geo Prompter/Geo Prompter</sawkpi:path>
+      </sawkpi:link>
+    </sawkpi:relatedDocument>
+    <sawkpi:relatedDocument>
+      <sawkpi:name>Order Status Report</sawkpi:name>
+      <sawkpi:description/>
+      <sawkpi:link type="CATALOG">
+        <sawkpi:path>/shared/02. Visualizations/Scorecards/Related Documents/Order Status Calculated Sum</sawkpi:path>
+      </sawkpi:link>
+    </sawkpi:relatedDocument>
+  </sawkpi:relatedDocuments>
+  <sawbsc:coreValues/>
+  <sawbsc:objectiveActionLinks/>
+</sawbsc:objective>

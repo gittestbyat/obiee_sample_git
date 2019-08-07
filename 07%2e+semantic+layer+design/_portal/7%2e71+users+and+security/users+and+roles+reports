@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="vn015nf93mauuqti"><sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" layoutType="bestFit" canFreeze="true"><sawd:dashboardSection name="Section 1" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 2" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2560">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Users, Groups and Roles custom report list
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2559">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 2" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" horizontalLayout="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2557">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2561">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This example illustrates How to get the list of users and their corresponding group/role from OBIEE Security infrastructure. </sawd:HTML>
+			</sawd:htmlView>
+			
+			<sawd:htmlView name="HTML 4" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2563">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; In this example, we use javascript to connect to OBIEE presentation server to access few web service methods. &lt;/br&gt;
+We are using the user credentials - prodney/Admin123 to connect. This user is a pre-seeded admin user included as part &lt;/br&gt;
+of SampleApp installation. If this user credentials are removed or changed from the identity store, then the script &lt;/br&gt;
+needs to be modified to use a valid credential with SOAP access privileges.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="juuju6u3tktjb7vs" break="column" layoutType="bestFit" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 0" collapsible="false" duid="vdfvgc5pqp7lrob5" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="38uvq3lp74m9hc09"><sawd:HTML fmt="html">&lt;script type=&quot;text/javascript&quot;&gt;
+function getText(obj){
+	var t = &quot;&quot;;
+	if (obj) //IE use .text, others .textContent
+  	t = obj.text ? obj.text : obj.textContent;
+  return (t);
+}
+
+function callWebService()
+{
+	var url = &quot;&quot;;
+	var username = &quot;prodney&quot;;
+	var password = &quot;Admin123&quot;;
+	
+	var xmlDoc = null;
+	var soapheader = &quot;&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;&lt;soapenv:Envelope xmlns:soapenv=&#39;http://schemas.xmlsoap.org/soap/envelope/&#39; xmlns:xsd=&#39;http://www.w3.org/2001/XMLSchema&#39; xmlns:xsi=&#39;http://www.w3.org/2001/XMLSchema-instance&#39;&gt;&lt;soapenv:Body&gt;&quot;;
+	var soapfooter = &quot;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;&quot;;
+	//var divResults = document.getElementById(&#39;listresultarea&#39;);
+	
+	if (window.XMLHttpRequest){
+		xmlDoc = new XMLHttpRequest(); //Newer browsers
+	}	else if (window.ActiveXObject) { //IE 5, 6
+		xmlDoc = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+	}
+	if (xmlDoc){
+		//logon and obtain sessionID
+		xmlDoc.open(&quot;POST&quot;, url + &quot;saw.dll?SoapImpl=nQSessionService&quot;,false);
+		xmlDoc.setRequestHeader(&quot;Content-Type&quot;, &quot;text/xml&quot;);
+		xmlDoc.setRequestHeader(&quot;SOAPAction&quot;, &quot;#logon&quot;);
+		xmlDoc.send(soapheader+ &quot;&lt;logon xmlns=&#39;urn://oracle.bi.webservices/v6&#39;&gt;&lt;name&gt;&quot;+username+&quot;&lt;/name&gt;&lt;password&gt;&quot;+password+&quot;&lt;/password&gt;&lt;/logon&gt;&quot;+ soapfooter);
+		var sessionID = getText(xmlDoc.responseXML.getElementsByTagName(&#39;sawsoap:sessionID&#39;).item(0));
+		if (!sessionID){
+			sessionID = getText(xmlDoc.responseXML.getElementsByTagName(&#39;sessionID&#39;).item(0));
+		}
+		if (!sessionID){
+			//divResults.innerHTML += &quot;Unable to connect to OBIEE server using the credentials provided&quot;;
+			document.writeln(&quot;Unable to connect to OBIEE server using the credentials provided&quot;);
+			return;
+		}
+
+		//get list of users
+		xmlDoc.open(&quot;POST&quot;, url + &quot;saw.dll?SoapImpl=securityService&quot;,false);
+		xmlDoc.setRequestHeader(&quot;Content-Type&quot;, &quot;text/xml&quot;);
+		xmlDoc.setRequestHeader(&quot;SOAPAction&quot;, &quot;#getAccounts&quot;);
+		xmlDoc.send(soapheader
+		+ &quot;&lt;getAccounts xmlns=&#39;urn://oracle.bi.webservices/v6&#39;&gt;&lt;account&gt;&lt;name&gt;*&lt;/name&gt;&lt;accountType&gt;4&lt;/accountType&gt;&lt;guid&gt;&lt;/guid&gt;&lt;/account&gt;&lt;sessionID&gt;&quot;
+		+ sessionID + &quot;&lt;/sessionID&gt;&lt;/getAccounts&gt;&quot;
+		+ soapfooter);
+		var userList = xmlDoc.responseXML.getElementsByTagName(&#39;sawsoap:name&#39;);		
+		if (userList.length==0){
+			userList = xmlDoc.responseXML.getElementsByTagName(&#39;name&#39;);		
+		}
+		if (!userList){
+			//divResults.innerHTML += &quot;Unable to retrieve users list&quot;;
+			document.writeln(&quot;Unable to retrieve users list&quot;);
+			return;
+		}
+
+		//divResults.innerHTML += &quot;&lt;table border=1&gt;&lt;tr&gt;&lt;th&gt;User Name&lt;/th&gt;&lt;th&gt;Role/Group Name&lt;/th&gt;&lt;/tr&gt;&quot;;
+		document.writeln(&quot;&lt;table border=1&gt;&lt;tr&gt;&lt;th&gt;User Name&lt;/th&gt;&lt;th&gt;Role/Group Name&lt;/th&gt;&lt;/tr&gt;&quot;);
+		var user=null;
+		var grp=null;
+		//alert(userList.length);
+		for (i=0;i&lt;userList.length;i++){
+			user=userList.item(i);
+			//get list of users
+			xmlDoc.open(&quot;POST&quot;, url + &quot;saw.dll?SoapImpl=securityService&quot;,false);
+			xmlDoc.setRequestHeader(&quot;Content-Type&quot;, &quot;text/xml&quot;);
+			xmlDoc.setRequestHeader(&quot;SOAPAction&quot;, &quot;#getGroups&quot;);
+			xmlDoc.send(soapheader
+			+ &quot;&lt;getGroups xmlns=&#39;urn://oracle.bi.webservices/v6&#39;&gt;&lt;member&gt;&lt;name&gt;&quot;
+			+ getText(user) + &quot;&lt;/name&gt;&lt;accountType&gt;0&lt;/accountType&gt;&lt;guid&gt;&lt;/guid&gt;&lt;/member&gt;&lt;expandGroups&gt;false&lt;/expandGroups&gt;&lt;sessionID&gt;&quot;
+			+ sessionID + &quot;&lt;/sessionID&gt;&lt;/getGroups&gt;&quot;
+			+ soapfooter);
+			var grpList = xmlDoc.responseXML.getElementsByTagName(&#39;sawsoap:name&#39;);	
+			if (grpList.length==0){			
+				grpList = xmlDoc.responseXML.getElementsByTagName(&#39;name&#39;);
+			}
+			var usrString=getText(user);
+			var grpString=&quot;&quot;;
+			if (grpList){
+				for (g=0;g&lt;grpList.length;g++){
+					grp = grpList.item(g);
+					grpString += getText(grp) + &quot;&lt;br/&gt;&quot;;
+				}
+				//divResults.innerHTML +=&quot;&lt;tr&gt;&lt;td&gt;&quot;+usrString+&quot;&lt;/td&gt;&lt;td&gt;&quot;+grpString+&quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+				document.writeln(&quot;&lt;tr&gt;&lt;td&gt;&quot;+usrString+&quot;&lt;/td&gt;&lt;td&gt;&quot;+grpString+&quot;&lt;/td&gt;&lt;/tr&gt;&quot;);
+			}
+		}
+	}	else {
+		//divResults.innerHTML +=&quot;Unable to create XMLHttpRequest object&quot;;
+		document.writeln(&quot;Unable to create XMLHttpRequest object&quot;);
+	}
+	//divResults.innerHTML += &quot;&lt;/table&gt;&quot;;
+	document.writeln(&quot;&lt;/table&gt;&quot;);
+}
+callWebService();
+&lt;/script&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="ctkckn33ldpg4n7f">
+	<sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1988">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Many to Many between two Dimensions
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1987">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		<sawd:linkView name="Link 5" target="new" type="report" destination="/shared/10. Lifecycle and Admin/_portal/10.20 Usage Tracking/Physical SQLs" layout="captionRight" duid="ekkloo9cvqjqcoep"><sawd:linkCaption><saw:caption><saw:text>Physical SQLs</saw:text></saw:caption></sawd:linkCaption><sawd:image src="res/sk_blafp/answers/bpIcon.png"/></sawd:linkView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" horizontalLayout="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_1982">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1989">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; Oracle BIEE&#39;s logical mapping can address dimensions that have a many-to-many relationship with each other. In this example, a bridge table gives correspondence between offices and channels : an office can have multiple channels, and each channel belongs to more than one office. The Oracle BIEE logical model leverages that bridge table to allow showing metrics from each dimension grain (revenue and quota), presented with both dimension details.</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1991">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; The bridge table is leveraged directly within the Oracle BIEE metadata&#39;s business model design.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><saw:displayFormat>
+			<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 2" duid="67dogoirl843qhkd" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 4" duid="314vb8hksbvfkgp6" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 2" display="embed" showView="" links="" duid="hhq00sp45l4l0jp6" overrideParentLinks="true"><saw:caption captionID="kcap12832459_1985">
+					<saw:text>Channel Weighted Revenue</saw:text>
+				</saw:caption>
+				<sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Physical Layer/Many to Many/Channel Weighted Revenue"/>
+			</sawd:reportView>
+			<sawd:reportView name="Report 3" display="embed" showView="" links="" duid="mrb54gli7tdpl3l3" overrideParentLinks="true"><saw:caption captionID="kcap12832459_1986">
+					<saw:text>Offices Evenly Allocated Quota</saw:text>
+				</saw:caption>
+				<sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Physical Layer/Many to Many/Offices Evenly Allocated Quota"/>
+			</sawd:reportView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" duid="jibo8qnaf0qb8s5d" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 3" collapsible="false" duid="bl421j141i828hc2" showSectionTitle="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 4" duid="8kuphufd83tc1hdt">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1992">&lt;img src=&quot;/analyticsRes/SampleApp/SampleAppPics/MtoM0.png&quot;/&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 5" duid="qvjttecu10msqq0g">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1993">&lt;img src=&quot;/analyticsRes/SampleApp/SampleAppPics/MtoM2.png&quot;/&gt;</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 0" display="embed" showView="" links="" duid="g7dbnjl0visf5n0t" overrideParentLinks="true"><saw:caption captionID="kcap12832459_1983">
+					<saw:text>Simple Quota Values</saw:text>
+				</saw:caption>
+				<sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Physical Layer/Many to Many/Simple Quota Values"/>
+			</sawd:reportView>
+			<sawd:reportView name="Report 1" display="embed" showView="" links="" duid="o7295gc02q0pjcu6" overrideParentLinks="true"><saw:caption captionID="kcap12832459_1984">
+					<saw:text>Simple Revenue Values</saw:text>
+				</saw:caption>
+				<sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Physical Layer/Many to Many/Simple Revenue Values"/>
+			</sawd:reportView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

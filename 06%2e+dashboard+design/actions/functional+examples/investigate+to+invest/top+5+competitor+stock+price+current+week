@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="c92746693a9b7c81b">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;A - Sample Sales&quot;.&quot;Offices&quot;.&quot;D3  Organization&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent">
+            <saw:clientEventSpec channel="Org"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_1315">
+            <saw:text>Offices</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_1316">
+            <saw:text>Company Name</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cf90fea38476cf28b">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">(1000000 + &quot;A - Sample Sales&quot;.&quot;Base Facts&quot;.&quot;1- Revenue&quot; )/100000 * CASE  WHEN (&quot;Time&quot;.&quot;T01 Per Name Week&quot; = &#39;2013 Week 37&#39; and &quot;Offices&quot;.&quot;D3  Organization&quot; = &#39;Franchises Org.&#39;) THEN 0.6 ELSE 1 END</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="true" negativeType="minus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_1317">
+            <saw:text>Base Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_1318">
+            <saw:text>Stock Price</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c904b808b762fe236">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">(1000000 + &quot;A - Sample Sales&quot;.&quot;Time Series&quot;.&quot;121  Period Ago Rev&quot;) /100000 * CASE  WHEN (&quot;Time&quot;.&quot;T01 Per Name Week&quot; = &#39;2013 Week 38&#39; and &quot;Offices&quot;.&quot;D3  Organization&quot; = &#39;Franchises Org.&#39;) THEN 0.6 ELSE 1 END</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="true" negativeType="minus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_1319">
+            <saw:text>Time Series</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_1320">
+            <saw:text>Stock Price Prior Period</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cb3d8a0e61df078e1">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">((1000000 + &quot;A - Sample Sales&quot;.&quot;Base Facts&quot;.&quot;1- Revenue&quot; )/100000 * CASE  WHEN (&quot;Time&quot;.&quot;T01 Per Name Week&quot; = &#39;2013 Week 37&#39; and &quot;Offices&quot;.&quot;D3  Organization&quot; = &#39;Franchises Org.&#39;) THEN 0.6 ELSE 1 END) - ((1000000 + &quot;A - Sample Sales&quot;.&quot;Time Series&quot;.&quot;121  Period Ago Rev&quot;) /100000 * CASE  WHEN (&quot;Time&quot;.&quot;T01 Per Name Week&quot; = &#39;2013 Week 38&#39; and &quot;Offices&quot;.&quot;D3  Organization&quot; = &#39;Franchises Org.&#39;) THEN 0.6 ELSE 1 END)</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="true" negativeType="minus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_1321">
+            <saw:text>Base Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_1322">
+            <saw:text>Variance</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="caf5b9c97b3881560">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">CASE  WHEN (&quot;Time&quot;.&quot;T01 Per Name Week&quot; = &#39;2013 Week 37&#39; and &quot;Offices&quot;.&quot;D3  Organization&quot; = &#39;Franchises Org.&#39;) THEN  ( ( ( 0.6  *  (1000000 + &quot;A - Sample Sales&quot;.&quot;Base Facts&quot;.&quot;1- Revenue&quot; ) /100000)   -    ((1000000 + &quot;A - Sample Sales&quot;.&quot;Time Series&quot;.&quot;121  Period Ago Rev&quot;) /100000)  ) /  ((1000000 + &quot;A - Sample Sales&quot;.&quot;Time Series&quot;.&quot;121  Period Ago Rev&quot;) /100000)         ) *100  ELSE (  ( (1000000 + &quot;A - Sample Sales&quot;.&quot;Base Facts&quot;.&quot;1- Revenue&quot; )  /100000  )   -    ( (1000000 + &quot;A - Sample Sales&quot;.&quot;Time Series&quot;.&quot;121  Period Ago Rev&quot;)  /100000 ) )  /  ((1000000 + &quot;A - Sample Sales&quot;.&quot;Time Series&quot;.&quot;121  Period Ago Rev&quot;) /100000)  *100   END</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          
+          <saw:formatSpec suppress="repeat" wrapText="true" interaction="action">
+            <saw:dataFormat xsi:type="saw:percent" minDigits="2" maxDigits="2" commas="true" negativeType="minus"/>
+            <saw:actionLinks showPopupMenuForOneLink="true">
+              <saw:actionLink actionLinkID="caf5b9c97b3881560_ale000c12ac32a0184">
+                <saw:actionPath>/shared/06. Dashboard Design/Actions/Functional Examples/Investigate to Invest/Navigate to recent news</saw:actionPath>
+                <saw:caption>
+                  <saw:text>Navigate to recent news</saw:text>
+                </saw:caption>
+                <saw:paramMapping>
+                  <saw:assign xsi:type="saw:stringAssign" name="1" fixed="true" hidden="true">
+                    <saw:mapping xsi:type="saw:contextColumnMappingType">
+                      <sawx:columnRefExpr columnID="c0c816f4fa9e0f6ab"/>
+                    </saw:mapping>
+                  </saw:assign>
+                </saw:paramMapping>
+              </saw:actionLink>
+              <saw:actionLink actionLinkID="caf5b9c97b3881560_al5b15de85a192e338">
+                <saw:actionPath>/shared/06. Dashboard Design/Actions/Functional Examples/Investigate to Invest/Email competitive intelligence team</saw:actionPath>
+                <saw:caption>
+                  <saw:text>Email competitive intelligence team</saw:text>
+                </saw:caption>
+                <saw:paramMapping>
+                  <saw:assign xsi:type="saw:intAssign" name="processOrder_arg0" fixed="true" hidden="true">
+                    <saw:value>111</saw:value>
+                  </saw:assign>
+                  <saw:assign xsi:type="saw:intAssign" name="processOrder_arg1" fixed="true" hidden="false">
+                    <saw:value>222</saw:value>
+                  </saw:assign>
+                  <saw:assign xsi:type="saw:intAssign" name="processOrder_arg2" fixed="true" hidden="true">
+                    <saw:value>333</saw:value>
+                  </saw:assign>
+                </saw:paramMapping>
+              </saw:actionLink>
+              <saw:actionLink actionLinkID="caf5b9c97b3881560_al777fe88ba8d3aecf">
+                <saw:actionPath>/shared/06. Dashboard Design/Actions/Functional Examples/Investigate to Invest/Launch Application</saw:actionPath>
+                <saw:caption>
+                  <saw:text>Launch financial management application</saw:text>
+                </saw:caption>
+              </saw:actionLink>
+              <saw:actionLink actionLinkID="caf5b9c97b3881560_alf6877283cd9ea740">
+                <saw:actionPath>/shared/06. Dashboard Design/Actions/Functional Examples/Investigate to Invest/Navigate to recent news</saw:actionPath>
+                <saw:caption>
+                  <saw:text>Log on to competitor history site</saw:text>
+                </saw:caption>
+                <saw:paramMapping>
+                  <saw:assign xsi:type="saw:stringAssign" name="1" fixed="true" hidden="true">
+                    <saw:mapping xsi:type="saw:contextColumnMappingType">
+                      <sawx:columnRefExpr columnID="c0c816f4fa9e0f6ab"/>
+                    </saw:mapping>
+                  </saw:assign>
+                </saw:paramMapping>
+              </saw:actionLink>
+            </saw:actionLinks>
+          </saw:formatSpec><saw:conditionalDisplayFormats>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="lessOrEqual">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="caf5b9c97b3881560"/>
+                    <sawx:expr xsi:type="xsd:decimal">-10</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec backgroundColor="#FF0012" wrapText="true" fontColor="#FFFFFF"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="greater">
+                    <sawx:expr xsi:type="sawx:sqlExpression">(((1000000 + &quot;A - Sample Sales&quot;.&quot;Base Facts&quot;.&quot;1- Revenue&quot;) /1000) - ((1000000 + &quot;A - Sample Sales&quot;.&quot;Time Series&quot;.&quot;121  Period Ago Rev&quot;) /1000)) / ((1000000 + &quot;A - Sample Sales&quot;.&quot;Time Series&quot;.&quot;121  Period Ago Rev&quot;) /1000) *100</sawx:expr>
+                    <sawx:expr xsi:type="xsd:decimal">5</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec interaction="action">
+                  <saw:actionLinks showPopupMenuForOneLink="true">
+                    <saw:actionLink actionLinkID="caf5b9c97b3881560_al9ad92b669fdcf3ce">
+                      <saw:actionPath>/shared/06. Dashboard Design/Actions/Actions to Invoke Browser Script/Action to Invoke Browser Script Example</saw:actionPath>
+                      <saw:caption>
+                        <saw:text>Email internal marketing group</saw:text>
+                      </saw:caption>
+                      <saw:paramMapping>
+                        <saw:assign xsi:type="saw:stringAssign" name="p1" fixed="true" hidden="true">
+                          <saw:value>p1 default value</saw:value>
+                        </saw:assign>
+                        <saw:assign xsi:type="saw:stringAssign" name="p2" fixed="true" hidden="true">
+                          <saw:value>p2 default value</saw:value>
+                        </saw:assign>
+                        <saw:assign xsi:type="saw:stringAssign" name="p3" fixed="true" hidden="true">
+                          <saw:value>1</saw:value>
+                        </saw:assign>
+                      </saw:paramMapping>
+                    </saw:actionLink>
+                  </saw:actionLinks>
+                </saw:formatSpec>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+          </saw:conditionalDisplayFormats>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_1323">
+            <saw:text>Base Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_1324">
+            <saw:text>Percentage Change</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cbb4f8f22ee46d2d0">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;A - Sample Sales&quot;.&quot;Time&quot;.&quot;T01 Per Name Week&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="suppress" wrapText="true"/>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_1325">
+            <saw:text>Time</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_1326">
+            <saw:text>Week</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+    <saw:filter>
+      <sawx:expr xsi:type="sawx:logical" op="and">
+        <sawx:expr xsi:type="sawx:comparison" op="equal">
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+          
+        <sawx:expr xsi:type="xsd:string">2013</sawx:expr></sawx:expr>
+        <sawx:expr xsi:type="sawx:comparison" op="equal">
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;A - Sample Sales&quot;.&quot;Time&quot;.&quot;T01 Per Name Week&quot;</sawx:expr>
+          
+        <sawx:expr xsi:type="xsd:string">2013 Week 37</sawx:expr></sawx:expr>
+      </sawx:expr>
+    </saw:filter>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="tableView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="cbb4f8f22ee46d2d0"/>
+            <saw:edgeLayer type="column" columnID="c92746693a9b7c81b"/>
+            <saw:edgeLayer type="column" columnID="cf90fea38476cf28b"/>
+            <saw:edgeLayer type="column" columnID="c904b808b762fe236"/>
+            <saw:edgeLayer type="column" columnID="cb3d8a0e61df078e1"/>
+            <saw:edgeLayer type="column" columnID="caf5b9c97b3881560"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+      <saw:display type="line" subtype="default" renderFormat="default" mode="online">
+        <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+      </saw:display>
+      <saw:canvasFormat height="330" width="640">
+        <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>
+        <saw:title mode="auto">
+          <saw:caption captionID="kcap12832459_1327">
+            <saw:text>(1000000 + 1- Revenue) / 100000</saw:text>
+          </saw:caption>
+        </saw:title>
+      </saw:canvasFormat>
+      <saw:selections>
+        <saw:categories>
+          <saw:category>
+            <saw:columnRef columnID="cbb4f8f22ee46d2d0"/>
+          </saw:category>
+        </saw:categories>
+        <saw:measures showMeasureLabelsOnCategory="false">
+          <saw:column measureType="y">
+            <saw:columnRef columnID="cf90fea38476cf28b"/>
+          </saw:column>
+        </saw:measures>
+        <saw:seriesGenerators>
+          <saw:measureLabels/>
+        </saw:seriesGenerators>
+        <saw:sections displayAsSlider="true">
+          <saw:section>
+            <saw:columnRef columnID="c0c816f4fa9e0f6ab"/>
+          </saw:section>
+        </saw:sections>
+      </saw:selections>
+      <saw:legendFormat position="default" transparentFill="true"/>
+      <saw:axesFormats>
+        <saw:axisFormat axis="Y1">
+          <saw:title mode="auto">
+            <saw:caption captionID="kcap12832459_1328">
+              <saw:text/>
+            </saw:caption>
+          </saw:title>
+        </saw:axisFormat>
+        <saw:axisFormat axis="X">
+          <saw:title mode="auto">
+            <saw:caption captionID="kcap12832459_1329">
+              <saw:text/>
+            </saw:caption>
+          </saw:title>
+        </saw:axisFormat>
+        <saw:axisFormat axis="Y2">
+          <saw:title mode="auto">
+            <saw:caption captionID="kcap12832459_1330">
+              <saw:text/>
+            </saw:caption>
+          </saw:title>
+        </saw:axisFormat>
+      </saw:axesFormats>
+    </saw:view>
+    <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+      <saw:edges>
+        
+        
+        
+        
+      <saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers/></saw:edge><saw:edge axis="section"><saw:edgeLayers/></saw:edge><saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            
+          <saw:edgeLayer type="column" columnID="c0c816f4fa9e0f6ab"/></saw:edgeLayers>
+        </saw:edge><saw:edge axis="column">
+          <saw:edgeLayers>
+            
+            
+          <saw:edgeLayer type="column" columnID="c731802be87302746">
+              <saw:drillState>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="c731802be87302746"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Total Time"/>
+                          <saw:members xsi:type="saw:integerMembers">
+                            <saw:value>1</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="c731802be87302746"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="c731802be87302746" groupID="0"/>
+                  </saw:selectionGroups>
+                </saw:drillStep>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="c731802be87302746"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Year"/>
+                          <saw:members xsi:type="saw:stringMembers">
+                            <saw:value>2010</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="c731802be87302746"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="c731802be87302746" groupID="0"/>
+                  </saw:selectionGroups>
+                  <saw:drillParents>
+                    <saw:drillParent columnID="c731802be87302746" levelID="Total Time">
+                      <saw:members xsi:type="saw:integerMembers">
+                        <saw:value>1</saw:value>
+                      </saw:members>
+                    </saw:drillParent>
+                  </saw:drillParents>
+                </saw:drillStep>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="c731802be87302746"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Quarter"/>
+                          <saw:members xsi:type="saw:stringMembers">
+                            <saw:value>2010 Q3</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="c731802be87302746"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="c731802be87302746" groupID="0"/>
+                  </saw:selectionGroups>
+                </saw:drillStep>
+              </saw:drillState>
+            </saw:edgeLayer><saw:edgeLayer type="measure"/></saw:edgeLayers>
+        </saw:edge></saw:edges>
+      <saw:measuresList>
+        <saw:measure columnID="cf90fea38476cf28b"/>
+        <saw:measure columnID="c904b808b762fe236"/>
+        <saw:measure columnID="cb3d8a0e61df078e1"/>
+        <saw:measure columnID="caf5b9c97b3881560"/>
+      </saw:measuresList>
+    </saw:view>
+  </saw:views>
+</saw:report>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf0e19df451d261a1">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Actions Entries&quot;.&quot;TimeStamp&quot;</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c35779c3d881aa008">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Actions Entries&quot;.&quot;Message&quot;</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+		</saw:columns>
+		<saw:columnOrder>
+			<saw:columnOrderRef columnID="cf0e19df451d261a1" direction="ascending"/>
+		</saw:columnOrder>
+	</saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="tickerview!1"/>
+				</saw:cvRow>
+			</saw:cvTable>
+		</saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="ce4fcbea580209e59"/>
+						<saw:edgeLayer type="column" columnID="c35779c3d881aa008"/>
+						<saw:edgeLayer type="column" columnID="ca474822ae945cc88"/>
+						<saw:edgeLayer type="column" columnID="cbafdbecf64ae7c5f"/>
+						<saw:edgeLayer type="column" columnID="c01b3265644836abd"/>
+						<saw:edgeLayer type="column" columnID="c3d994966db894957"/>
+						<saw:edgeLayer type="column" columnID="cf0e19df451d261a1"/>
+						<saw:edgeLayer type="column" columnID="c276ad9708b4bed17"/>
+					</saw:edgeLayers>
+				</saw:edge>
+				<saw:edge axis="column"/>
+			</saw:edges>
+		</saw:view>
+		<saw:view xsi:type="saw:narrativeView" name="narrativeView!1">
+			<saw:narrative>
+				<saw:caption fmt="text" captionID="kcap12832459_1276">
+					<saw:text>@{cf0e19df451d261a1}[br/]
+User: @{ce4fcbea580209e59}[br/]
+[b]@{c35779c3d881aa008}[/b][br/]</saw:text>
+				</saw:caption>
+			</saw:narrative>
+		</saw:view>
+		<saw:view xsi:type="saw:tickerview" name="tickerview!1" behavior="scroll" direction="left" scrollAmount="2" scrollDelay="1" marqueeAttributes="onMouseEnter=&quot;this.stop();&quot; onMouseLeave=&quot;this.start();&quot; class=&quot;TickerMarquee&quot;" backgroundColor="yellow">
+			<saw:beginningText>
+				<saw:caption fmt="html" captionID="kcap12832459_1277">
+					<saw:text>&lt;table class=&quot;TickerTable&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;table class=&quot;TickerGroup&quot;&gt;&lt;tr&gt;&lt;td&gt;</saw:text>
+				</saw:caption>
+			</saw:beginningText>
+			<saw:rowSep>
+				<saw:caption fmt="html" captionID="kcap12832459_1278">
+					<saw:text>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;td&gt;&lt;table class=&quot;TickerGroup&quot;&gt;&lt;tr&gt;&lt;td&gt;</saw:text>
+				</saw:caption>
+			</saw:rowSep>
+			<saw:colSep>
+				<saw:caption fmt="html" captionID="kcap12832459_1279">
+					<saw:text>&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;</saw:text>
+				</saw:caption>
+			</saw:colSep>
+			<saw:endingText>
+				<saw:caption fmt="html" captionID="kcap12832459_1280">
+					<saw:text>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</saw:text>
+				</saw:caption>
+			</saw:endingText>
+		</saw:view>
+	</saw:views>
+</saw:report>

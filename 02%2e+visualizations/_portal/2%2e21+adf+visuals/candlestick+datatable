@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="jjv7a2h22ban7nbd"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="true" duid="idgf837lli1dlhfc" layoutType="bestFit"><sawd:dashboardSection name="Section 11" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 11" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_416">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Integrating ADF charts in OBIEE Dashboards
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 5" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_415">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 12" duid="0dadj2fuhloe7r5u" showSectionTitle="true" collapsible="true" layoutType="bestFit"><saw:caption><saw:text>Page Information (click to collapse or expand)</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#666699" fontStyle="italic" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 12" duid="1pmoq7qhmirgpne8"><sawd:HTML fmt="html">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; 
+This example shows how vanilla ADF (JDev) charts can be integrated in OBIEE dashboards.[br/] The charts below are among OOB visualizations capabilities of JDev, and have been configured in an ADF application built in JDev and deployed on the WLS server. The ADF application uses a connection to the BIEE server as the data-source for its charts. Charts are representing data produced by the logical SQL shown on the page - on purpose. The logical SQL is configured with variables within ADF so it can be influenced by dashboard prompts as the example shows below.
+The project file for the ADF application (myadfviz) are saved under directory /app/oracle/SAScripts/ADFProject/myadfviz.zip on the SampleApp Image.[br/]</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 3" duid="um40g481fu1bpah8"><sawd:HTML fmt="html">[br/][br/]
+
+&lt;a target=_blank href=&#39;/analyticsRes/SampleApp/WorkshopDocs/ADFSunburst_Creation_Guide.pdf&#39;&gt;[b]ADFSunburst_Creation_Guide.pdf[/b]&lt;/a&gt;
+[br/][br/]
+This guide provides step-by-step instructions and screenshots to create a Sunburst chart within ADF framework.
+[br/]
+It also outlines the process to deploy this ADF application within Weblogic server and subsequently how to consume it within OBIEE.
+Similar steps could be followed to build some of the other advanced ADF visuals like Treemap, Hierarchy chart etc.
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" duid="77sb5c3542bmmmu8" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/02. Visualizations/ADF Visuals/CandleStick Prompt" duid="pgkhst9k0rsjqvdj" scope="dashboardPage"><saw:caption><saw:text>CandleStick Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:htmlView name="HTML 0" duid="22bg5o7rr0dtniio"><sawd:HTML fmt="text">[br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" break="column" frozen="false" canFreeze="false" duid="ir0fiqent79d1drt" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="qeaonh916t188rmt" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:iframeView name="IFrame 0" width="1024px" height="850px" scrolling="no" src="/adfviz/faces/adf.task-flow?adf.tfId=candlestick&amp;adf.tfDoc=/WEB-INF/candlestick.xml&amp;qtr=@{qtr}&amp;h=@{h}{300}&amp;w=@{w}{600}&amp;tabname=candlestick_datatable" embedsApp="false" duid="pcou2a4dn4hnea90"/></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" frozen="false" canFreeze="false" duid="jib5sf48me72ramg" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="94nj2n6m3beeincu" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="nr46cjsgthohgia5"><saw:caption><saw:text>CandleStick LogicalSQL</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/02. Visualizations/ADF Visuals/CandleStick LogicalSQL"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

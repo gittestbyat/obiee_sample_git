@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Default" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Flagstar-Branch_GeocodedNoNulls.xlsx</file>
+            <sheetName>Flagstar-Geocoded-Import</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" source="Default" label="G_1">
+               <element name="AUTO_UNIQUE_ID_2013_09_16_stevenchamberlin_Flagstar_Branc" value="AUTO_UNIQUE_ID_2013-09-16_stevenchamberlin_Flagstar-Branc" dataType="xsd:double" label="AUTO_UNIQUE_ID_2013-09-16_stevenchamberlin_Flagstar-Branc" breakOrder="None" fieldOrder="1"/>
+               <element name="Name" value="Name" dataType="xsd:string" label="Name" breakOrder="None" fieldOrder="2"/>
+               <element name="Address" value="Address" dataType="xsd:string" label="Address" breakOrder="None" fieldOrder="3"/>
+               <element name="City" value="City" dataType="xsd:string" label="City" breakOrder="None" fieldOrder="4"/>
+               <element name="State" value="State" dataType="xsd:string" label="State" breakOrder="None" fieldOrder="5"/>
+               <element name="ServiceType" value="ServiceType" dataType="xsd:string" label="ServiceType" breakOrder="None" fieldOrder="6"/>
+               <element name="Area_Code" value="Area Code" dataType="xsd:string" label="Area Code" breakOrder="None" fieldOrder="7"/>
+               <element name="Phone" value="Phone" dataType="xsd:string" label="Phone" breakOrder="None" fieldOrder="8"/>
+               <element name="Zip" value="Zip" dataType="xsd:double" label="Zip" breakOrder="None" fieldOrder="9"/>
+               <element name="Comm_Customers" value="Comm Customers" dataType="xsd:double" label="Comm Customers" breakOrder="None" fieldOrder="10"/>
+               <element name="CustRange" value="CustRange" dataType="xsd:string" label="CustRange" breakOrder="None" fieldOrder="11"/>
+               <element name="Comm_Assets_Total" value="Comm Assets Total" dataType="xsd:double" label="Comm Assets Total" breakOrder="None" fieldOrder="12"/>
+               <element name="Comm_Target" value="Comm Target" dataType="xsd:double" label="Comm Target" breakOrder="None" fieldOrder="13"/>
+               <element name="Savings" value="Savings" dataType="xsd:double" label="Savings" breakOrder="None" fieldOrder="14"/>
+               <element name="SavRange" value="SavRange" dataType="xsd:string" label="SavRange" breakOrder="None" fieldOrder="15"/>
+               <element name="CreditCards" value="CreditCards" dataType="xsd:double" label="CreditCards" breakOrder="None" fieldOrder="16"/>
+               <element name="Retail" value="Retail" dataType="xsd:double" label="Retail" breakOrder="None" fieldOrder="17"/>
+               <element name="CDs" value="CDs" dataType="xsd:double" label="CDs" breakOrder="None" fieldOrder="18"/>
+               <element name="Portfolios" value="Portfolios" dataType="xsd:double" label="Portfolios" breakOrder="None" fieldOrder="19"/>
+               <element name="AvgSav" value="AvgSav" dataType="xsd:double" label="AvgSav" breakOrder="None" fieldOrder="20"/>
+               <element name="AvgCC" value="AvgCC" dataType="xsd:double" label="AvgCC" breakOrder="None" fieldOrder="21"/>
+               <element name="AvgRetail" value="AvgRetail" dataType="xsd:double" label="AvgRetail" breakOrder="None" fieldOrder="22"/>
+               <element name="AvgCD" value="AvgCD" dataType="xsd:double" label="AvgCD" breakOrder="None" fieldOrder="23"/>
+               <element name="AvgPort" value="AvgPort" dataType="xsd:double" label="AvgPort" breakOrder="None" fieldOrder="24"/>
+               <element name="Red_Wing_Target_Appl" value="Red Wing Target Appl" dataType="xsd:double" label="Red Wing Target Appl" breakOrder="None" fieldOrder="25"/>
+               <element name="Red_Wing_Target_Volume" value="Red Wing Target Volume" dataType="xsd:double" label="Red Wing Target Volume" breakOrder="None" fieldOrder="26"/>
+               <element name="Red_Wing_CC_Applications" value="Red Wing CC Applications" dataType="xsd:double" label="Red Wing CC Applications" breakOrder="None" fieldOrder="27"/>
+               <element name="Red_Wing_CC_Closed" value="Red Wing CC Closed" dataType="xsd:double" label="Red Wing CC Closed" breakOrder="None" fieldOrder="28"/>
+               <element name="RedWingTotal" value="RedWingTotal" dataType="xsd:double" label="RedWingTotal" breakOrder="None" fieldOrder="29"/>
+               <element name="Red_Wing_CC_Limits" value="Red Wing CC Limits" dataType="xsd:double" label="Red Wing CC Limits" breakOrder="None" fieldOrder="30"/>
+               <element name="Red_Wing_Saving_Balance" value="Red Wing Saving Balance" dataType="xsd:double" label="Red Wing Saving Balance" breakOrder="None" fieldOrder="31"/>
+               <element name="MetDiv" value="MetDiv" dataType="xsd:double" label="MetDiv" breakOrder="None" fieldOrder="32"/>
+               <element name="County" value="County" dataType="xsd:double" label="County" breakOrder="None" fieldOrder="33"/>
+               <element name="Calculation" value="Calculation" dataType="xsd:double" label="Calculation" breakOrder="None" fieldOrder="34"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="Default" left="274px" top="17px"/>
+         <layout name="DATA_DS" left="28px" top="14px"/>
+         <layout name="dsModalMask" left="" top=""/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

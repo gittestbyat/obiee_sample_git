@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">      
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="XSA(&#39;prodney&#39;.&#39;Passenger Count by Location&#39;)" withinHierarchy="true">            
+      <saw:columns>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c059557bd65eb7696">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Columns&quot;.&quot;State&quot;</sawx:expr></saw:columnFormula></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c425350026054e6cd">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Columns&quot;.&quot;City&quot;</sawx:expr></saw:columnFormula></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c323d6fe2e3a8a254">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Columns&quot;.&quot;PassengerCount&quot;</sawx:expr></saw:columnFormula></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c4e6db171f30c5ae0">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">bin(&quot;Columns&quot;.&quot;PassengerCount&quot; by &quot;Columns&quot;.&quot;City&quot; into @{bins}{10} bins)</sawx:expr></saw:columnFormula>                        
+            <saw:displayFormat>                              
+               <saw:formatSpec suppress="repeat" wrapText="true">                                    
+                  <saw:dataFormat xsi:type="saw:custom" customFormat="Bin 0"/></saw:formatSpec></saw:displayFormat>                        
+            <saw:tableHeading>                              
+               <saw:caption fmt="text">                                    
+                  <saw:text>data</saw:text></saw:caption></saw:tableHeading>                        
+            <saw:columnHeading>                              
+               <saw:caption fmt="text">                                    
+                  <saw:text>PAX Bin</saw:text></saw:caption>                              
+               <saw:displayFormat>                                    
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c36473ce2a81f50ba">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">count(&quot;Columns&quot;.&quot;City&quot;)</sawx:expr></saw:columnFormula>                        
+            <saw:tableHeading>                              
+               <saw:caption fmt="text">                                    
+                  <saw:text>data</saw:text></saw:caption></saw:tableHeading>                        
+            <saw:columnHeading>                              
+               <saw:caption fmt="text">                                    
+                  <saw:text># Cities</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c00719222266d14fc">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">bin(&quot;Columns&quot;.&quot;PassengerCount&quot; by &quot;Columns&quot;.&quot;City&quot; into @{bins}{10} bins returning range_low)</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>data</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Bin - Low Limit</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="ce6a79f73c537c65f">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">bin(&quot;Columns&quot;.&quot;PassengerCount&quot; by &quot;Columns&quot;.&quot;City&quot; into @{bins}{10} bins returning range_high)</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>data</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Bin - Upper Limit</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns></saw:criteria>      
+   <saw:views currentView="0">            
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">                  
+         <saw:cvTable>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="dvtchart!2"/>               
+               <saw:cvCell viewName="tableView!2"/></saw:cvRow>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="tableView!1"/>               
+               <saw:cvCell viewName="heatmapView!1">                  
+                  <saw:displayFormat>                     
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>            
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="none">         
+         <saw:subTitle>            
+            <saw:caption fmt="text">               
+               <saw:text>Cities assigned into @{bins}{10} bins</saw:text></saw:caption>            
+            <saw:displayFormat>               
+               <saw:formatSpec fontSize="12" wrapText="true"/></saw:displayFormat></saw:subTitle>         
+         <saw:title>            
+            <saw:displayFormat>               
+               <saw:formatSpec fontFamily="Arial" fontSize="16" wrapText="true"/></saw:displayFormat></saw:title></saw:view>            
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">                  
+         <saw:edges>            
+            <saw:edge axis="page" showColumnHeader="true"/>            
+            <saw:edge axis="section"/>            
+            <saw:edge axis="row" showColumnHeader="true">                                             
+               <saw:columnOrder>                                    
+                  <saw:columnOrderRef columnID="c323d6fe2e3a8a254" direction="descending"/></saw:columnOrder>               
+               <saw:edgeLayers>                  
+                  <saw:edgeLayer type="column" columnID="c059557bd65eb7696"/>                  
+                  <saw:edgeLayer type="column" columnID="c425350026054e6cd">                     
+                     <saw:memberFormat>                        
+                        <saw:displayFormat>                           
+                           <saw:formatSpec width="150" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>                  
+                  <saw:edgeLayer type="column" columnID="c323d6fe2e3a8a254">                     
+                     <saw:headerFormat>                        
+                        <saw:displayFormat>                           
+                           <saw:formatSpec wrapText="true"/></saw:displayFormat>                        
+                        <saw:caption>                           
+                           <saw:text>PAX Count</saw:text></saw:caption></saw:headerFormat></saw:edgeLayer>                  
+                  <saw:edgeLayer type="column" columnID="c4e6db171f30c5ae0"/></saw:edgeLayers></saw:edge>            
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>            
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">                  
+         <saw:display type="bar" subtype="basic" renderFormat="default" mode="online">                        
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>                  
+         <saw:canvasFormat height="330" width="640">                        
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/></saw:canvasFormat>                  
+         <saw:selections>                        
+            <saw:categories>                              
+               <saw:category>                                    
+                  <saw:columnRef columnID="c059557bd65eb7696"/></saw:category>                              
+               <saw:category>                                    
+                  <saw:columnRef columnID="c36473ce2a81f50ba"/></saw:category></saw:categories>                        
+            <saw:measures showMeasureLabelsOnCategory="false">                              
+               <saw:column measureType="y">                                    
+                  <saw:columnRef columnID="c323d6fe2e3a8a254"/></saw:column>               
+               <saw:column measureType="y">                  
+                  <saw:columnRef columnID="c00719222266d14fc"/></saw:column>               
+               <saw:column measureType="y">                  
+                  <saw:columnRef columnID="ce6a79f73c537c65f"/></saw:column></saw:measures>                        
+            <saw:seriesGenerators>                              
+               <saw:seriesGenerator>                                    
+                  <saw:columnRef columnID="c4e6db171f30c5ae0"/></saw:seriesGenerator>                              
+               <saw:measureLabels/></saw:seriesGenerators>                        
+            <saw:page>                              
+               <saw:column>                                    
+                  <saw:columnRef columnID="c425350026054e6cd"/></saw:column></saw:page></saw:selections>                  
+         <saw:legendFormat position="default" transparentFill="true"/></saw:view>            
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!2">                  
+         <saw:display type="bar" subtype="basic" renderFormat="default" mode="online" animateOnDisplay="false">                        
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>                  
+         <saw:canvasFormat height="300" width="500">                        
+            <saw:dataLabels display="always" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default">                              
+               <saw:textFormat fontColor="#666666" fontSize="10"/></saw:dataLabels>                        
+            <saw:title mode="custom">                              
+               <saw:caption>                                    
+                  <saw:text/></saw:caption></saw:title></saw:canvasFormat>                  
+         <saw:selections>                        
+            <saw:categories>                              
+               <saw:category>                                    
+                  <saw:columnRef columnID="c4e6db171f30c5ae0"/></saw:category>               </saw:categories>                        
+            <saw:measures showMeasureLabelsOnCategory="false">                              
+               <saw:column measureType="y">                                    
+                  <saw:columnRef columnID="c425350026054e6cd"/></saw:column></saw:measures>                        
+            <saw:seriesGenerators>                              
+               <saw:measureLabels/></saw:seriesGenerators>                        
+            <saw:page/></saw:selections>                  
+         <saw:legendFormat position="default" transparentFill="true"/>         
+         <saw:axesFormats>            
+            <saw:axisFormat axis="Y1">               
+               <saw:title mode="custom">                  
+                  <saw:caption>                     
+                     <saw:text># of Cities</saw:text></saw:caption></saw:title></saw:axisFormat>            
+            <saw:axisFormat axis="X">               
+               <saw:title mode="custom"/></saw:axisFormat></saw:axesFormats></saw:view>            
+      <saw:view xsi:type="saw:heatmapView" name="heatmapView!1" scrollingEnabled="true" showMeasureValue="on">                  
+         <saw:edges>                        
+            <saw:edge axis="page" showColumnHeader="true"/>                        
+            <saw:edge axis="section"/>                        
+            <saw:edge axis="row" showColumnHeader="rollover" cellWidthType="max" cellWidthValue="100">                              
+               <saw:edgeLayers>                                    
+                  <saw:edgeLayer type="column" columnID="c059557bd65eb7696"/></saw:edgeLayers></saw:edge>                        
+            <saw:edge axis="column" showColumnHeader="rollover" cellWidthType="fixed" cellWidthValue="30">                              
+               <saw:edgeLayers>                                    
+                  <saw:edgeLayer type="measure" visibility="hidden"/>                                    
+                  <saw:edgeLayer type="column" columnID="c4e6db171f30c5ae0"/>                 </saw:edgeLayers></saw:edge></saw:edges>                  
+         <saw:measuresList>                        
+            <saw:measure columnID="c36473ce2a81f50ba" visualType="colorBy">               
+               <saw:dataBodyFormat>                  
+                  <saw:displayFormat>                     
+                     <saw:formatSpec fontSize="9"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList>                  
+         <saw:heatmapColor binType="percentile" numBins="4">            
+            <saw:columnRef columnID="c36473ce2a81f50ba"/>            
+            <saw:rampStyle>               
+               <saw:rampItem id="0">                  
+                  <saw:caption>                     
+                     <saw:text>First Quartile</saw:text></saw:caption>                  
+                  <saw:g class="color" fill="#A5CAE0"/></saw:rampItem>               
+               <saw:rampItem id="1">                  
+                  <saw:caption>                     
+                     <saw:text>Second Quartile</saw:text></saw:caption>                  
+                  <saw:g class="color" fill="#60A0C7"/></saw:rampItem>               
+               <saw:rampItem id="2">                  
+                  <saw:caption>                     
+                     <saw:text>Third Quartile</saw:text></saw:caption>                  
+                  <saw:g class="color" fill="#3883B2"/></saw:rampItem>               
+               <saw:rampItem id="3">                  
+                  <saw:caption>                     
+                     <saw:text>Fourth Quartile</saw:text></saw:caption>                  
+                  <saw:g class="color" fill="#1B4C6B"/></saw:rampItem></saw:rampStyle></saw:heatmapColor>                  
+         <saw:heatmapProperties showLegend="true"/></saw:view>      
+      <saw:view xsi:type="saw:tableView" name="tableView!2" scrollingEnabled="true">         
+         <saw:edges>            
+            <saw:edge axis="page" showColumnHeader="true"/>            
+            <saw:edge axis="section"/>            
+            <saw:edge axis="row" showColumnHeader="true">               
+               <saw:displayGrandTotals>                  
+                  <saw:displayGrandTotal id="gt_row" grandTotalPosition="after"/></saw:displayGrandTotals>               
+               <saw:edgeLayers>                  
+                  <saw:edgeLayer type="column" columnID="c4e6db171f30c5ae0"/>                  
+                  <saw:edgeLayer type="column" columnID="c00719222266d14fc">                     
+                     <saw:memberFormat>                        
+                        <saw:displayFormat>                           
+                           <saw:formatSpec wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>                  
+                  <saw:edgeLayer type="column" columnID="ce6a79f73c537c65f"/>                  
+                  <saw:edgeLayer type="column" columnID="c36473ce2a81f50ba"/></saw:edgeLayers></saw:edge>            
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges>         
+         <saw:sectionContent>            
+            <saw:displayFormat>               
+               <saw:formatSpec wrapText="true"/></saw:displayFormat></saw:sectionContent></saw:view></saw:views></saw:report>

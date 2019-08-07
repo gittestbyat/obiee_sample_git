@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb3eb7208d9231836">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Time&quot;.&quot;T05 Per Name Year&quot;}</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" vAlign="middle" wrapText="true"/></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Products</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>P4  Brand</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cee4cd604e16d50f2">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cdbf418900f06cf95">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;table&gt;&lt;tr&gt;&lt;td width=  &#39;||cast(cast(&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; as double) / MAX(&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;)*100 as varchar(20))||&#39;   bgcolor=#D5CFC0 height=4&gt;&lt;/td&gt;&lt;td&gt;&lt;font size = &quot;-3&quot;&gt;  &#39;||cast(&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;/1000 as varchar(20))||&#39;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table&gt;&lt;tr&gt;&lt;td style=&quot;padding-left:0&quot; width= &#39;||cast(cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / MAX(&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;)*100 as varchar(20))||&#39; bgcolor=#99CC99 height=4&gt; &lt;/td&gt;&lt;td&gt; &lt;font size = &quot;-3&quot;&gt;&#39;||cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot;/1000 as varchar(20))||&#39; &lt;center&gt;&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;&#39;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Html Formatted Column</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>Value Bars</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c68e44df77c5767cd">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">Case when &quot;Base Facts&quot;.&quot;1- Revenue&quot;&lt;&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;  then    
+&#39;&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td width= 100 bgcolor=#C5BDA8 height=6&gt;&lt;/td&gt; &lt;/tr&gt;
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt; &lt;td width=  &#39;||
+cast(round((cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / &quot;Base Facts&quot;.&quot;5- Target Revenue&quot; *100),2) as varchar(20))
+||&#39;   bgcolor=#F1E87D height=8&gt;&lt;td&gt; &lt;font size = &quot;-3&quot;&gt;&#39;||
+cast(round((cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / &quot;Base Facts&quot;.&quot;5- Target Revenue&quot; *100),2) as varchar(20))
+||&#39; %&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&#39;  else  &#39;&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td width= 100 bgcolor=#C5BDA8 height=6&gt;&lt;/td&gt; &lt;/tr&gt;
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt; &lt;td width=  &#39;||
+cast(round((cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / &quot;Base Facts&quot;.&quot;5- Target Revenue&quot; *100),2) as varchar(20))
+||&#39;   bgcolor=#99CC99 height=8&gt;&lt;td&gt;&lt;font size = &quot;-3&quot;&gt;&#39;||
+cast(round((cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / &quot;Base Facts&quot;.&quot;5- Target Revenue&quot; *100),2) as varchar(20))
+||&#39; %&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&#39;  end</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" vAlign="middle">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Html Formatted Column</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Value Bars 2</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c3ab082af961b8b8e">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">Case when &quot;Base Facts&quot;.&quot;1- Revenue&quot;&lt;&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;  then   &#39;&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td width=30 align=right&gt;&lt;font size = &quot;-4&quot; color=#800000&gt;&#39;||cast(cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / &quot;Base Facts&quot;.&quot;5- Target Revenue&quot; *100 as varchar(20))||&#39;&lt;/font&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#C5BDA8&quot; height=&quot;13&quot; width=&#39;||cast(cast(&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; as double) / MAX(&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;)*100 as varchar(20))||&#39;&gt;&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td  bgcolor=&quot;#F1E87D&quot; height=&quot;5&quot; width= &#39;||cast(cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / MAX(&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;)*100 as varchar(20))||&#39;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#39;  else      &#39;&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt; &lt;td width=30 align=right&gt;&lt;font size = &quot;-4&quot; color=#336633&gt;&#39;||cast(cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / &quot;Base Facts&quot;.&quot;5- Target Revenue&quot; *100 as varchar(20))||&#39;&lt;/font&gt;&lt;/td&gt;&lt;td bgcolor=&quot;#C5BDA8&quot; height=&quot;13&quot;&gt;  &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;  &lt;tr&gt;  &lt;td  bgcolor=&quot;#008000&quot; height=&quot;5&quot; width=&#39;||cast(cast(&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; as double) / MAX(&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;)*100 as varchar(20))||&#39;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;  &lt;td&gt;  &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;  &lt;tr&gt;  &lt;td bgcolor=&quot;#008000&quot; height=&quot;5&quot; width=&#39;||cast(cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot;-&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; as double) / MAX(&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;)*100 as varchar(20))||&#39;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#39; end</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" vAlign="middle">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Html Formatted Column</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>Embedded</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce678d71c4cc3f5ed">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">Case when &quot;Base Facts&quot;.&quot;1- Revenue&quot;&lt;&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;  then     
+&#39;&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td width= 30 bgcolor=#B9AE92 height=4&gt;&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt; 
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt; 
+&lt;td width=  &#39;|| 
+cast(round((cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / &quot;Base Facts&quot;.&quot;5- Target Revenue&quot; *30),2) as varchar(20)) 
+||&#39;   bgcolor=#F1E87D height=8&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;font size = &quot;-4&quot; color=#800000&gt;&#39;||
+cast(round((cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / &quot;Base Facts&quot;.&quot;5- Target Revenue&quot; *100),2) as varchar(20))
+||&#39;%&lt;/font&gt;&#39;  else &#39;&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td width= 30 bgcolor=#B9AE92 height=4&gt;&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt; &lt;td width=  &#39;||
+cast(round((cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / &quot;Base Facts&quot;.&quot;5- Target Revenue&quot; *30),2) as varchar(20))
+||&#39;   bgcolor=#99CC99 height=8&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;font size = &quot;-4&quot; color=#336633&gt;&#39;||
+cast(round((cast(&quot;Base Facts&quot;.&quot;1- Revenue&quot; as double) / &quot;Base Facts&quot;.&quot;5- Target Revenue&quot; *100),2) as varchar(20))
+||&#39;%&lt;/font&gt;&#39; end</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true" vAlign="middle">
+                  <saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Html Formatted Column</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Gauge</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf375a0a1ba625d84">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="pivotTableView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell>
+               <saw:cvCell viewName="tableView!2" rowSpan="3"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="pivotTableView!2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!2">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="t3" grandTotalPosition="before"/></saw:displayGrandTotals></saw:edge>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cb3eb7208d9231836">
+                     <saw:levels>
+                        <saw:level>
+                           <saw:displaySubTotal id="t4" subTotalPosition="after">
+                              <saw:dataBodyFormat>
+                                 <saw:displayFormat>
+                                    <saw:formatSpec fontStyle="regular" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:displaySubTotal></saw:level></saw:levels>
+                     <saw:memberFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec width="30" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>
+                  <saw:edgeLayer type="column" columnID="cee4cd604e16d50f2">
+                     <saw:memberFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec width="40" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>
+                  <saw:edgeLayer type="column" columnID="cdbf418900f06cf95"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cb3eb7208d9231836"/>
+                  <saw:edgeLayer type="column" columnID="cee4cd604e16d50f2"/>
+                  <saw:edgeLayer type="column" columnID="c68e44df77c5767cd"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" autoPreview="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="false">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cb3eb7208d9231836"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cee4cd604e16d50f2"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="ce678d71c4cc3f5ed"/></saw:measuresList></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2" autoPreview="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="false">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cb3eb7208d9231836" uiTableName="Products"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cee4cd604e16d50f2" uiTableName="Products"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c3ab082af961b8b8e" uiTableName="Html Formatted Column"/></saw:measuresList>
+         <saw:sectionContent>
+            <saw:displayFormat>
+               <saw:formatSpec/></saw:displayFormat></saw:sectionContent></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+            <saw:displayFormat/></saw:logoFormat><saw:createdTime>
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>				
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view></saw:views></saw:report>

@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<PROFILE>
+	<CONTACT_NAME>New Corporation</CONTACT_NAME>
+<LOGO>http://eaton.com/eaton/3/images/HomePage/logo.gif</LOGO>
+<CUST_PROFILE>Eaton Brazil
+Valinhos, Brazil 
+
+Industry 
+Industrial Manufacturing
+Geographies 
+LAD
+Oracle Products and Services
+ - Enterprise Edition
+ - Oracle Financials
+ - Oracle Manufacturing
+ - Oracle Human Resources Management System (HRMS)
+ - iProcurement
+ - iSupplier Portal
+ - Purchasing Intelligence
+Key Benefits
+ - Integrated ERP applications result in a comprehensive information base
+ - Model ERP implementation serves as a benchmark for other plants
+ - Streamlined procurement process reduces purchasing time and costs 
+ - E-commerce Web site provides reseller network with quick, inexpensive access to products
+ - Online storefront expedites service to specialty automotive manufacturers via seamless integration with ERP and CRM applications
+Improved communication with headquarters and quality of information supports significant export business
+</CUST_PROFILE>
+<DOC_TITLE>Eaton Brazil Sets the ERP Standard for Eaton's Manufacturing Plants Worldwide</DOC_TITLE>
+<PREAMBLE>The tight integration and flexible architecture of Oracle E-Business Suite improves data consistency, eliminates duplications, runs in real time, and enables data and information reporting for decision support and day-to-day management. -- Oswaldo Luiz Agostinho, IT Manager, Transmissions Division, Eaton Brazil</PREAMBLE>
+<INTRO>Eaton Corporation is a USA-based multinational company with over 150 manufacturing units worldwide. It produces automobile components, hydraulic control systems, electrical engine protectors, truck components, semiconductors and special systems. With operations in Brazil since 1959, Eaton purchased the Equipamentos Clark Ltda, a transmissions manufacturer, in 1996, assuming control of one of the largest auto parts manufacturer facilities in the country.</INTRO>
+<TITLE1>Applying the Latest Technology to Improve Business Processes</TITLE1>
+<CONTENT1>Eaton Corporation, a global, diversified industrial manufacturer, is a leader in fluid power systems, electrical power quality, distribution, and control; automotive engine air management and fuel economy, and intelligent truck systems for fuel economy and safety. Eaton sells products in more than 50 countries and has been operating in Brazil since 1959. Eaton's Transmission Division in Brazil resulted from the acquisition of Equipamentos Clark Ltda, an automotive transmissions manufacturer with 90% domestic market share. It has manufacturing plants in Valinhos, Mogi Mirim, and S⭠Paulo and exports parts to the U.S., Argentina, Mexico, and Turkey. According to: "In the early '90s Equipamento Clark's in-house enterprise resource planning (ERP) system ran on an IBM mainframe computer. Packaged ERP applications were new on the market," explained Oswaldo Luiz Agostinho, IT manager for the transmissions division at Eaton Brazil. "We needed to improve data integration across functions and our financial management capabilities. We researched packaged ERP applications available."</CONTENT1>
+<TITLE2>High-Level Project Goals</TITLE2>
+<CONTENT2> - Consolidate data from ERP applications and external systems
+ - Streamline business processes to improve operational efficiencies 
+ - Implement robust and comprehensive financial application 
+ - Transition from proprietary mainframe to flexible, integrated environment</CONTENT2>
+<TITLE3>Why Oracle?</TITLE3>
+<CONTENT3>"In addition to Oracle Financials, Oracle suggested that we consider a manufacturing system and showed us how we could have a completely integrated ERP environment based on a flexible, internet-based architecture, that included financials, engineering, manufacturing, human resources, commercial, accounting, inventory modules, and more," Agostinho said. "And that was how Eaton Transmissions Division came to be the first in South America to deploy Oracle E-Business Suite. Oracle E-Business Suite is a complete set of business applications that shares a single technology foundation which enables Eaton to maintain global business information in one place, access the same data worldwide with Oracle's single data model, automate business processes across the enterprise, and manage by fact with integrated intelligence. When Eaton bought Equipamentos Clark in 1996, the Oracle system deployment was ahead of schedule. "We had no problems integrating Oracle applications with third-party software," Agostinho said. Eaton managed the implementation itself to minimize the cultural impact on end users. "We experienced no downtime when we went into production," he said. Eaton's Oracle E-Business Suite implementation at the Valinhos facility interfaces to specific third-party systems that were deployed in parallel at the Mogi Mirim manufacturing site. "The tight integration and flexible architecture of Oracle E-Business Suite improves data consistency, eliminates duplicities, runs in real time, and enables data and information reporting for decision support and day-to-day management," Agostinho said.</CONTENT3>
+<TITLE4>Facilitating Trade Between Suppliers and Resellers</TITLE4>
+<CONTENT4>Part of Oracle E-Business Suite, Oracle Exchange is an electronic marketplace that Eaton uses to foster business between Eaton's customers and suppliers. Eaton's online marketplace is also being used to purchase products from its suppliers as well as to sell parts to automotive manufacturers and resellers who make up the aftermarket.  "We were using enterprise data interchange (EDI) systems and replicating them to our 3,000 suppliers and approximately 3,000 spare parts resellers," explained Agostinho. "However, EDI systems are proprietary and can be difficult to deploy at smaller resellers. Therefore, we chose to move to a Web based system. Oracle Exchange allows any partner with a standard internet browser to have secure access to the system."</CONTENT4>
+<TITLE5>Reducing Purchasing Time and Costs</TITLE5>
+<CONTENT5>Eaton's e-commerce deployment, based on Oracle E-Business Suite, was conducted in three phases. The first phase, completed in the spring of 2002, focused on enhancing relationships with suppliers by deploying Oracle Procurement, including iProcurement, Purchasing Intelligence, and iSupplier Portal--all part of the Internet Procurement Solution of Oracle E-Business Suite. Eaton uses Oracle Procurement to source, negotiate, and collaborate more effectively with suppliers, and identify savings opportunities with spend analysis and supplier performance tracking. "Oracle Procurement has streamlined the procurement process and reduced purchasing time and costs through reverse auctions where suppliers offering the lowest prices and the best conditions make the sales," said Agostinho.  In the fall of 2002, Eaton completed Phase 2 and implemented Oracle Exchange Marketplace, an e-commerce Web site for purchasers, suppliers, and aftermarket customers. This online, collaborative environment enables Eaton's supply chain partners to come together and conduct business over the Internet. "Oracle Exchange Marketplace provides our reseller network with quick, inexpensive access to our products," said Agostinho.  In parallel, Eaton opened a virtual store, based on Oracle iStore integrated with a customer relationship management (CRM) system tailored to serve specialty automotive manufacturers. Oracle iStore enables Eaton to build, manage, and personalize powerful, global, and scalable Internet storefronts and provides a 360-degree view of customers and their sales interactions across all channels by using a unified customer data model. </CONTENT5>
+<TITLE6>Future Plans</TITLE6>
+<CONTENT6>Eaton also plans to implement the supply chain planning modules of Oracle E-Business Suite to integrate and streamline operations across its entire value chain. "We will also count on more efficient communication with headquarters in the U.S., which is critical for a company where 30% of revenues come from export," Agostinho said.</CONTENT6>
+</PROFILE>

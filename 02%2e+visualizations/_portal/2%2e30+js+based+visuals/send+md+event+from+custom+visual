@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="66m7s52u9t67ai5q" links="" overrideParentLinks="true"><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="ko6vm1aqusqqp6vs" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+      <saw:displayFormat>
+        <saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+        <sawd:HTML fmt="html" captionID="kcap12832459_670">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Send MD Event
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+      </sawd:htmlView>
+      <sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+        <sawd:linkCaption>
+          <saw:caption captionID="kcap12832459_669">
+            <saw:text>Return to Main Index page</saw:text>
+          </saw:caption>
+        </sawd:linkCaption>
+        <sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+      </sawd:linkView>
+    </sawd:dashboardSection><sawd:dashboardSection name="Section 7" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" layoutType="minimumSize">
+      <saw:displayFormat>
+        <saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 6" duid="al3aq64l1co3ogrl">
+        <sawd:HTML fmt="html" captionID="kcap12832459_670">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt;This is example of how an external D3 based visualization can sent master detail events to OBIEE charts. Select any cell from heatmap view below and watch the slider prompt change on the adjacent views. 
+[br/]
+Note: Custom JS scripts that are included in this example are not part of OBIEE product and they are not supported by Oracle. It is provided for demonstration purposes.  </sawd:HTML>
+      </sawd:htmlView>
+      
+    </sawd:dashboardSection><sawd:dashboardSection name="Section 5" horizontalLayout="true" collapsible="false" duid="l5qhvf16j62u5lvb" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec paddingTop="10" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 2" display="embed" showView="" duid="au82iju1jmqt32t3"><saw:caption><saw:text>Heatmap MD</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Master Detail/Heatmap MD"/></sawd:reportView><sawd:reportView name="Report 3" display="embed" showView="" duid="osvtvj0ijv11s64k"><saw:caption><saw:text>Detail MD</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Master Detail/Detail MD"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

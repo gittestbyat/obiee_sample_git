@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">      
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;M - Big Data Movie&quot;" withinHierarchy="true">            
+      <saw:columns>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="cf6fd6ade8b371e43">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Movie&quot;.&quot;Movie ID&quot;</sawx:expr></saw:columnFormula></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c0af491864e653b59">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Movie&quot;.&quot;Movie Title&quot;</sawx:expr></saw:columnFormula></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c14a9cd73b1dc85da">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Movie&quot;.&quot;Release Year&quot;</sawx:expr></saw:columnFormula>            
+            <saw:displayFormat>               
+               <saw:formatSpec suppress="repeat" wrapText="true">                  
+                  <saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>            
+            <saw:columnHeading>               
+               <saw:displayFormat>                  
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c181f205c753df69f">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Facts (Impala)&quot;.&quot;Count of Activities&quot;</sawx:expr></saw:columnFormula>                        
+            <saw:displayFormat>                              
+               <saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat>                        
+            <saw:tableHeading>                              
+               <saw:caption fmt="text">                                    
+                  <saw:text>Facts</saw:text></saw:caption></saw:tableHeading>                        
+            <saw:columnHeading>                              
+               <saw:displayFormat>                                    
+                  <saw:formatSpec/></saw:displayFormat>                              
+               <saw:caption fmt="text">                                    
+                  <saw:text>No of Purchases</saw:text></saw:caption></saw:columnHeading></saw:column>                  
+                           
+         <saw:column xsi:type="saw:regularColumn" columnID="c73b82dc61f980dce">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Facts (Impala)&quot;.&quot;Price&quot;</sawx:expr></saw:columnFormula>                        
+            <saw:displayFormat>                              
+               <saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat>                        
+            <saw:tableHeading>                              
+               <saw:caption fmt="text">                                    
+                  <saw:text>Facts</saw:text></saw:caption></saw:tableHeading>                        
+            <saw:columnHeading>                              
+               <saw:displayFormat>                                    
+                  <saw:formatSpec/></saw:displayFormat>                              
+               <saw:caption fmt="text">                                    
+                  <saw:text>Revenue</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>            
+      <saw:filter>                  
+         <sawx:expr xsi:type="sawx:logical" op="and">                        
+            <sawx:expr xsi:type="sawx:comparison" op="equal">                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Activity&quot;.&quot;Activity&quot;</sawx:expr>                              
+               <sawx:expr xsi:type="xsd:decimal">11</sawx:expr></sawx:expr>                        
+            <sawx:expr xsi:type="sawx:rank" op="top"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Facts (Impala)&quot;.&quot;Count of Activities&quot;</sawx:expr><sawx:expr xsi:type="xsd:decimal">10</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:savedFilter" path="/shared/09. Integrations and Customizations/_filters/M - Big Data Movie/Prompted Filters" name="Prompted Filters"/></sawx:expr></saw:filter>      
+      <saw:columnOrder>         
+         <saw:columnOrderRef columnID="c181f205c753df69f" direction="descending"/></saw:columnOrder></saw:criteria>      
+   <saw:views currentView="0">            
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">                  
+         <saw:cvTable>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="titleView!1">                                    
+                  <saw:displayFormat>                                          
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="tableView!1">                                    
+                  <saw:displayFormat>                                          
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="dvtchart!1">                                    
+                  <saw:displayFormat>                                          
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>            
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none"><saw:title>                        
+            <saw:caption fmt="text">                              
+               <saw:text>Top Movies Purchased </saw:text></saw:caption>            
+            <saw:displayFormat>               
+               <saw:formatSpec wrapText="true" fontFamily="Arial" fontSize="16" fontStyle="bold"/></saw:displayFormat></saw:title><saw:subTitle>            
+            <saw:caption fmt="text">               
+               <saw:text>Genereted by joining fact data from HDFS with movie attributes in Oracle relational tables</saw:text></saw:caption></saw:subTitle></saw:view>            
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">                  
+         <saw:edges>                        
+            <saw:edge axis="page" showColumnHeader="true"/>                        
+            <saw:edge axis="section"/>                        
+            <saw:edge axis="row" showColumnHeader="true">                              
+               <saw:columnOrder>                                    
+                  <saw:columnOrderRef columnID="c181f205c753df69f" direction="descending"/></saw:columnOrder>                              
+               <saw:edgeLayers>                                    
+                  <saw:edgeLayer type="column" columnID="c0af491864e653b59"/>                                    
+                  <saw:edgeLayer type="column" columnID="c14a9cd73b1dc85da"/>                                    
+                  <saw:edgeLayer type="column" columnID="c181f205c753df69f"/>                                    
+                  <saw:edgeLayer type="column" columnID="c5048c000a1bab76d"/>                                    
+                  <saw:edgeLayer type="column" columnID="c73b82dc61f980dce"/></saw:edgeLayers></saw:edge>                        
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>            
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">                  
+         <saw:display type="pie" subtype="default" renderFormat="default" mode="online" animateOnDisplay="false">                        
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>                  
+         <saw:canvasFormat height="280" width="400">                        
+            <saw:dataLabels display="always" label="nameValue" position="below" transparentBackground="true" valueAs="default" abbreviation="default">               
+               <saw:textFormat/></saw:dataLabels>            
+            <saw:title mode="custom"/></saw:canvasFormat>                  
+         <saw:selections>                        
+            <saw:categories>                              
+               <saw:measureLabels/></saw:categories>                        
+            <saw:measures showMeasureLabelsOnCategory="false">                              
+               <saw:column measureType="pie">                                    
+                  <saw:columnRef columnID="c181f205c753df69f"/></saw:column></saw:measures>                        
+            <saw:seriesGenerators>                              
+               <saw:seriesGenerator>                                    
+                  <saw:columnRef columnID="c0af491864e653b59"/></saw:seriesGenerator></saw:seriesGenerators></saw:selections>                  
+         <saw:legendFormat position="none" transparentFill="true"/></saw:view></saw:views></saw:report>

@@ -1,0 +1,186 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+<fields>
+<field name="A_AMG">
+<value>100</value>
+</field>
+<field name="A_COST">
+<value>200</value>
+</field>
+<field name="B_CE">
+<value>100</value>
+</field>
+<field name="B_TNP">
+<value>200</value>
+</field>
+<field name="C_AMG">
+<value>200</value>
+</field>
+<field name="C_CE">
+<value>100</value>
+</field>
+<field name="C_COST">
+<value>300</value>
+</field>
+<field name="DIRECTOR_FLAG">
+<value>Y</value>
+</field>
+<field name="E_CE">
+<value>200</value>
+</field>
+<field name="EMPLOYEE_NUMBER">
+<value>1234</value>
+</field>
+<field name="EMPLOYERS_NAME">
+<value>Takashi Suzuki</value>
+</field>
+<field name="EMPLOYERS_REF_NO">
+<value>1234567890</value>
+</field>
+<field name="F_TCCE">
+<value>9800000</value>
+</field>
+<field name="F_TFCE">
+<value>9800000</value>
+</field>
+<field name="F1_AMG">
+<value>500000</value>
+</field>
+<field name="F1_APRICE">
+<value>500000</value>
+</field>
+<field name="F1_CC">
+<value>500000</value>
+</field>
+<field name="F1_COST">
+<value>500000</value>
+</field>
+<field name="F1_DREG">
+<value>01/02/03</value>
+</field>
+<field name="F1_FCC">
+<value>9800000</value>
+</field>
+<field name="F1_LPRICE">
+<value>100000</value>
+</field>
+<field name="F1_MAKE">
+<value>Mercedes</value>
+</field>
+<field name="f1_NFIG">
+<value>Off</value>
+</field>
+<field name="F1_OPRICE">
+<value>500000</value>
+</field>
+<field name="F2_AMG">
+<value>500000</value>
+</field>
+<field name="F2_APRICE">
+<value>500000</value>
+</field>
+<field name="F2_CC">
+<value>500000</value>
+</field>
+<field name="F2_COST">
+<value>500000</value>
+</field>
+<field name="F2_DREG">
+<value>01/03/03</value>
+</field>
+<field name="F2_FCC">
+<value>9800000</value>
+</field>
+<field name="F2_LPRICE">
+<value>100000</value>
+</field>
+<field name="F2_MAKE">
+<value>Mercedes</value>
+</field>
+<field name="F2_NFIG">
+<value>Off</value>
+</field>
+<field name="F2_OPRICE">
+<value>500000</value>
+</field>
+<field name="FULL_NAME">
+<value>Takashi Suzuki</value>
+</field>
+<field name="G_CE">
+<value>870000</value>
+</field>
+<field name="I_AMG">
+<value>80000</value>
+</field>
+<field name="I_CE">
+<value>907000</value>
+</field>
+<field name="I_COST">
+<value>987000</value>
+</field>
+<field name="K_AMG">
+<value>100000</value>
+</field>
+<field name="K_CE">
+<value>800000</value>
+</field>
+<field name="K_COST">
+<value>900000</value>
+</field>
+<field name="M_SHARES">
+<value>Off</value>
+</field>
+<field name="NATIONAL_INS_NO">
+<value>123456789</value>
+</field>
+<field name="O_TOI">
+<value>Y</value>
+</field>
+<field name="O1_AMG">
+<value>300000</value>
+</field>
+<field name="O1_CE">
+<value>300000</value>
+</field>
+<field name="O1_COST">
+<value>600000</value>
+</field>
+<field name="O2_AMG">
+<value>10000</value>
+</field>
+<field name="O2_CE">
+<value>10000</value>
+</field>
+<field name="O2_COST">
+<value>20000</value>
+</field>
+<field name="O3_AMG">
+<value>8000</value>
+</field>
+<field name="O3_CE">
+<value>2000</value>
+</field>
+<field name="O3_COST">
+<value>10000</value>
+</field>
+<field name="O4_AMG">
+<value>20</value>
+</field>
+<field name="O4_CE">
+<value>80</value>
+</field>
+<field name="O4_COST">
+<value>100</value>
+</field>
+<field name="O5_AMG">
+<value>300000</value>
+</field>
+<field name="O5_CE">
+<value>600000</value>
+</field>
+<field name="O5_COST">
+<value>900000</value>
+</field>
+</fields>
+<f href="jt_p11d_all_tag_02_03.pdf"/>
+</xfdf>

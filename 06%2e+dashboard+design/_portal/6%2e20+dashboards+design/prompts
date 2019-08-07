@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="68v4vnomh4gva76p" promptApplyButtonsState="hide" promptResetButtonsState="hide">
+	<sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" layoutType="bestFit" canFreeze="true"><sawd:dashboardSection name="Section 4" horizontalLayout="true" collapsible="false" duid="4ru0euqt51ps9kr4" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_608">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Prompts
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_607">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 3" duid="69uk4271an4vb8p0" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec backgroundColor="#EEEEEE" borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" hAlign="left"/></saw:displayFormat><sawd:globalFilterView name="GFP 1" path="/shared/06. Dashboard Design/Prompts/Prompt 2" duid="7e9to5pkeb41971j" scope="dashboardPage"><saw:caption><saw:text>Prompt 2</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection><sawd:dashboardSection layoutType="specificSize" name="Section 5" collapsible="false" duid="7vjrc4dqal4lbcme" showSectionTitle="false"><saw:displayFormat><saw:formatSpec backgroundColor="#EEEEEE" borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 2" path="/shared/01. QuickStart/New Features/11.1.1.9.0/Horizontal Prompts" duid="4ghm0bcvc7d2159b"><saw:caption><saw:text>Horizontal Prompts</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" break="column" duid="4ks75clovv9ql10s" layoutType="bestFit" frozen="false" canFreeze="false"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:dashboardSection name="Section 0" duid="pjng6ehs28dlht0n" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#EEEEEE"/>
+			</saw:displayFormat>
+			<sawd:globalFilterView name="GFP 0" path="/shared/06. Dashboard Design/Prompts/Prompt 1" duid="oh9pk38usdo5vh0l" scope="dashboardPage"><saw:caption><saw:text>Prompt 1</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="1ne5ptntp1n52076" layoutType="bestFit" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 2" duid="fqndbgbonkn2c4bd" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" links="" duid="jhch86v9le3f8g1t"><saw:caption><saw:text>Attribute Prompts</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Prompts/Attribute Prompts"/></sawd:reportView><sawd:reportView name="Report 1" display="embed" showView="" links="" duid="39tek2591ek8c52m"><saw:caption><saw:text>Un-Prompted Control Report</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Prompts/Un-Prompted Control Report"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 3" duid="qmfq1rsbnh7drirt" layoutType="minimumSize" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_604">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_609">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt;This page showcases the following prompting controls.[br/]
+[b]Checkbox[/b] - This adds the &quot;Check Boxes&quot; input option as a new prompting control.This option can be used for selecting one or more items from a list of items. It is more useful when the number of items is small.[br/]
+[b]Choice list[/b] - This adds the &quot;Choice List&quot; input option as a new prompting control.This option can be used for selecting one or more items from a drop down list.[br/]
+[b]Radiobutton[/b] - This adds the &quot;Radio Button&quot; input option as a new prompting control.This option can be used for selecting one item from a list of items (a mutually exclusive selection). This is more useful when the number of items is small.[br/]
+[b]Slider[/b] - This adds the &quot;Slider&quot; input option&quot; as a new prompting control.This can be used with numeric data for easy analysis. The range slider can be used with an &quot;is Between&quot; operator for changing the boundary values.
+</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 5" duid="9t8q4d5rng42rfv4">
+				<sawd:HTML fmt="html" captionID="kcap12832459_610">&amp;nbsp;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 4" duid="ii2buh99mauv8ilg">
+				<sawd:HTML fmt="html" captionID="kcap12832459_612">&amp;nbsp;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_613">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt;  [b]Check Boxes[/b] prompt can be created as any other dashboard prompt by using New-&gt;Dashboard Prompt-&gt;Column Prompt (User Input = Check Boxes)[br/]
+[b]Choice List[/b] option can be created as any other dashboard prompt by using New-&gt;Dashboard Prompt-&gt;Column Prompt (User Input = Choice List).[br/]
+[b]Radio Button[/b] option can be created as any other dashboard prompt by using New-&gt;Dashboard Prompt-&gt;Column Prompt (User Input = Radio Buttons).[br/]
+[b]Slider[/b] option can be created as any other dashboard prompt by using New-&gt;Dashboard Prompt-&gt;Column Prompt (User Input = Slider).[br/]
+</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec vAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="30%"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

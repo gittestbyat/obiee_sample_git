@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="ORE_MH_2">
+   <description>
+      <![CDATA[Quality%20Control%20Charts]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="ORData" type="complex">
+         <sql>
+            <![CDATA[select value
+from   table(rqTableEval( cursor(select :uniqueCarrier UNIQUE_CARRIERS,
+                                        :delayType DELAY_TYPE,
+                                        :startYear START_YEAR,
+                                        :endYear END_YEAR,
+                                        :newDataStartYear NEW_DATA_START_YEAR,
+                                        :newDataEndYear NEW_DATA_END_YEAR,
+                                        :graphTypes GRAPH_TYPES from dual),cursor(select 1 "ore.connect" from dual),'XML','QCC-1'))]]>
+         </sql>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="ORData" source="ORData" label="ORData">
+    <element name="VALUE" value="VALUE" dataType="xdo:xml" label="VALUE" breakOrder="None" fieldOrder="1"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets>
+      <valueSet id="Graph Types">
+         <nvPairs>
+            <nvPair label="XBar" value="xbar"/>
+            <nvPair label="S" value="S"/>
+            <nvPair label="XBar &amp; S" value="both"/>
+         </nvPairs>
+      </valueSet>
+      <valueSet id="Year">
+         <sql dataSourceRef="ORE_MH_2">
+            <![CDATA[select distinct YEAR from ONTIME_S order by YEAR]]>
+         </sql>
+      </valueSet>
+      <valueSet id="Delay Type">
+         <nvPairs>
+            <nvPair label="Arrival" value="arrival"/>
+            <nvPair label="Departure" value="departure"/>
+         </nvPairs>
+      </valueSet>
+      <valueSet id="Airlines">
+         <nvPairs>
+            <nvPair label="ALL" value="ALL"/>
+            <nvPair label="AA" value="AA"/>
+         </nvPairs>
+      </valueSet>
+   </valueSets>
+   <parameters>
+      <parameter name="UNIQUECARRIER" defaultValue="ALL" dataType="xsd:string">
+         <select label="Unique Carrier" valueSet="Airlines" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="GRAPHTYPES" defaultValue="xbar" dataType="xsd:string">
+         <select label="Graph Type" valueSet="Graph Types" multiple="false" all="false" allValue="lov"/>
+      </parameter>
+      <parameter name="DELAYTYPE" defaultValue="arrival" dataType="xsd:string">
+         <select label="Delay Type" valueSet="Delay Type" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="STARTYEAR" defaultValue="1987" dataType="xsd:integer">
+         <select label="Start Year" valueSet="Year" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="ENDYEAR" defaultValue="1999" dataType="xsd:integer">
+         <select label="End Year" valueSet="Year" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="NEWDATASTARTYEAR" defaultValue="2000" dataType="xsd:integer">
+         <select label="New Data - Start Year" valueSet="Year" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="NEWDATAENDYEAR" defaultValue="2008" dataType="xsd:integer">
+         <select label="New Data - End Year" valueSet="Year" multiple="false" all="false" allValue="null"/>
+      </parameter>
+   </parameters>
+   <bursting/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="ORData" left="274px" top="16px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

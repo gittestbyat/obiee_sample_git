@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;D - Sample Federated&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="cbc9bc3fb6d292481">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;1d- Revenue (Orcl Db Cube Only)&quot;</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c36c31ae5c819e2bf">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;2a- Qty (Orcl Db Tables Only)&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec width="100" wrapText="true"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c355dd3960f5831c8">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;20d - Unit Price (Orcl Cube/Orcl Db)&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat minDigits="2" maxDigits="2" commas="true" negativeType="minus" xsi:type="saw:number"/></saw:formatSpec></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c73fe9c86746c4ec9">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" width="100" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:hierarchicalColumn" columnID="c8868c5bb81c4e2bd" hierarchyID="Products Hierarchy" tableName="&quot;Products&quot;" dimensionID="H1 Products">
+				<saw:hierarchyLevels>
+					<saw:hierarchyLevel levelID="Total Products"/>
+					<saw:hierarchyLevel levelID="Brand"/>
+					<saw:hierarchyLevel levelID="LOB"/>
+					<saw:hierarchyLevel levelID="Type"/>
+					<saw:hierarchyLevel levelID="Products"/>
+				</saw:hierarchyLevels>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c67fba74e84b8aa64">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+		</saw:columns>
+	</saw:criteria>
+	<saw:views currentView="2">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!1" colSpan="2">
+						<saw:displayFormat>
+							<saw:formatSpec/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="tableView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/>
+						</saw:displayFormat>
+					</saw:cvCell>
+					<saw:cvCell viewName="dvtchart!1"/>
+				</saw:cvRow>
+			</saw:cvTable>
+		</saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t2" grandTotalPosition="before"/>
+					</saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c67fba74e84b8aa64" uiTableName="Time"/>
+					</saw:edgeLayers></saw:edge>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="after"/>
+					</saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c8868c5bb81c4e2bd" uiTableName="Products">
+							<saw:drillState>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c67fba74e84b8aa64"/>
+											</saw:groupType>
+											<saw:members xsi:type="saw:stringMembers">
+												<saw:value>2008</saw:value>
+											</saw:members>
+										</saw:staticMemberGroup>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c8868c5bb81c4e2bd"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Total Products"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c8868c5bb81c4e2bd"/>
+										</saw:target>
+									</saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c67fba74e84b8aa64" groupID="0"/>
+										<saw:selectionGroup columnID="c8868c5bb81c4e2bd" groupID="0"/>
+									</saw:selectionGroups>
+								</saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c67fba74e84b8aa64"/>
+											</saw:groupType>
+											<saw:members xsi:type="saw:stringMembers">
+												<saw:value>2009</saw:value>
+											</saw:members>
+										</saw:staticMemberGroup>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c8868c5bb81c4e2bd"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Total Products"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c8868c5bb81c4e2bd"/>
+										</saw:target>
+									</saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c67fba74e84b8aa64" groupID="0"/>
+										<saw:selectionGroup columnID="c8868c5bb81c4e2bd" groupID="0"/>
+									</saw:selectionGroups>
+								</saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c67fba74e84b8aa64"/>
+											</saw:groupType>
+											<saw:members xsi:type="saw:stringMembers">
+												<saw:value>2010</saw:value>
+											</saw:members>
+										</saw:staticMemberGroup>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c8868c5bb81c4e2bd"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Total Products"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c8868c5bb81c4e2bd"/>
+										</saw:target>
+									</saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c67fba74e84b8aa64" groupID="0"/>
+										<saw:selectionGroup columnID="c8868c5bb81c4e2bd" groupID="0"/>
+									</saw:selectionGroups>
+								</saw:drillStep>
+							</saw:drillState>
+						</saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="cbc9bc3fb6d292481" uiTableName="Measures"/>
+						<saw:edgeLayer type="column" columnID="c36c31ae5c819e2bf" uiTableName="Measures"/>
+						<saw:edgeLayer type="column" columnID="c355dd3960f5831c8" uiTableName="Measures"/>
+					</saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/>
+			</saw:edges></saw:view>
+		<saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+			<saw:display type="scatter" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">
+				<saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+			</saw:display>
+			<saw:canvasFormat height="300" width="400" showGradient="true">
+				<saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>
+				<saw:title mode="custom">
+					<saw:caption captionID="kcap12832459_2284">
+						<saw:text>Federated Axis Chart (Bubble size = Revenue)</saw:text>
+					</saw:caption>
+				</saw:title>
+				<saw:gridlines default="true">
+					<saw:horizontal>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/>
+					</saw:horizontal>
+					<saw:vertical>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/>
+					</saw:vertical>
+				</saw:gridlines>
+			</saw:canvasFormat>
+			<saw:selections>
+				<saw:categories>
+					<saw:category>
+						<saw:columnRef columnID="c67fba74e84b8aa64"/>
+					</saw:category>
+				</saw:categories>
+				<saw:measures showMeasureLabelsOnCategory="false">
+					<saw:column measureType="x">
+						<saw:columnRef columnID="c36c31ae5c819e2bf"/></saw:column>
+					<saw:column measureType="y">
+						<saw:columnRef columnID="c355dd3960f5831c8"/></saw:column></saw:measures>
+				<saw:seriesGenerators>
+					<saw:seriesGenerator>
+						<saw:columnRef columnID="c73fe9c86746c4ec9"/>
+					</saw:seriesGenerator>
+					<saw:measureLabels/>
+				</saw:seriesGenerators>
+			</saw:selections>
+			<saw:legendFormat position="default" transparentFill="true"/>
+			<saw:axesFormats syncAxis="true">
+				<saw:axisFormat axis="Y1">
+					<saw:title mode="auto">
+						<saw:displayFormat>
+							<saw:formatSpec fontColor="#336633"/>
+						</saw:displayFormat>
+					</saw:title>
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false" min="3" max="4.5"/>
+				</saw:axisFormat>
+				<saw:axisFormat axis="X">
+					<saw:title mode="auto">
+						<saw:displayFormat>
+							<saw:formatSpec fontColor="#000000"/>
+						</saw:displayFormat>
+					</saw:title>
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>
+				</saw:axisFormat>
+			</saw:axesFormats>
+		</saw:view>
+	</saw:views></saw:report>

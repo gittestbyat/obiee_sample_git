@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="m0hetfqqinemdu37" links="" overrideParentLinks="true"><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="56542te8k2p5vd8j" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+      <saw:displayFormat>
+        <saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 1" duid="al3aq64l1co3ogrl">
+        <sawd:HTML fmt="html" captionID="kcap12832459_670">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Exclude Outliers
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+      </sawd:htmlView>
+      <sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+        <sawd:linkCaption>
+          <saw:caption captionID="kcap12832459_669">
+            <saw:text>Return to Main Index page</saw:text>
+          </saw:caption>
+        </sawd:linkCaption>
+        <sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+      </sawd:linkView>
+    </sawd:dashboardSection><sawd:dashboardSection name="Section 3" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 2" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; In this example, we use action framework and custom javascript to exclude outliers from an chart. Bar chart below displays various carriers in order of arrival delay. Select any bar and choose to exclude carriers above or below that delay threshold. 
+[br/]
+Internally, an expression representing the exclusion condition (e.g. delay&lt;=5 or delay=&gt;10) is dynamically generated as you interact with the chart. A hidden presentation server (PS) variable is then set to save this conditional expression. The adjacent report is further filtered using this generated expression. Note: Custom JS scripts in this example are not part of OBIEE product and they are not supported by Oracle (e.g. function for setting a prompt). It is provided for demonstration purposes.  </sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 2" duid="h6gp2amjp42li7nj" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><sawd:reportView name="Report 2" display="embed" showView="" duid="qiau776v4b36elo1"><saw:caption><saw:text>Delay by Carrier 2</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Exclude Outliers/Delay by Carrier 2"/></sawd:reportView><sawd:reportView name="Report 0" display="embed" showView="" duid="djcvm6888p3b27iv"><saw:caption><saw:text>Airlines Delay Components 2</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Exclude Outliers/Airlines Delay Components 2"/></sawd:reportView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" duid="8hrs5cv6isimb30a" showSectionTitle="false" horizontalLayout="true" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec wrapText="true" style="display:none"/></saw:displayFormat><sawd:globalFilterView name="GFP 1" path="/shared/09. Integrations and Customizations/Custom Interactions/Exclude Outliers/Prompt_Criteria" duid="goq5ool44ui33n3t"><saw:caption><saw:text>Prompt_Criteria</saw:text></saw:caption></sawd:globalFilterView><sawd:htmlView name="HTML 0" duid="t7tnm1vppgo8p44c"><sawd:HTML fmt="html">&lt;script&gt;
+var exclusion_limit = {};
+&lt;/script&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

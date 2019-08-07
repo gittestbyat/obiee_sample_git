@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			
+			<saw:column xsi:type="saw:regularColumn" columnID="c8e5a370caf3fba21">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T01 Per Name Week&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:hierarchicalColumn" columnID="ce6c08f489351820c" hierarchyID="Offices Hierarchy" tableName="&quot;Offices&quot;" dimensionID="H3 Offices"><saw:hierarchyLevels><saw:hierarchyLevel levelID="Corporate Total"/><saw:hierarchyLevel levelID="Company"/><saw:hierarchyLevel levelID="Organization"><saw:displayFormat><saw:formatSpec suppress="suppress" backgroundColor="#999999" wrapText="true"/></saw:displayFormat></saw:hierarchyLevel><saw:hierarchyLevel levelID="Department"><saw:displayFormat><saw:formatSpec suppress="suppress" backgroundColor="#666666" wrapText="true"/></saw:displayFormat></saw:hierarchyLevel><saw:hierarchyLevel levelID="Offices"/></saw:hierarchyLevels></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ce56ccce990104796">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></saw:columnFormula></saw:column>
+			
+			
+			<saw:column xsi:type="saw:regularColumn" columnID="c4c5be1a97cd3f7a3">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+			
+			<saw:column xsi:type="saw:regularColumn" columnID="cdc98f19313d0d714">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;3- Discount Amount&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:logical" op="and">
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T01 Per Name Week&quot;</sawx:expr></sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></sawx:expr>
+				<sawx:expr xsi:type="sawx:special" op="prompted">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D4  Company&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="1">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="trellisView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:trellisView" name="trellisView!1" type="multiviz" autoPreview="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section" insertPageBreak="false">
+					<saw:displayFormat>
+						<saw:formatSpec backgroundColor="#000000" wrapText="true"/></saw:displayFormat></saw:edge><saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="ce6c08f489351820c" uiTableName="Offices"><saw:drillState><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="ce6c08f489351820c"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Corporate Total"/><saw:members xsi:type="saw:integerMembers"><saw:value>1</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="ce6c08f489351820c"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="ce6c08f489351820c" groupID="0"/></saw:selectionGroups></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="ce6c08f489351820c"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Company"/><saw:members xsi:type="saw:integerMembers"><saw:value>10001</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="ce6c08f489351820c"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="ce6c08f489351820c" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="ce6c08f489351820c" levelID="Corporate Total"><saw:members xsi:type="saw:integerMembers"><saw:value>1</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="ce6c08f489351820c"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Organization"/><saw:members xsi:type="saw:integerMembers"><saw:value>1001</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="ce6c08f489351820c"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="ce6c08f489351820c" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="ce6c08f489351820c" levelID="Company"><saw:members xsi:type="saw:integerMembers"><saw:value>10001</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep></saw:drillState><saw:memberFormat><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#666666" fontStyle="bold" fontSize="12" wrapText="true"/></saw:displayFormat></saw:memberFormat><saw:headerFormat><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#666666" fontStyle="bold" wrapText="true" fontSize="14"/></saw:displayFormat></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column" dependent="true">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="ce56ccce990104796" uiTableName="Products">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec fontColor="#FFFFFF" backgroundColor="#666666" fontStyle="bold" fontSize="12" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+				
+				
+				<saw:measure columnID="c4c5be1a97cd3f7a3" name="Trellisb0bb8a192de5f267" type="view" uiTableName="Base Facts">
+					
+					<saw:memberFormat>
+						<saw:displayFormat>
+							<saw:formatSpec fontColor="#FFFFFF" backgroundColor="#666666" fontStyle="bold" fontSize="14" wrapText="true"/></saw:displayFormat>
+						<saw:caption>
+							<saw:text>Revenue</saw:text></saw:caption></saw:memberFormat><saw:dataBodyFormat>
+						<saw:displayFormat>
+							<saw:formatSpec backgroundColor="#000000" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure><saw:measure columnID="cdc98f19313d0d714" name="Trellis293b9abf60b623b2" type="view" uiTableName="Base Facts">
+					
+					<saw:memberFormat>
+						<saw:displayFormat>
+							<saw:formatSpec fontColor="#FFFFFF" backgroundColor="#666666" fontStyle="bold" fontSize="14" wrapText="true"/></saw:displayFormat>
+						<saw:caption>
+							<saw:text>Discount</saw:text></saw:caption></saw:memberFormat><saw:dataBodyFormat>
+						<saw:displayFormat>
+							<saw:formatSpec backgroundColor="#000000" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList>
+			
+			
+			<saw:nestedViews>
+				<saw:nestedView position="embedded">
+					<saw:view xsi:type="saw:dvtmicrochart" name="Trellisb0bb8a192de5f267">
+						<saw:display type="bar" subtype="default" renderFormat="default" mode="online">
+							<saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+						<saw:canvasFormat height="50" width="120" sizeType="custom">
+							<saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/></saw:canvasFormat>
+						<saw:selections>
+							<saw:categories><saw:category>
+									<saw:columnRef columnID="c8e5a370caf3fba21"/></saw:category></saw:categories>
+							<saw:measures showMeasureLabelsOnCategory="false">
+								<saw:column measureType="y">
+									<saw:columnRef columnID="c4c5be1a97cd3f7a3"/></saw:column></saw:measures>
+							<saw:seriesGenerators><saw:measureLabels/></saw:seriesGenerators></saw:selections>
+						<saw:legendFormat position="default" transparentFill="true"/>
+						<saw:markerFormats>
+							<saw:markerFormat type="riser" color="#FFFFFF"/>
+							<saw:markerFormat type="high" color="#00FF00"/>
+							<saw:markerFormat type="low" color="#FF0000"/></saw:markerFormats></saw:view></saw:nestedView>
+				
+				<saw:nestedView position="embedded">
+					<saw:view xsi:type="saw:dvtmicrochart" name="Trellis293b9abf60b623b2">
+						<saw:display type="line" subtype="default" renderFormat="default" mode="online">
+							<saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+						<saw:canvasFormat height="40" width="90" sizeType="custom">
+							<saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/></saw:canvasFormat>
+						<saw:selections>
+							<saw:categories><saw:category>
+									<saw:columnRef columnID="c8e5a370caf3fba21"/></saw:category></saw:categories>
+							<saw:measures showMeasureLabelsOnCategory="false">
+								<saw:column measureType="y">
+									<saw:columnRef columnID="cdc98f19313d0d714"/></saw:column></saw:measures>
+							<saw:seriesGenerators><saw:measureLabels/></saw:seriesGenerators></saw:selections>
+						<saw:legendFormat position="default" transparentFill="true"/>
+						<saw:markerFormats>
+							<saw:markerFormat type="riser" color="#F1E87D"/></saw:markerFormats></saw:view></saw:nestedView></saw:nestedViews></saw:view></saw:views></saw:report>

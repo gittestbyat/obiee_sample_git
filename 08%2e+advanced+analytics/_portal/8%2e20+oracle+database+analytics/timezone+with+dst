@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="cc5lsv4uq390ulef" promptApplyButtonsState="show" promptResetButtonsState="hide"><sawd:dashboardColumn name="Column 0" duid="onnnmu9lefhpv08l" canFreeze="true" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 1" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2365">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Timezone Conversion with DST
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 2" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2364">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 6" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2361">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 2" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2366">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt;  The example on this page shows how Oracle database inherently handles Daylight Savings Time when it performs timezone conversions. Nothing extra needs to be specified in the SQL to handle DST considerations. </sawd:HTML>
+			</sawd:htmlView>
+			
+			
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 3" canFreeze="false" duid="5h49h5hnh1mq4jpn" break="column" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="0ruf7d25l95lhotv" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 1" path="/shared/08. Advanced Analytics/Oracle DB/Timezone Conversion/Timezone DST Query Prompt" duid="gdv4q2ug7k2k84nl" scope="dashboardPage"><saw:caption><saw:text>Timezone DST Query Prompt</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 4" frozen="false" canFreeze="false" duid="k02rs0bm1fcvdim0" layoutType="bestFit"><sawd:dashboardSection name="Section 4" duid="0ehgla1c9kqnkark" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="10" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="ibkg1kr2g7kcavn2"><sawd:HTML fmt="text">In 2010, daylight saving time (DST, “summer time”), took place in most of Europe on Sunday, March 28, 2010. The clocks did move one hour forward at 1am (01:00) Coordinated Universal Time (UTC) on this date.
+
+As a result, the time difference between EMEA timezones and other timezones started changing on that date. The report below shows some entries and the automatic change of time difference as a result of database.</sawd:HTML></sawd:htmlView><sawd:reportView name="Report 1" display="embed" showView="" duid="h460jdm7bprj8a7g"><saw:caption><saw:text>Daylight Saving Time Automatic Conversion</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Timezone Conversion/Daylight Saving Time Automatic Conversion"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

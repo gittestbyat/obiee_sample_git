@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="8k5dlgk1ge2f8852">
+  
+  <sawd:dashboardColumn name="Column 1" duid="cep9eo4c6jfducjn" frozen="false" canFreeze="false" layoutType="minimumSize"><sawd:dashboardSection name="Section 4" collapsible="false" duid="v8nf58g3eornifl4" showSectionTitle="false" layoutType="minimumSize">
+      <saw:displayFormat>
+        <saw:formatSpec borderColor="#EFEDDF" borderPosition="none" vAlign="top" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+        <sawd:linkCaption>
+          <saw:caption captionID="kcap12832459_697">
+            <saw:text>Return to Main Index page</saw:text>
+          </saw:caption>
+        </sawd:linkCaption>
+        <sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+      </sawd:linkView>
+    </sawd:dashboardSection><sawd:dashboardSection name="Section 5" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" horizontalLayout="true" showHeading="false" layoutType="bestFit">
+      <saw:caption captionID="kcap12832459_677">
+        <saw:text>Page Information (click to collapse or expand)</saw:text>
+      </saw:caption>
+      <saw:displayFormat>
+        <saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+      </saw:displayFormat>
+      <sawd:sectionHeading>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+        </saw:displayFormat>
+      </sawd:sectionHeading>
+      <sawd:htmlView name="HTML 2" duid="0oaouic28aft8dk3">
+        <sawd:HTML fmt="html" captionID="kcap12832459_681">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; This Example :&lt;/b&gt;&lt;/font&gt; Description :&lt;/b&gt;&lt;/font&gt; This is an example of map views displaying addresses on street maps.&lt;br/&gt;</sawd:HTML>
+      </sawd:htmlView>
+      
+      
+      
+      <sawd:htmlView name="HTML 0" duid="0j3p8i5cpk17ea6s"><sawd:HTML fmt="html">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; This Example :&lt;/b&gt;&lt;/font&gt; There are three different types of formats displayed, one for each city. Use the “Revenue” prompt to filter the data that each map view displays.&lt;br/&gt;
+</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 4" duid="0oaouic28aft8dk3">
+        <sawd:HTML fmt="html" captionID="kcap12832459_685">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; 
+The whole setup for this map is done in the webcat report defintion. It leverages Mapviewer mappings done in the webcat administration screen.</sawd:HTML>
+      </sawd:htmlView>
+    </sawd:dashboardSection><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit">
+      <saw:displayFormat>
+        <saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+      </saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/04. Maps and Spatial/Map Views/Map Prompt Revenue" duid="2v847desnt4dfemq"><saw:caption captionID="kcap12832459_696">
+          <saw:text>Map Prompt Revenue</saw:text>
+        </saw:caption>
+        
+      </sawd:globalFilterView>
+      
+    <sawd:reportView name="Report 6" display="embed" showView="" links="" duid="2b3lorecqop1nel9"><saw:caption captionID="kcap12832459_695">
+          <saw:text>Street Level Maps SF</saw:text>
+        </saw:caption>
+        
+        <sawd:reportRef type="catalog" path="/shared/04. Maps and Spatial/Map Views/Street Level Maps SF"/>
+      </sawd:reportView></sawd:dashboardSection><saw:displayFormat>
+      <saw:formatSpec borderColor="#EEEEEE" borderPosition="none" width="35%" paddingLeft="3" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+    </saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="a0cgnjinjud28pm0">
+	<sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1223">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Actions
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1221">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" duid="oji58uisb13b3f4t" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="hgef19rri8ni23tg" showSectionTitle="true" collapsible="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_1216">
+				<saw:text>Dashboard Action Links</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:actionLinkView name="Action Link 0" duid="7sun9ipo9vbecr07">
+				<sawd:actionLink briefBookLink="false" target="_self" sDisplayName="Navigate to a Dashboard Page">
+					
+					<saw:actionPath>/shared/06. Dashboard Design/Actions/Functional Examples/Actions to Navigate to BI Content/Navigate to a Dashboard Page</saw:actionPath><saw:caption>
+						<saw:text>Navigate to a Dashboard Page</saw:text>
+					</saw:caption>
+				</sawd:actionLink>
+			</sawd:actionLinkView>
+			<sawd:actionLinkView name="Action Link 1" duid="o9si7jgch3jaakua">
+				<sawd:actionLink briefBookLink="false" target="_self" sDisplayName="Navigate to an Analysis">
+					
+					<saw:actionPath>/shared/06. Dashboard Design/Actions/Functional Examples/Actions to Navigate to BI Content/Navigate to an Analysis</saw:actionPath><saw:caption>
+						<saw:text>Navigate to an Analysis</saw:text>
+					</saw:caption>
+				</sawd:actionLink>
+			</sawd:actionLinkView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 3" duid="4comt164do0asr9a" showSectionTitle="true" collapsible="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_1217">
+				<saw:text>Action Links Menu</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:actionLinkMenu name="Action Link Menu 0" duid="8f808t5op4v45msu">
+				<sawd:menuText>
+					<saw:caption captionID="kcap12832459_1222">
+						<saw:text>List of Actions</saw:text>
+					</saw:caption>
+				</sawd:menuText>
+				<sawd:actionLinkView name="Action Link 2" duid="ie17u3kg19p6hahj">
+					<sawd:actionLink briefBookLink="false" target="_self" sDisplayName="Navigate to a Dashboard Page">
+						
+						<saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="999" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/01. QuickStart/_portal/1.00 General Index</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true"><saw:functionName>__navigateToBIContent__</saw:functionName><saw:scriptLanguage>JScript</saw:scriptLanguage><saw:scriptPath/></saw:implementation><saw:clientImplementation><saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action><saw:caption>
+							<saw:text>Navigate to a Dashboard Page</saw:text>
+						</saw:caption>
+					</sawd:actionLink>
+				</sawd:actionLinkView>
+				<sawd:actionLinkView name="Action Link 3" duid="jc4i88f9m9kgplpp">
+					<sawd:actionLink briefBookLink="false" target="_self">
+						<saw:actionPath>/shared/06. Dashboard Design/Actions/Actions to Invoke Browser Script/Action to Invoke Browser Script Example</saw:actionPath>
+						<saw:caption>
+							<saw:text>Action to Invoke Browser Script Example</saw:text>
+						</saw:caption>
+						<saw:paramMapping>
+							<saw:assign name="p1" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign">
+								<saw:value>p1 default value</saw:value>
+							</saw:assign>
+							<saw:assign name="p2" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign">
+								<saw:value>p2 default value</saw:value>
+							</saw:assign>
+							<saw:assign name="p3" fixed="false" hidden="false" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign">
+								<saw:value>Enter a value here</saw:value>
+							</saw:assign>
+						</saw:paramMapping>
+					</sawd:actionLink>
+				</sawd:actionLinkView>
+			</sawd:actionLinkMenu>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 4" duid="e920g7nti67veu4p" showSectionTitle="false" horizontalLayout="true" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 1" display="embed" showView="" links="r" duid="v3s8ce5d1d48gh0o" overrideParentLinks="true"><saw:caption captionID="kcap12832459_1219">
+					<saw:text>Dashboard Annotation</saw:text>
+				</saw:caption>
+				
+				<sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Actions/Actions to Invoke Web Services/Dashboard Annotation"/>
+			</sawd:reportView>
+			<sawd:reportView name="Report 0" display="embed" showView="" links="" duid="pm9sr9t9pvhcul45"><saw:caption captionID="kcap12832459_1220">
+					<saw:text>Basic Analysis with Actions</saw:text>
+				</saw:caption>
+				
+				<sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Actions/Supporting Samples/Basic Analysis with Actions"/>
+			</sawd:reportView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 5" duid="rl5tbqrki8fj3om1" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:actionLinkView name="Action Link 4" duid="v1i9rev73ru8jck1">
+				<sawd:actionLink briefBookLink="false" target="_self">
+					<saw:actionPath>/shared/06. Dashboard Design/Actions/Actions to Invoke Web Services/Annotate</saw:actionPath>
+					<saw:caption>
+						<saw:text>Add Dashboard Commentary</saw:text>
+					</saw:caption>
+				</sawd:actionLink>
+			</sawd:actionLinkView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 3" duid="qmfq1rsbnh7drirt" frozen="false" canFreeze="false" layoutType="minimumSize"><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_1218">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1224">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; The Dashboard Action Links section shows actions attached to the dashboard page that will either navigate to a target or invoke target functionality. These action links can appear or be hidden based on the evaluation of a condition. This way they can provide the user with guided navigation and action links,
+Actions to navigate to BI content, when invoked from the dashboard, navigate to the target dashboard page or analysis.&lt;/br&gt;
+An action link menu can be used to group together actions on a dashboard page. This example showcases the various navigation options. Navigating to a different dashboard page, navigating to an analysis, invoking an action and navigating to an external URL.</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 5" duid="9t8q4d5rng42rfv4">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1225">&amp;nbsp;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 4" duid="ii2buh99mauv8ilg">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1227">&amp;nbsp;</sawd:HTML>
+			</sawd:htmlView>
+			
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec vAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="30%"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

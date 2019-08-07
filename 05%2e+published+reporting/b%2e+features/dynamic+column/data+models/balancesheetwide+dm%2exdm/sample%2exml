@@ -1,0 +1,896 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<MasterReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fsg="http://www.oracle.com/fsg/2002-03-20/" xsi:schemaLocation="http://www.oracle.com/2002-03-20/fsg.xsd">
+<fsg:SOBName>Vision Operations (USA)</fsg:SOBName>
+<fsg:ReportName>XML Publisher Balance Sheet</fsg:ReportName>
+<fsg:RowSetName>Balance Sheet</fsg:RowSetName>
+<fsg:ColSetName>IT Monthly Actual</fsg:ColSetName>
+<fsg:RowSetId>            1000</fsg:RowSetId>
+<fsg:ColSetId>            2108</fsg:ColSetId>
+<fsg:ContSetId>               0</fsg:ContSetId>
+<fsg:ParamSetId>            3425</fsg:ParamSetId>
+<fsg:ReportCurr>USD</fsg:ReportCurr>
+<fsg:ReportDate>2002/02/28</fsg:ReportDate>
+<fsg:RepCurPeriod>Feb-02</fsg:RepCurPeriod>
+<fsg:RepSysDate>10-FEB-2004 23:04:26</fsg:RepSysDate>
+<fsg:PeriodLabel>Current Period:</fsg:PeriodLabel>
+<fsg:DateLabel>Date:</fsg:DateLabel>
+<fsg:CurrencyLabel>currency</fsg:CurrencyLabel>
+<fsg:PageLabel>Page:</fsg:PageLabel>
+<fsg:RowContext RowId="r100001">
+<fsg:RowName>  ASSETS</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>               5.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100002">
+<fsg:RowName> Current Assets</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              10.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100003">
+<fsg:RowName>      Cash and Short Term Investments</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              15.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100004">
+<fsg:RowName>      Accounts Receivable - Net of Allowance</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              20.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100005">
+<fsg:RowName>      Other Current Assets</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              25.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100006">
+<fsg:RowName>      Inventory</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              30.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100007">
+<fsg:RowName> Total Current Assets</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              35.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100008">
+<fsg:RowName> PROPERTY, PLANT, EQUIPMENT</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              40.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100009">
+<fsg:RowName>      Cost of Property, Plant &amp; Equipment</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              45.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100010">
+<fsg:RowName>      Less Accum. Depr &amp; Amortization</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              50.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100011">
+<fsg:RowName> Net Book Value of Assets</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              60.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100012">
+<fsg:RowName> OTHER ASSETS</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              65.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100013">
+<fsg:RowName> Other Assets</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              70.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100014">
+<fsg:RowName> TOTAL ASSETS</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              75.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100015">
+<fsg:RowName> LIABILITIES</fsg:RowName>
+<fsg:RowChngSign>0</fsg:RowChngSign>
+<fsg:RowSeq>              85.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100016">
+<fsg:RowName> Current Liabilities</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>              90.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100017">
+<fsg:RowName>      Liabilities - Due in One Year</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>              95.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100018">
+<fsg:RowName>      Current Year Income Taxes Payable</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             100.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100019">
+<fsg:RowName>      Accrued Payroll and Taxes</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             105.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100020">
+<fsg:RowName>      Other Current Liabilities</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             110.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100021">
+<fsg:RowName> Total Current Liabilities</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             115.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100022">
+<fsg:RowName> Long-Term Liabilities</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             120.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100023">
+<fsg:RowName>      Long Term Portion of Bank Loan</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             125.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100024">
+<fsg:RowName>      Other Liabilities - Long Term</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             130.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100025">
+<fsg:RowName> Total Long Term Liabilities</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             135.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100026">
+<fsg:RowName> TOTAL LIABILITIES</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             140.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100027">
+<fsg:RowName> OWNER'S EQUITY</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             145.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100028">
+<fsg:RowName>      Capital and Retained Earnings</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             150.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100029">
+<fsg:RowName>      Net Income for Current Year</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             152.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100030">
+<fsg:RowName> Total Owner's Equity</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             155.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:RowContext RowId="r100031">
+<fsg:RowName> TOTAL LIABILITIES &amp; OWNER'S EQUITY</fsg:RowName>
+<fsg:RowChngSign>1</fsg:RowChngSign>
+<fsg:RowSeq>             160.0000000000000</fsg:RowSeq>
+</fsg:RowContext>
+<fsg:ColContext ColId="c1000">
+<fsg:AmountType> </fsg:AmountType>
+<fsg:ColPeriod> </fsg:ColPeriod>
+<fsg:ColPerOffset> </fsg:ColPerOffset>
+<fsg:ColChngSign> </fsg:ColChngSign>
+<fsg:ColHeadLine1> </fsg:ColHeadLine1>
+<fsg:ColHeadLine2>Co       Dpt      Acct     Sub      Prd      </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>-------- -------- -------- -------- -------- </fsg:ColHeadLine3>
+<fsg:ColPosition> </fsg:ColPosition>
+<fsg:ColSeq> </fsg:ColSeq>
+<fsg:ColWidth>  45</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1001">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Apr-01</fsg:ColPeriod>
+<fsg:ColPerOffset>   -11</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2>Apr-01          M</fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>    49</fsg:ColPosition>
+<fsg:ColSeq>              10.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1002">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>May-01</fsg:ColPeriod>
+<fsg:ColPerOffset>   -10</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2>May-01           </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>    65</fsg:ColPosition>
+<fsg:ColSeq>              20.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1003">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Jun-01</fsg:ColPeriod>
+<fsg:ColPerOffset>    -9</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2> Jun-01          </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>    81</fsg:ColPosition>
+<fsg:ColSeq>              30.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1004">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Jul-01</fsg:ColPeriod>
+<fsg:ColPerOffset>    -8</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2> Jul-01          </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>    97</fsg:ColPosition>
+<fsg:ColSeq>              40.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1005">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Aug-01</fsg:ColPeriod>
+<fsg:ColPerOffset>    -7</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2> Aug-01          </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>   113</fsg:ColPosition>
+<fsg:ColSeq>              50.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1006">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Sep-01</fsg:ColPeriod>
+<fsg:ColPerOffset>    -6</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2> Sep-01          </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>   129</fsg:ColPosition>
+<fsg:ColSeq>              60.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1007">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Oct-01</fsg:ColPeriod>
+<fsg:ColPerOffset>    -5</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2> Oct-01          </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>   145</fsg:ColPosition>
+<fsg:ColSeq>              70.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1008">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Nov-01</fsg:ColPeriod>
+<fsg:ColPerOffset>    -4</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2> Nov-01          </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>   161</fsg:ColPosition>
+<fsg:ColSeq>              80.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1009">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Dec-01</fsg:ColPeriod>
+<fsg:ColPerOffset>    -3</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2> Dec-01          </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>   177</fsg:ColPosition>
+<fsg:ColSeq>              90.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1010">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Adj-01</fsg:ColPeriod>
+<fsg:ColPerOffset>    -2</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2> Adj-01          </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>   193</fsg:ColPosition>
+<fsg:ColSeq>             100.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1011">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Jan-02</fsg:ColPeriod>
+<fsg:ColPerOffset>    -1</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          Ac</fsg:ColHeadLine1>
+<fsg:ColHeadLine2> Jan-02          </fsg:ColHeadLine2>
+<fsg:ColHeadLine3>                 </fsg:ColHeadLine3>
+<fsg:ColPosition>   209</fsg:ColPosition>
+<fsg:ColSeq>             110.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1012">
+<fsg:AmountType>PTD-Actual</fsg:AmountType>
+<fsg:ColPeriod>Feb-02</fsg:ColPeriod>
+<fsg:ColPerOffset>     0</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>ctual          To</fsg:ColHeadLine1>
+<fsg:ColHeadLine2> Feb-02        Ac</fsg:ColHeadLine2>
+<fsg:ColHeadLine3>               Fe</fsg:ColHeadLine3>
+<fsg:ColPosition>   225</fsg:ColPosition>
+<fsg:ColSeq>             120.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:ColContext ColId="c1013">
+<fsg:AmountType/>
+<fsg:ColPeriod/>
+<fsg:ColPerOffset>     0</fsg:ColPerOffset>
+<fsg:ColChngSign>0</fsg:ColChngSign>
+<fsg:ColHeadLine1>otal</fsg:ColHeadLine1>
+<fsg:ColHeadLine2>ctual</fsg:ColHeadLine2>
+<fsg:ColHeadLine3>eb-</fsg:ColHeadLine3>
+<fsg:ColPosition>   241</fsg:ColPosition>
+<fsg:ColSeq>             130.0000000000000</fsg:ColSeq>
+<fsg:ColWidth>  17</fsg:ColWidth>
+</fsg:ColContext>
+<fsg:RptDef RptId="p1001" RptDetName="No specific Company requested">
+<fsg:RptLine RptCnt="p1001" RowCnt="r100001" LinCnt="l100001">
+<fsg:RptCell ColCnt="c1000">  ASSETS</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100002" LinCnt="l100002">
+<fsg:RptCell ColCnt="c1000"> Current Assets</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100003" LinCnt="l100003">
+<fsg:RptCell ColCnt="c1000">      Cash and Short Term Investments          </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">15,862,304</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">51,998,607</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;16,583,858></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">9,198,226</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">&lt;406,507></fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">23,129,633</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">3,229,427</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">8,033,408</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">&lt;24,388,034></fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;1,052,744></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;19,713,880></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">1,591,405</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">50,897,984</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100004" LinCnt="l100004">
+<fsg:RptCell ColCnt="c1000">      Accounts Receivable - Net of Allowance   </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">2,560,786</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">&lt;12,062,845></fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;6,927,690></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">9,480,691</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">&lt;4,328,999></fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">&lt;5,147,483></fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">5,897,289</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">12,426,211</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">9,356,602</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;1,715,442></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">17,996,898</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">17,663,194</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">45,199,214</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100005" LinCnt="l100005">
+<fsg:RptCell ColCnt="c1000">      Other Current Assets                     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">9,520</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">269,064</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">330,257</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">6,594</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">7,559</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">9,695</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">14,581</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">&lt;60,389></fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">21,036</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">59,662</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">667,580</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100006" LinCnt="l100006">
+<fsg:RptCell ColCnt="c1000">      Inventory                                </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">448,547</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">175,908</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">&lt;1,084,902></fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;44,966,758></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">&lt;6,664,454></fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">&lt;52,091,660></fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100006" LinCnt="l100007">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">_______________</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100007" LinCnt="l100008">
+<fsg:RptCell ColCnt="c1000"> Total Current Assets                          </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">18,881,158</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">40,204,827</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;23,181,292></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">18,685,511</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">&lt;4,552,039></fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">17,991,845</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">9,141,296</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">20,399,230</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">&lt;16,095,298></fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;2,768,186></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;46,624,078></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">12,590,144</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">44,673,118</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100008" LinCnt="l100009">
+<fsg:RptCell ColCnt="c1000"> PROPERTY, PLANT, EQUIPMENT</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100009" LinCnt="l100010">
+<fsg:RptCell ColCnt="c1000">      Cost of Property, Plant &amp; Equipment      </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">178,889</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">178,843</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;538,870></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">718,136</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">&lt;759,239></fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">&lt;169,952></fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">395,590</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">783,094</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">166,773</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;208,830></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">804,355</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">164,313</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">1,713,101</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100010" LinCnt="l100011">
+<fsg:RptCell ColCnt="c1000">      Less Accum. Depr &amp; Amortization          </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">&lt;428,024></fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">&lt;428,024></fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;427,357></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">&lt;427,357></fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">&lt;420,274></fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">&lt;420,274></fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">&lt;420,274></fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">&lt;420,274></fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">&lt;420,274></fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;419,512></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">&lt;419,512></fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">&lt;4,651,153></fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100010" LinCnt="l100012">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">_______________</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100011" LinCnt="l100013">
+<fsg:RptCell ColCnt="c1000"> Net Book Value of Assets                      </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">&lt;249,135></fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">&lt;249,180></fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;966,227></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">290,779</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">&lt;1,179,513></fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">&lt;590,226></fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">&lt;24,684></fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">362,820</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">&lt;253,501></fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;208,830></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">384,843</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">&lt;255,200></fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">&lt;2,938,052></fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100012" LinCnt="l100014">
+<fsg:RptCell ColCnt="c1000"> OTHER ASSETS</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100013" LinCnt="l100015">
+<fsg:RptCell ColCnt="c1000"> Other Assets                                  </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">&lt;45,000></fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">&lt;300,000></fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">165,505</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">&lt;179,495></fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100013" LinCnt="l100016">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">_______________</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100014" LinCnt="l100017">
+<fsg:RptCell ColCnt="c1000"> TOTAL ASSETS                                  </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">18,587,023</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">39,955,646</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;24,147,519></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">18,976,290</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">&lt;5,731,552></fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">17,401,620</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">9,116,612</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">20,462,050</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">&lt;16,183,293></fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;2,977,016></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;46,239,235></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">12,334,945</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">41,555,571</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100014" LinCnt="l100018">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">===============</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100015" LinCnt="l100019">
+<fsg:RptCell ColCnt="c1000"> LIABILITIES</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100016" LinCnt="l100020">
+<fsg:RptCell ColCnt="c1000"> Current Liabilities</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100017" LinCnt="l100021">
+<fsg:RptCell ColCnt="c1000">      Liabilities - Due in One Year            </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">10,075,101</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">19,363,897</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;38,409,981></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">3,194,933</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">723,409</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">19,049,941</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">3,577,024</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">10,117,005</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">&lt;27,881,133></fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;217,869></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">1,292,727</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">7,124,174</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">8,009,230</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100018" LinCnt="l100022">
+<fsg:RptCell ColCnt="c1000">      Current Year Income Taxes Payable        </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">0</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100019" LinCnt="l100023">
+<fsg:RptCell ColCnt="c1000">      Accrued Payroll and Taxes                </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">1,492,430</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">650,074</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">317,450</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">662,579</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">527,766</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">403,418</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">546,584</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">499,504</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">576,355</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;44,402></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">839,377</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">917,866</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">7,389,003</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100020" LinCnt="l100024">
+<fsg:RptCell ColCnt="c1000">      Other Current Liabilities                </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">0</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100020" LinCnt="l100025">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">_______________</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100021" LinCnt="l100026">
+<fsg:RptCell ColCnt="c1000"> Total Current Liabilities                     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">11,567,531</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">20,013,972</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;38,092,531></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">3,857,512</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">1,251,175</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">19,453,360</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">4,123,608</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">10,616,510</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">&lt;27,304,778></fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;262,271></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">2,132,104</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">8,042,040</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">15,398,233</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100022" LinCnt="l100027">
+<fsg:RptCell ColCnt="c1000"> Long-Term Liabilities</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100023" LinCnt="l100028">
+<fsg:RptCell ColCnt="c1000">      Long Term Portion of Bank Loan           </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">0</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100024" LinCnt="l100029">
+<fsg:RptCell ColCnt="c1000">      Other Liabilities - Long Term            </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">2,079,190</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">15,082,013</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">17,079,360</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">80,345</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">82,650</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">79,984</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">85,137</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">69,815</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">86,380</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;45,123,714></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">&lt;10,398,839></fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100024" LinCnt="l100030">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">_______________</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100025" LinCnt="l100031">
+<fsg:RptCell ColCnt="c1000"> Total Long Term Liabilities                   </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">2,079,190</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">15,082,013</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">17,079,360</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">80,345</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">82,650</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">79,984</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">85,137</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">69,815</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">86,380</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;45,123,714></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">&lt;10,398,839></fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100025" LinCnt="l100032">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">_______________</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100026" LinCnt="l100033">
+<fsg:RptCell ColCnt="c1000"> TOTAL LIABILITIES                             </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">13,646,722</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">35,095,985</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;21,013,171></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">3,937,857</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">1,333,825</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">19,533,344</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">4,208,745</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">10,686,325</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">&lt;27,218,398></fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;262,271></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;42,991,610></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">8,042,040</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">4,999,394</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100027" LinCnt="l100034">
+<fsg:RptCell ColCnt="c1000"> OWNER'S EQUITY</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100028" LinCnt="l100035">
+<fsg:RptCell ColCnt="c1000">      Capital and Retained Earnings            </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">2,444,725</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">2,444,700</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;7,334,032></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">9,778,651</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">&lt;12,091,545></fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">&lt;4,876,854></fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">2,678,603</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">7,963,795</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">142,833</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;2,714,745></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">4,834,179</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">&lt;3,034,518></fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">235,792</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100029" LinCnt="l100036">
+<fsg:RptCell ColCnt="c1000">      Net Income for Current Year              </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">2,495,576</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">2,414,961</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">4,199,684</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">5,259,782</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">5,026,168</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">2,745,129</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">2,229,264</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">1,811,930</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">10,892,271</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">0</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;8,081,804></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">7,327,423</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">36,320,385</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100029" LinCnt="l100037">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">_______________</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100030" LinCnt="l100038">
+<fsg:RptCell ColCnt="c1000"> Total Owner's Equity                          </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">4,940,302</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">4,859,661</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;3,134,348></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">15,038,433</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">&lt;7,065,377></fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">&lt;2,131,724></fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">4,907,867</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">9,775,725</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">11,035,105</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;2,714,745></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;3,247,625></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">4,292,904</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">36,556,177</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100030" LinCnt="l100039">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">_______________</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">_______________</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100031" LinCnt="l100040">
+<fsg:RptCell ColCnt="c1000"> TOTAL LIABILITIES &amp; OWNER'S EQUITY            </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">18,587,023</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">39,955,646</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">&lt;24,147,519></fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">18,976,290</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">&lt;5,731,552></fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">17,401,620</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">9,116,612</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">20,462,050</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">&lt;16,183,293></fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">&lt;2,977,016></fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">&lt;46,239,235></fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">12,334,945</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">41,555,571</fsg:RptCell>
+</fsg:RptLine>
+<fsg:RptLine RptCnt="p1001" RowCnt="r100031" LinCnt="l100041">
+<fsg:RptCell ColCnt="c1000">     </fsg:RptCell>
+<fsg:RptCell ColCnt="c1001">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1002">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1003">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1004">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1005">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1006">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1007">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1008">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1009">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1010">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1011">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1012">===============</fsg:RptCell>
+<fsg:RptCell ColCnt="c1013">===============</fsg:RptCell>
+</fsg:RptLine>
+</fsg:RptDef>
+</MasterReport>

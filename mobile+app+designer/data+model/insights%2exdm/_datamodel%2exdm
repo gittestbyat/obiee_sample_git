@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <dataSet name="Default" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>american_century.xls</file>
+            <sheetName>Insights</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output xmlns="http://xmlns.oracle.com/oxp/xmlp" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" source="Default" label="G_1">
+               <element name="Market_Name" value="Market Name" dataType="xsd:string" label="Market_Name" breakOrder="None" fieldOrder="1"/>
+               <element name="Month" value="Month" dataType="xsd:string" label="Month" breakOrder="None" fieldOrder="2"/>
+               <element name="Price" value="Price" dataType="xsd:double" label="Price" breakOrder="None" fieldOrder="3"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <lexicals xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <valueSets xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <parameters xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <bursting xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <display>
+      <layouts>
+         <layout name="Default" left="274px" top="17px"/>
+         <layout name="DATA_DS" left="28px" top="14px"/>
+         <layout name="dsModalMask" left="" top=""/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

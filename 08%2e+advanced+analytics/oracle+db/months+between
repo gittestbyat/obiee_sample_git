@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="cb819c9d0dd560355" aggRule="avg">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">cast(TimestampDiff(SQL_TSI_month,&quot;Orders Dates&quot;.&quot;R11  Order Date-Time&quot;,&quot;Orders Dates&quot;.&quot;R17  Paid Date&quot;) as double)</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true" fontColor="#336699" hAlign="right" vAlign="middle" imagePlacement="right">
+            <saw:dataFormat minDigits="2" maxDigits="2" commas="true" negativeType="minus" xsi:type="saw:number"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2207">
+            <saw:text>Answers Calc</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2208">
+            <saw:text>Order-to-Cash # of Months (Logical Fn)</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="ce57193ab695fbf9c" aggRule="avg">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">cast(eVALUATE (&#39;months_between(%1, %2)&#39;,&quot;Orders Dates&quot;.&quot;R17  Paid Date&quot;, &quot;Orders Dates&quot;.&quot;R11  Order Date-Time&quot;) as double)</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true" fontColor="#CC3333" hAlign="right" vAlign="middle">
+            <saw:dataFormat minDigits="2" maxDigits="2" commas="true" negativeType="minus" xsi:type="saw:number"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2209">
+            <saw:text>Answers Calc</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2210">
+            <saw:text>Order-to-Cash # of Months (Physical Fn)</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c751decac4dfc57a2">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders Dates&quot;.&quot;R11  Order Date-Time&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="suppress" wrapText="true">
+            <saw:dataFormat xsi:type="saw:custom" customFormat="MM/dd/yy"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2211">
+            <saw:text>Orders Dates</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_2212">
+            <saw:text>R11  Order Date</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c65694556e4176381">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders Dates&quot;.&quot;R17  Paid Date&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="suppress" wrapText="true">
+            <saw:dataFormat xsi:type="saw:custom" customFormat="MM/dd/yy"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c5594f894c129b036">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R2  Order Type&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cfd5ea03448337ac5">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Calculated Attributes&quot;.&quot;R21  Order to Cash Days&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+    </saw:columns>
+    <saw:filter>
+      <sawx:expr op="equal" xsi:type="sawx:comparison">
+        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders Dates&quot;.&quot;R12  Order Month&quot;</sawx:expr>
+        <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+      </sawx:expr>
+    </saw:filter>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1" colSpan="2">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!1" colSpan="2"/>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="pivotTableView!1"/>
+          <saw:cvCell viewName="dvtchart!1" rowSpan="2"/>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="pivotTableView!2"/>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title></saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+      <saw:staticText>
+        <saw:caption fmt="html" captionID="kcap12832459_2206">
+          <saw:text>TimestampDiff computes the difference between two dates using the TimestampDiff function in OBIEE.
+[br/]
+&#39;Diff b/w dates&#39; computes the difference using the EVALUATE function which calls the MONTHS_BETWEEN function in the database.</saw:text>
+        </saw:caption>
+      </saw:staticText>
+    </saw:view>
+    <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+      <saw:edges>
+        
+        
+        
+        
+      <saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers/></saw:edge><saw:edge axis="section"><saw:edgeLayers/></saw:edge><saw:edge axis="row" showColumnHeader="true">
+          <saw:displayGrandTotals>
+            <saw:displayGrandTotal id="t3" grandTotalPosition="after"/>
+          </saw:displayGrandTotals>
+          <saw:edgeLayers>
+            
+          <saw:edgeLayer type="column" columnID="c5594f894c129b036"/></saw:edgeLayers>
+        </saw:edge><saw:edge axis="column">
+          <saw:edgeLayers>
+            
+          <saw:edgeLayer type="measure">
+              <saw:levels>
+                <saw:level>
+                  <saw:displaySubTotal id="t4" subTotalPosition="none"/>
+                </saw:level>
+              </saw:levels>
+            </saw:edgeLayer></saw:edgeLayers>
+        </saw:edge></saw:edges>
+      <saw:measuresList>
+        <saw:measure columnID="ce57193ab695fbf9c"/>
+        <saw:measure columnID="cb819c9d0dd560355" reportAgg="false"/>
+      </saw:measuresList>
+      <saw:sectionContent>
+        <saw:displayFormat>
+          <saw:formatSpec/>
+        </saw:displayFormat>
+      </saw:sectionContent>
+    </saw:view>
+    <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2" autoPreview="true">
+      <saw:edges>
+        
+        
+        
+        
+      <saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers/></saw:edge><saw:edge axis="section"><saw:edgeLayers/></saw:edge><saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            
+            
+            
+          <saw:edgeLayer type="column" columnID="c751decac4dfc57a2">
+              <saw:levels>
+                <saw:level>
+                  <saw:displaySubTotal id="t5" subTotalPosition="after"/>
+                </saw:level>
+              </saw:levels>
+              <saw:memberFormat>
+                <saw:displayFormat>
+                  <saw:formatSpec vAlign="middle" wrapText="true"/>
+                </saw:displayFormat>
+              </saw:memberFormat>
+            </saw:edgeLayer><saw:edgeLayer type="column" columnID="c65694556e4176381"/><saw:edgeLayer type="column" columnID="cfd5ea03448337ac5"/></saw:edgeLayers>
+        </saw:edge><saw:edge axis="column">
+          <saw:edgeLayers>
+            
+          <saw:edgeLayer type="measure"/></saw:edgeLayers>
+        </saw:edge></saw:edges>
+      <saw:measuresList>
+        <saw:measure columnID="cb819c9d0dd560355"/>
+        <saw:measure columnID="ce57193ab695fbf9c"/>
+      </saw:measuresList>
+    </saw:view>
+    <saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+      <saw:display type="bar" subtype="horizontal" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">
+        <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+      </saw:display>
+      <saw:canvasFormat height="350" width="300" showGradient="true">
+        <saw:dataLabels display="always" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default">
+          <saw:textFormat fontSize="10"/>
+        </saw:dataLabels>
+        <saw:title mode="custom">
+          <saw:caption/>
+        </saw:title>
+        <saw:gridlines default="true">
+          <saw:horizontal>
+            <saw:major visible="false"/>
+            <saw:minor visible="false"/>
+          </saw:horizontal>
+          <saw:vertical>
+            <saw:major visible="false"/>
+            <saw:minor visible="false"/>
+          </saw:vertical>
+        </saw:gridlines>
+      </saw:canvasFormat>
+      <saw:selections>
+        <saw:categories>
+          <saw:measureLabels/>
+        </saw:categories>
+        <saw:measures showMeasureLabelsOnCategory="false">
+          <saw:column measureType="x">
+            <saw:columnRef columnID="ce57193ab695fbf9c"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="cb819c9d0dd560355"/>
+          </saw:column>
+        </saw:measures>
+        <saw:seriesGenerators>
+          <saw:seriesGenerator>
+            <saw:columnRef columnID="c5594f894c129b036"/>
+          </saw:seriesGenerator>
+        </saw:seriesGenerators>
+        <saw:sections/>
+      </saw:selections>
+      <saw:legendFormat position="top" transparentFill="true"/>
+      <saw:axesFormats syncAxis="true">
+        <saw:axisFormat axis="Y1">
+          <saw:title mode="custom">
+            <saw:caption>
+              <saw:text/>
+            </saw:caption>
+          </saw:title>
+          <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false" min="2" max="2.1"/>
+        </saw:axisFormat>
+        <saw:axisFormat axis="X">
+          <saw:title mode="custom">
+            <saw:caption captionID="kcap12832459_2213">
+              <saw:text># of Months</saw:text>
+            </saw:caption>
+          </saw:title>
+          <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>
+        </saw:axisFormat>
+      </saw:axesFormats>
+    </saw:view>
+  </saw:views>
+</saw:report>

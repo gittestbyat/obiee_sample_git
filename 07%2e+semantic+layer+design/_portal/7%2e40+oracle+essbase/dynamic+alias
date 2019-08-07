@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="t5i5r0jdj3dk6c97"><sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2414">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Dynamic Alias Selection
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2413">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" canFreeze="false" duid="jqslfu8mmfntjq0d" break="column" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 4" duid="tsbv0c5dqlo2e67n" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/07. Semantic Layer Design/Essbase/Dynamic Alias/Prt_Alias" duid="p31atuhgt0qqo5jr"><saw:caption><saw:text>Prt_Alias</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 2" display="embed" showView="" duid="jfted75fcd56kuhv" links="" overrideParentLinks="true"><saw:caption><saw:text>Alias Selection</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Essbase/Dynamic Alias/Alias Selection"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 3" frozen="false" canFreeze="false" duid="spmbrkdg2va18m11" layoutType="bestFit"><sawd:dashboardSection name="Section 5" duid="1pn1t03l6lmdsl6h" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 3" display="embed" showView="" duid="1suv26ctigtf2ufj"><saw:caption><saw:text>Product Alias</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Essbase/Dynamic Alias/Product Alias"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="qmfq1rsbnh7drirt" frozen="false" canFreeze="false" layoutType="minimumSize"><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2410">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2415">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; Users can dynamically choose the Essbase Alias by editing values of a session variable.
+[br/]
+Choose any language on the left. The appropriate language alias is retrieved from the Essbase cube and displayed. 
+[br/]
+</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 5" duid="9t8q4d5rng42rfv4">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2416">&amp;nbsp;</sawd:HTML>
+			</sawd:htmlView>
+			
+			
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2419">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; The language chosen is set to the dynamic alias name in the physical layer of rpd metadata. Based on the variable value, the appropriate alias table values are retrieved from the Essbase cube. 
+
+[br/][br/]
+&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Note :&lt;/b&gt;&lt;/font&gt;In case of this example, the various alias values have beeen manually setup in the Essbase cube.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec vAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="30%"/>
+		</saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

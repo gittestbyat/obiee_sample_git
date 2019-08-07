@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Default" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>RetentionByHSGPABeth.xls</file>
+            <sheetName>Retention By HS GPA For Excel</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" source="Default" label="G_1">
+               <element name="ID" value="ID" dataType="xsd:double" label="ID" breakOrder="None" fieldOrder="1"/>
+               <element name="Academic_Program" value="Academic Program" dataType="xsd:string" label="Academic Program" breakOrder="None" fieldOrder="2"/>
+               <element name="Academic_Program_Desc" value="Academic Program Desc" dataType="xsd:string" label="Academic Program Desc" breakOrder="None" fieldOrder="3"/>
+               <element name="Ethnic_Group" value="Ethnic Group" dataType="xsd:string" label="Ethnic Group" breakOrder="None" fieldOrder="4"/>
+               <element name="ACT_Score" value="ACT Score" dataType="xsd:string" label="ACT Score" breakOrder="None" fieldOrder="5"/>
+               <element name="College" value="College" dataType="xsd:string" label="College" breakOrder="None" fieldOrder="6"/>
+               <element name="HS_GPA" value="HS GPA" dataType="xsd:string" label="HS GPA" breakOrder="None" fieldOrder="7"/>
+               <element name="Admit_Year_Desc" value="Admit Year Desc" dataType="xsd:string" label="Admit Year Desc" breakOrder="None" fieldOrder="8"/>
+               <element name="Admit_Academic_Year" value="Admit Academic Year" dataType="xsd:double" label="Admit Academic Year" breakOrder="None" fieldOrder="9"/>
+               <element name="Admit_Academic_Career" value="Admit Academic Career" dataType="xsd:string" label="Admit Academic Career" breakOrder="None" fieldOrder="10"/>
+               <element name="Institution_Desc" value="Institution Desc" dataType="xsd:string" label="Institution Desc" breakOrder="None" fieldOrder="11"/>
+               <element name="Gender" value="Gender" dataType="xsd:string" label="Gender" breakOrder="None" fieldOrder="12"/>
+               <element name="Student_Attribute_Desc" value="Student Attribute Desc" dataType="xsd:string" label="Student Attribute Desc" breakOrder="None" fieldOrder="13"/>
+               <element name="_1_Year_Retention_Count" value="1 Year Retention Count" dataType="xsd:double" label="1 Year Retention Count" breakOrder="None" fieldOrder="14"/>
+               <element name="_2_Year_Retention_Count" value="2 Year Retention Count" dataType="xsd:double" label="2 Year Retention Count" breakOrder="None" fieldOrder="15"/>
+               <element name="_3_Year_Retention_Count" value="3 Year Retention Count" dataType="xsd:double" label="3 Year Retention Count" breakOrder="None" fieldOrder="16"/>
+               <element name="_4_Year_Retention_Count" value="4 Year Retention Count" dataType="xsd:double" label="4 Year Retention Count" breakOrder="None" fieldOrder="17"/>
+               <element name="_5_Year_Retention_Count" value="5 Year Retention Count" dataType="xsd:double" label="5 Year Retention Count" breakOrder="None" fieldOrder="18"/>
+               <element name="_6_Year_Retention_Count" value="6 Year Retention Count" dataType="xsd:double" label="6 Year Retention Count" breakOrder="None" fieldOrder="19"/>
+               <element name="_1_Year_Graduation_Count" value="1 Year Graduation Count" dataType="xsd:double" label="1 Year Graduation Count" breakOrder="None" fieldOrder="20"/>
+               <element name="_2_Year_Graduation_Count" value="2 Year Graduation Count" dataType="xsd:double" label="2 Year Graduation Count" breakOrder="None" fieldOrder="21"/>
+               <element name="_3_Year_Graduation_Count" value="3 Year Graduation Count" dataType="xsd:double" label="3 Year Graduation Count" breakOrder="None" fieldOrder="22"/>
+               <element name="_4_Year_Graduation_Count" value="4 Year Graduation Count" dataType="xsd:double" label="4 Year Graduation Count" breakOrder="None" fieldOrder="23"/>
+               <element name="_5_Year_Graduation_Count" value="5 Year Graduation Count" dataType="xsd:double" label="5 Year Graduation Count" breakOrder="None" fieldOrder="24"/>
+               <element name="_6_Year_Graduation_Count" value="6 Year Graduation Count" dataType="xsd:double" label="6 Year Graduation Count" breakOrder="None" fieldOrder="25"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="Default" left="274px" top="17px"/>
+         <layout name="DATA_DS" left="28px" top="14px"/>
+         <layout name="dsModalMask" left="" top=""/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

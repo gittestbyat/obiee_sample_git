@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c87960b8d06d49d9f">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Sales Person&quot;.&quot;E1  Sales Rep Name&quot;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sales Resource</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sales Rep</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cc92d2e2eac1b4336">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">rand() * 10</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Actual</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Actual</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c02019f550481e5b5">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">RSUM(COUNT(DISTINCT 1))</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sales Resource</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Rep #</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cdc183193c323b50f">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">SUM(COUNT(DISTINCT 1))</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Sales Resource</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text># of Reps</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cfd96e4b5cc97e84e"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">5 * RAND() + 10</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Target</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:list" op="in"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Sales Person&quot;.&quot;E1  Sales Rep Name&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">Angela Richards</sawx:expr><sawx:expr xsi:type="xsd:string">Charles Brooks</sawx:expr><sawx:expr xsi:type="xsd:string">James Dowel</sawx:expr><sawx:expr xsi:type="xsd:string">Michele Lombardo</sawx:expr><sawx:expr xsi:type="xsd:string">Paul Atkinson</sawx:expr><sawx:expr xsi:type="xsd:string">Rozalia Girel</sawx:expr><sawx:expr xsi:type="xsd:string">Russell Wolin</sawx:expr></sawx:expr></saw:filter>
+      <saw:columnOrder/></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!1"><saw:displayFormat><saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"><saw:displayFormat><saw:formatSpec width="600px" height="400px"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  
+                  <saw:edgeLayer type="column" columnID="c87960b8d06d49d9f"/>
+                  <saw:edgeLayer type="column" columnID="cc92d2e2eac1b4336"/>
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="c02019f550481e5b5"/>
+                  <saw:edgeLayer type="column" columnID="cdc183193c323b50f"/><saw:edgeLayer type="column" columnID="cfd96e4b5cc97e84e"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:narrativeView" name="narrativeView!1">
+         <saw:narrative>
+            <saw:caption fmt="html">
+               <saw:text>   details = getDetails(&#39;@{c87960b8d06d49d9f}&#39;, @{cc92d2e2eac1b4336}, @{c02019f550481e5b5}, @{cdc183193c323b50f},@{cfd96e4b5cc97e84e});
+
+   drawTrack(details);
+   drawPerson(details);
+
+</saw:text></saw:caption></saw:narrative>
+         
+         <saw:postfix>
+            <saw:caption fmt="html">
+               <saw:text>&lt;/script&gt;</saw:text></saw:caption></saw:postfix><saw:prefix><saw:caption fmt="html"><saw:text>    &lt;canvas id=&quot;myCanvas&quot; width=&quot;800&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+    &lt;script&gt;
+      var canvas = document.getElementById(&#39;myCanvas&#39;);
+      var context = canvas.getContext(&#39;2d&#39;);
+
+   function getDetails(repname, activities, repnumber, numberreps,racegoal) {
+      var details = [];
+
+      details[&#39;raceGoal&#39;] = racegoal;
+
+      details[&#39;perspectiveX&#39;] = 200;
+      details[&#39;canvasWidth&#39;] = 800;
+      details[&#39;canvasBottomY&#39;] = 350;
+      details[&#39;canvasTopY&#39;] = 50;
+      details[&#39;repname&#39;] = repname + &#39;(&#39; + activities + &#39;,&#39; + racegoal + &#39;)&#39;;
+      details[&#39;activities&#39;] = activities;
+      details[&#39;repnumber&#39;] = repnumber;
+      details[&#39;numberreps&#39;] = numberreps;
+      details[&#39;laneWidth&#39;] = details[&#39;canvasWidth&#39;] / numberreps;
+      details[&#39;maxImageH&#39;] = 200;
+      details[&#39;maxImageW&#39;] = Math.round(200/597*354)
+      details[&#39;laneEndX&#39;] = (details[&#39;laneWidth&#39;] / 2) + (details[&#39;laneWidth&#39;] * (details[&#39;repnumber&#39;] -1));
+      details[&#39;laneEndY&#39;] = details[&#39;canvasBottomY&#39;];
+      details[&#39;laneX&#39;] = details[&#39;laneWidth&#39;] * (details[&#39;repnumber&#39;] -1);
+      details[&#39;laneY&#39;] = details[&#39;canvasBottomY&#39;];
+      details[&#39;laneStartWidth&#39;] = Math.round(details[&#39;laneWidth&#39;] * details[&#39;canvasTopY&#39;] / details[&#39;canvasBottomY&#39;]);
+      details[&#39;nameX&#39;] = details[&#39;laneWidth&#39;] * (details[&#39;repnumber&#39;] -1);
+
+
+      details[&#39;startLeftX&#39;] = Math.round(details[&#39;perspectiveX&#39;] / details[&#39;canvasBottomY&#39;] * (details[&#39;canvasBottomY&#39;] - details[&#39;canvasTopY&#39;])) + Math.round(details[&#39;laneX&#39;] * details[&#39;canvasTopY&#39;] / details[&#39;canvasBottomY&#39;]);
+      details[&#39;startRightX&#39;] = details[&#39;startLeftX&#39;] + details[&#39;laneStartWidth&#39;];
+
+      details[&#39;imageLaneY&#39;] = Math.round(50 + (300/details[&#39;raceGoal&#39;]*details[&#39;activities&#39;]/2.8181818181*(1+(details[&#39;activities&#39;]/5.5))));
+      details[&#39;imageLaneX&#39;] = Math.round(details[&#39;imageLaneY&#39;]/details[&#39;laneEndY&#39;]*(details[&#39;laneEndX&#39;]-details[&#39;perspectiveX&#39;])) + details[&#39;perspectiveX&#39;];
+
+      details[&#39;realImageH&#39;] = Math.round(details[&#39;maxImageH&#39;] * details[&#39;imageLaneY&#39;] / details[&#39;laneEndY&#39;]);
+      details[&#39;realImageW&#39;] = Math.round(details[&#39;maxImageW&#39;] * (details[&#39;imageLaneX&#39;] - details[&#39;perspectiveX&#39;]) / (details[&#39;laneEndX&#39;] - details[&#39;perspectiveX&#39;]));
+
+      details[&#39;imageY&#39;] = details[&#39;imageLaneY&#39;] - details[&#39;realImageH&#39;];
+      details[&#39;imageX&#39;] = details[&#39;imageLaneX&#39;] - Math.round(details[&#39;realImageW&#39;]/2);
+
+      return details;
+   }
+
+   function drawLine(fromX, fromY, toX, toY, width) {
+   if(!width)
+width=1;
+      context.beginPath();
+      context.lineWidth = width;
+      context.moveTo(fromX, fromY);
+      context.lineTo(toX , toY);
+      context.stroke();
+   }
+
+   function drawTrack(details) {
+// draw sprint path
+//      drawLine(details[&#39;perspectiveX&#39;], 0, details[&#39;laneEndX&#39;], details[&#39;laneEndY&#39;]);
+
+// draw start line
+      drawLine(details[&#39;startLeftX&#39;], details[&#39;canvasTopY&#39;], details[&#39;startRightX&#39;] , details[&#39;canvasTopY&#39;]);
+
+// draw lane
+      drawLine(details[&#39;startLeftX&#39;], details[&#39;canvasTopY&#39;], details[&#39;laneX&#39;] , details[&#39;laneY&#39;]);
+
+// draw finish line
+      if (details[&#39;repnumber&#39;] == 1) {
+         drawLine(0, details[&#39;canvasBottomY&#39;], details[&#39;canvasWidth&#39;] , details[&#39;canvasBottomY&#39;]);
+      }
+
+// draw last lane right line
+      if (details[&#39;repnumber&#39;] == details[&#39;numberreps&#39;]) {
+         drawLine(details[&#39;startRightX&#39;], details[&#39;canvasTopY&#39;], details[&#39;canvasWidth&#39;] , details[&#39;canvasBottomY&#39;]);
+      }
+
+// salesrep name
+      context.font = &#39;8pt Calibri&#39;;
+      context.fillText(details[&#39;repname&#39;] , details[&#39;nameX&#39;] , 385);
+   }
+
+   function drawPerson(details) {
+// draw person line
+//      drawLine(details[&#39;imageLaneX&#39;], details[&#39;imageY&#39;], details[&#39;imageLaneX&#39;] , details[&#39;imageLaneY&#39;], 3);
+
+// draw image
+      var image = new Image();
+      image.onload = function() {
+         context.drawImage(image, details[&#39;imageX&#39;], details[&#39;imageY&#39;], details[&#39;realImageW&#39;], details[&#39;realImageH&#39;]);
+      };
+      image.src = &#39;/analyticsRes/d3/pics/man-running-hi.png&#39;;
+   }</saw:text></saw:caption></saw:prefix></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+         <saw:staticText>
+            <saw:caption fmt="text">
+               <saw:text>Each track the position of the Sales Rep&#39;s Actual compared to the Target which is the finishing line.
+[br/]
+Labels show the Sales Rep Name (Actual, Target)</saw:text></saw:caption></saw:staticText></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!2" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c048db706602e5ab6"/>
+                  <saw:edgeLayer type="column" columnID="c87960b8d06d49d9f"/>
+                  <saw:edgeLayer type="column" columnID="cc92d2e2eac1b4336"/>
+                  <saw:edgeLayer type="column" columnID="cda376b27da583ba1"/>
+                  <saw:edgeLayer type="column" columnID="c7d0b50a3eca00fc2"/>
+                  <saw:edgeLayer type="column" columnID="c10c88a5a4ba3231e"/>
+                  <saw:edgeLayer type="column" columnID="c02019f550481e5b5"/>
+                  <saw:edgeLayer type="column" columnID="cdc183193c323b50f"/><saw:edgeLayer type="column" columnID="cfd96e4b5cc97e84e"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!3" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c87960b8d06d49d9f"/>
+                  <saw:edgeLayer type="column" columnID="cc92d2e2eac1b4336"/>
+                  <saw:edgeLayer type="column" columnID="c02019f550481e5b5"/>
+                  <saw:edgeLayer type="column" columnID="cdc183193c323b50f"/><saw:edgeLayer type="column" columnID="cfd96e4b5cc97e84e"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:tableView" name="tableView!4" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cc92d2e2eac1b4336"/><saw:edgeLayer type="column" columnID="c87960b8d06d49d9f"/><saw:edgeLayer type="column" columnID="c02019f550481e5b5"/><saw:edgeLayer type="column" columnID="cdc183193c323b50f"/><saw:edgeLayer type="column" columnID="cfd96e4b5cc97e84e"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!2"><saw:staticText><saw:caption fmt="text"><saw:text>[u]Limitations[/u][br/]
+1) Actual and Target values are random numbers. We could use Revenue and Target Revenue but Target Revenue does not exist for Sales Rep. Also, using Revenue values makes the chart dimensions go haywire because of the range[br/]
+2) Showing all the 27 sales rep makes the chart clumsy/unreadable. So we filter for a few names.
+</saw:text></saw:caption></saw:staticText></saw:view></saw:views><saw:prompts scope="report" subjectArea="&quot;A - Sample Sales&quot;"/></saw:report>

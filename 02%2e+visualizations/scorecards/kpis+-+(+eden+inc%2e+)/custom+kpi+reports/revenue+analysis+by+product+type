@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column dimensionID="H0 Time" tableName="Time" hierarchyID="Time Hierarchy" columnID="ce0dc6c153a763ee5" xsi:type="saw:hierarchicalColumn"/>
+      <saw:column xsi:type="saw:regularColumn" columnID="ca1e60772fe98ca22">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cb107edb7a560f658">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c59810081ad539ec8">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column dimensionID="H1 Products" tableName="Products" hierarchyID="Products Hierarchy" columnID="cac3262256167fc51" xsi:type="saw:hierarchicalColumn"/>
+      <saw:column xsi:type="saw:regularColumn" columnID="cea55367c84e5d7e8">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P2  Product Type&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c65a5bf6169faaf6d">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cfc553f7a04ea16a5">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column dimensionID="H6 Customers" tableName="Customers" hierarchyID="Cust Segments Hier" columnID="c37fd6ebc92439a65" xsi:type="saw:hierarchicalColumn"/>
+      <saw:column xsi:type="saw:regularColumn" columnID="c26d55537d99ef337">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C4  Customer Segment&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column dimensionID="H3 Offices" tableName="Offices" hierarchyID="Offices Hierarchy" columnID="cea65cfaf9e695cfd" xsi:type="saw:hierarchicalColumn"/>
+      <saw:column xsi:type="saw:regularColumn" columnID="ccb546879cee0cf68">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D4  Company&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cf6e5fc9a51e3442e">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12832459_1412">
+            <saw:text>KPI</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12832459_1413">
+            <saw:text>Actual</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+        <saw:displayFormat>
+          
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:currency" currencyTag="int:wrhs" commas="true" negativeType="paren" minDigits="0" maxDigits="0"/>
+          </saw:formatSpec><saw:conditionalDisplayFormats>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="equal">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="cdef65bc67e140f0f"/>
+                    <sawx:expr xsi:type="xsd:string">CRITICAL</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec backgroundColor="red"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="equal">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="cdef65bc67e140f0f"/>
+                    <sawx:expr xsi:type="xsd:string">WARNING</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec backgroundColor="yellow"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="equal">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="cdef65bc67e140f0f"/>
+                    <sawx:expr xsi:type="xsd:string">OK</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec backgroundColor="green"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+          </saw:conditionalDisplayFormats>
+        </saw:displayFormat>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c5b604beeb92159f0">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12832459_1414">
+            <saw:text>KPI</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12832459_1415">
+            <saw:text>Target</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:currency" currencyTag="int:wrhs" commas="true" negativeType="paren" minDigits="0" maxDigits="0"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cdef65bc67e140f0f">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN (&quot;Base Facts&quot;.&quot;1- Revenue&quot;) &gt;  (&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; * 0.90) THEN &#39;OK&#39; ELSE CASE WHEN (&quot;Base Facts&quot;.&quot;1- Revenue&quot;) &gt;  (&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; * 0.80) THEN &#39;WARNING&#39; ELSE CASE WHEN (&quot;Base Facts&quot;.&quot;1- Revenue&quot;) &lt;=  (&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; * 0.80) THEN &#39;CRITICAL&#39; ELSE &#39; &#39;  END END END</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12832459_1416">
+            <saw:text>KPI</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12832459_1417">
+            <saw:text>Status</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+        <saw:displayFormat>
+          
+          <saw:formatSpec interaction="default" hAlign="center"/><saw:conditionalDisplayFormats>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="equal">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="cdef65bc67e140f0f"/>
+                    <sawx:expr xsi:type="xsd:string">CRITICAL</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec image="fmap:common/kpi_critical_status.gif" imagePlacement="left,imageOnly"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="equal">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="cdef65bc67e140f0f"/>
+                    <sawx:expr xsi:type="xsd:string">WARNING</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec image="fmap:common/kpi_warning_status.gif" imagePlacement="left,imageOnly"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+            <saw:conditionalDisplayFormat>
+              <saw:formatRule>
+                <saw:condition>
+                  <sawx:expr xsi:type="sawx:comparison" op="equal">
+                    <sawx:expr xsi:type="sawx:columnRefExpr" columnID="cdef65bc67e140f0f"/>
+                    <sawx:expr xsi:type="xsd:string">OK</sawx:expr>
+                  </sawx:expr>
+                </saw:condition>
+                <saw:formatSpec image="fmap:common/kpi_ok_status.gif" imagePlacement="left,imageOnly"/>
+              </saw:formatRule>
+            </saw:conditionalDisplayFormat>
+          </saw:conditionalDisplayFormats>
+        </saw:displayFormat>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="ca9aad47ec05b491f">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">( (&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;) - (&quot;Base Facts&quot;.&quot;1- Revenue&quot; ) )</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12832459_1418">
+            <saw:text>KPI</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12832459_1419">
+            <saw:text>Variance</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:currency" currencyTag="int:wrhs" commas="true" negativeType="paren" minDigits="0" maxDigits="0"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c0a650268c22966cb">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">( ( (&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;) - (&quot;Base Facts&quot;.&quot;1- Revenue&quot; ) ) * 100 ) / (&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; )</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12832459_1420">
+            <saw:text>KPI</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12832459_1421">
+            <saw:text>% Variance</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="dvtchart!1"/>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="tableView!1"/>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+    <saw:view xsi:type="saw:tableView" name="tableView!1">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="ce0dc6c153a763ee5">
+              <saw:drillState>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="ce0dc6c153a763ee5"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Total Time"/>
+                          <saw:members xsi:type="saw:integerMembers">
+                            <saw:value>1</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="ce0dc6c153a763ee5"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="ce0dc6c153a763ee5" groupID="0"/>
+                  </saw:selectionGroups>
+                </saw:drillStep>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="ce0dc6c153a763ee5"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Year"/>
+                          <saw:members xsi:type="saw:stringMembers">
+                            <saw:value>2010</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="ce0dc6c153a763ee5"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="ce0dc6c153a763ee5" groupID="0"/>
+                  </saw:selectionGroups>
+                  <saw:drillParents>
+                    <saw:drillParent columnID="ce0dc6c153a763ee5" levelID="Total Time">
+                      <saw:members xsi:type="saw:integerMembers">
+                        <saw:value>1</saw:value>
+                      </saw:members>
+                    </saw:drillParent>
+                  </saw:drillParents>
+                </saw:drillStep>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="ce0dc6c153a763ee5"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Year"/>
+                          <saw:members xsi:type="saw:stringMembers">
+                            <saw:value>2009</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="ce0dc6c153a763ee5"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="ce0dc6c153a763ee5" groupID="0"/>
+                  </saw:selectionGroups>
+                  <saw:drillParents>
+                    <saw:drillParent columnID="ce0dc6c153a763ee5" levelID="Total Time">
+                      <saw:members xsi:type="saw:integerMembers">
+                        <saw:value>1</saw:value>
+                      </saw:members>
+                    </saw:drillParent>
+                  </saw:drillParents>
+                </saw:drillStep>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="ce0dc6c153a763ee5"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Quarter"/>
+                          <saw:members xsi:type="saw:stringMembers">
+                            <saw:value>2010 Q3</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="ce0dc6c153a763ee5"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="ce0dc6c153a763ee5" groupID="0"/>
+                  </saw:selectionGroups>
+                  <saw:drillParents>
+                    <saw:drillParent columnID="ce0dc6c153a763ee5" levelID="Year">
+                      <saw:members xsi:type="saw:stringMembers">
+                        <saw:value>2010</saw:value>
+                      </saw:members>
+                    </saw:drillParent>
+                  </saw:drillParents>
+                </saw:drillStep>
+              </saw:drillState>
+            </saw:edgeLayer>
+            <saw:edgeLayer type="column" columnID="cac3262256167fc51"/>
+            <saw:edgeLayer type="column" columnID="c37fd6ebc92439a65"/>
+            <saw:edgeLayer type="column" columnID="cea65cfaf9e695cfd"/>
+            <saw:edgeLayer type="column" columnID="cf6e5fc9a51e3442e"/>
+            <saw:edgeLayer type="column" columnID="c5b604beeb92159f0"/>
+            <saw:edgeLayer type="column" columnID="cdef65bc67e140f0f"/>
+            <saw:edgeLayer type="column" columnID="ca9aad47ec05b491f"/>
+            <saw:edgeLayer type="column" columnID="c0a650268c22966cb"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+      <saw:measuresList>
+        <saw:measure columnID="cf6e5fc9a51e3442e"/>
+        <saw:measure columnID="c5b604beeb92159f0"/>
+        <saw:measure columnID="cdef65bc67e140f0f"/>
+        <saw:measure columnID="ca9aad47ec05b491f"/>
+        <saw:measure columnID="c0a650268c22966cb"/>
+      </saw:measuresList>
+    </saw:view>
+    <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+      <saw:display type="bar" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="true">
+        <saw:style barStyle="gradient" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+      </saw:display>
+      <saw:canvasFormat height="330" width="640" showGradient="true">
+        <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>
+        <saw:title mode="auto">
+          <saw:caption/>
+        </saw:title>
+        <saw:gridlines default="true">
+          <saw:horizontal>
+            <saw:major visible="false"/>
+            <saw:minor visible="false"/>
+          </saw:horizontal>
+          <saw:vertical>
+            <saw:major visible="false"/>
+            <saw:minor visible="false"/>
+          </saw:vertical>
+        </saw:gridlines>
+      </saw:canvasFormat>
+      <saw:selections>
+        <saw:categories>
+          <saw:category>
+            <saw:columnRef columnID="cea55367c84e5d7e8"/>
+          </saw:category>
+        </saw:categories>
+        <saw:measures showMeasureLabelsOnCategory="false">
+          <saw:column measureType="y">
+            <saw:columnRef columnID="cf6e5fc9a51e3442e"/>
+          </saw:column>
+        </saw:measures>
+        <saw:seriesGenerators>
+          <saw:measureLabels/>
+        </saw:seriesGenerators>
+        <saw:sections displayAsSlider="true">
+          <saw:section>
+            <saw:columnRef columnID="c59810081ad539ec8"/>
+          </saw:section>
+        </saw:sections>
+        <saw:page>
+          <saw:column>
+            <saw:columnRef columnID="ccb546879cee0cf68"/>
+          </saw:column>
+        </saw:page>
+      </saw:selections>
+      <saw:legendFormat position="default" transparentFill="true"/>
+      <saw:axesFormats syncAxis="false">
+        <saw:axisFormat axis="Y1">
+          <saw:title mode="auto">
+            <saw:caption/>
+          </saw:title>
+          <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>
+        </saw:axisFormat>
+        <saw:axisFormat axis="X">
+          <saw:title mode="auto">
+            <saw:caption/>
+          </saw:title>
+          <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>
+        </saw:axisFormat>
+      </saw:axesFormats>
+    </saw:view>
+  </saw:views>
+</saw:report>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="ukc6mgnu0oilvkho"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="oja3sa2qrd0fitfn" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="a6c04vbajf075bjq" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec wrapText="true" borderPosition="none"/></saw:displayFormat><sawd:linkView name="Link 1" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionLeft" duid="aeiit31hh0dk06cg"><sawd:linkCaption><saw:caption><saw:text>Return to Main Index page</saw:text></saw:caption></sawd:linkCaption><sawd:image src="res/sk_blafp/catalog/fr/book.gif"/></sawd:linkView><sawd:htmlView name="HTML 0" duid="c4q1jrs4pmdqkkip"><sawd:HTML fmt="html">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+Security checker&lt;/b&gt;&lt;/font&gt;
+[br/]
+The checkBITechUsers.sh script automates a number of security checks. It does the following:
+[br/]
+&lt;ul&gt;
+&lt;li&gt;Getting provider lists from weblogic&lt;/li&gt;
+&lt;li&gt;Getting system.user from Enterprise Manager using jmx&lt;/li&gt;
+&lt;li&gt;Listing provider and groups membership recursively for users:
+system.user above, weblogic, OracleSystemUser&lt;/li&gt;
+&lt;li&gt;Listing weblogic role expressions for role Admin and OracleSystemRole&lt;/li&gt;
+&lt;li&gt;Listing application roles members for BIAdministrator and BISystem roles&lt;/li&gt;
+&lt;li&gt;Checking if SSO is enabled for OBIEE in Enterprise Manager&lt;/li&gt;
+&lt;li&gt;Checking the following deployments state: bisecurity#11.1.1 and wsm-pm web app&lt;/li&gt;
+&lt;li&gt;Performing GET request to bisecurity web service&lt;/li&gt;
+&lt;li&gt;Performing WS-Security login to bisecurity web service using system.user, and weblogic admin accounts&lt;/li&gt;
+&lt;li&gt;Performing login to analytics using direct weblogic connections,  using system.user, and weblogic admin accounts&lt;/li&gt;
+&lt;li&gt;Performing login to analytics using external FQDN url,  using system.user, and weblogic admin accounts &lt;/li&gt;
+&lt;/ul&gt;
+[br/]
+To run the script, open a shell, and:
+&lt;ul&gt;
+&lt;li&gt;cd /app/oracle/SAScripts/CEAL_scripts/security&lt;/li&gt;
+&lt;li&gt;sh checkBITechUsers.sh&lt;/li&gt;
+&lt;/ul&gt;
+Log is generated in /app/oracle/SAScripts/CEAL_scripts/security/checkBITechUsers.log
+[br/][br/]
+The script is also externally available at this location: https://blogs.oracle.com/pa/entry/bi_check_with_wlst_providers .</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 4" duid="nb8e6fmo94ou3o1h" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:linkView name="Link 2" target="new" type="url" destination="/analyticsRes/SampleApp/checkBITechUsers.log" layout="captionLeft" duid="ecth1pi47mbqjbnm"><sawd:linkCaption><saw:caption><saw:text>Script output in checkBITechUsers.log</saw:text></saw:caption></sawd:linkCaption></sawd:linkView></sawd:dashboardSection><sawd:dashboardSection name="Section 5" duid="fpbt6e3tm1e2bf2c" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:linkView name="Link 3" target="new" type="url" destination="/analyticsRes/SampleApp/checkBITechUsers.sh" layout="captionLeft" duid="ucde9l019o7c4u87"><sawd:linkCaption><saw:caption><saw:text>shell content from /app/oracle/SAScripts/CEAL_scripts/security/checkBITechUsers.sh</saw:text></saw:caption></sawd:linkCaption></sawd:linkView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

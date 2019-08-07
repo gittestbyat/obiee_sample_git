@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria subjectArea="&quot;A - Sample Sales&quot;" xsi:type="saw:simpleCriteria" withinHierarchy="true">
+		<saw:columns>
+			<saw:column columnID="c0" xsi:type="saw:regularColumn" forceGroupBy="true">
+				<saw:tableHeading>
+					<saw:caption captionID="kcap12387046_29746">
+						<saw:text>Dummy Object</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption captionID="kcap12387046_29747">
+						<saw:text>Can be any working column</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">count(&quot;Time&quot;.&quot;T05 Per Name Year&quot;)</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+		</saw:columns>
+	</saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!1">
+						<saw:displayFormat/>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!01">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#9999CC"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!11">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!12">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="8" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#9999CC"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!21">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!22">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="8" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#9999CC"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!31">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!33">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!34">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!35">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!36">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="8" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#9999CC"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!41">
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="8" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" borderColor="#9999CC"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+			</saw:cvTable>
+			<saw:pageProps orientation="portrait" printRows="visible">
+				<saw:pageHeader show="false"/>
+				<saw:pageFooter show="true" showOnDashboard="true">
+					<saw:zone position="top">
+						<saw:displayFormat>
+							<saw:formatSpec hAlign="center"/>
+						</saw:displayFormat>
+					</saw:zone>
+					<saw:zone position="left">
+						<saw:displayFormat>
+							<saw:formatSpec hAlign="left" width="33%" backgroundColor="#E2E2F9" fontStyle="italic" borderPosition="10" borderColor="#000000" fontSize="9" borderStyle="single"/>
+						</saw:displayFormat>
+						<saw:caption fmt="text" captionID="kcap12387046_29748">
+							<saw:text>A - Sample Sales Reports Help</saw:text>
+						</saw:caption>
+					</saw:zone>
+					<saw:zone position="center">
+						<saw:displayFormat>
+							<saw:formatSpec hAlign="center" width="34%" backgroundColor="#E2E2F9" borderColor="#000000" fontSize="9" fontStyle="italic" borderPosition="10" borderStyle="single"/>
+						</saw:displayFormat>
+						<saw:caption fmt="text" captionID="kcap12387046_29749">
+							<saw:text>@{savedName}</saw:text>
+						</saw:caption>
+					</saw:zone>
+					<saw:zone position="right">
+						<saw:displayFormat>
+							<saw:formatSpec hAlign="right" width="33%" backgroundColor="#E2E2F9" borderColor="#000000" fontSize="9" fontStyle="italic" borderPosition="10" borderStyle="single"/>
+						</saw:displayFormat>
+						<saw:caption fmt="text">
+							<saw:text/>
+						</saw:caption>
+					</saw:zone>
+					<saw:zone position="bottom">
+						<saw:displayFormat>
+							<saw:formatSpec hAlign="center"/>
+						</saw:displayFormat>
+					</saw:zone>
+				</saw:pageFooter>
+			</saw:pageProps>
+		</saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="none" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="false" autoPreview="true"><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12387046_29741">
+					<saw:text>Index to Average - Samples Report Help</saw:text>
+				</saw:caption>
+			</saw:title></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c0"/>
+					</saw:edgeLayers>
+				</saw:edge>
+				<saw:edge axis="column"/>
+			</saw:edges>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!21" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12387046_29742">
+					<saw:text>&lt;!-- ==== 2 LAYOUT ======--&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;2. Layout :&lt;/b&gt;&lt;/font&gt;&lt;!-- ==== 2.1 Views ======--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;2.1 Views Layout: &lt;/b&gt;&lt;/font&gt;&lt;/u&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_blafp/viewui/chart/axispievalues.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Chart 1 - &lt;/b&gt;&lt;/font&gt;&lt;b&gt; Relative Position to Avg: Metrics Comparative &lt;/b&gt; - Displays index to average information for each dimension individual, respectively for each metric in the analysis. This chart allows you to quickly understand the relative behavior of business metrics, per individual, compared to average. Average base index (100) is indicated by the red line. This chart is useful for visualizing performance and check if it is consistent across metrics for all individuals&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_blafp/viewui/chart/axispievalues.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Chart 2 and Chart 3 -&lt;/b&gt;&lt;/font&gt;&lt;b&gt;Relative position to Average for Metric 1 and Metric 2&lt;/b&gt; - Each display information of index to average by individual for a single metric. These charts complement Chart 1 information with alternative colored visuals on similar information. Average base index (100) is indicated by the red line. &lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_blafp/viewui/chart/axispievalues.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Chart 4 &lt;/b&gt;&lt;/font&gt;&lt;b&gt;Indexes to Avg Quadrant: Metric 1 (X) x Metric 2 (Y)&lt;/b&gt; - Is a quadrant that plots individuals on two indexed axis: Y axis for index to average for a metric, X axis for index to average for another metric. Quadrant 1 on the map (top right) shows candidates that are performing better than average on both metrics. Quadrant 4 on the map (bottom left) shows candidates that are performing below average on both metrics. The quadrants numbers are reported on the table right to the chart to help identify individuals. &lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_blafp/picker/icolumn.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Table &lt;/b&gt;&lt;/font&gt;- The table shows comparison of Metric 1 and Metric 2, which quadrant they fall into and delta from the average value. &lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_blafp/picker/ifilter.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Filter&lt;/b&gt;&lt;/font&gt; - Block at the bottom of the page displays the filters currently applied to the results displayed. This filter block is only visible if there are filters applied.&lt;br/&gt;</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat/>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!22" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12393384_225">
+					<saw:text>&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_blafp/picker/ifilter.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;Page filter prompts&lt;/b&gt;&lt;/font&gt; - At the bottom of the page allows you to filter down scope of the whole report. Click a button next to each field and enter specific list of values for this field. When done, select &lt;b&gt;Go&lt;/b&gt; next to each prompt. Filter prompts can also be hidden when collapsing the bottom page section, by clicking the icon on top right side of that section.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_blafp/viewui/chart/axislegend.gif&quot;&gt;Top page - &lt;font color=#666699&gt;&lt;b&gt;Select Dimension &lt;/b&gt;&lt;/font&gt;- Drop down selector allows you to choose which dimension to analyze in the report. &lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;img src=&quot;res/sk_blafp/viewui/chart/axislegend.gif&quot;&gt;Top page - &lt;font color=#666699&gt;&lt;b&gt;Select Metric 1 and Select Metric 2 &lt;/b&gt;&lt;/font&gt;- Drop down selector allows you to choose which metrics to analyze in the report. &lt;br/&gt;&lt;!-- ==== 2.2 Navigations ======--&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;2.2 Navigations: &lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;This page has Navigations enabled: Selecting on metric values or selected chart series enables navigational menu to display reports. You can then jump to other reports (while limiting the scope to only the individuals selected) &lt;br/&gt;&amp;nbsp;</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat/>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!11" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12387046_29743">
+					<saw:text>&lt;!-- ==== 1 PURPOSE and USAGE ==--&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;1. Purpose and Usage :&lt;/b&gt;&lt;/font&gt;&lt;!-- ==== 1.1 Purpose ======--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;1.1 Purpose: &lt;/b&gt;&lt;/u&gt;&lt;/font&gt;&lt;br/&gt;This dashboard page shows comparative performance for individuals on a dimension, for several metrics, indexed against the average performance of all the individuals in the report.&lt;br/&gt;The report compares performance on several metrics. Each individual of a dimension and the average of the group. It provides a visual view of how individuals perform and to highlight inconsistent performance gaps: you can quickly visualize which regions are performing above average both for revenue and margin, or which one is better than average in revenue but worse in margin, and so on.</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat/>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!12" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12393384_226">
+					<saw:text>&lt;!-- ==== 1.2 Usage  ======--&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;1.2 Usage: &lt;/b&gt;&lt;/u&gt;&lt;/font&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&amp;nbsp;From drop down list of choices at top of page, select a dimension and two metrics to analyze from., then select &lt;b&gt;Go&lt;/b&gt;. The Dimension object defines the bars of the bar charts, and the metrics are used to calculate the indexing positions on. &lt;br/&gt;&lt;!-- Useful --&gt;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/picker/icheck.gif&quot;&gt;&lt;i&gt;&lt;font color=#0000ff&gt;&lt;b&gt;&amp;nbsp;! Useful :&lt;/b&gt; for running the report only on a single metric, select the same metric object in both prompts &lt;/font&gt; &lt;/i&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&amp;nbsp;Filter the scope of the report as required by using &lt;b&gt; Page Filter Prompts&lt;/b&gt; at bottom of page.&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&amp;nbsp;Clicking on the blue colored numbers within tables grants you access to more detailed navigation reports..&lt;br/&gt;&amp;nbsp;</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat/>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!01" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12387046_29744">
+					<saw:text>&lt;br/&gt;&lt;table width=370 cellpadding=8 cellspacing=0 bgcolor=&quot;#F9F9F9&quot; style=&quot;border: 1px solid #D0D0E0&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;font color=#666699 size=2&gt;&lt;b&gt;&lt;i&gt;Contents :&lt;/i&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&amp;nbsp;1. Purpose and Usage&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;1.1 Purpose &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;1.2 Usage &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;2. Layout&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;2.1 Views Layout &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;2.2 Navigations &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;3. Technical Design&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.1 RPD Columns Required &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.2 Specific Filters &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.3 Presentation Variables &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.4 Top Page Prompts and Page Filter Prompts &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.5 Answers Calculations &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;3.6 Limitations&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;4. Leverage and Deploy&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;4.1 Deploying A - Sample Sales reports in other environments &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&lt;font color=#666699&gt;&lt;b&gt;&amp;nbsp;4.2 Other Adaptations &lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat/>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!31" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12387046_29745">
+					<saw:text>&lt;!-- ==== 3. TECH DESIGN ======--&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;3. Technical Design :&lt;/b&gt;&lt;/font&gt;&lt;!-- ==== 3.1 RPD columns required ======--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/common/opcopy.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.1 RPD Columns Required: &lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;font color=black&gt; This report requires at minimum, the following RPD objects :&lt;/font&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;- two metrics, with any default aggregation rule and any number format. For example, INT, Double, etc.)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;- one dimension that can be of any type.&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; Grain of the query results dataset: &lt;/b&gt; Dimension 1 individuals. There is one row per dimension 1 individual in the query results. &lt;br/&gt;&lt;!-- note --&gt;&amp;nbsp;&lt;img src=&quot;res/s_blafp/meters/icon/sm/Error.gif&quot;&gt;&lt;i&gt;&lt;font color=#996600&gt;&lt;b&gt;&amp;nbsp;! Note :&lt;/b&gt; The validity of the calculated results of Answers in the report depends on the appropriate level of grain maintained in the query results, for example, not adding additional dimensions without updating the aggregations, and maintaining the appropriate aggregations clauses (&#39;by&#39; clauses) in each formula.&lt;/font&gt;&lt;/i&gt;&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt; The report also leverages numerous other columns in its &lt;b&gt;&quot;is prompted&quot;&lt;/b&gt; filters statements. These specific filter statements columns are only necessary when using page filter values or when a report is set as a target for a navigation. The report still works, without being filtered, even if the&quot;is prompted&quot; filter statements are deleted.&lt;!-- Useful: --&gt;&lt;br/&gt;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/picker/icheck.gif&quot;&gt;&lt;i&gt;&lt;font color=#0000ff&gt;&lt;b&gt;&amp;nbsp;! Useful :&lt;/b&gt; Deleting all the &lt;b&gt;&quot;is prompted&quot;&lt;/b&gt; filters statements from the report does not break the report, it only prevents it from being filtered.&lt;/font&gt;&lt;/i&gt;&lt;!-- ==== 3.2 Filters ==========--&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/common/opfilter.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.2 Specific Filters :&lt;/u&gt; &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;The report does not have any specific filters besides &lt;b&gt;is prompted&lt;/b&gt; filters mentioned above.</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat/>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!33" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12393384_227">
+					<saw:text>&lt;!-- ==== 3.3 Presentation Variables ==========--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/common/oprename.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.3 Presentation Variables :&lt;/u&gt; &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;Presentation variables in the report add user interaction at the dashboard page level. A user can select values for metrics column names or other objects directly in the dashboard page prompt. It updates dynamically in the report design. There is no need for opening Answers and saving a new version of the report.&lt;br/&gt;This report&#39;s design includes the following Presentation Variables :&lt;br/&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; {Met01} and {Met02}: &lt;/b&gt;These variables hold the column names of the two metric columns to be used.&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; {Dim01}: &lt;/b&gt;Holds the column name of the dimension column to be used.&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&lt;img src=&quot;res/s_blafp/meters/icon/sm/Error.gif&quot;&gt;&lt;i&gt;&lt;font color=#996600&gt;&lt;b&gt;&amp;nbsp;! Note :&lt;/b&gt; Prompt objects defining each of the Presentation Variables used in the report are required on the dashboard page where report is posted. If not present, default values for Presentation Variables are used as defined in Answers columns.&lt;/font&gt;&lt;/i&gt;&lt;!-- Useful: --&gt;&lt;br/&gt;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/picker/icheck.gif&quot;&gt;&lt;i&gt;&lt;font color=#0000ff&gt;&lt;b&gt;&amp;nbsp;! Useful: &lt;/b&gt;Presentation variables can be removed from the report design and replaced by fixed columns. See Home Page Help specific paragraph for help on how to do this.&lt;/font&gt;&lt;/i&gt;</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat/>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!34" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12393384_228">
+					<saw:text>&lt;!-- ==== 3.4 Prompts ======--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/common/opformula.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.4 Top Page Prompts and Page Filter Prompts :&lt;/u&gt; &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;This report leverages the following prompt objects that are needed at the dashboard page level :&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; &#39;Divide Metric Value by&#39;&lt;/b&gt; top page prompt: Defines the divider value stored into Presentation Variable {Denominator}.&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; &#39;Select Metric&#39;&lt;/b&gt; top page prompt: Defines the column name stored into Presentation Variable {Met01}.&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; &#39;Page Filter Prompts&#39;&lt;/b&gt; at the bottom of the page: Allows filtering the report scope for selected attributes.&lt;br/&gt; You can edit this prompt block to change or update the attributes. Validate that any new attributes is present as an is prompted filter in the reports.&lt;!-- Useful: --&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/picker/icheck.gif&quot;&gt;&lt;i&gt;&lt;font color=#0000ff&gt;&lt;b&gt;&amp;nbsp;! Useful :&lt;/b&gt; For more information on customizing choices or defaults in Top Page Prompts, see item How can you change choices in drop downs at the top of each dashboard page ? in Home Page Help. &lt;/font&gt;&lt;/i&gt;</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat/>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!35" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12393384_229">
+					<saw:text>&lt;!-- ==== 3.5 Answers Calcs ======--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/common/opformula.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.5 Answers Calculations :&lt;/u&gt; &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;This report leverages multiple aggregations and calculations designed directly in Answers. Most of the Answers based calculations in the report have a header name in Answers of: &lt;b&gt;&quot;Answers Calc&quot;&lt;/b&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; Quadrant&lt;/b&gt;&lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;case &lt;br/&gt;&amp;nbsp;&amp;nbsp;when Metric 2 &lt; avg(Metric 2) and Metric 1&gt;= avg (Metric 1) then &#39;3-Top Metric-1&#39; &lt;br/&gt;&amp;nbsp;&amp;nbsp;when Metric 2 &gt;= avg (Metric 2) and Metric 1&gt;= avg (Metric 1) then &#39;1-Above all Avg&#39; &lt;br/&gt;&amp;nbsp;&amp;nbsp;when Metric 2 &lt; avg (Metric 2) and Metric 1 &lt; avg (Metric 1) then &#39;4-Below all Avgs&#39; &lt;br/&gt;&amp;nbsp;&amp;nbsp;else &#39;2-Top Metric-2&#39; &lt;br/&gt;&amp;nbsp;&amp;nbsp;end&lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Default&lt;br/&gt;- Description: Determines which out of the four quadrants the record belong to by comparing the value of Metric 1 &amp; 2 against their respective population averages.&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; Metric 1 Delta to Avg&lt;/b&gt; &lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Metric 1 - avg(Metric 1) &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Sum&lt;br/&gt;- Description: Computes the difference between Metric 1 and average value of Metric 1 for the selected population.&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; Metric 1 Idx to Avg&lt;/b&gt; &lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; cast(Metric 1 as double)/avg(Metric 1)*100 &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Average&lt;br/&gt;- Description: Computes Metric 1 Index as value of Metric 1 divided by its average value.&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; Metric 2 Delta to Avg&lt;/b&gt; &lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; Metric 2 - avg(Metric 2) &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: Sum&lt;br/&gt;- Description: Computes the difference between Metric 2 and average value of Metric 2 for the selected population.&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; Metric 2 Idx to Avg&lt;/b&gt; &lt;br/&gt;- Basic formula structure: &lt;font color=darkblue&gt; cast(Metric 2 as double)/avg(Metric 2)*100 &lt;/font&gt;&lt;br/&gt;- Answers Aggregation rule: &lt;b&gt;Average&lt;/b&gt;&lt;br/&gt;- Description: Computes Metric 2 Index as value of Metric 2 divided by its average value.</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat/>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!36" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12393384_230">
+					<saw:text>&lt;!-- ==== 3.6 Limitations ====--&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/b_mozilla_4/blocked.gif&quot;&gt;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/ibots/file_delete.gif&quot;&gt;&amp;nbsp;&lt;font color=#666699&gt;&lt;b&gt;&lt;u&gt;&amp;nbsp;3.6 Limitations: &lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;img src=&quot;res/sk_blafp/treeview/dot.gif&quot;&gt;&lt;b&gt; Answers forced aggregation rules for Metrics used in this report: &lt;/b&gt;&lt;br/&gt; Some columns in this report may have aggregation rules set to a value other than Default (see details of columns in item 3.5 above), or have calculations that include a formula forcing aggregation of the column data.&lt;br&gt; - overriding these default aggregation rules with different values may prevent the report to render correct results.&lt;br&gt;- In most cases, generic reports support use of any type of metric, as they fully leverage the RPD natural aggregation set for any metric. For example, whether the metric selected for the Presentation Variable naturally aggregates with a sum rule (like revenue), an average rule (like DSO ratio) or a period end aggregation (like headcount), or anything else, the report properly leverages that rule. &lt;br&gt;- In some cases, the calculations required by the report make it necessary to force a fixed aggregation within the column definition. These reports may not leverage natural aggregation of any metric, but expect to be run only with a metric of proper type (aggregation) in order to see correct results. Reports leveraging some specific fixed aggregations are: Statistical Distribution, Comparative Distribution, Eighty Twenty, Deciling Comparative, Value Based Tiering, Proportional TopNs,Toppers Heatmap, and Waterfall. A choice of metrics for these reports is restricted to only sum aggregative reports compared to other reports&lt;br&gt;To adapt fixed aggregation reports for using other metric types, edit the report in Answers and update specific columns or formulas in the report to a different aggregation rule than the one specified.&lt;br&gt;&lt;br/&gt;&amp;nbsp;</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat/>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!41" autoPreview="true">
+			<saw:staticText>
+				<saw:caption fmt="html" oldID="kcap12851338_1692">
+					<saw:text>&lt;!-- ==== 4. Leverage and Deploy ==--&gt;&lt;br/&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;font color=#000080 size=2&gt;&lt;b&gt;&amp;nbsp;4. Leverage and Deploy :&lt;/b&gt;&lt;/font&gt;&lt;ol start=&quot;1&quot;&gt;&lt;p&gt;&lt;!--=== 1 ===--&gt;&lt;li style=&quot;color: #666699; font-size:8pt; font-weight:bold; font-style: italic&quot;&gt;How do you export, copy, or recreate a Samples report into a different environment?&lt;/li&gt;&lt;hr style=&quot;color: #666699; width: 100%; height: 1px;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight:normal; font-style:normal&quot;&gt;Samples reports can be used to familiarize a user with functionality available in Answers. For example, Samples reports can help users understand what can be done within Answers and Dashboards without requiring any RPD work. At the same time, many of the answers aggregations used in Sample Sales could instead be maintained in RPD metadata directly, to simplify reports design. &lt;br/&gt;Sample Sales can also be leveraged as template reports to deploy and copy within different environments,&lt;u&gt; using different models, Subject Areas, and different objects.&lt;/u&gt;:&lt;ul&gt;&lt;li&gt; An option to deploy this to another environmentis to manually edit every column of a report to clone, and replace each Presentation Variable or Presentation Variable default value to another object, from another environment. The name of the Subject Area must be updated as well from Advanced Tab in Answers.&lt;/li&gt;&lt;li&gt;To assist with this process, a set of Samples reports with no column Presentation Variables has been saved for this application. The reports use fixed metrics and dimensions columns in their answers definition, their syntax is simpler to understand and they are more appropriate for edits. They only exist for one Subject Area in the application and are saved under a folder &#39;Fixed Columns Reports&#39;, within the &#39;Reports&#39; folder. These reports are not exposed in any dashboard.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;&lt;!--=== 2 ===--&gt;&lt;li style=&quot;color: #666699; font-size:8pt; font-weight:bold; font-style: italic&quot;&gt;How can you edit Answers columns and set different default objects on Presentation Variables ?&lt;/li&gt;&lt;hr style=&quot;color: #666699; width: 100%; height: 1px;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight:normal; font-style:normal&quot;&gt;Samples reports are made flexible by the extensive use of Presentation Variables in Answers columns. These Presentation Variables get set when the user selects the prompt values in the dashboard page and select &lt;b&gt;Go&lt;/b&gt;. The syntax of Presentation Variables in Answers column is the following: &quot;{variable name}{default value to use if variable value not defined anywhere else}&quot;. When viewing the report within Answers directly, Presentation Variables assume their default values.To update default values for a variable, update the default field with the correct value. The update must occur every where the variable is used in the report, for example all Answers columns and all content filter formulas must be thoroughly checked. Single same variable in a report must have a single unique default value.Another option is to ease this update is to copy the XML definition of the report from the Advanced tab, and replace the string sequence of the existing default value with a new one.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;!--=== 3 ===--&gt;&lt;li style=&quot;color: #666699; font-size:8pt; font-weight:bold; font-style: italic&quot;&gt;How do you remove Presentation Variables from report definition ?&lt;/li&gt;&lt;hr style=&quot;color: #666699; width: 100%; height: 1px;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight:normal; font-style:normal&quot;&gt;Presentation variables syntax can be removed from report definition, for either a single variable or for all. To remove a variable, open the report in Answers and replace the syntax: &quot;{variable name}{default value}&quot; by the simple presentation column syntax: &quot;TableName&quot;.&quot;ColumnName&quot;. The replace must occur every where the variable is used in the report, for example, all Answers columns and all content filter formulas must be thoroughly checked. An easier option is to copy the XML definition of the report from the Advanced tab, and replace the string sequence of the existing variable.&lt;br/&gt;Also, see next question in this document for accessing a set of reports that is not leveraging any Presentation Variables for its Answers columns.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;!--=== 4 ===--&gt;&lt;li style=&quot;color: #666699; font-size:8pt; font-weight:bold; font-style: italic&quot;&gt; Is there a set of Samples reports that does NOT use Presentation Variables for its Answers columns ?&lt;/li&gt;&lt;hr style=&quot;color: #666699; width: 100%; height: 1px;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight:normal; font-style:normal&quot;&gt;For convenience reasons, a set of Samples report with no Presentation Variables for columns has been saved. These reports use fixed metrics and dimensions columns in Answers, and only leverage Presentation Variables for objects other than metrics and dimension names. Their syntax is simpler to read and they are more appropriate for edits and adapt tasks. They only exist for one Subject Area in the application and are saved under a folder &#39;Fixed Columns Reports&#39;, within the &#39;Reports&#39; folder. These reports are not exposed in any dashboard.&lt;/ul&gt;&lt;/span&gt;&lt;/p&gt;&lt;/ol&gt;</saw:text>
+				</saw:caption>
+			</saw:staticText>
+		</saw:view>
+	</saw:views></saw:report>

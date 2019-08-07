@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c50d7385008fed38c">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c485c9c7af0aa2ea1">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim02}{&quot;Customers&quot;.&quot;C4  Customer Segment&quot;}</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Generic Columns</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Answers Calc</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cbbbdc1d63bbb297f">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c326c4a7823cc89e1">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time Series&quot;.&quot;122  Rev Var to Period Ago&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:comparison" op="between">
+            <sawx:expr xsi:type="sawx:sqlExpression">cast(&quot;Time&quot;.&quot;T02 Per Name Month&quot; as varchar(50))</sawx:expr>
+            <sawx:expr xsi:type="sawx:eval" default="2010 / 03">Start_Val</sawx:expr>
+            <sawx:expr xsi:type="sawx:eval" default="2010 / 04">End_Val</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="pivotTableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+            <saw:displayFormat/></saw:logoFormat><saw:createdTime>
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>				
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c50d7385008fed38c"/>
+                  <saw:edgeLayer type="column" columnID="cbbbdc1d63bbb297f"/>
+                  <saw:edgeLayer type="column" columnID="c326c4a7823cc89e1"/>
+                  <saw:edgeLayer type="column" columnID="c91b5f5da4581fd4e"/>
+                  <saw:edgeLayer type="column" columnID="c485c9c7af0aa2ea1"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="row" showColumnHeader="false">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="t1" grandTotalPosition="after"/></saw:displayGrandTotals>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c50d7385008fed38c"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="t2" grandTotalPosition="after"/></saw:displayGrandTotals>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c485c9c7af0aa2ea1"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c326c4a7823cc89e1" aggRule="sum"/>
+            <saw:measure columnID="cbbbdc1d63bbb297f"/></saw:measuresList></saw:view></saw:views></saw:report>

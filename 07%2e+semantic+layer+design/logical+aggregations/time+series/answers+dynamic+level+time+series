@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:hierarchicalColumn" columnID="c0c6fcf6843778c91" hierarchyID="Time Hierarchy" tableName="&quot;Time&quot;" dimensionID="H0 Time">
+        <saw:hierarchyLevels>
+          <saw:hierarchyLevel levelID="Total Time"/>
+          <saw:hierarchyLevel levelID="Year"/>
+          <saw:hierarchyLevel levelID="Quarter"/>
+          <saw:hierarchyLevel levelID="Month"/>
+          <saw:hierarchyLevel levelID="Week"/>
+          <saw:hierarchyLevel levelID="Day"/>
+        </saw:hierarchyLevels>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c7260a546432ddd31">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">cast(&quot;Base Facts&quot;.&quot;4- Paid Amount&quot; as double)/&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="true" negativeType="minus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2034">
+            <saw:text>Answers Calculation</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_2035">
+            <saw:text>Collect to Bill Ratio</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c6e981a6d0fd0fd50">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">cast(&quot;Base Facts&quot;.&quot;4- Paid Amount&quot; as double)/&quot;Base Facts&quot;.&quot;1- Revenue&quot; - ago(cast(&quot;Base Facts&quot;.&quot;4- Paid Amount&quot; as double)/&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1)</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:number" minDigits="3" maxDigits="3" commas="true" negativeType="redMinus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2036">
+            <saw:text>Answers Calculation</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2037">
+            <saw:text>Var to Period Ago</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c753ff63be0e624e5">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">100*((cast(&quot;Base Facts&quot;.&quot;4- Paid Amount&quot; as double)/&quot;Base Facts&quot;.&quot;1- Revenue&quot;) / (ago(cast(&quot;Base Facts&quot;.&quot;4- Paid Amount&quot; as double)/&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1))-1)</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:percent" minDigits="0" maxDigits="0" commas="true" negativeType="redMinus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2038">
+            <saw:text>Answers Calculation</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2039">
+            <saw:text>Pct Var to Period Ago</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c2b5f712f0a3249a7">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">ago(cast(&quot;Base Facts&quot;.&quot;4- Paid Amount&quot; as double)/&quot;Base Facts&quot;.&quot;1- Revenue&quot;,1)</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="true" negativeType="minus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2040">
+            <saw:text>Answers Calculation</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_2041">
+            <saw:text>Period Ago Collect to Bill Ratio</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="pivotTableView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat></saw:view>
+    <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+      <saw:edges>
+        
+        
+        
+        
+      <saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers/></saw:edge><saw:edge axis="section">
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        <saw:edgeLayers/></saw:edge><saw:edge axis="row" showColumnHeader="true">
+          <saw:displayGrandTotals>
+            <saw:displayGrandTotal id="t1" grandTotalPosition="after"/>
+          </saw:displayGrandTotals>
+          <saw:edgeLayers>
+            
+          <saw:edgeLayer type="column" columnID="c0c6fcf6843778c91">
+              <saw:drillState>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="c0c6fcf6843778c91"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Total Time"/>
+                          <saw:members xsi:type="saw:integerMembers">
+                            <saw:value>1</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="c0c6fcf6843778c91"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="c0c6fcf6843778c91" groupID="0"/>
+                  </saw:selectionGroups>
+                </saw:drillStep>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="c0c6fcf6843778c91"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Year"/>
+                          <saw:members xsi:type="saw:stringMembers">
+                            <saw:value>2009</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="c0c6fcf6843778c91"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="c0c6fcf6843778c91" groupID="0"/>
+                  </saw:selectionGroups>
+                  <saw:drillParents>
+                    <saw:drillParent columnID="c0c6fcf6843778c91" levelID="Total Time">
+                      <saw:members xsi:type="saw:integerMembers">
+                        <saw:value>1</saw:value>
+                      </saw:members>
+                    </saw:drillParent>
+                  </saw:drillParents>
+                </saw:drillStep>
+                <saw:drillStep drillType="down">
+                  <saw:QDR>
+                    <saw:staticMemberGroup>
+                      <saw:groupType>
+                        <sawx:columnRefExpr columnID="c0c6fcf6843778c91"/>
+                      </saw:groupType>
+                      <saw:hierarchyMembers>
+                        <saw:hierarchyLevelMembers>
+                          <saw:hierarchyLevel levelID="Quarter"/>
+                          <saw:members xsi:type="saw:stringMembers">
+                            <saw:value>2009 Q2</saw:value>
+                          </saw:members>
+                        </saw:hierarchyLevelMembers>
+                      </saw:hierarchyMembers>
+                    </saw:staticMemberGroup>
+                    <saw:target>
+                      <sawx:columnRefExpr columnID="c0c6fcf6843778c91"/>
+                    </saw:target>
+                  </saw:QDR>
+                  <saw:selectionGroups>
+                    <saw:selectionGroup columnID="c0c6fcf6843778c91" groupID="0"/>
+                  </saw:selectionGroups>
+                  <saw:drillParents>
+                    <saw:drillParent columnID="c0c6fcf6843778c91" levelID="Year">
+                      <saw:members xsi:type="saw:stringMembers">
+                        <saw:value>2009</saw:value>
+                      </saw:members>
+                    </saw:drillParent>
+                  </saw:drillParents>
+                </saw:drillStep>
+              </saw:drillState>
+            </saw:edgeLayer></saw:edgeLayers>
+        </saw:edge><saw:edge axis="column">
+          <saw:edgeLayers>
+            
+          <saw:edgeLayer type="measure"/></saw:edgeLayers>
+        </saw:edge></saw:edges>
+      <saw:measuresList>
+        <saw:measure columnID="c7260a546432ddd31"/>
+        <saw:measure columnID="c2b5f712f0a3249a7"/>
+        <saw:measure columnID="c6e981a6d0fd0fd50"/>
+        <saw:measure columnID="c753ff63be0e624e5"/>
+      </saw:measuresList>
+      <saw:sectionContent>
+        <saw:displayFormat>
+          <saw:formatSpec/>
+        </saw:displayFormat>
+      </saw:sectionContent>
+    </saw:view>
+  </saw:views>
+</saw:report>

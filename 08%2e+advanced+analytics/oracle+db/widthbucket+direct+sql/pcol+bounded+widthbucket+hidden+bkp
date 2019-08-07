@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:view xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="saw:globalFilterPrompt" name="">
+	<saw:prompts scope="dashboard" subjectArea="&quot;A - Sample Sales&quot;">
+		<saw:promptStep labelPosition="above" autoApplyPrompt="true" showResetButton="false" setWidthToAllPrompts="true">
+			<saw:individualPrompts>
+				<saw:prompt xsi:type="saw:columnFilterPrompt" columnID="c2" subjectArea="&quot;Social Media&quot;" required="false" placedOnNewColumn="true">
+					<saw:formula>
+						<sawx:expr xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xsi:type="sawx:sqlExpression">&#39;Column&#39;</sawx:expr>
+					</saw:formula>
+					<saw:promptOperator op="in"/>
+					<saw:promptUIControl xsi:type="saw:editBox">
+						<saw:customWidth width="120" using="custompixels"/>
+					</saw:promptUIControl>
+					<saw:label>
+						<saw:caption>
+							<saw:text>Column</saw:text>
+						</saw:caption>
+					</saw:label>
+					<saw:promptDefaultValues type="sql" usingCodeValue="false">
+						<saw:promptDefaultValue>
+select 
+case 
+when &#39;@{source}{sd}&#39;=&#39;Flight Code Numbers&#39; then &#39;FLIGHTNUM&#39; 
+when &#39;@{source}{sd}&#39;=&#39;Air Routes&#39;  then  &#39;ORIGIN||DEST&#39;
+when &#39;@{source}{sd}&#39;=&#39;Plane Tail #s&#39;  then  &#39;TAILNUM&#39;
+end
+from &quot;A - Sample Sales&quot;</saw:promptDefaultValue></saw:promptDefaultValues>
+					<saw:constrainPrompt type="none"/>
+					<saw:setPromptVariables>
+						<saw:setPromptVariable location="value" type="presentationVariable" variableFormula="ix"/>
+					</saw:setPromptVariables>
+					<saw:promptSource xsi:type="saw:allChoices"/>
+				</saw:prompt>
+				<saw:prompt xsi:type="saw:variablePrompt" columnID="c3" required="false" subjectArea="&quot;A - Sample Sales&quot;"><saw:promptUIControl xsi:type="saw:editBox"><saw:customWidth width="120" using="custompixels"/></saw:promptUIControl><saw:promptSource dataType="default" xsi:type="saw:choiceList" useCaptionOnly="true"><saw:promptChoices/></saw:promptSource><saw:setPromptVariables><saw:setPromptVariable location="value" type="presentationVariable" variableFormula="Filter"/></saw:setPromptVariables><saw:promptOperator/><saw:constrainPrompt type="none"/><saw:label><saw:caption><saw:text>Filter</saw:text></saw:caption></saw:label><saw:promptDefaultValues type="sql" usingCodeValue="false"><saw:promptDefaultValue>select 
+case 
+when &#39;@{Filters0}&#39; is not null then &#39;WHERE T1.ORIGIN_STATE = @{Filters0}&#39; else null
+end
+from &quot;A - Sample Sales&quot;</saw:promptDefaultValue></saw:promptDefaultValues></saw:prompt></saw:individualPrompts>
+			<saw:customWidth width="120" using="custompixels"/>
+			<saw:title/>
+			<saw:displayFormat>
+				<saw:formatSpec fontStyle="italic" fontSize="10" wrapText="true" fontColor="#666666"/>
+			</saw:displayFormat>
+		</saw:promptStep>
+	</saw:prompts>
+</saw:view>

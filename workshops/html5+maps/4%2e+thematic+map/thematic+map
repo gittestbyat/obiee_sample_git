@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c2cd0ee77d7230f72">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R54  State Code&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c218b64ec84f9e890">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:logical" op="and">
+            <sawx:expr xsi:type="sawx:comparison" op="equal">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R52  Country Name&quot;</sawx:expr>
+               <sawx:expr xsi:type="xsd:string">United States</sawx:expr></sawx:expr>
+            
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P3  LOB&quot;</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c2cd0ee77d7230f72"/>
+                  <saw:edgeLayer type="column" columnID="c218b64ec84f9e890"/>
+                  <saw:edgeLayer type="column" columnID="c057eda6c4a1670dc"/>
+                  <saw:edgeLayer type="column" columnID="c2065609d3a88ecd8"/>
+                  <saw:edgeLayer type="column" columnID="c3503585477194215"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:narrativeView" name="narrativeView!1">
+         <saw:prefix>
+            <saw:caption fmt="html">
+               <saw:text>&lt;script&gt;
+var bidata={</saw:text></saw:caption></saw:prefix>
+         <saw:narrative>
+            <saw:caption fmt="html">
+               <saw:text>&quot;@{c2cd0ee77d7230f72}&quot;:@{c218b64ec84f9e890}</saw:text></saw:caption></saw:narrative>
+         <saw:rowSep>
+            <saw:caption fmt="html">
+               <saw:text>,</saw:text></saw:caption></saw:rowSep>
+         <saw:postfix>
+            <saw:caption fmt="html">
+               <saw:text>};
+renderMap();  
+&lt;/script&gt; </saw:text></saw:caption></saw:postfix></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;DIV  id=map1 style=&quot;width:900px;height:600px;padding:5px;border:1px solid #e2e2e2;&quot;&gt;&lt;/DIV&gt;
+
+&lt;script src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var territoryArray;
+var baseURL = &quot;http://&quot; + document.location.host + &quot;/mapviewer&quot;;
+var center = new OM.geometry.Point(-96, 38, 8307);
+var states, resRowCnt=0, stateFeatures = [];
+
+function setupStyles(layer) {
+	var colors = [];
+	var fillColors = [&#39;#B2F6A4&#39;,&#39;#82F06C&#39;,&#39;#58EB3B&#39;,&#39;#35D416&#39;,&#39;#289F11&#39;,&#39;#207F0D&#39;,&#39;#175D09&#39;];
+
+	for (var i = 0; i &lt; fillColors.length; i++) {
+		colors[i] = new OM.style.Color({
+				fill : fillColors[i],
+				fillOpacity : 0.8,
+				stroke : &quot;#cc9999&quot;,
+				strokeThickness : 1,
+				strokeOpacity : 0.5
+			});
+	}
+
+	colors[fillColors.length] = new OM.style.Color({
+			fill : &quot;#A5A5A5&quot;,
+			fillOpacity : 0.1,
+			stroke : &quot;#e2e2e2&quot;,
+			strokeThickness : 1,
+			strokeOpacity : 0.5
+		});
+
+	var colorBucketStyle = new OM.style.BucketStyle({
+			styles : colors,
+			numClasses : fillColors.length,
+			classification : &#39;logarithmic&#39;, 
+			defaultStyle : colors[fillColors.length]
+		});
+
+	layer.setRenderingStyle(colorBucketStyle, [&quot;REVENUE&quot;]);
+}
+
+function toUSD(number) {
+    var number = number.toString(), 
+    dollars = number.split(&#39;.&#39;)[0], 
+    cents = (number.split(&#39;.&#39;)[1] || &#39;&#39;) +&#39;00&#39;;
+    dollars = dollars.split(&#39;&#39;).reverse().join(&#39;&#39;)
+        .replace(/(\d{3}(?!$))/g, &#39;$1,&#39;)
+        .split(&#39;&#39;).reverse().join(&#39;&#39;);
+    return &#39;$&#39; + dollars;  /* + &#39;.&#39; + cents.slice(0, 2);  */
+}
+
+function renderData(){
+	var features = states.getAllFeatures();
+	for (var i = 0; i &lt; features.length; i++) {
+		s = features[i];
+		stname=s.getAttributeValue(&quot;STATE_NAME&quot;);
+		stcode=s.getAttributeValue(&quot;STATE_ABBRV&quot;);
+		var f_attr;
+		if (bidata[stcode]){
+			revenue=bidata[stcode];
+			f_attr = {&quot;_LABEL_&quot;: stname + &quot;: &quot; + toUSD(revenue), &quot;REVENUE&quot;:revenue};
+		} else {
+			f_attr = {&quot;_LABEL_&quot;:stname};
+		}				
+		features[i].attributes=f_attr;
+	}
+	setupStyles(states);
+}
+
+function renderMap(){
+    var uni= new OM.universe.Universe(
+	{
+		srid : 32775,
+		bounds : new OM.geometry.Rectangle(-3280000, 170000, 2300000, 3200000, 32775),
+		numberOfZoomLevels: 16
+	});
+    map = new OM.Map(
+    	document.getElementById(&#39;map1&#39;),
+    	{
+          mapviewerURL: baseURL,
+          disableOverviewMap:true,
+    	  universe:uni
+    	}) ;
+        
+	var navigationPanelBar = new OM.control.NavigationPanelBar();
+	map.addMapDecoration(navigationPanelBar);
+		  
+	states = new OM.layer.VectorLayer(&quot;stateslayer&quot;, 
+			{
+			  def:
+			  {
+			  type:OM.layer.VectorLayer.TYPE_JDBC, 
+			  dataSource:&quot;OBIEE_NAVTEQ_Sample&quot;, 
+			  sql:&quot;select geometry,state_name,state_abbrv from obiee_state where iso_country_code=&#39;USA&#39;&quot;, 
+              labelColumn:&quot;state_name&quot;,
+			  geometryColumn: &quot;geometry&quot;,
+			  url: baseURL,
+			 }
+		  });
+	var basecol = new OM.style.Color({
+				fill : &quot;#7FAAFF&quot;,
+				fillOpacity : 0.7,
+				stroke : &quot;#ffffff&quot;,
+				strokeThickness : 2,
+				strokeOpacity : 1
+			});
+	
+	states.setRenderingStyle(basecol);
+	states.addListener(OM.event.LayerEvent.FEATURES_LOADED, renderData);
+	map.addLayer(states);
+	map.setMapCenter(center);
+	map.setMapZoomLevel(2);
+    var copyright = new OM.control.CopyRight({
+            anchorPosition:4,
+            textValue:&quot;©2014 Oracle. Map data ©2013 HERE&quot;,
+            fontSize:9,
+            fontFamily:&quot;Tahoma&quot;,
+            fontColor:&quot;black&quot;
+    });          
+    map.addMapDecoration(copyright);          
+
+	map.init();
+}
+
+&lt;/script&gt;
+
+</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

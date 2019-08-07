@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="0u5fdue8euut8l8u" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <sawd:dashboardColumn name="Column 0" duid="kl04vajk43qqon4s" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+      <saw:displayFormat>
+        <saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+        <sawd:HTML fmt="html" captionID="kcap12832459_1390">&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Strategy Map
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+      </sawd:htmlView>
+      <sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index/Main Index" layout="captionRight" duid="730rmpdau4u48g7l">
+        <sawd:linkCaption>
+          <saw:caption captionID="kcap12832459_1389">
+            <saw:text>Return to Main Index page</saw:text>
+          </saw:caption>
+        </sawd:linkCaption>
+        <sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+      </sawd:linkView>
+    </sawd:dashboardSection><sawd:dashboardSection name="Section 1" collapsible="false" duid="h1hh5l65f3phf9hm" showSectionTitle="false" layoutType="bestFit">
+      <saw:displayFormat>
+        <saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:strategyMapView name="Scorecard Strategy Map 0" width="100%" height="450px" scroll="no" duid="hen4b0racoih63re">
+        <saw:caption captionID="kcap12832459_1388">
+          <saw:text>High level Strategy Map</saw:text>
+        </saw:caption>
+        <sawd:scorecardViewRef type="catalog" path="/shared/02. Visualizations/Scorecards/Eden Inc. Scorecard/High level Strategy Map"/>
+        <sawd:dimensionPinnings>
+          <sawd:dimensionValue dimensionID="Customers.Cust Region Hier" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.Customers.Cust Region Hier" subjectArea="&quot;A - Sample Sales&quot;">
+            <sawd:member levelID="">
+              <sawd:value>[ALL]</sawd:value>
+            </sawd:member>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/# Orders</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Avg Order Size</sawd:kpiRef>
+          </sawd:dimensionValue>
+          <sawd:dimensionValue dimensionID="Customers.Cust Segments Hier" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.Customers.Cust Segments Hier" subjectArea="&quot;A - Sample Sales&quot;">
+            <sawd:member levelID="">
+              <sawd:value>[ALL]</sawd:value>
+            </sawd:member>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Billed Qty</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Collect to Bill Ratio</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Revenue KPI</sawd:kpiRef>
+          </sawd:dimensionValue>
+          <sawd:dimensionValue dimensionID="Offices.Offices Hierarchy" variableType="REQUEST" variableName="&quot;C - Sample Headcount&quot;.Offices.Offices Hierarchy" subjectArea="&quot;C - Sample Headcount&quot;">
+            <sawd:member levelID="">
+              <sawd:value>[ALL]</sawd:value>
+            </sawd:member>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/# Employees</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Attrition Rate</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Avg Revenue per FTE</sawd:kpiRef>
+          </sawd:dimensionValue>
+          <sawd:dimensionValue dimensionID="Products.Products Hierarchy" variableType="REQUEST" variableName="&quot;A - Sample Sales&quot;.Products.Products Hierarchy" subjectArea="&quot;A - Sample Sales&quot;">
+            <sawd:member levelID="">
+              <sawd:value>[ALL]</sawd:value>
+            </sawd:member>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/# Orders</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/% Early Shipped</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Avg Order Size</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Billed Qty</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Fulfillment Days</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Revenue KPI</sawd:kpiRef>
+          </sawd:dimensionValue>
+          <sawd:dimensionValue dimensionID="Time.Time Hierarchy" variableType="REQUEST" variableName="&quot;C - Sample Headcount&quot;.Time.Time Hierarchy" subjectArea="&quot;C - Sample Headcount&quot;">
+            <sawd:member levelID="">
+              <sawd:value>[ALL]</sawd:value>
+            </sawd:member>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/# Employees</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Attrition Rate</sawd:kpiRef>
+            <sawd:kpiRef>/shared/02. Visualizations/Scorecards/KPIs - ( Eden Inc. )/Avg Revenue per FTE</sawd:kpiRef>
+          </sawd:dimensionValue>
+        </sawd:dimensionPinnings>
+      </sawd:strategyMapView>
+    </sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

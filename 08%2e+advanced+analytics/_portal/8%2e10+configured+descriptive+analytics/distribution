@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="eubh2q50am5qlnif" personalSelections="false">
+	<saw:pageProps orientation="portrait" printRows="visible" disableMargins="false">
+		<saw:pageHeader show="false"/>
+		<saw:pageFooter showOnDashboard="true" show="true">
+			<saw:zone position="top">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" borderColor="#9ABFDC" borderPosition="none" borderStyle="thick" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="left">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="left" width="33%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" oldID="kcap12832459_207">
+					<saw:text>Samples Sales</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="center">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" width="34%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_208">
+					<saw:text>Page : @{savedName}</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="right">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="right" width="33%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_209">
+					<saw:text>@{pageNumber}</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="bottom">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" fontSize="0" fontStyle="regular" height="0"/>
+				</saw:displayFormat>
+			</saw:zone>
+		</saw:pageFooter>
+	<saw:bipLayoutsList><saw:bipLayout>Printable HTML</saw:bipLayout><saw:bipLayout>Printable PDF</saw:bipLayout></saw:bipLayoutsList></saw:pageProps>
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_216">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Distribution
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 2" duid="fvsjgim6kmuat288"><sawd:HTML fmt="html">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; </sawd:HTML></sawd:htmlView><sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_215">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		<sawd:actionLinkMenu name="Action Link Menu 1" duid="klqdbm04e67s3ik0"><sawd:menuText><saw:caption><saw:text>See Also Oracle Database Descriptive Stats Examples :</saw:text></saw:caption></sawd:menuText><sawd:actionLinkView name="Action Link 0" duid="at0dibt3hgln8pn7"><sawd:actionLink briefBookLink="false" target="_self" sDisplayName="Column Statistics"><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.20 Oracle Database Analytics/Column Statistics</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true"><saw:functionName>__navigateToBIContent__</saw:functionName><saw:scriptLanguage>JScript</saw:scriptLanguage><saw:scriptPath/></saw:implementation><saw:clientImplementation><saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action><saw:caption><saw:text>Column Statistics</saw:text></saw:caption></sawd:actionLink></sawd:actionLinkView><sawd:actionLinkView name="Action Link 1" duid="mdk402kqiq54dnfb"><sawd:actionLink briefBookLink="false" target="_self" sDisplayName="Width Bucket"><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Width Bucket</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true"><saw:functionName>__navigateToBIContent__</saw:functionName><saw:scriptLanguage>JScript</saw:scriptLanguage><saw:scriptPath/></saw:implementation><saw:clientImplementation><saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action><saw:caption><saw:text>Width Bucket</saw:text></saw:caption></sawd:actionLink></sawd:actionLinkView><sawd:actionLinkView name="Action Link 2" duid="uqnu49plkuma8bqv"><sawd:actionLink briefBookLink="false" target="_self" sDisplayName="Large Data"><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics/Large Data</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true"><saw:functionName>__navigateToBIContent__</saw:functionName><saw:scriptLanguage>JScript</saw:scriptLanguage><saw:scriptPath/></saw:implementation><saw:clientImplementation><saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action><saw:caption><saw:text>Large Data Distribution</saw:text></saw:caption></sawd:actionLink></sawd:actionLinkView><sawd:actionLinkView name="Action Link 3" duid="jtvk5efip05ui2uo"><sawd:actionLink briefBookLink="false" target="_self" sDisplayName="Pattern Detection (12c)"><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.20 Oracle Database Analytics/Pattern Detection (12c)</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true"><saw:functionName>__navigateToBIContent__</saw:functionName><saw:scriptLanguage>JScript</saw:scriptLanguage><saw:scriptPath/></saw:implementation><saw:clientImplementation><saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action><saw:caption><saw:text>Pattern Detection (12c)</saw:text></saw:caption></sawd:actionLink></sawd:actionLinkView><sawd:actionLinkView name="Action Link 4" duid="8dl5q1m9diit2kil"><sawd:actionLink briefBookLink="false" target="_self" sDisplayName="Regression"><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/08. Advanced Analytics/_portal/8.30 Oracle Data Mining/Regression</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true"><saw:functionName>__navigateToBIContent__</saw:functionName><saw:scriptLanguage>JScript</saw:scriptLanguage><saw:scriptPath/></saw:implementation><saw:clientImplementation><saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action><saw:caption><saw:text>Regression</saw:text></saw:caption></sawd:actionLink></sawd:actionLinkView></sawd:actionLinkMenu></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" break="column" frozen="false" canFreeze="false" layoutType="minimumSize"><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle" width="150"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" showHeading="false" duid="dudpiidqt2i0p1f4" collapsible="false" showSectionTitle="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_204">
+				<saw:text>Prompts</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" vAlign="middle" wrapText="true"/>
+			</saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/08. Advanced Analytics/AdHoc Calculations/Distribution/Distr/PCol - Distribution A" duid="2dpq73mnlqq7odgk"><saw:caption><saw:text>PCol - Distribution A</saw:text></saw:caption></sawd:globalFilterView>
+			</sawd:dashboardSection><sawd:dashboardSection name="Section 3" collapsible="false" showSectionTitle="true" showHeading="false" duid="gbjaon94okkfaegc" layoutType="bestFit"><saw:caption><saw:text>See Also :</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" vAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="5n6gcpvrueoufd8v"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=/shared/08. Advanced Analytics/_portal/8.10 Configured Descriptive Analytics&amp;Page=Width Bucket&quot;&gt;Width Bucket&lt;/a&gt;[br/]
+&lt;/font&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="4l6e8jbp5nhvichm" frozen="false" canFreeze="false" layoutType="minimumSize"><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderPosition="none" width="200"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 2" showHeading="false" duid="d0bh29v2b2nspfb4" collapsible="false" drillInline="true" showSectionTitle="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_205">
+				<saw:text>Reports</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 1" display="embed" showView="" duid="4u64sfi9lv6maks8"><saw:caption><saw:text>Distribution Report</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/AdHoc Calculations/Distribution/Distr/Distribution Report"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

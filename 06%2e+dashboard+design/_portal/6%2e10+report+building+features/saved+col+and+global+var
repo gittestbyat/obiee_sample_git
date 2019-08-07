@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="h4u0tjta94trk6i1"><sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection layoutType="specificSize" name="Section 0" duid="1sja6e6thn6hkgll" showSectionTitle="false" collapsible="false" horizontalLayout="true"><saw:displayFormat><saw:formatSpec backgroundColor="#F9F9F4" borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 3" duid="32n69gfv1mokb2cc"><sawd:HTML fmt="html">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;Saved Columns and Global Variables : Re-usable Calculations saved in Answers
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML></sawd:htmlView><sawd:linkView name="Link 2" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_415">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 2" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontSize="12"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 0" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt;This page shows a new capability called Global Variables that lets you save a metric definition as an object within the catalog. 
+This definition can be reused by other reports, other users, and in other objects in the catalog. 
+&lt;br&gt;
+To define a new Global variable, edit a column definition, click on Variable and choose Global. You can now either reuse an existing Global Variable definition or define a new one. 
+&lt;br&gt; The picture on the right shows a screenshot of this new feature.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" canFreeze="false" duid="ie4k1ctl578d9iec" frozen="false" layoutType="bestFit" break="column"><sawd:dashboardSection name="Section 4" duid="u8v8irh1rpjqvgtf" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" hAlign="left"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="v971juug3spgfv6d"><saw:caption><saw:text>Saved Columns and Global Variables</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/01. QuickStart/New Features/11.1.1.9.0/Saved Columns and Global Variables"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="pahsc2qbi7j997i0" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 1" collapsible="false" duid="769duphse4m5629q" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="8ugeetit802sluck"><sawd:HTML fmt="html">&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src=&quot;/analyticsRes/SampleApp/SampleAppPics/global_variables.png&quot;/&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

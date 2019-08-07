@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="06ppsc5rd4lksl1k">
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" layoutType="bestFit" canFreeze="true"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_479">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Level Based Metrics Aggregation&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_478">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_474">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_480">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This example is showing a few Level Based aggregations configured in the Sample Business model. Level based aggregation allow to keep metrics aggregated on specific dimension levels. For example, select some values in the dashboard prompt, and notice that regardless how you filter down the report, the metric &#39;# 165 Sum for All Dim but Time&#39; remains unchanged. This level based metric keeps showing the total aggregation level regardless of the data scope fetched by the query. Similarly, other metrics #160, #161, #162 show example of leveled metrics only on specific dimensions. Each will only be impacted by respective parts of the dashboard promptings.</sawd:HTML>
+			</sawd:htmlView>
+			
+			
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="pse5llip64dg33pf" break="column" layoutType="bestFit" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 2" duid="d90jp7inaevli4up" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:globalFilterView name="GFP 0" path="/shared/07. Semantic Layer Design/Logical Aggregations/Level Based/Level Base Prt" duid="4dia9lkdb2318djn" scope="dashboardPage" links="e"><saw:caption><saw:text>Level Base Prt</saw:text></saw:caption></sawd:globalFilterView><sawd:reportView name="Report 3" display="embed" showView="filtersView!1" links="" duid="hgs73q0teebuj9av" overrideParentLinks="true"><saw:caption><saw:text>Level Based Customers</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Logical Aggregations/Level Based/Level Based Customers"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" duid="cgqjrm5p934705qc" layoutType="bestFit" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 3" duid="uvtsfm2v3lur1n58" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" links="" duid="t9lln73e3guc7r3h" overrideParentLinks="true"><saw:caption><saw:text>Level Based Customers</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Logical Aggregations/Level Based/Level Based Customers"/></sawd:reportView><sawd:reportView name="Report 1" display="embed" showView="" links="" duid="7vtshhvi2u81h62g"><saw:caption><saw:text>Level Based Offices</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Logical Aggregations/Level Based/Level Based Offices"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 3" duid="v86fgono12b857qp" layoutType="bestFit" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 4" duid="i2d3aphri2n8earc" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 2" display="embed" showView="" links="" duid="1jtce6m50jl73n8q"><saw:caption><saw:text>Level Based Products</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Logical Aggregations/Level Based/Level Based Products"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

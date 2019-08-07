@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:view xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="saw:globalFilterPrompt" name="">
+  <saw:prompts scope="dashboard" subjectArea="&quot;A - Sample Sales&quot;">
+    <saw:promptStep labelPosition="above">
+      <saw:individualPrompts>
+        <saw:prompt xsi:type="saw:columnFilterPrompt" columnID="c0" subjectArea="&quot;A - Sample Sales&quot;" required="false">
+          <saw:formula>
+            <sawx:expr xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xsi:type="sawx:sqlExpression">&#39;Az&#39;</sawx:expr>
+          </saw:formula>
+          <saw:promptOperator op="in"/>
+          <saw:promptUIControl includeAllChoices="false" maxChoices="1" xsi:type="saw:radioButton"/>
+          <saw:label>
+            <saw:caption oldID="kcap12832459_2216">
+              <saw:text>Select Dimension (dots on the matrix)</saw:text>
+            </saw:caption>
+          </saw:label>
+          <saw:promptDefaultValues type="specificValue" usingCodeValue="false">
+            <saw:promptDefaultValue>&quot;D&quot;.&quot;Office&quot;</saw:promptDefaultValue>
+          </saw:promptDefaultValues>
+          <saw:constrainPrompt type="none"/>
+          <saw:setPromptVariables>
+            <saw:setPromptVariable location="value" type="presentationVariable" variableFormula="Dim01"/>
+          </saw:setPromptVariables>
+          <saw:promptSource xsi:type="saw:specificChoices">
+            <saw:promptChoices>
+              <saw:promptChoice>
+                <saw:value>&quot;D&quot;.&quot;Office&quot;</saw:value>
+              </saw:promptChoice>
+              <saw:promptChoice>
+                <saw:value>&quot;D&quot;.&quot;Dept&quot;</saw:value>
+              </saw:promptChoice>
+              <saw:promptChoice>
+                <saw:value>&quot;Cal&quot;.&quot;Day of Month&quot;</saw:value>
+              </saw:promptChoice>
+              <saw:promptChoice>
+                <saw:value>&quot;Cust Region&quot;.&quot;Country&quot;</saw:value>
+              </saw:promptChoice>
+              <saw:promptChoice>
+                <saw:value>&quot;C&quot;.&quot;Segment&quot;</saw:value>
+              </saw:promptChoice>
+              <saw:promptChoice>
+                <saw:value>&quot;C&quot;.&quot;Credit Rate&quot;</saw:value>
+              </saw:promptChoice>
+              <saw:promptChoice>
+                <saw:value>&quot;C&quot;.&quot;Years as Cust&quot;</saw:value>
+              </saw:promptChoice>
+              <saw:promptChoice>
+                <saw:value>&quot;C&quot;.&quot;CustAge&quot;</saw:value>
+              </saw:promptChoice>
+            </saw:promptChoices>
+          </saw:promptSource>
+        </saw:prompt>
+        <saw:prompt xsi:type="saw:columnFilterPrompt" columnID="c1" subjectArea="&quot;A - Sample Sales&quot;" required="false" placedOnNewColumn="false">
+          <saw:formula>
+            <sawx:expr xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Offices&quot;.&quot;D1  Office&quot;}</sawx:expr>
+          </saw:formula>
+          <saw:promptOperator op="notIn"/>
+          <saw:promptUIControl xsi:type="saw:multiSelect" includeAllChoices="false" maxChoices="-1"/>
+          <saw:label>
+            <saw:caption>
+              <saw:text>Exclude Selected Outliers</saw:text>
+            </saw:caption>
+          </saw:label>
+          <saw:promptDefaultValues type="reportDefault" usingCodeValue="false"/>
+          <saw:constrainPrompt type="specificPrompts">
+            <saw:constrainedByFormula>
+              <sawx:expr xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xsi:type="sawx:sqlExpression">&#39;Az&#39;</sawx:expr>
+            </saw:constrainedByFormula>
+          </saw:constrainPrompt>
+          <saw:setPromptVariables>
+            <saw:setPromptVariable location="value" type="none" variableFormula=""/>
+          </saw:setPromptVariables>
+          <saw:promptSource xsi:type="saw:allChoices"/>
+        </saw:prompt>
+      </saw:individualPrompts>
+      <saw:displayFormat>
+        <saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderPosition="none" fontSize="10"/>
+      </saw:displayFormat>
+      <saw:title/>
+    </saw:promptStep>
+  </saw:prompts>
+</saw:view>

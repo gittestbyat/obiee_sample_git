@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20Source:%20Excel%20file%20containing%20cataloging%20information%20about%20sample%20reports]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="DS" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>SampleReports_IdxData.xls</file>
+            <sheetName>Reports</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="G_1" source="DS" label="G_1">
+    <element name="SOURCE" value="SOURCE" dataType="xsd:string" label="SOURCE" breakOrder="None" fieldOrder="1"/>
+    <element name="REPORT_CATEGORY" value="REPORT_CATEGORY" dataType="xsd:string" label="REPORT_CATEGORY" breakOrder="None" fieldOrder="2"/>
+    <element name="REPORT_NAME" value="REPORT_NAME" dataType="xsd:string" label="REPORT_NAME" breakOrder="None" fieldOrder="3"/>
+    <element name="DESCRIPTION" value="DESCRIPTION" dataType="xsd:string" label="DESCRIPTION" breakOrder="None" fieldOrder="4"/>
+    <element name="FOLDER__IF_ANY_" value="FOLDER__IF_ANY_" dataType="xsd:string" label="FOLDER__IF_ANY_" breakOrder="None" fieldOrder="5"/>
+    <element name="REPORT_URL" value="REPORT_URL" dataType="xsd:string" label="REPORT_URL" breakOrder="None" fieldOrder="6"/>
+    <element name="DATA_MODEL" value="DATA_MODEL" dataType="xsd:string" label="DATA_MODEL" breakOrder="None" fieldOrder="7"/>
+    <element name="LAYOUT_NAMES" value="LAYOUT_NAMES" dataType="xsd:string" label="LAYOUT_NAMES" breakOrder="None" fieldOrder="8"/>
+    <element name="LAYOUT_TYPE" value="LAYOUT_TYPE" dataType="xsd:string" label="LAYOUT_TYPE" breakOrder="None" fieldOrder="9"/>
+    <element name="KEY_FEATURE" value="KEY_FEATURE" dataType="xsd:string" label="KEY_FEATURE" breakOrder="None" fieldOrder="10"/>
+    <element name="PARAMETERS" value="PARAMETERS" dataType="xsd:string" label="PARAMETERS" breakOrder="None" fieldOrder="11"/>
+    <element name="LOV" value="LOV" dataType="xsd:string" label="LOV" breakOrder="None" fieldOrder="12"/>
+    <element name="BURSTING_ENABLED" value="BURSTING_ENABLED" dataType="xsd:string" label="BURSTING_ENABLED" breakOrder="None" fieldOrder="13"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="DS" left="369px" top="45px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

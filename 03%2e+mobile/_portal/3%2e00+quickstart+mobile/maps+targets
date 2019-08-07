@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="crf6orcrsdv1s0k1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <sawd:dashboardColumn name="Column 2" duid="6mgngeinff8q7mhl" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+      <saw:displayFormat>
+        <saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+      </saw:displayFormat>
+      
+    <sawd:reportView name="Report 0" display="embed" showView="" duid="v7cbukh14njok0aj"><saw:caption><saw:text>Maps As Detail in Master Detail</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/04. Maps and Spatial/Map Views/Master Detail/Maps As Detail in Master Detail"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn>
+  
+</sawd:dashboardPage>

@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BISAMPLE">
+   <description>
+      <![CDATA[Data%20Source%20Type:%20Oracle%20BI%20Analyses%20%0D%0A--Data%20Structure:%20Flat%20concatenated%20data%20sets%20%0D%0A--Features:%20Parameters,%20LOVs,%20Data%20filters%20that%20restrict%20data%20based%20on%20parameter%20value]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="true"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Q1 Yearly Sales" type="complex">
+         <answer sawTimeOut="60">
+            <reportPath>/shared/05. Published Reporting/Analyses/Annual Sales Analysis</reportPath>
+         </answer>
+      </dataSet>
+      <dataSet name="Q2 Office Sales" type="complex">
+         <answer sawTimeOut="60">
+            <reportPath>/shared/05. Published Reporting/Analyses/Office Sales Analysis</reportPath>
+         </answer>
+      </dataSet>
+      <dataSet name="Q3 Product Sales" type="complex">
+         <answer sawTimeOut="60">
+            <reportPath>/shared/05. Published Reporting/Analyses/Product Sales Analysis</reportPath>
+         </answer>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+				<group name="G_1" source="Q1 Yearly Sales" label="G_1" groupFilter="${(G_1.Year==P_YEAR)}">
+					<element name="Year" value="Column0" dataType="xsd:string" label="Year" breakOrder="None" fieldOrder="1"/>
+					<element name="Qtr" value="Column1" dataType="xsd:string" label="Quarter" breakOrder="None" fieldOrder="2"/>
+					<element name="Revenue" value="Column2" dataType="xsd:double" label="Revenue" breakOrder="None" fieldOrder="3"/>
+					<element name="Quantity" value="Column3" dataType="xsd:double" label="Billed Quantity" breakOrder="None" fieldOrder="4"/>
+					<element name="Amount" value="Column4" dataType="xsd:double" label="Paid Amount" breakOrder="None" fieldOrder="5"/>
+				</group>
+				<group name="G_2" source="Q2 Office Sales" label="G_4" groupFilter="${(G_2.Year==P_YEAR)}">
+					<element name="Qtr" value="Column0" dataType="xsd:string" label="Quarter" breakOrder="None" fieldOrder="1"/>
+					<element name="Year" value="Column1" dataType="xsd:string" label="Year" breakOrder="None" fieldOrder="2"/>
+					<element name="Organization" value="Column2" dataType="xsd:string" label="Organization" breakOrder="None" fieldOrder="3"/>
+					<element name="Department" value="Column3" dataType="xsd:string" label="Department" breakOrder="None" fieldOrder="4"/>
+					<element name="Office" value="Column4" dataType="xsd:string" label="Office" breakOrder="None" fieldOrder="5"/>
+					<element name="Company" value="Column5" dataType="xsd:string" label="Company" breakOrder="None" fieldOrder="6"/>
+					<element name="Quantity" value="Column6" dataType="xsd:double" label="Billed Quantity" breakOrder="None" fieldOrder="7"/>
+					<element name="Amount" value="Column7" dataType="xsd:double" label="Paid Amount" breakOrder="None" fieldOrder="8"/>
+					<element name="Revenue" value="Column8" dataType="xsd:double" label="Revenue" breakOrder="None" fieldOrder="9"/>
+				</group>
+				<group name="G_3" source="Q3 Product Sales" label="G_3" groupFilter="${(G_3.Year==P_YEAR)}">
+					<element name="Year" value="Column0" dataType="xsd:string" label="Year" breakOrder="None" fieldOrder="1"/>
+					<element name="Qtr" value="Column1" dataType="xsd:string" label="Quarter" breakOrder="None" fieldOrder="2"/>
+					<element name="LOB" value="Column2" dataType="xsd:string" label="Product Line of Business" breakOrder="None" fieldOrder="3"/>
+					<element name="Prod_Type" value="Column3" dataType="xsd:string" label="Product Type" breakOrder="None" fieldOrder="4"/>
+					<element name="Prod_Name" value="Column4" dataType="xsd:string" label="Product Name" breakOrder="None" fieldOrder="5"/>
+					<element name="Prod_Brand" value="Column5" dataType="xsd:string" label="Brand" breakOrder="None" fieldOrder="6"/>
+					<element name="Quantity" value="Column6" dataType="xsd:double" label="Billed Quantity" breakOrder="None" fieldOrder="7"/>
+					<element name="Amount" value="Column7" dataType="xsd:double" label="Paid Amount" breakOrder="None" fieldOrder="8"/>
+					<element name="Revenue" value="Column8" dataType="xsd:double" label="Revenue" breakOrder="None" fieldOrder="9"/>
+				</group>
+			</dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets>
+      <valueSet id="YEAR_LOV">
+         <sql dataSourceRef="Oracle BI EE">
+            <![CDATA[select	 "Time"."T05 Per Name Year" as "T05 Per Name Year" 
+ from	"A - Sample Sales"."Time" "Time" 
+ where 	 "Time"."T05 Per Name Year" IN ('2008', '2009', '2010')
+order by "Time"."T05 Per Name Year" ASC]]>
+         </sql>
+      </valueSet>
+   </valueSets>
+   <parameters>
+      <parameter name="P_YEAR" dataType="xsd:string">
+         <select label="Calendar Year" valueSet="YEAR_LOV" multiple="false" all="false" allValue="null" refreshParameters="false"/>
+      </parameter>
+   </parameters>
+   <bursting/>
+   <display>
+		<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="Q3 Product Sales" left="384px" top="247px"/><layout name="Q2 Office Sales" left="39px" top="252px"/><layout name="Q1 Yearly Sales" left="125px" top="85px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+		</groupLinks>
+	</display>
+</dataModel>

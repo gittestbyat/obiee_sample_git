@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/b. Features/Interactive Sorting/Data Models/Interactive Sort DM.xdm"/>
+   <description>
+      <![CDATA[Data%20Model:%20Interactive%20Sort%20DM%20--Layout:%20XPT%20Template%20--Features:%20Table%20Column%20Sort%20in%20Interactive%20View]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="false"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="false"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;">
+      <parameter id="sortCriteria" label="Sort By:" defaultValue="" visible="false" rowPlacement="1">
+         <select/>
+      </parameter>
+   </parameters>
+   <templates default="Interactive Sort Layout">
+      <template label="Interactive Sort Layout" url="Interactive Sort Layout.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Interactive Sort Layout 2" url="Interactive Sort Layout 2.xpt" type="xpt" outputFormat="analyze" defaultFormat="analyze" locale="en_US" active="false" viewOnline="false"/>
+      <template label="Report Description" url="ReportDescriptionInteractiveView (1).rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

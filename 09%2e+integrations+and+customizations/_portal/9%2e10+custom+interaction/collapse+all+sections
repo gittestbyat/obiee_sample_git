@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="m6fe14fo1ohl2ut3">
+	<saw:pageProps orientation="portrait" printRows="visible" disableMargins="false">
+		<saw:pageHeader show="false"/>
+		<saw:pageFooter showOnDashboard="true" show="true">
+			<saw:zone position="top">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="left">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="left" width="33%" fontColor="#999999" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" oldID="kcap12832459_17">
+					<saw:text>OBI EE SampleApp</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="center">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" width="34%"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="right">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="right" width="33%" fontColor="#999999" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="bottom">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center"/>
+				</saw:displayFormat>
+			</saw:zone>
+		</saw:pageFooter>
+	</saw:pageProps>
+	<sawd:dashboardColumn name="Column 0" duid="94apgmot0sbao4qn" canFreeze="true" layoutType="minimumSize"><sawd:dashboardSection name="Section 17" duid="onmrj50qvftd2q2j" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" borderColor="#CCCCCC" borderStyle="single" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:htmlView name="HTML 40" duid="i3gbmupepg2h5ck0"><sawd:HTML fmt="html">&lt;style type=&quot;text/css&quot;&gt;
+input.colpsebutton
+{
+   font-size:11px;
+   font-family:Arial,sans-serif;
+   font-weight:bold;
+   color:#FFFFFF;
+   background-color:#0033FF;
+   border-width:0px;
+}
+&lt;/style&gt;
+
+&lt;script&gt;
+function custCollapseSection (o, n) {
+		var j = document.getElementById(o + &quot;Contents&quot;);
+		var l = document.getElementById(o + &quot;Max&quot;);
+		var g = document.getElementById(o + &quot;Min&quot;);
+		var m = document.getElementById(&quot;Embed&quot; + o);
+		var f = saw.getFirstChildElement(m);
+		var e = f &amp;&amp; f.rows &amp;&amp; f.rows[0].cells[0];
+		/*var n = &quot;minimize&quot;;
+		if (m.getAttribute(&quot;minimized&quot;) == &quot;true&quot;) {
+			n = &quot;maximize&quot;
+		}*/
+		var a = false;
+		if (m.getAttribute(&quot;headeron&quot;) == &quot;true&quot;) {
+			a = true
+		}
+		var d = &quot;&quot;;
+		if (j) {
+			if (n == &quot;maximize&quot;) {
+				var h = document.getElementById(o + &quot;SearchingImg&quot;);
+				if (h) {
+					h.style.display = &quot;&quot;
+				}
+				j.style.display = &quot;&quot;;
+				l.style.display = &quot;none&quot;;
+				if (l.getAttribute(&quot;name&quot;) == &quot;FirstSectionElement&quot;) {
+					l.tabIndex = -1;
+					l.removeAttribute(&quot;name&quot;);
+					g.tabIndex = 0;
+					g.setAttribute(&quot;name&quot;, &quot;FirstSectionElement&quot;)
+				}
+				g.style.display = &quot;&quot;;
+				if (e) {
+					obips.CSS.removeClassFromElement(e, &quot;AccordionPaneCollapsed&quot;)
+				}
+				m.setAttribute(&quot;minimized&quot;, &quot;false&quot;);
+				var k;
+				for (var k = 0; k &lt; vSecIds.length; k++) {
+					var c = vSecIds[k];
+					if (c == o) {
+						d = sSectionIdStyleInfo[o];
+						saw.dashboard.setSectionStyle(m, d, a);
+						break
+					}
+				}
+			} else {
+				if (n == &quot;minimize&quot;) {
+					j.style.display = &quot;none&quot;;
+					g.style.display = &quot;none&quot;;
+					if (g.getAttribute(&quot;name&quot;) == &quot;FirstSectionElement&quot;) {
+						g.tabIndex = -1;
+						g.removeAttribute(&quot;name&quot;);
+						l.tabIndex = 0;
+						l.setAttribute(&quot;name&quot;, &quot;FirstSectionElement&quot;)
+					}
+					l.style.display = &quot;&quot;;
+					if (e) {
+						obips.CSS.addClassToElement(e, &quot;AccordionPaneCollapsed&quot;)
+					}
+					m.setAttribute(&quot;minimized&quot;, &quot;true&quot;);
+					d = saw.dashboard.getSectionStyle_trim(m)
+				}
+			}
+			saw.dashboard.addSectionId(o);
+			sSectionIdStyleInfo[o] = d;
+			vSecRefresh[&quot;Embed&quot; + o] = true;
+//			obips.views.ViewController.handleViewAction(n, o);
+			saw.dashboard.resizeLayout()
+		}
+}
+
+function handleSectionAction(action){
+	sections = document.getElementsByName(&#39;FirstSectionElement&#39;);
+	secList =[];
+
+	for (i=0; i &lt; sections.length;i++) { 
+		if (typeof sections[i].getAttribute(&#39;onclick&#39;) !== &#39;undefined&#39;)
+			secId = sections[i].getAttribute(&#39;onclick&#39;);
+		else
+			secId = sections[i].attributes[&quot;onclick&quot;];
+		strSecId = secId.match(/&#39;(.*?)&#39;/)[1];
+		//if (strSecId.length &gt;0 &amp;&amp; secList.indexOf(strSecId)==-1)
+		secList.push(strSecId);
+	}
+
+	for (j=0; j&lt;secList.length; j++) { 
+		custCollapseSection(secList[j], action);
+	}
+}
+&lt;/script&gt;
+
+&lt;form&gt;
+&amp;nbsp;&amp;nbsp;
+&lt;input  type=&quot;button&quot; class=&quot;colpsebutton&quot;  value=&quot;Minimize All (+)&quot; onclick=&#39;javascript: handleSectionAction(&quot;minimize&quot;);&#39; /&gt;
+&amp;nbsp;&amp;nbsp;
+&lt;input  type=&quot;button&quot; class=&quot;colpsebutton&quot;  value=&quot;Maximize All (-)&quot; onclick=&#39;javascript: handleSectionAction(&quot;maximize&quot;);&#39; /&gt;
+&amp;nbsp;&amp;nbsp;
+&lt;/form&gt;</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 13" duid="pjakvhrcf9q8kpc4"><sawd:HTML fmt="html">&lt;style type=&quot;text/css&quot;&gt;a.new {color: blue;}&lt;/style&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec height="25" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" break="column" duid="q7q9bjhqcdm9hrh0" frozen="false" canFreeze="false" layoutType="specificSize"><sawd:dashboardSection name="Section 1" showHeading="true" duid="dkiq74128vrofljd" showSectionTitle="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>01. QuickStart</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></sawd:sectionHeading></sawd:dashboardSection><sawd:dashboardSection name="Section 18" showSectionTitle="true" duid="t3d24vvrcj4vhqkn" layoutType="bestFit"><saw:caption><saw:text>1.00 General Index</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 45" duid="ascil5huvei55lac"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.00 General Index&amp;Page=Main Index&quot;&gt;Main Index&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.00 General Index&amp;Page=SampleApp LaunchPad&quot;&gt;SampleApp LaunchPad and Documentation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.00 General Index&amp;Page=URLs %26 Login Credentials&quot;&gt;URLs &amp; Login Credentials&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 6" showSectionTitle="true" duid="j9p84pn1v6njgrqb" layoutType="bestFit"><saw:caption><saw:text>1.90 Configuration</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 5" duid="mnujp1qsmeh4u9iu"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Product Configuration&quot;&gt;Product Configuration&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Users&quot;&gt;List of Users&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Variables&quot;&gt;List of Variables&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Product Hierarchies&quot;&gt;Product Hierarchies Diagrams&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Empl Hierarchy&quot;&gt;Employees Hierarchy&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Office Hierarchies&quot;&gt;Office Hierarchies&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Database&quot;&gt;Database Main Schema ERD&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Logical Hierarchies&quot;&gt;Logical Hierarchies&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Data Volume&quot;&gt;Data Volumes&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Custom Links Setup&quot;&gt;Custom Links Setup&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=Flight Delay Agg Plan&quot;&gt;Flight Delay Aggregations Plan&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.90 Configuration&amp;Page=EPM Configuration&quot;&gt;EPM Configuration&lt;/a&gt;&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 20" showSectionTitle="true" duid="m8ta586sshuuoi51" layoutType="bestFit"><saw:caption><saw:text>1.10 OBIEE 11.1.1.7.1 New Features: </saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 28" duid="ghunb5fa4vflfdpt"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=NewViz&quot;&gt;New Visualizations&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Actions on Totals&quot;&gt;Actions on Total columns&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Null Non-Suppress&quot;&gt;Null Non-Suppress in Queries&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Layout Options&quot;&gt;Dashboard Layout Options&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=BIP Printing&quot;&gt;BIP Printing&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=BIP CEIM&quot;&gt;BIP Sourcing from CEIM&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Totals After&quot;&gt;Totals After&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Blob Images&quot;&gt;Integrating Blob Images&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Map Lines&quot;&gt;Map Line Geometries&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Maps as Md Targets&quot;&gt;Maps as Master Details Targets&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Master Details&quot;&gt;Master Details&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Essb Writeback&quot;&gt;Essbase Writeback&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Essb Aggregates&quot;&gt;Essbase Aggregates&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Essb Dynamic Alias&quot;&gt;Essbase Dynamic Alias&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Data Range Scale&quot;&gt;Data Range Scale&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.10 New Features Demo&amp;Page=Other&quot;&gt;Other New Features&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 40" showSectionTitle="true" duid="64g28vb67suajpbu" layoutType="bestFit"><saw:caption><saw:text>1.30 Quickstart</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="15" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 30" duid="7j9bkobdqqo0491a"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.30 Quickstart&amp;Page=Overview&quot;&gt;Overview&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.30 Quickstart&amp;Page=Office Details&quot;&gt;Office Details&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.30 Quickstart&amp;Page=Product Details&quot;&gt;Product Details&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.30 Quickstart&amp;Page=Order Details&quot;&gt;Order Details&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.30 Quickstart&amp;Page=Geo Prompter&quot;&gt;Geo Prompter&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.30 Quickstart&amp;Page=Strategy Tree&quot;&gt;Strategy Tree&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.30 Quickstart&amp;Page=Geo HeatMap&quot;&gt;Geo HeatMap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.30 Quickstart&amp;Page=Customers Profile&quot;&gt;Customers Profile&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 30" showHeading="true" duid="dkiq74128vrofljd" showSectionTitle="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>02. Visualizations</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></sawd:sectionHeading></sawd:dashboardSection><sawd:dashboardSection name="Section 37" showSectionTitle="true" duid="bs5qim9u5fljqt0m" layoutType="bestFit"><saw:caption><saw:text>2.10 Vanilla Charts</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 10" duid="mnujp1qsmeh4u9iu"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla Charts&amp;Page=Gauges and Funnel&quot;&gt;Gauges and Funnel&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla Charts&amp;Page=Data Range Scale&quot;&gt;Data Range Scale&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla Charts&amp;Page=Standard Visuals&quot;&gt;Standard Visuals&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla Charts&amp;Page=Waterfall&quot;&gt;Waterfall Charts&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla Charts&amp;Page=Tiles&quot;&gt;Tile Views&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla Charts&amp;Page=Trellis Airlines 1&quot;&gt;Trellis Views 1&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla Charts&amp;Page=Trellis Airlines 2&quot;&gt;Trellis Views 2&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla Charts&amp;Page=Trellis Airlines 3&quot;&gt;Trellis Views 3&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla Charts&amp;Page=Trellis-Product Sales&quot;&gt;Trellis-Product Sales&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla Charts&amp;Page=Narrative Tickers&quot;&gt;Narrative and Tickers&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec width="20%" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:dashboardSection name="Section 35" showSectionTitle="true" duid="4di65oqj8i0ehu03" layoutType="bestFit"><saw:caption><saw:text>2.11 Table Designs</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 25" duid="fsvfb1h87fdmusig"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.11 Table Designs&amp;Page=Master Details&quot;&gt;Master Details&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.11 Table Designs&amp;Page=Multi-Dimensions MD&quot;&gt;Multi-Dimensions Master Details&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.11 Table Designs&amp;Page=Conditional Format&quot;&gt;Conditional Format&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.11 Table Designs&amp;Page=Tooltips on Text&quot;&gt;Tooltips on Text&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.11 Table Designs&amp;Page=Text Overflow&quot;&gt;Text Overflow&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.11 Table Designs&amp;Page=Remove PT Left Block&quot;&gt;Remove Pivot Table Left Block&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.11 Table Designs&amp;Page=AdHoc Text Aggregation&quot;&gt;AdHoc Text Aggregation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.11 Table Designs&amp;Page=Condt Format with Image&quot;&gt;Conditional Format with Image&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 36" showSectionTitle="true" duid="8gqvvrbofvaio48f" layoutType="bestFit"><saw:caption><saw:text>2.20 Configured Visuals</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 26" duid="f49hcmnoe9sjd2kb"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt; &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.20 Configured Visuals&amp;Page=Boxplot&quot;&gt;Boxplot&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.20 Configured Visuals&amp;Page=Gantt&quot;&gt;Configured Gantt Chart&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.20 Configured Visuals&amp;Page=Pivot Heatmap&quot;&gt;Pivot Heatmap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.20 Configured Visuals&amp;Page=Caterpillar&quot;&gt;Caterpillar&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.20 Configured Visuals&amp;Page=Voting Bars&quot;&gt;Voting Bars&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.20 Configured Visuals&amp;Page=Other Tips&quot;&gt;Other Views Configuration Tips&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.20 Configured Visuals&amp;Page=Multiple Y Axis&quot;&gt;Multiple Y Axis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.20 Configured Visuals&amp;Page=Tag Cloud&quot;&gt;Tag Cloud Example&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 12" showSectionTitle="true" duid="fhso9qunnu3c8br5" layoutType="bestFit"><saw:caption><saw:text>2.21 ADF Visuals</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 14" duid="j3impdt1d95km5t2"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.21 ADF Visuals&amp;Page=Horizontal Dual Bars&quot;&gt;Horizontal Dual Bars&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.21 ADF Visuals&amp;Page=Vertical Dual Bars&quot;&gt;Vertical Dual Bars&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.21 ADF Visuals&amp;Page=Floating Stacked Bar&quot;&gt;Floating Stacked Bar&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.21 ADF Visuals&amp;Page=Line Charts&quot;&gt;Line Charts&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.21 ADF Visuals&amp;Page=Line Charts 2&quot;&gt;Line Charts 2&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.21 ADF Visuals&amp;Page=Area Charts&quot;&gt;Area Charts&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.21 ADF Visuals&amp;Page=Pie and Ring&quot;&gt;Pie and Ring&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.21 ADF Visuals&amp;Page=Polar Chart&quot;&gt;Polar Chart&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.22 ADF Visuals Advanced&amp;Page=Treemap&quot;&gt;Treemap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.22 ADF Visuals Advanced&amp;Page=Sunburst&quot;&gt;Sunburst&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.22 ADF Visuals Advanced&amp;Page=Timeline&quot;&gt;Timeline&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.22 ADF Visuals Advanced&amp;Page=Hierarchy&quot;&gt;Hierarchy&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.22 ADF Visuals Advanced&amp;Page=Hi-Lo Close&quot;&gt;Hi-Lo Close&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.22 ADF Visuals Advanced&amp;Page=CandleStick&quot;&gt;CandleStick&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.22 ADF Visuals Advanced&amp;Page=CandleStick Datatable&quot;&gt;CandleStick Datatable&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 39" collapsible="true" showSectionTitle="true" duid="cq75ig5qa37jg0uh" layoutType="bestFit"><saw:caption><saw:text>2.50 Scorecards</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 35" duid="09hf496q795f7r7o"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.50 Scorecards&amp;Page=Strategy Tree&quot;&gt;Strategy Tree&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.50 Scorecards&amp;Page=Strategy Wheels&quot;&gt;Strategy Wheels&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.50 Scorecards&amp;Page=Watchlist&quot;&gt;Watchlist&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.50 Scorecards&amp;Page=Cause %26 Effect Map&quot;&gt;Cause &amp; Effect Map&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.50 Scorecards&amp;Page=Strategy Map&quot;&gt;Strategy Map&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.50 Scorecards&amp;Page=Smart Watchlist&quot;&gt;Smart Watchlist&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.50 Scorecards&amp;Page=KPI WatchList&quot;&gt;KPI WatchList&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.50 Scorecards&amp;Page=Custom View&quot;&gt;Custom View&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.50 Scorecards&amp;Page=Prompt Example&quot;&gt;Prompt Example&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 3" duid="ek5sbd17dbeejmli" frozen="false" canFreeze="false" layoutType="specificSize"><sawd:dashboardSection name="Section 5" showSectionTitle="true" duid="mdshr6pf5ujn2d09" layoutType="bestFit"><saw:caption><saw:text>2.30 JS Based Visuals</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 11" duid="ghunb5fa4vflfdpt"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt; &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals I&amp;Page=Sparklines&quot;&gt;Sparklines&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals I&amp;Page=Calendar&quot;&gt;Calendar&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals I&amp;Page=Voting&quot;&gt;Voting&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals I&amp;Page=Cluster&quot;&gt;Cluster&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals I&amp;Page=ClusterRadial&quot;&gt;ClusterRadial&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals I&amp;Page=CirclePack&quot;&gt;CirclePack&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals I&amp;Page=Java and Webservice&quot;&gt;Java and Webservice&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.30 JS Based Visuals I&amp;Page=Multi Y Axis&quot;&gt;Multi Y Axis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.31 JS Based Visuals II&amp;Page=Treemap&quot;&gt;Treemap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.31 JS Based Visuals II&amp;Page=HzBar&quot;&gt;Horizontal Bar&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.31 JS Based Visuals II&amp;Page=Heatmap&quot;&gt;Heatmap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.31 JS Based Visuals II&amp;Page=Zoomable Partition&quot;&gt;Zoomable Partition&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.31 JS Based Visuals II&amp;Page=Hierarchical Bar&quot;&gt;Hierarchical Bar&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.31 JS Based Visuals II&amp;Page=Flower&quot;&gt;Flower&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.31 JS Based Visuals II&amp;Page=Slopegraph&quot;&gt;Slopegraph&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.31 JS Based Visuals II&amp;Page=WordCloud&quot;&gt;WordCloud&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 21" showSectionTitle="true" duid="enkdekcp5edm27tc" layoutType="bestFit"><saw:caption><saw:text>2.32 Google Visuals</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="15"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="5" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 12" duid="n2o09rg5vorl18lk"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.32 Google Visuals&amp;Page=G. Sparklines&quot;&gt;G. Sparklines&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.32 Google Visuals&amp;Page=G. Motion Chart&quot;&gt;G. Motion Chart&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.32 Google Visuals&amp;Page=G. Org Chart&quot;&gt;G. Org Chart&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.32 Google Visuals&amp;Page=G. Geography&quot;&gt;G. Geography&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.32 Google Visuals&amp;Page=G. Candlestick&quot;&gt;G. Candlestick&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.32 Google Visuals&amp;Page=G. Heatmap&quot;&gt;G. Heatmap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.32 Google Visuals&amp;Page=G. Voting Bars&quot;&gt;G. Voting Bars&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 4" collapsible="false" showHeading="true" showSectionTitle="true" duid="n8nl53eh3r3f37re" layoutType="bestFit"><saw:caption oldID="kcap12832459_9">
+				<saw:text>03. Mobile</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="bold" wrapText="true"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 27" showSectionTitle="true" duid="1298i9t0ck87kaoh" layoutType="bestFit"><saw:caption><saw:text>3.00 Quickstart Mobile</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 29" duid="eieqtm3q8d1h4osc"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Overview&quot;&gt;Overview&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Office Details&quot;&gt;Office Details&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Product Analysis&quot;&gt;Product Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Trending&quot;&gt;Trending&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=New Visuals&quot;&gt;New Visuals&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Order Details&quot;&gt;Order Details&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Dense Sales&quot;&gt;Dense Sales&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Floor Plan&quot;&gt;Floor Plan&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Geo HeatMap&quot;&gt;Geo HeatMap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Maps Targets&quot;&gt;Maps Targets&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Strategy Tree&quot;&gt;Strategy Tree&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.00 Quickstart Mobile&amp;Page=Scorecard&quot;&gt;Scorecard&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 45" showSectionTitle="true" duid="0r0fhs4n227bmt8m" layoutType="bestFit"><saw:caption><saw:text>3.10 Mobility</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 43" duid="tu78l07ho7ne1ds1"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.10 Mobility&amp;Page=Overview&quot;&gt;Overview&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.10 Mobility&amp;Page=Brand Analysis&quot;&gt;Brand Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.10 Mobility&amp;Page=Sales Metrics - Trellis&quot;&gt;Sales Metrics - Trellis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.10 Mobility&amp;Page=Global Revenue&quot;&gt;Global Revenue&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.10 Mobility&amp;Page=Product Analysis&quot;&gt;Product Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.10 Mobility&amp;Page=Trending&quot;&gt;Trending&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.10 Mobility&amp;Page=US Revenue&quot;&gt;US Revenue&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.10 Mobility&amp;Page=Alert Group&quot;&gt;Alert Group&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.10 Mobility&amp;Page=About This Dashboard&quot;&gt;About This Dashboard&lt;/a&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.11 Mobility (lt)&amp;Page=Simple Page 1&quot;&gt;Simple Page 1&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.11 Mobility (lt)&amp;Page=Simple Page 2&quot;&gt;Simple Page 2&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.11 Mobility (lt)&amp;Page=Overview&quot;&gt;Overview&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 38" showSectionTitle="true" duid="uufa7h4rcviv1vid" layoutType="bestFit"><saw:caption><saw:text>3.30 Flights Delay Mobile</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 34" duid="sctqb4bilc6gbmbp"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Delay Summary&quot;&gt;Delay Summary&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Overview&quot;&gt;Overview&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Routes&quot;&gt;Routes&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Delay Analysis&quot;&gt;Delay Analysis&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Delay Causes&quot;&gt;Delay Causes&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Time Blocks&quot;&gt;Time Blocks&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Carriers&quot;&gt;Carriers&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Delay Catchup&quot;&gt;Delay Catchup&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Geo HeatMap&quot;&gt;Geo HeatMap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Passengers&quot;&gt;Passengers&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Scorecard&quot;&gt;Scorecard&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Performance Tree&quot;&gt;Performance Tree&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.30 Flights Delay Mobile&amp;Page=Smart Watchlist&quot;&gt;Smart Watchlist&lt;/a&gt;
+&lt;/font&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 23" duid="0ngfei1m3pr3kp60" showSectionTitle="true" layoutType="bestFit"><saw:caption><saw:text>2. Mobile Applications Designer</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="5" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 15" duid="tuognn835oal7ofh"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.20 Mobile Application Designer&amp;Page=All Applications&quot;&gt;All Applications&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.20 Mobile Application Designer&amp;Page=Mobile App with Parameters&quot;&gt;Mobile App with Parameters&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.20 Mobile Application Designer&amp;Page=Embedding App in a Dashboard&quot;&gt;Embedding App in a Dashboard&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.20 Mobile Application Designer&amp;Page=Mobile Application Home&quot;&gt;Mobile Application Home&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.20 Mobile Application Designer&amp;Page=Fast App Previewer&quot;&gt;Fast App Previewer&lt;/a&gt;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.21 BIMAD Plugins&amp;Page=Geo Heatmap&quot;&gt;Geo Heatmap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.21 BIMAD Plugins&amp;Page=Treemap&quot;&gt;Treemap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.21 BIMAD Plugins&amp;Page=Pack Hierarchy&quot;&gt;Pack Hierarchy&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.21 BIMAD Plugins&amp;Page=Sunburst&quot;&gt;Sunburst&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.21 BIMAD Plugins&amp;Page=Heatmap&quot;&gt;Heatmap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.21 BIMAD Plugins&amp;Page=Flowerchart&quot;&gt;Flowerchart&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.21 BIMAD Plugins&amp;Page=Slopegraph&quot;&gt;Slopegraph&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.21 BIMAD Plugins&amp;Page=Google Geomap&quot;&gt;Google Geomap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.21 BIMAD Plugins&amp;Page=SalesStore Map&quot;&gt;SalesStore Map&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/03. Mobile/_portal/3.21 BIMAD Plugins&amp;Page=Youtube&quot;&gt;Youtube&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 57" showSectionTitle="true" duid="cojrbijm9h85d9i2" layoutType="bestFit"><saw:caption><saw:text>3.25 Mobile Apps Examples</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 58" duid="2h8c7puhkujee9ep"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAcademic Analytics.xma&quot;&gt;Academic Analytics  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAir Route Delay.xma&quot;&gt;Air Route Delay&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAirline Delay.xma&quot;&gt;Airline Delay &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FApp With Parameters.xma&quot;&gt;App With Parameters   &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FARA Car Demo Sample.xma&quot;&gt;ARA Car Demo Sample &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FARA Promotional Banking Campagin.xma&quot;&gt;ARA Promotional Banking Campagin&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FArrowhead.xma&quot;&gt;Arrowhead Analytics&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FEssbase Mobile.xma&quot;&gt;Essbase Mobile  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FExecutive Sales Overview.xma#&quot;&gt;Executive Sales Overview  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FHCM Briefing.xma#&quot;&gt;HCM Briefing  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FHospitality.xma&quot;&gt;Hospitality  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FInFusion Pharma.xma#&quot;&gt;InFusion Pharma  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FInFusion Quarterly Update.xma&quot;&gt;InFusion Quarterly Update&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FInventory Status.xma&quot;&gt;Inventory Status  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FMAD New Features Demo.xma#875&quot;&gt;MAD New Features Demo &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FMobile Device Product Catalog.xma&quot;&gt;Mobile Device Product Catalog  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FNuclear Power Plants.xma&quot;&gt;Nuclear Power Plants  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FOracle Promotion Product Catalog.xma&quot;&gt;Oracle Promotion Product Catalog &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FOracle Quarterly Sales.xma&quot;&gt;Oracle Quarterly Sales &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FP2P Briefing.xma&quot;&gt;P2P Briefing  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FPlugins Demo.xma&quot;&gt;Plugins Demo  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FProduct Sales Analysis.xma&quot;&gt;Product Sales Analysis  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FProjects Briefing.xma&quot;&gt;Projects Briefing &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FRetail Sales by State.xma&quot;&gt;Retail Sales by State  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FRevenue Analysis.xma&quot;&gt;Revenue Analysis &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FSales Store Map.xma&quot;&gt;Sales Store Map  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FSFO Passenger for Phone.xma&quot;&gt;SFO Passenger for Phone  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FSFO Passenger.xma&quot;&gt;SFO Passenger &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FTalent Management.xma#&quot;&gt;Talent Management  &lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;/mobile/viewer.jsp?_xma=%2FMobile App Designer%2FAPPSTORE%2FWhite App.xma&quot;&gt;White App &lt;/a&gt;
+&lt;/font&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="20%"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" duid="kjoegetart5886r1" frozen="false" canFreeze="false" layoutType="specificSize"><sawd:dashboardSection name="Section 2" showSectionTitle="true" duid="lpurq5a3ol59j9m6" showHeading="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>04. Maps and Spatial</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontStyle="bold"/></saw:displayFormat></sawd:sectionHeading></sawd:dashboardSection><saw:displayFormat><saw:formatSpec wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" width="20%"/></saw:displayFormat><sawd:dashboardSection name="Section 3" showSectionTitle="true" duid="doigb126brj0e570" layoutType="bestFit"><saw:caption><saw:text>4.10 Map Formats</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 24" duid="m71pqd5uqcqc9n3s"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.10 Map Formats&amp;Page=Map Backgrounds&quot;&gt;Map Backgrounds&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.10 Map Formats&amp;Page=Map Backgrounds 2&quot;&gt;Map Backgrounds 2&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.10 Map Formats&amp;Page=Map Layers Format&quot;&gt;Map Layers Format&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.10 Map Formats&amp;Page=Map Layers Format 2&quot;&gt;Map Layers Format 2&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.10 Map Formats&amp;Page=Feature Layers&quot;&gt;Feature Layers&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.10 Map Formats&amp;Page=Feature Layers 2&quot;&gt;Feature Layers 2&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.10 Map Formats&amp;Page=Map Tiles&quot;&gt;Map Tiles&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.10 Map Formats&amp;Page=Map Sizes&quot;&gt;Map Sizes, &lt;/a&gt;
+&lt;font size=1&gt; &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.11 Non Geo Examples&amp;Page=Floor Plan&quot;&gt;Floor Plan&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.11 Non Geo Examples&amp;Page=Arena Seating&quot;&gt;Arena Seating&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 29" duid="0o90lmt1r5snad0v" showSectionTitle="true" layoutType="bestFit"><saw:caption><saw:text>4.12 Map Geometries</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 38" duid="72nd6nrg6cnp46f6"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.12 Map Geometries&amp;Page=Line Geometries&quot;&gt;Line Geometries&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.12 Map Geometries&amp;Page=Geo Aggregation&quot;&gt;Geographical Aggregation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.12 Map Geometries&amp;Page=SF Blocks Demographics&quot;&gt;SF Blocks Demographics&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.12 Map Geometries&amp;Page=US Counties&quot;&gt;US Counties&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.12 Map Geometries&amp;Page=US Counties Zoom&quot;&gt;US Counties Zoom&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 41" showSectionTitle="true" duid="a6dq3ieetj8ttgpa" layoutType="bestFit"><saw:caption><saw:text>4.13 Map Interactions</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 32" duid="fqrij7guric8r2dd"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt; &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.13 Map Interactions&amp;Page=Map Drilling&quot;&gt;Map Drilling&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.13 Map Interactions&amp;Page=Master Detail 1&quot;&gt;Master Detail 1&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.13 Map Interactions&amp;Page=Master Detail 2&quot;&gt;Master Detail 2&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.13 Map Interactions&amp;Page=Descriptive Geo IDs&quot;&gt;Descriptive Geo IDs&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 48" showSectionTitle="true" duid="8ui8hd98o1rqenf9" layoutType="bestFit"><saw:caption><saw:text>4.20 Map Examples</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 51" duid="r7itvuf6o8gntdrv"><sawd:HTML fmt="html">
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.20 Streets and Addresses&amp;Page=SF Metrics&quot;&gt;SF Metrics&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.20 Streets and Addresses&amp;Page=Streets London&quot;&gt;Streets London&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.20 Streets and Addresses&amp;Page=Streets SF&quot;&gt;Streets SF&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.20 Streets and Addresses&amp;Page=Streets Sydney&quot;&gt;Streets Sydney&lt;/a&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.21 Regional - India&amp;Page=IDC States&quot;&gt;IDC States&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.21 Regional - India&amp;Page=IDC States - 2&quot;&gt;IDC States - 2&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.21 Regional - India&amp;Page=IDC Districts&quot;&gt;IDC Districts&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.21 Regional - India&amp;Page=IDC neighbourhoods&quot;&gt;IDC neighbourhoods&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.21 Regional - India&amp;Page=IDC Areas Hierarchy&quot;&gt;IDC Areas Hierarchy&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.21 Regional - India&amp;Page=Mumbai Example&quot;&gt;Mumbai Example&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.21 Regional - India&amp;Page=Mumbai Per Capita&quot;&gt;Mumbai Per Capita&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 16" showSectionTitle="true" duid="bfarfjoeaqm6jts2" layoutType="bestFit"><saw:caption><saw:text>4.30 HTML5 JSAPI Integration</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 6" duid="phum5750i8vj4hqs"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;&lt;font size=1&gt;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.30 HTML5 JSAPI Integration&amp;Page=Airport Connections&quot;&gt;Airport Connections&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.30 HTML5 JSAPI Integration&amp;Page=Dynamic Heatmap&quot;&gt;Dynamic Heatmap&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.30 HTML5 JSAPI Integration&amp;Page=Dynamic Geo Aggregation&quot;&gt;Dynamic Geo Aggregation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.30 HTML5 JSAPI Integration&amp;Page=Layer Interactions&quot;&gt;Layer Interactions&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.30 HTML5 JSAPI Integration&amp;Page=Auto Clustering&quot;&gt;Auto Clustering&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.30 HTML5 JSAPI Integration&amp;Page=Dataflows&quot;&gt;Dataflows&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.30 HTML5 JSAPI Integration&amp;Page=Dataflows2&quot;&gt;Dataflows2&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.30 HTML5 JSAPI Integration&amp;Page=Dataflows3&quot;&gt;Dataflows3&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.30 HTML5 JSAPI Integration&amp;Page=Dataflows on Thematic map&quot;&gt;Dataflows on Thematic map&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 42" showSectionTitle="true" showHeading="false" duid="s7uhghs72heak36p" layoutType="bestFit"><saw:caption><saw:text>4.31 HTML5 JSAPI Custom Iteractions</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 33" duid="l9mv9pec8anepl25"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;&lt;font size=1&gt;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.31 HTML5 JSAPI Custom Iteractions&amp;Page=Lasso Selection&quot;&gt;Lasso Selection&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.31 HTML5 JSAPI Custom Iteractions&amp;Page=Multipoint Selection&quot;&gt;Multipoint Selection&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.31 HTML5 JSAPI Custom Iteractions&amp;Page=Arena Seating&quot;&gt;Arena Seating&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.31 HTML5 JSAPI Custom Iteractions&amp;Page=MD Event to Map&quot;&gt;MD Event to Map&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.31 HTML5 JSAPI Custom Iteractions&amp;Page=MD Event from Map&quot;&gt;MD Event from Map&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.31 HTML5 JSAPI Custom Iteractions&amp;Page=Prompt Player&quot;&gt;Prompt Player&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.31 HTML5 JSAPI Custom Iteractions&amp;Page=MV Demos and Tutorials&quot;&gt;MV Demos and Tutorials&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 64" showSectionTitle="true" duid="ivdmfhh06uot7qbl" layoutType="bestFit"><saw:caption><saw:text>4.40 Spatial and Network Analytics</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="15" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 37" duid="3k3tn4uqi9ijluo7"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.40 Spatial Analytics&amp;Page=Business in Distance Range&quot;&gt;Business in Distance Range&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.40 Spatial Analytics&amp;Page=Blocks in Distance Range&quot;&gt;Blocks in Distance Range&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.40 Spatial Analytics&amp;Page=Cust Distance SF&quot;&gt;Cust Distance SF&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.40 Spatial Analytics&amp;Page=Geocode SQL&quot;&gt;Geocode SQL&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.40 Spatial Analytics&amp;Page=Cust Distance Lon&quot;&gt;Cust Distance Lon&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.40 Spatial Analytics&amp;Page=Cust Distance Syd&quot;&gt;Cust Distance Syd&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.40 Spatial Analytics&amp;Page=Driving Distance SF&quot;&gt;Driving Distance SF&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.40 Spatial Analytics&amp;Page=Network Data Model&quot;&gt;Network Data Model&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 24" showSectionTitle="true" duid="532tak7tltmct6ru" showHeading="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>05. Published Reporting</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontStyle="bold"/></saw:displayFormat></sawd:sectionHeading></sawd:dashboardSection><sawd:dashboardSection name="Section 25" showSectionTitle="true" duid="5m07er2u1h03li58" layoutType="bestFit"><saw:caption><saw:text>5.10 Overview</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="5" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 17" duid="qsvsi0ck6qtj9m8u"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.10 Overview&amp;Page=Balance Letter&quot;&gt;Balance Letter&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.10 Overview&amp;Page=Salary Report&quot;&gt;Salary Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.10 Overview&amp;Page=W2 2010&quot;&gt;W2 2010&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.10 Overview&amp;Page=Product Analysis - OLAP Report&quot;&gt;Product Analysis - OLAP Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.10 Overview&amp;Page=SFO Passenger Count Report&quot;&gt;SFO Passenger Count Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.10 Overview&amp;Page=Revenue Budget Actual and Detail&quot;&gt;Revenue Budget Actual and Detail&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.10 Overview&amp;Page=Salary Report - No Parameters&quot;&gt;Salary Report - No Parameters&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.10 Overview&amp;Page=Employees by Department&quot;&gt;Employees by Department&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 51" duid="ah4609ndcd8n2sbl" showSectionTitle="true" showHeading="false" layoutType="bestFit"><saw:caption><saw:text>5.20 BIP Features</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 52" duid="9l363hdt5in3s7nc"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/catalog/obj_report.png&quot;/&gt;&lt;font size=1&gt; &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Brought Forward - Carry Forward&quot;&gt;Brought Forward - Carry Forward&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Brought Forward - Carry Forward II&quot;&gt;Brought Forward - Carry Forward II&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Bursting&quot;&gt;Bursting&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Cascading Parameters&quot;&gt;Cascading Parameters&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Check Boxes&quot;&gt;Check Boxes&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Complex Layout using XPATH&quot;&gt;Complex Layout using XPATH&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Conditional Formatting&quot;&gt;Conditional Formatting&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Crosstab Report&quot;&gt;Crosstab Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Complex Crosstab&quot;&gt;Complex Crosstab&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Railway Exam Detention Report&quot;&gt;Railway Exam Detention Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Dynamic Column&quot;&gt;Dynamic Column&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Dynamic Grouping&quot;&gt;Dynamic Grouping&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.20 Features I&amp;Page=Group By Intervals&quot;&gt;Group By Intervals&lt;/a&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=Invoice Batch Report&quot;&gt;Invoice Batch Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=eText&quot;&gt;eText&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=Interactive Sorting&quot;&gt;Interactive Sorting&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=Last Page Handling&quot;&gt;Last Page Handling&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=Master Detail Report&quot;&gt;Master Detail Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=OLAP Report (Actual vs Budget)&quot;&gt;OLAP Report (Actual vs Budget)&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=OLAP Report (Crosstab)&quot;&gt;OLAP Report (Crosstab)&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=OLAP Report (RTF Layout)&quot;&gt;OLAP Report (RTF Layout)&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=Optical Mark Recognition&quot;&gt;Optical Mark Recognition&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=PDF Optimization&quot;&gt;PDF Optimization&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=RTF SubTemplate&quot;&gt;RTF SubTemplate&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=Top N and Rest&quot;&gt;Top N and Rest&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=Using MS Word Shapes&quot;&gt;Using MS Word Shapes&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.21 Features II&amp;Page=XSL Template&quot;&gt;XSL Template&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 4" duid="bic8epq0nl299047" frozen="false" canFreeze="false" layoutType="specificSize"><sawd:dashboardSection name="Section 52" duid="c01sl2uvp02jecaj" showSectionTitle="true" showHeading="false" layoutType="bestFit"><saw:caption><saw:text>5.30 BIP Integration Examples</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 39" duid="m3qmk1ius4a4osis"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/catalog/obj_report.png&quot;/&gt;&lt;font size=1&gt;&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.30 Integration&amp;Page=Dashboard Prompt Interaction&quot;&gt;Dashboard Prompt Interaction&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.30 Integration&amp;Page=Brand Revenue Details&quot;&gt;Brand Revenue Details&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.30 Integration&amp;Page=Customer Letter&quot;&gt;Customer Letter&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.30 Integration&amp;Page=OBIEESubjectAreaSource&quot;&gt;OBIEESubjectAreaSource&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.30 Integration&amp;Page=Office Sales Report&quot;&gt;Office Sales Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.30 Integration&amp;Page=Product Listing&quot;&gt;Product Listing&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.30 Integration&amp;Page=Sales History w SA Source&quot;&gt;Sales History w SA Source&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.30 Integration&amp;Page=Sales History Report&quot;&gt;Sales History Report&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 50" duid="5496lk1p85kecva0" showSectionTitle="true" layoutType="bestFit"><saw:caption><saw:text>5.40 BIP Applications Examples</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="15" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 53" duid="aff20fik1g05esu3"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/catalog/obj_report.png&quot;/&gt;&lt;font size=1&gt;&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.40 Applications I&amp;Page=Exec - Income Stt&quot;&gt;Exec - Income Stt&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.40 Applications I&amp;Page=Exec - Sales Dashboard&quot;&gt;Exec - Sales Dashboard&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.40 Applications I&amp;Page=Financials - Check Printing&quot;&gt;Financials - Check Printing&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.40 Applications I&amp;Page=Financials - Customer Orders&quot;&gt;Financials - Customer Orders&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.40 Applications I&amp;Page=Financials - Departmental Expenses&quot;&gt;Financials - Departmental Expenses&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.40 Applications I&amp;Page=HR - Flex Salary Report&quot;&gt;HR - Flex Salary Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.40 Applications I&amp;Page=HR - Form P11D-UK&quot;&gt;HR - Form P11D-UK&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.40 Applications I&amp;Page=HR - Form Veterans&quot;&gt;HR - Form Veterans&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.41 Applications II&amp;Page=Mktg - Customer Profile&quot;&gt;Mktg - Customer Profile&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.41 Applications II&amp;Page=Mktg - Price List&quot;&gt;Mktg - Price List&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.41 Applications II&amp;Page=Sales - Revenue By Region&quot;&gt;Sales - Revenue By Region&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.41 Applications II&amp;Page=Sales - Sales Dashboard&quot;&gt;Sales - Sales Dashboard&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.41 Applications II&amp;Page=Sales - World Sales&quot;&gt;Sales - World Sales&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.41 Applications II&amp;Page=Supply - Discrete Job Data Report&quot;&gt;Supply - Discrete Job Data Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.41 Applications II&amp;Page=Supply - Purchase Order&quot;&gt;Supply - Purchase Order&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.41 Applications II&amp;Page=Supply - Warehouse Inventory&quot;&gt;Supply - Warehouse Inventory&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 26" duid="7t5b5lpv0joadoqb" showSectionTitle="true" showHeading="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>06. Dashboard Design</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" hAlign="left"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontStyle="bold"/></saw:displayFormat></sawd:sectionHeading></sawd:dashboardSection><sawd:dashboardSection name="Section 43" duid="vobn6derjmp4rd9h" showSectionTitle="true" layoutType="bestFit"><saw:caption><saw:text>6.10 Report Building Features</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 54" duid="28macbjatttqc77m"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Hier Columns&quot;&gt;Hierarchical Columns&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Multiple SA&quot;&gt;Multiple Subject Areas&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Selection Steps&quot;&gt;Selection Steps&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Selection Steps on Hier&quot;&gt;Selection Steps on Hierarchies&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Relative Filtering&quot;&gt;Relative Filtering&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Filter Function&quot;&gt;Filter Function&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Indirect Filters&quot;&gt;Indirect Filters&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Blob Images&quot;&gt;Blob Images&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Null Non-Suppress&quot;&gt;Null Non-Suppress&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 10" collapsible="true" duid="j4vih17jru6fmiqh" showSectionTitle="true" showHeading="false" layoutType="bestFit"><saw:caption><saw:text>6.11 Advanced Query Building</saw:text></saw:caption><saw:displayFormat><saw:formatSpec wrapText="true" borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 1" duid="5n6gcpvrueoufd8v"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.11 Advanced Query Building&amp;Page=Cache Bypass&quot;&gt;Cache Bypass&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.11 Advanced Query Building&amp;Page=Manage Cache&quot;&gt;Manage Cache&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.11 Advanced Query Building&amp;Page=Direct DB Query&quot;&gt;Direct Database Query&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.11 Advanced Query Building&amp;Page=Db Execution Skip&quot;&gt;Database Execution Skip&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.11 Advanced Query Building&amp;Page=Cross Query Joins&quot;&gt;Cross-Query Joins&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.11 Advanced Query Building&amp;Page=Asynchronous Time&quot;&gt;Asynchronous Time&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.11 Advanced Query Building&amp;Page=Asynchronous Time 2&quot;&gt;Asynchronous Time 2&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 61" showHeading="false" showSectionTitle="true" duid="oqdqge4v4pn3cqf6" layoutType="bestFit"><saw:caption><saw:text>6.20 Dashboards Design</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 57" duid="g4bbkaho67ossj4g"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=Prompts&quot;&gt;Prompts&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=Hierarchical Prompts&quot;&gt;Hierarchical Prompts&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=Advanced Prompts&quot;&gt;Advanced Prompts&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=Image Prompt&quot;&gt;Image Prompt&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=Prompt LOVs&quot;&gt;Prompt List of Values&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=Prompts dependent Prompts&quot;&gt;Prompts dependent Prompts&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=Layout Options&quot;&gt;Layout Options&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=BIP Printing&quot;&gt;BIP Printing&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=Webcat Images&quot;&gt;Webcat Images&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 13" showSectionTitle="true" duid="sbtsrr4bgujep1td" layoutType="bestFit"><saw:caption><saw:text>6.21 Custom Dashboard Indexes</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 4" duid="lop8rlk8vrfc711l"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.21 Custom Dashboard Indexes&amp;Page=Query Based Index&quot;&gt;Query Based Index&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.21 Custom Dashboard Indexes&amp;Page=Auto-Index&quot;&gt;Auto-Index&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.21 Custom Dashboard Indexes&amp;Page=Catalog Browse&quot;&gt;Catalog Browse&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.21 Custom Dashboard Indexes&amp;Page=Content Review&quot;&gt;Content Review&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.21 Custom Dashboard Indexes&amp;Page=Fast App Previewer&quot;&gt;Fast App Previewer&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.21 Custom Dashboard Indexes&amp;Page=Html Index&quot;&gt;Html Index&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.21 Custom Dashboard Indexes&amp;Page=Text Blocks Index&quot;&gt;Text Blocks Index&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 47" collapsible="true" showSectionTitle="true" duid="7anko87ecbelikka" layoutType="bestFit"><saw:caption><saw:text>6.30 Action Framework</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 47" duid="s87eahnlbhgdcc9s"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.30 Actions&amp;Page=APEX Commentary&quot;&gt;APEX Commentary&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.30 Actions&amp;Page=Dashboard Annotation&quot;&gt;Dashboard Annotation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.30 Actions&amp;Page=Insight Into Action&quot;&gt;Insight Into Action&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.30 Actions&amp;Page=Customer View&quot;&gt;Customer View&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.30 Actions&amp;Page=Investigate to Invest&quot;&gt;Investigate to Invest&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 67" showSectionTitle="true" duid="asg90h5f9fg4n1af" layoutType="bestFit"><saw:caption><saw:text>6.60 Accessibility</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 62" duid="gtntlbkh2uml9qj6"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.60 Accessibility&amp;Page=Default Design (Non-Accessible)&quot;&gt;Default Design (Non-Accessible)&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.60 Accessibility&amp;Page=Examples for Keyboard-Only Navigation&quot;&gt;Examples for Keyboard-Only Navigation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.60 Accessibility&amp;Page=Designing for Sighted Accessibility Users&quot;&gt;Designing for Sighted Accessibility Users&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.60 Accessibility&amp;Page=Designing for Accessible Navigation&quot;&gt;Designing for Accessible Navigation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.60 Accessibility&amp;Page=Manual Visibility Selection&quot;&gt;Manual Visibility Selection&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.60 Accessibility&amp;Page=Automatic Visibility Selection&quot;&gt;Automatic Visibility Selection&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.60 Accessibility&amp;Page=Hidden Instructions for Screen Reader Users&quot;&gt;Hidden Instructions for Screen Reader Users&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.60 Accessibility&amp;Page=Accessibility Designs&quot;&gt;Accessibility Designs&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.60 Accessibility&amp;Page=Global Visibility Selection&quot;&gt;Global Visibility Selection&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec width="20%" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 5" duid="dt9h825j40vllq86" frozen="false" canFreeze="false" layoutType="specificSize"><sawd:dashboardSection name="Section 11" showHeading="true" collapsible="false" showSectionTitle="true" duid="5rrqnikgqq2kbnvo" layoutType="bestFit"><saw:caption><saw:text>07. Semantic Layer Design</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardSection><sawd:dashboardSection name="Section 56" showSectionTitle="true" duid="24i9vtnjnpmstu1l" layoutType="bestFit"><saw:caption><saw:text>7.10 Logical Modeling</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 56" duid="sl9d5ebehsio7jqs"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.10 Logical Modeling&amp;Page=Ragged Hier&quot;&gt;Ragged Hierarchy&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.10 Logical Modeling&amp;Page=Lookups&quot;&gt;Lookup Tables&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.10 Logical Modeling&amp;Page=Descriptor ID&quot;&gt;Descriptor ID&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.10 Logical Modeling&amp;Page=Currency&quot;&gt;Currency&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.10 Logical Modeling&amp;Page=Fiscal Cal&quot;&gt;Fiscal Calendar&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.10 Logical Modeling&amp;Page=Canonical Time&quot;&gt;Canonical Time&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.10 Logical Modeling&amp;Page=LTS Filtering&quot;&gt;LTS (Logical Table Source) Filtering&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.10 Logical Modeling&amp;Page=Preserve Dim Members&quot;&gt;Preserve All Dimension Members in Results&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 54" showSectionTitle="true" duid="ok5fjh57l7t2otc7" layoutType="bestFit"><saw:caption><saw:text>7.20 Logical Aggregations</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingBottom="0" paddingLeft="0" paddingRight="0" paddingTop="0"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 55" duid="n9hltpmiilp3bqmc"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt; &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.20 Logical Aggregations&amp;Page=Hierarchical Measures&quot;&gt;Hierarchical Measures&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.20 Logical Aggregations&amp;Page=Hierarchical Functions&quot;&gt;Hierarchical Functions&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.20 Logical Aggregations&amp;Page=Value Bsd Hier Agg&quot;&gt;Value Based Hierarchies Agg&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.20 Logical Aggregations&amp;Page=Non Additive&quot;&gt;Non Additive Aggregations&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.20 Logical Aggregations&amp;Page=Dynamic Time Series&quot;&gt;Dynamic Time Series&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.20 Logical Aggregations&amp;Page=Time Span&quot;&gt;Time Span Calculations&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.20 Logical Aggregations&amp;Page=Allocated Metrics&quot;&gt;Allocated Metrics&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.20 Logical Aggregations&amp;Page=Level Based&quot;&gt;Level Based Measures&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.20 Logical Aggregations&amp;Page=Indexcol&quot;&gt;Indexcol Function&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.20 Logical Aggregations&amp;Page=LTS Contextual Aggr&quot;&gt;LTS Contextual Aggr&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 28" showSectionTitle="true" duid="nslslfqhekfe4phm" layoutType="bestFit"><saw:caption><saw:text>7.30 Physical Layer Features</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 31" duid="2n8gredrmfnpur3t"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.30 Physical Layer Features&amp;Page=Dynamic Table Name&quot;&gt;Dynamic Table Name&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.30 Physical Layer Features&amp;Page=Many To Many&quot;&gt;Many To Many&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.30 Physical Layer Features&amp;Page=Writeback&quot;&gt;Writeback to Relational&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.30 Physical Layer Features&amp;Page=Snowflakes&quot;&gt;Snowflakes Tables&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.30 Physical Layer Features&amp;Page=Fact Attributes&quot;&gt;Fact Attributes&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.30 Physical Layer Features&amp;Page=Deactivate Physical Source&quot;&gt;Deactivate Physical Source&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec width="20%" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:dashboardSection name="Section 44" showSectionTitle="true" duid="n8h9pr227scelod1" layoutType="bestFit"><saw:caption><saw:text>7.31 RPD Aggregation and Fragmentation</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 42" duid="kseo0dcu6970s9mq"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.31 Federation and Fragmentation&amp;Page=Dashboard Federation&quot;&gt;Dashboard Federation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.31 Federation and Fragmentation&amp;Page=Federated Sources&quot;&gt;Federated Sources&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.31 Federation and Fragmentation&amp;Page=Time based Fragmenation&quot;&gt;Time based Fragmenation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.31 Federation and Fragmentation&amp;Page=Dim Based Fragmented Sources&quot;&gt;Dim Based Fragmented Sources&lt;/a&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.32 Aggregate Sources&amp;Page=Aggregate Sources&quot;&gt;Aggregate Sources&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.32 Aggregate Sources&amp;Page=Sources Navigation&quot;&gt;Sources Navigation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.32 Aggregate Sources&amp;Page=Multiple Aggr Sources&quot;&gt;Multiple Aggr Sources&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.32 Aggregate Sources&amp;Page=Aggr Source Types&quot;&gt;Aggr Source Types&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.32 Aggregate Sources&amp;Page=Aggr Tables Creation&quot;&gt;Aggr Tables Creation&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.32 Aggregate Sources&amp;Page=Aggregation Scripts&quot;&gt;Aggregation Scripts&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.32 Aggregate Sources&amp;Page=Data Density&quot;&gt;Data Density&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.32 Aggregate Sources&amp;Page=Data Inflators&quot;&gt;Data Inflators&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.32 Aggregate Sources&amp;Page=Advisor&quot;&gt;Advisor&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 66" collapsible="true" showSectionTitle="true" duid="u094s2k8121imv4r" layoutType="bestFit"><saw:caption><saw:text>7.40 Essbase Multidimensional Sources</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 61" duid="hinmkm010g6anvr3"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Simple Report&quot;&gt;Simple Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Drill to Relational&quot;&gt;Drill to Relational&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Sources Blending&quot;&gt;Sources Blending&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Navigate to Relational&quot;&gt;Navigate to Relational&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Essb Functions&quot;&gt;Essbase Functions&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Measures Hierarchy&quot;&gt;Measures Hierarchy&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Relational Lookup&quot;&gt;Relational Lookup&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Asynch I&quot;&gt;Asynchronous I&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Asynch II&quot;&gt;Asynchronous II&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=EPM Configuration&quot;&gt;EPM Configuration&lt;/a&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.41 Oracle Essbase Interaction&amp;Page=Writeback&quot;&gt;Essbase Writeback&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.41 Oracle Essbase Interaction&amp;Page=Writeback from Tbl&quot;&gt;Writeback from Table&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.41 Oracle Essbase Interaction&amp;Page=Dynamic Source&quot;&gt;Dynamic Source&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.41 Oracle Essbase Interaction&amp;Page=Dynamic Alias&quot;&gt;Dynamic Alias&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.41 Oracle Essbase Interaction&amp;Page=Cube Spin Off&quot;&gt;Cube Spin Off&lt;/a&gt;&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 33" showSectionTitle="true" duid="nackpcvlha6jd1ov" layoutType="bestFit"><saw:caption><saw:text>7.42 Oracle OLAP Multidimensional Source</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" wrapText="true" paddingBottom="0"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 20" duid="ddte0jtgoq269u5i"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.42 Oracle OLAP&amp;Page=Simple Report&quot;&gt;Simple Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.42 Oracle OLAP&amp;Page=Sources Blending&quot;&gt;Sources Blending&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.42 Oracle OLAP&amp;Page=Drill to Relational&quot;&gt;Drill to Relational&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.42 Oracle OLAP&amp;Page=Navigate to Relational&quot;&gt;Navigate to Relational&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.42 Oracle OLAP&amp;Page=Relational Lookup&quot;&gt;Relational Lookup&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.42 Oracle OLAP&amp;Page=Measures Hierarchy&quot;&gt;Measures Hierarchy&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.42 Oracle OLAP&amp;Page=Forecasting&quot;&gt;Forecasting&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.42 Oracle OLAP&amp;Page=Alerting&quot;&gt;Alerting&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.42 Oracle OLAP&amp;Page=Time Series&quot;&gt;Time Series&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 8" showSectionTitle="true" duid="alui2d1lj5lscoai" layoutType="bestFit"><saw:caption><saw:text>7.50 Oracle TimesTen</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 3" duid="6n5asajgsi1v4p38"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.50 Oracle TimesTen&amp;Page=Simple Report&quot;&gt;Simple Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.50 Oracle TimesTen&amp;Page=Sources Blending&quot;&gt;Sources Blending&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.50 Oracle TimesTen&amp;Page=Drill to Relational&quot;&gt;Drill to Relational&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.50 Oracle TimesTen&amp;Page=Navigate to Relational&quot;&gt;Navigate to Relational&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 9" showSectionTitle="true" duid="f7cfopa37rcvr8g3" layoutType="bestFit"><saw:caption><saw:text>7.60 Flat Files Source</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 2" duid="fhhk0camuj0vo79k"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.60 Flat Files Source&amp;Page=Simple Report&quot;&gt;Simple Report&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.60 Flat Files Source&amp;Page=Sources Blending&quot;&gt;Sources Blending&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.60 Flat Files Source&amp;Page=Drill to Relational&quot;&gt;Drill to Relational&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.60 Flat Files Source&amp;Page=Navigate to Relational&quot;&gt;Navigate to Relational&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.60 Flat Files Source&amp;Page=Relational Lookup&quot;&gt;Relational Lookup&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 90" showSectionTitle="true" duid="f46pohvrnsjj71nj" layoutType="bestFit"><saw:caption><saw:text>7.90 NQS ODBC Procedures</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="15" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 81" duid="pfkbhpseiaj817hn"><sawd:HTML fmt="html">
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;
+&lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.90 NQS ODBC Procedures&amp;Page=All ODBC Procedures&quot;&gt;All ODBC Procedures&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.90 NQS ODBC Procedures&amp;Page=List of ODBC Procedures&quot;&gt;List of ODBC Procedures&lt;/a&gt;,&amp;nbsp;&amp;nbsp;
+ &lt;a target=_blank class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.90 NQS ODBC Procedures&amp;Page=Using ODBC Proc to List Repository Variables&quot;&gt;Using ODBC Proc to List Repository Variables&lt;/a&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 55" showHeading="true" duid="05rp9hn098tsluj1" showSectionTitle="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>More, see Main Index page ...</saw:text></saw:caption><saw:displayFormat><saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderPosition="none"/></saw:displayFormat></sawd:dashboardSection><sawd:dashboardSection name="Section 34" showSectionTitle="true" duid="4tdo7nehv030179u" layoutType="bestFit"><saw:caption><saw:text>...</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="5" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 21" duid="n6c02m1htd2ca14n"><sawd:HTML fmt="html">[br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 15" collapsible="false" duid="rag2b5ee85ka4rfk" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="nhr9634olb9ovhj5"><sawd:HTML fmt="html">&lt;script&gt;handleSectionAction(&quot;minimize&quot;);&lt;/script&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	
+	
+	
+</sawd:dashboardPage>

@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/a. Overview/Data Models/SFO Passenger Data Model.xdm" cache="true"/>
+   <description>
+      <![CDATA[Data%20Model:%20SFO%20Passenger%20Count%20Data%20Model%0ALayouts:%20BI%20Publisher%20(XPT)%20layouts%0AFeatures:%20List%20Selectors%20(Filter%20lists)]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Description">
+      <template label="Insight" url="Insight_bw.xpt" type="xpt" outputFormat="analyze" defaultFormat="analyze" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Insight-2" url="Insight - B2.xpt" type="xpt" outputFormat="analyze" defaultFormat="analyze" locale="en_US" active="false" viewOnline="false"/>
+      <template label="Airline by Year" url="Airline by Year - finished.xpt" type="xpt" outputFormat="analyze" defaultFormat="analyze" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Detail" url="Trend - B.xpt" type="xpt" outputFormat="analyze" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Pivot Table" url="Pivot Table - B.xpt" type="xpt" outputFormat="analyze" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="iPad" url="iPad.xpt" type="xpt" outputFormat="analyze" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="iPhone" url="iPhone.xpt" type="xpt" outputFormat="analyze" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Description" url="Report Description.rtf" type="rtf" outputFormat="html,pdf" defaultFormat="html" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

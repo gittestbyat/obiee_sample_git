@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c6b31b49912ddcf39">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cca9a78632e386981">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P2  Product Type&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb6b720a9a8640874">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c88856b09797b4d8d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;31  # of Orders  (Cnt Distinct)&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce331701a63cba70b">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;36  Profit Ratio&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               
+               <saw:formatSpec suppress="repeat" wrapText="true"/><saw:conditionalDisplayFormats>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="lessOrEqual">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="ce331701a63cba70b"/>
+                              <sawx:expr xsi:type="xsd:decimal">-10</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec wrapText="true" noImage="false" image="fmap:meters/status/priority/04_high.png"/></saw:formatRule></saw:conditionalDisplayFormat>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="greaterOrEqual">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="ce331701a63cba70b"/>
+                              <sawx:expr xsi:type="xsd:decimal">20</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec backgroundColor="#CCFFCC" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ccffc7c743c309300">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;30  Profit Margin&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Office Regions&quot;.&quot;D50  Region&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!1"/>
+               <saw:cvCell viewName="dvtchart!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="gt_row" grandTotalPosition="after"/></saw:displayGrandTotals>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c6b31b49912ddcf39">
+                     <saw:levels>
+                        <saw:level>
+                           <saw:displaySubTotal id="st_c6b31b49912ddcf39" subTotalPosition="after"/></saw:level></saw:levels></saw:edgeLayer>
+                  <saw:edgeLayer type="column" columnID="cca9a78632e386981"/>
+                  <saw:edgeLayer type="column" columnID="cb6b720a9a8640874"/>
+                  <saw:edgeLayer type="column" columnID="c88856b09797b4d8d"/>
+                  <saw:edgeLayer type="column" columnID="ce331701a63cba70b"/>
+                  <saw:edgeLayer type="column" columnID="ccffc7c743c309300"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges>
+         <saw:sectionContent>
+            <saw:displayFormat>
+               <saw:formatSpec/></saw:displayFormat></saw:sectionContent></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="bubble" subtype="default" renderFormat="default" mode="online" animateOnDisplay="false">
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="350" width="450">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:title mode="custom">
+               <saw:caption>
+                  <saw:text>Revenue by Profit Matrix (Bubble Size = Profit Margin)</saw:text></saw:caption></saw:title></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="c6b31b49912ddcf39"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="z">
+                  <saw:columnRef columnID="ccffc7c743c309300"/></saw:column>
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="ce331701a63cba70b"/></saw:column>
+               <saw:column measureType="x">
+                  <saw:columnRef columnID="cb6b720a9a8640874"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:seriesGenerator>
+                  <saw:columnRef columnID="cca9a78632e386981"/></saw:seriesGenerator>
+               <saw:measureLabels/></saw:seriesGenerators>
+            <saw:page/></saw:selections>
+         <saw:legendFormat position="default" transparentFill="true"/></saw:view></saw:views></saw:report>

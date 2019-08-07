@@ -1,0 +1,42 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20Source%20-%20XML%20data%20file;%20Features:%20Parameters%20&%20LOVs%20(for%20passing%20group_by%20value%20to%20the%20RTF%20layout)]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Customer Orders" type="simple">
+         <file dataSourceRef="demo files">CustOrders_DynamicGrouping.xml</file>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="Customer Orders"/>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets>
+      <valueSet id="groupby-list">
+         <nvPairs>
+            <nvPair label="Customer" value="CUSTOMER_NAME"/>
+            <nvPair label="City" value="CITY"/>
+            <nvPair label="State" value="STATE_PROVINCE"/>
+            <nvPair label="Channel" value="ORDER_MODE"/>
+         </nvPairs>
+      </valueSet>
+   </valueSets>
+   <parameters>
+      <parameter name="P_GROUPBY" defaultValue="CITY" dataType="xsd:string">
+         <select label="Select Data Grouping:" valueSet="groupby-list" multiple="false" all="false" allValue="null"/>
+      </parameter>
+   </parameters>
+   <bursting/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="Customer Orders" left="274px" top="17px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

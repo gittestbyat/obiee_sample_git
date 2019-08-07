@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c76807cd32af66b6d"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R64  Latitude&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="6" maxDigits="6" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf0e28a32c711944a"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R65  Longitude&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="6" maxDigits="6" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c5a88b13abb8b2a7b"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R68  Geo Establisht&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c5202b88b2c4ee900"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{metric==&#39;Billed Quantity&#39;? &#39;&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;&#39;:&#39;&quot;Base Facts&quot;.&quot;1- Revenue&quot;&#39;}</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>1- Revenue</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c879fe00e387f019e"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R66  Lat_Long&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c9745436d332c72a3"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R60  Address_Key&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R55  City&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">San Francisco</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">2013</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!2"><saw:displayFormat><saw:formatSpec vAlign="bottom"/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="htmlview!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1" colSpan="2"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:tableView" name="tableView!1" rowsPerPage="900"><saw:edges><saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers/></saw:edge><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c76807cd32af66b6d"/><saw:edgeLayer type="column" columnID="cf0e28a32c711944a"/><saw:edgeLayer type="column" columnID="c879fe00e387f019e"/><saw:edgeLayer type="column" columnID="c5a88b13abb8b2a7b"/><saw:edgeLayer type="column" columnID="c9745436d332c72a3"/><saw:edgeLayer type="column" columnID="c5202b88b2c4ee900"/></saw:edgeLayers><saw:columnOrder><saw:columnOrderRef columnID="c5202b88b2c4ee900" direction="descending"/></saw:columnOrder></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script&gt;
+var repData= &#39;</saw:text></saw:caption></saw:prefix><saw:narrative rowCount="5000"><saw:caption fmt="html"><saw:text>[@{c76807cd32af66b6d},@{cf0e28a32c711944a},&quot;@{c5a88b13abb8b2a7b}&quot;,@{c5202b88b2c4ee900}]</saw:text></saw:caption></saw:narrative><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep><saw:postfix><saw:caption fmt="html"><saw:text>&#39;;
+renderHeatMap(repData);
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;script src=&quot;/mvdemo/jslib/v2/jquery/jquery-1.7.2.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mvdemo/gv.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mvdemo/common.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mapviewer/jslib/v2/jquery/colorpicker/js/colorpicker.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mapviewer/jslib/v2/jquery/colorpicker/js/eye.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mapviewer/jslib/v2/jquery/colorpicker/js/layout.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mapviewer/jslib/v2/jquery/colorpicker/js/utils.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;/mapviewer/jslib/v2/jquery/colorpicker/css/colorpicker.css&#39;/&gt;
+
+&lt;script&gt;
+var heatLayer1,  heatLayer2;
+var pLayer1, pLayer2;
+var map1, map2, legend;
+var baseURL= &quot;http://&quot;+document.location.host+&quot;/mapviewer&quot;;;
+OM.gv.setResourcePath(&quot;/mapviewer/jslib/v2/&quot;);  
+
+function addPoints(darray,layer){
+  /*lat,long,estb,metric*/
+  for (i=0;i&lt;darray.length; i++){
+  		var fid = i;
+  		var mpoint = new OM.geometry.Point(darray[i][1], darray[i][0],8307);
+  		var f_attr = {attributes :{&quot;NAME&quot;:darray[i][2], &quot;METRIC&quot;:darray[i][3]}};
+  		var feature = new OM.Feature(fid,mpoint,f_attr);  
+  		layer.addFeature(feature);
+  	}
+}
+
+function showMap1(darray){
+  map1 = new OM.Map(document.getElementById(&#39;map1&#39;), {mapviewerURL: baseURL}) ;
+  map1.addLayer(new OM.layer.ElocationTileLayer(&quot;background&quot;) ) ;  
+  var style = getStyle(&quot;metric&quot;);
+  heatLayer1 = new OM.layer.VectorLayer(&quot;heat&quot;,{
+      def:
+          {
+          type: OM.layer.VectorLayer.TYPE_LOCAL
+      },
+      renderingStyle :style,
+      styleAttributes:[&quot;METRIC&quot;]
+  });
+  addPoints(darray,heatLayer1);
+  heatLayer1.zoomToTheme();
+  map1.addLayer(heatLayer1);
+  
+  var marker = new OM.style.Marker({src: &quot;/mapviewer/icons/BALL_sel.png&quot;, width:7, height:7});                
+  pLayer1 = new OM.layer.VectorLayer(&quot;point&quot;,{
+      def:
+      {
+          type: OM.layer.VectorLayer.TYPE_LOCAL
+      },
+      renderingStyle : marker
+  });
+  addPoints(darray,pLayer1);
+  map1.addLayer(pLayer1);
+  showLegend(getStyleConfig(&quot;metric&quot;));
+  map1.init();
+}
+
+function showMap2(darray){
+  map2 = new OM.Map(document.getElementById(&#39;map2&#39;), {mapviewerURL: baseURL}) ;
+  map2.addLayer(new OM.layer.ElocationTileLayer(&quot;background&quot;) ) ;  
+  var style = getStyle();
+  heatLayer2 = new OM.layer.VectorLayer(&quot;heat&quot;,{
+      def:
+          {
+          type: OM.layer.VectorLayer.TYPE_LOCAL
+      },
+      renderingStyle :style
+  });
+  addPoints(darray,heatLayer2);
+  map2.addLayer(heatLayer2);
+  
+  var marker = new OM.style.Marker({src: &quot;/mapviewer/icons/BALL_sel.png&quot;, width:7, height:7});                
+  pLayer2 = new OM.layer.VectorLayer(&quot;point&quot;,{
+      def:
+      {
+          type: OM.layer.VectorLayer.TYPE_LOCAL
+      },
+      renderingStyle : marker
+  });
+  addPoints(darray,pLayer2);
+  map2.addLayer(pLayer2);
+  map2.init();
+}
+
+function applyStyle()
+{
+  heatLayer1.setRenderingStyle(getStyle(&quot;metric&quot;));
+  showLegend(getStyleConfig(&quot;metric&quot;));
+  heatLayer2.setRenderingStyle(getStyle());
+}
+
+function initListener()
+{
+  $(&quot;#color1, #color2, #color3, #color4, #color5, #color6, #color7, #color8&quot;).ColorPicker({
+    	color: &#39;#000000&#39;,
+    	onShow: function (colpkr) {
+                console.log(colpkr);
+    		$(colpkr).fadeIn(500);
+    		return false;
+    	},
+    	onHide: function (colpkr) {
+    		$(colpkr).fadeOut(500);
+    		return false;
+    	},
+    	onSubmit: function(hsb, hex, rgb, el) {
+    		$(el).css(&quot;background-color&quot;, &#39;#&#39;+hex);
+                $(el).ColorPickerHide();
+    	}
+    })
+  
+  $(&quot;#point&quot;).click(function(evt){
+    pLayer1.setVisible(this.checked);
+    pLayer2.setVisible(this.checked);
+  })
+}
+function getStyleConfig(type)
+{
+  //var colors = [&quot;#C6DBEF&quot;,&quot;#6BAED6&quot;,&quot;#008fff&quot;,&quot;#00abff&quot;,&quot;#00d5ff&quot;,&quot;#00ffff&quot;,&quot;#00ff7f&quot;,&quot;#00ff00&quot;,&quot;#7fff00&quot;,&quot;#ffff00&quot;,&quot;#ffd500&quot;,&quot;#ffab00&quot;,&quot;#ff7f00&quot;,&quot;#ff5600&quot;,&quot;#ff2b00&quot;, &quot;#ff0000&quot;, &quot;#A50F15&quot;];
+  var colors = [];
+  for(var i=1; i&lt;=8; i++)
+  {
+    colors.push($(&quot;#color&quot;+i).css(&quot;background-color&quot;))
+  }
+  var radius = parseFloat($(&quot;#radius&quot;).val());
+  var unit = $(&quot;#unit&quot;).val();
+  var factor = parseInt($(&quot;#factor&quot;).val());
+  var opacity = parseFloat($(&quot;#opacity&quot;).val());
+  var config = {
+    spotlightRadius:radius,
+    lengthUnit:unit,
+    colorStops: colors,
+    opacity:opacity,                   
+    sampleFactor: factor 
+  }
+  if (type==&quot;metric&quot;)
+  {
+    var min = parseFloat($(&quot;#min&quot;).val());
+    var max = parseFloat($(&quot;#max&quot;).val());
+    if (isNaN(min)) 
+    {
+      config.minValue = 500;
+      $(&quot;#min&quot;).val(500);
+    }
+    else
+      config.minValue = min;
+    if (isNaN(max)) 
+    {
+      config.maxValue = 2500;
+      $(&quot;#max&quot;).val(2500);
+    }
+    else
+      config.maxValue = max;
+  }
+  return config;
+}
+
+function getStyle(type){
+  var heatStyle = new OM.style.HeatMap(getStyleConfig(type));
+  return heatStyle;
+}
+function synchronize()
+{
+  var mEvt = OM.event.MapEvent
+  map1.on(mEvt.MAP_AFTER_ZOOM, function(evt){
+    map2.setMapCenterAndZoomLevel(map1.getMapCenter(), evt.afterZoomLevel)
+  })
+  map1.on(mEvt.MAP_RECENTERED, function(evt){
+    map2.setMapCenter(map1.getMapCenter())
+  })
+  map2.on(mEvt.MAP_AFTER_ZOOM, function(evt){
+    map1.setMapCenterAndZoomLevel(map2.getMapCenter(), evt.afterZoomLevel)
+  })
+  map2.on(mEvt.MAP_RECENTERED, function(evt){
+    map1.setMapCenter(map2.getMapCenter())
+  })
+}
+
+function showLegend(config)
+{
+  var max = config.maxValue, min = config.minValue, colors = config.colorStops;
+  var len=8, step = (max-min)/len;
+  var str = &quot;&lt;table style=&#39;width:150px;&#39;&gt;&quot;;
+  str += &quot;&lt;tr&gt;&lt;td&gt;&lt;div style=&#39;width:15px;height:15px;background-color:&quot;+colors[len-1]+&quot;&#39;/&gt;&lt;/td&gt;&lt;td&gt;&quot;+max+&quot; or more&lt;/td&gt;&lt;/tr&gt;&quot;;
+  for(var i=1; i&lt;len-1; i++)
+  {
+    var maxValue = max - i*step;
+    var minValue = maxValue-step;
+    var pos = parseInt(i*255/(this.numClass+1))*4;
+    str += &quot;&lt;tr&gt;&lt;td&gt;&lt;div style=&#39;width:15px;height:15px;background-color:&quot;+colors[len-i-1]+&quot;&#39;/&gt;&lt;/td&gt;&lt;td&gt;&quot;+minValue+&quot;--&quot;+maxValue+&quot;&lt;/td&gt;&lt;/tr&gt;&quot;
+  }
+  str += &quot;&lt;tr&gt;&lt;td&gt;&lt;div style=&#39;width:15px;height:15px;background-color:&quot;+colors[0]+&quot;&#39;/&gt;&lt;/td&gt;&lt;td&gt;&quot;+min+&quot;--&quot;+minValue+&quot;&lt;/td&gt;&lt;/tr&gt;&quot;
+
+  str += &quot;&lt;/table&gt;&quot;;
+  if (legend)
+    map1.removeMapDecoration(legend);
+  legend = new OM.control.MapDecoration(str,{offsetX:10, offsetY:10, draggable:false, collapsible: true, contentStyle:{&quot;opacity&quot;:&quot;0.8&quot;,&quot;backgroundColor&quot;:&quot;white&quot;}});
+  map1.addMapDecoration(legend);
+}
+
+
+function renderHeatMap(repData){
+	var darray=eval(&#39;[&#39;+repData+&#39;]&#39;);
+	initListener();
+    showMap1(darray);
+    showMap2(darray);
+    synchronize();
+}
+&lt;/script&gt;
+
+
+&lt;table border=0&gt;
+&lt;tr&gt;&lt;td valign=top&gt;
+&lt;b&gt;Metric based (@{metric}{Revenue})&lt;/b&gt;
+&lt;DIV id=map1 style=&quot;width:550px;height:650px;padding:10px;border:1px solid grey;&quot; &gt;&lt;/DIV&gt;
+&lt;br/&gt;
+min:&lt;input id=&quot;min&quot; type=&quot;text&quot; value=&quot;0&quot;&gt;&lt;/input&gt;
+max:&lt;input id=&quot;max&quot; type=&quot;text&quot; value=&quot;50000&quot;&gt;&lt;/input&gt;
+&lt;/td&gt;&lt;td valign=top&gt;
+&lt;b&gt;Density based (classical)&lt;/b&gt;
+&lt;DIV id=map2 style=&quot;width:550px;height:650px;padding:10px;border:1px solid grey;&quot;&gt;&lt;/DIV&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!2"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;table style=&quot;cell-padding:5px&quot;&gt;
+            &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Radius:&lt;/td&gt;&lt;td&gt;&lt;input value=&quot;25&quot; id=&quot;radius&quot; type=&quot;text&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Radius Unit:&lt;/td&gt;&lt;td&gt;
+                &lt;select id=&quot;unit&quot;&gt;&lt;option value=&quot;pixel&quot;&gt;Pixel&lt;/option&gt;&lt;option value=&quot;mile&quot;&gt;Mile&lt;/option&gt;&lt;option value=&quot;kilometer&quot;&gt;KM&lt;/option&gt;&lt;/select&gt;
+              &lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Sample Factor:&lt;/td&gt;&lt;td&gt;&lt;input value=&quot;4&quot; id=&quot;factor&quot; type=&quot;text&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;Color Stops:&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;
+                &lt;table id=&quot;color&quot;&gt;&lt;tbody&gt;&lt;tr&gt; 
+                    &lt;td&gt;&lt;div style=&quot;height:28px;width:28px;background: url(&#39;/mapviewer/jslib/v2/jquery/colorpicker/images/select2.png&#39;) repeat scroll center center transparent;background-color:#C6DBEF;&quot; id=&quot;color1&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;div style=&quot;height:28px;width:28px;background: url(&#39;/mapviewer/jslib/v2/jquery/colorpicker/images/select2.png&#39;) repeat scroll center center transparent;background-color:#008fff&quot; id=&quot;color2&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;div style=&quot;height:28px;width:28px;background: url(&#39;/mapviewer/jslib/v2/jquery/colorpicker/images/select2.png&#39;) repeat scroll center center transparent;background-color:#00d5ff&quot; id=&quot;color3&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;div style=&quot;height:28px;width:28px;background: url(&#39;/mapviewer/jslib/v2/jquery/colorpicker/images/select2.png&#39;) repeat scroll center center transparent;background-color:#00ff7f&quot; id=&quot;color4&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;div style=&quot;height:28px;width:28px;background: url(&#39;/mapviewer/jslib/v2/jquery/colorpicker/images/select2.png&#39;) repeat scroll center center transparent;background-color:#ffff00&quot; id=&quot;color5&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;div style=&quot;height:28px;width:28px;background: url(&#39;/mapviewer/jslib/v2/jquery/colorpicker/images/select2.png&#39;) repeat scroll center center transparent;background-color:#ffab00&quot; id=&quot;color6&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;div style=&quot;height:28px;width:28px;background: url(&#39;/mapviewer/jslib/v2/jquery/colorpicker/images/select2.png&#39;) repeat scroll center center transparent;background-color:#ff2b00&quot; id=&quot;color7&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;div style=&quot;height:28px;width:28px;background: url(&#39;/mapviewer/jslib/v2/jquery/colorpicker/images/select2.png&#39;) repeat scroll center center transparent;background-color:#A50F15&quot; id=&quot;color8&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                  &lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+              &lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Global Opacity:&lt;/td&gt;&lt;td&gt;&lt;input value=&quot;0.65&quot; id=&quot;opacity&quot; type=&quot;text&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;input checked=&quot;&quot; id=&quot;point&quot; type=&quot;checkbox&quot;&gt;Show point locations&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;
+            &lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=right&gt;
+&lt;br/&gt;
+&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a href=&quot;javascript:applyStyle()&quot;&gt;Apply Style&lt;/a&gt;&lt;/span&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;
+          &lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:compoundView" name="compoundView!2"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view></saw:views></saw:report>

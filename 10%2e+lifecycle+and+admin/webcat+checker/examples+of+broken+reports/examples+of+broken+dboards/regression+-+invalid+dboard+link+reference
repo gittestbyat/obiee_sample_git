@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="1eseii8ratp8mvmc" personalSelections="false" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<saw:pageProps orientation="portrait" printRows="visible">
+		<saw:pageHeader show="true"/>
+		<saw:pageFooter showOnDashboard="true" show="true">
+			<saw:zone position="top">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" borderColor="#9ABFDC" borderPosition="none" borderStyle="thick" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="left">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="left" width="33%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_207">
+					<saw:text>Samples Sales</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="center">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" width="34%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_208">
+					<saw:text>Page : @{savedName}</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="right">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="right" width="33%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_209">
+					<saw:text>@{pageNumber}</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="bottom">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" fontSize="0" fontStyle="regular" height="0"/>
+				</saw:displayFormat>
+			</saw:zone>
+		</saw:pageFooter>
+	</saw:pageProps>
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_216">&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Regression
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_215">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" showHeading="false" duid="dudpiidqt2i0p1f4" drillInline="true" collapsible="false" showSectionTitle="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_204">
+				<saw:text>Prompts</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" vAlign="middle"/>
+			</saw:displayFormat>
+			<sawd:globalFilterView name="GFP 1" path="/shared/2. Functional Examples/Descriptive Stats/Regression/PCol - Regression" duid="26tk8r69saumvois" scope="dashboardPage"><saw:caption><saw:text>PCol - Regression</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection><sawd:dashboardSection name="Section 3" collapsible="false" showSectionTitle="true" showHeading="false" duid="gbjaon94okkfaegc" layoutType="bestFit"><saw:caption><saw:text>See Also :</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" vAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="5n6gcpvrueoufd8v"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;
+&lt;font size=1&gt;&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=/shared/8. Integration Features/_portal/8.10 Oracle DB&amp;Page=Linear Regression&quot;&gt;Linear Regression&lt;/a&gt;,[br/]
+&lt;font size=1&gt;&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=/shared/8. Integration Features/_portal/8.4 Oracle Datamining&amp;Page=Regression&quot;&gt;Regression Visuals&lt;/a&gt;[br/]
+&lt;font size=1&gt;&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=/shared/8. Integration Features/_portal/8.4 Oracle Datamining&amp;Page=Regression Model&quot;&gt;Regression Model&lt;/a&gt;[br/]
+&lt;font size=1&gt;&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=/shared/8. Integration Features/_portal/8.4 Oracle Datamining&amp;Page=Results Map&quot;&gt;Regression Results Heatmap&lt;/a&gt;
+&lt;/font&gt;
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="4l6e8jbp5nhvichm" frozen="false" canFreeze="false" layoutType="minimumSize"><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderPosition="none" width="200"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 2" showHeading="false" duid="d0bh29v2b2nspfb4" collapsible="false" drillInline="true" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_205">
+				<saw:text>Reports</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 2" display="embed" showView="" links="" duid="i083arbvjf6ndc1c"><saw:caption><saw:text>Metrics Regression</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/2. Functional Examples/Descriptive Stats/Regression/Metrics Regression"/></sawd:reportView><sawd:reportView name="Report 0" display="embed" showView="" links="" duid="3o1tt5pioasdf3f6"><saw:caption><saw:text>Linear Regression</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/2. Functional Examples/Descriptive Stats/Regression/Linear Regression"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cc8b948b78d916cb4"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c5afac71078adf755"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cb39b78d079dbb54e">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T00 Calendar Date&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c2569d8904d702a81">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce1cb1bbc6b847906">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Alternate Calendars&quot;.&quot;T45 Fscl Year&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" fontColor="#CC3333" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec fontColor="#CC3333" wrapText="true"/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/></saw:displayFormat></saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/></saw:displayFormat><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/></saw:displayFormat></saw:title></saw:view>
+      
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="lineTimeSeries" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="true" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">
+            <saw:style barStyle="rectangle" lineStyle="curve" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="280" width="550" showGradient="true">
+            <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:title mode="custom">
+               <saw:caption/></saw:title>
+            <saw:gridlines default="false">
+               <saw:horizontal>
+                  <saw:major visible="false" color="#000000"/>
+                  <saw:minor visible="false" color="#CCCCCC"/></saw:horizontal>
+               <saw:vertical>
+                  <saw:major visible="true" color="#000000"/>
+                  <saw:minor visible="false" color="#CCCCCC"/></saw:vertical></saw:gridlines></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="cb39b78d079dbb54e"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="c2569d8904d702a81"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:seriesGenerator>
+                  <saw:columnRef columnID="ce1cb1bbc6b847906"/></saw:seriesGenerator>
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+         <saw:legendFormat position="top" transparentFill="true"/>
+         <saw:axesFormats syncAxis="true">
+            <saw:axisFormat axis="Y1">
+               <saw:title mode="auto">
+                  <saw:caption/></saw:title>
+               <saw:scale scaleValues="custom" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false" min="0" max="320000"/></saw:axisFormat>
+            <saw:axisFormat axis="X">
+               <saw:title mode="auto">
+                  <saw:caption/></saw:title>
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats><saw:seriesFormatGroup name="lineTimeSeries"><saw:seriesFormatRule><saw:seriesCondition position="1"/><saw:visualFormats><saw:visualFormat lineStyle="default" lineWidth="1" symbol="off"/></saw:visualFormats></saw:seriesFormatRule><saw:seriesFormatRule><saw:seriesCondition position="2"/><saw:visualFormats><saw:visualFormat lineStyle="default" lineWidth="2" symbol="off"/></saw:visualFormats></saw:seriesFormatRule><saw:seriesFormatRule><saw:seriesCondition position="3"/><saw:visualFormats><saw:visualFormat lineStyle="default" lineWidth="2" symbol="off"/></saw:visualFormats></saw:seriesFormatRule><saw:seriesFormatRule><saw:seriesCondition position="4"/><saw:visualFormats><saw:visualFormat lineStyle="default" lineWidth="2" symbol="off"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers/></saw:edge><saw:edge axis="section"><saw:edgeLayers><saw:edgeLayer type="measure" uiTableName="Measure Labels"/></saw:edgeLayers></saw:edge><saw:edge axis="row" showColumnHeader="true"><saw:displayGrandTotals><saw:displayGrandTotal id="t2" grandTotalPosition="after"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="ce1cb1bbc6b847906" uiTableName="Alternate Calendars"><saw:levels><saw:level><saw:displaySubTotal id="t1" subTotalPosition="after"/></saw:level></saw:levels></saw:edgeLayer><saw:edgeLayer type="column" columnID="c5afac71078adf755" uiTableName="Time"/></saw:edgeLayers></saw:edge><saw:edge axis="column"><saw:displayGrandTotals><saw:displayGrandTotal id="t3" grandTotalPosition="after"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="cc8b948b78d916cb4" uiTableName="Time"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c2569d8904d702a81" uiTableName="Base Facts"/></saw:measuresList></saw:view></saw:views></saw:report>

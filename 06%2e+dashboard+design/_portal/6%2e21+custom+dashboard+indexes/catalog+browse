@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="eoac9phhli0tje1d">
+	<saw:pageProps orientation="portrait" printRows="visible" disableMargins="false">
+		<saw:pageHeader show="false"/>
+		<saw:pageFooter showOnDashboard="true" show="true">
+			<saw:zone position="top">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="left">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="left" width="33%" fontColor="#999999" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" oldID="kcap12832459_17">
+					<saw:text>OBI EE SampleApp</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="center">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" width="34%"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="right">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="right" width="33%" fontColor="#999999" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="bottom">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center"/>
+				</saw:displayFormat>
+			</saw:zone>
+		</saw:pageFooter>
+	</saw:pageProps>
+	<sawd:dashboardColumn name="Column 0" duid="94apgmot0sbao4qn" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 17" duid="onmrj50qvftd2q2j" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" borderColor="#CCCCCC" borderStyle="single" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="to5r0gq9f1vqa4br"><sawd:HTML fmt="html">[b]&lt;font size=4 align=left color=#0707DB&gt;OBI EE Sample Application Catalog Folders&lt;/font&gt;[/b]</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" break="column" duid="q7q9bjhqcdm9hrh0" frozen="false" canFreeze="false" layoutType="minimumSize"><saw:displayFormat><saw:formatSpec width="20%" wrapText="true"/></saw:displayFormat><sawd:dashboardSection name="Section 3" showHeading="true" duid="dkiq74128vrofljd" showSectionTitle="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>01. QuickStart</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:folderView name="Folder 2" path="/shared/01. QuickStart" expand="true" rss="true" duid="9mo86tcejg3o4bpe"/></sawd:dashboardSection><sawd:dashboardSection name="Section 30" showHeading="true" duid="dkiq74128vrofljd" showSectionTitle="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>02. Visualizations</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:folderView name="Folder 0" path="/shared/11. demos" expand="true" rss="true" duid="qb25lopv1ji3gtcp"/></sawd:dashboardSection><sawd:dashboardSection name="Section 4" collapsible="false" showHeading="true" showSectionTitle="true" duid="n8nl53eh3r3f37re" layoutType="bestFit"><saw:caption oldID="kcap12832459_9">
+				<saw:text>03. Mobile</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="bold" wrapText="true"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:folderView name="Folder 1" path="/shared/03. Mobile" expand="true" rss="true" duid="ctkr42r1hr4dadq4"/></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 3" duid="ek5sbd17dbeejmli" frozen="false" canFreeze="false" layoutType="minimumSize"><saw:displayFormat><saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="20%"/></saw:displayFormat><sawd:dashboardSection name="Section 2" showSectionTitle="true" duid="lpurq5a3ol59j9m6" showHeading="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>04. Maps and Spatial</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontStyle="bold"/></saw:displayFormat></sawd:sectionHeading><sawd:folderView name="Folder 4" path="/shared/04. Maps and Spatial" expand="true" rss="true" duid="ke3ofnkj224as55t"/></sawd:dashboardSection><sawd:dashboardSection name="Section 24" showSectionTitle="true" duid="532tak7tltmct6ru" showHeading="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>05. Published Reporting</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontStyle="bold"/></saw:displayFormat></sawd:sectionHeading><sawd:folderView name="Folder 5" path="/shared/05. Published Reporting" expand="true" rss="true" duid="b3v9g2vikuko6ep9"/></sawd:dashboardSection><sawd:dashboardSection name="Section 26" duid="7t5b5lpv0joadoqb" showSectionTitle="true" showHeading="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>06. Dashboard Design</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" hAlign="left"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontStyle="bold"/></saw:displayFormat></sawd:sectionHeading><sawd:folderView name="Folder 6" path="/shared/06. Dashboard Design" expand="true" rss="true" duid="r26ttrkl2bgf3uka"/></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" duid="kjoegetart5886r1" frozen="false" canFreeze="false" layoutType="minimumSize"><saw:displayFormat><saw:formatSpec width="20%" wrapText="true"/></saw:displayFormat><sawd:dashboardSection name="Section 31" showHeading="true" duid="nfsmbp53d589pi1v" showSectionTitle="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>07. Semantic Layer Design</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" hAlign="left"/></saw:displayFormat><sawd:folderView name="Folder 7" path="/shared/07. Semantic Layer Design" duid="qb3ik6pkc6ljm399" expand="true" rss="true"/></sawd:dashboardSection><sawd:dashboardSection name="Section 11" showHeading="true" collapsible="false" showSectionTitle="true" duid="5rrqnikgqq2kbnvo" layoutType="bestFit"><saw:caption><saw:text>08. Advanced Analytics</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:folderView name="Folder 8" path="/shared/08. Advanced Analytics" duid="ehvjm41j2lggm1oa" expand="true" rss="true"/></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 4" duid="bic8epq0nl299047" frozen="false" canFreeze="false" layoutType="minimumSize"><saw:displayFormat>
+			<saw:formatSpec width="20%" wrapText="true"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 0" showHeading="true" showSectionTitle="true" collapsible="false" duid="87mh6eji851v0941" layoutType="bestFit"><saw:caption><saw:text>09. Integrations and Customizations</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:folderView name="Folder 9" path="/shared/09. Integrations and Customizations" expand="true" rss="true" duid="on5sopqefd33tl6i"/></sawd:dashboardSection><sawd:dashboardSection name="Section 1" showHeading="true" duid="dkiq74128vrofljd" showSectionTitle="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>10. Lifecycle and Admin</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:folderView name="Folder 3" path="/shared/10. Lifecycle and Admin" expand="true" rss="true" duid="b866bks27edi8fot"/></sawd:dashboardSection><sawd:dashboardSection name="Section 5" collapsible="false" showHeading="true" showSectionTitle="true" duid="l5422aii9oho633v" layoutType="bestFit"><saw:caption><saw:text>11. Demos</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:folderView name="Folder 10" path="/shared/11. Demos" expand="true" rss="true" duid="bqccqtsikoljd98u"/></sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

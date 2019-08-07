@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/b. Features/OLAP Reports/Data Models/XML - OLAP Crosstab Report DM.xdm" cache="true"/>
+   <description>
+      <![CDATA[Data%20Model:%20OLAP%20Crosstab%20Report%20DM.%20Layouts:%20XPT%20layout%20examples%20using%20various%20cross-tabular%20displays%20of%20OLAP%20data.]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="false"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Crosstab -1">
+      <template label="Default" url="Default.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Crosstab -1" url="Crosstab-1.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Crosstab - 2" url="Crosstab - 2.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Crosstab - 3" url="Crosstab - 3.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Crosstab - 4" url="Crosstab - 4.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Crosstab - 5" url="Crosstab - 5.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Report Description" url="ReportDescription-CrosstabReport.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

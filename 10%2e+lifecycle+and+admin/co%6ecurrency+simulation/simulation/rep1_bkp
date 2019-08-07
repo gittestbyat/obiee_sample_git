@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="ced3154a6c2275969">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Origin&quot;.&quot;Orig Airport&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c9ac829f39858619d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb2ab4903c453b202">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;length(VALUEOF(NQ_SESSION.&quot;USER&quot;)) * rand()&#39;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cbcea7f3ca354d69d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Date&quot;.&quot;Dep Year&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf496d40655ef0b78">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Delay&quot;.&quot;Arr Delay Class&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb4ca5a135d10b787">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Route&quot;.&quot;Distance Class&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:list" op="in">
+            <sawx:expr xsi:type="sawx:sqlExpression">&quot;Origin&quot;.&quot;Orig Airport&quot;</sawx:expr>
+            <sawx:expr xsi:type="xsd:string">SFO</sawx:expr>
+            <sawx:expr xsi:type="sawx:variable" op="server">NQ_SESSION.USER</sawx:expr></sawx:expr></saw:filter>
+      <saw:prefix>SET VARIABLE DISABLE_CACHE_HIT=1;</saw:prefix></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="ced3154a6c2275969"/>
+                  <saw:edgeLayer type="column" columnID="c9ac829f39858619d"/>
+                  <saw:edgeLayer type="column" columnID="cb2ab4903c453b202"/>
+                  <saw:edgeLayer type="column" columnID="cbcea7f3ca354d69d"/>
+                  <saw:edgeLayer type="column" columnID="cf496d40655ef0b78"/>
+                  <saw:edgeLayer type="column" columnID="cb4ca5a135d10b787"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c9ac829f39858619d"/></saw:measuresList></saw:view></saw:views></saw:report>

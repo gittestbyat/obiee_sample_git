@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url=".xdm"/>
+   <description>
+      <![CDATA[Going%20directly%20to%20OBIEE%20Subject%20Area%20Source]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style=""/>
+   <templates default="Revenue by Quarter">
+      <template label="Revenue by Quarter" url="Revenue by Quarter.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Revenue by Brand" url="Revenue by Brand.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_CA" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Summary Report" url="Summary Report.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

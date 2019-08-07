@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="ce62374f2988d53c2"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Sales Person&quot;.&quot;E1  Sales Rep Name&quot;</sawx:expr></saw:columnFormula><saw:dimensionSelection><saw:selectionStep stepID="1" type="startWith" category="member"><saw:stepMembers xsi:type="saw:staticMemberGroupDef"><saw:staticMemberGroup><saw:members xsi:type="saw:specialValueMembers"><saw:value specialValue="all"/></saw:members></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep></saw:dimensionSelection></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c58d6c22e815a7ea6"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;/max(&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot; * 1.0)*20</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ce9fd17e541c525de"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">RANK(FILTER(&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;  USING &quot;Sales Person&quot;.&quot;E6  Position Level&quot; = &#39;Level 3&#39;))</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cbfbe205b7381f22a"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ca3349f9af75c4d08"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">MAX(&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;)</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cc7cd9ab6affff904"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">8</sawx:expr></saw:columnFormula></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Sales Person&quot;.&quot;E6  Position Level&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">Level 3</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:comparison" op="lessOrEqual"><sawx:expr xsi:type="sawx:sqlExpression">RANK(FILTER(&quot;Counts&quot;.&quot;31  # of Orders  (Cnt Distinct)&quot; USING &quot;Sales Person&quot;.&quot;E6  Position Level&quot; = &#39;Level 3&#39;))</sawx:expr><sawx:expr xsi:type="xsd:decimal">8</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D4  Company&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="false"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="ce62374f2988d53c2"/><saw:edgeLayer type="column" columnID="ce9fd17e541c525de"/><saw:edgeLayer type="column" columnID="c58d6c22e815a7ea6"/><saw:edgeLayer type="column" columnID="cc7cd9ab6affff904"/><saw:edgeLayer type="column" columnID="cbfbe205b7381f22a"/><saw:edgeLayer type="column" columnID="ca3349f9af75c4d08"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;canvas id=&quot;myCanvas&quot; width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+   var canvas = document.getElementById(&#39;myCanvas&#39;);
+   var context = canvas.getContext(&#39;2d&#39;);
+
+   var params = [];
+   params[&#39;tilesPerXSide&#39;] = 6;
+   params[&#39;tilesPerYSide&#39;] = 6;
+   params[&#39;boardBorder&#39;] = 5;
+   params[&#39;tileBorder&#39;] = 3;
+   params[&#39;maxWidth&#39;] = canvas.width;
+   params[&#39;maxHeight&#39;] = canvas.height;
+   params[&#39;countTiles&#39;] = 2 * params[&#39;tilesPerXSide&#39;] + 2 * params[&#39;tilesPerYSide&#39;] - 4;
+
+   var board = [];
+
+   for (var i = 0; i &lt;= params[&#39;countTiles&#39;] ; i++) {
+      board[i] = [];
+      board[i][&#39;reward&#39;] = &#39;&#39;;
+      board[i][&#39;players&#39;] = [];
+      board[i][&#39;tileColor&#39;] = &#39;white&#39;;
+      board[i][&#39;tileEdgeColor&#39;] = &#39;#D02023&#39;;
+      board[i][&#39;tileNumberColor&#39;] = &#39;#D02023&#39;;
+      board[i][&#39;tileRewardColor&#39;] = &#39;white&#39;;
+      board[i][&#39;tilePlayerColor&#39;] = &#39;blue&#39;;
+   }
+   setReward(5, &#39;1 x Champagne&#39;);
+   setReward(10, &#39;6 x Champagne&#39;);
+   setReward(15, &#39;12 x Champagne&#39;);
+   setReward(20, &#39;City trip for 2&#39;);
+
+   context.beginPath();
+   context.rect(0, 0, canvas.width, canvas.height);
+   context.lineWidth = 1;
+   context.fillStyle = &#39;white&#39;;
+   context.fill();
+   context.strokeStyle = &#39;black&#39;;
+   context.stroke();
+
+   var image = new Image();
+   image.onload = function() {
+      context.drawImage(image, canvas.width / 2 - 145, canvas.height / 2 - 110 - 40);
+   };
+   image.src = &#39;/analyticsRes/d3/pics/oracle-logo.png&#39;;
+
+   context.font = &#39;16pt Calibri&#39;;
+   context.textAlign = &#39;center&#39;;
+   context.textBaseline = &#39;middle&#39;;
+   context.fillStyle = &#39;#D02023&#39;;
+   context.fillText(&#39;Score small deals in FY15 (less than $100k)&#39;, canvas.width / 2, canvas.height / 1.25);
+
+   function setReward(tileID, reward) {
+      board[tileID][&#39;reward&#39;] = reward;
+      board[tileID][&#39;tileColor&#39;] = &#39;#D02023&#39;;
+      board[tileID][&#39;tileEdgeColor&#39;] = &#39;#D02023&#39;;
+      board[tileID][&#39;tileNumberColor&#39;] = &#39;white&#39;;
+      board[tileID][&#39;tileRewardColor&#39;] = &#39;white&#39;;
+      board[tileID][&#39;tilePlayerColor&#39;] = &#39;blue&#39;;
+   }
+
+   function drawTiles(params, tileID, board) {
+      var tileWidth = Math.round((params[&#39;maxWidth&#39;] - (2 * params[&#39;boardBorder&#39;]) - (2 * params[&#39;tileBorder&#39;])) / params[&#39;tilesPerXSide&#39;]);
+      var tileHeight = Math.round((params[&#39;maxHeight&#39;] - (2 * params[&#39;boardBorder&#39;]) - (2 * params[&#39;tileBorder&#39;])) / params[&#39;tilesPerYSide&#39;]);
+
+      if (tileID &lt;= params[&#39;tilesPerXSide&#39;]) {
+        x = params[&#39;tileBorder&#39;] + params[&#39;boardBorder&#39;] + ((tileID - 1) * tileWidth);
+        y = params[&#39;tileBorder&#39;] + params[&#39;boardBorder&#39;];
+
+      } else if (tileID &lt;= params[&#39;tilesPerXSide&#39;] + params[&#39;tilesPerYSide&#39;] -1) {
+        x = params[&#39;tileBorder&#39;] + params[&#39;boardBorder&#39;] + ((params[&#39;tilesPerXSide&#39;] - 1) * tileWidth);
+        y = params[&#39;tileBorder&#39;] + params[&#39;boardBorder&#39;] + ((tileID - params[&#39;tilesPerXSide&#39;]) * tileHeight);
+
+      } else if (tileID &lt;= 2*params[&#39;tilesPerXSide&#39;] + params[&#39;tilesPerYSide&#39;] -2) {
+        var offsetX = tileID - params[&#39;tilesPerXSide&#39;] - params[&#39;tilesPerXSide&#39;] + 1;
+        x = params[&#39;tileBorder&#39;] + params[&#39;boardBorder&#39;] + ((params[&#39;tilesPerYSide&#39;] - offsetX - 1) * tileWidth);
+        y = params[&#39;tileBorder&#39;] + params[&#39;boardBorder&#39;] + ((params[&#39;tilesPerYSide&#39;] - 1) * tileHeight);
+
+      } else if (tileID &lt;= 2*params[&#39;tilesPerXSide&#39;] + 2*params[&#39;tilesPerYSide&#39;] -4) {
+        var offsetY = tileID - 2*params[&#39;tilesPerXSide&#39;] - params[&#39;tilesPerYSide&#39;] +2;
+        x = params[&#39;tileBorder&#39;] + params[&#39;boardBorder&#39;];
+        y = params[&#39;tileBorder&#39;] + params[&#39;boardBorder&#39;] + ((params[&#39;tilesPerYSide&#39;] - offsetY - 1) * tileHeight);
+      }
+
+// draw Tile
+      context.beginPath();
+      context.rect(x, y, tileWidth, tileHeight);
+      context.fillStyle = board[tileID][&#39;tileColor&#39;];
+      context.fill();
+      context.lineWidth = params[&#39;tileBorder&#39;];
+      context.strokeStyle = board[tileID][&#39;tileEdgeColor&#39;];
+      context.stroke();
+
+// write tile number
+      context.font = &#39;50pt Calibri&#39;;
+      context.textAlign = &#39;center&#39;;
+      context.textBaseline = &#39;middle&#39;;
+      context.fillStyle = board[tileID][&#39;tileNumberColor&#39;];
+      context.fillText(tileID, x + tileWidth/2, y + tileHeight/2);
+
+// write reward
+      context.font = &#39;9pt Calibri&#39;;
+      context.textAlign = &#39;center&#39;;
+      context.fillStyle = board[tileID][&#39;tileRewardColor&#39;];
+      context.fillText(board[tileID][&#39;reward&#39;], x + tileWidth/2, y + 10);
+
+      var k = board[tileID][&#39;players&#39;].length;
+      if (k &gt; 0) {
+         for (var i = 0; i &lt; k; i++) {
+            context.font = &#39;9pt Calibri&#39;;
+            context.textAlign = &#39;center&#39;;
+            context.fillStyle = board[tileID][&#39;tilePlayerColor&#39;];
+            context.fillText(board[tileID][&#39;players&#39;][i], x + tileWidth/2, y + 10 + 14 * (i+2));
+         }
+      }
+   }</saw:text></saw:caption></saw:prefix><saw:narrative><saw:caption fmt="html"><saw:text>   var j = board[@{c58d6c22e815a7ea6}][&#39;players&#39;].length;
+   board[@{c58d6c22e815a7ea6}][&#39;players&#39;][j] = &#39;@{ce62374f2988d53c2}&#39;;</saw:text></saw:caption></saw:narrative><saw:postfix><saw:caption fmt="html"><saw:text>   for (var i = 1; i &lt;= params[&#39;countTiles&#39;] ; i++) {
+      drawTiles(params, i, board);
+   }
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix></saw:view><saw:view xsi:type="saw:tableView" name="tableView!2" scrollingEnabled="false"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cc7cd9ab6affff904"/><saw:edgeLayer type="column" columnID="ce62374f2988d53c2"/><saw:edgeLayer type="column" columnID="c58d6c22e815a7ea6"/><saw:edgeLayer type="column" columnID="ce9fd17e541c525de"/><saw:edgeLayer type="column" columnID="cbfbe205b7381f22a"/><saw:edgeLayer type="column" columnID="ca3349f9af75c4d08"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view></saw:views></saw:report>

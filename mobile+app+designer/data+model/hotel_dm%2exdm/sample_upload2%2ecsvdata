@@ -1,0 +1,661 @@
+Customer Name,Alias,Gender,Age Band,Marital Status,Highest Education,Quarter,Month,Date,Reward Member,Brand,Hotel,Channel,Booking Segment,Travel Type,# of Visits,# of Bookings,# of Cancellations,Revenue
+"Holt, Mr. Henry","Holt, Mr. Henry - 1564292",Male,20-30 years,Single,Bachelors,Q1,Jan,1/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,6,1,0,135
+"Carner, Mr. Lindsay","Carner, Mr. Lindsay - 1564289",Male,30-40 Years,Single,Masters,Q1,Jan,1/3/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,9,2,0,135
+"Pratt, Mr. John","Pratt, Mr. John - 1564285",Male,30-40 Years,Divorced,Bachelors,Q1,Jan,1/7/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,10,2,0,135
+"Keeper, Mr. Greg","Keeper, Mr. Greg - 1564283",Male,20-30 years,Married,Bachelors,Q1,Jan,1/11/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,3,2,1,135
+"Ehrlich, Mr. Paul","Ehrlich, Mr. Paul - 1564234",Male,40-50 Years,Single,Doctorate,Q1,Jan,1/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,4,1,1,135
+"Eljah, Mr. Stearne","Eljah, Mr. Stearne - 1564235",Male,40-50 Years,Single,Bachelors,Q1,Jan,1/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,2,1,0,135
+"Faber, Mr. Benjamin","Faber, Mr. Benjamin - 1564236",Male,40-50 Years,Single,Bachelors,Q1,Jan,1/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,4,0,1,135
+"Cleasue, Mr. Georges","Cleasue, Mr. Georges - 1564258",Male,40-50 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Expedia,ipad,Business,3,1,1,135
+"Emerson, Mr. Ralph","Emerson, Mr. Ralph - 1564259",Male,40-50 Years,Married,Masters,Q1,Jan,1/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,2,1,0,135
+"Ellison, Mr. Harlan","Ellison, Mr. Harlan - 1564266",Male,30-40 Years,Married,Masters,Q1,Jan,1/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,7,1,1,135
+"Bunton, Mrs. Juanita","Bunton, Mrs. Juanita - 1564225",Female,40-50 Years,Married,Bachelors,Q1,Jan,1/21/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Expedia,ipad,Business,8,1,1,135
+"Kojima, Mrs. Cathy","Kojima, Mrs. Cathy - 1564212",Female,50-60 Years,Single,Masters,Q1,Jan,1/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,7,0,0,135
+"Portis, Mrs. Carol","Portis, Mrs. Carol - 1564214",Female,30-40 Years,Single,Masters,Q1,Jan,1/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,6,2,0,135
+"Clarke, Mr. Tyson","Clarke, Mr. Tyson - 1564210",Male,30-40 Years,Single,Bachelors,Q1,Jan,1/31/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,1,1,135
+"Ike, Ms. Denise","Ike, Ms. Denise - 1564204",Female,30-40 Years,Divorced,Bachelors,Q1,Feb,2/8/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,2,0,135
+"Bryte, Mr. Charley","Bryte, Mr. Charley - 1564192",Male,30-40 Years,Divorced,Bachelors,Q1,Mar,3/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,6,1,0,135
+"Call, Mr. David","Call, Mr. David - 1564188",Male,30-40 Years,Married,Bachelors,Q1,Mar,3/3/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,4,1,0,135
+"Holmes, Mr. Tyson","Holmes, Mr. Tyson - 1564184",Male,30-40 Years,Single,High School,Q1,Mar,3/10/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,1,0,1,135
+"Gupta, Mr. Manoj","Gupta, Mr. Manoj - 1564182",Male,30-40 Years,Married,Doctorate,Q1,Mar,3/14/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,0,1,0,135
+"Henry, Mrs. Leslie","Henry, Mrs. Leslie - 1564180",Female,30-40 Years,Married,Masters,Q1,Mar,3/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,7,2,1,135
+"Qua'a, Mrs. Gabriel","Qua'a, Mrs. Gabriel - 1564175",Female,40-50 Years,Married,High School,Q1,Mar,3/18/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,4,2,1,135
+"Herr, Mr. William","Herr, Mr. William - 1564173",Male,40-50 Years,Divorced,Bachelors,Q1,Mar,3/25/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,8,1,1,135
+"Holt, Mr. Bernard","Holt, Mr. Bernard - 1564171",Male,50-60 Years,Married,Bachelors,Q1,Mar,3/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,4,1,0,135
+"Hopkins, Jack","Hopkins, Jack - 1564166",Male,20-30 years,Single,Bachelors,Q2,Apr,4/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,1,2,0,135
+"Farrel, Mr. Ruben","Farrel, Mr. Ruben - 1564164",Male,40-50 Years,Single,Bachelors,Q2,Apr,4/2/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,6,0,0,135
+"Pukta, Mr. Frank","Pukta, Mr. Frank - 1564159",Male,40-50 Years,Married,Bachelors,Q2,Apr,4/9/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,5,2,1,135
+"Hogan, Mr. Jarred","Hogan, Mr. Jarred - 1564156",Male,50-60 Years,Divorced,Bachelors,Q2,Apr,4/20/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,9,1,0,135
+"Hertz, Mr. Conrad","Hertz, Mr. Conrad - 1564155",Male,40-50 Years,Married,Bachelors,Q2,Apr,4/21/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,2,2,0,135
+"Quay, Mr. Satish","Quay, Mr. Satish - 1564154",Male,40-50 Years,Married,Bachelors,Q2,Apr,4/22/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,1,0,0,135
+"Haskel, Conrad","Haskel, Conrad - 1564151",Male,40-50 Years,Single,Bachelors,Q2,Apr,4/24/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,7,0,1,135
+"Haskel, Mr. Bernard","Haskel, Mr. Bernard - 1564152",Male,40-50 Years,Married,Bachelors,Q2,Apr,4/24/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,8,0,0,135
+"Christensen, Mr. Harry","Christensen, Mr. Harry - 1564149",Male,40-50 Years,Married,Masters,Q2,Apr,4/26/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Expedia,ipad,Business,5,0,1,135
+"Pong, Mr. Morgan","Pong, Mr. Morgan - 1564145",Male,40-50 Years,Married,Bachelors,Q2,Apr,4/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,10,2,0,135
+"Feingold, Mrs. Denise","Feingold, Mrs. Denise - Non Reward Member",Female,50-60 Years,Married,Bachelors,Q2,May,5/12/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,3,1,1,135
+"Bush, Mr. Jerry","Bush, Mr. Jerry - 1564139",Male,50-60 Years,Married,Bachelors,Q2,May,5/14/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,7,2,0,135
+"Hightower, Mrs. Melinda","Hightower, Mrs. Melinda - 1564135",Female,50-60 Years,Divorced,Masters,Q2,May,5/19/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,6,1,1,135
+"Eubanks, Mrs. Clair","Eubanks, Mrs. Clair - 1564129",Female,50-60 Years,Married,Bachelors,Q2,Jun,6/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,9,2,1,135
+"Keefer, Mrs. Cherlon","Keefer, Mrs. Cherlon - 1564119",Female,40-50 Years,Single,Masters,Q2,Jun,6/14/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,3,1,1,135
+"Chope, Mr. Barry","Chope, Mr. Barry - 1564122",Male,30-40 Years,Married,Bachelors,Q2,Jun,6/14/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,3,1,1,135
+"Erdos, Mr. Paul","Erdos, Mr. Paul - 1564111",Male,20-30 years,Single,Bachelors,Q2,Jun,6/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,3,1,0,135
+"Edmunds, Mr. John","Edmunds, Mr. John - 1564116",Male,30-40 Years,Divorced,Bachelors,Q2,Jun,6/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,2,1,0,135
+"Eldregde, Mr. Niles","Eldregde, Mr. Niles - 1564117",Male,30-40 Years,Divorced,Bachelors,Q2,Jun,6/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,1,1,0,135
+"Ferguson, Mrs. Jennifer","Ferguson, Mrs. Jennifer - 1564112",Female,30-40 Years,Married,Bachelors,Q2,Jun,6/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,7,0,1,135
+"Polson, Mr. Steve","Polson, Mr. Steve - 1564113",Male,30-40 Years,Married,High School,Q2,Jun,6/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,8,1,1,135
+"Petty, Mrs. Ngoc","Petty, Mrs. Ngoc - 1564105",Female,50-60 Years,Married,Bachelors,Q2,Jun,6/23/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,9,2,1,135
+"Keegan, Mrs. Clair","Keegan, Mrs. Clair - 1564098",Female,50-60 Years,Married,Bachelors,Q2,Jun,6/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,8,0,0,135
+"Kennedy, Mrs. Clair","Kennedy, Mrs. Clair - 1564099",Female,50-60 Years,Married,Bachelors,Q2,Jun,6/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,4,1,0,135
+"Egger, Mrs. Jenette","Egger, Mrs. Jenette - 1564100",Female,50-60 Years,Divorced,Bachelors,Q2,Jun,6/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,9,1,0,135
+"Firestone, Mr. Mike","Firestone, Mr. Mike - 1564095",Male,40-50 Years,Married,Masters,Q3,Jul,7/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,2,1,135
+"Ciena, Mrs. Pamela","Ciena, Mrs. Pamela - 1564091",Female,40-50 Years,Single,Bachelors,Q3,Jul,7/14/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Expedia,ipad,Business,8,2,1,135
+"Horn, Ms. Kwon","Horn, Ms. Kwon - 1564088",Female,40-50 Years,Married,Bachelors,Q3,Jul,7/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,3,1,0,135
+"Pettek, Mrs. Katy","Pettek, Mrs. Katy - 1564086",Female,50-60 Years,Married,Bachelors,Q3,Jul,7/17/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,2,2,0,135
+"Kim, Ms. Justine","Kim, Ms. Justine - Non Reward Member",Female,40-50 Years,Married,Masters,Q3,Jul,7/27/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,3,0,1,135
+"Poole, Mr. Mike","Poole, Mr. Mike - 1564080",Male,40-50 Years,Single,Bachelors,Q3,Aug,8/13/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,6,1,1,135
+"Eddy, Mr. Kenneth","Eddy, Mr. Kenneth - 1564075",Male,30-40 Years,Single,Masters,Q3,Aug,8/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,7,1,0,135
+"Brother, Ms. Janice","Brother, Ms. Janice - 1564064",Female,20-30 years,Married,Bachelors,Q3,Sep,9/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,1,0,0,135
+"Fitzpatrick, Mr. Mike","Fitzpatrick, Mr. Mike - 1564057",Male,40-50 Years,Married,High School,Q3,Sep,9/13/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,0,0,135
+"Keane, Mrs. Cherlon","Keane, Mrs. Cherlon - 1564056",Female,40-50 Years,Divorced,Masters,Q3,Sep,9/20/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,1,1,135
+"Holmes, Mr. Sherman","Holmes, Mr. Sherman - Non Reward Member",Male,40-50 Years,Divorced,Bachelors,Q3,Aug,8/20/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,9,1,0,135
+"Feiss, Mrs. Fran","Feiss, Mrs. Fran - 1564030",Female,40-50 Years,Divorced,Masters,Q3,Jul,7/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,1,1,135
+"Chen, Mrs. Micheal","Chen, Mrs. Micheal - 1564031",Female,30-40 Years,Divorced,Bachelors,Q3,Jul,7/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,7,2,0,135
+"Pinocci, Mr. Alfonso","Pinocci, Mr. Alfonso - 1564018",Male,40-50 Years,Married,High School,Q3,Jul,7/7/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,6,2,0,135
+"Henry, Taylor","Henry, Taylor - Non Reward Member",Female,30-40 Years,Single,Bachelors,Q3,Jul,7/19/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,0,1,0,135
+"Feitty, Mr. Curtis","Feitty, Mr. Curtis - 1564010",Male,50-60 Years,Married,Bachelors,Q3,Jul,7/20/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,5,0,0,135
+"Lane, Mrs. Cherlon","Lane, Mrs. Cherlon - 1564009",Female,40-50 Years,Married,Masters,Q3,Jul,7/25/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,9,0,0,135
+"Chic, Mrs. Katy","Chic, Mrs. Katy - 1564003",Female,30-40 Years,Married,Bachelors,Q3,Sep,9/4/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,10,1,0,135
+"Carroll, Ms. Heather","Carroll, Ms. Heather - Non Reward Member",Female,30-40 Years,Single,Bachelors,Q3,Sep,9/7/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,7,1,0,135
+"Carroll, Ms. Terri","Carroll, Ms. Terri - Non Reward Member",Female,30-40 Years,Single,Masters,Q3,Sep,9/7/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,9,1,1,135
+"Carroll, Mr. Jonathon","Carroll, Mr. Jonathon - Non Reward Member",Male,30-40 Years,Married,Doctorate,Q3,Sep,9/7/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,4,1,0,135
+"Carroll, Mr. Thomas","Carroll, Mr. Thomas - Non Reward Member",Male,30-40 Years,Married,Doctorate,Q3,Sep,9/7/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,7,1,1,135
+"Pierce, Mr. David","Pierce, Mr. David - 1563998",Male,30-40 Years,Single,Masters,Q3,Sep,9/9/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,7,2,0,135
+"Hardt, Mrs. Hannah","Hardt, Mrs. Hannah - 1563995",Female,40-50 Years,Married,Bachelors,Q3,Sep,9/17/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,4,2,1,135
+"Howard, Mr. Lindsay","Howard, Mr. Lindsay - 1563989",Male,40-50 Years,Single,Doctorate,Q3,Sep,9/22/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,6,1,0,135
+"Hovis, Ms. Betty","Hovis, Ms. Betty - 1563987",Female,40-50 Years,Divorced,Bachelors,Q3,Sep,9/29/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,2,0,0,135
+"Holt, Mr. Henry","Holt, Mr. Henry - 1564292",Male,20-30 years,Single,Bachelors,Q4,Oct,10/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,5,1,1,135
+"Hopkins, Jack","Hopkins, Jack - 1564166",Male,20-30 years,Single,Bachelors,Q4,Oct,10/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,1,0,1,135
+"Eubanks, Mrs. Clair","Eubanks, Mrs. Clair - 1564129",Female,50-60 Years,Married,Bachelors,Q4,Oct,10/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,2,1,1,135
+"Farrel, Mr. Ruben","Farrel, Mr. Ruben - 1564164",Male,40-50 Years,Single,Bachelors,Q4,Oct,10/2/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,2,1,0,135
+"Carner, Mr. Lindsay","Carner, Mr. Lindsay - 1564289",Male,30-40 Years,Single,Masters,Q4,Oct,10/3/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,9,1,0,135
+"Pratt, Mr. John","Pratt, Mr. John - 1564285",Male,30-40 Years,Divorced,Bachelors,Q4,Oct,10/7/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,8,0,0,135
+"Pukta, Mr. Frank","Pukta, Mr. Frank - 1564159",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/9/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,0,1,1,135
+"Keeper, Mr. Greg","Keeper, Mr. Greg - 1564283",Male,20-30 years,Married,Bachelors,Q4,Oct,10/11/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,6,2,1,135
+"Keefer, Mrs. Cherlon","Keefer, Mrs. Cherlon - 1564119",Female,40-50 Years,Single,Masters,Q4,Oct,10/14/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,6,1,0,135
+"Chope, Mr. Barry","Chope, Mr. Barry - 1564122",Male,30-40 Years,Married,Bachelors,Q4,Oct,10/14/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,8,2,1,135
+"Ehrlich, Mr. Paul","Ehrlich, Mr. Paul - 1564234",Male,40-50 Years,Single,Doctorate,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,3,2,0,135
+"Eljah, Mr. Stearne","Eljah, Mr. Stearne - 1564235",Male,40-50 Years,Single,Bachelors,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,7,1,0,135
+"Faber, Mr. Benjamin","Faber, Mr. Benjamin - 1564236",Male,40-50 Years,Single,Bachelors,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,9,1,0,135
+"Cleasue, Mr. Georges","Cleasue, Mr. Georges - 1564258",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Expedia,ipad,Business,3,0,0,135
+"Emerson, Mr. Ralph","Emerson, Mr. Ralph - 1564259",Male,40-50 Years,Married,Masters,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,8,2,0,135
+"Ellison, Mr. Harlan","Ellison, Mr. Harlan - 1564266",Male,30-40 Years,Married,Masters,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,7,0,0,135
+"Erdos, Mr. Paul","Erdos, Mr. Paul - 1564111",Male,20-30 years,Single,Bachelors,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,4,1,0,135
+"Edmunds, Mr. John","Edmunds, Mr. John - 1564116",Male,30-40 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,9,0,0,135
+"Eldregde, Mr. Niles","Eldregde, Mr. Niles - 1564117",Male,30-40 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,2,1,1,135
+"Ferguson, Mrs. Jennifer","Ferguson, Mrs. Jennifer - 1564112",Female,30-40 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,4,0,1,135
+"Polson, Mr. Steve","Polson, Mr. Steve - 1564113",Male,30-40 Years,Married,High School,Q4,Oct,10/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,8,2,1,135
+"Hogan, Mr. Jarred","Hogan, Mr. Jarred - 1564156",Male,50-60 Years,Divorced,Bachelors,Q4,Oct,10/20/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,7,1,1,135
+"Bunton, Mrs. Juanita","Bunton, Mrs. Juanita - 1564225",Female,40-50 Years,Married,Bachelors,Q4,Oct,10/21/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Expedia,ipad,Business,1,0,0,135
+"Hertz, Mr. Conrad","Hertz, Mr. Conrad - 1564155",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/21/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,1,1,135
+"Quay, Mr. Satish","Quay, Mr. Satish - 1564154",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/22/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,8,0,0,135
+"Petty, Mrs. Ngoc","Petty, Mrs. Ngoc - 1564105",Female,50-60 Years,Married,Bachelors,Q4,Oct,10/23/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,5,2,1,135
+"Haskel, Conrad","Haskel, Conrad - 1564151",Male,40-50 Years,Single,Bachelors,Q4,Oct,10/24/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,8,1,0,135
+"Haskel, Mr. Bernard","Haskel, Mr. Bernard - 1564152",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/24/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,7,1,1,135
+"Christensen, Mr. Harry","Christensen, Mr. Harry - 1564149",Male,40-50 Years,Married,Masters,Q4,Oct,10/26/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Expedia,ipad,Business,4,0,0,135
+"Kojima, Mrs. Cathy","Kojima, Mrs. Cathy - 1564212",Female,50-60 Years,Single,Masters,Q4,Oct,10/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,6,1,1,135
+"Portis, Mrs. Carol","Portis, Mrs. Carol - 1564214",Female,30-40 Years,Single,Masters,Q4,Oct,10/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,4,1,0,135
+"Pong, Mr. Morgan","Pong, Mr. Morgan - 1564145",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,8,1,0,135
+"Keegan, Mrs. Clair","Keegan, Mrs. Clair - 1564098",Female,50-60 Years,Married,Bachelors,Q4,Oct,10/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,0,2,0,135
+"Kennedy, Mrs. Clair","Kennedy, Mrs. Clair - 1564099",Female,50-60 Years,Married,Bachelors,Q4,Oct,10/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,2,2,0,135
+"Egger, Mrs. Jenette","Egger, Mrs. Jenette - 1564100",Female,50-60 Years,Divorced,Bachelors,Q4,Oct,10/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,8,1,1,135
+"Clarke, Mr. Tyson","Clarke, Mr. Tyson - 1564210",Male,30-40 Years,Single,Bachelors,Q4,Oct,10/31/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,3,1,0,135
+"Bryte, Mr. Charley","Bryte, Mr. Charley - 1564192",Male,30-40 Years,Divorced,Bachelors,Q4,Nov,11/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,2,1,1,135
+"Ike, Ms. Denise","Ike, Ms. Denise - 1564204",Female,30-40 Years,Divorced,Bachelors,Q4,Nov,11/8/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,4,1,1,135
+"Holmes, Mr. Tyson","Holmes, Mr. Tyson - 1564184",Male,30-40 Years,Single,High School,Q4,Nov,11/10/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,1,0,135
+"Call, Mr. David","Call, Mr. David - 1564188",Male,30-40 Years,Married,Bachelors,Q4,Nov,11/11/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,6,2,1,135
+"Feingold, Mrs. Denise","Feingold, Mrs. Denise - Non Reward Member",Female,50-60 Years,Married,Bachelors,Q4,Nov,11/12/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,8,0,1,135
+"Gupta, Mr. Manoj","Gupta, Mr. Manoj - 1564182",Male,30-40 Years,Married,Doctorate,Q4,Nov,11/14/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,1,2,0,135
+"Bush, Mr. Jerry","Bush, Mr. Jerry - 1564139",Male,50-60 Years,Married,Bachelors,Q4,Nov,11/14/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,7,1,0,135
+"Henry, Mrs. Leslie","Henry, Mrs. Leslie - 1564180",Female,30-40 Years,Married,Masters,Q4,Nov,11/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,1,2,0,135
+"Qua'a, Mrs. Gabriel","Qua'a, Mrs. Gabriel - 1564175",Female,40-50 Years,Married,High School,Q4,Nov,11/18/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,4,1,1,135
+"Hightower, Mrs. Melinda","Hightower, Mrs. Melinda - 1564135",Female,50-60 Years,Divorced,Masters,Q4,Nov,11/19/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,1,1,1,135
+"Herr, Mr. William","Herr, Mr. William - 1564173",Male,40-50 Years,Divorced,Bachelors,Q4,Nov,11/25/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,4,1,0,135
+"Holt, Mr. Bernard","Holt, Mr. Bernard - 1564171",Male,50-60 Years,Married,Bachelors,Q4,Nov,11/30/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,4,2,1,135
+"Firestone, Mr. Mike","Firestone, Mr. Mike - 1564095",Male,40-50 Years,Married,Masters,Q4,Dec,12/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,7,0,0,135
+"Feiss, Mrs. Fran","Feiss, Mrs. Fran - 1564030",Female,40-50 Years,Divorced,Masters,Q4,Dec,12/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,4,2,0,135
+"Chen, Mrs. Micheal","Chen, Mrs. Micheal - 1564031",Female,30-40 Years,Divorced,Bachelors,Q4,Dec,12/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,1,0,1,135
+"Brother, Ms. Janice","Brother, Ms. Janice - 1564064",Female,20-30 years,Married,Bachelors,Q4,Dec,12/1/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,7,1,0,135
+"Chic, Mrs. Katy","Chic, Mrs. Katy - 1564003",Female,30-40 Years,Married,Bachelors,Q4,Dec,12/4/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,4,1,1,135
+"Carroll, Ms. Heather","Carroll, Ms. Heather - Non Reward Member",Female,30-40 Years,Single,Bachelors,Q4,Dec,12/7/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,7,0,1,135
+"Carroll, Ms. Terri","Carroll, Ms. Terri - Non Reward Member",Female,30-40 Years,Single,Masters,Q4,Dec,12/7/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,8,1,0,135
+"Carroll, Mr. Jonathon","Carroll, Mr. Jonathon - Non Reward Member",Male,30-40 Years,Married,Doctorate,Q4,Dec,12/7/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,5,1,1,135
+"Carroll, Mr. Thomas","Carroll, Mr. Thomas - Non Reward Member",Male,30-40 Years,Married,Doctorate,Q4,Dec,12/7/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Pleasure,1,1,0,135
+"Pinocci, Mr. Alfonso","Pinocci, Mr. Alfonso - 1564018",Male,40-50 Years,Married,High School,Q4,Dec,12/12/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,4,2,1,135
+"Pierce, Mr. David","Pierce, Mr. David - 1563998",Male,30-40 Years,Single,Masters,Q4,Dec,12/12/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,6,1,0,135
+"Poole, Mr. Mike","Poole, Mr. Mike - 1564080",Male,40-50 Years,Single,Bachelors,Q4,Dec,12/13/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,1,1,1,135
+"Fitzpatrick, Mr. Mike","Fitzpatrick, Mr. Mike - 1564057",Male,40-50 Years,Married,High School,Q4,Dec,12/13/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,1,2,1,135
+"Ciena, Mrs. Pamela","Ciena, Mrs. Pamela - 1564091",Female,40-50 Years,Single,Bachelors,Q4,Dec,12/14/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Expedia,ipad,Business,7,2,0,135
+"Horn, Ms. Kwon","Horn, Ms. Kwon - 1564088",Female,40-50 Years,Married,Bachelors,Q4,Dec,12/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,1,1,135
+"Eddy, Mr. Kenneth","Eddy, Mr. Kenneth - 1564075",Male,30-40 Years,Single,Masters,Q4,Dec,12/15/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,8,1,0,135
+"Pettek, Mrs. Katy","Pettek, Mrs. Katy - 1564086",Female,50-60 Years,Married,Bachelors,Q4,Dec,12/17/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Corporate Travel Portal,Computer,Business,4,2,1,135
+"Hardt, Mrs. Hannah","Hardt, Mrs. Hannah - 1563995",Female,40-50 Years,Married,Bachelors,Q4,Dec,12/17/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,2,0,135
+"Henry, Taylor","Henry, Taylor - Non Reward Member",Female,30-40 Years,Single,Bachelors,Q4,Dec,12/19/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,7,2,0,135
+"Feitty, Mr. Curtis","Feitty, Mr. Curtis - 1564010",Male,50-60 Years,Married,Bachelors,Q4,Dec,12/20/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Phone,None,Business,7,0,0,135
+"Holmes, Mr. Sherman","Holmes, Mr. Sherman - Non Reward Member",Male,40-50 Years,Divorced,Bachelors,Q4,Dec,12/20/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,4,1,0,135
+"Keane, Mrs. Cherlon","Keane, Mrs. Cherlon - 1564056",Female,40-50 Years,Divorced,Masters,Q4,Dec,12/20/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,0,1,135
+"Howard, Mr. Lindsay","Howard, Mr. Lindsay - 1563989",Male,40-50 Years,Single,Doctorate,Q4,Dec,12/22/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,3,2,1,135
+"Lane, Mrs. Cherlon","Lane, Mrs. Cherlon - 1564009",Female,40-50 Years,Married,Masters,Q4,Dec,12/25/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,6,1,1,135
+"Kim, Ms. Justine","Kim, Ms. Justine - Non Reward Member",Female,40-50 Years,Married,Masters,Q4,Dec,12/27/2012,N,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,5,2,0,135
+"Hovis, Ms. Betty","Hovis, Ms. Betty - 1563987",Female,40-50 Years,Divorced,Bachelors,Q4,Dec,12/29/2012,Y,Premier Collection,Glenn Hotel - Premier Collection,Hotels.com,ipad,Business,4,2,1,135
+"Jason, Mr. Robert","Jason, Mr. Robert - 1564230",Male,50-60 Years,Single,Bachelors,Q1,Jan,1/15/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,1,0,1,220
+"Franck, Mr. Richard","Franck, Mr. Richard - 1564232",Male,40-50 Years,Single,Masters,Q1,Jan,1/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,9,1,0,220
+"Frank, Mr. Anatole","Frank, Mr. Anatole - 1564233",Male,40-50 Years,Single,Masters,Q1,Jan,1/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,6,1,0,220
+"Cobint, Mr. Donald","Cobint, Mr. Donald - 1564252",Male,40-50 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Open Suites,Open Suites Montvale ,Marriott.com,Android,Business,7,2,0,220
+"France, Ms. Anne","France, Ms. Anne - 1564253",Female,40-50 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,Android,Business,4,0,0,220
+"Fulbright, Mr. William","Fulbright, Mr. William - 1564254",Male,40-50 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,3,1,1,220
+"Fuller, Mr. Buckminster","Fuller, Mr. Buckminster - 1564255",Male,40-50 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,5,1,0,220
+"Starter, Ms. Mariella","Starter, Ms. Mariella - 1564256",Female,40-50 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,1,1,0,220
+"Sterling, Mr. Howard","Sterling, Mr. Howard - 1564257",Male,40-50 Years,Married,Masters,Q1,Jan,1/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,7,1,1,220
+"Fudio, Ms. Libbie","Fudio, Ms. Libbie - 1564278",Female,30-40 Years,Divorced,High School,Q1,Jan,1/15/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,4,1,1,220
+"Kay, Mr. Dale","Kay, Mr. Dale - 1564228",Male,40-50 Years,Married,Bachelors,Q1,Jan,1/20/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,9,2,0,220
+"Slaven, Mrs. Carol","Slaven, Mrs. Carol - 1564216",Female,30-40 Years,Married,High School,Q1,Jan,1/30/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,6,0,0,220
+"Jenkinson, Mr. Armando","Jenkinson, Mr. Armando - 1564203",Male,20-30 years,Single,Bachelors,Q1,Feb,2/8/2012,Y,Open Suites,Open Suites Montvale ,Corporate Travel Portal,Computer,Business,3,1,1,220
+"Jackson, Mr. Michael","Jackson, Mr. Michael - 1564201",Male,50-60 Years,Married,High School,Q1,Feb,2/9/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,0,0,1,220
+"Kampfen, Mr. Anthony","Kampfen, Mr. Anthony - 1564200",Male,40-50 Years,Married,Bachelors,Q1,Feb,2/11/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,7,1,0,220
+"Franklin, Mrs. Susan","Franklin, Mrs. Susan - 1564197",Female,40-50 Years,Divorced,Masters,Q1,Feb,2/20/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,1,0,0,220
+"Frankin, Mrs. Jenette","Frankin, Mrs. Jenette - Non Reward Member",Female,50-60 Years,Divorced,Bachelors,Q1,Feb,2/21/2012,N,Open Suites,Open Suites Montvale ,Phone,None,Business,8,1,1,220
+"Stand, Mrs. Irene","Stand, Mrs. Irene - 1564195",Female,30-40 Years,Single,Bachelors,Q1,Feb,2/21/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,8,2,1,220
+"Kaufman, Mrs. Stacey","Kaufman, Mrs. Stacey - 1564194",Female,40-50 Years,Single,Bachelors,Q1,Feb,2/22/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,4,1,1,220
+"Cochran, Mr. William","Cochran, Mr. William - 1564187",Male,40-50 Years,Single,High School,Q1,Mar,3/9/2012,Y,Open Suites,Open Suites Montvale ,Expedia,Android,Business,3,1,1,220
+"Skaggs, Mr. Frank","Skaggs, Mr. Frank - 1564185",Male,30-40 Years,Married,Bachelors,Q1,Mar,3/10/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,6,1,0,220
+"Stern, Mr. Frank","Stern, Mr. Frank - 1564177",Male,30-40 Years,Single,High School,Q1,Mar,3/15/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,3,0,1,220
+"Francis, Mrs. Elizabeth","Francis, Mrs. Elizabeth - 1564181",Female,30-40 Years,Divorced,Masters,Q1,Mar,3/15/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,2,1,0,220
+"Stoud, Mr. Jordan","Stoud, Mr. Jordan - 1564176",Male,40-50 Years,Single,Bachelors,Q1,Mar,3/17/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,3,2,1,220
+"Smith, Dave","Smith, Dave - 1564168",Male,20-30 years,Married,Bachelors,Q2,Apr,4/1/2012,Y,Open Suites,Open Suites Montvale ,Corporate Travel Portal,Computer,Business,2,2,1,220
+"Smith, Mr. Curtis","Smith, Mr. Curtis - 1564143",Male,30-40 Years,Married,Bachelors,Q2,May,5/1/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,2,1,1,220
+"Smith, Mr. Roberto","Smith, Mr. Roberto - 1564134",Male,20-30 years,Married,Bachelors,Q2,May,5/20/2012,Y,Open Suites,Open Suites Montvale ,Corporate Travel Portal,Computer,Business,9,0,1,220
+"Fremont, Mr. Erich","Fremont, Mr. Erich - 1564110",Male,40-50 Years,Single,High School,Q2,Jun,6/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,10,1,0,220
+"Sistine, Mr. Travis","Sistine, Mr. Travis - 1564106",Male,40-50 Years,Married,Bachelors,Q2,Jun,6/23/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,8,2,0,220
+"Iverson, Mrs. Alice","Iverson, Mrs. Alice - 1564092",Female,40-50 Years,Married,Masters,Q3,Jul,7/11/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,9,2,0,220
+"Steg, Mr. Steg","Steg, Mr. Steg - 1564074",Male,30-40 Years,Single,Bachelors,Q3,Aug,8/15/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,6,1,0,220
+"Katz, Mr. Brian","Katz, Mr. Brian - 1564073",Male,50-60 Years,Single,Bachelors,Q3,Aug,8/16/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,6,0,0,220
+"Jackson, Mr. Bobby","Jackson, Mr. Bobby - 1564072",Male,50-60 Years,Married,High School,Q3,Aug,8/17/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,1,0,1,220
+"Coffey, Mrs. Dana","Coffey, Mrs. Dana - 1564065",Female,30-40 Years,Separated,Bachelors,Q3,Aug,8/30/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,6,2,1,220
+"Franklin, Mrs. Alicia","Franklin, Mrs. Alicia - 1564060",Female,40-50 Years,Divorced,Bachelors,Q3,Sep,9/9/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,1,1,1,220
+"Frazier, Mr. Landon","Frazier, Mr. Landon - 1564036",Male,30-40 Years,Married,Bachelors,Q3,Aug,8/20/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,4,1,1,220
+"Kaufman, Mrs. Felicia","Kaufman, Mrs. Felicia - 1564024",Female,40-50 Years,Married,Bachelors,Q3,Jul,7/1/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,7,2,1,220
+"Jones, Mr. Karen","Jones, Mr. Karen - 1564027",Male,30-40 Years,Married,Bachelors,Q3,Jul,7/1/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,10,1,0,220
+"Coello, Mr. Harrold","Coello, Mr. Harrold - 1564014",Male,50-60 Years,Married,Bachelors,Q3,Jul,7/17/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,4,1,0,220
+"Freeman, Mr. Christian","Freeman, Mr. Christian - 1564007",Male,30-40 Years,Married,Bachelors,Q3,Jul,7/30/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,9,0,1,220
+"Kading, Mrs. Mary","Kading, Mrs. Mary - 1563997",Female,40-50 Years,Married,Bachelors,Q3,Sep,9/12/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,1,2,0,220
+"Kaznowski, Mrs. Jamie","Kaznowski, Mrs. Jamie - 1563994",Female,50-60 Years,Married,Bachelors,Q3,Sep,9/17/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,6,2,1,220
+"Smith, Dave","Smith, Dave - 1564168",Male,20-30 years,Married,Bachelors,Q4,Oct,10/1/2012,Y,Open Suites,Open Suites Montvale ,Corporate Travel Portal,Computer,Business,4,2,1,220
+"Jason, Mr. Robert","Jason, Mr. Robert - 1564230",Male,50-60 Years,Single,Bachelors,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,3,1,1,220
+"Franck, Mr. Richard","Franck, Mr. Richard - 1564232",Male,40-50 Years,Single,Masters,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,3,0,0,220
+"Frank, Mr. Anatole","Frank, Mr. Anatole - 1564233",Male,40-50 Years,Single,Masters,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,8,1,1,220
+"Cobint, Mr. Donald","Cobint, Mr. Donald - 1564252",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Marriott.com,Android,Business,3,0,1,220
+"France, Ms. Anne","France, Ms. Anne - 1564253",Female,40-50 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,Android,Business,5,1,1,220
+"Fulbright, Mr. William","Fulbright, Mr. William - 1564254",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,4,2,0,220
+"Fuller, Mr. Buckminster","Fuller, Mr. Buckminster - 1564255",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,7,0,1,220
+"Starter, Ms. Mariella","Starter, Ms. Mariella - 1564256",Female,40-50 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,7,1,1,220
+"Sterling, Mr. Howard","Sterling, Mr. Howard - 1564257",Male,40-50 Years,Married,Masters,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,6,2,1,220
+"Fudio, Ms. Libbie","Fudio, Ms. Libbie - 1564278",Female,30-40 Years,Divorced,High School,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,7,1,0,220
+"Fremont, Mr. Erich","Fremont, Mr. Erich - 1564110",Male,40-50 Years,Single,High School,Q4,Oct,10/15/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,4,1,0,220
+"Kay, Mr. Dale","Kay, Mr. Dale - 1564228",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/20/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,9,2,1,220
+"Sistine, Mr. Travis","Sistine, Mr. Travis - 1564106",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/23/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,7,1,1,220
+"Slaven, Mrs. Carol","Slaven, Mrs. Carol - 1564216",Female,30-40 Years,Married,High School,Q4,Oct,10/30/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,8,1,1,220
+"Smith, Mr. Curtis","Smith, Mr. Curtis - 1564143",Male,30-40 Years,Married,Bachelors,Q4,Nov,11/1/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,6,2,1,220
+"Jenkinson, Mr. Armando","Jenkinson, Mr. Armando - 1564203",Male,20-30 years,Single,Bachelors,Q4,Nov,11/8/2012,Y,Open Suites,Open Suites Montvale ,Corporate Travel Portal,Computer,Business,3,0,0,220
+"Jackson, Mr. Michael","Jackson, Mr. Michael - 1564201",Male,50-60 Years,Married,High School,Q4,Nov,11/9/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,5,1,1,220
+"Cochran, Mr. William","Cochran, Mr. William - 1564187",Male,40-50 Years,Single,High School,Q4,Nov,11/9/2012,Y,Open Suites,Open Suites Montvale ,Expedia,Android,Business,6,0,0,220
+"Skaggs, Mr. Frank","Skaggs, Mr. Frank - 1564185",Male,30-40 Years,Married,Bachelors,Q4,Nov,11/10/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,7,2,1,220
+"Kampfen, Mr. Anthony","Kampfen, Mr. Anthony - 1564200",Male,40-50 Years,Married,Bachelors,Q4,Nov,11/11/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,4,0,0,220
+"Stern, Mr. Frank","Stern, Mr. Frank - 1564177",Male,30-40 Years,Single,High School,Q4,Nov,11/15/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,7,2,0,220
+"Francis, Mrs. Elizabeth","Francis, Mrs. Elizabeth - 1564181",Female,30-40 Years,Divorced,Masters,Q4,Nov,11/15/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,6,0,1,220
+"Stoud, Mr. Jordan","Stoud, Mr. Jordan - 1564176",Male,40-50 Years,Single,Bachelors,Q4,Nov,11/17/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,6,0,0,220
+"Franklin, Mrs. Susan","Franklin, Mrs. Susan - 1564197",Female,40-50 Years,Divorced,Masters,Q4,Nov,11/20/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,6,2,1,220
+"Smith, Mr. Roberto","Smith, Mr. Roberto - 1564134",Male,20-30 years,Married,Bachelors,Q4,Nov,11/20/2012,Y,Open Suites,Open Suites Montvale ,Corporate Travel Portal,Computer,Business,4,2,1,220
+"Frankin, Mrs. Jenette","Frankin, Mrs. Jenette - Non Reward Member",Female,50-60 Years,Divorced,Bachelors,Q4,Nov,11/21/2012,N,Open Suites,Open Suites Montvale ,Phone,None,Business,1,0,0,220
+"Stand, Mrs. Irene","Stand, Mrs. Irene - 1564195",Female,30-40 Years,Single,Bachelors,Q4,Nov,11/21/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,9,1,0,220
+"Kaufman, Mrs. Stacey","Kaufman, Mrs. Stacey - 1564194",Female,40-50 Years,Single,Bachelors,Q4,Nov,11/22/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,1,1,1,220
+"Kaufman, Mrs. Felicia","Kaufman, Mrs. Felicia - 1564024",Female,40-50 Years,Married,Bachelors,Q4,Dec,12/1/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,2,1,1,220
+"Jones, Mr. Karen","Jones, Mr. Karen - 1564027",Male,30-40 Years,Married,Bachelors,Q4,Dec,12/1/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,6,1,1,220
+"Iverson, Mrs. Alice","Iverson, Mrs. Alice - 1564092",Female,40-50 Years,Married,Masters,Q4,Dec,12/11/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,3,2,0,220
+"Franklin, Mrs. Alicia","Franklin, Mrs. Alicia - 1564060",Female,40-50 Years,Divorced,Bachelors,Q4,Dec,12/12/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,8,1,0,220
+"Kading, Mrs. Mary","Kading, Mrs. Mary - 1563997",Female,40-50 Years,Married,Bachelors,Q4,Dec,12/12/2012,Y,Open Suites,Open Suites Montvale ,Expedia,ipad,Business,8,0,0,220
+"Steg, Mr. Steg","Steg, Mr. Steg - 1564074",Male,30-40 Years,Single,Bachelors,Q4,Dec,12/15/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,7,2,0,220
+"Katz, Mr. Brian","Katz, Mr. Brian - 1564073",Male,50-60 Years,Single,Bachelors,Q4,Dec,12/16/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,4,0,0,220
+"Coello, Mr. Harrold","Coello, Mr. Harrold - 1564014",Male,50-60 Years,Married,Bachelors,Q4,Dec,12/17/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,6,1,1,220
+"Jackson, Mr. Bobby","Jackson, Mr. Bobby - 1564072",Male,50-60 Years,Married,High School,Q4,Dec,12/17/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,6,1,0,220
+"Kaznowski, Mrs. Jamie","Kaznowski, Mrs. Jamie - 1563994",Female,50-60 Years,Married,Bachelors,Q4,Dec,12/17/2012,Y,Open Suites,Open Suites Montvale ,Phone,None,Business,0,2,0,220
+"Frazier, Mr. Landon","Frazier, Mr. Landon - 1564036",Male,30-40 Years,Married,Bachelors,Q4,Dec,12/20/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,8,1,0,220
+"Freeman, Mr. Christian","Freeman, Mr. Christian - 1564007",Male,30-40 Years,Married,Bachelors,Q4,Dec,12/30/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Pleasure,8,1,1,220
+"Coffey, Mrs. Dana","Coffey, Mrs. Dana - 1564065",Female,30-40 Years,Separated,Bachelors,Q4,Dec,12/30/2012,Y,Open Suites,Open Suites Montvale ,Hotels.com,ipad,Business,6,1,0,220
+"Mattei, Mrs. Addie","Mattei, Mrs. Addie - 1564293",Female,50-60 Years,Divorced,Doctorate,Q1,Jan,1/1/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Phone,None,Business,2,1,1,225
+"Cogen, Mr. Leonard","Cogen, Mr. Leonard - 1564229",Male,50-60 Years,Single,Bachelors,Q1,Jan,1/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Phone,None,Business,4,1,0,225
+"Badier, Mr. Jiel","Badier, Mr. Jiel - 1564231",Male,40-50 Years,Single,Bachelors,Q1,Jan,1/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,1,1,1,225
+"Melno, Mr. Anthony","Melno, Mr. Anthony - 1564250",Male,40-50 Years,Married,High School,Q1,Jan,1/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,2,0,0,225
+"Morre, Mr. Richard","Morre, Mr. Richard - 1564251",Male,40-50 Years,Married,High School,Q1,Jan,1/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,9,1,1,225
+"Colson, Mr. Charles","Colson, Mr. Charles - 1564272",Male,40-50 Years,Divorced,High School,Q1,Jan,1/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,3,2,0,225
+"Max, Mr. Karl","Max, Mr. Karl - 1564277",Male,30-40 Years,Divorced,Bachelors,Q1,Jan,1/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Business,7,2,1,225
+"Colidge, Ms. Taylor","Colidge, Ms. Taylor - 1564265",Female,30-40 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Pleasure,5,2,1,225
+"McCallum, Mrs. Kacey","McCallum, Mrs. Kacey - 1564220",Female,40-50 Years,Married,Bachelors,Q1,Jan,1/28/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,0,0,0,225
+"Cohen, Mrs. Reva","Cohen, Mrs. Reva - Non Reward Member",Female,40-50 Years,Divorced,Bachelors,Q1,Feb,2/22/2012,N,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,3,2,0,225
+"Mokoetse, Mr. John","Mokoetse, Mr. John - 1564189",Male,30-40 Years,Single,Bachelors,Q1,Mar,3/1/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Business,1,0,1,225
+"Marcus, Ms. Stella","Marcus, Ms. Stella - 1564183",Female,20-30 years,Divorced,Bachelors,Q1,Mar,3/12/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Corporate Travel Portal,Computer,Pleasure,6,2,0,225
+"Mold, Mrs. Irina","Mold, Mrs. Irina - 1564158",Female,40-50 Years,Divorced,Bachelors,Q2,Apr,4/11/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,3,1,0,225
+"May, Mrs. Stacy","May, Mrs. Stacy - 1564153",Female,40-50 Years,Single,Bachelors,Q2,Apr,4/22/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,4,1,1,225
+"Moss, Mr. Bishop","Moss, Mr. Bishop - 1564147",Male,40-50 Years,Single,Bachelors,Q2,Apr,4/26/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,10,1,1,225
+"Mallery, Mr. Brent","Mallery, Mr. Brent - 1564141",Male,30-40 Years,Single,Bachelors,Q2,May,5/1/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Business,7,1,0,225
+"Authoria, Ms. Frederica","Authoria, Ms. Frederica - Non Reward Member",Female,30-40 Years,Married,Masters,Q2,May,5/26/2012,N,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Pleasure,1,1,1,225
+"Matusak, Mr. Jordan","Matusak, Mr. Jordan - 1564130",Male,50-60 Years,Married,Doctorate,Q2,May,5/30/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Phone,None,Business,6,2,0,225
+"Mason, Mr. Charles","Mason, Mr. Charles - 1564121",Male,40-50 Years,Married,Bachelors,Q2,Jun,6/14/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,3,2,0,225
+"Marge, Mr. Hanes","Marge, Mr. Hanes - 1564114",Male,40-50 Years,Divorced,Bachelors,Q2,Jun,6/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,3,1,1,225
+"Martin, Mr. Jamal","Martin, Mr. Jamal - 1564077",Male,30-40 Years,Divorced,Bachelors,Q3,Aug,8/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Business,2,1,1,225
+"Bailey, Mrs. Jennifer","Bailey, Mrs. Jennifer - 1564068",Female,30-40 Years,Married,Bachelors,Q3,Aug,8/23/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Pleasure,6,1,1,225
+"Louge, Mrs. Reva","Louge, Mrs. Reva - 1564063",Female,40-50 Years,Divorced,Bachelors,Q3,Sep,9/4/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,9,2,1,225
+"McNabb, Mrs. Micheal","McNabb, Mrs. Micheal - 1564029",Female,40-50 Years,Divorced,Bachelors,Q3,Jul,7/1/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,2,0,0,225
+"Collins, Mr. Richard","Collins, Mr. Richard - 1564000",Male,20-30 years,Married,Masters,Q3,Sep,9/9/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Corporate Travel Portal,Computer,Business,0,1,0,225
+"Madrid, Mr. Landy","Madrid, Mr. Landy - 1563991",Male,40-50 Years,Married,Masters,Q3,Sep,9/22/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,3,1,0,225
+"McAllister, Mr. Lindsay","McAllister, Mr. Lindsay - 1563992",Male,30-40 Years,Divorced,High School,Q3,Sep,9/22/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Business,5,1,1,225
+"Magic, Ms. Betty","Magic, Ms. Betty - 1563986",Female,40-50 Years,Divorced,Masters,Q3,Sep,9/29/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,0,1,0,225
+"Mattei, Mrs. Addie","Mattei, Mrs. Addie - 1564293",Female,50-60 Years,Divorced,Doctorate,Q4,Oct,10/1/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Phone,None,Business,2,1,1,225
+"Mold, Mrs. Irina","Mold, Mrs. Irina - 1564158",Female,40-50 Years,Divorced,Bachelors,Q4,Oct,10/11/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,7,2,1,225
+"Mason, Mr. Charles","Mason, Mr. Charles - 1564121",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/14/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,8,0,0,225
+"Cogen, Mr. Leonard","Cogen, Mr. Leonard - 1564229",Male,50-60 Years,Single,Bachelors,Q4,Oct,10/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Phone,None,Business,5,0,1,225
+"Badier, Mr. Jiel","Badier, Mr. Jiel - 1564231",Male,40-50 Years,Single,Bachelors,Q4,Oct,10/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,2,2,1,225
+"Melno, Mr. Anthony","Melno, Mr. Anthony - 1564250",Male,40-50 Years,Married,High School,Q4,Oct,10/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,5,1,1,225
+"Morre, Mr. Richard","Morre, Mr. Richard - 1564251",Male,40-50 Years,Married,High School,Q4,Oct,10/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,4,1,0,225
+"Colson, Mr. Charles","Colson, Mr. Charles - 1564272",Male,40-50 Years,Divorced,High School,Q4,Oct,10/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,1,1,0,225
+"Max, Mr. Karl","Max, Mr. Karl - 1564277",Male,30-40 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Business,4,0,0,225
+"Colidge, Ms. Taylor","Colidge, Ms. Taylor - 1564265",Female,30-40 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Pleasure,5,1,1,225
+"Marge, Mr. Hanes","Marge, Mr. Hanes - 1564114",Male,40-50 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,2,1,1,225
+"May, Mrs. Stacy","May, Mrs. Stacy - 1564153",Female,40-50 Years,Single,Bachelors,Q4,Oct,10/22/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,4,2,1,225
+"Moss, Mr. Bishop","Moss, Mr. Bishop - 1564147",Male,40-50 Years,Single,Bachelors,Q4,Oct,10/26/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,5,1,1,225
+"McCallum, Mrs. Kacey","McCallum, Mrs. Kacey - 1564220",Female,40-50 Years,Married,Bachelors,Q4,Oct,10/28/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,6,1,1,225
+"Mokoetse, Mr. John","Mokoetse, Mr. John - 1564189",Male,30-40 Years,Single,Bachelors,Q4,Nov,11/1/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Business,1,1,0,225
+"Mallery, Mr. Brent","Mallery, Mr. Brent - 1564141",Male,30-40 Years,Single,Bachelors,Q4,Nov,11/1/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Business,5,2,1,225
+"Marcus, Ms. Stella","Marcus, Ms. Stella - 1564183",Female,20-30 years,Divorced,Bachelors,Q4,Nov,11/12/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Corporate Travel Portal,Computer,Pleasure,4,1,1,225
+"Cohen, Mrs. Reva","Cohen, Mrs. Reva - Non Reward Member",Female,40-50 Years,Divorced,Bachelors,Q4,Nov,11/22/2012,N,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,6,1,1,225
+"Authoria, Ms. Frederica","Authoria, Ms. Frederica - Non Reward Member",Female,30-40 Years,Married,Masters,Q4,Nov,11/26/2012,N,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Pleasure,4,1,0,225
+"Matusak, Mr. Jordan","Matusak, Mr. Jordan - 1564130",Male,50-60 Years,Married,Doctorate,Q4,Nov,11/30/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Phone,None,Business,4,1,1,225
+"McNabb, Mrs. Micheal","McNabb, Mrs. Micheal - 1564029",Female,40-50 Years,Divorced,Bachelors,Q4,Dec,12/1/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,7,0,1,225
+"Louge, Mrs. Reva","Louge, Mrs. Reva - 1564063",Female,40-50 Years,Divorced,Bachelors,Q4,Dec,12/4/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,9,0,1,225
+"Collins, Mr. Richard","Collins, Mr. Richard - 1564000",Male,20-30 years,Married,Masters,Q4,Dec,12/12/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Corporate Travel Portal,Computer,Business,2,1,1,225
+"Martin, Mr. Jamal","Martin, Mr. Jamal - 1564077",Male,30-40 Years,Divorced,Bachelors,Q4,Dec,12/15/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Business,2,1,0,225
+"Madrid, Mr. Landy","Madrid, Mr. Landy - 1563991",Male,40-50 Years,Married,Masters,Q4,Dec,12/22/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,1,1,0,225
+"McAllister, Mr. Lindsay","McAllister, Mr. Lindsay - 1563992",Male,30-40 Years,Divorced,High School,Q4,Dec,12/22/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Business,6,1,1,225
+"Bailey, Mrs. Jennifer","Bailey, Mrs. Jennifer - 1564068",Female,30-40 Years,Married,Bachelors,Q4,Dec,12/23/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Hotels.com,Computer,Pleasure,2,2,1,225
+"Magic, Ms. Betty","Magic, Ms. Betty - 1563986",Female,40-50 Years,Divorced,Masters,Q4,Dec,12/29/2012,Y,Value Inn & Suites ,Value Inn & Suites - Baltimore,Marriott.com,Android,Business,5,0,0,225
+"Walsh, Mrs. Geri","Walsh, Mrs. Geri - 1564227",Female,50-60 Years,Single,Masters,Q1,Jan,1/20/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,3,2,1,225
+"Whitesides, Mr. Bishop","Whitesides, Mr. Bishop - 1564150",Male,40-50 Years,Divorced,Masters,Q2,Apr,4/26/2012,Y,American Hotels Inc,Boston Burlington,Hotels.com,ipad,Business,5,1,0,225
+"Weinberg, Mrs. Nel","Weinberg, Mrs. Nel - Non Reward Member",Female,50-60 Years,Married,High School,Q2,Apr,4/30/2012,N,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,1,0,0,225
+"Webber, Mrs. Kelly","Webber, Mrs. Kelly - 1564097",Female,40-50 Years,Single,Bachelors,Q2,Jun,6/30/2012,Y,American Hotels Inc,Boston Burlington,Hotels.com,ipad,Business,0,2,0,225
+"Walter, Mrs. Jenette","Walter, Mrs. Jenette - 1564101",Female,50-60 Years,Divorced,Bachelors,Q2,Jun,6/30/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,4,0,0,225
+"Wickett, Ms. Gwen","Wickett, Ms. Gwen - 1564087",Female,30-40 Years,Single,High School,Q3,Jul,7/15/2012,Y,American Hotels Inc,Boston Burlington,Travelocity,ipad,Business,3,2,1,225
+"Wheaton, Mrs. Liz","Wheaton, Mrs. Liz - 1564047",Female,50-60 Years,Married,Bachelors,Q3,Aug,8/1/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,9,0,0,225
+"Watson, Mr. Drew","Watson, Mr. Drew - Non Reward Member",Male,40-50 Years,Single,Bachelors,Q3,Aug,8/20/2012,N,American Hotels Inc,Boston Burlington,Hotels.com,ipad,Business,8,1,0,225
+"Reite, Mrs. Dale","Reite, Mrs. Dale - 1564033",Female,50-60 Years,Married,High School,Q3,Aug,8/22/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,10,1,1,225
+"Rice, Mr. Jos","Rice, Mr. Jos - 1564017",Male,50-60 Years,Divorced,Bachelors,Q3,Jul,7/12/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,2,1,1,225
+"Walker, Mr. Augusta","Walker, Mr. Augusta - 1564015",Male,40-50 Years,Married,Bachelors,Q3,Jul,7/14/2012,Y,American Hotels Inc,Boston Burlington,Hotels.com,ipad,Pleasure,3,1,0,225
+"Rice, Mrs. Bobby","Rice, Mrs. Bobby - 1564002",Female,50-60 Years,Single,Bachelors,Q3,Sep,9/8/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,1,1,1,225
+"Walden, Ms. Sherri","Walden, Ms. Sherri - Non Reward Member",Female,40-50 Years,Married,Bachelors,Q3,Sep,9/30/2012,N,American Hotels Inc,Boston Burlington,Hotels.com,ipad,Pleasure,0,1,0,225
+"Walsh, Mrs. Geri","Walsh, Mrs. Geri - 1564227",Female,50-60 Years,Single,Masters,Q4,Oct,10/20/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,7,2,1,225
+"Whitesides, Mr. Bishop","Whitesides, Mr. Bishop - 1564150",Male,40-50 Years,Divorced,Masters,Q4,Oct,10/26/2012,Y,American Hotels Inc,Boston Burlington,Hotels.com,ipad,Business,6,0,0,225
+"Weinberg, Mrs. Nel","Weinberg, Mrs. Nel - Non Reward Member",Female,50-60 Years,Married,High School,Q4,Oct,10/30/2012,N,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,3,1,1,225
+"Webber, Mrs. Kelly","Webber, Mrs. Kelly - 1564097",Female,40-50 Years,Single,Bachelors,Q4,Oct,10/30/2012,Y,American Hotels Inc,Boston Burlington,Hotels.com,ipad,Business,4,1,1,225
+"Walter, Mrs. Jenette","Walter, Mrs. Jenette - 1564101",Female,50-60 Years,Divorced,Bachelors,Q4,Oct,10/30/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,6,0,0,225
+"Wheaton, Mrs. Liz","Wheaton, Mrs. Liz - 1564047",Female,50-60 Years,Married,Bachelors,Q4,Dec,12/1/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,4,1,1,225
+"Rice, Mrs. Bobby","Rice, Mrs. Bobby - 1564002",Female,50-60 Years,Single,Bachelors,Q4,Dec,12/8/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,7,0,0,225
+"Rice, Mr. Jos","Rice, Mr. Jos - 1564017",Male,50-60 Years,Divorced,Bachelors,Q4,Dec,12/12/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,0,1,1,225
+"Walker, Mr. Augusta","Walker, Mr. Augusta - 1564015",Male,40-50 Years,Married,Bachelors,Q4,Dec,12/14/2012,Y,American Hotels Inc,Boston Burlington,Hotels.com,ipad,Pleasure,3,1,1,225
+"Wickett, Ms. Gwen","Wickett, Ms. Gwen - 1564087",Female,30-40 Years,Single,High School,Q4,Dec,12/15/2012,Y,American Hotels Inc,Boston Burlington,Travelocity,ipad,Business,4,1,0,225
+"Watson, Mr. Drew","Watson, Mr. Drew - Non Reward Member",Male,40-50 Years,Single,Bachelors,Q4,Dec,12/20/2012,N,American Hotels Inc,Boston Burlington,Hotels.com,ipad,Business,4,1,0,225
+"Reite, Mrs. Dale","Reite, Mrs. Dale - 1564033",Female,50-60 Years,Married,High School,Q4,Dec,12/22/2012,Y,American Hotels Inc,Boston Burlington,Corporate Travel Portal,Computer,Business,6,0,1,225
+"Walden, Ms. Sherri","Walden, Ms. Sherri - Non Reward Member",Female,40-50 Years,Married,Bachelors,Q4,Dec,12/30/2012,N,American Hotels Inc,Boston Burlington,Hotels.com,ipad,Pleasure,3,1,0,225
+"Brinton, Mr. Robert","Brinton, Mr. Robert - 1564237",Male,40-50 Years,Single,High School,Q1,Jan,1/15/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Business,7,2,1,225
+"Colton, Ms. Nicky","Colton, Ms. Nicky - 1564273",Female,40-50 Years,Divorced,Bachelors,Q1,Jan,1/15/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Business,8,1,0,225
+"Brock, Mr. Carl","Brock, Mr. Carl - 1564267",Male,30-40 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,4,1,1,225
+"Brod, Mr. Charly","Brod, Mr. Charly - 1564268",Male,30-40 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,3,2,1,225
+"Brecek, Mr. Anthony","Brecek, Mr. Anthony - 1564190",Male,40-50 Years,Married,Bachelors,Q1,Mar,3/1/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,9,1,1,225
+"Cliff, Mr. Conrad","Cliff, Mr. Conrad - 1564167",Male,40-50 Years,Married,Bachelors,Q2,Apr,4/1/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,9,0,1,225
+"Ackerman, Mr. Bobby","Ackerman, Mr. Bobby - 1564132",Male,50-60 Years,Single,High School,Q2,May,5/22/2012,Y,American Hotels Inc,Boston Copley Place,Corporate Travel Portal,Computer,Business,3,1,0,225
+"Authoria, Mr. Gregory","Authoria, Mr. Gregory - Non Reward Member",Male,20-30 years,Married,Bachelors,Q2,May,5/26/2012,N,American Hotels Inc,Boston Copley Place,Corporate Travel Portal,Computer,Business,1,1,0,225
+"Britt, Mr. Robert","Britt, Mr. Robert - 1564125",Male,40-50 Years,Married,Bachelors,Q2,Jun,6/8/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,5,1,0,225
+"Bray, Mrs. Jenette","Bray, Mrs. Jenette - 1564066",Female,50-60 Years,Divorced,Masters,Q3,Aug,8/30/2012,Y,American Hotels Inc,Boston Copley Place,Corporate Travel Portal,Computer,Business,7,0,1,225
+"Conrad, Mrs. Reva","Conrad, Mrs. Reva - 1564062",Female,40-50 Years,Married,Bachelors,Q3,Sep,9/4/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,7,0,0,225
+"Breece, Mr. Mike","Breece, Mr. Mike - 1564058",Male,40-50 Years,Married,Masters,Q3,Sep,9/13/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,3,0,1,225
+"Conrad, Mrs. Lillian","Conrad, Mrs. Lillian - 1564046",Female,50-60 Years,Married,Masters,Q3,Aug,8/3/2012,Y,American Hotels Inc,Boston Copley Place,Corporate Travel Portal,Computer,Business,2,1,1,225
+"Commorosa, Mr. Gerald","Commorosa, Mr. Gerald - 1564040",Male,40-50 Years,Married,Bachelors,Q3,Aug,8/17/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,3,2,0,225
+"Cliff, Mr. Conrad","Cliff, Mr. Conrad - 1564167",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/1/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,4,1,0,225
+"Britt, Mr. Robert","Britt, Mr. Robert - 1564125",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/8/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,5,0,1,225
+"Brinton, Mr. Robert","Brinton, Mr. Robert - 1564237",Male,40-50 Years,Single,High School,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Business,5,2,1,225
+"Colton, Ms. Nicky","Colton, Ms. Nicky - 1564273",Female,40-50 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Business,7,0,0,225
+"Brock, Mr. Carl","Brock, Mr. Carl - 1564267",Male,30-40 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,4,0,1,225
+"Brod, Mr. Charly","Brod, Mr. Charly - 1564268",Male,30-40 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,4,2,1,225
+"Brecek, Mr. Anthony","Brecek, Mr. Anthony - 1564190",Male,40-50 Years,Married,Bachelors,Q4,Nov,11/1/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,9,1,0,225
+"Ackerman, Mr. Bobby","Ackerman, Mr. Bobby - 1564132",Male,50-60 Years,Single,High School,Q4,Nov,11/22/2012,Y,American Hotels Inc,Boston Copley Place,Corporate Travel Portal,Computer,Business,1,1,1,225
+"Authoria, Mr. Gregory","Authoria, Mr. Gregory - Non Reward Member",Male,20-30 years,Married,Bachelors,Q4,Nov,11/26/2012,N,American Hotels Inc,Boston Copley Place,Corporate Travel Portal,Computer,Business,2,1,1,225
+"Conrad, Mrs. Lillian","Conrad, Mrs. Lillian - 1564046",Female,50-60 Years,Married,Masters,Q4,Dec,12/3/2012,Y,American Hotels Inc,Boston Copley Place,Corporate Travel Portal,Computer,Business,8,1,0,225
+"Conrad, Mrs. Reva","Conrad, Mrs. Reva - 1564062",Female,40-50 Years,Married,Bachelors,Q4,Dec,12/4/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,5,1,1,225
+"Breece, Mr. Mike","Breece, Mr. Mike - 1564058",Male,40-50 Years,Married,Masters,Q4,Dec,12/13/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,5,2,1,225
+"Commorosa, Mr. Gerald","Commorosa, Mr. Gerald - 1564040",Male,40-50 Years,Married,Bachelors,Q4,Dec,12/17/2012,Y,American Hotels Inc,Boston Copley Place,Hotels.com,ipad,Pleasure,4,1,0,225
+"Bray, Mrs. Jenette","Bray, Mrs. Jenette - 1564066",Female,50-60 Years,Divorced,Masters,Q4,Dec,12/30/2012,Y,American Hotels Inc,Boston Copley Place,Corporate Travel Portal,Computer,Business,6,1,0,225
+"Conton, Mr. Charles","Conton, Mr. Charles - 1564260",Male,40-50 Years,Married,Masters,Q1,Jan,1/15/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Pleasure,7,0,0,225
+"Gazzara, Mrs. Nel","Gazzara, Mrs. Nel - 1564224",Female,50-60 Years,Married,Bachelors,Q1,Jan,1/22/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,4,2,0,225
+"Greenbhlat, Mr. Vernon","Greenbhlat, Mr. Vernon - 1564157",Male,40-50 Years,Single,Masters,Q2,Apr,4/19/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,0,2,0,225
+"Gootee, Mr. Satish","Gootee, Mr. Satish - 1564138",Male,40-50 Years,Divorced,Bachelors,Q2,May,5/15/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,6,1,1,225
+"Gleason, Mr. Barry","Gleason, Mr. Barry - 1564123",Male,30-40 Years,Married,High School,Q2,Jun,6/14/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Pleasure,1,2,0,225
+"Geer, Mr. Gerald","Geer, Mr. Gerald - 1564108",Male,50-60 Years,Divorced,Bachelors,Q2,Jun,6/20/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,9,1,1,225
+"Garske, Mrs. Jenette","Garske, Mrs. Jenette - 1564096",Female,50-60 Years,Single,High School,Q2,Jun,6/30/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,3,1,1,225
+"Curry, Mrs. Sarah","Curry, Mrs. Sarah - Non Reward Member",Female,40-50 Years,Divorced,Bachelors,Q3,Aug,8/2/2012,N,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,1,1,0,225
+"Gazzarra, Mrs. Keery","Gazzarra, Mrs. Keery - 1564081",Female,40-50 Years,Single,Bachelors,Q3,Aug,8/12/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,9,1,1,225
+"Gannon, Mrs. Jennifer","Gannon, Mrs. Jennifer - 1564079",Female,50-60 Years,Single,Bachelors,Q3,Aug,8/13/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,2,2,1,225
+"Gisler, Mr. Kamal","Gisler, Mr. Kamal - 1564076",Male,30-40 Years,Married,Bachelors,Q3,Aug,8/15/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Pleasure,9,1,0,225
+"Gavin, Mrs. Reva","Gavin, Mrs. Reva - 1564061",Female,40-50 Years,Single,Bachelors,Q3,Sep,9/4/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,1,0,1,225
+"Croon, Mr. Harold","Croon, Mr. Harold - 1564053",Male,30-40 Years,Divorced,High School,Q3,Sep,9/22/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,7,1,1,225
+"Croon, James","Croon, James - 1564051",Male,30-40 Years,Married,Bachelors,Q3,Sep,9/22/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Pleasure,3,0,0,225
+"Guinn, Mr. Harrold","Guinn, Mr. Harrold - 1564039",Male,50-60 Years,Single,High School,Q3,Aug,8/17/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,3,0,0,225
+"Crane, Mrs. Colleen","Crane, Mrs. Colleen - 1564005",Female,50-60 Years,Married,Bachelors,Q3,Sep,9/1/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,8,2,1,225
+"Gleason, Mr. Barry","Gleason, Mr. Barry - 1564123",Male,30-40 Years,Married,High School,Q4,Oct,10/14/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Pleasure,5,0,0,225
+"Conton, Mr. Charles","Conton, Mr. Charles - 1564260",Male,40-50 Years,Married,Masters,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Pleasure,1,2,1,225
+"Greenbhlat, Mr. Vernon","Greenbhlat, Mr. Vernon - 1564157",Male,40-50 Years,Single,Masters,Q4,Oct,10/19/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,4,1,0,225
+"Geer, Mr. Gerald","Geer, Mr. Gerald - 1564108",Male,50-60 Years,Divorced,Bachelors,Q4,Oct,10/20/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,6,0,1,225
+"Gazzara, Mrs. Nel","Gazzara, Mrs. Nel - 1564224",Female,50-60 Years,Married,Bachelors,Q4,Oct,10/22/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,0,1,0,225
+"Garske, Mrs. Jenette","Garske, Mrs. Jenette - 1564096",Female,50-60 Years,Single,High School,Q4,Oct,10/30/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,3,1,0,225
+"Gootee, Mr. Satish","Gootee, Mr. Satish - 1564138",Male,40-50 Years,Divorced,Bachelors,Q4,Nov,11/15/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,7,2,1,225
+"Crane, Mrs. Colleen","Crane, Mrs. Colleen - 1564005",Female,50-60 Years,Married,Bachelors,Q4,Dec,12/1/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,4,1,1,225
+"Curry, Mrs. Sarah","Curry, Mrs. Sarah - Non Reward Member",Female,40-50 Years,Divorced,Bachelors,Q4,Dec,12/2/2012,N,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,3,2,0,225
+"Gavin, Mrs. Reva","Gavin, Mrs. Reva - 1564061",Female,40-50 Years,Single,Bachelors,Q4,Dec,12/4/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,1,1,1,225
+"Gazzarra, Mrs. Keery","Gazzarra, Mrs. Keery - 1564081",Female,40-50 Years,Single,Bachelors,Q4,Dec,12/12/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,8,0,1,225
+"Gannon, Mrs. Jennifer","Gannon, Mrs. Jennifer - 1564079",Female,50-60 Years,Single,Bachelors,Q4,Dec,12/13/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,4,1,1,225
+"Gisler, Mr. Kamal","Gisler, Mr. Kamal - 1564076",Male,30-40 Years,Married,Bachelors,Q4,Dec,12/15/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Pleasure,4,1,0,225
+"Guinn, Mr. Harrold","Guinn, Mr. Harrold - 1564039",Male,50-60 Years,Single,High School,Q4,Dec,12/17/2012,Y,American Hotels Inc,Boston Long Wharf,Corporate Travel Portal,Computer,Business,7,0,0,225
+"Croon, Mr. Harold","Croon, Mr. Harold - 1564053",Male,30-40 Years,Divorced,High School,Q4,Dec,12/22/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Business,4,1,0,225
+"Croon, James","Croon, James - 1564051",Male,30-40 Years,Married,Bachelors,Q4,Dec,12/22/2012,Y,American Hotels Inc,Boston Long Wharf,Hotels.com,ipad,Pleasure,6,2,1,225
+"Brad, Mr. Tony","Brad, Mr. Tony - 1564238",Male,40-50 Years,Single,High School,Q1,Jan,1/15/2012,Y,American Hotels Inc,Boston Newton,Hotels.com,ipad,Business,2,0,1,225
+"Lipinski, Mr. Larry","Lipinski, Mr. Larry - 1564126",Male,30-40 Years,Single,Doctorate,Q2,Jun,6/6/2012,Y,American Hotels Inc,Boston Newton,Travelocity,ipad,Business,8,1,0,225
+"Leblanc, Mr. Charles","Leblanc, Mr. Charles - 1564120",Male,30-40 Years,Single,Bachelors,Q2,Jun,6/14/2012,Y,American Hotels Inc,Boston Newton,Travelocity,ipad,Business,4,1,1,225
+"Lift, Mr. Glenn","Lift, Mr. Glenn - 1564103",Male,30-40 Years,Married,High School,Q2,Jun,6/25/2012,Y,American Hotels Inc,Boston Newton,Travelocity,ipad,Pleasure,5,1,1,225
+"Livingood, Mr. Mike","Livingood, Mr. Mike - 1564083",Male,40-50 Years,Married,Masters,Q3,Aug,8/7/2012,Y,American Hotels Inc,Boston Newton,Hotels.com,ipad,Pleasure,0,2,1,225
+"Lee, Mrs. Dina","Lee, Mrs. Dina - 1564044",Female,40-50 Years,Married,Bachelors,Q3,Aug,8/4/2012,Y,American Hotels Inc,Boston Newton,Hotels.com,ipad,Pleasure,9,0,1,225
+"Lewis, Ms. Elizabeth","Lewis, Ms. Elizabeth - 1563988",Female,40-50 Years,Divorced,Bachelors,Q3,Sep,9/29/2012,Y,American Hotels Inc,Boston Newton,Hotels.com,ipad,Business,1,0,0,225
+"Lipinski, Mr. Larry","Lipinski, Mr. Larry - 1564126",Male,30-40 Years,Single,Doctorate,Q4,Oct,10/10/2012,Y,American Hotels Inc,Boston Newton,Travelocity,ipad,Business,4,0,1,225
+"Leblanc, Mr. Charles","Leblanc, Mr. Charles - 1564120",Male,30-40 Years,Single,Bachelors,Q4,Oct,10/14/2012,Y,American Hotels Inc,Boston Newton,Travelocity,ipad,Business,2,0,0,225
+"Brad, Mr. Tony","Brad, Mr. Tony - 1564238",Male,40-50 Years,Single,High School,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boston Newton,Hotels.com,ipad,Business,3,1,1,225
+"Lift, Mr. Glenn","Lift, Mr. Glenn - 1564103",Male,30-40 Years,Married,High School,Q4,Oct,10/25/2012,Y,American Hotels Inc,Boston Newton,Travelocity,ipad,Pleasure,8,1,1,225
+"Lee, Mrs. Dina","Lee, Mrs. Dina - 1564044",Female,40-50 Years,Married,Bachelors,Q4,Dec,12/4/2012,Y,American Hotels Inc,Boston Newton,Hotels.com,ipad,Pleasure,4,1,0,225
+"Livingood, Mr. Mike","Livingood, Mr. Mike - 1564083",Male,40-50 Years,Married,Masters,Q4,Dec,12/7/2012,Y,American Hotels Inc,Boston Newton,Hotels.com,ipad,Pleasure,6,1,0,225
+"Lewis, Ms. Elizabeth","Lewis, Ms. Elizabeth - 1563988",Female,40-50 Years,Divorced,Bachelors,Q4,Dec,12/29/2012,Y,American Hotels Inc,Boston Newton,Hotels.com,ipad,Business,1,1,1,225
+"Parsons, Mr. Max","Parsons, Mr. Max - Non Reward Member",Male,20-30 years,Married,Bachelors,Q1,Jan,1/1/2012,N,American Hotels Inc,Boston Peabody,Corporate Travel Portal,Computer,Business,8,1,0,225
+"Pauley, Ms. Joyce","Pauley, Ms. Joyce - 1564290",Female,40-50 Years,Married,Bachelors,Q1,Jan,1/3/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,7,1,0,225
+"Reid, Mr. Peter","Reid, Mr. Peter - 1564196",Male,40-50 Years,Married,Bachelors,Q1,Feb,2/21/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,5,1,1,225
+"Reed, Mrs. Hannah","Reed, Mrs. Hannah - 1564191",Female,30-40 Years,Married,Bachelors,Q1,Mar,3/1/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,4,0,0,225
+"Reed, Mrs. Carol","Reed, Mrs. Carol - 1564128",Female,50-60 Years,Married,Bachelors,Q2,Jun,6/4/2012,Y,American Hotels Inc,Boston Peabody,Corporate Travel Portal,Computer,Business,4,2,1,225
+"Rambis, Ms. Kathy","Rambis, Ms. Kathy - 1564107",Female,20-30 years,Divorced,Bachelors,Q2,Jun,6/23/2012,Y,American Hotels Inc,Boston Peabody,Corporate Travel Portal,Computer,Pleasure,10,2,0,225
+"Ramos, Mr. Jamie","Ramos, Mr. Jamie - 1564084",Male,40-50 Years,Married,Masters,Q3,Aug,8/4/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,5,1,0,225
+"Reilly, Mr. Karen","Reilly, Mr. Karen - 1564050",Male,30-40 Years,Divorced,Bachelors,Q3,Sep,9/27/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Business,1,1,0,225
+"Reilly, Mr. Conrad","Reilly, Mr. Conrad - 1564049",Male,40-50 Years,Single,High School,Q3,Sep,9/30/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Business,1,2,1,225
+"Peabody, Mrs. Carol","Peabody, Mrs. Carol - 1564043",Female,40-50 Years,Married,High School,Q3,Aug,8/4/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,6,0,0,225
+"Patterson, Mr. Pat","Patterson, Mr. Pat - 1564042",Male,40-50 Years,Married,High School,Q3,Aug,8/11/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,2,1,0,225
+"Gumble, Mrs. Mary","Gumble, Mrs. Mary - 1564006",Female,40-50 Years,Domestic Partnership,Bachelors,Q3,Sep,9/1/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Business,1,2,0,225
+"Parsons, Mr. Max","Parsons, Mr. Max - Non Reward Member",Male,20-30 years,Married,Bachelors,Q4,Oct,10/1/2012,N,American Hotels Inc,Boston Peabody,Corporate Travel Portal,Computer,Business,2,1,1,225
+"Pauley, Ms. Joyce","Pauley, Ms. Joyce - 1564290",Female,40-50 Years,Married,Bachelors,Q4,Oct,10/3/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,8,1,1,225
+"Reed, Mrs. Carol","Reed, Mrs. Carol - 1564128",Female,50-60 Years,Married,Bachelors,Q4,Oct,10/4/2012,Y,American Hotels Inc,Boston Peabody,Corporate Travel Portal,Computer,Business,0,1,0,225
+"Rambis, Ms. Kathy","Rambis, Ms. Kathy - 1564107",Female,20-30 years,Divorced,Bachelors,Q4,Oct,10/23/2012,Y,American Hotels Inc,Boston Peabody,Corporate Travel Portal,Computer,Pleasure,2,0,1,225
+"Reed, Mrs. Hannah","Reed, Mrs. Hannah - 1564191",Female,30-40 Years,Married,Bachelors,Q4,Nov,11/1/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,5,2,0,225
+"Reid, Mr. Peter","Reid, Mr. Peter - 1564196",Male,40-50 Years,Married,Bachelors,Q4,Nov,11/21/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,6,2,1,225
+"Gumble, Mrs. Mary","Gumble, Mrs. Mary - 1564006",Female,40-50 Years,Domestic Partnership,Bachelors,Q4,Dec,12/1/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Business,7,1,1,225
+"Ramos, Mr. Jamie","Ramos, Mr. Jamie - 1564084",Male,40-50 Years,Married,Masters,Q4,Dec,12/4/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,5,2,1,225
+"Peabody, Mrs. Carol","Peabody, Mrs. Carol - 1564043",Female,40-50 Years,Married,High School,Q4,Dec,12/4/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,0,1,0,225
+"Patterson, Mr. Pat","Patterson, Mr. Pat - 1564042",Male,40-50 Years,Married,High School,Q4,Dec,12/11/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Pleasure,7,1,0,225
+"Reilly, Mr. Karen","Reilly, Mr. Karen - 1564050",Male,30-40 Years,Divorced,Bachelors,Q4,Dec,12/27/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Business,7,1,0,225
+"Reilly, Mr. Conrad","Reilly, Mr. Conrad - 1564049",Male,40-50 Years,Single,High School,Q4,Dec,12/30/2012,Y,American Hotels Inc,Boston Peabody,Hotels.com,ipad,Business,5,2,1,225
+"Winslow, Ms. Wendy","Winslow, Ms. Wendy - 1564286",Female,30-40 Years,Divorced,Bachelors,Q1,Jan,1/7/2012,Y,American Hotels Inc,Boston Quincy,Travelocity,ipad,Business,3,1,1,225
+"Williams, Mr. John","Williams, Mr. John - 1564274",Male,40-50 Years,Divorced,Bachelors,Q1,Jan,1/15/2012,Y,American Hotels Inc,Boston Quincy,Hotels.com,ipad,Business,4,1,0,225
+"Williams, Steve","Williams, Steve - 1564093",Male,30-40 Years,Married,Bachelors,Q3,Jul,7/9/2012,Y,American Hotels Inc,Boston Quincy,Travelocity,ipad,Pleasure,4,2,0,225
+"Wiesner, Mrs. Lisa","Wiesner, Mrs. Lisa - 1564034",Female,40-50 Years,Married,Bachelors,Q3,Aug,8/22/2012,Y,American Hotels Inc,Boston Quincy,Hotels.com,ipad,Pleasure,4,1,1,225
+"Winslow, Ms. Wendy","Winslow, Ms. Wendy - 1564286",Female,30-40 Years,Divorced,Bachelors,Q4,Oct,10/7/2012,Y,American Hotels Inc,Boston Quincy,Travelocity,ipad,Business,1,1,0,225
+"Williams, Mr. John","Williams, Mr. John - 1564274",Male,40-50 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boston Quincy,Hotels.com,ipad,Business,6,0,0,225
+"Williams, Steve","Williams, Steve - 1564093",Male,30-40 Years,Married,Bachelors,Q4,Dec,12/9/2012,Y,American Hotels Inc,Boston Quincy,Travelocity,ipad,Pleasure,3,0,0,225
+"Wiesner, Mrs. Lisa","Wiesner, Mrs. Lisa - 1564034",Female,40-50 Years,Married,Bachelors,Q4,Dec,12/22/2012,Y,American Hotels Inc,Boston Quincy,Hotels.com,ipad,Pleasure,2,2,1,225
+"Beckett, Mr. Samuel","Beckett, Mr. Samuel - 1564242",Male,30-40 Years,Single,High School,Q1,Jan,1/15/2012,Y,American Hotels Inc,Springfield,Travelocity,ipad,Business,5,2,0,130
+"Boyd, Mrs. Katy","Boyd, Mrs. Katy - 1564219",Female,50-60 Years,Married,Masters,Q1,Jan,1/29/2012,Y,American Hotels Inc,Springfield,Marriott.com,Computer,Business,9,0,0,130
+"Bowen, Mr. Anthony","Bowen, Mr. Anthony - 1564206",Male,40-50 Years,Married,Masters,Q1,Feb,2/1/2012,Y,American Hotels Inc,Springfield,Hotels.com,ipad,Pleasure,8,1,0,130
+"Aoks, Mr. Ioki","Aoks, Mr. Ioki - 1564136",Male,40-50 Years,Married,Bachelors,Q2,May,5/15/2012,Y,American Hotels Inc,Springfield,Hotels.com,ipad,Pleasure,7,2,0,130
+"Authoria, Mr. Hugo","Authoria, Mr. Hugo - Non Reward Member",Male,20-30 years,Single,Bachelors,Q2,May,5/26/2012,N,American Hotels Inc,Springfield,Corporate Travel Portal,Computer,Business,10,0,0,130
+"Barry, Mr. Steven","Barry, Mr. Steven - 1564059",Male,30-40 Years,Married,Bachelors,Q3,Sep,9/11/2012,Y,American Hotels Inc,Springfield,Travelocity,ipad,Pleasure,8,1,0,130
+"Antonelli, Mrs. Cecilia","Antonelli, Mrs. Cecilia - 1564048",Female,40-50 Years,Married,Masters,Q3,Aug,8/1/2012,Y,American Hotels Inc,Springfield,Hotels.com,ipad,Pleasure,9,0,0,130
+"Bowers, Joanna","Bowers, Joanna - 1564021",Female,30-40 Years,Married,Bachelors,Q3,Jul,7/7/2012,Y,American Hotels Inc,Springfield,Travelocity,ipad,Pleasure,1,2,0,130
+"Beckett, Mr. Samuel","Beckett, Mr. Samuel - 1564242",Male,30-40 Years,Single,High School,Q4,Oct,10/15/2012,Y,American Hotels Inc,Springfield,Travelocity,ipad,Business,7,1,1,130
+"Boyd, Mrs. Katy","Boyd, Mrs. Katy - 1564219",Female,50-60 Years,Married,Masters,Q4,Oct,10/29/2012,Y,American Hotels Inc,Springfield,Marriott.com,Computer,Business,3,0,0,130
+"Bowen, Mr. Anthony","Bowen, Mr. Anthony - 1564206",Male,40-50 Years,Married,Masters,Q4,Nov,11/1/2012,Y,American Hotels Inc,Springfield,Hotels.com,ipad,Pleasure,9,2,1,130
+"Aoks, Mr. Ioki","Aoks, Mr. Ioki - 1564136",Male,40-50 Years,Married,Bachelors,Q4,Nov,11/15/2012,Y,American Hotels Inc,Springfield,Hotels.com,ipad,Pleasure,8,1,0,130
+"Authoria, Mr. Hugo","Authoria, Mr. Hugo - Non Reward Member",Male,20-30 years,Single,Bachelors,Q4,Nov,11/26/2012,N,American Hotels Inc,Springfield,Corporate Travel Portal,Computer,Business,9,1,1,130
+"Antonelli, Mrs. Cecilia","Antonelli, Mrs. Cecilia - 1564048",Female,40-50 Years,Married,Masters,Q4,Dec,12/1/2012,Y,American Hotels Inc,Springfield,Hotels.com,ipad,Pleasure,1,0,0,130
+"Barry, Mr. Steven","Barry, Mr. Steven - 1564059",Male,30-40 Years,Married,Bachelors,Q4,Dec,12/11/2012,Y,American Hotels Inc,Springfield,Travelocity,ipad,Pleasure,2,2,1,130
+"Bowers, Joanna","Bowers, Joanna - 1564021",Female,30-40 Years,Married,Bachelors,Q4,Dec,12/12/2012,Y,American Hotels Inc,Springfield,Travelocity,ipad,Pleasure,4,1,1,130
+"Billow, Mr. Saul","Billow, Mr. Saul - 1564275",Male,40-50 Years,Divorced,Bachelors,Q1,Jan,1/15/2012,Y,American Hotels Inc,Boca Raton Hotel ,Hotels.com,ipad,Business,8,1,1,180
+"Beker, Mr. Henry","Beker, Mr. Henry - 1564279",Male,30-40 Years,Divorced,Bachelors,Q1,Jan,1/15/2012,Y,American Hotels Inc,Boca Raton Hotel ,Travelocity,Android,Business,8,0,1,180
+"Belloc, Mr. Hilaire","Belloc, Mr. Hilaire - 1564261",Male,40-50 Years,Married,Doctorate,Q1,Jan,1/15/2012,Y,American Hotels Inc,Boca Raton Hotel ,Hotels.com,ipad,Pleasure,1,1,1,180
+"Benjamin, Mr. Walter","Benjamin, Mr. Walter - 1564115",Male,40-50 Years,Divorced,Bachelors,Q2,Jun,6/15/2012,Y,American Hotels Inc,Boca Raton Hotel ,Hotels.com,ipad,Business,9,1,1,180
+"Bloomquist, Mr. Mike","Bloomquist, Mr. Mike - 1564052",Male,30-40 Years,Married,Masters,Q3,Sep,9/22/2012,Y,American Hotels Inc,Boca Raton Hotel ,Travelocity,Android,Pleasure,6,1,0,180
+"Bloomquist, Mr. Jordan","Bloomquist, Mr. Jordan - 1564054",Male,30-40 Years,Divorced,Bachelors,Q3,Sep,9/22/2012,Y,American Hotels Inc,Boca Raton Hotel ,Travelocity,Android,Pleasure,7,1,0,180
+"Bibby, Mr. Joseph","Bibby, Mr. Joseph - 1564035",Male,40-50 Years,Single,Bachelors,Q3,Aug,8/20/2012,Y,American Hotels Inc,Boca Raton Hotel ,Hotels.com,ipad,Business,1,2,0,180
+"Bobdell, Mr. Jordan","Bobdell, Mr. Jordan - 1564022",Male,40-50 Years,Married,Bachelors,Q3,Jul,7/3/2012,Y,American Hotels Inc,Boca Raton Hotel ,Hotels.com,ipad,Pleasure,4,1,1,180
+"Billow, Mr. Saul","Billow, Mr. Saul - 1564275",Male,40-50 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boca Raton Hotel ,Hotels.com,ipad,Business,6,2,0,180
+"Beker, Mr. Henry","Beker, Mr. Henry - 1564279",Male,30-40 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boca Raton Hotel ,Travelocity,Android,Business,2,1,0,180
+"Belloc, Mr. Hilaire","Belloc, Mr. Hilaire - 1564261",Male,40-50 Years,Married,Doctorate,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boca Raton Hotel ,Hotels.com,ipad,Pleasure,9,1,0,180
+"Benjamin, Mr. Walter","Benjamin, Mr. Walter - 1564115",Male,40-50 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,American Hotels Inc,Boca Raton Hotel ,Hotels.com,ipad,Business,1,0,0,180
+"Bobdell, Mr. Jordan","Bobdell, Mr. Jordan - 1564022",Male,40-50 Years,Married,Bachelors,Q4,Dec,12/3/2012,Y,American Hotels Inc,Boca Raton Hotel ,Hotels.com,ipad,Pleasure,1,2,1,180
+"Bibby, Mr. Joseph","Bibby, Mr. Joseph - 1564035",Male,40-50 Years,Single,Bachelors,Q4,Dec,12/20/2012,Y,American Hotels Inc,Boca Raton Hotel ,Hotels.com,ipad,Business,9,1,0,180
+"Bloomquist, Mr. Mike","Bloomquist, Mr. Mike - 1564052",Male,30-40 Years,Married,Masters,Q4,Dec,12/22/2012,Y,American Hotels Inc,Boca Raton Hotel ,Travelocity,Android,Pleasure,4,1,1,180
+"Bloomquist, Mr. Jordan","Bloomquist, Mr. Jordan - 1564054",Male,30-40 Years,Divorced,Bachelors,Q4,Dec,12/22/2012,Y,American Hotels Inc,Boca Raton Hotel ,Travelocity,Android,Pleasure,7,1,0,180
+"Flanagan, Mrs. Halley","Flanagan, Mrs. Halley - 1564287",Female,50-60 Years,Married,Bachelors,Q1,Jan,1/5/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,2,1,0,180
+"Delaware, Mr. Anthony","Delaware, Mr. Anthony - 1564239",Male,40-50 Years,Single,Bachelors,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Business,0,1,1,180
+"Fowler, Mr. Gene","Fowler, Mr. Gene - 1564240",Male,40-50 Years,Single,High School,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,Android,Business,9,2,1,180
+"Alfonso, Mr. Jerry","Alfonso, Mr. Jerry - 1564244",Male,50-60 Years,Married,High School,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,4,2,0,180
+"Allen, Mrs. Jill","Allen, Mrs. Jill - 1564245",Female,50-60 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,5,0,1,180
+"Damien, Mr. Johnny","Damien, Mr. Johnny - 1564246",Male,50-60 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,4,0,0,180
+"Deer, Mr. Jack","Deer, Mr. Jack - 1564247",Male,50-60 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,7,2,0,180
+"Forrest, Mr. Robert","Forrest, Mr. Robert - 1564248",Male,50-60 Years,Married,Doctorate,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,4,1,0,180
+"Darling, Mr. Clarence","Darling, Mr. Clarence - 1564271",Male,50-60 Years,Divorced,Masters,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,7,2,0,180
+"Dely, Mr. Daniel","Dely, Mr. Daniel - 1564276",Male,40-50 Years,Divorced,Masters,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Business,7,0,0,180
+"Danay, Mr. Moshe","Danay, Mr. Moshe - 1564262",Male,40-50 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,7,2,1,180
+"Deely, Mr. John","Deely, Mr. John - 1564263",Male,40-50 Years,Married,High School,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,8,2,1,180
+"Dwykins, Mr. Richard","Dwykins, Mr. Richard - 1564264",Male,40-50 Years,Married,High School,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,9,0,1,180
+"Fort, Mr. Charles","Fort, Mr. Charles - 1564269",Male,30-40 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Orbitz,Android,Pleasure,0,0,0,180
+"Fosdi, Mr. Harry","Fosdi, Mr. Harry - 1564270",Male,30-40 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Orbitz,Android,Pleasure,5,2,1,180
+"Daniel, Mr. Samuel","Daniel, Mr. Samuel - 1564280",Male,30-40 Years,Divorced,Bachelors,Q1,Jan,1/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Pleasure,7,1,0,180
+"Dominguez, Mrs. Juanita","Dominguez, Mrs. Juanita - 1564226",Female,30-40 Years,Married,Bachelors,Q1,Jan,1/21/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Pleasure,2,2,1,180
+"Fomogio, Mrs. Katy","Fomogio, Mrs. Katy - 1564213",Female,40-50 Years,Single,Bachelors,Q1,Jan,1/30/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Business,1,1,0,180
+"Flynne, Mrs. Cherlon","Flynne, Mrs. Cherlon - 1564218",Female,30-40 Years,Divorced,High School,Q1,Jan,1/30/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Orbitz,Android,Pleasure,6,0,0,180
+"Curtice, Mr. Anthony","Curtice, Mr. Anthony - 1564207",Male,40-50 Years,Married,Bachelors,Q1,Feb,2/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,8,1,1,180
+"Easter, Mr. James","Easter, Mr. James - 1564208",Male,40-50 Years,Married,Bachelors,Q1,Feb,2/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,5,2,1,180
+"D'Aguanno, Mr. William","D'Aguanno, Mr. William - 1564202",Male,40-50 Years,Married,Bachelors,Q1,Feb,2/9/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,2,1,0,180
+"Eastwood, Mrs. Jordan","Eastwood, Mrs. Jordan - 1564174",Female,40-50 Years,Married,Masters,Q1,Mar,3/21/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,9,0,0,180
+"Donavan, Mr. Owens","Donavan, Mr. Owens - 1564172",Male,20-30 years,Divorced,Bachelors,Q1,Mar,3/30/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Corporate Travel Portal,Computer,Pleasure,0,1,0,180
+"Eastman, Miss Carolyn","Eastman, Miss Carolyn - Non Reward Member",Female,30-40 Years,Married,High School,Q2,May,5/17/2012,N,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Orbitz,Android,Pleasure,1,2,1,180
+"Forman, Mr. John","Forman, Mr. John - 1564127",Male,50-60 Years,Single,Bachelors,Q2,Jun,6/4/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,1,0,1,180
+"Dagar, Mrs. Jenette","Dagar, Mrs. Jenette - 1564102",Female,50-60 Years,Divorced,Masters,Q2,Jun,6/30/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,7,1,0,180
+"Allen, Ms. Mable","Allen, Ms. Mable - 1564089",Female,30-40 Years,Married,Masters,Q3,Jul,7/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Pleasure,7,0,0,180
+"Eastlund, Mrs. Eric","Eastlund, Mrs. Eric - 1564069",Female,30-40 Years,Married,High School,Q3,Aug,8/23/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Orbitz,Android,Pleasure,4,0,0,180
+"Dykeman, Mr. Rico","Dykeman, Mr. Rico - 1564045",Male,30-40 Years,Single,High School,Q3,Aug,8/3/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Business,2,1,1,180
+"Dixie, Mr. Christian","Dixie, Mr. Christian - 1564025",Male,40-50 Years,Married,Bachelors,Q3,Jul,7/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,3,1,1,180
+"Dixie, William","Dixie, William - 1564026",Male,40-50 Years,Married,Bachelors,Q3,Jul,7/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,5,1,1,180
+"Eagan, Mr. Frank","Eagan, Mr. Frank - 1564032",Male,30-40 Years,Divorced,Bachelors,Q3,Jul,7/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Pleasure,6,1,0,180
+"Doslander, Mr. Freddy","Doslander, Mr. Freddy - 1564020",Male,40-50 Years,Single,Masters,Q3,Jul,7/7/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Business,7,0,1,180
+"Dahl, Mr. Harrold","Dahl, Mr. Harrold - 1564013",Male,50-60 Years,Single,Bachelors,Q3,Jul,7/17/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,4,2,0,180
+"Flatt, Mrs. Jamie","Flatt, Mrs. Jamie - 1564004",Female,50-60 Years,Single,Bachelors,Q3,Sep,9/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,6,1,0,180
+"Demarco, Ms. Janice","Demarco, Ms. Janice - 1564001",Female,30-40 Years,Divorced,Masters,Q3,Sep,9/9/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Pleasure,9,0,0,180
+"Forman, Mr. John","Forman, Mr. John - 1564127",Male,50-60 Years,Single,Bachelors,Q4,Oct,10/4/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,8,1,1,180
+"Flanagan, Mrs. Halley","Flanagan, Mrs. Halley - 1564287",Female,50-60 Years,Married,Bachelors,Q4,Oct,10/5/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,4,0,1,180
+"Delaware, Mr. Anthony","Delaware, Mr. Anthony - 1564239",Male,40-50 Years,Single,Bachelors,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Business,7,1,0,180
+"Fowler, Mr. Gene","Fowler, Mr. Gene - 1564240",Male,40-50 Years,Single,High School,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,Android,Business,4,0,1,180
+"Alfonso, Mr. Jerry","Alfonso, Mr. Jerry - 1564244",Male,50-60 Years,Married,High School,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,4,1,0,180
+"Allen, Mrs. Jill","Allen, Mrs. Jill - 1564245",Female,50-60 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,8,2,0,180
+"Damien, Mr. Johnny","Damien, Mr. Johnny - 1564246",Male,50-60 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,5,1,1,180
+"Deer, Mr. Jack","Deer, Mr. Jack - 1564247",Male,50-60 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,9,1,0,180
+"Forrest, Mr. Robert","Forrest, Mr. Robert - 1564248",Male,50-60 Years,Married,Doctorate,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,4,1,1,180
+"Darling, Mr. Clarence","Darling, Mr. Clarence - 1564271",Male,50-60 Years,Divorced,Masters,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,7,2,1,180
+"Dely, Mr. Daniel","Dely, Mr. Daniel - 1564276",Male,40-50 Years,Divorced,Masters,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Business,4,1,1,180
+"Danay, Mr. Moshe","Danay, Mr. Moshe - 1564262",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,6,2,1,180
+"Deely, Mr. John","Deely, Mr. John - 1564263",Male,40-50 Years,Married,High School,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,2,1,1,180
+"Dwykins, Mr. Richard","Dwykins, Mr. Richard - 1564264",Male,40-50 Years,Married,High School,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,4,0,0,180
+"Fort, Mr. Charles","Fort, Mr. Charles - 1564269",Male,30-40 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Orbitz,Android,Pleasure,2,1,0,180
+"Fosdi, Mr. Harry","Fosdi, Mr. Harry - 1564270",Male,30-40 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Orbitz,Android,Pleasure,0,1,1,180
+"Daniel, Mr. Samuel","Daniel, Mr. Samuel - 1564280",Male,30-40 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Pleasure,0,0,1,180
+"Dominguez, Mrs. Juanita","Dominguez, Mrs. Juanita - 1564226",Female,30-40 Years,Married,Bachelors,Q4,Oct,10/21/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Pleasure,6,1,0,180
+"Fomogio, Mrs. Katy","Fomogio, Mrs. Katy - 1564213",Female,40-50 Years,Single,Bachelors,Q4,Oct,10/30/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Business,4,1,0,180
+"Flynne, Mrs. Cherlon","Flynne, Mrs. Cherlon - 1564218",Female,30-40 Years,Divorced,High School,Q4,Oct,10/30/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Orbitz,Android,Pleasure,9,1,0,180
+"Dagar, Mrs. Jenette","Dagar, Mrs. Jenette - 1564102",Female,50-60 Years,Divorced,Masters,Q4,Oct,10/30/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,5,2,1,180
+"Curtice, Mr. Anthony","Curtice, Mr. Anthony - 1564207",Male,40-50 Years,Married,Bachelors,Q4,Nov,11/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,5,0,1,180
+"Easter, Mr. James","Easter, Mr. James - 1564208",Male,40-50 Years,Married,Bachelors,Q4,Nov,11/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,2,2,1,180
+"D'Aguanno, Mr. William","D'Aguanno, Mr. William - 1564202",Male,40-50 Years,Married,Bachelors,Q4,Nov,11/9/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,6,0,0,180
+"Eastman, Miss Carolyn","Eastman, Miss Carolyn - Non Reward Member",Female,30-40 Years,Married,High School,Q4,Nov,11/17/2012,N,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Orbitz,Android,Pleasure,7,1,1,180
+"Eastwood, Mrs. Jordan","Eastwood, Mrs. Jordan - 1564174",Female,40-50 Years,Married,Masters,Q4,Nov,11/21/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,6,1,1,180
+"Donavan, Mr. Owens","Donavan, Mr. Owens - 1564172",Male,20-30 years,Divorced,Bachelors,Q4,Nov,11/30/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Corporate Travel Portal,Computer,Pleasure,2,0,1,180
+"Dixie, Mr. Christian","Dixie, Mr. Christian - 1564025",Male,40-50 Years,Married,Bachelors,Q4,Dec,12/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,3,1,1,180
+"Dixie, William","Dixie, William - 1564026",Male,40-50 Years,Married,Bachelors,Q4,Dec,12/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Pleasure,1,1,0,180
+"Eagan, Mr. Frank","Eagan, Mr. Frank - 1564032",Male,30-40 Years,Divorced,Bachelors,Q4,Dec,12/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Pleasure,1,0,1,180
+"Flatt, Mrs. Jamie","Flatt, Mrs. Jamie - 1564004",Female,50-60 Years,Single,Bachelors,Q4,Dec,12/1/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,2,2,1,180
+"Dykeman, Mr. Rico","Dykeman, Mr. Rico - 1564045",Male,30-40 Years,Single,High School,Q4,Dec,12/3/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Business,8,1,0,180
+"Doslander, Mr. Freddy","Doslander, Mr. Freddy - 1564020",Male,40-50 Years,Single,Masters,Q4,Dec,12/12/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Hotels.com,ipad,Business,5,0,0,180
+"Demarco, Ms. Janice","Demarco, Ms. Janice - 1564001",Female,30-40 Years,Divorced,Masters,Q4,Dec,12/12/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Pleasure,1,1,0,180
+"Allen, Ms. Mable","Allen, Ms. Mable - 1564089",Female,30-40 Years,Married,Masters,Q4,Dec,12/15/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Travelocity,Android,Pleasure,4,2,0,180
+"Dahl, Mr. Harrold","Dahl, Mr. Harrold - 1564013",Male,50-60 Years,Single,Bachelors,Q4,Dec,12/17/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Marriott.com,Computer,Business,8,1,1,180
+"Eastlund, Mrs. Eric","Eastlund, Mrs. Eric - 1564069",Female,30-40 Years,Married,High School,Q4,Dec,12/23/2012,Y,Sunshine Inn by American,Sunshine Inn Jacksonville Airport ,Orbitz,Android,Pleasure,7,1,0,180
+"Ness, Mr. George","Ness, Mr. George - 1564249",Male,50-60 Years,Married,Bachelors,Q1,Jan,1/15/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,ipad,Business,6,0,1,121
+"Murai, Mrs. Carol","Murai, Mrs. Carol - 1564215",Female,30-40 Years,Single,Bachelors,Q1,Jan,1/30/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,Android,Business,1,0,0,121
+"Newberry, Mr. Frank","Newberry, Mr. Frank - 1564186",Male,30-40 Years,Divorced,Masters,Q1,Mar,3/10/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,ipad,Pleasure,4,0,1,121
+"Addy, Miss Constance","Addy, Miss Constance - 1564169",Female,30-40 Years,Divorced,Bachelors,Q2,Apr,4/1/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,Android,Pleasure,7,1,1,121
+"Nerwinski, Mrs. Halley","Nerwinski, Mrs. Halley - 1564094",Female,50-60 Years,Divorced,Bachelors,Q3,Jul,7/5/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,Computer,Business,5,2,0,121
+"Nakano, Mrs. Erin","Nakano, Mrs. Erin - 1564070",Female,30-40 Years,Married,Bachelors,Q3,Aug,8/23/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,ipad,Pleasure,5,1,1,121
+"Netzwell, Mr. Nicholas","Netzwell, Mr. Nicholas - 1564038",Male,40-50 Years,Divorced,Bachelors,Q3,Aug,8/18/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Business,1,1,1,121
+"Myers, Mr. Frank","Myers, Mr. Frank - 1564028",Male,30-40 Years,Married,Bachelors,Q3,Jul,7/1/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,ipad,Pleasure,3,1,1,121
+"Neu, Mr. Curtis","Neu, Mr. Curtis - 1564011",Male,50-60 Years,Married,High School,Q3,Jul,7/20/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,Android,Business,5,1,1,121
+"Addy, Miss Constance","Addy, Miss Constance - 1564169",Female,30-40 Years,Divorced,Bachelors,Q4,Oct,10/1/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,Android,Pleasure,4,1,0,121
+"Ness, Mr. George","Ness, Mr. George - 1564249",Male,50-60 Years,Married,Bachelors,Q4,Oct,10/15/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,ipad,Business,3,2,0,121
+"Murai, Mrs. Carol","Murai, Mrs. Carol - 1564215",Female,30-40 Years,Single,Bachelors,Q4,Oct,10/30/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,Android,Business,3,2,1,121
+"Newberry, Mr. Frank","Newberry, Mr. Frank - 1564186",Male,30-40 Years,Divorced,Masters,Q4,Nov,11/10/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,ipad,Pleasure,4,1,1,121
+"Myers, Mr. Frank","Myers, Mr. Frank - 1564028",Male,30-40 Years,Married,Bachelors,Q4,Dec,12/1/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,ipad,Pleasure,6,1,1,121
+"Nerwinski, Mrs. Halley","Nerwinski, Mrs. Halley - 1564094",Female,50-60 Years,Divorced,Bachelors,Q4,Dec,12/5/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,Computer,Business,6,1,1,121
+"Netzwell, Mr. Nicholas","Netzwell, Mr. Nicholas - 1564038",Male,40-50 Years,Divorced,Bachelors,Q4,Dec,12/18/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Business,2,0,0,121
+"Neu, Mr. Curtis","Neu, Mr. Curtis - 1564011",Male,50-60 Years,Married,High School,Q4,Dec,12/20/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,Android,Business,3,1,1,121
+"Nakano, Mrs. Erin","Nakano, Mrs. Erin - 1564070",Female,30-40 Years,Married,Bachelors,Q4,Dec,12/23/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,ipad,Pleasure,5,2,1,121
+"Tetradis, Ms. Laura","Tetradis, Ms. Laura - 1564288",Female,40-50 Years,Single,Bachelors,Q1,Jan,1/3/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Business,3,1,1,121
+"Trump, Mr. Ben","Trump, Mr. Ben - 1564205",Male,50-60 Years,Married,Masters,Q1,Feb,2/4/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,Android,Business,6,2,0,121
+"Van Dam, Mrs. Dale","Van Dam, Mrs. Dale - 1564198",Female,40-50 Years,Single,Bachelors,Q1,Feb,2/14/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Business,4,0,1,121
+"Van Patten, Mrs. Leslie","Van Patten, Mrs. Leslie - 1564178",Female,50-60 Years,Married,Bachelors,Q1,Mar,3/15/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,Android,Business,3,1,0,121
+"Tank, Mr. Claude","Tank, Mr. Claude - 1564161",Male,30-40 Years,Divorced,Bachelors,Q2,Apr,4/4/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,ipad,Pleasure,3,0,0,121
+"Thompson, Mr. Tim","Thompson, Mr. Tim - 1564137",Male,40-50 Years,Married,Masters,Q2,May,5/15/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Pleasure,7,0,0,121
+"Swenson, Mrs. Hilda","Swenson, Mrs. Hilda - 1564085",Female,50-60 Years,Divorced,Masters,Q3,Jul,7/22/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,Android,Business,4,0,0,121
+"Toomer, Mrs. Brian","Toomer, Mrs. Brian - 1564067",Female,30-40 Years,Single,Bachelors,Q3,Aug,8/23/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,ipad,Business,5,1,1,121
+"Petrocelli, Mr. Franco","Petrocelli, Mr. Franco - 1564016",Male,40-50 Years,Married,Bachelors,Q3,Jul,7/14/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Pleasure,7,2,0,121
+"Utberg, Mrs. Jordan","Utberg, Mrs. Jordan - 1563996",Female,40-50 Years,Divorced,Bachelors,Q3,Sep,9/13/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Business,3,0,0,121
+"Tetradis, Ms. Laura","Tetradis, Ms. Laura - 1564288",Female,40-50 Years,Single,Bachelors,Q4,Oct,10/3/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Business,4,2,0,121
+"Tank, Mr. Claude","Tank, Mr. Claude - 1564161",Male,30-40 Years,Divorced,Bachelors,Q4,Oct,10/10/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,ipad,Pleasure,0,1,1,121
+"Trump, Mr. Ben","Trump, Mr. Ben - 1564205",Male,50-60 Years,Married,Masters,Q4,Nov,11/4/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,Android,Business,8,1,1,121
+"Van Dam, Mrs. Dale","Van Dam, Mrs. Dale - 1564198",Female,40-50 Years,Single,Bachelors,Q4,Nov,11/14/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Business,8,0,1,121
+"Van Patten, Mrs. Leslie","Van Patten, Mrs. Leslie - 1564178",Female,50-60 Years,Married,Bachelors,Q4,Nov,11/15/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,Android,Business,3,0,0,121
+"Thompson, Mr. Tim","Thompson, Mr. Tim - 1564137",Male,40-50 Years,Married,Masters,Q4,Nov,11/15/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Pleasure,5,1,0,121
+"Utberg, Mrs. Jordan","Utberg, Mrs. Jordan - 1563996",Female,40-50 Years,Divorced,Bachelors,Q4,Dec,12/13/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Business,6,1,0,121
+"Petrocelli, Mr. Franco","Petrocelli, Mr. Franco - 1564016",Male,40-50 Years,Married,Bachelors,Q4,Dec,12/14/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Hotels.com,Android,Pleasure,6,1,1,121
+"Swenson, Mrs. Hilda","Swenson, Mrs. Hilda - 1564085",Female,50-60 Years,Divorced,Masters,Q4,Dec,12/22/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Marriott.com,Android,Business,6,1,0,121
+"Toomer, Mrs. Brian","Toomer, Mrs. Brian - 1564067",Female,30-40 Years,Single,Bachelors,Q4,Dec,12/23/2012,Y,Relaxation Suites by American,Relaxation Suites Erie,Orbitz,ipad,Business,2,1,0,121
+"Owens, Mrs. Linda","Owens, Mrs. Linda - 1564282",Female,30-40 Years,Married,Doctorate,Q1,Jan,1/12/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Orbitz,ipad,Pleasure,2,2,1,121
+"Parry, Mrs. Carol","Parry, Mrs. Carol - 1564243",Female,30-40 Years,Single,Bachelors,Q1,Jan,1/15/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Orbitz,ipad,Business,1,1,1,121
+"Nyman, Mrs. Snow","Nyman, Mrs. Snow - 1564221",Female,40-50 Years,Married,Bachelors,Q1,Jan,1/27/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Hotels.com,Android,Pleasure,5,1,1,121
+"Pankowski, Mr. Morgan","Pankowski, Mr. Morgan - 1564211",Male,40-50 Years,Married,Bachelors,Q1,Jan,1/31/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Hotels.com,Android,Pleasure,3,2,1,121
+"Nichols, Mrs. Nancy","Nichols, Mrs. Nancy - 1564193",Female,40-50 Years,Married,High School,Q1,Feb,2/27/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Hotels.com,Android,Pleasure,5,2,1,121
+"Obrien, Miss Mae","Obrien, Miss Mae - 1564163",Female,40-50 Years,Divorced,Bachelors,Q2,Apr,4/3/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Hotels.com,Android,Business,6,1,0,121
+"Petrie, Mrs. Mary","Petrie, Mrs. Mary - 1564144",Female,50-60 Years,Married,Bachelors,Q2,Apr,4/30/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Marriott.com,Android,Business,0,0,0,121
+"Pearce, Mr. Gregory","Pearce, Mr. Gregory - 1564008",Male,50-60 Years,Divorced,Bachelors,Q3,Jul,7/30/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Marriott.com,Android,Business,4,1,1,121
+"Peters, Mrs. Jamie","Peters, Mrs. Jamie - 1563993",Female,50-60 Years,Single,Bachelors,Q3,Sep,9/17/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Marriott.com,Android,Business,0,2,0,121
+"Obrien, Miss Mae","Obrien, Miss Mae - 1564163",Female,40-50 Years,Divorced,Bachelors,Q4,Oct,10/3/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Hotels.com,Android,Business,4,1,0,121
+"Owens, Mrs. Linda","Owens, Mrs. Linda - 1564282",Female,30-40 Years,Married,Doctorate,Q4,Oct,10/12/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Orbitz,ipad,Pleasure,7,1,0,121
+"Parry, Mrs. Carol","Parry, Mrs. Carol - 1564243",Female,30-40 Years,Single,Bachelors,Q4,Oct,10/15/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Orbitz,ipad,Business,2,1,1,121
+"Nyman, Mrs. Snow","Nyman, Mrs. Snow - 1564221",Female,40-50 Years,Married,Bachelors,Q4,Oct,10/27/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Hotels.com,Android,Pleasure,2,1,1,121
+"Petrie, Mrs. Mary","Petrie, Mrs. Mary - 1564144",Female,50-60 Years,Married,Bachelors,Q4,Oct,10/30/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Marriott.com,Android,Business,9,0,0,121
+"Pankowski, Mr. Morgan","Pankowski, Mr. Morgan - 1564211",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/31/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Hotels.com,Android,Pleasure,8,2,0,121
+"Nichols, Mrs. Nancy","Nichols, Mrs. Nancy - 1564193",Female,40-50 Years,Married,High School,Q4,Nov,11/27/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Hotels.com,Android,Pleasure,7,0,0,121
+"Peters, Mrs. Jamie","Peters, Mrs. Jamie - 1563993",Female,50-60 Years,Single,Bachelors,Q4,Dec,12/17/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Marriott.com,Android,Business,5,0,0,121
+"Pearce, Mr. Gregory","Pearce, Mr. Gregory - 1564008",Male,50-60 Years,Divorced,Bachelors,Q4,Dec,12/30/2012,Y,Relaxation Suites by American,Relaxation Suites Quakertown ,Marriott.com,Android,Business,1,0,1,121
+"Simms, Mr. Max","Simms, Mr. Max - Non Reward Member",Male,20-30 years,Single,Masters,Q1,Jan,1/1/2012,N,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Corporate Travel Portal,Computer,Business,6,1,0,292
+"Winwood, Mrs. Anita","Winwood, Mrs. Anita - 1564291",Female,40-50 Years,Married,Bachelors,Q1,Jan,1/3/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Pleasure,0,0,0,292
+"Suhoza, Mrs. Jill","Suhoza, Mrs. Jill - 1564284",Female,40-50 Years,Married,Masters,Q1,Jan,1/7/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Android,Pleasure,9,0,0,292
+"Worthy, Mr. Jeff","Worthy, Mr. Jeff - 1564241",Male,40-50 Years,Single,Bachelors,Q1,Jan,1/15/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,6,1,0,292
+"Winterling, Mark","Winterling, Mark - 1564217",Male,30-40 Years,Married,Bachelors,Q1,Jan,1/30/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Corporate Travel Portal,Computer,Pleasure,6,1,0,292
+"Wooley, Mr. Anthony","Wooley, Mr. Anthony - 1564209",Male,40-50 Years,Divorced,Masters,Q1,Feb,2/1/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,8,1,0,292
+"Shoudy, Elaine","Shoudy, Elaine - 1564199",Female,40-50 Years,Married,Bachelors,Q1,Feb,2/12/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Android,Pleasure,5,2,0,292
+"Wagner, Miss Jennifer","Wagner, Miss Jennifer - 1564165",Female,30-40 Years,Single,Bachelors,Q2,Apr,4/1/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Corporate Travel Portal,Computer,Business,6,2,0,292
+"Serpa, Miss Mary","Serpa, Miss Mary - 1564170",Female,30-40 Years,Divorced,High School,Q2,Apr,4/1/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Orbitz,ipad,Pleasure,9,0,0,292
+"Xie, Mr. Lee","Xie, Mr. Lee - 1564148",Male,40-50 Years,Single,High School,Q2,Apr,4/26/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,6,1,0,292
+"Vargas, Mr. Bart","Vargas, Mr. Bart - 1564142",Male,30-40 Years,Single,Bachelors,Q2,May,5/1/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Orbitz,ipad,Business,2,1,0,292
+"Sulzberger, Mr. Mike","Sulzberger, Mr. Mike - 1564124",Male,40-50 Years,Single,Bachelors,Q2,Jun,6/13/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Android,Business,2,2,1,292
+"Vonaye, Mr. Karl","Vonaye, Mr. Karl - 1564109",Male,50-60 Years,Single,Bachelors,Q2,Jun,6/15/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Marriott.com,Android,Business,5,2,0,292
+"Sullivan, Mr. Jason","Sullivan, Mr. Jason - 1564104",Male,40-50 Years,Single,Doctorate,Q2,Jun,6/24/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Android,Business,2,2,0,292
+"Yoshida, Ms. Kwon","Yoshida, Ms. Kwon - 1564090",Female,30-40 Years,Married,Bachelors,Q3,Jul,7/15/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Corporate Travel Portal,Computer,Pleasure,7,1,0,292
+"Vinaldi, Mr. Ross","Vinaldi, Mr. Ross - 1564082",Male,40-50 Years,Single,High School,Q3,Aug,8/11/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,3,1,1,292
+"Viet, Mrs. Jordan","Viet, Mrs. Jordan - 1564078",Female,50-60 Years,Single,Bachelors,Q3,Aug,8/14/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Marriott.com,Android,Business,7,0,0,292
+"Wright, Mr. Randal","Wright, Mr. Randal - 1564055",Male,40-50 Years,Single,Bachelors,Q3,Sep,9/20/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,3,1,0,292
+"Villaramos, Mrs. Christina","Villaramos, Mrs. Christina - 1564041",Female,40-50 Years,Married,Bachelors,Q3,Aug,8/17/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Pleasure,7,1,1,292
+"Vaughan, Mrs. Patricia","Vaughan, Mrs. Patricia - 1564023",Female,40-50 Years,Single,Bachelors,Q3,Jul,7/1/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,10,2,1,292
+"Simmons, Mr. Matthew","Simmons, Mr. Matthew - Non Reward Member",Male,30-40 Years,Married,High School,Q3,Jul,7/1/2012,N,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Orbitz,ipad,Pleasure,5,2,0,292
+"Sue, Mrs. Moran","Sue, Mrs. Moran - 1564012",Female,50-60 Years,Single,Bachelors,Q3,Jul,7/19/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Marriott.com,Android,Business,6,2,0,292
+"Worth, Mr. Jason","Worth, Mr. Jason - 1563990",Male,50-60 Years,Married,Doctorate,Q3,Sep,9/22/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Marriott.com,Android,Business,4,1,0,292
+"Simms, Mr. Max","Simms, Mr. Max - Non Reward Member",Male,20-30 years,Single,Masters,Q4,Oct,10/1/2012,N,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Corporate Travel Portal,Computer,Business,2,0,0,292
+"Wagner, Miss Jennifer","Wagner, Miss Jennifer - 1564165",Female,30-40 Years,Single,Bachelors,Q4,Oct,10/1/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Corporate Travel Portal,Computer,Business,5,0,1,292
+"Serpa, Miss Mary","Serpa, Miss Mary - 1564170",Female,30-40 Years,Divorced,High School,Q4,Oct,10/1/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Orbitz,ipad,Pleasure,9,1,1,292
+"Winwood, Mrs. Anita","Winwood, Mrs. Anita - 1564291",Female,40-50 Years,Married,Bachelors,Q4,Oct,10/3/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Pleasure,5,1,1,292
+"Suhoza, Mrs. Jill","Suhoza, Mrs. Jill - 1564284",Female,40-50 Years,Married,Masters,Q4,Oct,10/7/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Android,Pleasure,2,0,0,292
+"Sulzberger, Mr. Mike","Sulzberger, Mr. Mike - 1564124",Male,40-50 Years,Single,Bachelors,Q4,Oct,10/13/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Android,Business,5,1,0,292
+"Worthy, Mr. Jeff","Worthy, Mr. Jeff - 1564241",Male,40-50 Years,Single,Bachelors,Q4,Oct,10/15/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,9,2,0,292
+"Vonaye, Mr. Karl","Vonaye, Mr. Karl - 1564109",Male,50-60 Years,Single,Bachelors,Q4,Oct,10/15/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Marriott.com,Android,Business,3,1,1,292
+"Sullivan, Mr. Jason","Sullivan, Mr. Jason - 1564104",Male,40-50 Years,Single,Doctorate,Q4,Oct,10/24/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Android,Business,2,2,1,292
+"Xie, Mr. Lee","Xie, Mr. Lee - 1564148",Male,40-50 Years,Single,High School,Q4,Oct,10/26/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,4,1,1,292
+"Winterling, Mark","Winterling, Mark - 1564217",Male,30-40 Years,Married,Bachelors,Q4,Oct,10/30/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Corporate Travel Portal,Computer,Pleasure,9,1,1,292
+"Wooley, Mr. Anthony","Wooley, Mr. Anthony - 1564209",Male,40-50 Years,Divorced,Masters,Q4,Nov,11/1/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,7,0,1,292
+"Vargas, Mr. Bart","Vargas, Mr. Bart - 1564142",Male,30-40 Years,Single,Bachelors,Q4,Nov,11/1/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Orbitz,ipad,Business,7,1,1,292
+"Shoudy, Elaine","Shoudy, Elaine - 1564199",Female,40-50 Years,Married,Bachelors,Q4,Nov,11/12/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Android,Pleasure,2,1,1,292
+"Vaughan, Mrs. Patricia","Vaughan, Mrs. Patricia - 1564023",Female,40-50 Years,Single,Bachelors,Q4,Dec,12/1/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,4,2,1,292
+"Simmons, Mr. Matthew","Simmons, Mr. Matthew - Non Reward Member",Male,30-40 Years,Married,High School,Q4,Dec,12/1/2012,N,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Orbitz,ipad,Pleasure,7,1,1,292
+"Vinaldi, Mr. Ross","Vinaldi, Mr. Ross - 1564082",Male,40-50 Years,Single,High School,Q4,Dec,12/11/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,9,1,0,292
+"Viet, Mrs. Jordan","Viet, Mrs. Jordan - 1564078",Female,50-60 Years,Single,Bachelors,Q4,Dec,12/14/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Marriott.com,Android,Business,2,0,0,292
+"Yoshida, Ms. Kwon","Yoshida, Ms. Kwon - 1564090",Female,30-40 Years,Married,Bachelors,Q4,Dec,12/15/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Corporate Travel Portal,Computer,Pleasure,2,0,1,292
+"Villaramos, Mrs. Christina","Villaramos, Mrs. Christina - 1564041",Female,40-50 Years,Married,Bachelors,Q4,Dec,12/17/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Pleasure,7,1,1,292
+"Sue, Mrs. Moran","Sue, Mrs. Moran - 1564012",Female,50-60 Years,Single,Bachelors,Q4,Dec,12/19/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Marriott.com,Android,Business,4,0,0,292
+"Wright, Mr. Randal","Wright, Mr. Randal - 1564055",Male,40-50 Years,Single,Bachelors,Q4,Dec,12/20/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Hotels.com,Computer,Business,6,2,0,292
+"Worth, Mr. Jason","Worth, Mr. Jason - 1563990",Male,50-60 Years,Married,Doctorate,Q4,Dec,12/22/2012,Y,Royal Hotel Brands,Royal Suites - Laguna Niguel ,Marriott.com,Android,Business,0,2,0,292
+"Robinson, Mr. Kevin","Robinson, Mr. Kevin - Non Reward Member",Male,40-50 Years,Married,Bachelors,Q1,Jan,1/3/2012,N,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,8,0,1,292
+"Richard, Mr. Harrison","Richard, Mr. Harrison - 1564281",Male,30-40 Years,Divorced,Bachelors,Q1,Jan,1/15/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Orbitz,ipad,Pleasure,10,1,1,292
+"Sequin, Mr. Kevin","Sequin, Mr. Kevin - 1564223",Male,40-50 Years,Married,High School,Q1,Jan,1/23/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,2,1,0,292
+"Ross, Mrs. Christina","Ross, Mrs. Christina - 1564222",Female,40-50 Years,Married,Bachelors,Q1,Jan,1/27/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,8,1,0,292
+"Roush, Mrs. Leslie","Roush, Mrs. Leslie - 1564179",Female,50-60 Years,Married,Bachelors,Q1,Mar,3/15/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Marriott.com,Android,Business,2,1,1,292
+"Ruth, Miss Barbara","Ruth, Miss Barbara - 1564162",Female,40-50 Years,Single,Bachelors,Q2,Apr,4/3/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Business,1,2,0,292
+"Rodriguez, Mrs. Pamela","Rodriguez, Mrs. Pamela - 1564160",Female,50-60 Years,Divorced,High School,Q2,Apr,4/9/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Marriott.com,Android,Business,1,0,0,292
+"Sanford, Mr. Morgan","Sanford, Mr. Morgan - 1564146",Male,40-50 Years,Married,Bachelors,Q2,Apr,4/30/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,3,1,0,292
+"Sanders, Devan","Sanders, Devan - 1564140",Male,30-40 Years,Married,Bachelors,Q2,May,5/5/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Orbitz,ipad,Pleasure,7,1,0,292
+"Ryan, Mr. Patrick","Ryan, Mr. Patrick - 1564133",Male,30-40 Years,Divorced,Bachelors,Q2,May,5/21/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Orbitz,ipad,Pleasure,5,1,0,292
+"Rogers, Mrs. Karen","Rogers, Mrs. Karen - 1564131",Female,40-50 Years,Married,Bachelors,Q2,May,5/30/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,4,1,1,292
+"Sadler, Mr. Ted","Sadler, Mr. Ted - 1564118",Male,20-30 years,Divorced,Bachelors,Q2,Jun,6/15/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Corporate Travel Portal,Computer,Pleasure,3,0,1,292
+"Rinaldi, Mrs. Carol","Rinaldi, Mrs. Carol - 1564071",Female,50-60 Years,Divorced,Bachelors,Q3,Aug,8/20/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Marriott.com,Android,Business,6,2,1,292
+"Saplo, Mr. Nicholas","Saplo, Mr. Nicholas - 1564037",Male,40-50 Years,Single,High School,Q3,Aug,8/18/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Business,4,1,0,292
+"Saberhagen, Mrs. Addie","Saberhagen, Mrs. Addie - 1564019",Female,40-50 Years,Married,Bachelors,Q3,Jul,7/7/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,5,2,0,292
+"Rodriguez, Mr. Albert","Rodriguez, Mr. Albert - 1563999",Male,50-60 Years,Married,Bachelors,Q3,Sep,9/9/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Marriott.com,Android,Business,1,1,0,292
+"Robinson, Mr. Kevin","Robinson, Mr. Kevin - Non Reward Member",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/3/2012,N,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,5,1,1,292
+"Ruth, Miss Barbara","Ruth, Miss Barbara - 1564162",Female,40-50 Years,Single,Bachelors,Q4,Oct,10/3/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Business,9,1,1,292
+"Rodriguez, Mrs. Pamela","Rodriguez, Mrs. Pamela - 1564160",Female,50-60 Years,Divorced,High School,Q4,Oct,10/9/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Marriott.com,Android,Business,9,0,1,292
+"Richard, Mr. Harrison","Richard, Mr. Harrison - 1564281",Male,30-40 Years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Orbitz,ipad,Pleasure,6,2,1,292
+"Sadler, Mr. Ted","Sadler, Mr. Ted - 1564118",Male,20-30 years,Divorced,Bachelors,Q4,Oct,10/15/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Corporate Travel Portal,Computer,Pleasure,5,1,1,292
+"Sequin, Mr. Kevin","Sequin, Mr. Kevin - 1564223",Male,40-50 Years,Married,High School,Q4,Oct,10/23/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,1,2,0,292
+"Ross, Mrs. Christina","Ross, Mrs. Christina - 1564222",Female,40-50 Years,Married,Bachelors,Q4,Oct,10/27/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,3,1,1,292
+"Sanford, Mr. Morgan","Sanford, Mr. Morgan - 1564146",Male,40-50 Years,Married,Bachelors,Q4,Oct,10/30/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,9,2,0,292
+"Sanders, Devan","Sanders, Devan - 1564140",Male,30-40 Years,Married,Bachelors,Q4,Nov,11/11/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Orbitz,ipad,Pleasure,8,2,1,292
+"Roush, Mrs. Leslie","Roush, Mrs. Leslie - 1564179",Female,50-60 Years,Married,Bachelors,Q4,Nov,11/15/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Marriott.com,Android,Business,3,0,0,292
+"Ryan, Mr. Patrick","Ryan, Mr. Patrick - 1564133",Male,30-40 Years,Divorced,Bachelors,Q4,Nov,11/21/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Orbitz,ipad,Pleasure,1,2,0,292
+"Rogers, Mrs. Karen","Rogers, Mrs. Karen - 1564131",Female,40-50 Years,Married,Bachelors,Q4,Nov,11/30/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,4,2,1,292
+"Saberhagen, Mrs. Addie","Saberhagen, Mrs. Addie - 1564019",Female,40-50 Years,Married,Bachelors,Q4,Dec,12/12/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Pleasure,8,1,0,292
+"Rodriguez, Mr. Albert","Rodriguez, Mr. Albert - 1563999",Male,50-60 Years,Married,Bachelors,Q4,Dec,12/12/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Marriott.com,Android,Business,5,0,1,292
+"Saplo, Mr. Nicholas","Saplo, Mr. Nicholas - 1564037",Male,40-50 Years,Single,High School,Q4,Dec,12/18/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Hotels.com,Android,Business,7,2,1,292
+"Rinaldi, Mrs. Carol","Rinaldi, Mrs. Carol - 1564071",Female,50-60 Years,Divorced,Bachelors,Q4,Dec,12/20/2012,Y,Royal Hotel Brands,Royal Suites - San Francisco,Marriott.com,Android,Business,6,2,0,292

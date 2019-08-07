@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel xmlns="http://xmlns.oracle.com/oxp/xmlp" version="2.0" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <dataproperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataproperties>
+   <dataSets>
+      <dataSet name="Default" type="complex">
+         <excel dataSourceRef="xdo:local" timezone="Africa/Casablanca" start_rownum="-1">
+            <file>data02.xlsx</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" source="Default" label="G_1">
+               <element name="Award_Name" value="Award Name" dataType="xsd:string" label="Award Name" breakOrder="None" fieldOrder="1"/>
+               <element name="Start_Date" value="Start Date" dataType="xsd:string" label="Start Date" breakOrder="None" fieldOrder="2"/>
+               <element name="End_Date" value="End Date" dataType="xsd:string" label="End Date" breakOrder="None" fieldOrder="3"/>
+               <element name="Project_Name" value="Project Name" dataType="xsd:string" label="Project Name" breakOrder="None" fieldOrder="4"/>
+               <element name="Resource" value="Resource" dataType="xsd:string" label="Resource" breakOrder="None" fieldOrder="5"/>
+               <element name="Transaction1_Name" value="Transaction1 Name" dataType="xsd:string" label="Transaction1 Name" breakOrder="None" fieldOrder="6"/>
+               <element name="Transaction1_Value" value="Transaction1 Value" dataType="xsd:double" label="Transaction1 Value" breakOrder="None" fieldOrder="7"/>
+               <element name="Transaction2_Name_" value="Transaction2 Name " dataType="xsd:string" label="Transaction2 Name " breakOrder="None" fieldOrder="8"/>
+               <element name="Transaction2_Value" value="Transaction2 Value" dataType="xsd:double" label="Transaction2 Value" breakOrder="None" fieldOrder="9"/>
+               <element name="Transaction3_Name" value="Transaction3 Name" dataType="xsd:string" label="Transaction3 Name" breakOrder="None" fieldOrder="10"/>
+               <element name="Transaction3_Value" value="Transaction3 Value" dataType="xsd:double" label="Transaction3 Value" breakOrder="None" fieldOrder="11"/>
+               <element name="Transaction4_Name" value="Transaction4 Name" dataType="xsd:string" label="Transaction4 Name" breakOrder="None" fieldOrder="12"/>
+               <element name="Transaction4_Value" value="Transaction4 Value" dataType="xsd:double" label="Transaction4 Value" breakOrder="None" fieldOrder="13"/>
+               <element name="Transaction5_Name" value="Transaction5 Name" dataType="xsd:string" label="Transaction5 Name" breakOrder="None" fieldOrder="14"/>
+               <element name="Transaction5_Value" value="Transaction5 Value" dataType="xsd:double" label="Transaction5 Value" breakOrder="None" fieldOrder="15"/>
+               <element name="Largest_Transaction1_Name" value="Largest Transaction1 Name" dataType="xsd:string" label="Largest Transaction1 Name" breakOrder="None" fieldOrder="16"/>
+               <element name="Largest_Transaction1_value" value="Largest Transaction1 value" dataType="xsd:double" label="Largest Transaction1 value" breakOrder="None" fieldOrder="17"/>
+               <element name="Largest_Transaction2_Name" value="Largest Transaction2 Name" dataType="xsd:string" label="Largest Transaction2 Name" breakOrder="None" fieldOrder="18"/>
+               <element name="Largest_Transaction2_value" value="Largest Transaction2 value" dataType="xsd:double" label="Largest Transaction2 value" breakOrder="None" fieldOrder="19"/>
+               <element name="Largest_Transaction3_Name" value="Largest Transaction3 Name" dataType="xsd:string" label="Largest Transaction3 Name" breakOrder="None" fieldOrder="20"/>
+               <element name="Largest_Transaction3_value" value="Largest Transaction3 value" dataType="xsd:double" label="Largest Transaction3 value" breakOrder="None" fieldOrder="21"/>
+               <element name="Largest_Transaction4_Name" value="Largest Transaction4 Name" dataType="xsd:string" label="Largest Transaction4 Name" breakOrder="None" fieldOrder="22"/>
+               <element name="Largest_Transaction4_value" value="Largest Transaction4 value" dataType="xsd:double" label="Largest Transaction4 value" breakOrder="None" fieldOrder="23"/>
+               <element name="Largest_Transaction5_Name" value="Largest Transaction5 Name" dataType="xsd:string" label="Largest Transaction5 Name" breakOrder="None" fieldOrder="24"/>
+               <element name="Largest_Transaction5_value" value="Largest Transaction5 value" dataType="xsd:double" label="Largest Transaction5 value" breakOrder="None" fieldOrder="25"/>
+               <element name="Budget_Amount" value="Budget Amount" dataType="xsd:double" label="Budget Amount" breakOrder="None" fieldOrder="26"/>
+               <element name="Available_Amount" value="Available Amount" dataType="xsd:double" label="Available Amount" breakOrder="None" fieldOrder="27"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="DATA_DS" left="28px" top="14px"/>
+         <layout name="Default" left="274px" top="17px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="4qvo8ml77bvr7tj1">
+  <sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" layoutType="bestFit" canFreeze="true"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+      <saw:displayFormat>
+        <saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+        <sawd:HTML fmt="html" captionID="kcap12832459_670">&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Drilling down a hierarchy from a Map View
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+      </sawd:htmlView>
+      <sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+        <sawd:linkCaption>
+          <saw:caption captionID="kcap12832459_669">
+            <saw:text>Return to Main Index page</saw:text>
+          </saw:caption>
+        </sawd:linkCaption>
+        <sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+      </sawd:linkView>
+    </sawd:dashboardSection><saw:displayFormat>
+      <saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+    </saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" horizontalLayout="true" showHeading="false" layoutType="bestFit">
+      <saw:caption captionID="kcap12832459_667">
+        <saw:text>Page Information (click to collapse or expand)</saw:text>
+      </saw:caption>
+      <saw:displayFormat>
+        <saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+      </saw:displayFormat>
+      <sawd:sectionHeading>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+        </saw:displayFormat>
+      </sawd:sectionHeading>
+      <sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+        <sawd:HTML fmt="html" captionID="kcap12832459_671">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This feature allows drilling down an Oracle BIEE logical hierarchy and having map layers dynamically adapting to show details on the maps. Click on USA to bring up the tooltip, and then click on the clickable link “USA”. The map drills to the STATE level for “USA”. A new map format for STATE is created. Click on the OBIEE_COUNTRY color fill checkbox to hide the country layer and see the states formats. Click on the “California” state and click on the “USA_California” link. A third format is automatically created for the “OBIEE_CITY” layer. This layer is for cities, and therefore a point marker is added.&lt;br/&gt;</sawd:HTML>
+      </sawd:htmlView>
+      
+      
+      <sawd:htmlView name="HTML 5" duid="qr96q9646itbnm1r">
+        <sawd:HTML fmt="html" captionID="kcap12832459_674">&amp;nbsp;</sawd:HTML>
+      </sawd:htmlView>
+      <sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+        <sawd:HTML fmt="html" captionID="kcap12832459_675">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; The whole setup for this map is done in the webcat report defintion. It leverages Mapviewer mappings done in the webcat administration screen.</sawd:HTML>
+      </sawd:htmlView>
+    </sawd:dashboardSection></sawd:dashboardColumn>
+  <sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" break="column" layoutType="bestFit" frozen="false" canFreeze="false"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+      <saw:displayFormat>
+        <saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+      </saw:displayFormat>
+      
+    <sawd:reportView name="Report 0" display="embed" showView="" duid="9jgicl2tlq5m5emt"><saw:caption><saw:text>Map Drilling</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/04. Maps and Spatial/Map Views/Map Drilling"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

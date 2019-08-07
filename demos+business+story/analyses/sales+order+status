@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">  
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">    
+      <saw:columns>      
+         <saw:column xsi:type="saw:regularColumn" columnID="c06dbb6ef037d6a97">        
+            <saw:columnFormula>          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R2  Order Type&quot;</sawx:expr>        </saw:columnFormula>      </saw:column>      
+         <saw:column xsi:type="saw:regularColumn" columnID="c5b63b3cf6f2127fa">        
+            <saw:columnFormula>          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R1  Order Status&quot;</sawx:expr>        </saw:columnFormula>      </saw:column>      
+         <saw:column xsi:type="saw:regularColumn" columnID="cec29b61c071e98bd">        
+            <saw:columnFormula>          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>        </saw:columnFormula>      </saw:column>    
+         <saw:column xsi:type="saw:regularColumn" columnID="c137a6fe232366185">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot; * (1+ 0.6*rand())</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Target Revenue</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c7c893d988a85cdee"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>  </saw:criteria>  
+   <saw:views currentView="0">    
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">          
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="dvtfunnel!1"/></saw:cvRow></saw:cvTable></saw:view>    
+          
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section">          
+               <saw:displayGrandTotals>            
+                  <saw:displayGrandTotal id="t1" grandTotalPosition="none"/>          </saw:displayGrandTotals>                  
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="row" showColumnHeader="false">          
+               <saw:displayGrandTotals>            
+                  <saw:displayGrandTotal id="t2" grandTotalPosition="after"/>          </saw:displayGrandTotals>                  
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c5b63b3cf6f2127fa"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="true">          
+               <saw:displayGrandTotals>            
+                  <saw:displayGrandTotal id="t3" grandTotalPosition="after"/>          </saw:displayGrandTotals>                  
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c06dbb6ef037d6a97">              
+                     <saw:memberFormat>                
+                        <saw:displayFormat>                  
+                           <saw:formatSpec hAlign="center" vAlign="middle" wrapText="true"/>                </saw:displayFormat>              </saw:memberFormat>            </saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>              
+            <saw:measure columnID="cec29b61c071e98bd"/>
+            <saw:measure columnID="c137a6fe232366185"/></saw:measuresList>                
+         <saw:sectionContent>
+            <saw:displayFormat>
+               <saw:formatSpec/></saw:displayFormat></saw:sectionContent></saw:view>    
+      <saw:view xsi:type="saw:dvtfunnel" name="dvtfunnel!1">      
+         <saw:display type="funnel" subtype="lastStageOnly" renderFormat="default" mode="online" clientEventEnabled="false" animateOnDisplay="false">        
+            <saw:style effect="2d" fillStyle="default" funnelTargetFactor="5"/>      </saw:display>      
+         <saw:canvasFormat height="250" width="400" showGradient="true">        
+            <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>        
+            <saw:gridlines default="true">          
+               <saw:horizontal>            
+                  <saw:major visible="false"/>            
+                  <saw:minor visible="false"/>          </saw:horizontal>          
+               <saw:vertical>            
+                  <saw:major visible="false"/>            
+                  <saw:minor visible="false"/>          </saw:vertical>        </saw:gridlines>        
+            <saw:title mode="custom">                  </saw:title>      </saw:canvasFormat>      
+         <saw:selections>        
+            <saw:categories>          
+               <saw:category>            
+                  <saw:columnRef columnID="c5b63b3cf6f2127fa"/>          </saw:category>        </saw:categories>        
+            <saw:measures showMeasureLabelsOnCategory="false">          
+               <saw:column measureType="actual">            
+                  <saw:columnRef columnID="cec29b61c071e98bd"/>          </saw:column>        </saw:measures>        
+            <saw:seriesGenerators>          
+               <saw:measureLabels/>        </saw:seriesGenerators>        
+            <saw:sections displayAsSlider="true">          
+                       <saw:section><saw:columnRef columnID="c7c893d988a85cdee"/></saw:section></saw:sections>      </saw:selections>      
+         <saw:funnelProperties>        
+            <saw:funnelThresholds>          
+               <saw:colorRange color="#FF0000">            
+                  <saw:markerLabel>              
+                     <saw:caption captionID="kcap12832459_2129" oldID="cp0">                
+                        <saw:text>Critical</saw:text>              </saw:caption>            </saw:markerLabel>            
+                  <saw:rangeLow>              
+                     <sawx:expr xsi:type="xsd:decimal">0</sawx:expr>            </saw:rangeLow>            
+                  <saw:rangeHigh>              
+                     <sawx:expr xsi:type="xsd:decimal">50</sawx:expr>            </saw:rangeHigh>          </saw:colorRange>          
+               <saw:colorRange color="#CC9933" rangeType="custom">            
+                  <saw:markerLabel>              
+                     <saw:caption captionID="kcap12832459_2130" oldID="cp1">                
+                        <saw:text>Warning</saw:text>              </saw:caption>            </saw:markerLabel>            
+                  <saw:rangeLow>              
+                     <sawx:expr xsi:type="xsd:decimal">50</sawx:expr>            </saw:rangeLow>            
+                  <saw:rangeHigh>              
+                     <sawx:expr xsi:type="xsd:decimal">85</sawx:expr>            </saw:rangeHigh>          </saw:colorRange>          
+               <saw:colorRange color="#008000" labelType="dynamic" rangeType="custom">            
+                  <saw:markerLabel>              
+                     <saw:caption captionID="kcap12832459_2131" oldID="cp2">                
+                        <saw:text>Good</saw:text>              </saw:caption>            </saw:markerLabel>            
+                  <saw:rangeLow>              
+                     <sawx:expr xsi:type="xsd:decimal">85</sawx:expr>            </saw:rangeLow>            
+                  <saw:rangeHigh/>          </saw:colorRange>        </saw:funnelThresholds>      </saw:funnelProperties>      
+         <saw:legendFormat position="none" transparentFill="true">
+            <saw:textFormat/></saw:legendFormat>    </saw:view>  
+      <saw:view xsi:type="saw:dvtfunnel" name="dvtfunnel!2">      
+         <saw:display type="funnel" subtype="nonStandard" renderFormat="default" mode="online" clientEventEnabled="false" animateOnDisplay="false">        
+            <saw:style effect="2d" fillStyle="default" funnelTargetFactor="5"/>      </saw:display>      
+         <saw:canvasFormat height="170" width="400" showGradient="true">        
+            <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>        
+            <saw:gridlines default="true">          
+               <saw:horizontal>            
+                  <saw:major visible="false"/>            
+                  <saw:minor visible="false"/>          </saw:horizontal>          
+               <saw:vertical>            
+                  <saw:major visible="false"/>            
+                  <saw:minor visible="false"/>          </saw:vertical>        </saw:gridlines>        
+            <saw:title mode="custom">                  </saw:title>      </saw:canvasFormat>      
+         <saw:selections>        
+            <saw:categories>          
+               <saw:category>            
+                  <saw:columnRef columnID="c5b63b3cf6f2127fa"/>          </saw:category>        </saw:categories>        
+            <saw:measures showMeasureLabelsOnCategory="false">          
+               <saw:column measureType="actual">            
+                  <saw:columnRef columnID="cec29b61c071e98bd"/>          </saw:column>        
+			<saw:column measureType="target">
+                  <saw:columnRef columnID="c137a6fe232366185"/></saw:column></saw:measures>        
+            <saw:seriesGenerators>          
+               <saw:measureLabels/>        </saw:seriesGenerators>        
+            <saw:sections displayAsSlider="true">                  </saw:sections>      </saw:selections>      
+         <saw:funnelProperties>        
+            <saw:funnelThresholds>          
+               <saw:colorRange color="#FF0000">            
+                  <saw:markerLabel>              
+                     <saw:caption captionID="kcap12832459_2129" oldID="cp0">                
+                        <saw:text>Critical</saw:text>              </saw:caption>            </saw:markerLabel>            
+                  <saw:rangeLow>              
+                     <sawx:expr xsi:type="xsd:decimal">0</sawx:expr>            </saw:rangeLow>            
+                  <saw:rangeHigh>              
+                     <sawx:expr xsi:type="xsd:decimal">50</sawx:expr>            </saw:rangeHigh>          </saw:colorRange>          
+               <saw:colorRange color="#CC6600" rangeType="custom">            
+                  <saw:markerLabel>              
+                     <saw:caption captionID="kcap12832459_2130" oldID="cp1">                
+                        <saw:text>Warning</saw:text>              </saw:caption>            </saw:markerLabel>            
+                  <saw:rangeLow>              
+                     <sawx:expr xsi:type="xsd:decimal">50</sawx:expr>            </saw:rangeLow>            
+                  <saw:rangeHigh>              
+                     <sawx:expr xsi:type="xsd:decimal">85</sawx:expr>            </saw:rangeHigh>          </saw:colorRange>          
+               <saw:colorRange color="#008000" labelType="dynamic" rangeType="custom">            
+                  <saw:markerLabel>              
+                     <saw:caption captionID="kcap12832459_2131" oldID="cp2">                
+                        <saw:text>Good</saw:text>              </saw:caption>            </saw:markerLabel>            
+                  <saw:rangeLow>              
+                     <sawx:expr xsi:type="xsd:decimal">85</sawx:expr>            </saw:rangeLow>            
+                  <saw:rangeHigh/>          </saw:colorRange>        </saw:funnelThresholds>      </saw:funnelProperties>      
+         <saw:legendFormat position="none" transparentFill="true">
+            <saw:textFormat/></saw:legendFormat>    </saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="none"/></saw:views></saw:report>

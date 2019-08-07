@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c80893f71cf026752">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"><saw:dataFormat xsi:type="saw:custom" customFormat="@[html]&quot;&lt;script type=&quot;text/javascript&quot;&gt;  myArray=[];  &lt;/script&gt;&quot;"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cff0997dbaf9e41d0">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T01 Per Name Week&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Time</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Week</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cde9de9b41853e547">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;20  Actual Unit Price&quot;*0.3</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Simple Calculations</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Min</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cfca235e638eaa129">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;20  Actual Unit Price&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Simple Calculations</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Open</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cedbf32718fce0ab8">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;20  Actual Unit Price&quot;*(RAND()+0.5)</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Simple Calculations</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Close</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c48eb932e94d90fd7">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;20  Actual Unit Price&quot;*2</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Simple Calculations</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Max</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c565484153da7f1c6">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&#39;[&#39;&#39;&#39; || &quot;Time&quot;.&quot;T01 Per Name Week&quot; || &#39;&#39;&#39;, &#39; ||  CAST (&quot;Simple Calculations&quot;.&quot;20  Actual Unit Price&quot;*0.3 AS VARCHAR(5)) || &#39;, &#39; ||  CAST (&quot;Simple Calculations&quot;.&quot;20  Actual Unit Price&quot; AS VARCHAR(5)) || &#39;, &#39; ||  CAST (&quot;Simple Calculations&quot;.&quot;20  Actual Unit Price&quot;*(RAND()+0.5) AS VARCHAR(5)) || &#39;, &#39; ||  CAST (&quot;Simple Calculations&quot;.&quot;20  Actual Unit Price&quot;*2 AS VARCHAR(5)) || &#39;]&#39;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true" width="0" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0">
+						<saw:dataFormat xsi:type="saw:custom" customFormat="@[html]&quot;&lt;script type=&quot;text/javascript&quot;&gt;myCandlestickArray.push(&quot;@H&quot;);drawCandlestick();&lt;/script&gt;&quot;"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="html">
+						<saw:text>.</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec width="0" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" fontSize="0" wrapText="true"/></saw:displayFormat>
+					<saw:caption fmt="html">
+						<saw:text>&lt;script type=&quot;text/javascript&quot;&gt;myCandlestickArray=[];&lt;/script&gt;</saw:text></saw:caption></saw:columnHeading></saw:column>
+		</saw:columns></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell colSpan="2" viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!2"/><saw:cvCell viewName="htmlview!2"/></saw:cvRow></saw:cvTable>
+		</saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!2">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c80893f71cf026752"/></saw:edgeLayers></saw:edge><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="cff0997dbaf9e41d0"/><saw:edgeLayer type="column" columnID="cde9de9b41853e547"/><saw:edgeLayer type="column" columnID="cfca235e638eaa129"/><saw:edgeLayer type="column" columnID="cedbf32718fce0ab8"/><saw:edgeLayer type="column" columnID="c48eb932e94d90fd7"/><saw:edgeLayer type="column" columnID="c565484153da7f1c6"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!2">
+			<saw:staticText>
+				<saw:caption fmt="html">
+					<saw:text>&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.google.com/jsapi&quot;&gt;&lt;/script&gt;  
+&lt;script type=&quot;text/javascript&quot;&gt;
+if(document.URL.indexOf(&quot;saw.dll?Answers&quot;) == -1)     
+google.load(&#39;visualization&#39;, &#39;1&#39;, {packages: [&#39;corechart&#39;]});    
+
+function drawCandlestick() {
+if(document.URL.indexOf(&quot;saw.dll?Answers&quot;) == -1)  {
+var dataTable = google.visualization.arrayToDataTable(myCandlestickArray, true);
+var chart = new google.visualization.CandlestickChart(document.getElementById(&#39;div_Candlestick&#39;));        
+chart.draw(dataTable, {legend:&#39;none&#39;, width:700, height:400});  
+}
+}    
+
+if(document.URL.indexOf(&quot;saw.dll?Answers&quot;) == -1) 
+google.setOnLoadCallback(drawCandlestick);  
+&lt;/script&gt;
+&lt;div id=&quot;div_Candlestick&quot;&gt;&lt;/div&gt;</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:logoFormat><saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view></saw:views></saw:report>

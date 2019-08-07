@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         
+         
+         
+         <saw:column xsi:type="saw:regularColumn" columnID="c5576163be97bd0e5"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C4  Customer Segment&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c6b5a5d658d360740"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P1  Product&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c96d97d0e93b6e5e6"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf11026f23d3aca61">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter><sawx:expr xsi:type="sawx:savedFilter" path="/shared/01. QuickStart/_filters/A - Sample Sales/Short Prompted Filters" name="Short Prompted Filters"/></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="pivotTableView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="dvtchart!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="cf11026f23d3aca61"/><saw:edgeLayer type="column" columnID="c5576163be97bd0e5"/><saw:edgeLayer type="column" columnID="c6b5a5d658d360740"/><saw:edgeLayer type="column" columnID="c96d97d0e93b6e5e6"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" width="500"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false"><saw:displayGrandTotals><saw:displayGrandTotal id="gt_row" grandTotalPosition="before"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="c96d97d0e93b6e5e6" uiTableName="Time"/><saw:edgeLayer type="column" columnID="c6b5a5d658d360740" uiTableName="Products"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="false"><saw:displayGrandTotals><saw:displayGrandTotal id="gt_column" grandTotalPosition="after"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="c5576163be97bd0e5" uiTableName="Customers"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="cf11026f23d3aca61" uiTableName="Base Facts"/></saw:measuresList><saw:greenBarFormat greenBar="innerLayer" enabled="true"/></saw:view><saw:view xsi:type="saw:dvtchart" name="dvtchart!1"><saw:display type="radar" subtype="default" renderFormat="default" mode="online"><saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display><saw:canvasFormat height="250" width="500"><saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/><saw:title mode="custom"/></saw:canvasFormat><saw:selections><saw:categories><saw:category><saw:columnRef columnID="c6b5a5d658d360740"/></saw:category></saw:categories><saw:measures showMeasureLabelsOnCategory="false"><saw:column measureType="y"><saw:columnRef columnID="cf11026f23d3aca61"/></saw:column></saw:measures><saw:seriesGenerators><saw:seriesGenerator><saw:columnRef columnID="c96d97d0e93b6e5e6"/></saw:seriesGenerator><saw:measureLabels/></saw:seriesGenerators><saw:page/><saw:sections><saw:section><saw:columnRef columnID="c5576163be97bd0e5"/></saw:section></saw:sections></saw:selections><saw:legendFormat position="default" transparentFill="true"/><saw:axesFormats><saw:axisFormat axis="Y1" displayScaleLabels="true"><saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/><saw:textFormat fontSize="10"/><saw:scale defaultTicks="false"/></saw:axisFormat></saw:axesFormats></saw:view></saw:views></saw:report>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="rv5upe0qk1f2buga">
+	<sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2549">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Hiding Presentation Layer Objects&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2548">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="100" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="600"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 4" duid="70it00kpd72tfi3i"><sawd:HTML fmt="html">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; OBIEE server allows to hide or expose objects (Columns, Folders, Subject Areas) from the presentation layer based on a logical SQL condition. There is a &#39;Hide object if&#39; field in the properties of any pres layer object. [br/]That allows to granularly expose objects, either based on users/groups security (throught session variable), or as part of the deployment lifecycle, based on any hard condition.[br/][br/] In this example, the variable &lt;b&gt;VISIBILITY_PRES_LAYER&lt;/b&gt; are initiated based on a user name.[br/] If you login to BIEE (or use Act As) with [b]Gkendal [/b](Admin123), then clikc on New -&gt; Analysis, and note that this user only acces very few Subjet Areas compared to the existing list. If you select the Usage Tracking Subject Area, you will notice Gkendal only sees few objects part of that Aubject Area.[br/][br/][br/]</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 6" duid="s2kp4vflimfoel14">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2564">&lt;img src=&quot;/analyticsRes/SampleApp/SampleAppPics/Hide_Pres_Layer_Object.png&quot;/&gt;</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	
+	
+</sawd:dashboardPage>

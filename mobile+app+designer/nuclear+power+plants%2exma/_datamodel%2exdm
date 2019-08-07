@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel xmlns="http://xmlns.oracle.com/oxp/xmlp" version="2.0" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <dataproperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataproperties>
+   <dataSets>
+      <dataSet name="Default" type="complex">
+         <excel dataSourceRef="xdo:local" timezone="America/Dawson" start_rownum="-1">
+            <file>Nuclear_Plants_Worldwide_2014.xlsx</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" source="Default" label="G_1">
+               <element name="Facility" value="Facility" dataType="xsd:string" label="Facility" breakOrder="None" fieldOrder="1"/>
+               <element name="Process" value="Process" dataType="xsd:string" label="Process" breakOrder="None" fieldOrder="2"/>
+               <element name="Capacity_MWe_net" value="Capacity MWe net" dataType="xsd:double" label="Capacity MWe net" breakOrder="None" fieldOrder="3"/>
+               <element name="Current_Status" value="Current Status" dataType="xsd:string" label="Current Status" breakOrder="None" fieldOrder="4"/>
+               <element name="Start_Year" value="Start Year" dataType="xsd:string" label="Start Year" breakOrder="None" fieldOrder="5"/>
+               <element name="Owner" value="Owner" dataType="xsd:string" label="Owner" breakOrder="None" fieldOrder="6"/>
+               <element name="Location" value="Location" dataType="xsd:string" label="Location" breakOrder="None" fieldOrder="7"/>
+               <element name="Region" value="Region" dataType="xsd:string" label="Region" breakOrder="None" fieldOrder="8"/>
+               <element name="Country" value="Country" dataType="xsd:string" label="Country" breakOrder="None" fieldOrder="9"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="DATA_DS" left="28px" top="14px"/>
+         <layout name="Default" left="274px" top="17px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlVersion="200810300" isEmpty="false" xmlns:saw="com.siebel.analytics.web/report/v1.1" duid="krj2geq74p73530t" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="psfc8a1a0k4sp3ho" layoutType="bestFit"><sawd:dashboardSection name="Section 0" collapsible="false" duid="cp9hm7ak5r7rtbp1" showSectionTitle="false" layoutType="bestFit"><sawd:htmlView name="HTML 1" duid="hj6cddallh9aj48l"><sawd:HTML fmt="text">[b]Description[/b]: This lists details of all repository variables within the current running BI Server metadata repository. 
+[br/]BI Server query metadata procedures are used to gather this information on the fly. </sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 0" duid="29bpqa4akii6m33s"><sawd:HTML fmt="html">&lt;html&gt;
+	&lt;head&gt;
+		&lt;script src=&#39;saw.dll?downloadfile&amp;Path=@{dashboard.path}/listRepVars.js&#39;&gt;&lt;/script&gt;
+		&lt;style&gt;
+			
+table.ma_toc tr:hover td{
+	background-color: #DEEEFE;
+}
+
+		&lt;/style&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt; 
+		&lt;h3&gt;Static Variables&lt;/h3&gt;
+		&lt;table id=&#39;staticVars&#39; class=&#39;ma_toc&#39; width=&quot;900px&quot; cellpadding=&quot;2px&quot; border=&quot;1px&quot; bordercolor=&quot;#e2e2e2&quot; style=&quot;border-collapse:collapse;font-family: Arial;font-size: 12px&quot;&gt;
+			&lt;tr style=&quot;background-color:#e1e1e1&quot; align=&quot;left&quot;&gt;&lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Current Value&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;
+		&lt;/table&gt;
+		&lt;br/&gt;
+		&lt;h3&gt;Session Variables&lt;/h3&gt;
+		&lt;table id=&#39;sessionVars&#39; class=&#39;ma_toc&#39; width=&quot;900px&quot; cellpadding=&quot;2px&quot; border=&quot;1px&quot; bordercolor=&quot;#e2e2e2&quot; style=&quot;border-collapse:collapse;font-family: Arial;font-size: 12px;&quot;&gt;
+			&lt;tr style=&quot;background-color:#e1e1e1&quot; align=&quot;left&quot;&gt;&lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Init Block&lt;/b&gt;&lt;/th&gt;&lt;th width=110&gt;&lt;b&gt;Var Type&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Current Value&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;
+		&lt;/table&gt;
+		&lt;script&gt;listRepVariables();&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

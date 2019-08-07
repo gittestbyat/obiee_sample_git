@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="ca87da58256bcf288"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Time</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Quarter</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c7758e44401463fd5"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;25  Avg Order Size&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Simple Calculations</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Avg Order Size</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c717c081a6e42d46b"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Revenue</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cda82480531e5fbf5"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;30  Profit Margin&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Simple Calculations</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Profit Margin</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R2  Order Type&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1" colSpan="2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!2" colSpan="2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!1"/><saw:cvCell viewName="htmlview!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="ca87da58256bcf288"/><saw:edgeLayer type="column" columnID="c7758e44401463fd5"/><saw:edgeLayer type="column" columnID="c717c081a6e42d46b"/><saw:edgeLayer type="column" columnID="cda82480531e5fbf5"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:dvtchart" name="dvtchart!1"><saw:display type="bubble" subtype="default" renderFormat="default" mode="online"><saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display><saw:canvasFormat height="330" width="640"><saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/></saw:canvasFormat><saw:selections><saw:categories><saw:category><saw:columnRef columnID="ca87da58256bcf288"/></saw:category><saw:category><saw:columnRef columnID="c5af186af288e570f"/></saw:category><saw:category><saw:columnRef columnID="c23a2dc4389c49522"/></saw:category></saw:categories><saw:measures showMeasureLabelsOnCategory="false"><saw:column measureType="x"><saw:columnRef columnID="cda82480531e5fbf5"/></saw:column><saw:column measureType="z"><saw:columnRef columnID="c717c081a6e42d46b"/></saw:column><saw:column measureType="y"><saw:columnRef columnID="c7758e44401463fd5"/></saw:column></saw:measures><saw:seriesGenerators><saw:measureLabels/></saw:seriesGenerators></saw:selections><saw:legendFormat position="default" transparentFill="true"/></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script&gt;
+var bubbleGroups = [</saw:text></saw:caption></saw:prefix><saw:postfix><saw:caption fmt="html"><saw:text>];
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix><saw:narrative><saw:caption fmt="html"><saw:text>&quot;@{ca87da58256bcf288}&quot;</saw:text></saw:caption></saw:narrative><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!2"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script&gt;
+var bubbleSeries = [{name: &#39;Series 1&#39;, items: [</saw:text></saw:caption></saw:prefix><saw:postfix><saw:caption fmt="html"><saw:text>]}];
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix><saw:narrative><saw:caption fmt="html"><saw:text>{x: @{c7758e44401463fd5}, y: @{cda82480531e5fbf5}, z: @{c717c081a6e42d46b}}</saw:text></saw:caption></saw:narrative><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;link rel=&quot;stylesheet&quot; id=&quot;css&quot; href=&quot;&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/analyticsRes/ojet-demo/demo-icon-charts.css&quot;&gt;
+&lt;script src=&quot;/va/api/v1/plugins/resource/oracle-jet/require.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/va/api/v1/plugins/registry/requirejsConfig.js&quot;&gt;&lt;/script&gt; 
+
+&lt;script&gt;
+document.getElementById(&quot;css&quot;).href = require.toUrl(&quot;ojs&quot;)+&quot;.css&quot;;
+$( &quot;html&quot; ).css( &quot;font-size&quot;, 14);
+
+require([&#39;ojs/ojcore&#39;, &#39;knockout&#39;, &#39;jquery&#39;, &#39;ojs/ojknockout&#39;, &#39;ojs/ojbutton&#39;, &#39;ojs/ojchart&#39;],
+function(oj, ko, $)
+{   
+    function ChartModel() {
+        var self = this;
+        self.lineTypeValue = ko.observable(&#39;stepped&#39;);
+        
+        /* chart data 
+        var bubbleSeries = [{name: &#39;Series 1&#39;, items: [{x: 5, y: 0, z: 1}, {x: 0, y: 10, z: 1.5}, {x: -15, y: 0, z: 2}, {x: 0, y: -20, z: 3}, {x: 25, y: 0, z: 4}, {x: 0, y: 30, z: 5}, {x: -40, y: 0, z: 7}]}];
+        var bubbleGroups = [&quot;2008&quot;, &quot;2009&quot;, &quot;2010&quot;, &quot;2011&quot;, &quot;2012&quot;, &quot;2013&quot;, &quot;2014&quot;];
+		*/
+        
+        this.bubbleSeriesValue = ko.observableArray(bubbleSeries);
+        this.bubbleGroupsValue = ko.observableArray(bubbleGroups);
+        
+        self.formatRadios = ko.observableArray([
+            {id: &#39;straight&#39;, label: &#39;straight&#39;},
+            {id: &#39;curved&#39;, label: &#39;curved&#39;},
+            {id: &#39;stepped&#39;, label: &#39;stepped&#39;},
+            {id: &#39;segmented&#39;, label: &#39;segmented&#39;},
+            {id: &#39;none&#39;, label: &#39;none&#39;},
+        ]);
+    }
+    
+    var chartModel = new ChartModel();
+    
+    $(document).ready(
+	function(){
+            ko.applyBindings(chartModel, document.getElementById(&#39;chart-container&#39;));
+	}
+    );
+});	
+&lt;/script&gt;
+
+&lt;div id=&#39;chart-container&#39;&gt;
+    &lt;div style=&quot;float:left;line-height:32px;font-weight:bold;padding-right:16px&quot;&gt;
+        Line Type:
+    &lt;/div&gt;
+    &lt;div id=&quot;radioButtonset&quot; aria-label=&quot;Choose only one setting.&quot; aria-controls=&quot;bubbleChart&quot;
+         data-bind=&quot;ojComponent: {component: &#39;ojButtonset&#39;, checked: lineTypeValue}&quot;&gt;
+        &lt;!-- ko foreach: formatRadios --&gt;
+            &lt;label data-bind=&quot;attr: {for: id}&quot;&gt;&lt;/label&gt;        
+            &lt;input type=&quot;radio&quot; name=&quot;lineType&quot;
+                   data-bind=&quot;value: id, attr: {id: id},
+                   ojComponent: {component: &#39;ojButton&#39;, label: label}&quot;/&gt;
+        &lt;!-- /ko --&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;bubbleChart&quot; data-bind=&quot;ojComponent: {
+            component: &#39;ojChart&#39;, 
+            type: &#39;bubble&#39;,
+            series: bubbleSeriesValue, 
+            groups: bubbleGroupsValue,
+            animationOnDisplay: &#39;auto&#39;,
+            animationOnDataChange: &#39;auto&#39;,
+            styleDefaults: {lineType: ko.toJS(lineTypeValue), markerDisplayed: &#39;on&#39;},
+            legend: {rendered: &#39;off&#39;}
+        }&quot;
+         style=&quot;max-width:500px;width:100%;height:350px;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

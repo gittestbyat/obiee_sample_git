@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="t7clg0e3g95kqapk"><sawd:dashboardColumn name="Column 4" frozen="false" canFreeze="true" duid="68o5m70k1lsusma8" layoutType="bestFit"><sawd:dashboardSection layoutType="specificSize" name="Section 1" duid="1sja6e6thn6hkgll" showSectionTitle="false" collapsible="false" horizontalLayout="true"><saw:displayFormat><saw:formatSpec backgroundColor="#F9F9F4" borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 3" duid="32n69gfv1mokb2cc"><sawd:HTML fmt="html">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Session Variables holding Hierarchical Values
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 5" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="all" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4" borderColor="#EEEEEE"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontSize="12" fontFamily="Arial"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			
+		<sawd:htmlView name="HTML 7" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font style=&quot;font:12px arial&quot;&gt; &lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot; /&gt;
+&lt;b&gt; Description :&lt;/b&gt; OBIEE 11.1.1.9 release provides the ability to use variables to override values in selection steps. [br/]
+A variables used to override selection steps must use an initialization block with its initialization string written in JSON syntax.[br/]
+For analyses that contain hierarchical columns, selection steps can be overridden with session variables or repository variables. [br/]Session and repository variables intended for this purpose must contain valid JSON syntax, rather than SQL syntax, in their initialization strings.</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 5" canFreeze="false" duid="7m6qn254nucu9jv8" layoutType="bestFit" frozen="false" break="column"><sawd:dashboardSection layoutType="bestFit" name="Section 7" collapsible="false" duid="6hsn9ba8s98i4v2p" showSectionTitle="false" horizontalLayout="true"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" borderColor="#999999" paddingRight="6" hAlign="left"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="lllhnr0ooau548l4" links="er" overrideParentLinks="true"><saw:caption><saw:text>Session Variable in Selection Steps - Office</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Query Elements/Hier Columns/Session Variable in Selection Steps - Office"/></sawd:reportView><sawd:reportView name="Report 1" display="embed" showView="" duid="jc3btfi5d70j6v89" links="er" overrideParentLinks="true"><saw:caption><saw:text>Session Variable in Selection Steps - Time</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Query Elements/Hier Columns/Session Variable in Selection Steps - Time"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BIEE">
+   <description>
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Election" type="complex">
+         <sql>
+            <![CDATA[select	 "ELECTION_D"."CAND_NAME" as "CAND_NAME",
+	 "ELECTION_D"."CONTBR_ST" as "CONTBR_ST",
+	 "ELECTION_D"."CONTBR_OCCUPATION" as "CONTBR_OCCUPATION",
+	 "ELECTION_D"."CONTBR_RECEIPT_DATE" as "CONTBR_RECEIPT_DATE",
+	 "ELECTION_D"."CONTB_RECEIPT_AMT" as "CONTB_RECEIPT_AMT" 
+ from	"BIP_KAN"."ELECTION_D" "ELECTION_D"]]>
+         </sql>
+      </dataSet>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="Election">
+               <element name="CAND_NAME" value="CAND_NAME" label="CAND_NAME" dataType="xsd:string" breakOrder="None" fieldOrder="1"/>
+               <element name="CONTBR_ST" value="CONTBR_ST" label="CONTBR_ST" dataType="xsd:string" breakOrder="None" fieldOrder="2"/>
+               <element name="CONTBR_OCCUPATION" value="CONTBR_OCCUPATION" label="CONTBR_OCCUPATION" dataType="xsd:string" breakOrder="None" fieldOrder="3"/>
+               <element name="CONTBR_RECEIPT_DATE" value="CONTBR_RECEIPT_DATE" label="CONTBR_RECEIPT_DATE" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="CONTB_RECEIPT_AMT" value="CONTB_RECEIPT_AMT" label="CONTB_RECEIPT_AMT" dataType="xsd:integer" breakOrder="None" fieldOrder="5"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="Election" left="274px" top="28px"/>
+         <layout name="DATA_DS" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

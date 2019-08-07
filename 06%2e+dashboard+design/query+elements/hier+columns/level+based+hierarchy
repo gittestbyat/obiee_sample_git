@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">	
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">		
+      <saw:columns>			
+         <saw:column xsi:type="saw:regularColumn" columnID="c081696141ca93a62">				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+				</saw:columnFormula>
+				
+            <saw:displayFormat>					
+               
+               <saw:formatSpec suppress="repeat" wrapText="true" interaction="action" vAlign="middle">						
+                  <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false"><saw:actionLink actionLinkID="c081696141ca93a62_alf8a5ab7cbf2b7738">								
+                        <saw:actionPath>/shared/01. QuickStart/Simple Demo Dashboard/Raise Marketing Priority</saw:actionPath>
+                        <saw:caption>									
+                           <saw:text>Raise Marketing Priority on this LOB</saw:text>
+								</saw:caption>
+								
+                        <saw:paramMapping>
+                           <saw:assign xsi:type="saw:intAssign" name="processOrder_arg0" fixed="true" hidden="true">
+                              <saw:value>111</saw:value></saw:assign>
+                           <saw:assign xsi:type="saw:intAssign" name="processOrder_arg1" fixed="false" hidden="false">
+                              <saw:value>758</saw:value></saw:assign>
+                           <saw:assign xsi:type="saw:intAssign" name="processOrder_arg2" fixed="true" hidden="true">
+                              <saw:value>333</saw:value></saw:assign>
+                           <saw:assign xsi:type="saw:stringAssign" name="processOrder_arg3" fixed="false" hidden="false">
+                              <saw:value>Raise Mkt Actions Workflow</saw:value></saw:assign></saw:paramMapping></saw:actionLink><saw:actionLink actionLinkID="c081696141ca93a62_al37d6d6b37c68ce57">								
+                        <saw:actionPath>/shared/01. QuickStart/Simple Demo Dashboard/Visit Pipeline Application</saw:actionPath>
+                        <saw:caption>									
+                           <saw:text>Visit Pipeline Application</saw:text>
+								</saw:caption>
+							</saw:actionLink><saw:actionLink actionLinkID="c081696141ca93a62_alf0dd911e32c1df80">								
+                        <saw:actionPath>/shared/01. QuickStart/Simple Demo Dashboard/Navigate to Order Details Report</saw:actionPath>
+                        <saw:caption>									
+                           <saw:text>See Orders Details</saw:text>
+								</saw:caption>
+							</saw:actionLink><saw:actionLink actionLinkID="c081696141ca93a62_al57c9c5e1fb6ccb5a">								
+                        
+                        <saw:action><saw:actionName>Order Details</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/01. QuickStart/_portal/1.30 Quickstart/Order Details</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              <saw:scriptPath/>
+									</saw:implementation><saw:clientImplementation>										
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action><saw:caption>									
+                           <saw:text>Navigate to Deeper Analysis</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec><saw:conditionalDisplayFormats>						
+                  <saw:conditionalDisplayFormat>							
+                     <saw:scope xsi:type="saw:QDRScope">								
+                        <saw:QDRSet>									
+                           <saw:QDR>										
+                              <saw:staticMemberGroup>											
+                                 <saw:groupType>												
+                                    <sawx:columnRefExpr columnID="c72d13670368d02ae"/>
+											</saw:groupType>
+											
+                                 <saw:hierarchyMembers>												
+                                    <saw:hierarchyLevelMembers>													
+                                       <saw:hierarchyLevel levelID="Total Products"/>
+													
+                                       <saw:members xsi:type="saw:integerMembers">														
+                                          <saw:value>1</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										
+                              <saw:target>											
+                                 <sawx:columnRefExpr columnID="c081696141ca93a62"/>
+										</saw:target>
+									</saw:QDR>
+								</saw:QDRSet>
+							</saw:scope>
+							
+                     <saw:formatRule>								
+                        <saw:formatSpec backgroundColor="#D1CD9D" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						
+                  <saw:conditionalDisplayFormat>
+                     <saw:scope xsi:type="saw:QDRScope">
+                        <saw:QDRSet>
+                           <saw:QDR>
+                              <saw:staticMemberGroup>
+                                 <saw:groupType>
+                                    <sawx:columnRefExpr columnID="c72d13670368d02ae"/></saw:groupType>
+                                 <saw:hierarchyMembers>
+                                    <saw:hierarchyLevelMembers>
+                                       <saw:hierarchyLevel levelID="Brand"/>
+                                       <saw:members xsi:type="saw:stringMembers">
+                                          <saw:value>BizTech</saw:value>
+                                          <saw:value>FunPod</saw:value>
+                                          <saw:value>HomeView</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+                              <saw:target>
+                                 <sawx:columnRefExpr columnID="c081696141ca93a62"/></saw:target></saw:QDR></saw:QDRSet></saw:scope>
+                     <saw:formatRule>
+                        <saw:formatSpec backgroundColor="#EEEEEE" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+                  <saw:conditionalDisplayFormat>
+                     <saw:scope xsi:type="saw:QDRScope">
+                        <saw:QDRSet>
+                           <saw:QDR>
+                              <saw:staticMemberGroup>
+                                 <saw:groupType>
+                                    <sawx:columnRefExpr columnID="c72d13670368d02ae"/></saw:groupType>
+                                 <saw:hierarchyMembers>
+                                    <saw:hierarchyLevelMembers>
+                                       <saw:hierarchyLevel levelID="Type"/>
+                                       <saw:members xsi:type="saw:stringMembers">
+                                          <saw:value>Smart Phones</saw:value>
+                                          <saw:value>Portable</saw:value>
+                                          <saw:value>Accessories</saw:value>
+                                          <saw:value>Cell Phones</saw:value>
+                                          <saw:value>Camera</saw:value>
+                                          <saw:value>Maintenance</saw:value>
+                                          <saw:value>Install</saw:value>
+                                          <saw:value>Fixed</saw:value>
+                                          <saw:value>Plasma</saw:value>
+                                          <saw:value>Audio</saw:value>
+                                          <saw:value>LCD</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+                              <saw:target>
+                                 <sawx:columnRefExpr columnID="c081696141ca93a62"/></saw:target></saw:QDR></saw:QDRSet></saw:scope>
+                     <saw:formatRule>
+                        <saw:formatSpec backgroundColor="#CCFFFF" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				
+            <saw:tableHeading/>
+				
+            <saw:columnHeading>					
+               <saw:caption fmt="text" captionID="kcap12832459_305">						
+                  <saw:text>Revenue Analysis</saw:text>
+					</saw:caption>
+					
+               <saw:displayFormat>						
+                  <saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			
+         <saw:column xsi:type="saw:hierarchicalColumn" columnID="cb0e1f707f7657ed6" hierarchyID="Time Hierarchy" tableName="&quot;Time&quot;" dimensionID="H0 Time">
+            <saw:hierarchyLevels>
+               <saw:hierarchyLevel levelID="Total Time">
+                  <saw:displayFormat>
+                     <saw:formatSpec suppress="suppress" backgroundColor="#D1CD9D" wrapText="true"/></saw:displayFormat></saw:hierarchyLevel>
+               <saw:hierarchyLevel levelID="Year">
+                  <saw:displayFormat>
+                     <saw:formatSpec suppress="suppress" backgroundColor="#EEEEEE" wrapText="true"/></saw:displayFormat></saw:hierarchyLevel>
+               <saw:hierarchyLevel levelID="Quarter"/>
+               <saw:hierarchyLevel levelID="Month"/>
+               <saw:hierarchyLevel levelID="Week"/>
+               <saw:hierarchyLevel levelID="Day"/></saw:hierarchyLevels></saw:column>
+         <saw:column xsi:type="saw:hierarchicalColumn" columnID="c72d13670368d02ae" hierarchyID="Products Hierarchy" tableName="&quot;Products&quot;" dimensionID="H1 Products">				
+            <saw:hierarchyLevels>					
+               <saw:hierarchyLevel levelID="Total Products">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec suppress="suppress" backgroundColor="#D1CD9D" wrapText="true"/>
+						</saw:displayFormat>
+					</saw:hierarchyLevel>
+					
+               <saw:hierarchyLevel levelID="Brand">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent" backgroundColor="#EEEEEE">								
+                        <saw:clientEventSpec channel="MD1"/></saw:formatSpec>
+						</saw:displayFormat>
+					</saw:hierarchyLevel>
+					
+               <saw:hierarchyLevel levelID="LOB">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec suppress="suppress" backgroundColor="#FFFFFF" wrapText="true"/>
+						</saw:displayFormat>
+					</saw:hierarchyLevel>
+					
+               <saw:hierarchyLevel levelID="Type">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec suppress="suppress" backgroundColor="#CCFFFF" wrapText="true" width="60"/>
+						</saw:displayFormat>
+					</saw:hierarchyLevel>
+					
+               <saw:hierarchyLevel levelID="Product"/>
+				</saw:hierarchyLevels>
+				
+            <saw:dimensionSelection>					
+               <saw:selectionStep stepID="1" type="startWith" category="member">						
+                  <saw:stepMembers xsi:type="saw:staticMemberGroupDef">							
+                     <saw:staticMemberGroup>								
+                        <saw:hierarchyMembers>									
+                           <saw:hierarchyLevelMembers>										
+                              <saw:hierarchyLevel levelID="Total Products" levelName="Total Products"/>
+										
+                              <saw:members xsi:type="saw:specialValueMembers">											
+                                 <saw:value specialValue="all"/>
+										</saw:members>
+									</saw:hierarchyLevelMembers>
+								</saw:hierarchyMembers>
+							</saw:staticMemberGroup>
+						</saw:stepMembers>
+					</saw:selectionStep>
+					
+               <saw:selectionStep stepID="2" overridable="true" type="keep" category="member">						
+                  <saw:stepMembers xsi:type="saw:staticMemberGroupDef">							
+                     <saw:staticMemberGroup>								
+                        <saw:hierarchyMembers>									
+                           <saw:hierarchyLevelMembers>										
+                              <saw:hierarchyLevel levelName="Total Products" levelID="Total Products"/>
+										
+                              <saw:members xsi:type="saw:integerMembers">											
+                                 <saw:value>1</saw:value>
+										</saw:members>
+									</saw:hierarchyLevelMembers>
+								</saw:hierarchyMembers>
+							</saw:staticMemberGroup>
+						</saw:stepMembers>
+					</saw:selectionStep>
+				</saw:dimensionSelection>
+			</saw:column>
+		</saw:columns>
+		
+      <saw:filter>			
+         <sawx:expr xsi:type="sawx:logical" op="and">				
+            <sawx:expr op="prompted" xsi:type="sawx:special">					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+				</sawx:expr>
+				
+            <sawx:expr xsi:type="sawx:special" op="prompted">					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Alternate Calendars&quot;.&quot;T31 Cal Week&quot;</sawx:expr>
+				</sawx:expr>
+				
+            <sawx:expr xsi:type="sawx:special" op="prompted">					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D4  Company&quot;</sawx:expr>
+				</sawx:expr>
+			</sawx:expr>
+		</saw:filter>
+	</saw:criteria>
+	
+   <saw:views currentView="0">		
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">			
+         <saw:cvTable>				
+            <saw:cvRow>					
+               <saw:cvCell viewName="titleView!1"/>
+				</saw:cvRow>
+				
+            <saw:cvRow>					
+               <saw:cvCell viewName="pivotTableView!1"/>
+				</saw:cvRow>
+			</saw:cvTable>
+		</saw:view>
+		
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="false"><saw:logoFormat>				
+            <saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>				
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>				
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>				
+            <saw:caption fmt="text" captionID="kcap12832459_304">					
+               <saw:text>Product Line Analysis</saw:text>
+				</saw:caption>
+				
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view>
+		
+      <saw:view xsi:type="saw:tableView" name="tableView!1">			
+         <saw:edges>				
+            <saw:edge axis="page" showColumnHeader="true"/>
+				
+            <saw:edge axis="section"/>
+				
+            <saw:edge axis="row" showColumnHeader="true">					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="column" columnID="c081696141ca93a62"/>
+						
+                  <saw:edgeLayer type="column" columnID="c11ff6d34a2563b0f"/>
+						
+                  <saw:edgeLayer type="column" columnID="cf4a2478cae732717"/>
+					</saw:edgeLayers>
+				</saw:edge>
+				
+            <saw:edge axis="column"/>
+			</saw:edges>
+		</saw:view>
+		
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">			
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="false">					
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c72d13670368d02ae">							
+                     <saw:drillState>								
+                        <saw:drillStep drillType="down">									
+                           <saw:QDR>										
+                              <saw:staticMemberGroup specialDimension="measure">											
+                                 <saw:members xsi:type="saw:specialValueMembers">												
+                                    <saw:value specialValue="every"/>
+											</saw:members>
+										</saw:staticMemberGroup>
+										
+                              <saw:staticMemberGroup>											
+                                 <saw:groupType>												
+                                    <sawx:columnRefExpr columnID="c72d13670368d02ae"/>
+											</saw:groupType>
+											
+                                 <saw:hierarchyMembers>												
+                                    <saw:hierarchyLevelMembers>													
+                                       <saw:hierarchyLevel levelID="Total Products"/>
+													
+                                       <saw:members xsi:type="saw:integerMembers">														
+                                          <saw:value>1</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										
+                              <saw:target>											
+                                 <sawx:columnRefExpr columnID="c72d13670368d02ae"/>
+										</saw:target>
+									</saw:QDR>
+									
+                           <saw:selectionGroups>										
+                              <saw:selectionGroup columnID="c72d13670368d02ae" groupID="0"/>
+									</saw:selectionGroups>
+								</saw:drillStep>
+								
+                        <saw:drillStep drillType="down">									
+                           <saw:QDR>										
+                              <saw:staticMemberGroup specialDimension="measure">											
+                                 <saw:members xsi:type="saw:specialValueMembers">												
+                                    <saw:value specialValue="every"/>
+											</saw:members>
+										</saw:staticMemberGroup>
+										
+                              <saw:staticMemberGroup>											
+                                 <saw:groupType>												
+                                    <sawx:columnRefExpr columnID="c72d13670368d02ae"/>
+											</saw:groupType>
+											
+                                 <saw:hierarchyMembers>												
+                                    <saw:hierarchyLevelMembers>													
+                                       <saw:hierarchyLevel levelID="Type"/>
+													
+                                       <saw:members xsi:type="saw:stringMembers">														
+                                          <saw:value>Camera</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										
+                              <saw:target>											
+                                 <sawx:columnRefExpr columnID="c72d13670368d02ae"/>
+										</saw:target>
+									</saw:QDR>
+									
+                           <saw:selectionGroups>										
+                              <saw:selectionGroup columnID="c72d13670368d02ae" groupID="2"/>
+									</saw:selectionGroups>
+									
+                           <saw:drillParents>										
+                              <saw:drillParent columnID="c72d13670368d02ae" levelID="Total Products">											
+                                 <saw:members xsi:type="saw:stringMembers">												
+                                    <saw:value>c72d13670368d02ae__@@#$__c72d13670368d02ae_g1</saw:value>
+											</saw:members>
+										</saw:drillParent>
+									</saw:drillParents>
+								</saw:drillStep>
+								
+                        <saw:drillStep drillType="down">									
+                           <saw:QDR>										
+                              <saw:staticMemberGroup specialDimension="measure">											
+                                 <saw:members xsi:type="saw:specialValueMembers">												
+                                    <saw:value specialValue="every"/>
+											</saw:members>
+										</saw:staticMemberGroup>
+										
+                              <saw:staticMemberGroup>											
+                                 <saw:groupType>												
+                                    <sawx:columnRefExpr columnID="c72d13670368d02ae"/>
+											</saw:groupType>
+											
+                                 <saw:hierarchyMembers>												
+                                    <saw:hierarchyLevelMembers>													
+                                       <saw:hierarchyLevel levelID="Brand"/>
+													
+                                       <saw:members xsi:type="saw:stringMembers">														
+                                          <saw:value>FunPod</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										
+                              <saw:target>											
+                                 <sawx:columnRefExpr columnID="c72d13670368d02ae"/>
+										</saw:target>
+									</saw:QDR>
+									
+                           <saw:selectionGroups>										
+                              <saw:selectionGroup columnID="c72d13670368d02ae" groupID="0"/>
+									</saw:selectionGroups>
+									
+                           <saw:drillParents>										
+                              <saw:drillParent columnID="c72d13670368d02ae" levelID="Total Products">											
+                                 <saw:members xsi:type="saw:integerMembers">												
+                                    <saw:value>1</saw:value>
+											</saw:members>
+										</saw:drillParent>
+									</saw:drillParents>
+								</saw:drillStep>
+								
+                        <saw:drillStep drillType="down">
+                           <saw:QDR>
+                              <saw:staticMemberGroup>
+                                 <saw:groupType>
+                                    <sawx:columnRefExpr columnID="c72d13670368d02ae"/></saw:groupType>
+                                 <saw:hierarchyMembers>
+                                    <saw:hierarchyLevelMembers>
+                                       <saw:hierarchyLevel levelID="LOB"/>
+                                       <saw:members xsi:type="saw:stringMembers">
+                                          <saw:value>Games</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+                              <saw:target>
+                                 <sawx:columnRefExpr columnID="c72d13670368d02ae"/></saw:target></saw:QDR>
+                           <saw:selectionGroups>
+                              <saw:selectionGroup columnID="c72d13670368d02ae" groupID="0"/></saw:selectionGroups>
+                           <saw:drillParents>
+                              <saw:drillParent columnID="c72d13670368d02ae" levelID="Brand">
+                                 <saw:members xsi:type="saw:stringMembers">
+                                    <saw:value>FunPod</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep></saw:drillState>
+						</saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column">					
+               <saw:displayGrandTotals>						
+                  <saw:displayGrandTotal id="t1" grandTotalPosition="none"/>
+					</saw:displayGrandTotals>
+					
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cb0e1f707f7657ed6">
+                     <saw:drillState>
+                        <saw:drillStep drillType="down">
+                           <saw:QDR>
+                              <saw:staticMemberGroup>
+                                 <saw:groupType>
+                                    <sawx:columnRefExpr columnID="cb0e1f707f7657ed6"/></saw:groupType>
+                                 <saw:hierarchyMembers>
+                                    <saw:hierarchyLevelMembers>
+                                       <saw:hierarchyLevel levelID="Total Time"/>
+                                       <saw:members xsi:type="saw:integerMembers">
+                                          <saw:value>1</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+                              <saw:target>
+                                 <sawx:columnRefExpr columnID="cb0e1f707f7657ed6"/></saw:target></saw:QDR>
+                           <saw:selectionGroups>
+                              <saw:selectionGroup columnID="cb0e1f707f7657ed6" groupID="0"/></saw:selectionGroups></saw:drillStep>
+                        <saw:drillStep drillType="down">
+                           <saw:QDR>
+                              <saw:staticMemberGroup>
+                                 <saw:groupType>
+                                    <sawx:columnRefExpr columnID="cb0e1f707f7657ed6"/></saw:groupType>
+                                 <saw:hierarchyMembers>
+                                    <saw:hierarchyLevelMembers>
+                                       <saw:hierarchyLevel levelID="Year"/>
+                                       <saw:members xsi:type="saw:stringMembers">
+                                          <saw:value>2009</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+                              <saw:target>
+                                 <sawx:columnRefExpr columnID="cb0e1f707f7657ed6"/></saw:target></saw:QDR>
+                           <saw:selectionGroups>
+                              <saw:selectionGroup columnID="cb0e1f707f7657ed6" groupID="0"/></saw:selectionGroups>
+                           <saw:drillParents>
+                              <saw:drillParent columnID="cb0e1f707f7657ed6" levelID="Total Time">
+                                 <saw:members xsi:type="saw:integerMembers">
+                                    <saw:value>1</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep></saw:drillState></saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>				
+            <saw:measure columnID="c081696141ca93a62"/></saw:measuresList></saw:view>
+		
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">			
+         <saw:display type="bar" subtype="basic" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">				
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+			</saw:display>
+			
+         <saw:canvasFormat height="245" width="350" showGradient="true">				
+            <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default">					
+               <saw:textFormat fontSize="9"/>
+					
+               <saw:dataFormat xsi:type="saw:number" commas="false" negativeType="minus" minDigits="0" maxDigits="0"/>
+				</saw:dataLabels>
+				
+            <saw:gridlines default="false">					
+               <saw:horizontal>						
+                  <saw:major visible="false" color="#999999"/>
+						
+                  <saw:minor visible="false"/>
+					</saw:horizontal>
+					
+               <saw:vertical>						
+                  <saw:major visible="false" color="#999999"/>
+						
+                  <saw:minor visible="false"/>
+					</saw:vertical>
+				</saw:gridlines>
+				
+            <saw:title mode="custom">					
+               <saw:caption>						
+                  <saw:text/>
+					</saw:caption>
+				</saw:title>
+			</saw:canvasFormat>
+			
+         <saw:selections>				
+            <saw:categories>					
+               <saw:category>						
+                  <saw:columnRef columnID="cf4a2478cae732717"/>
+					</saw:category>
+				</saw:categories>
+				
+            <saw:measures showMeasureLabelsOnCategory="false">					
+               <saw:column measureType="y">						
+                  <saw:columnRef columnID="c081696141ca93a62"/>
+					</saw:column>
+				</saw:measures>
+				
+            <saw:seriesGenerators>					
+               <saw:seriesGenerator>						
+                  <saw:columnRef columnID="c72d13670368d02ae"/>
+						
+                  <saw:drillState>							
+                     <saw:hiddenLevels>								
+                        <saw:hierarchyLevel levelID="Total Products"/>
+							</saw:hiddenLevels>
+							
+                     <saw:drillStep drillType="down">								
+                        <saw:QDR>									
+                           <saw:staticMemberGroup>										
+                              <saw:groupType>											
+                                 <sawx:columnRefExpr columnID="c72d13670368d02ae"/>
+										</saw:groupType>
+										
+                              <saw:hierarchyMembers>											
+                                 <saw:hierarchyLevelMembers>												
+                                    <saw:hierarchyLevel levelID="Total Products"/>
+												
+                                    <saw:members xsi:type="saw:integerMembers">													
+                                       <saw:value>1</saw:value>
+												</saw:members>
+											</saw:hierarchyLevelMembers>
+										</saw:hierarchyMembers>
+									</saw:staticMemberGroup>
+									
+                           <saw:target>										
+                              <sawx:columnRefExpr columnID="c72d13670368d02ae"/>
+									</saw:target>
+								</saw:QDR>
+								
+                        <saw:selectionGroups>									
+                           <saw:selectionGroup columnID="c72d13670368d02ae" groupID="0"/>
+								</saw:selectionGroups>
+							</saw:drillStep>
+						</saw:drillState>
+					</saw:seriesGenerator>
+					
+               <saw:measureLabels/>
+				</saw:seriesGenerators>
+			</saw:selections>
+			
+         <saw:legendFormat position="top" transparentFill="true"/>
+			
+         <saw:axesFormats syncAxis="false">				
+            <saw:axisFormat axis="Y1" displayScaleLabels="true">					
+               <saw:scale scaleValues="auto" showMajorTicks="true" showMinorTicks="false" logarithmic="false" defaultTicks="false" majorTicks="5"/>
+					
+               <saw:title mode="custom">						
+                  <saw:caption>							
+                     <saw:text/>
+						</saw:caption>
+					</saw:title>
+					
+               <saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="k" skipLabels="true"/>
+					
+               <saw:textFormat/>
+				</saw:axisFormat>
+				
+            <saw:axisFormat axis="X">					
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>
+					
+               <saw:title mode="custom">						
+                  <saw:caption>							
+                     <saw:text/>
+						</saw:caption>
+					</saw:title>
+				</saw:axisFormat>
+			</saw:axesFormats>
+			
+         <saw:seriesFormats>				
+            <saw:seriesFormatGroup name="bar">					
+               <saw:seriesFormatRule>						
+                  <saw:seriesCondition position="1"/>
+						
+                  <saw:visualFormats>							
+                     <saw:visualFormat color="#9999CC"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               <saw:seriesFormatRule>						
+                  <saw:seriesCondition position="2"/>
+						
+                  <saw:visualFormats>							
+                     <saw:visualFormat color="#7EB679"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               <saw:seriesFormatRule>						
+                  <saw:seriesCondition position="3"/>
+						
+                  <saw:visualFormats>							
+                     <saw:visualFormat color="#D1CD9D"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+				</saw:seriesFormatGroup>
+			</saw:seriesFormats>
+		</saw:view>
+	</saw:views>
+	
+   <saw:prompts scope="report" subjectArea="&quot;A - Sample Sales&quot;"/></saw:report>

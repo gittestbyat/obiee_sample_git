@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlVersion="200810300" isEmpty="false" xmlns:saw="com.siebel.analytics.web/report/v1.1" duid="bj1khmpe4e6ib19t" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sawd:dashboardColumn name="Column 2" frozen="false" canFreeze="true" duid="68o5m70k1lsusma8" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="all" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4" borderColor="#EEEEEE"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontSize="12" fontFamily="Arial"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			
+		<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font style=&quot;font:12px arial&quot;&gt; &lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot; /&gt;&lt;b&gt; Description :&lt;/b&gt; 
+Oracle Big Data SQL allows you to utilize Oracle&#39;s rich SQL dialect to query all your data, regardless of where that data may reside. This is an example of RFM analysis on customers.  It identifies - [br/]
+[b]Recency [/b]: when was the last time the customer accessed the site? [b]Frequency [/b]: what is the level of activity for that customer on the site? [b]Monetary [/b]: how much money has the customer spent?[br/][br/]
+NTILE functions are applied to data residing in both the app logs on Hadoop and customer attributes data in Oracle DB tables. Customers are categorized into 5 buckets measured in increasing importance.  [br/]
+For example, an RFM combined score of 551 indicates that the customer is in the highest tier of customers in terms of recent visits (R=5) and activity on the site (F=5), [br/]
+however the customer is in the lowest tier in terms of spend (M=1).  Perhaps this is a customer that performs research on the site, but then decides to buy movies elsewhere!
+&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 4" canFreeze="false" duid="ef2vkk928glad8qs" layoutType="bestFit" break="column" frozen="false"><sawd:dashboardSection layoutType="bestFit" name="Section 4" collapsible="false" duid="9r5qrbtt8v1ln1ga" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="4" wrapText="true" backgroundColor="#EEEEEE" borderColor="#CCCCCC"/></saw:displayFormat><sawd:globalFilterView name="GFP 2" path="/shared/09. Integrations and Customizations/Big Data SQL/RFM Prompt" duid="hn3bgfq2jmndjbji"><saw:caption><saw:text>RFM Prompt</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="4fue42ger8n7bg3a" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 0" collapsible="false" duid="va7h91jo4gpbrq0n" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="ve6nolhjv4dibofi"><saw:caption><saw:text>RFM Analysis</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Big Data SQL/RFM Analysis"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

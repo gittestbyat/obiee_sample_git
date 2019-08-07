@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:derivedCriteria" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:derivedColumn" columnID="ce806596a8d824654"><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Attributes</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Metric</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:derivedColumn" columnID="c737ed33736d21de7"><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Attributes</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Unit</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:derivedColumn" columnID="c668ec0c72fe6f2bc"><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Lower Quartile</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:derivedColumn" columnID="c559aa119a7351062"><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Median</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:derivedColumn" columnID="c9bfd57adc9a2abde"><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Upper Quartile</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:derivedColumn" columnID="c8347bd8a26c3030b"><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Min</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:derivedColumn" columnID="c75bfc6e9eef6c0e7"><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Max</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:derivedColumn" columnID="cf9b848e3946861bf"><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Average</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:derivedColumn" columnID="c3e268b1b92311eea"><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat><saw:tableHeading><saw:caption fmt="html"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="html"><saw:text>Grain Dimension</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns><saw:from><saw:criteria xsi:type="saw:setCriteria" op="union"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c569fed0d6f996d6f"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&#39;Revenue&#39;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c931105e46c95c627"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&#39;In USD&#39;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c3ea686ffac136bc1"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">max(case when NTILE(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4)=1 then &quot;Base Facts&quot;.&quot;1- Revenue&quot; end)</sawx:expr></saw:columnFormula><saw:tableHeading/><saw:columnHeading><saw:caption fmt="text"><saw:text>Lower Quartile</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf7baee9c57214ec1"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">max(case when NTILE(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4)=2 then &quot;Base Facts&quot;.&quot;1- Revenue&quot; end)</sawx:expr></saw:columnFormula><saw:tableHeading/><saw:columnHeading><saw:caption fmt="text"><saw:text>Median</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c133ac06d504242e1"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">max(case when NTILE(&quot;Base Facts&quot;.&quot;1- Revenue&quot;,4)=3 then &quot;Base Facts&quot;.&quot;1- Revenue&quot; end)</sawx:expr></saw:columnFormula><saw:tableHeading/><saw:columnHeading><saw:caption fmt="text"><saw:text>Upper Quartile</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cede38122a26320c0"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">MIN(&quot;Base Facts&quot;.&quot;1- Revenue&quot;)</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c201ac4fc5437a1c2"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">MAX(&quot;Base Facts&quot;.&quot;1- Revenue&quot;)</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c2ad4f17914d83a4e"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">AVG(&quot;Base Facts&quot;.&quot;1- Revenue&quot;)</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c68c4fbfd0d208e86"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P1  Product&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>P1  Product</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns></saw:criteria><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="cda071ebb42062bf5"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&#39;Billed Quantity&#39;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cc0a3f701bd3d36ce"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&#39;Count&#39;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c24a237dedc1bf405"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">max(case when NTILE(&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;,4)=1 then &quot;Base Facts&quot;.&quot;2- Billed Quantity&quot; end)
+</sawx:expr></saw:columnFormula><saw:tableHeading/><saw:columnHeading><saw:caption fmt="text"><saw:text>Lower Quartile</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cd3ea8a885f22eff0"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">max(case when NTILE(&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;,4)=2 then &quot;Base Facts&quot;.&quot;2- Billed Quantity&quot; end)
+</sawx:expr></saw:columnFormula><saw:tableHeading/><saw:columnHeading><saw:caption fmt="text"><saw:text>Median</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf4a202ac7ab53fe3"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">max(case when NTILE(&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;,4)=3 then &quot;Base Facts&quot;.&quot;2- Billed Quantity&quot; end)
+</sawx:expr></saw:columnFormula><saw:tableHeading/><saw:columnHeading><saw:caption fmt="text"><saw:text>Upper Quartile</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c27d196d1ec0641da"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">MIN(&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;)</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ca0b537c928745b5a"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">MAX(&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;)</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c32916244bbfffa44"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">AVG(&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;)</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c1d59d25f468dd4e1"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P1  Product&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>P1  Product</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns></saw:criteria></saw:criteria></saw:from></saw:criteria><saw:views currentView="3"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="legendView!1" colSpan="2"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1" colSpan="2"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="pivotTableView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="ce806596a8d824654"/><saw:edgeLayer type="column" columnID="c737ed33736d21de7"/><saw:edgeLayer type="column" columnID="c668ec0c72fe6f2bc"><saw:memberFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="c559aa119a7351062"/><saw:edgeLayer type="column" columnID="c9bfd57adc9a2abde"/><saw:edgeLayer type="column" columnID="c8347bd8a26c3030b"/><saw:edgeLayer type="column" columnID="c75bfc6e9eef6c0e7"/><saw:edgeLayer type="column" columnID="cf9b848e3946861bf"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;div id=&#39;_d3_bullet&#39;/&gt;
+
+
+&lt;style type=&quot;text/css&quot;&gt;
+.bullet { font: 10px sans-serif; }
+.bullet .marker { stroke: #000; stroke-width: 2px; }
+.bullet .tick line { stroke: #666; stroke-width: .5px; }
+.bullet .range.s0 { fill: #eee; }
+.bullet .range.s1 { fill: #ddd; }
+.bullet .range.s2 { fill: #ccc; }
+.bullet .measure.s0 { fill: lightsteelblue; }
+.bullet .measure.s1 { fill: steelblue; }
+.bullet .title { font-size: 14px; font-weight: bold; }
+.bullet .subtitle { fill: #999; }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/d3/d3.v3.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+data=[];
+var tempStr=&quot;&quot;;
+</saw:text></saw:caption></saw:prefix><saw:narrative rowCount="600"><saw:caption fmt="html"><saw:text>if (tempStr != &quot;@{ce806596a8d824654}&quot;) {tempStr = &quot;@{ce806596a8d824654}&quot;; data.push({&quot;title&quot;:&quot;@{ce806596a8d824654}&quot;,&quot;subtitle&quot;:&quot;@{c737ed33736d21de7}&quot;,&quot;ranges&quot;:[@{c668ec0c72fe6f2bc},@{c559aa119a7351062},@{c9bfd57adc9a2abde}],&quot;measures&quot;:[@{c8347bd8a26c3030b},@{c75bfc6e9eef6c0e7}],&quot;markers&quot;:[@{cf9b848e3946861bf}]});}
+</saw:text></saw:caption></saw:narrative><saw:postfix><saw:caption fmt="html"><saw:text>
+var width = @{Width}{960},
+    height = @{Height}{50},
+    margin = {top: 5, right: 40, bottom: 20, left: 120};
+
+var chart = bulletChart()
+    .width(width - margin.right - margin.left)
+    .height(height - margin.top - margin.bottom);
+
+  var vis = d3.select(&quot;#_d3_bullet&quot;).selectAll(&quot;svg&quot;)
+      .data(data)
+    .enter().append(&quot;svg&quot;)
+      .attr(&quot;class&quot;, &quot;bullet&quot;)
+      .attr(&quot;width&quot;, width)
+      .attr(&quot;height&quot;, height)
+    .append(&quot;g&quot;)
+      .attr(&quot;transform&quot;, &quot;translate(&quot; + margin.left + &quot;,&quot; + margin.top + &quot;)&quot;)
+      .call(chart);
+
+  var title = vis.append(&quot;g&quot;)
+      .attr(&quot;text-anchor&quot;, &quot;end&quot;)
+      .attr(&quot;transform&quot;, &quot;translate(-6,&quot; + (height - margin.top - margin.bottom) / 2 + &quot;)&quot;);
+
+  title.append(&quot;text&quot;)
+      .attr(&quot;class&quot;, &quot;title&quot;)
+      .text(function(d) { return d.title; });
+
+  title.append(&quot;text&quot;)
+      .attr(&quot;class&quot;, &quot;subtitle&quot;)
+      .attr(&quot;dy&quot;, &quot;1em&quot;)
+      .text(function(d) { return d.subtitle; });
+
+  chart.duration(1000);
+  window.transition = function() {
+    vis.datum(randomize).call(chart);
+  };
+
+function randomize(d) {
+  if (!d.randomizer) d.randomizer = randomizer(d);
+  d.ranges = d.ranges.map(d.randomizer);
+  d.markers = d.markers.map(d.randomizer);
+  d.measures = d.measures.map(d.randomizer);
+  return d;
+}
+
+function randomizer(d) {
+  var k = d3.max(d.ranges) * .2;
+  return function(d) {
+    return Math.max(0, d + k * (Math.random() - .5));
+  };
+}
+
+// Chart design based on the recommendations of Stephen Few. Implementation
+// based on the work of Clint Ivy, Jamie Love, and Jason Davies.
+// http://projects.instantcognition.com/protovis/bulletchart/
+function bulletChart() {
+  var orient = &quot;left&quot;, // TODO top &amp; bottom
+      reverse = false,
+      duration = 0,
+      ranges = bulletRanges,
+      markers = bulletMarkers,
+      measures = bulletMeasures,
+      width = 380,
+      height = 30,
+      tickFormat = null;
+
+  // For each small multiple…
+  function bullet(g) {
+    g.each(function(d, i) {
+      var rangez = ranges.call(this, d, i).slice().sort(d3.descending),
+          markerz = markers.call(this, d, i).slice().sort(d3.descending),
+          measurez = measures.call(this, d, i).slice().sort(d3.descending),
+          g = d3.select(this);
+
+      // Compute the new x-scale.
+      var x1 = d3.scale.linear()
+          .domain([0, Math.max(rangez[0], markerz[0], measurez[0])])
+          .range(reverse ? [width, 0] : [0, width]);
+
+      // Retrieve the old x-scale, if this is an update.
+      var x0 = this.__chart__ || d3.scale.linear()
+          .domain([0, Infinity])
+          .range(x1.range());
+
+      // Stash the new scale.
+      this.__chart__ = x1;
+
+      // Derive width-scales from the x-scales.
+      var w0 = bulletWidth(x0),
+          w1 = bulletWidth(x1);
+
+      // Update the range rects.
+      var range = g.selectAll(&quot;rect.range&quot;)
+          .data(rangez);
+
+      range.enter().append(&quot;svg:rect&quot;)
+          .attr(&quot;class&quot;, function(d, i) { return &quot;range s&quot; + i; })
+          .attr(&quot;width&quot;, w0)
+          .attr(&quot;height&quot;, height)
+          .attr(&quot;x&quot;, reverse ? x0 : 0)
+        .transition()
+          .duration(duration)
+          .attr(&quot;width&quot;, w1)
+          .attr(&quot;x&quot;, reverse ? x1 : 0);
+
+      range.transition()
+          .duration(duration)
+          .attr(&quot;x&quot;, reverse ? x1 : 0)
+          .attr(&quot;width&quot;, w1)
+          .attr(&quot;height&quot;, height);
+
+      // Update the measure rects.
+      var measure = g.selectAll(&quot;rect.measure&quot;)
+          .data(measurez);
+
+      measure.enter().append(&quot;svg:rect&quot;)
+          .attr(&quot;class&quot;, function(d, i) { return &quot;measure s&quot; + i; })
+          .attr(&quot;width&quot;, w0)
+          .attr(&quot;height&quot;, height / 3)
+          .attr(&quot;x&quot;, reverse ? x0 : 0)
+          .attr(&quot;y&quot;, height / 3)
+        .transition()
+          .duration(duration)
+          .attr(&quot;width&quot;, w1)
+          .attr(&quot;x&quot;, reverse ? x1 : 0);
+
+      measure.transition()
+          .duration(duration)
+          .attr(&quot;width&quot;, w1)
+          .attr(&quot;height&quot;, height / 3)
+          .attr(&quot;x&quot;, reverse ? x1 : 0)
+          .attr(&quot;y&quot;, height / 3);
+
+      // Update the marker lines.
+      var marker = g.selectAll(&quot;line.marker&quot;)
+          .data(markerz);
+
+      marker.enter().append(&quot;svg:line&quot;)
+          .attr(&quot;class&quot;, &quot;marker&quot;)
+          .attr(&quot;x1&quot;, x0)
+          .attr(&quot;x2&quot;, x0)
+          .attr(&quot;y1&quot;, height / 6)
+          .attr(&quot;y2&quot;, height * 5 / 6)
+        .transition()
+          .duration(duration)
+          .attr(&quot;x1&quot;, x1)
+          .attr(&quot;x2&quot;, x1);
+
+      marker.transition()
+          .duration(duration)
+          .attr(&quot;x1&quot;, x1)
+          .attr(&quot;x2&quot;, x1)
+          .attr(&quot;y1&quot;, height / 6)
+          .attr(&quot;y2&quot;, height * 5 / 6);
+
+      // Compute the tick format.
+      var format = tickFormat || x1.tickFormat(8);
+
+      // Update the tick groups.
+      var tick = g.selectAll(&quot;g.tick&quot;)
+          .data(x1.ticks(8), function(d) {
+            return this.textContent || format(d);
+          });
+
+      // Initialize the ticks with the old scale, x0.
+      var tickEnter = tick.enter().append(&quot;svg:g&quot;)
+          .attr(&quot;class&quot;, &quot;tick&quot;)
+          .attr(&quot;transform&quot;, bulletTranslate(x0))
+          .style(&quot;opacity&quot;, 1e-6);
+
+      tickEnter.append(&quot;svg:line&quot;)
+          .attr(&quot;y1&quot;, height)
+          .attr(&quot;y2&quot;, height * 7 / 6);
+
+      tickEnter.append(&quot;svg:text&quot;)
+          .attr(&quot;text-anchor&quot;, &quot;middle&quot;)
+          .attr(&quot;dy&quot;, &quot;1em&quot;)
+          .attr(&quot;y&quot;, height * 7 / 6)
+          .text(format);
+
+      // Transition the entering ticks to the new scale, x1.
+      tickEnter.transition()
+          .duration(duration)
+          .attr(&quot;transform&quot;, bulletTranslate(x1))
+          .style(&quot;opacity&quot;, 1);
+
+      // Transition the updating ticks to the new scale, x1.
+      var tickUpdate = tick.transition()
+          .duration(duration)
+          .attr(&quot;transform&quot;, bulletTranslate(x1))
+          .style(&quot;opacity&quot;, 1);
+
+      tickUpdate.select(&quot;line&quot;)
+          .attr(&quot;y1&quot;, height)
+          .attr(&quot;y2&quot;, height * 7 / 6);
+
+      tickUpdate.select(&quot;text&quot;)
+          .attr(&quot;y&quot;, height * 7 / 6);
+
+      // Transition the exiting ticks to the new scale, x1.
+      tick.exit().transition()
+          .duration(duration)
+          .attr(&quot;transform&quot;, bulletTranslate(x1))
+          .style(&quot;opacity&quot;, 1e-6)
+          .remove();
+    });
+    d3.timer.flush();
+  }
+
+  // left, right, top, bottom
+  bullet.orient = function(x) {
+    if (!arguments.length) return orient;
+    orient = x;
+    reverse = orient == &quot;right&quot; || orient == &quot;bottom&quot;;
+    return bullet;
+  };
+
+  // ranges (bad, satisfactory, good)
+  bullet.ranges = function(x) {
+    if (!arguments.length) return ranges;
+    ranges = x;
+    return bullet;
+  };
+
+  // markers (previous, goal)
+  bullet.markers = function(x) {
+    if (!arguments.length) return markers;
+    markers = x;
+    return bullet;
+  };
+
+  // measures (actual, forecast)
+  bullet.measures = function(x) {
+    if (!arguments.length) return measures;
+    measures = x;
+    return bullet;
+  };
+
+  bullet.width = function(x) {
+    if (!arguments.length) return width;
+    width = x;
+    return bullet;
+  };
+
+  bullet.height = function(x) {
+    if (!arguments.length) return height;
+    height = x;
+    return bullet;
+  };
+
+  bullet.tickFormat = function(x) {
+    if (!arguments.length) return tickFormat;
+    tickFormat = x;
+    return bullet;
+  };
+
+  bullet.duration = function(x) {
+    if (!arguments.length) return duration;
+    duration = x;
+    return bullet;
+  };
+
+  return bullet;
+};
+
+function bulletRanges(d) {
+  return d.ranges;
+}
+
+function bulletMarkers(d) {
+  return d.markers;
+}
+
+function bulletMeasures(d) {
+  return d.measures;
+}
+
+function bulletTranslate(x) {
+  return function(d) {
+    return &quot;translate(&quot; + x(d) + &quot;,0)&quot;;
+  };
+}
+
+function bulletWidth(x) {
+  var x0 = x(0);
+  return function(d) {
+    return Math.abs(x(d) - x0);
+  };
+}
+
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix></saw:view><saw:view xsi:type="saw:legendView" name="legendView!1" across="7"><saw:captionFormat position="right"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" fontSize="10"/></saw:displayFormat></saw:captionFormat><saw:legendList><saw:legendItem><saw:displayFormat><saw:formatSpec fontSize="6" wrapText="true" backgroundColor="#CECFCE"/></saw:displayFormat><saw:legendCaption><saw:caption><saw:text>Lower Quartile</saw:text></saw:caption></saw:legendCaption><saw:sampleText/></saw:legendItem><saw:legendItem><saw:legendCaption><saw:caption><saw:text>Median</saw:text></saw:caption></saw:legendCaption><saw:displayFormat><saw:formatSpec backgroundColor="#dedfde" wrapText="true" fontSize="6" borderPosition="none"/></saw:displayFormat></saw:legendItem><saw:legendItem><saw:legendCaption><saw:caption><saw:text>Upper Quartile</saw:text></saw:caption></saw:legendCaption><saw:displayFormat><saw:formatSpec backgroundColor="#efefef" fontSize="6" wrapText="true" borderPosition="none"/></saw:displayFormat></saw:legendItem><saw:legendItem><saw:displayFormat><saw:formatSpec backgroundColor="#FFFFFF" borderPosition="none" wrapText="true" fontSize="6"/></saw:displayFormat></saw:legendItem><saw:legendItem><saw:legendCaption><saw:caption><saw:text>Actual Min</saw:text></saw:caption></saw:legendCaption><saw:displayFormat><saw:formatSpec backgroundColor="#4282b5" fontSize="6" wrapText="true" borderPosition="none"/></saw:displayFormat></saw:legendItem><saw:legendItem><saw:legendCaption><saw:caption><saw:text>Actual Avg</saw:text></saw:caption></saw:legendCaption><saw:displayFormat><saw:formatSpec borderColor="#000000" borderPosition="4" borderStyle="thick" fontSize="6" wrapText="true" backgroundColor="#FFFFFF"/></saw:displayFormat></saw:legendItem><saw:legendItem><saw:legendCaption><saw:caption><saw:text>Actual Max</saw:text></saw:caption></saw:legendCaption><saw:displayFormat><saw:formatSpec backgroundColor="#b5c7de" borderPosition="none" fontSize="6" wrapText="true"/></saw:displayFormat></saw:legendItem></saw:legendList><saw:title><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:title><saw:legendTable><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat></saw:legendTable></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"/><saw:edge axis="column"><saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c3e268b1b92311eea" aggRule="countDistinct"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text># of Individual records in selection</saw:text></saw:caption></saw:memberFormat></saw:measure></saw:measuresList></saw:view></saw:views></saw:report>

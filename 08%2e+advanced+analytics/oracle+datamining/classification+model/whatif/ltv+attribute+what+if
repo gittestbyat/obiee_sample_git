@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf9340a1fa9b4eeb8">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C1  Customer Name&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cb46513a4a9463cb9"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C19  Months as Customer&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat minDigits="2" maxDigits="2" commas="true" negativeType="minus" xsi:type="saw:number"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c3fe55db4328c9a6f"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C7b Marital Status (Sparse Lookup)&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c6f5481d96e3e77fd"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C6  Credit Rate&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c4ea4ce15898178db">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Datamining&quot;.&quot;M12  Cust Predicted LTV&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" vAlign="middle" wrapText="true"/></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Customer Predicted LTV</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Actual</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cdb4f524fc8dbcd12">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Datamining&quot;.&quot;M35  Dynamic Predicted LTV&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="suppress" hAlign="left" vAlign="middle" wrapText="true" fontColor="#336633"/><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="notEqual" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cdb4f524fc8dbcd12"/>
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cdb4f524fc8dbcd12"/></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#FFFF99" wrapText="true" fontColor="#CC3333"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Customer Predicted LTV</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>WhatIf</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec fontColor="#336633" wrapText="true"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cde0ad6a3316602a2">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Datamining&quot;.&quot;M11  Cust Predicted Leaf Node&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" vAlign="middle" wrapText="true" width="10"/></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Customer Predicted Tree Node</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec hAlign="right" wrapText="true" width="10"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf32d268c8b87a21f">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Datamining&quot;.&quot;M23 Full Rule&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" vAlign="middle" imagePlacement="right" fontSize="9" borderPosition="10" borderColor="#999999">
+						<saw:dataFormat textFormat="html" xsi:type="saw:text"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Customer Predicted Tree Node</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec borderColor="#999999" borderPosition="2" wrapText="true"/></saw:displayFormat>
+					<saw:caption fmt="text">
+						<saw:text>Actual</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cfffcb5950a78a5f9">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Datamining&quot;.&quot;M34 Dynamic Pred Leaf Node&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="repeat" vAlign="middle" wrapText="true" fontColor="#008000"/><saw:conditionalDisplayFormats/></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Customer Predicted Tree Node</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cbb02e86236201669">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Datamining&quot;.&quot;M33 Dynamic Score Full Rule&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" fontSize="9" vAlign="middle" borderColor="#999999" borderPosition="14" fontColor="#008000">
+						<saw:dataFormat textFormat="html" xsi:type="saw:text"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Customer Predicted Tree Node</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec borderColor="#999999" borderPosition="6" wrapText="true"/></saw:displayFormat></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec borderColor="#999999" borderPosition="6" wrapText="true" fontColor="#008000"/></saw:displayFormat>
+					<saw:caption fmt="text">
+						<saw:text>What If</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c5ab70c392533e30b">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&#39; &#39;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" fontColor="#FFFFFF" fontSize="1" wrapText="true" borderPosition="16" borderColor="#999999"/></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>S</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec fontColor="#FFFFFF" fontSize="1" wrapText="true" borderColor="#999999" borderPosition="16" hAlign="left" vAlign="top"/></saw:displayFormat></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec fontColor="#FFFFFF" borderColor="#999999" borderPosition="16" hAlign="left" vAlign="top" fontSize="1" wrapText="true"/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cde90151b95cbb4b1"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C21  Customer Age&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+		<saw:filter>
+			<sawx:expr op="in" xsi:type="sawx:list">
+				<sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C1  Customer Name&quot;</sawx:expr>
+				<sawx:expr xsi:type="xsd:string">Adah Bacon</sawx:expr>
+				<sawx:expr xsi:type="xsd:string">Addison Hurd</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:logoFormat><saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1" headingDisplay="table2Rows">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="cf9340a1fa9b4eeb8"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c4ea4ce15898178db"/>
+						<saw:edgeLayer type="column" columnID="cdb4f524fc8dbcd12"/>
+						<saw:edgeLayer type="column" columnID="c5ab70c392533e30b"/>
+						<saw:edgeLayer type="column" columnID="cde0ad6a3316602a2"/>
+						<saw:edgeLayer type="column" columnID="cf32d268c8b87a21f"/>
+						<saw:edgeLayer type="column" columnID="cfffcb5950a78a5f9"/>
+						<saw:edgeLayer type="column" columnID="cbb02e86236201669"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view>
+		<saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:narrative><saw:caption fmt="html"><saw:text>&lt;p align=&quot;left&quot;&gt;&lt;font size=2&gt;Customer :&lt;b&gt; &lt;u&gt;@{cf9340a1fa9b4eeb8}&lt;/u&gt;&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; align=&quot;left&quot;&gt;
+  &lt;tr&gt;
+    &lt;td width=&quot;90&quot;&gt;Months Contact :&lt;/td&gt;&lt;td width=&quot;40&quot;&gt;&lt;strong&gt;@{cb46513a4a9463cb9}&lt;/strong&gt;&lt;/td&gt;
+    &lt;td width=&quot;85&quot; align=&quot;right&quot;&gt;Marital Status :&lt;/td&gt;&lt;td width=&quot;50&quot;&gt;&lt;strong&gt;@{c3fe55db4328c9a6f}&lt;/strong&gt;&lt;/td&gt;
+    &lt;td width=&quot;75&quot; align=&quot;right&quot;&gt;Credit Rate : &lt;/td&gt;&lt;td width=&quot;50&quot;&gt;&lt;strong&gt;@{c6f5481d96e3e77fd}&lt;/strong&gt;&lt;/td&gt; 
+    &lt;td width=&quot;30&quot; align=&quot;right&quot;&gt;Age : &lt;/td&gt;&lt;td width=&quot;40&quot;&gt;&lt;strong&gt;@{cde90151b95cbb4b1}&lt;/strong&gt;&lt;/td&gt; 
+&lt;/tr&gt;&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/br&gt;
+&lt;table border=&quot;2&quot; cellspacing=&quot;3&quot; bordercolor=&quot;#808080&quot; cellpadding=&quot;3&quot; align=&quot;left&quot;&gt;
+  &lt;tr&gt;
+    &lt;td width=&quot;80&quot; align=&quot;left&quot;&gt;Current LTV Prediction&lt;/td&gt;
+    &lt;td width=&quot;80&quot; align=&quot;left&quot;&gt;&lt;font color=&quot;#800000&quot;&gt;What If Prediction&lt;font/&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td width=&quot;80&quot; align=&quot;left&quot;&gt;&lt;b&gt;@{c4ea4ce15898178db}&lt;/b&gt;&lt;/td&gt;
+    &lt;td width=&quot;80&quot; align=&quot;left&quot;&gt;&lt;font color=&quot;#800000&quot; &gt;&lt;b&gt;@{cdb4f524fc8dbcd12}&lt;b/&gt;&lt;font/&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+    &lt;td width=&quot;220&quot; align=&quot;left&quot;&gt;&lt;font  size=&quot;1&quot;&gt;&lt;b&gt;@{cde0ad6a3316602a2} &lt;/b&gt;- &lt;/br&gt; @{cf32d268c8b87a21f} &lt;font/&gt;&lt;/td&gt;
+    &lt;td width=&quot;220&quot; align=&quot;left&quot;&gt;&lt;font size=&quot;1&quot; color=&quot;#800000&quot;&gt;&lt;b&gt;@{cfffcb5950a78a5f9} &lt;/b&gt;- &lt;/br&gt; @{cbb02e86236201669}&lt;font/&gt;&lt;/td&gt;
+ &lt;/tr&gt;&lt;/tbody&gt;
+&lt;/table&gt;&lt;/table&gt;&lt;/br&gt;</saw:text></saw:caption></saw:narrative><saw:rowSep><saw:caption fmt="html"><saw:text>&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;</saw:text></saw:caption></saw:rowSep></saw:view></saw:views></saw:report>

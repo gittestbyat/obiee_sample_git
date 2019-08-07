@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BISAMPLE">
+   <description>
+      <![CDATA[Data%20Source%20Type:%20BISAMPLE%20database%20schema%20--Structure:%20Hierarchical%20master-detail%20data%20set%20--Features:%20Parameter,%20LOV,%20Burstings]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="true"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Customer" type="complex">
+         <sql dataSourceRef="BISAMPLE">
+            <![CDATA[select	 "SAMP_CUSTOMERS_D"."NAME" as "NAME",
+	 "SAMP_ADDRESSES_D"."ESTAB_NAME" as "ESTAB_NAME",
+	 "SAMP_ADDRESSES_D"."ADDRESS1" as "ADDRESS1",
+	 "SAMP_ADDRESSES_D"."ADDRESS2" as "ADDRESS2",
+	 "SAMP_ADDRESSES_D"."CITY" as "CITY",
+	 "SAMP_ADDRESSES_D"."STATE_PROVINCE_ABBRV" as "STATE_PROVINCE_ABBRV",
+	 "SAMP_ADDRESSES_D"."POSTAL_CODE" as "POSTAL_CODE",
+	 "SAMP_ADDRESSES_D"."COUNTRY_NAME" as "COUNTRY_NAME",
+	 "SAMP_CUSTOMERS_D"."CUST_KEY" as "CUST_KEY",
+	 "SAMP_ADDRESSES_D"."STATE_PROVINCE" as "STATE_PROVINCE",
+	 "SAMP_ADDRESSES_D"."REGION" as "REGION" 
+ from	"BISAMPLE"."SAMP_ADDRESSES_D" "SAMP_ADDRESSES_D",
+	"BISAMPLE"."SAMP_CUSTOMERS_D" "SAMP_CUSTOMERS_D" 
+ where   "SAMP_CUSTOMERS_D"."ADDRESS_KEY"="SAMP_ADDRESSES_D"."ADDRESS_KEY"
+  and 	 "SAMP_CUSTOMERS_D"."NAME" IN (:P_NAME)
+order by "SAMP_CUSTOMERS_D"."NAME" ASC]]>
+         </sql>
+      </dataSet>
+      <dataSet name="Orders" type="complex">
+         <sql dataSourceRef="BISAMPLE">
+            <![CDATA[select	 "SAMP_REVENUE_F"."CUST_KEY" as "CUST_KEY",
+	 "SAMP_REVENUE_F"."ORDER_NUMBER" as "ORDER_NUMBER",
+	 "SAMP_PRODUCTS_D"."BRAND" as "BRAND",
+	 "SAMP_PRODUCTS_D"."PROD_DSC" as "PROD_DSC",
+	 "SAMP_REVENUE_F"."UNITS" as "UNITS",
+	 "SAMP_REVENUE_F"."REVENUE" as "REVENUE",
+	 "SAMP_REVENUE_F"."ORDER_DAY_DT" as "ORDER_DAY_DT",
+	 "SAMP_REVENUE_F"."BILL_DAY_DT" as "BILL_DAY_DT",
+	 "SAMP_REVENUE_F"."PAID_DAY_DT" as "PAID_DAY_DT",
+	 "SAMP_REVENUE_F"."ORDER_STATUS" as "ORDER_STATUS",
+	 "SAMP_REVENUE_F"."CURRENCY" as "CURRENCY" 
+ from	"BISAMPLE"."SAMP_PRODUCTS_D" "SAMP_PRODUCTS_D",
+	"BISAMPLE"."SAMP_REVENUE_F" "SAMP_REVENUE_F" 
+ where   "SAMP_PRODUCTS_D"."PROD_KEY"="SAMP_REVENUE_F"."PROD_KEY"]]>
+         </sql>
+      </dataSet>
+      <link name="link" parentGroup="G_1" parentColumn="CUST_KEY" childQuery="Orders" childColumn="&quot;SAMP_REVENUE_F&quot;.&quot;CUST_KEY&quot;" childColumnAlias="CUST_KEY"/>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="G_1" source="Customer" label="CUSTOMERS">
+    <element name="BUYER" value="NAME" dataType="xsd:string" label="Buyer Name" breakOrder="None" fieldOrder="1"/>
+    <element name="CUST_CO" value="ESTAB_NAME" dataType="xsd:string" label="Company Name" breakOrder="None" fieldOrder="2"/>
+    <element name="HOS_NUM" value="ADDRESS1" dataType="xsd:string" label="House Number" breakOrder="None" fieldOrder="3"/>
+    <element name="STREET" value="ADDRESS2" dataType="xsd:string" label="Street" breakOrder="None" fieldOrder="4"/>
+    <element name="CITY" value="CITY" dataType="xsd:string" label="City" breakOrder="None" fieldOrder="5"/>
+    <element name="STATE" value="STATE_PROVINCE_ABBRV" dataType="xsd:string" label="State" breakOrder="None" fieldOrder="6"/>
+    <element name="ZIP" value="POSTAL_CODE" dataType="xsd:string" label="ZIP" breakOrder="None" fieldOrder="7"/>
+    <element name="COUNTRY" value="COUNTRY_NAME" dataType="xsd:string" label="Country" breakOrder="None" fieldOrder="8"/>
+    <element name="STATE_PROVINCE" value="STATE_PROVINCE" dataType="xsd:string" label="STATE_PROVINCE" breakOrder="None" fieldOrder="10"/>
+    <element name="CUST_KEY" value="CUST_KEY" dataType="xsd:integer" label="CUST_KEY" breakOrder="None" fieldOrder="9"/>
+    <element name="REGION" value="REGION" dataType="xsd:string" label="REGION" breakOrder="None" fieldOrder="11"/>
+    <group name="G_2" source="Orders" label="ORDERS">
+      <element name="BRAND" value="BRAND" dataType="xsd:string" label="Brand" breakOrder="ascending" fieldOrder="3"/>
+      <element name="ORDER_NUMBER" value="ORDER_NUMBER" dataType="xsd:integer" label="Order Num" breakOrder="None" fieldOrder="2"/>
+      <element name="PROD_DSC" value="PROD_DSC" dataType="xsd:string" label="Product" breakOrder="None" fieldOrder="4"/>
+      <element name="UNITS" value="UNITS" dataType="xsd:integer" label="Units" breakOrder="None" fieldOrder="5"/>
+      <element name="Amt_Charged" value="REVENUE" dataType="xsd:integer" label="Amt Charged" breakOrder="None" fieldOrder="6"/>
+      <element name="ORDER_DAY_DT" value="ORDER_DAY_DT" dataType="xsd:date" label="Order Date" breakOrder="None" fieldOrder="7"/>
+      <element name="BILL_DAY_DT" value="BILL_DAY_DT" dataType="xsd:date" label="Bill Date" breakOrder="None" fieldOrder="8"/>
+      <element name="PAID_DAY_DT" value="PAID_DAY_DT" dataType="xsd:date" label="Paid Date" breakOrder="None" fieldOrder="9"/>
+      <element name="ORDER_STATUS" value="ORDER_STATUS" dataType="xsd:string" label="Order Status" breakOrder="None" fieldOrder="10"/>
+      <element name="CURRENCY" value="CURRENCY" dataType="xsd:string" label="Currency" breakOrder="None" fieldOrder="11"/>
+      <element name="CUST_KEY_1" value="CUST_KEY" dataType="xsd:integer" label="CUST_KEY" breakOrder="None" fieldOrder="1"/>
+    </group>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets>
+      <valueSet id="NAMES_LOV">
+         <sql dataSourceRef="BISAMPLE">
+            <![CDATA[select	DISTINCT  "SAMP_CUSTOMERS_D"."NAME" as "NAME" 
+ from	"BISAMPLE"."SAMP_CUSTOMERS_D" "SAMP_CUSTOMERS_D" WHERE ROWNUM < 6
+order by NAME]]>
+         </sql>
+      </valueSet>
+   </valueSets>
+   <parameters>
+      <parameter name="P_NAME" defaultValue="*" dataType="xsd:string">
+         <select label="Customer Name " valueSet="NAMES_LOV" multiple="false" all="true" allValue="lov"/>
+      </parameter>
+   </parameters>
+   <bursting>
+      <burst name="Burst2Email" enabled="true">
+         <property name="BURSTING_NODE" value="/DATA_DS/G_1/BUYER"/>
+         <property name="DELIVERY_KEY" value="/DATA_DS/G_1/BUYER"/>
+         <dataSet>
+            <sql>
+               <![CDATA[select "SAMP_CUSTOMERS_D"."NAME" as "KEY", 
+'Orders Letter' TEMPLATE, 
+'XPT' TEMPLATE_FORMAT, 
+'en-US' LOCALE, 
+'PDF' OUTPUT_FORMAT, 
+"SAMP_CUSTOMERS_D"."NAME"||'_'||'Orders List' OUTPUT_NAME,
+'EMAIL' DEL_CHANNEL, 
+'to@nowhere.com' PARAMETER1, 
+'cc@nowhere.com' PARAMETER2, 
+'from@nowhere.com' PARAMETER3, 
+'SUBJECT:BI Publisher Enterprise Bursting Report' PARAMETER4, 
+'BODY: Email Body' PARAMETER5, 
+'true' PARAMETER6, 
+'reply-to@nowhere.com' PARAMETER7 
+from	"BISAMPLE"."SAMP_CUSTOMERS_D" "SAMP_CUSTOMERS_D"]]>
+            </sql>
+         </dataSet>
+      </burst>
+      <burst name="Burst2File" enabled="true">
+         <property name="BURSTING_NODE" value="/DATA_DS/G_1/BUYER"/>
+         <property name="DELIVERY_KEY" value="/DATA_DS/G_1/BUYER"/>
+         <dataSet>
+            <sql>
+               <![CDATA[select 
+     select "SAMP_CUSTOMERS_D"."NAME" as "KEY", 
+     'Orders Letter' TEMPLATE, 
+     'XPT' TEMPLATE_FORMAT, 
+     'en-US' LOCALE, 
+     'PDF' OUTPUT_FORMAT, 
+     "SAMP_CUSTOMERS_D"."NAME"||'_'||'Orders List' OUTPUT_NAME,
+     'FILE' DEL_CHANNEL,
+     'C:\TEMP' PARAMETER1
+from 
+    "BISAMPLE"."SAMP_CUSTOMERS_D" "SAMP_CUSTOMERS_D"]]>
+            </sql>
+         </dataSet>
+      </burst>
+   </bursting>
+   <display>
+<layouts><layout name="DATA_DS" left="39px" top="25px"/><layout name="Orders" left="370px" top="207px"/><layout name="Customer" left="38px" top="90px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+<groupLink name="link_1" parentGroup="G_1" childGroup="G_2"/>
+</groupLinks>
+</display>
+</dataModel>

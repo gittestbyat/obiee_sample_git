@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">   
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">      
+      <saw:columns>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c95138303ae90d080">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula>            
+            <saw:displayFormat>               
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent">                  
+                  <saw:clientEventSpec channel="ch3"/></saw:formatSpec></saw:displayFormat>            
+            <saw:columnHeading>               
+               <saw:displayFormat>                  
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading><saw:dimensionSelection><saw:selectionStep stepID="1" type="startWith" category="member"><saw:stepMembers xsi:type="saw:staticMemberGroupDef"><saw:staticMemberGroup><saw:members xsi:type="saw:specialValueMembers"><saw:value specialValue="all"/></saw:members></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep><saw:selectionStep type="add" stepID="2" category="customGroup"><saw:customGroup customGroupID="c95138303ae90d080_g1" addToAllViews="true"><saw:caption><saw:text>All Values</saw:text></saw:caption><saw:selectionStep type="add" stepID="3" category="member"><saw:stepMembers xsi:type="saw:staticMemberGroupDef"><saw:staticMemberGroup><saw:members xsi:type="saw:stringMembers"><saw:value>2006</saw:value><saw:value>2007</saw:value><saw:value>2008</saw:value><saw:value>2009</saw:value><saw:value>2010</saw:value><saw:value>2011</saw:value><saw:value>2012</saw:value><saw:value>2013</saw:value></saw:members></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep></saw:customGroup></saw:selectionStep></saw:dimensionSelection></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c5677d30bc6c089fd">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></saw:columnFormula></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="cfd54f1fcda8f83dc">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c687f542ca867b687"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent"><saw:clientEventSpec channel="ch3"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns></saw:criteria>   
+   <saw:views currentView="0">      
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">         
+         <saw:cvTable><saw:cvRow><saw:cvCell colSpan="2" viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!1"/><saw:cvCell viewName="tableView!1" rowSpan="2">                  
+                  <saw:displayFormat>                     
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!2"><saw:displayFormat><saw:formatSpec hAlign="center"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>      
+            
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">         
+         <saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true">               
+               <saw:displayGrandTotals><saw:displayGrandTotal id="gt_row" grandTotalPosition="after"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text>All Values</saw:text></saw:caption></saw:memberFormat></saw:displayGrandTotal></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="c95138303ae90d080"><saw:levels><saw:level><saw:displaySubTotal id="st_c95138303ae90d080" subTotalPosition="none"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text>All Values</saw:text></saw:caption></saw:memberFormat></saw:displaySubTotal></saw:level></saw:levels></saw:edgeLayer><saw:edgeLayer type="column" columnID="c687f542ca867b687"/><saw:edgeLayer type="column" columnID="cfd54f1fcda8f83dc"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>      
+      <saw:view xsi:type="saw:tableView" name="tableView!2" scrollingEnabled="true" clientEventChannels="ch3" clientEventEnabled="true">         
+         
+         <saw:pageEdgeState><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c95138303ae90d080"/></saw:groupType><saw:members xsi:type="saw:stringMembers"><saw:value>2015</saw:value></saw:members></saw:staticMemberGroup><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c687f542ca867b687"/></saw:groupType><saw:members xsi:type="saw:stringMembers"><saw:value>BizTech</saw:value></saw:members></saw:staticMemberGroup></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c95138303ae90d080" groupID="0"/><saw:selectionGroup columnID="c687f542ca867b687" groupID="0"/></saw:selectionGroups></saw:pageEdgeState><saw:edges><saw:edge axis="page" showColumnHeader="true">               
+               <saw:displayGrandTotals><saw:displayGrandTotal id="gt_page" grandTotalPosition="after"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="c95138303ae90d080"/><saw:edgeLayer type="column" columnID="c687f542ca867b687"/></saw:edgeLayers></saw:edge><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true">               
+               <saw:edgeLayers><saw:edgeLayer type="column" columnID="c5677d30bc6c089fd"/><saw:edgeLayer type="column" columnID="cfd54f1fcda8f83dc"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+         <saw:staticText>
+            <saw:caption fmt="html">
+               <saw:text>&lt;script&gt;
+function sendMDEvent(){
+o=&quot;{\&quot;_m\&quot;:[{\&quot;_g\&quot;:{\&quot;%22Time%22.%22T05%20Per%20Name%20Year%22\&quot;:[\&quot;2015\&quot;]}},{\&quot;_g\&quot;: {\&quot;%22Products%22.%22P4%20%20Brand%22\&quot;: [\&quot;FunPod\&quot;]}}]}&quot;;
+var r = new obips.views.MasterDetailEvent(&quot;viewid&quot;, o);
+obips.views.ViewController.getController(r.sourceViewID).postClientEvent(&#39;ch3&#39;, r);
+}
+&lt;/script&gt;
+&lt;a href=&quot;javascript:sendMDEvent();&quot;&gt;Send Event - 2015Funpod&lt;/a&gt;</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:tableView" name="tableView!3" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c687f542ca867b687"/><saw:edgeLayer type="column" columnID="cfd54f1fcda8f83dc"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="none"/></saw:views></saw:report>

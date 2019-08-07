@@ -1,0 +1,6 @@
+<config version="1.0.0" xmlns="http://xmlns.oracle.com/oxp/config/">
+   <properties>
+      <property name="html-show-footer">false</property>
+      <property name="html-show-header">true</property>
+   <property name="xdk-secure-io-mode">true</property></properties>
+<fonts><font family="Default BC 3of9" style="normal" weight="normal"><truetype path="B39R00.TTF"/></font><font family="Code 128" style="normal" weight="normal"><truetype path="ADUOSCB.ttf" ttcno="0"/></font><font family="Aria" style="normal" weight="normal"><truetype path="ADUOSCB.ttf"/></font><font family="Default Micr MT" style="normal" weight="normal"><truetype path="ALBANWTS.ttf"/></font><font family="Default Code 128" style="normal" weight="normal"><truetype path="128R00.TTF"/></font><font family="BC 3of9" style="normal" weight="normal"><truetype path="B39R00.TTF"/></font><font family="times new roman" style="normal" weight="normal"><truetype path="ADUOSCB.ttf" ttcno="3"/></font><font family="Default UPC-EAN" style="normal" weight="normal"><truetype path="UPCR00.TTF"/></font><font-substitute name="Tohama"><type1 name="FONT_COURIER"/></font-substitute><font-substitute name="Times"><truetype path="ADUOSCB.ttf"/></font-substitute></fonts></config>

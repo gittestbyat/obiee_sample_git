@@ -1,0 +1,903 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<DATA_DS>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>OVERVIEW</REPORT_CATEGORY>
+<REPORT_NAME>Balance Letter Report</REPORT_NAME>
+<DESCRIPTION>This report lists the outstanding balances for a customer grouped by Currency. The report demontrates the use of BI Publisher Template (XPT) and RTF Template for the same layout. The third layout demonstrates the use of Style Template to apply Styles to multiple layouts using a single Style Template.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/1. Overview</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/1.+Overview/Balance+Letter+Report.xdo</REPORT_URL>
+<DATA_MODEL>Balance Letter Data Model</DATA_MODEL>
+<LAYOUT_NAMES>Publisher Layout, Word Template, Corp Styles</LAYOUT_NAMES>
+<LAYOUT_TYPE>XPT, RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Multiple Layout Templates, Style Template</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>OVERVIEW</REPORT_CATEGORY>
+<REPORT_NAME>Product Analysis - OLAP Report</REPORT_NAME>
+<DESCRIPTION>This report demonstrates how to present OLAP data using graphical, tabular or cross-tabular displays.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/1. Overview</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/1.+Overview/Product+Analysis+-+OLAP+Report.xdo</REPORT_URL>
+<DATA_MODEL>"XML - OLAP Report Data Model" (Source: XML data file) or "OLAP Report Data Model" (Requires live connection to Essbase with Sample.Basic cube loaded)</DATA_MODEL>
+<LAYOUT_NAMES>Default, Results By Product, Monthly Results By Product, Results By Market, Product Sales - Crossabs</LAYOUT_NAMES>
+<LAYOUT_TYPE>XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Multi-Dimensional Data, Crosstab</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>OVERVIEW</REPORT_CATEGORY>
+<REPORT_NAME>Revenue Budget Actual and Detail</REPORT_NAME>
+<DESCRIPTION>This report shows Revenue Budget Actuals and Details using interactive chart, table and Pivot Table. Second Layout shows Revenue Details by Brand.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/1. Overview</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/1.+Overview/Revenue+Budget+Actual+and+Detail.xdo</REPORT_URL>
+<DATA_MODEL>Rev Budg Actual and Details XML DM</DATA_MODEL>
+<LAYOUT_NAMES>Budget Actual and Details, Detail Table</LAYOUT_NAMES>
+<LAYOUT_TYPE>XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Configure Events to create Interactivity across components</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>OVERVIEW</REPORT_CATEGORY>
+<REPORT_NAME>Salary Report - No Parameters</REPORT_NAME>
+<DESCRIPTION>An Employee Salary Report covering a variety of layout - Simple, Advanced Page Totals, Batch Manager Salary, W-2 2010 (Partial), Manager Summary. This report uses XML as data source and the data model has no parameters.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/1. Overview</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/1.+Overview/Salary+Report+-+No+Parameters.xdo</REPORT_URL>
+<DATA_MODEL>Salary Report Data Model</DATA_MODEL>
+<LAYOUT_NAMES>Simple, Advanced Page Totals, Batch Manager Salary, W-2 2010 (Partial), Manager Summary</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF, PDF, XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Multiple Layout Templates, Style Template</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>OVERVIEW</REPORT_CATEGORY>
+<REPORT_NAME>Salary Report</REPORT_NAME>
+<DESCRIPTION>An Employee Salary Report covering a variety of layout - Simple, Advanced Page Totals, Batch Manager Salary, W-2 2010 (Partial), Manager Summary. This report uses JDBC Connection to database and includes parameters.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/1. Overview</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/1.+Overview/Salary+Report.xdo</REPORT_URL>
+<DATA_MODEL>Salary Parameter Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Simple, Advanced Page Totals, Batch Manager Salary, W-2 2010 (Partial), Manager Summary</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF, PDF, XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Multiple Layout Templates, Style Template</KEY_FEATURE>
+<PARAMETERS>Cascading</PARAMETERS>
+<LOV>SQL based Menu</LOV>
+<BURSTING_ENABLED>Yes</BURSTING_ENABLED>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>OVERVIEW</REPORT_CATEGORY>
+<REPORT_NAME>SFO Passenger Count Report</REPORT_NAME>
+<DESCRIPTION>This report uses SFO Airport Passenger records to showcase Analysis of the data using Filter lists.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/1. Overview</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/1.+Overview/SFO+Passenger+Count+Report.xdo</REPORT_URL>
+<DATA_MODEL>SFO Passenger Count Data Model</DATA_MODEL>
+<LAYOUT_NAMES>Introduction, Insight, Detail, Trend, Pivot Table</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF, XPT</LAYOUT_TYPE>
+<KEY_FEATURE/>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>OVERVIEW</REPORT_CATEGORY>
+<REPORT_NAME>W2 2010</REPORT_NAME>
+<DESCRIPTION>This report demonstrates the use of PDF Forms downloaded from Govt. Website that can be used as a Template in BI Publisher to generate reports.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/1. Overview</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/1.+Overview/W2+2010.xdo</REPORT_URL>
+<DATA_MODEL>W2 Data Model</DATA_MODEL>
+<LAYOUT_NAMES>W2 2010</LAYOUT_NAMES>
+<LAYOUT_TYPE>PDF</LAYOUT_TYPE>
+<KEY_FEATURE>W2 PDF Form used as a Layout Template.</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Invoice Batch Report</REPORT_NAME>
+<DESCRIPTION>This is an invoice with fixed rows of line items in each page and  Barcode to display transaction ID.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Barcodes</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Barcodes/Invoice+Batch+Report.xdo</REPORT_URL>
+<DATA_MODEL>Invoice Batch Report Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Barcode</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Barcode</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Invoice Listing Report</REPORT_NAME>
+<DESCRIPTION>This is an Invoice Listing Report to display 'Brought Forward - Carry Forward' feature</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Brought Forward - Carry Forward</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Brought+Forward+-+Carry+Forward/Invoice+Listing+Report.xdo</REPORT_URL>
+<DATA_MODEL>BFWD-CFWD DM</DATA_MODEL>
+<LAYOUT_NAMES>BFWD-CFWD Layout</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Brought Forward - Carry Forward</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Invoice with BFWD-CFWD</REPORT_NAME>
+<DESCRIPTION>This is an Invoice that uses  the 'Brought Forward - Carry Forward' feature.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Brought Forward - Carry Forward</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Brought+Forward+-+Carry+Forward/Invoice+with+BFWD-CFWD.xdo</REPORT_URL>
+<DATA_MODEL>Invoice BFWD-CFWD DM</DATA_MODEL>
+<LAYOUT_NAMES>Invoice with BFWDCFWD</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Brought Forward - Carry Forward</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Batch Customer Orders</REPORT_NAME>
+<DESCRIPTION>This report demonstrates how to Burst and deliver Customer Orders to each customer.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Bursting</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Bursting/Batch+Customer+Orders.xdo</REPORT_URL>
+<DATA_MODEL>Bursting Data Model</DATA_MODEL>
+<LAYOUT_NAMES>Customer Orders</LAYOUT_NAMES>
+<LAYOUT_TYPE>XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Bursting, Optional Cascading Parameters, Drillable Charts</KEY_FEATURE>
+<PARAMETERS>Cascading</PARAMETERS>
+<LOV/>
+<BURSTING_ENABLED>Yes</BURSTING_ENABLED>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Cascading Optional Parameters</REPORT_NAME>
+<DESCRIPTION>This report demonstrates the use of Cascading Parameters that appears as drop down menu. These parameters are Optional Parameters with Default set to All. </DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Cascading Parameters</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Cascading+Parameters/Cacading+Optional+Parameters.xdo</REPORT_URL>
+<DATA_MODEL>Cascading Parameters DM - OE</DATA_MODEL>
+<LAYOUT_NAMES>Customer Orders</LAYOUT_NAMES>
+<LAYOUT_TYPE>XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Cascading Parameters</KEY_FEATURE>
+<PARAMETERS>Cascading</PARAMETERS>
+<LOV>SQL based Menu</LOV>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Insurance Sales Report with Complex Layout</REPORT_NAME>
+<DESCRIPTION>This report showcases a layout which require multiple rules to be applied on the data using XPATH. The report provides details of Premium income by country showing monthly and cumulative figures for Actual and Budget data. Also it includes charts to show the monthly and cumulative figures for each country. </DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Complex Layout using XPATH</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Complex+Layout+using+XPATH/Insurance+Sales+Report+with+Complex+Layout.xdo</REPORT_URL>
+<DATA_MODEL>Insurance Sales DM</DATA_MODEL>
+<LAYOUT_NAMES>Sales Layout</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Use of XPATH to apply various conditions on data.</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Conditional Formatting Report</REPORT_NAME>
+<DESCRIPTION>This report demostrates the use of conditional formatting - conditionally highlighting cell, row, text. Also conditionally we can display or hide rows.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Conditional Formatting</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Conditional+Formatting/Conditional+Formatting+Report.xdo</REPORT_URL>
+<DATA_MODEL>Conditional Formatting DM</DATA_MODEL>
+<LAYOUT_NAMES>Conditional Layout, Interactive Conditional Layout, Interactive Layout II, Interactive Layout III</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF, XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Conditional Formatting in RTF and XPT Layout.</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>CrossTab Report</REPORT_NAME>
+<DESCRIPTION>Example of cross tab reports created by using Pivot Table Wizard or by using Dynamic Column feature.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Crosstab</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Crosstab+Report/CrossTab+Report.xdo</REPORT_URL>
+<DATA_MODEL>Crosstab DM</DATA_MODEL>
+<LAYOUT_NAMES>Cross Tab - Outline, Cross Tab - Inline, Cross Tab - I, Cross Tab - II, Cross Tab - Complex</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Crosstab</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Complex Crosstab</REPORT_NAME>
+<DESCRIPTION>This report is a combination of Pivot Table and fixed column Table. First few columns are static, next few columns are conditionally displayed columns. Next a Pivot of fixed 8 column table is created for as many products in the data. Also this report displays the Total Currency Amount in words at the bottom of the table in Chinese.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Crosstab</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Crosstab+Report/Complex+Crosstab.xdo</REPORT_URL>
+<DATA_MODEL>Crosstab DM</DATA_MODEL>
+<LAYOUT_NAMES>Cross Tab - Outline, Cross Tab - Inline, Cross Tab - I, Cross Tab - II, Cross Tab - Complex</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Crosstab with Calculations</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Railway Exam Detention Report</REPORT_NAME>
+<DESCRIPTION>This is a cross tab with calculations that shows the detention time for examination for Railway Coaches, data grouped by Division and by Station</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Crosstab</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Crosstab+Report/Railway+Exam+Detention+Report.xdo</REPORT_URL>
+<DATA_MODEL>Crosstab DM</DATA_MODEL>
+<LAYOUT_NAMES>Cross Tab - Outline, Cross Tab - Inline, Cross Tab - I, Cross Tab - II, Cross Tab - Complex</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Crosstab with Calculations</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Balanced Sheet Wide Report</REPORT_NAME>
+<DESCRIPTION>This report shows the use of Dynamic Columns to create a Wide Balance Sheet</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Dynamic Column</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Dynamic+Column/Balance+Sheet+Wide+Report.xdo</REPORT_URL>
+<DATA_MODEL>BalanceSheetWide DM</DATA_MODEL>
+<LAYOUT_NAMES>Balance Sheet</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Dynamic Column</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Training Attendance Report</REPORT_NAME>
+<DESCRIPTION>This is a Training Enrollment Signature Sheet. This report uses a fixed number of lines per page and dynamically creates columns based on the number of days of training.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Dynamic Column</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Dynamic+Column/Training+Attendance+Report.xdo</REPORT_URL>
+<DATA_MODEL>Dynamic DM</DATA_MODEL>
+<LAYOUT_NAMES>Dynamic Column Layout</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Dynamic Column</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Interactive Reporting - Dynamic Grouping</REPORT_NAME>
+<DESCRIPTION>This report demonstrates how data can be grouped dynamically based on the grouping criteria selected.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Dynamic Grouping</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Dynamic+Grouping/Interactive+Reporting+-+Dynamic+Grouping.xdo</REPORT_URL>
+<DATA_MODEL>Dynamic Grouping Report DM</DATA_MODEL>
+<LAYOUT_NAMES>Customer Orders -1, Customer Orders -2</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Dynamic Grouping</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>eText Anybank</REPORT_NAME>
+<DESCRIPTION>Sample Delimiter Based eText output</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/eText</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/eText/eText+Anybank.xdo</REPORT_URL>
+<DATA_MODEL>eText Anybank DM</DATA_MODEL>
+<LAYOUT_NAMES>DelimiterBasedLayout</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>eText - EDI Document Output</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>eText Payments - Fixed Postion Based</REPORT_NAME>
+<DESCRIPTION>Sample Fixed Position based output for EFT transaction</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/eText</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/eText/eText+Payments+-+Fixed+Postion+Based.xdo</REPORT_URL>
+<DATA_MODEL>eText Payments DM</DATA_MODEL>
+<LAYOUT_NAMES>Payments eText Layout, Layout 2, Layout 3</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>eText - EFT Document Output</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>eText Report - Emp Detail</REPORT_NAME>
+<DESCRIPTION>A simple delimiter based eText report</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/eText</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/eText/eText+Report+-+Emp+Detail.xdo</REPORT_URL>
+<DATA_MODEL>eText Emp Details DM</DATA_MODEL>
+<LAYOUT_NAMES>EMP DATA</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>eText - EDI Document Output</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>eText Simple - DelimiterBased</REPORT_NAME>
+<DESCRIPTION>A delimiter based output for EDI transactions</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/eText</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/eText/eText+Simple+-+DelimiterBased.xdo</REPORT_URL>
+<DATA_MODEL>eText DelimiterBased DM</DATA_MODEL>
+<LAYOUT_NAMES>SimpleLayout</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>eText - EDI Document Output</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Group By Intervals Sales Report</REPORT_NAME>
+<DESCRIPTION>This report demonstrates how data can be grouped into different intervals of Sales Amount.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Group By Intervals</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Group+By+Intervals/Group+By+Intervals+Sales+Report.xdo</REPORT_URL>
+<DATA_MODEL>Group By Intervals Sales DM</DATA_MODEL>
+<LAYOUT_NAMES>Group By Intervals Layout</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Group By Intervals</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Interactive Sorting</REPORT_NAME>
+<DESCRIPTION>This report allows sorting based on user selected criteria.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Interactive Sorting</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Interactive+Sorting/Interactive+Sorting.xdo</REPORT_URL>
+<DATA_MODEL>Interactive Sort DM</DATA_MODEL>
+<LAYOUT_NAMES>Sort Layout in RTF</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Interactive Sort</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Sort on Interactive View</REPORT_NAME>
+<DESCRIPTION>This report demonstrates the Interactive Viewer capability that allows user to select column for sorting in ascending or descending order.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Interactive Sorting</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Interactive+Sorting/Sort+on+Interactive+View+.xdo</REPORT_URL>
+<DATA_MODEL>Interactive Sort DM</DATA_MODEL>
+<LAYOUT_NAMES>Interactive Sort Layout</LAYOUT_NAMES>
+<LAYOUT_TYPE>XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Interactive Sort</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Last Page Handling</REPORT_NAME>
+<DESCRIPTION>Often printing of report have different last page printing requirement. Sometimes a content has to be pushed to the very last page. When creating a book, the printing has to end on even page. Therefore, we can either print a blank even page or we can print the even page with layout.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Last Page Handling</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Last+Page+Handling/Last+Page+Handling.xdo</REPORT_URL>
+<DATA_MODEL>Last Page DM</DATA_MODEL>
+<LAYOUT_NAMES>Different First Page Header, End on Odd Page, End on Odd Blank, End on Even W Layout, End on Even Blank</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Last Page Handling, End on Even Page, End on Even Page with Layout</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Customer Orders - Master Detail Report</REPORT_NAME>
+<DESCRIPTION>This report demonstrates how a Master Detail report can be created using XPT Layout.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Master Detail Report</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Master+Detail+Report/Customer+Orders+-+Master+Detail+Report.xdo</REPORT_URL>
+<DATA_MODEL>Master Detail Report DM</DATA_MODEL>
+<LAYOUT_NAMES>Orders Summary, Order Details, Orders by Channel</LAYOUT_NAMES>
+<LAYOUT_TYPE>XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Master Detail Report</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>OLAP Report - Actual Vs Budget</REPORT_NAME>
+<DESCRIPTION>This report generates a Financial Report to display Actual Vs Budget data with Hyperion as OLAP data source.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/OLAP Reports</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/OLAP+Reports/OLAP+Report+-+Actual+vs+Budget.xdo</REPORT_URL>
+<DATA_MODEL>XML - Olap Report - Actual vs Budget DM</DATA_MODEL>
+<LAYOUT_NAMES>Actual Vs Budget -1, Actual Vs Budget -2, Actual Vs Budget -3</LAYOUT_NAMES>
+<LAYOUT_TYPE>XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Multi-Dimensional Data</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>OLAP Report - RTF Layouts</REPORT_NAME>
+<DESCRIPTION>This report allows you to select different measures such as Sales, Profit, Margin, etc. to show results by Quarter.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/OLAP Reports</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/OLAP+Reports/OLAP+Report+-+RTF+Layouts.xdo</REPORT_URL>
+<DATA_MODEL>XML - Olap Report RTF Data Model</DATA_MODEL>
+<LAYOUT_NAMES>RTF Template4b, RTF Template 3, RTF Template5b</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Multi-Dimensional Data</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>OLAP Report - Crosstabs</REPORT_NAME>
+<DESCRIPTION>Crosstab report using OLAP data.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/OLAP Reports</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/OLAP+Reports/OLAP+Report+-+Crosstabs.xdo</REPORT_URL>
+<DATA_MODEL>XML - OLAP Crosstab Report DM</DATA_MODEL>
+<LAYOUT_NAMES>Default, Crosstab-1, Crosstab-2, Crosstab-3, Crosstab-4, Crosstab-5</LAYOUT_NAMES>
+<LAYOUT_TYPE>XPT</LAYOUT_TYPE>
+<KEY_FEATURE>Multi-Dimensional Data, Crosstab</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Balance Letter Report with OMR</REPORT_NAME>
+<DESCRIPTION>This report shows the use of MS Word Line Shape in the Header/Footer Section to generate guiding lines as optical mark to allow devices that can recognize the Optical Mark to fold the document at those marks.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Optical Mark Recognition</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Optical+Mark+Recognition/Balance+Letter+Report+with+OMR.xdo</REPORT_URL>
+<DATA_MODEL>Balance Letter Data Model</DATA_MODEL>
+<LAYOUT_NAMES>Layout with OMR</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Optical Mark Recognition</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Statement of Account Report</REPORT_NAME>
+<DESCRIPTION>This report shows the use of Keyboard '|' character arranged in a sequence with varying gaps that works as an optical mark.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Optical Mark Recognition</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Optical+Mark+Recognition/Statement+of+Account+Report.xdo</REPORT_URL>
+<DATA_MODEL>StatementOfAccount DM</DATA_MODEL>
+<LAYOUT_NAMES>Statement of Account Report</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Optical Mark Recognition</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>W2 Report for Reusable Static Content</REPORT_NAME>
+<DESCRIPTION>The static content in a report can be made as reusable static content, which will store the content in one place in a PDF output file but can be displayed multiple times.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/PDF Optimization</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/PDF+Optimization/W2+Report+for+Reusable+Static+Content.xdo</REPORT_URL>
+<DATA_MODEL>W2 DM</DATA_MODEL>
+<LAYOUT_NAMES>W2 Form with RSC, W2 Form without RSC</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>PDF Optimization, Reusable Static Content</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>W2 Report for Zipped Output</REPORT_NAME>
+<DESCRIPTION>This report will generate zipped output; the reports will be split, archived in a zip file and can be viewed using an HTML page that provides an index for the records in the PDF.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/05. Published Reporting/PDF Optimization</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/PDF+Optimization/W2+Report+for+Zipped+Output.xdo</REPORT_URL>
+<DATA_MODEL>W2 DM</DATA_MODEL>
+<LAYOUT_NAMES>W2 Form</LAYOUT_NAMES>
+<LAYOUT_TYPE>PDF</LAYOUT_TYPE>
+<KEY_FEATURE>PDF Optimization, Zipped Output Format</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Report Using RTF Sub Template</REPORT_NAME>
+<DESCRIPTION>This report uses Sub Template to separate Header and Footer from the report body. Several reports can use the same report Header and Footer and any change in future will require only the Sub Template to be changed.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/RTF SubTemplate</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/RTF+SubTemplate/Report+Using+RTF+Sub+Template.xdo</REPORT_URL>
+<DATA_MODEL>Sales DM</DATA_MODEL>
+<LAYOUT_NAMES>RTF - Annual Sales</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>RTF Sub Template</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Report with Localized Sub Template</REPORT_NAME>
+<DESCRIPTION>This report uses a Sub Template to manage locale based header and footer.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/RTF SubTemplate</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/RTF+SubTemplate/Report+with+Localized+Sub+Template.xdo</REPORT_URL>
+<DATA_MODEL>Sales DM</DATA_MODEL>
+<LAYOUT_NAMES>RTF - Sales Support</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>RTF Localized Sub Template</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Top 5 and Rest Format Report</REPORT_NAME>
+<DESCRIPTION>This report uses XSL Sub Template to process the data into “Top N and Rest” format before rendering the Chart</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Top N Report</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Top+N+Report/Top+5+and+Rest+Format+Report.xdo</REPORT_URL>
+<DATA_MODEL>XSL Chart DM</DATA_MODEL>
+<LAYOUT_NAMES>RTF Layout using XSL ST</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>XSL Sub Template, Top N Charts and Tables</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Retail Text Output Report</REPORT_NAME>
+<DESCRIPTION>This report generates Text Output using XSL Template. Text output reports are used for high volume print reports in Retail Segment. The report formats data into columns, wraps columns to next line,  provides page breaks and page numbering.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/XSL Template</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/XSL+Template/Retail+Text+Output+Report.xdo</REPORT_URL>
+<DATA_MODEL>Retail DM</DATA_MODEL>
+<LAYOUT_NAMES>Lightweight Print Layout</LAYOUT_NAMES>
+<LAYOUT_TYPE>XSL</LAYOUT_TYPE>
+<KEY_FEATURE>Text Output with Pagination</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Gantt Report</REPORT_NAME>
+<DESCRIPTION>This report uses MS Word rectangle shape to create a Gantt Chart</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Using MS Word Shapes</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Using+MS+Word+Shapes/Gantt+Report.xdo</REPORT_URL>
+<DATA_MODEL>Gantt DM</DATA_MODEL>
+<LAYOUT_NAMES>Gantt Layout</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Use of MS Word Shapes in RTF Layout</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Org Chart</REPORT_NAME>
+<DESCRIPTION>This report uses MS Word Arrow and rectangle shape to generate an Organization Chart.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Using MS Word Shapes</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Using+MS+Word+Shapes/Org+Chart.xdo</REPORT_URL>
+<DATA_MODEL>Org Chart DM</DATA_MODEL>
+<LAYOUT_NAMES>Org Chart</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Top N Ranking, XSL Sub Template</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Review Rating Report</REPORT_NAME>
+<DESCRIPTION>This report demonstrates the use of MS Word shape "5-point star" to denote ratings for Hot Albums.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Using MS Word Shapes</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Using+MS+Word+Shapes/Review+Rating+Report.xdo</REPORT_URL>
+<DATA_MODEL>Shape DM</DATA_MODEL>
+<LAYOUT_NAMES>Shapes</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Use of MS Word Shapes in RTF Layout</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FEATURES</REPORT_CATEGORY>
+<REPORT_NAME>Training Feedback Report</REPORT_NAME>
+<DESCRIPTION>This report uses MS Word Checkboxes and Wingding fonts to display training feedback.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/2. Features/Check Boxes</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/2.+Features/Check+Boxes/Training+Feedback+Report.xdo</REPORT_URL>
+<DATA_MODEL>Feedback DM</DATA_MODEL>
+<LAYOUT_NAMES>Feedback Layout</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Use of Checkbox in RTF Layout</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>EXECUTIVE</REPORT_CATEGORY>
+<REPORT_NAME>Sales Dashboard with News</REPORT_NAME>
+<DESCRIPTION>Combines data from transactional db system and HTTP (XML feed) sources. Note: This report requires additional setup by the administrator to enable proxy server if BIP server is inside a firewall.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Executive</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Executive/Sales+Dashboard+with+News.xdo</REPORT_URL>
+<DATA_MODEL>Sales Dashboard News Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Advanced Sales Dashboard</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Dashboard</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>EXECUTIVE</REPORT_CATEGORY>
+<REPORT_NAME>Quarterly Income Statement</REPORT_NAME>
+<DESCRIPTION>This report shows Quarterly Income Statement and Press Release with Quarterly Income Report.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Executive</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Executive/Quarterly+Income+Statement.xdo</REPORT_URL>
+<DATA_MODEL>Quarterly Income Statement Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Standard Template, Press Release</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE/>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FINANCIALS</REPORT_CATEGORY>
+<REPORT_NAME>Check Printing</REPORT_NAME>
+<DESCRIPTION>This report showcases the printing of Checks where the Checks are to be displayed in the Last Page of an Invoice. The Check uses MICR font to display the Check Number and Routing Number.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Financials</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Financials/Check+Printing.xdo</REPORT_URL>
+<DATA_MODEL>Check Printing Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Generic Check Format</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Check print example</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FINANCIALS</REPORT_CATEGORY>
+<REPORT_NAME>Customer Orders</REPORT_NAME>
+<DESCRIPTION>This report shows Order, Invoice and Dunning Letter layouts where Order report allows creation of Invoice and Dunning Letter for specific orders on click of a Hyperlink.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Financials</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Financials/Customer+Orders.xdo</REPORT_URL>
+<DATA_MODEL>Order Entry Data Model</DATA_MODEL>
+<LAYOUT_NAMES>Customer Invoice, Customer Dunning, Customer Orders</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Hyperlink</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>FINANCIALS</REPORT_CATEGORY>
+<REPORT_NAME>Departmental Expenses</REPORT_NAME>
+<DESCRIPTION>Departmental Expenses</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Financials</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Financials/Departmental+Expenses.xdo</REPORT_URL>
+<DATA_MODEL>Salary Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Improved Interactive HTML</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE/>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>MARKETING</REPORT_CATEGORY>
+<REPORT_NAME>Customer Profile</REPORT_NAME>
+<DESCRIPTION>This is a Customer Profile Report.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Marketing</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Marketing/Customer+Profile.xdo</REPORT_URL>
+<DATA_MODEL>Customer Profile Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Customer Profile</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Embedded images, MHTML output</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>MARKETING</REPORT_CATEGORY>
+<REPORT_NAME>Price List</REPORT_NAME>
+<DESCRIPTION>This report creates a price list for products with images where the images are stored as BLOB in database.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Marketing</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Marketing/Price+List.xdo</REPORT_URL>
+<DATA_MODEL>Price List Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Price List</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>BLOB Image display</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>HUMAN RESOURCES</REPORT_CATEGORY>
+<REPORT_NAME>Flex Salary Report</REPORT_NAME>
+<DESCRIPTION>This report uses Flex Templates to show cases interactive Flash Output.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Human Resources</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Human+Resources/Flex+Salary+Report.xdo</REPORT_URL>
+<DATA_MODEL>Salary Datamodel</DATA_MODEL>
+<LAYOUT_NAMES/>
+<LAYOUT_TYPE>SWF</LAYOUT_TYPE>
+<KEY_FEATURE>Flex Templates, Flash Outputs</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>HUMAN RESOURCES</REPORT_CATEGORY>
+<REPORT_NAME>Form P11D-UK</REPORT_NAME>
+<DESCRIPTION>P11D-UK2004</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Human Resources</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Human+Resources/Form+P11D-UK.xdo</REPORT_URL>
+<DATA_MODEL>Form P11D-UK2004</DATA_MODEL>
+<LAYOUT_NAMES>P11D</LAYOUT_NAMES>
+<LAYOUT_TYPE>PDF</LAYOUT_TYPE>
+<KEY_FEATURE/>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>HUMAN RESOURCES</REPORT_CATEGORY>
+<REPORT_NAME>Form Veterans</REPORT_NAME>
+<DESCRIPTION>This report demonstrates the use of PDF template.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Human Resources</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Human+Resources/Form+Veterans.xdo</REPORT_URL>
+<DATA_MODEL>Form Veterans 2004</DATA_MODEL>
+<LAYOUT_NAMES>VETS 2004 form</LAYOUT_NAMES>
+<LAYOUT_TYPE>PDF</LAYOUT_TYPE>
+<KEY_FEATURE/>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>SUPPLY CHAIN MANAGEMENT</REPORT_CATEGORY>
+<REPORT_NAME>Discrete Job Data Report</REPORT_NAME>
+<DESCRIPTION>This is a Discrete Job Data Report with details of Job with Line Item entries.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Supply Chain Management</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Supply+Chain+Management/Discrete+Job+Data+Report.xdo</REPORT_URL>
+<DATA_MODEL>Discrete Job Data Report Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Default Layout</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE/>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>SUPPLY CHAIN MANAGEMENT</REPORT_CATEGORY>
+<REPORT_NAME>Purchase Order</REPORT_NAME>
+<DESCRIPTION>A Standard Purchase Order.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Supply Chain Management</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Supply+Chain+Management/Purchase+Order.xdo</REPORT_URL>
+<DATA_MODEL>Purchase Order Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Standard Layout</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE/>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>SUPPLY CHAIN MANAGEMENT</REPORT_CATEGORY>
+<REPORT_NAME>Warehouse Inventory Report</REPORT_NAME>
+<DESCRIPTION>Report showing Inventory By Product and By Warehouse.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Supply Chain Management</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Supply+Chain+Management/Warehouse+Inventory+Report.xdo</REPORT_URL>
+<DATA_MODEL>Warehouse Inventory Report Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Inventory By Product, Inventory By Warehouse</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE/>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>SALES</REPORT_CATEGORY>
+<REPORT_NAME>Revenue By Region</REPORT_NAME>
+<DESCRIPTION>This report demonstrates the use of BI Publisher Template to create interactive Revenue Explorer and Financial Banded Report. Also the report has layouts created using RTF Template to display Charts and Revenue grouped by year.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Sales</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Sales/Revenue+By+Region.xdo</REPORT_URL>
+<DATA_MODEL>Revenue By Region Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Charts; Revenue grouped by Year, Region; Interactive; Financial Banded Report</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE/>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>SALES</REPORT_CATEGORY>
+<REPORT_NAME>World Sales</REPORT_NAME>
+<DESCRIPTION>This report uses MS Word Shapes to show Sales by Region on World Map.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Sales</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Sales/World+Sales.xdo</REPORT_URL>
+<DATA_MODEL>World Sales Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>World Sales</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE>Use of MS Word Shapes in RTF Layout</KEY_FEATURE>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+<G_1>
+<SOURCE>Samples</SOURCE>
+<REPORT_CATEGORY>SALES</REPORT_CATEGORY>
+<REPORT_NAME>Sales Dashboard</REPORT_NAME>
+<DESCRIPTION>This report showcases two layouts - 1. Interactive Dashboard to show Top 10 Customer, Top 10 Product Sales and Top 10 Sales by Representatives. 2. Dashboard gives a different visualization to the same data.</DESCRIPTION>
+<FOLDER__IF_ANY_>Shared Folders/Samples/3. Applications/Sales</FOLDER__IF_ANY_>
+<REPORT_URL>Samples/3.+Applications/Sales/Sales+Dashboard.xdo</REPORT_URL>
+<DATA_MODEL>Sales Dashboard News Datamodel</DATA_MODEL>
+<LAYOUT_NAMES>Advanced Sales Dashboard</LAYOUT_NAMES>
+<LAYOUT_TYPE>RTF</LAYOUT_TYPE>
+<KEY_FEATURE/>
+<PARAMETERS/>
+<LOV/>
+<BURSTING_ENABLED/>
+</G_1>
+</DATA_DS>

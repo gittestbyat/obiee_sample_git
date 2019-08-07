@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboard xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" style="" xmlVersion="200810300" links="merfd" promptsAutoComplete="userPref"><sawd:dashboardPageRef path="P&amp;L" type="catalog" hidden="false"/><sawd:dashboardPageRef path="Exp Structure" type="catalog" hidden="false"/><sawd:dashboardPageRef path="Structure Analysis" type="catalog" hidden="false"/><sawd:dashboardPageRef path="Writeback" type="catalog" hidden="false"/></sawd:dashboard>

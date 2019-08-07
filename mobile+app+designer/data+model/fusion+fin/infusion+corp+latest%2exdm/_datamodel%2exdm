@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <dataSet name="Data" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>infusion_0928.xls</file>
+            <sheetName>infusion_0928.csv</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output xmlns="http://xmlns.oracle.com/oxp/xmlp" rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="Data">
+               <element name="YEAR" value="YEAR" label="YEAR" dataType="xsd:double" breakOrder="None" fieldOrder="1"/>
+               <element name="QUARTER" value="QUARTER" label="QUARTER" dataType="xsd:string" breakOrder="None" fieldOrder="2"/>
+               <element name="REGION" value="REGION" label="REGION" dataType="xsd:string" breakOrder="None" fieldOrder="3"/>
+               <element name="COUNTRY" value="COUNTRY" label="COUNTRY" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="COUNTRY_IMG" value="COUNTRY_IMG" label="COUNTRY_IMG" dataType="xsd:string" breakOrder="None" fieldOrder="5"/>
+               <element name="LINE_OF_BUSINESS" value="LINE_OF_BUSINESS" label="LINE_OF_BUSINESS" dataType="xsd:string" breakOrder="None" fieldOrder="6"/>
+               <element name="OPERATING_SEGMENT" value="OPERATING_SEGMENT" label="OPERATING_SEGMENT" dataType="xsd:string" breakOrder="None" fieldOrder="7"/>
+               <element name="DRUG" value="DRUG" label="DRUG" dataType="xsd:string" breakOrder="None" fieldOrder="8"/>
+               <element name="DRUG_IMG" value="DRUG_IMG" label="DRUG_IMG" dataType="xsd:string" breakOrder="None" fieldOrder="9"/>
+               <element name="REVENUE" value="REVENUE" label="REVENUE" dataType="xsd:double" breakOrder="None" fieldOrder="10"/>
+               <element name="PREV_YEAR_REV" value="PREV_YEAR_REV" label="PREV_YEAR_REV" dataType="xsd:double" breakOrder="None" fieldOrder="11"/>
+               <element name="BUDGET" value="BUDGET" label="BUDGET" dataType="xsd:double" breakOrder="None" fieldOrder="12"/>
+               <element name="GROSS_PROFIT" value="GROSS_PROFIT" label="GROSS_PROFIT" dataType="xsd:double" breakOrder="None" fieldOrder="13"/>
+               <element name="EXPENSES" value="EXPENSES" label="EXPENSES" dataType="xsd:double" breakOrder="None" fieldOrder="14"/>
+               <element name="NET_INCOME" value="NET_INCOME" label="NET_INCOME" dataType="xsd:double" breakOrder="None" fieldOrder="15"/>
+               <element name="REVENUE_M" value="REVENUE_M" label="REVENUE_M" dataType="xsd:double" breakOrder="None" fieldOrder="16"/>
+               <element name="PROFIT_M" value="PROFIT_M" label="PROFIT_M" dataType="xsd:double" breakOrder="None" fieldOrder="17"/>
+               <element name="INCOME_M" value="INCOME_M" label="INCOME_M" dataType="xsd:double" breakOrder="None" fieldOrder="18"/>
+               <element name="PHARMA_REV_M" value="PHARMA_REV_M" label="PHARMA_REV_M" dataType="xsd:double" breakOrder="None" fieldOrder="19"/>
+               <element name="PHARMA_PROFIT_M" value="PHARMA_PROFIT_M" label="PHARMA_PROFIT_M" dataType="xsd:double" breakOrder="None" fieldOrder="20"/>
+               <element name="PHARMA_INCOME_M" value="PHARMA_INCOME_M" label="PHARMA_INCOME_M" dataType="xsd:double" breakOrder="None" fieldOrder="21"/>
+               <element name="France_REV_M" value="France_REV_M" label="France_REV_M" dataType="xsd:double" breakOrder="None" fieldOrder="22"/>
+               <element name="France_Profit_M" value="France_Profit_M" label="France_Profit_M" dataType="xsd:double" breakOrder="None" fieldOrder="23"/>
+               <element name="France_Income_M" value="France_Income_M" label="France_Income_M" dataType="xsd:double" breakOrder="None" fieldOrder="24"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <lexicals xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <valueSets xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <parameters xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <bursting xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <display xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <layouts>
+         <layout name="Data" left="274px" top="31px"/>
+         <layout name="DATA_DS" left="0px" top="31px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

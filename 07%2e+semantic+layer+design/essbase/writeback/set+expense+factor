@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;F - Essbase Interaction&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c185afcab59baecce">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Channels&quot;.&quot;Gen1,Channels&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="none" visibility="hidden"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cfafc360f5c15acf7">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Product&quot;.&quot;Gen1,Product&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="none" visibility="hidden"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ca60eb2a8c41dabc6">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;Gen1,Customers&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="none" visibility="hidden"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c957c67f1b0ba69ad">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Scenario&quot;.&quot;Gen1,Scenario&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="none" visibility="hidden"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c349635497eea42f2">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Year&quot;.&quot;History&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="none"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c2252aba7e7fcc053">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Basic&quot;.&quot;Expense Adjustment&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true" fontStyle="bold" hAlign="center" interaction="action">
+						<saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="true" negativeType="minus"/><saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="false"><saw:actionLink actionLinkID="c2252aba7e7fcc053_al12773d81ddd2f352"><saw:actionPath>/shared/07. Semantic Layer Design/Essbase/Writeback/Update Expense Factor</saw:actionPath><saw:caption><saw:text>Update Expense Factor</saw:text></saw:caption><saw:paramMapping><saw:assign xsi:type="saw:stringAssign" name="lsql" fixed="true" hidden="true"><saw:value>UPDATE &quot;F - Essbase Interaction&quot;.&quot;Basic&quot;  SET &quot;Expense Adjustment&quot; = @{p1}  WHERE &quot;F - Essbase Interaction&quot;.&quot;Channels&quot;.&quot;Gen1,Channels&quot; = &#39;Channels&#39; AND  &quot;F - Essbase Interaction&quot;.&quot;Product&quot;.&quot;Gen1,Product&quot; = &#39;Product&#39; AND  &quot;F - Essbase Interaction&quot;.&quot;Customers&quot;.&quot;Gen1,Customers&quot; = &#39;Customers&#39; AND  &quot;F - Essbase Interaction&quot;.&quot;Scenario&quot;.&quot;Gen1,Scenario&quot; = &#39;Scenario&#39; AND  &quot;F - Essbase Interaction&quot;.&quot;Year&quot;.&quot;History&quot; = &#39;Year&#39;</saw:value></saw:assign><saw:assign xsi:type="saw:stringAssign" name="p1" fixed="false" hidden="false"><saw:mapping xsi:type="saw:contextColumnMappingType"><sawx:columnRefExpr columnID="c2252aba7e7fcc053"/></saw:mapping></saw:assign></saw:paramMapping></saw:actionLink></saw:actionLinks></saw:formatSpec><saw:conditionalDisplayFormats><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="notNull"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c2252aba7e7fcc053"/></sawx:expr></saw:condition><saw:formatSpec image="fmap:uicomponents/obips.CommonIconSets/update_dwn.gif" wrapText="true" imagePlacement="right"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:tableHeading><saw:caption fmt="text"><saw:text>Basic</saw:text></saw:caption></saw:tableHeading><saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Expense Factor</saw:text></saw:caption></saw:columnHeading></saw:column>
+			</saw:columns></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="pivotTableView!1"><saw:displayFormat><saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+		
+		<saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="text"><saw:text>To update, select above value [br/]and execute update action.</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c185afcab59baecce"/><saw:edgeLayer type="column" columnID="cfafc360f5c15acf7"/><saw:edgeLayer type="column" columnID="ca60eb2a8c41dabc6"/><saw:edgeLayer type="column" columnID="c957c67f1b0ba69ad"/><saw:edgeLayer type="measure"><saw:memberFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c349635497eea42f2"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true" style="display:none"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c2252aba7e7fcc053"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true" width="115" fontColor="#003366" fontFamily="Arial" fontStyle="bold"/></saw:displayFormat></saw:memberFormat><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec wrapText="true" paddingLeft="5" paddingRight="5" fontStyle="bold" height="25" vAlign="middle"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList></saw:view></saw:views><saw:prompts scope="report" subjectArea="&quot;F - Essbase Interaction&quot;"/></saw:report>

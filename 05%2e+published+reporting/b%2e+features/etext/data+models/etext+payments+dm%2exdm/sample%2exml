@@ -1,0 +1,531 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<OutboundPaymentInstruction>
+   <PaymentInstructionInfo>
+      <PaymentInstructionID>
+         <Identifier>101157</Identifier>
+         <SourceObject>PaymentInstruction</SourceObject>
+         <SourceComponent>PaymentInstruction</SourceComponent>
+      </PaymentInstructionID>
+      <PaymentInstructionName>OP-PayInstruction03102004001</PaymentInstructionName>
+      <PaymentInstructionPeriodicSequenceNumber>8000</PaymentInstructionPeriodicSequenceNumber>
+      <PaymentInstructionStatus>CREATED</PaymentInstructionStatus>
+      <NLSLang>ISO-LATIN-GERMAN</NLSLang>
+   </PaymentInstructionInfo>
+   <SeparateRemittanceAdvice>false</SeparateRemittanceAdvice>  
+   <PaymentFormat>
+      <PaymentFormatID>
+         <Identifier>40110</Identifier>
+         <SourceObject>PaymentFormat</SourceObject>
+         <SourceComponent>PaymentFormat</SourceComponent>
+      </PaymentFormatID>
+      <PaymentFormatName>German International</PaymentFormatName>
+      <InvoicesPerStub/>
+      <PrintStubOnCheck/>
+   </PaymentFormat> 
+   <InstrumentCount>1</InstrumentCount>  
+
+
+   <PayerInstrument>
+      <BankAccount>
+         <BankAccountID>
+            <Identifier>54421</Identifier>
+            <SourceObject>InternalBankAccount</SourceObject>
+            <SourceComponent>InternalBankAccount</SourceComponent>
+         </BankAccountID>
+         <BankName>Citi Bank</BankName>
+         <BankNumber/>
+         <BranchName>Berlin Central</BranchName>
+         <BranchNumber/>
+         <BranchType/>
+         <HolderName/>
+         <BankAccountNumber>1234567890</BankAccountNumber>
+         <SwiftCode/>
+         <IBANNumber/>
+         <CheckDigits/>
+         <BankAccountType>CHECKING</BankAccountType>
+         <AccountCurrency>
+            <Code>EUR</Code>
+            <Precision>2</Precision>
+         </AccountCurrency>
+         
+         <BankAddress>
+            <AddressID>
+               <Identifier>92473</Identifier>
+               <SourceObject>Location</SourceObject>
+               <SourceComponent>Location</SourceComponent>
+            </AddressID>
+            <AddressLine>PayerBankAddrLine1</AddressLine>
+            <AddressLine>PayerBankAddrLine2</AddressLine>
+            <City>Berlin</City>
+            <State>Berlin</State>
+            <Country>Germany</Country>
+            <PostalCode>74008</PostalCode>
+         </BankAddress>
+      </BankAccount>
+      
+      <PayerInstrumentDateTime>2004-03-11T21:55:00-06:00</PayerInstrumentDateTime>
+      
+      <PaymentCount>3</PaymentCount>
+      <PaymentsTotalAmount>
+         <Value>21107.54</Value>
+         <Currency>
+            <Code>EUR</Code>
+            <Precision>2</Precision>
+         </Currency>
+      </PaymentsTotalAmount>
+      
+      <OutboundPayment>
+         <SourceApplicationInfo>
+            <ApplicationID>
+               <Identifier>200</Identifier>
+               <SourceObject>FndApplication</SourceObject>
+               <SourceComponent>FndApplication</SourceComponent>
+            </ApplicationID>
+            <ApplicationName>Oracle Payables</ApplicationName>
+         </SourceApplicationInfo>
+         
+         <PaymentNumber>
+            <PaymentID>
+               <Identifier>34582</Identifier>
+               <SourceObject>Payments</SourceObject>
+               <SourceComponent>Payments</SourceComponent>
+            </PaymentID>
+            <PeriodicPaymentNumber>242</PeriodicPaymentNumber>
+            <DocCategory>Payment Sequence</DocCategory>
+            <SequenceName>Payment Sequence</SequenceName>
+            <SequenceValue>775</SequenceValue>
+         </PaymentNumber>
+         
+         <PaymentDate>2004-03-11</PaymentDate>
+         <PaymentAmount>
+            <Value>13000.56</Value>
+            <Currency>
+               <Code>EUR</Code>
+               <Precision>2</Precision>
+            </Currency>
+         </PaymentAmount>
+         <AccountingAmount>
+            <Value>13000.56</Value>
+            <Currency>
+               <Code>EUR</Code>
+               <Precision>2</Precision>
+            </Currency>
+         </AccountingAmount>
+         <DiscountTaken>
+            <Value>0</Value>
+            <Currency>
+               <Code>EUR</Code>
+               <Precision>2</Precision>
+            </Currency>
+         </DiscountTaken>
+         <Memo/>
+         <PayeeName>Belgian Computer</PayeeName>
+         <Payee>
+            <PartyID>
+               <Identifier>665532</Identifier>
+               <SourceObject>HZParties</SourceObject>
+               <SourceComponent>HZParties</SourceComponent>
+            </PartyID>
+            <Name>Belgian Computer</Name>
+            <PartyType>ORGNIZATION</PartyType>
+            <TaxIdentifier/>
+            <Address>
+               <AddressID>
+                  <Identifier>92322</Identifier>
+                  <SourceObject>Location</SourceObject>
+                  <SourceComponent>Location</SourceComponent>
+               </AddressID>
+               <AddressLine>Belgian Computer Loc1</AddressLine>
+               <City>Belgian Computer Loc1 City</City>
+               <State>Belgian Computer Loc1 State</State>
+               <Country>BE</Country>
+               <PostalCode/>
+            </Address>
+         </Payee>
+         
+         <DocumentCount>1</DocumentCount>
+         
+         <PayeeBankAccount>
+            <BankAccountID>
+               <Identifier>54675</Identifier>
+               <SourceObject>ExternalBankAccount</SourceObject>
+               <SourceComponent>ExternalBankAccount</SourceComponent>
+            </BankAccountID>
+            <BankName>Bank of Brussels</BankName>
+            <BankNumber>539</BankNumber>
+            <BranchName>Brussels West Branch</BranchName>
+            <BranchNumber/>
+            <BranchType/>
+            <HolderName/>
+            <BankAccountNumber>539-0075470-34</BankAccountNumber>
+            <SwiftCode/>
+            <IBANNumber/>
+            <CheckDigits/>
+            <BankAccountType>CHECKING</BankAccountType>
+            <AccountCurrency>
+               <Code>EUR</Code>
+               <Precision>2</Precision>
+            </AccountCurrency>
+            
+            <BankAddress>
+               <AddressID>
+                  <Identifier>90987</Identifier>
+                  <SourceObject>Location</SourceObject>
+                  <SourceComponent>Location</SourceComponent>
+               </AddressID>
+               <AddressLine>Belgian Computer Bank1 Loc</AddressLine>
+               <City>Belgian Computer Bank1 City</City>
+               <State/>
+               <Country>BE</Country>
+               <PostalCode/>
+            </BankAddress>
+         </PayeeBankAccount>
+      
+         <DocumentPayable>
+            <DocumentID>
+               <Identifier>89222</Identifier>
+               <SourceObject>DocumentPayable</SourceObject>
+               <SourceComponent>DocumentPayable</SourceComponent>
+            </DocumentID>
+            <SupplierID>
+               <Identifier>9342</Identifier>
+               <SourceObject>Supplier</SourceObject>
+               <SourceComponent>Supplier</SourceComponent>
+            </SupplierID>
+            
+            <SupplierName>Belgian Computer</SupplierName>
+            <DocumentStatus/>
+            <DocumentCreationDate>2004-03-11</DocumentCreationDate>
+            <DocumentType>INVOICE</DocumentType>
+            <DocumentNumber>BelComp70</DocumentNumber>
+            <DocumentDescription/>
+            <DocumentAmount>
+               <Value>13000.56</Value>
+               <Currency>
+                  <Code>EUR</Code>
+                  <Precision>2</Precision>
+               </Currency>
+            </DocumentAmount>
+            
+            <Discount>
+               <Amount>
+                  <Value>0</Value>
+                  <Currency>
+                     <Code>EUR</Code>
+                     <Precision>2</Precision>
+                  </Currency>
+               </Amount>
+               <Type/>
+               <RatePercent/>
+               <DiscountDate/>
+            </Discount>
+            
+         </DocumentPayable>
+         
+      </OutboundPayment>
+      
+      <OutboundPayment>
+         <SourceApplicationInfo>
+            <ApplicationID>
+               <Identifier>200</Identifier>
+               <SourceObject>FndApplication</SourceObject>
+               <SourceComponent>FndApplication</SourceComponent>
+            </ApplicationID>
+            <ApplicationName>Oracle Payables</ApplicationName>
+         </SourceApplicationInfo>
+         
+         <PaymentNumber>
+            <PaymentID>
+               <Identifier>34583</Identifier>
+               <SourceObject>Payments</SourceObject>
+               <SourceComponent>Payments</SourceComponent>
+            </PaymentID>
+            <PeriodicPaymentNumber>243</PeriodicPaymentNumber>
+            <DocCategory>Payment Sequence</DocCategory>
+            <SequenceName>Payment Sequence</SequenceName>
+            <SequenceValue>776</SequenceValue>
+         </PaymentNumber>
+         
+         <PaymentDate>2004-03-11</PaymentDate>
+         <PaymentAmount>
+            <Value>6573.98</Value>
+            <Currency>
+               <Code>EUR</Code>
+               <Precision>2</Precision>
+            </Currency>
+         </PaymentAmount>
+         <AccountingAmount>
+            <Value>6573.98</Value>
+            <Currency>
+               <Code>EUR</Code>
+               <Precision>2</Precision>
+            </Currency>
+         </AccountingAmount>
+         <DiscountTaken>
+            <Value>0</Value>
+            <Currency>
+               <Code>EUR</Code>
+               <Precision>2</Precision>
+            </Currency>
+         </DiscountTaken>
+         <Memo/>
+         
+         <PayeeName>Belgian Computer</PayeeName>
+         <Payee>
+            <PartyID>
+               <Identifier>665532</Identifier>
+               <SourceObject>HZParties</SourceObject>
+               <SourceComponent>HZParties</SourceComponent>
+            </PartyID>
+            <Name>Belgian Computer</Name>
+            <PartyType>ORGNIZATION</PartyType>
+            <TaxIdentifier/>
+            <Address>
+               <AddressID>
+                  <Identifier>92323</Identifier>
+                  <SourceObject>Location</SourceObject>
+                  <SourceComponent>Location</SourceComponent>
+               </AddressID>
+               <AddressLine>Belgian Computer Loc2</AddressLine>
+               <City>Belgian Computer Loc2 City</City>
+               <State>Belgian Computer Loc2 State</State>
+               <Country>BE</Country>
+               <PostalCode/>
+            </Address>
+         </Payee>
+         
+         <DocumentCount>1</DocumentCount>
+         
+         <PayeeBankAccount>
+            <BankAccountID>
+               <Identifier>54676</Identifier>
+               <SourceObject>ExternalBankAccount</SourceObject>
+               <SourceComponent>ExternalBankAccount</SourceComponent>
+            </BankAccountID>
+            <BankName>ABN AMRO</BankName>
+            <BankNumber/>
+            <BranchName>Belgium Corporate Services</BranchName>
+            <BranchNumber/>
+            <BranchType/>
+            <HolderName/>
+            <BankAccountNumber/>
+            <SwiftCode>swift122352</SwiftCode>
+            <IBANNumber>BE68 5390 0754 7034</IBANNumber>
+            <CheckDigits/>
+            <BankAccountType>CHECKING</BankAccountType>
+            <AccountCurrency>
+               <Code>EUR</Code>
+               <Precision>2</Precision>
+            </AccountCurrency>
+            
+            <BankAddress>
+               <AddressID>
+                  <Identifier>90988</Identifier>
+                  <SourceObject>Location</SourceObject>
+                  <SourceComponent>Location</SourceComponent>
+               </AddressID>
+               <AddressLine>Belgian Computer Bank2 Loc</AddressLine>
+               <City>Belgian Computer Bank2 City</City>
+               <State/>
+               <Country>BE</Country>
+               <PostalCode/>
+            </BankAddress>
+         </PayeeBankAccount>
+      
+         <DocumentPayable>
+            <DocumentID>
+               <Identifier>89223</Identifier>
+               <SourceObject>DocumentPayable</SourceObject>
+               <SourceComponent>DocumentPayable</SourceComponent>
+            </DocumentID>
+            <SupplierID>
+               <Identifier>9342</Identifier>
+               <SourceObject>Supplier</SourceObject>
+               <SourceComponent>Supplier</SourceComponent>
+            </SupplierID>
+            
+            <SupplierName>Belgian Computer</SupplierName>
+            <DocumentStatus/>
+            <DocumentCreationDate>2004-03-11</DocumentCreationDate>
+            <DocumentType>INVOICE</DocumentType>
+            <DocumentNumber>BelComp71</DocumentNumber>
+            <DocumentDescription/>
+            <DocumentAmount>
+               <Value>6573.98</Value>
+               <Currency>
+                  <Code>EUR</Code>
+                  <Precision>2</Precision>
+               </Currency>
+            </DocumentAmount>
+            
+            <Discount>
+               <Amount>
+                  <Value>0</Value>
+                  <Currency>
+                     <Code>EUR</Code>
+                     <Precision>2</Precision>
+                  </Currency>
+               </Amount>
+               <Type/>
+               <RatePercent/>
+               <DiscountDate/>
+            </Discount>
+            
+         </DocumentPayable>
+         
+      </OutboundPayment>
+      
+      <OutboundPayment>
+         <SourceApplicationInfo>
+            <ApplicationID>
+               <Identifier>200</Identifier>
+               <SourceObject>FndApplication</SourceObject>
+               <SourceComponent>FndApplication</SourceComponent>
+            </ApplicationID>
+            <ApplicationName>Oracle Payables</ApplicationName>
+         </SourceApplicationInfo>
+         
+         <PaymentNumber>
+            <PaymentID>
+               <Identifier>34584</Identifier>
+               <SourceObject>Payments</SourceObject>
+               <SourceComponent>Payments</SourceComponent>
+            </PaymentID>
+            <PeriodicPaymentNumber>244</PeriodicPaymentNumber>
+            <DocCategory>Payment Sequence</DocCategory>
+            <SequenceName>Payment Sequence</SequenceName>
+            <SequenceValue>777</SequenceValue>
+         </PaymentNumber>
+         
+         <PaymentDate>2004-03-11</PaymentDate>
+         <PaymentAmount>
+            <Value>1533</Value>
+            <Currency>
+               <Code>USD</Code>
+               <Precision>2</Precision>
+            </Currency>
+         </PaymentAmount>
+         <AccountingAmount>
+            <Value>1896</Value>
+            <Currency>
+               <Code>EUR</Code>
+               <Precision>2</Precision>
+            </Currency>
+         </AccountingAmount>
+         <DiscountTaken>
+            <Value>0</Value>
+            <Currency>
+               <Code>EUR</Code>
+               <Precision>2</Precision>
+            </Currency>
+         </DiscountTaken>
+         <Memo/>
+         
+         <PayeeName>American Power Conversion</PayeeName>
+         <Payee>
+            <PartyID>
+               <Identifier>693220</Identifier>
+               <SourceObject>HZParties</SourceObject>
+               <SourceComponent>HZParties</SourceComponent>
+            </PartyID>
+            <Name>American Power Conversion</Name>
+            <PartyType>ORGNIZATION</PartyType>
+            <TaxIdentifier/>
+            <Address>
+               <AddressID>
+                  <Identifier>90101</Identifier>
+                  <SourceObject>Location</SourceObject>
+                  <SourceComponent>Location</SourceComponent>
+               </AddressID>
+               <AddressLine>American Power Conversion Loc</AddressLine>
+               <City>American Power Conversion City</City>
+               <State>American Power Conversion State</State>
+               <Country>US</Country>
+               <PostalCode>02892</PostalCode>
+            </Address>
+         </Payee>
+         
+         <DocumentCount>1</DocumentCount>
+         
+         <PayeeBankAccount>
+            <BankAccountID>
+               <Identifier>78866</Identifier>
+               <SourceObject>ExternalBankAccount</SourceObject>
+               <SourceComponent>ExternalBankAccount</SourceComponent>
+            </BankAccountID>
+            <BankName>Chase Manhattan</BankName>
+            <BankNumber>53966</BankNumber>
+            <BranchName>Chase Southampton Branch</BranchName>
+            <BranchNumber>322</BranchNumber>
+            <BranchType/>
+            <HolderName>APC US Bank Acct</HolderName>
+            <BankAccountNumber>234784342</BankAccountNumber>
+            <SwiftCode/>
+            <IBANNumber/>
+            <CheckDigits/>
+            <BankAccountType>CHECKING</BankAccountType>
+            <AccountCurrency>
+               <Code>USD</Code>
+               <Precision>2</Precision>
+            </AccountCurrency>
+            
+            <BankAddress>
+               <AddressID>
+                  <Identifier>134456</Identifier>
+                  <SourceObject>Location</SourceObject>
+                  <SourceComponent>Location</SourceComponent>
+               </AddressID>
+               <AddressLine>60 Main Street</AddressLine>
+               <City>Southampton</City>
+               <State>NY</State>
+               <Country>US</Country>
+               <PostalCode>11968</PostalCode>
+            </BankAddress>
+         </PayeeBankAccount>
+      
+         <DocumentPayable>
+            <DocumentID>
+               <Identifier>89872</Identifier>
+               <SourceObject>DocumentPayable</SourceObject>
+               <SourceComponent>DocumentPayable</SourceComponent>
+            </DocumentID>
+            <SupplierID>
+               <Identifier>12110</Identifier>
+               <SourceObject>Supplier</SourceObject>
+               <SourceComponent>Supplier</SourceComponent>
+            </SupplierID>
+            
+            <SupplierName>American Power Conversion</SupplierName>
+            <DocumentStatus/>
+            <DocumentCreationDate>2004-03-11</DocumentCreationDate>
+            <DocumentType>INVOICE</DocumentType>
+            <DocumentNumber>APC-US331</DocumentNumber>
+            <DocumentDescription/>
+            <DocumentAmount>
+               <Value>1533</Value>
+               <Currency>
+                  <Code>USD</Code>
+                  <Precision>2</Precision>
+               </Currency>
+            </DocumentAmount>
+            
+            <Discount>
+               <Amount>
+                  <Value>0</Value>
+                  <Currency>
+                     <Code>EUR</Code>
+                     <Precision>2</Precision>
+                  </Currency>
+               </Amount>
+               <Type/>
+               <RatePercent/>
+               <DiscountDate/>
+            </Discount>
+            
+         </DocumentPayable>
+         
+      </OutboundPayment>
+      
+   </PayerInstrument> 
+   
+</OutboundPaymentInstruction>

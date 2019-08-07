@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="j9tasvbul9jis1ei" links="er" overrideParentLinks="true"><sawd:dashboardColumn name="Column 4" duid="onnnmu9lefhpv08l" canFreeze="true" frozen="false" layoutType="bestFit"><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 5" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2365">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Temporal Validity
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 1" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2364">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 6" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2361">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2366">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This example leverages the Oracle 12c Database&#39;s Valid Time Temporal capability. Temporal Validity support in Oracle Database enables you to associate one or more valid time dimensions with a table and to have data be visible depending on its time-based validity, as determined by the start and end dates or time stamps of the period for which a given record is considered valid. </sawd:HTML>
+			</sawd:htmlView>
+			
+			<sawd:htmlView name="HTML 6" duid="19sngnc5o78rg6n5"><sawd:HTML fmt="text">[u][b]Warning  !![/b][/u]
+The syntax of this example is correct and can be replicated on [b]12c Non-Container [/b]Database deployment.
+However the Temporal Validity DB feature is not supported with a container database (CDB) of 12c.
+V406 image has a CDB deployment, hence the example here is not functional.</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2368">&lt;font color=darkblue&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; A duplicate customer dimension table (SAMP_CUSTOMERS_SCD) is added to physical layer metadata of the model. This table includes user defined start/end dates to specify time-validity of the records. Before querying we set the query point-in-time at session level using dbms_flashback_archive.enable_at_valid_time(). Valid time is set to ALL, CURRENT or ASOF choosen datetime.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" break="column" frozen="false" canFreeze="false" duid="48crvmiqmsfonasc" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="gokrmdgl7sf1io5u" showSectionTitle="false" collapsible="false" layoutType="bestFit"><sawd:globalFilterView name="GFP 0" path="/shared/08. Advanced Analytics/Oracle DB/Time Temporal/Time Temporal Session Prompt" duid="qnisuq2lbqlsoe2c" scope="dashboardPage"><saw:caption><saw:text>Time Temporal Session Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:htmlView name="HTML 2" duid="f4gdrl8efadee19h"><sawd:HTML fmt="html">&lt;script type=&quot;text/javascript&quot;&gt;
+function refreshReport(idResultsDiv){
+	var refreshObj, indexOfId;
+	refreshObj = document.getElementById(idResultsDiv);
+	if(!refreshObj) return;	
+	while ( !refreshObj.parentNode.getAttribute(&#39;vid&#39;))       
+		refreshObj = refreshObj.parentNode;
+	refreshID=refreshObj.parentNode.getAttribute(&#39;vid&#39;);
+	indexOfId=refreshID.indexOf(&#39;~v:&#39;);
+	if (indexOfId&gt;-1) refreshID = refreshID.substring(0,indexOfId);
+	refFunction = &quot;HereLink(&#39;&quot; + refreshID + &quot;&#39;,&#39;Refresh&#39;)&quot;;
+	eval(refFunction);
+}
+&lt;/script&gt;
+
+&lt;iframe frameborder=&quot;0&quot; scrolling=&quot;no&quot; width=&quot;0&quot; height=&quot;0&quot; src=&quot;saw.dll?Answers&quot; id=&quot;myframe&quot;&gt;&lt;/iframe&gt;
+
+&lt;script&gt;
+	var dsqlBody, dsqlxml;
+	if(&#39;@{asof_time}&#39; == &#39;CURRENT&#39;)
+		dsqlBody = &quot;begin dbms_flashback_archive.enable_at_valid_time(&#39;CURRENT&#39;); end;&quot;;
+        else if(&#39;@{asof_time}&#39; == &#39;ALL&#39;)
+		dsqlBody = &quot;begin dbms_flashback_archive.enable_at_valid_time(&#39;ALL&#39;); end;&quot;;
+	else
+		dsqlBody = &quot;begin dbms_flashback_archive.enable_at_valid_time(&#39;ASOF&#39;,&#39;@{asof_time}&#39;); end;&quot;;
+	dsqlxml = &quot;&lt;saw:report xmlns:saw=&#39;com.siebel.analytics.web/report/v1.1&#39; xmlns:xsi=&#39;http://www.w3.org/2001/XMLSchema-instance&#39; cacheControl=&#39;bypassCache&#39;&gt;&lt;saw:criteria xsi:type=&#39;saw:physicalCriteria&#39; connectionPool=&#39;\&quot;01 - Sample App Data (ORCL)\&quot;.\&quot;Sample Relational Connection\&quot;&#39;&gt;&lt;saw:sql&gt;&quot; + dsqlBody + &quot;&lt;/saw:sql&gt;&lt;/saw:criteria&gt;&lt;/saw:report&gt;&quot;;
+	
+	var MyIFrame = document.getElementById(&quot;myframe&quot;);
+	var MyIFrameDoc = (MyIFrame.contentWindow || MyIFrame.contentDocument);
+	if (MyIFrameDoc.document) MyIFrameDoc = MyIFrameDoc.document;
+	//MyIFrameDoc.getElementById(&quot;myform&quot;).submit();
+
+	var form = MyIFrameDoc.createElement(&quot;form&quot;);
+    form.setAttribute(&quot;method&quot;, &quot;POST&quot;);
+    form.setAttribute(&quot;action&quot;, &quot;saw.dll?Answers&quot;);
+	var hiddenField = MyIFrameDoc.createElement(&quot;input&quot;);
+    hiddenField.setAttribute(&quot;type&quot;, &quot;hidden&quot;);
+    hiddenField.setAttribute(&quot;name&quot;, &quot;ReportXML&quot;);
+    hiddenField.setAttribute(&quot;value&quot;, dsqlxml);
+    form.appendChild(hiddenField);
+    MyIFrameDoc.body.appendChild(form);
+    form.submit();
+	refreshReport(&quot;_TimeTemporalReport_&quot;);
+	refreshReport(&quot;_TimeTemporalReport1_&quot;);
+&lt;/script&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="j6c608sko6oup8tp" layoutType="bestFit"><sawd:dashboardSection name="Section 0" collapsible="false" duid="icjatnegubffakfm" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec wrapText="true" borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:reportView name="Report 2" display="embed" showView="" duid="9qprfu9efvvl4gub"><saw:caption><saw:text>Customer SCD Revenue (DB Session Parameter)</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Time Temporal/Customer SCD Revenue (DB Session Parameter)"/></sawd:reportView><sawd:reportView name="Report 1" display="embed" showView="" duid="97jcjnbb9rjdmb2b"><saw:caption><saw:text>Customer Revenue - NO SCD</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Time Temporal/Customer Revenue - NO SCD"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" frozen="false" canFreeze="false" duid="bd3if7ju05clnoi3" layoutType="bestFit"><sawd:dashboardSection name="Section 3" duid="idk0fv5pce43rboh" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="vf4cbk0fjf1p4sdc"><saw:caption><saw:text>Customers SCD Details (DB Session Parameter)</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Time Temporal/Customers SCD Details (DB Session Parameter)"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

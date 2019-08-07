@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160" cacheControl="bypassCache">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c9facffd1ff808604">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Date&quot;.&quot;Dep Date&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cc577b8d3503bfe80">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Day&quot;.&quot;Day of Year !&quot;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Date</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>SeqID</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cae95aff4c120955a">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Delay Facts&quot;.&quot;Delay Perf % (0=Ontime,  &gt;0=Late)&quot;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Date</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Delay Performance</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cc43a9fa641ccbe23">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Delay Facts&quot;.&quot;# of Late Flights&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c8bc66767ff1edef7">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c99760881a8afc5f7">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">EVALUATE_SCRIPT( &#39;filerepo://obiee.3DScatter.xml&#39;, &#39;vizpath&#39;, &#39;x=%1;y=%2;z=%3;seqid=%4;txt=%5;xlab=Delay Perf%;ylab=#Late Flights;zlab=#Flights&#39;,   &quot;Delay Facts&quot;.&quot;Delay Perf % (0=Ontime,  &gt;0=Late)&quot;,  &quot;Delay Facts&quot;.&quot;# of Late Flights&quot;,  &quot;Flight Facts&quot;.&quot;# of Flights&quot;, &quot;Day&quot;.&quot;Day of Year !&quot;, &#39;Date: &#39;||cast(&quot;Date&quot;.&quot;Dep Date&quot; as varchar(20)))</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Depart Delay</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Vizpath</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:comparison" op="equal">
+            <sawx:expr xsi:type="sawx:sqlExpression">&quot;Date&quot;.&quot;Dep Month&quot;</sawx:expr>
+            <sawx:expr xsi:type="xsd:string">2010 / 01</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:columnExpression" formulaUse="code" displayUse="display"><saw:columnFormula formulaUse="display"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport Name&quot;</sawx:expr></saw:columnFormula></sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Schedule&quot;.&quot;Dep Time Grp&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter>
+      <saw:prefix>SET VARIABLE DISABLE_CACHE_HIT=1;</saw:prefix></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!1"/>
+               <saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true" height="600" repeat="false">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c9facffd1ff808604"/>
+                  <saw:edgeLayer type="column" columnID="cae95aff4c120955a"/>
+                  <saw:edgeLayer type="column" columnID="cc43a9fa641ccbe23"/>
+                  <saw:edgeLayer type="column" columnID="c8bc66767ff1edef7"/><saw:edgeLayer type="column" columnID="c90039da9c2965d81"/><saw:edgeLayer type="column" columnID="c362038a1ee9cfa43"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:narrativeView" name="narrativeView!1">
+         <saw:narrative rowCount="1">
+            <saw:caption fmt="html">
+               <saw:text>&lt;iframe src=&#39;@{c99760881a8afc5f7}&#39; height=600 width=800 style=&quot;border:none;&quot;/&gt;</saw:text></saw:caption></saw:narrative></saw:view></saw:views></saw:report>

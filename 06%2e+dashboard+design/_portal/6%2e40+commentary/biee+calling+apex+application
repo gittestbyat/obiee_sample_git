@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="kqttg94kekkndtbo"><sawd:dashboardColumn name="Column 4" frozen="false" canFreeze="true" duid="68o5m70k1lsusma8" layoutType="bestFit"><sawd:dashboardSection name="Section 8" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 8" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1839">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+APEX contextual Integration
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 5" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1838">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			
+			
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 5" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="all" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4" borderColor="#EEEEEE"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontSize="12" fontFamily="Arial"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			
+		<sawd:htmlView name="HTML 0" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font style=&quot;font:12px arial&quot;&gt; &lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot; /&gt;
+&lt;b&gt; Description :&lt;/b&gt; This example demonstrates how an APEX application can be called from OBIEE dashboard, with contextual value being passed to the APEX application as parameters when it&#39;s called.[br/]For example, clicking the link &quot;Add your comments on this report using APEX&quot; on this page will open a form that was built on a APEX Application, and will pass the context of the dashboard into it (Quarter, Date, Region, User...). The APEX application can then process this information in multiple ways. In this example, it inserts a dashboard comment about the page content.</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="m636oar7aj4fm53l" layoutType="bestFit" break="column"><sawd:dashboardSection layoutType="bestFit" name="Section 1" collapsible="false" duid="9bvgpild8kk1fb54" showSectionTitle="false" horizontalLayout="true"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 1" path="/shared/06. Dashboard Design/Commentary/Apex Prompt" duid="s2njqdr340q2e8in"><saw:caption><saw:text>Apex Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:htmlView name="HTML 2" duid="0v9ho5loiksh2nap"><sawd:HTML fmt="html">&lt;a href=&quot;/apex/f?p=118:1:12640424750009::NO::P3_DIM1,P3_REPORT,P3_USER:@{CommentRegion},SALES ANALYSIS,@{user.displayName}&quot; target=&quot;_blank&quot;&gt; Add your comments on this report using APEX&lt;/a&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection layoutType="bestFit" name="Section 2" collapsible="false" duid="6aikb10c4pegd06k" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 3" display="embed" showView="" duid="bevl0cd68dt81mva"><saw:caption><saw:text>Sales Analysis</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Commentary/Sales Analysis"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="p9tme3r2n3s01m64" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 0" showSectionTitle="true" collapsible="false" duid="50marf5igg7dqk8i"><saw:caption><saw:text>User Comments</saw:text></saw:caption><saw:displayFormat><saw:formatSpec backgroundColor="#99CCFF" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 4" display="embed" showView="" duid="nunnpu6732p52qqt" links="r" overrideParentLinks="true"><saw:caption><saw:text>Comments</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Commentary/Comments"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

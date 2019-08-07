@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="e92rmreo5iv7erb1">
+	<saw:pageProps orientation="portrait" printRows="visible" disableMargins="false">
+		<saw:pageHeader show="false"/>
+		<saw:pageFooter showOnDashboard="true" show="true">
+			<saw:zone position="top">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="left">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="left" width="33%" fontColor="#999999" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" oldID="kcap12832459_17">
+					<saw:text>OBI EE SampleApp</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="center">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" width="34%"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="right">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="right" width="33%" fontColor="#999999" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="bottom">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center"/>
+				</saw:displayFormat>
+			</saw:zone>
+		</saw:pageFooter>
+	</saw:pageProps>
+	<sawd:dashboardColumn name="Column 0" duid="94apgmot0sbao4qn" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 17" duid="onmrj50qvftd2q2j" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" borderColor="#CCCCCC" borderStyle="single" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="to5r0gq9f1vqa4br"><sawd:HTML fmt="html">[b]&lt;font size=3 align=left color=#336666&gt;SampleApp Scripts, Utilities and Code Samples&lt;/font&gt;[/b]</sawd:HTML></sawd:htmlView><sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1838">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 3" duid="ek5sbd17dbeejmli" break="column" frozen="false" canFreeze="false" layoutType="specificSize"><sawd:dashboardSection name="Section 21" showSectionTitle="true" duid="enkdekcp5edm27tc" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Overview and Purpose</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontColor="#FFFFFF" backgroundColor="#336666"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 12" duid="n2o09rg5vorl18lk"><sawd:HTML fmt="html">&lt;br/&gt;SampleApp Scripts and Utilities comprise of a set of powerful and extremely useful tools designed to primarily help OBIEE Administrators, Implementers and Developers. End business users will also find this information highly valuable. 
+&lt;br/&gt;&lt;br/&gt;
+They are built using a smart combination of one or more SQL queries, SQL loader scripts, Custom Java code, JavaScripts, Shell scripts, OBI EE Web Service calls and other tools. Leveraging the power of OBI EE modeling and reporting capabilities, results of most of these utilities are presented using BI reports and dashboards. 
+&lt;br/&gt;&lt;br/&gt;
+&lt;b&gt;Scripts home folder in SampleApp VM:&lt;/b&gt; /app/oracle/scripts
+&lt;br/&gt;&lt;br/&gt;
+&lt;b&gt;Disclaimer:&lt;/b&gt; The SampleApp contents and its code are distributed free for demonstrative purposes only. It is neither maintained nor supported by Oracle as a licensed product.
+&lt;br/&gt;&lt;br/&gt;
+
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" width="220"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" duid="n2hvsk56jomi0oap" frozen="false" canFreeze="false" layoutType="specificSize"><sawd:dashboardSection name="Section 3" collapsible="false" showHeading="true" showSectionTitle="true" duid="b7dipfrgpgjc8ij2" layoutType="bestFit"><saw:caption><saw:text>Presentation Catalog Utilities</saw:text></saw:caption><saw:displayFormat><saw:formatSpec wrapText="true" borderPosition="none"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec backgroundColor="#6699CC" wrapText="true" fontColor="#FFFFFF"/></saw:displayFormat></sawd:sectionHeading></sawd:dashboardSection><sawd:dashboardSection name="Section 30" showHeading="false" duid="dkiq74128vrofljd" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>Presenation Catalog - Statistics</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="8" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderColor="#6699CC"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontStyle="bold" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 10" duid="mnujp1qsmeh4u9iu"><sawd:HTML fmt="html">&lt;b&gt;Presentation Catalog - Statistics&lt;/b&gt;&lt;br/&gt;
+This utility enables reporting of Presentation Catalog objects, Impact analysis on renaming RPD columns, Identifies dormant and unused objects in your catalog and more. 
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt; /app/oracle/SAScripts/webcatstats
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/catalog/obj_report.png&quot;/&gt;&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=/shared/10. Lifecycle and Admin/_portal/10.30 Webcat Overview&quot;&gt;Catalog Statistics&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 4" collapsible="false" showHeading="false" showSectionTitle="false" duid="n8nl53eh3r3f37re" layoutType="bestFit"><saw:caption oldID="kcap12832459_9">
+				<saw:text>Presentation Catalog - Analyses Error Checker</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="8" hAlign="left" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderColor="#6699CC"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="bold" wrapText="true"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 11" duid="ghunb5fa4vflfdpt"><sawd:HTML fmt="html">
+&lt;b&gt;Presentation Catalog - Analyses Error Checker&lt;/b&gt;&lt;br/&gt;
+This utility validates the integrity of Analyses objects. Each Analysis is iterated in an automated way to verify that it successfully resolves into a logical query and can execute to produce a result set.
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt; /app/oracle/SAScripts/checkanalyses
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/catalog/obj_report.png&quot;/&gt;&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=/shared/10. Lifecycle and Admin/_portal/10.30 Webcat Overview&quot;&gt;Analyses Error Checker&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 1" showSectionTitle="false" showHeading="false" duid="rhqph16a9fns7h4p" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>Presentation Catalog - References Checker</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderColor="#6699CC" borderPosition="8" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 3" duid="o20p3oa33j564uem"><sawd:HTML fmt="html">&lt;b&gt;Presentation Catalog - References Checker&lt;/b&gt;&lt;br/&gt;
+This utility searches through object XML of each Presentation Catalog objects and reports the occurrence(s) of a search string supplied to it as a REGEX pattern. If the search is for Presentation Catalog references, the utility goes ahead and checks the validity of the target object and reports it as valid or broken.
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;  /app/oracle/SAScripts/ReferenceChecker
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/catalog/obj_report.png&quot;/&gt;&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=/shared/10. Lifecycle and Admin/_portal/10.30 Webcat Overview&quot;&gt;References Checker&lt;a&gt;&lt;br/&gt;&lt;br/&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 2" showHeading="false" showSectionTitle="false" duid="165jp784vtp961mi" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>Presentation Catalog - ACL Permissions</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 5" duid="1m0duqosolveph2s"><sawd:HTML fmt="html">&lt;b&gt;Presentation Catalog - ACL Permissions&lt;/b&gt;&lt;br/&gt;
+This utility iterates through each Presentation Catalog object and lists out its Access Control List, other security attributes and permissions.
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt; /app/oracle/SAScripts/ACLDump
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/catalog/obj_report.png&quot;/&gt;&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=/shared/10. Lifecycle and Admin/_portal/10.30 Webcat Overview&quot;&gt;Catalog ACL Permissions&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec wrapText="true" paddingLeft="10" width="50%"/></saw:displayFormat><sawd:dashboardSection name="Section 7" collapsible="false" showSectionTitle="true" showHeading="true" duid="6739cmrf136v1euk" layoutType="bestFit"><saw:caption><saw:text>Concurrency Simulator</saw:text></saw:caption><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#6699CC" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 7" duid="drnfuts9j939mqk5"><sawd:HTML fmt="html">This utility simulates concurrent execution of BI queries using multiple concurrent users.
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;/app/oracle/SAScripts/ConcurrencySimulation&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/catalog/obj_report.png&quot;/&gt;
+&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=%2Fshared%2F9. Lifecycle and Admin%2F_portal%2F9.11 SampleApp Scripts&amp;Page=Concurrency Instructions&quot;&gt;Concurrency Simulator&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" duid="q7q9bjhqcdm9hrh0" frozen="false" canFreeze="false" layoutType="specificSize"><sawd:dashboardSection name="Section 6" showSectionTitle="true" duid="8k2co034ttvqr031" showHeading="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>SampleApp Data Inflator</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontColor="#FFFFFF" backgroundColor="#6699CC"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 1" duid="qud41dq6v56vjf6g"><sawd:HTML fmt="html">Data inflation scripts are a set of PL/SQL scripts that enable you to dramatically expand the volume of data in SampleApp database upto tens of millions rows by providing appropriate input parameters. These scripts can only be executed on the relational BISAMPLE schema. 
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt; /app/oracle/SAScripts/SampleDataInflator[br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec wrapText="true" paddingLeft="10" paddingRight="5" width="50%"/></saw:displayFormat><sawd:dashboardSection name="Section 8" collapsible="false" showSectionTitle="true" showHeading="true" duid="rd7obbbfv3nhj6hb" layoutType="bestFit"><saw:caption><saw:text>Physical SQL Generator</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#6699CC" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 8" duid="k4to71m2558ofn23"><sawd:HTML fmt="html">This utility is used to generate logical and physical SQLs for OBIEE Analyses without actually executing the queries.
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt; /app/oracle/SAScripts/PhysicalSQLGenerator [br/]&lt;br/&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 22" showSectionTitle="true" duid="m8ta586sshuuoi51" showHeading="true" collapsible="false" layoutType="bestFit"><saw:caption><saw:text>Usage Tracking - Physical From Clause Parser</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontColor="#FFFFFF" backgroundColor="#6699CC"/></saw:displayFormat></sawd:sectionHeading>
+			<sawd:htmlView name="HTML 2" duid="gp19o2f7iihl3n5e"><sawd:HTML fmt="html">This script parses through the physical SQL statement in the usage tracking table within the RCU schema and extracts the table names used in the FROM clause of the SQL. 
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt;  /app/oracle/SAScripts/UTPhysicalFromClauseParser &lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/catalog/obj_report.png&quot;/&gt;
+&lt;a href= &quot;saw.dll?Dashboard&amp;PortalPath=/shared/10. Lifecycle and Admin/_portal/10.20 Usage Tracking&amp;Page=Physical SQLs&quot;&gt;Physical SQLs&lt;/a&gt;&lt;br/&gt;
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" showHeading="true" showSectionTitle="true" duid="jdeieiatg8rd071p" collapsible="false" layoutType="bestFit"><saw:caption><saw:text> WLS Sample User Creation Scripts</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#6699CC" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 4" duid="su6onrcbiu3g3s2l"><sawd:HTML fmt="html">The files here serve as an example for data that you can import into database of a security provider configured in your WLS security realm. This data is previously exported from a WLS security realm. To import, open WLS console, Navigate Home &gt; Summary of Security Realms &gt; myrealm &gt; Users and Groups &gt; Migration &gt; Import and then , provide this directory path as input.
+&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt; /app/oracle/SAScripts/WLSSampleUserCreationScripts [br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 5" collapsible="false" duid="dvielp4nliqpknk7" showSectionTitle="true" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Network and Spatial - Code Samples</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec fontColor="#FFFFFF" backgroundColor="#6699CC" wrapText="true"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 6" duid="cs9nb0mh6bgqlimm"><sawd:HTML fmt="html">&lt;b&gt;Caution:&lt;/b&gt; These network and spatial examples are already preconfigured in SampleApp VM. Re-running this in the same environment may break existing examples. It is listed here for informational purposes.
+&lt;br/&gt;
+&lt;br/&gt;(1)  WithinCostPolygon.java: Generates a driving distance polygon for a given start point using cost constraints specified as input. 
+&lt;br/&gt;(2)  LinkTravelTimeCalculator.java: Code to set the cost used in network computation to the link travel time. Default cost is the link length.
+&lt;br/&gt;(3) geocoder_by_xxx.sql: Sample SQL query that can be used to find link_id and percentage. The (link_id, percentage) pair is used as the start point for the polygon computation.
+&lt;br/&gt;(4)  setup_network.sql: Sets up a network called NAVTEQ_SF for the San Francisco data set.
+&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src=&quot;res/sk_blafp/treeview/folder.gif&quot;/&gt; /app/oracle/SAScripts/ndm
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

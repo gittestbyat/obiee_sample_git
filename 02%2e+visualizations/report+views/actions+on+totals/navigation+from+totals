@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      
+      <saw:column xsi:type="saw:regularColumn" columnID="ce4a57441bae717ba">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Cust Regions&quot;.&quot;C50  Region&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c1c50ff75e5b5a892">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption fmt="text">
+            <saw:text>Products</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text">
+            <saw:text>Brand</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c4e9b0308e30a2879">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true" interaction="action">
+            
+          <saw:actionLinks showPopupMenuForOneLink="true" appliesToTotal="true"><saw:actionLink actionLinkID="c4e9b0308e30a2879_al477e5b4318ec523a"><saw:actionPath>/shared/01. QuickStart/Simple Demo Dashboard/Navigate to Customers Details Report</saw:actionPath><saw:caption><saw:text>Navigate to Customers Details Report</saw:text></saw:caption></saw:actionLink><saw:actionLink actionLinkID="c4e9b0308e30a2879_ald49029d42d351f4a"><saw:actionPath>/shared/01. QuickStart/Simple Demo Dashboard/Navigate to Order Details Report</saw:actionPath><saw:caption><saw:text>Navigate to Order Details Report</saw:text></saw:caption></saw:actionLink></saw:actionLinks></saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text">
+            <saw:text>Base Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text">
+            <saw:text>Revenue</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c27337daeacb18e7e">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D4  Company&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+    </saw:columns>
+  </saw:criteria>
+  <saw:interactionOptions drill="true" movecolumns="true" sortcolumns="true" addremovevalues="false" groupoperations="false" calcitemoperations="false" showhidesubtotal="false" showhiderunningsum="false" inclexclcolumns="true" hidecolumns="false"/>
+  <saw:views currentView="0" textDelivery="compoundView!1" parentsBefore="true" includeNewColumns="true" nullSuppress="true">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="pivotTableView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none"><saw:title>
+        <saw:caption fmt="text">
+          <saw:text>Navigation on Totals</saw:text>
+        </saw:caption>
+      <saw:displayFormat>
+               <saw:formatSpec wrapText="true" fontFamily="Arial" fontSize="15" fontStyle="bold" fontColor="#15164B"/></saw:displayFormat></saw:title><saw:displayFormat>
+            <saw:formatSpec wrapText="true" borderPosition="8" borderColor="#666666" borderStyle="single" paddingBottom="3"/></saw:displayFormat></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c8be223f0c97f38c3"/>
+            <saw:edgeLayer type="column" columnID="c9487a6fade98df12"/>
+            <saw:edgeLayer type="column" columnID="c1c50ff75e5b5a892"/>
+            <saw:edgeLayer type="column" columnID="c4e9b0308e30a2879"/>
+            <saw:edgeLayer type="column" columnID="c27337daeacb18e7e"/>
+            <saw:edgeLayer type="column" columnID="ce4a57441bae717ba"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column" showColumnHeader="rollover"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="true">
+      
+      
+    <saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false">
+          <saw:displayGrandTotals>
+            <saw:displayGrandTotal id="gt_row" grandTotalPosition="before">
+              <saw:dataBodyFormat>
+                <saw:displayFormat>
+                  <saw:formatSpec fontColor="#669966" wrapText="true"/>
+                </saw:displayFormat>
+              </saw:dataBodyFormat>
+            </saw:displayGrandTotal>
+          </saw:displayGrandTotals>
+          
+        <saw:edgeLayers><saw:edgeLayer type="column" columnID="ce4a57441bae717ba"><saw:levels><saw:level><saw:displaySubTotal id="st_ce4a57441bae717ba" subTotalPosition="after"/></saw:level></saw:levels></saw:edgeLayer><saw:edgeLayer type="column" columnID="c1c50ff75e5b5a892"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="false">
+          <saw:displayGrandTotals>
+            <saw:displayGrandTotal id="gt_column" grandTotalPosition="after">
+              <saw:dataBodyFormat>
+                <saw:displayFormat>
+                  <saw:formatSpec fontColor="#669966" wrapText="true"/>
+                </saw:displayFormat>
+              </saw:dataBodyFormat>
+            </saw:displayGrandTotal>
+          </saw:displayGrandTotals>
+          
+        <saw:edgeLayers><saw:edgeLayer type="column" columnID="c27337daeacb18e7e"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+        
+      <saw:measure columnID="c4e9b0308e30a2879"/></saw:measuresList></saw:view>
+  </saw:views>
+</saw:report>

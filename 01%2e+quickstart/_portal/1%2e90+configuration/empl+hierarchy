@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="e69esfptu3q25ceb" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <sawd:dashboardColumn name="Column 1" duid="f75sa83vqngnh969" layoutType="bestFit"><saw:displayFormat>
+      <saw:formatSpec wrapText="false" vAlign="top"/>
+    </saw:displayFormat><sawd:dashboardSection name="Section 1" collapsible="false" duid="r6jfvmjmv3dvrq7o" showSectionTitle="false" layoutType="bestFit">
+      <saw:displayFormat>
+        <saw:formatSpec wrapText="true" backgroundColor="#EFEDDF" borderPosition="8" borderColor="#660000" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 0" duid="ab8ct6hvk8k0j4ku">
+        <sawd:HTML fmt="html" captionID="kcap12832459_141">&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.00 General Index&amp;Page=Main+Index&quot;&gt;Main Index-&gt;&lt;/a&gt;
+
+
+&lt;font color=#0000ff&gt;Empl Hierarchy&lt;/font&gt;
+
+&lt;table&gt;
+&lt;tr&gt;&lt;td width=&quot;300&quot;&gt;
+&lt;font size=4&gt;[b]OBI EE Samples Application[/b]&lt;/font&gt;&lt;font size=3&gt;&lt;br/&gt;&amp;nbsp;Configuration &lt;/font&gt;&lt;/td&gt;
+&lt;td width=&quot;500&quot;&gt;
+&lt;font size=3 color=darkred&gt;[b]Hierarchies Datasets[/b]&lt;/br&gt;&amp;nbsp;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</sawd:HTML>
+      </sawd:htmlView>
+    </sawd:dashboardSection><sawd:dashboardSection name="Section 0" collapsible="false" duid="om13hsho8h4pap0l" showSectionTitle="false" layoutType="bestFit">
+      <saw:displayFormat>
+        <saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderPosition="none"/>
+      </saw:displayFormat>
+      <sawd:htmlView name="HTML 1" duid="7jnrc17rn29dcajq">
+        <sawd:HTML fmt="html" captionID="kcap12832459_142">&lt;img src=&quot;/analyticsRes/SampleApp/SampleAppPics/Empl_Hier.png&quot;/&gt;</sawd:HTML>
+      </sawd:htmlView>
+    </sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

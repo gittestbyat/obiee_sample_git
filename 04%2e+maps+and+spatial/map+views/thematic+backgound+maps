@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c796938b407e1cd49">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf49fd12a2bc6e843">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1c03d10c7aec7d41">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Cust Geo Codes&quot;.&quot;C62  Geo Ctry State Name&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent">
+                  <saw:clientEventSpec channel="S1"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c335b0dbf8b5e247d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Cust Regions&quot;.&quot;C53  State Province&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent">
+                  <saw:clientEventSpec channel="S1"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cd0309aa467c4590e">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent">
+                  <saw:clientEventSpec channel="B1"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c3e2308a84cad4132">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent">
+                  <saw:clientEventSpec channel="Y1"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:comparison" op="equal">
+            <sawx:expr xsi:type="sawx:sqlExpression">&quot;Cust Geo Codes&quot;.&quot;C61  Geo Country Code&quot;</sawx:expr>
+            <sawx:expr xsi:type="xsd:string">USA</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="viewSelector!1" rowSpan="2"/>
+               <saw:cvCell viewName="dvtchart!3"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!2"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:logoFormat>
+            <saw:displayFormat/></saw:logoFormat><saw:createdTime>
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>				
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view>
+      <saw:view xsi:type="saw:viewSelector" name="viewSelector!1">
+         <saw:viewSelectorCaption position="left">
+            <saw:caption>
+               <saw:text>Select Map From Dropdown</saw:text></saw:caption></saw:viewSelectorCaption>
+         <saw:viewList>
+            
+            
+            <saw:viewItem type="view" name="mapview!3"/><saw:viewItem type="view" name="mapview!4"/><saw:viewItem type="view" name="mapview!1"/><saw:viewItem type="view" name="mapview!2"/></saw:viewList></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!4">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__ELOC_WORLD_MAP__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-17024054.6484375,2732791.82188907,-5302895.18359375,8583587.614857819"/>
+            <saw:mapCenter x="-11153690.9765625" y="5648405.77892032" size="5870363.671875" srid="54004" zoomLevel="2" xUnitPixels="0.000051104159259724316" yUnitPixels="0.000051104159259724316"/>
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>
+         <saw:spatialLayers>
+            <saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_STATE__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="true"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c1c03d10c7aec7d41"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v3" xsi:type="saw:colorScheme">
+                     <saw:title mode="custom">
+                        <saw:caption>
+                           <saw:text>State Billed Qty</saw:text></saw:caption></saw:title>
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="custom" numBins="3" allowThresholdEdit="true">
+                        <saw:columnRef columnID="cf49fd12a2bc6e843"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>0 - 11753</saw:text></saw:caption>
+                              <saw:g class="color" fill="#e53100" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">0</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">11753</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>11753 - 360399.90234375</saw:text></saw:caption>
+                              <saw:g class="color" fill="#fdc200" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">11753</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">360399.90</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>360399.90234375 - 1200000</saw:text></saw:caption>
+                              <saw:g class="color" fill="#4fa300" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">360399.90</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">1200000</sawx:expr></saw:rangeHigh></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer></saw:spatialLayers>
+         <saw:canvasFormat width="600" height="300" enableWrapAround="true"/>
+         <saw:mapInteraction autoCreateFormats="true"/>
+         <saw:formatPanel width="204" height="525"/>
+         <saw:viewCaption>
+            <saw:caption>
+               <saw:text>ELocation World Map</saw:text></saw:caption></saw:viewCaption></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+         <saw:display type="bar" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="true" clientEventChannels="Y1" animateOnDisplay="true">
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="200" width="280" showGradient="true">
+            <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:gridlines default="true">
+               <saw:horizontal>
+                  <saw:major visible="false"/>
+                  <saw:minor visible="false"/></saw:horizontal>
+               <saw:vertical>
+                  <saw:major visible="false"/>
+                  <saw:minor visible="false"/></saw:vertical></saw:gridlines>
+            <saw:title mode="custom">
+               <saw:caption>
+                  <saw:text/></saw:caption></saw:title></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:measureLabels/></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="c796938b407e1cd49"/></saw:column>
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="cf49fd12a2bc6e843"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:seriesGenerator>
+                  <saw:columnRef columnID="c3e2308a84cad4132"/></saw:seriesGenerator></saw:seriesGenerators>
+            <saw:sections sectionSliderLimit="50" displayAsSlider="true">
+               <saw:section>
+                  <saw:columnRef columnID="c1c03d10c7aec7d41"/></saw:section></saw:sections></saw:selections>
+         <saw:legendFormat position="top" transparentFill="true"/>
+         <saw:axesFormats syncAxis="false">
+            <saw:axisFormat axis="Y1">
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/>
+               <saw:title mode="custom">
+                  <saw:caption>
+                     <saw:text/></saw:caption></saw:title></saw:axisFormat>
+            <saw:axisFormat axis="X">
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/>
+               <saw:title mode="custom">
+                  <saw:caption>
+                     <saw:text/></saw:caption></saw:title></saw:axisFormat></saw:axesFormats></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!2" autoPreview="true">
+         <saw:display type="pie" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="true" clientEventChannels="S1" animateOnDisplay="true">
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="360" width="280" showGradient="true">
+            <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:gridlines default="true">
+               <saw:horizontal>
+                  <saw:major visible="false"/>
+                  <saw:minor visible="false"/></saw:horizontal>
+               <saw:vertical>
+                  <saw:major visible="false"/>
+                  <saw:minor visible="false"/></saw:vertical></saw:gridlines>
+            <saw:title mode="custom">
+               <saw:caption>
+                  <saw:text/></saw:caption></saw:title></saw:canvasFormat>
+         <saw:selections>
+            <saw:seriesGenerators>
+               <saw:seriesGenerator>
+                  <saw:columnRef columnID="cd0309aa467c4590e"/></saw:seriesGenerator></saw:seriesGenerators>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="pie">
+                  <saw:columnRef columnID="c796938b407e1cd49"/></saw:column>
+               <saw:column measureType="pie">
+                  <saw:columnRef columnID="cf49fd12a2bc6e843"/></saw:column></saw:measures>
+            <saw:categories>
+               <saw:measureLabels/></saw:categories>
+            <saw:sections sectionSliderLimit="50" displayAsSlider="true">
+               <saw:section>
+                  <saw:columnRef columnID="c1c03d10c7aec7d41"/></saw:section></saw:sections></saw:selections>
+         <saw:legendFormat position="default" transparentFill="true"/>
+         <saw:axesFormats syncAxis="false">
+            <saw:axisFormat axis="Y1">
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/>
+               <saw:title mode="custom">
+                  <saw:caption>
+                     <saw:text/></saw:caption></saw:title></saw:axisFormat>
+            <saw:axisFormat axis="X">
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/>
+               <saw:title mode="custom">
+                  <saw:caption>
+                     <saw:text/></saw:caption></saw:title></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="pie">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#FF9933"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="2"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#CC3333"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="3"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#800000" explodeWedge="true"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!3" autoPreview="true">
+         <saw:display type="bar" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="true" clientEventChannels="S1" animateOnDisplay="true">
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="200" width="280" showGradient="true">
+            <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:gridlines default="true">
+               <saw:horizontal>
+                  <saw:major visible="false"/>
+                  <saw:minor visible="false"/></saw:horizontal>
+               <saw:vertical>
+                  <saw:major visible="false"/>
+                  <saw:minor visible="false"/></saw:vertical></saw:gridlines>
+            <saw:title mode="custom">
+               <saw:caption>
+                  <saw:text/></saw:caption></saw:title></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="c3e2308a84cad4132"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="c796938b407e1cd49"/></saw:column>
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="cf49fd12a2bc6e843"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:seriesGenerator>
+                  <saw:columnRef columnID="cd0309aa467c4590e"/></saw:seriesGenerator></saw:seriesGenerators>
+            <saw:sections sectionSliderLimit="50" displayAsSlider="true">
+               <saw:section>
+                  <saw:columnRef columnID="c1c03d10c7aec7d41"/></saw:section></saw:sections>
+            <saw:page>
+               <saw:measureLabels/></saw:page></saw:selections>
+         <saw:legendFormat position="top" transparentFill="true"/>
+         <saw:axesFormats syncAxis="false">
+            <saw:axisFormat axis="Y1">
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/>
+               <saw:title mode="custom">
+                  <saw:caption>
+                     <saw:text/></saw:caption></saw:title></saw:axisFormat>
+            <saw:axisFormat axis="X">
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/>
+               <saw:title mode="custom">
+                  <saw:caption>
+                     <saw:text/></saw:caption></saw:title></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="bar">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#336699"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="2"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#99CCCC"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="3"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#003366"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats>
+         <saw:pageEdgeState>
+            <saw:QDR>
+               <saw:staticMemberGroup specialDimension="measure">
+                  <saw:members xsi:type="saw:specialValueMembers">
+                     <saw:value>cf49fd12a2bc6e843</saw:value></saw:members></saw:staticMemberGroup></saw:QDR></saw:pageEdgeState></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!1">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP_GOOGLE__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-17024054.6484375,2763268.982335069,-5302895.18359375,8614064.775303818"/>
+            <saw:mapCenter x="-11153690.9765625" y="5678882.939366319" size="5870363.671875" srid="3785" zoomLevel="2" xUnitPixels="0.000051104159259724316" yUnitPixels="0.000051104159259724316"/>
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>
+         <saw:spatialLayers>
+            <saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_STATE__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="true"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c1c03d10c7aec7d41"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v3" xsi:type="saw:colorScheme">
+                     <saw:title mode="custom">
+                        <saw:caption>
+                           <saw:text>State Billed Qty</saw:text></saw:caption></saw:title>
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="custom" numBins="3" allowThresholdEdit="true">
+                        <saw:columnRef columnID="cf49fd12a2bc6e843"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>0 - 11753</saw:text></saw:caption>
+                              <saw:g class="color" fill="#e53100" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">0</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">11753</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>11753 - 360399.90234375</saw:text></saw:caption>
+                              <saw:g class="color" fill="#fdc200" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">11753</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">360399.90</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>360399.90234375 - 1200000</saw:text></saw:caption>
+                              <saw:g class="color" fill="#4fa300" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">360399.90</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">1200000</sawx:expr></saw:rangeHigh></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer></saw:spatialLayers>
+         <saw:canvasFormat width="600" height="300" enableWrapAround="true"/>
+         <saw:mapInteraction autoCreateFormats="true"/>
+         <saw:formatPanel width="204" height="525"/>
+         <saw:viewCaption>
+            <saw:caption>
+               <saw:text>Google World Map</saw:text></saw:caption></saw:viewCaption></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!2">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP_FAST__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-124.87499828592085,21.10539168489675,-75.72656078592085,56.19132918489675"/>
+            <saw:mapCenter x="-100.26562328592085" y="38.61320418489675" size="35.15625" srid="8307" zoomLevel="2" xUnitPixels="14.222222222222221" yUnitPixels="14.222222222222221"/>
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>
+         <saw:spatialLayers>
+            <saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_STATE__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="true"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c1c03d10c7aec7d41"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v3" xsi:type="saw:colorScheme">
+                     <saw:title mode="custom">
+                        <saw:caption>
+                           <saw:text>State Billed Qty</saw:text></saw:caption></saw:title>
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="custom" numBins="3" allowThresholdEdit="true">
+                        <saw:columnRef columnID="cf49fd12a2bc6e843"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>0 - 11753</saw:text></saw:caption>
+                              <saw:g class="color" fill="#e53100" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">0</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">11753</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>11753 - 360399.90234375</saw:text></saw:caption>
+                              <saw:g class="color" fill="#fdc200" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">11753</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">360399.90</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>360399.90234375 - 1200000</saw:text></saw:caption>
+                              <saw:g class="color" fill="#4fa300" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">360399.90</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">1200000</sawx:expr></saw:rangeHigh></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer></saw:spatialLayers>
+         <saw:canvasFormat width="700" height="500" enableWrapAround="true"/>
+         <saw:mapInteraction autoCreateFormats="true"/>
+         <saw:formatPanel width="202" height="525"/>
+         <saw:viewCaption>
+            <saw:caption>
+               <saw:text>Local World Map</saw:text></saw:caption></saw:viewCaption></saw:view>
+
+<saw:view xsi:type="saw:mapview" name="mapview!3">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_WORLD_MAP_THEMATIC__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="false"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="false"/>
+                  <saw:zoomOut display="false"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="false"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-13989076.63021205,2859070.796636545,-7932818.108727675,6371505.06030842"/>
+            <saw:mapCenter x="-10956055.3997433" y="4610395.95874592" size="3522218.203125" srid="54004" zoomLevel="3" xUnitPixels="0.00010220831851944863" yUnitPixels="0.00010220831851944863"/>
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>
+         <saw:spatialLayers>
+            <saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_STATE__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="false"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c1c03d10c7aec7d41"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v3" xsi:type="saw:colorScheme">
+                     <saw:title mode="custom">
+                        <saw:caption>
+                           <saw:text>State Billed Qty</saw:text></saw:caption></saw:title>
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="custom" numBins="3" allowThresholdEdit="true">
+                        <saw:columnRef columnID="cf49fd12a2bc6e843"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>0 - 11753</saw:text></saw:caption>
+                              <saw:g class="color" fill="#e53100" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">0</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">11753</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>11753 - 360399.90234375</saw:text></saw:caption>
+                              <saw:g class="color" fill="#fdc200" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">11753</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">360399.90</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>360399.90234375 - 1200000</saw:text></saw:caption>
+                              <saw:g class="color" fill="#4fa300" fillOpacity="127"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">360399.90</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">1200000</sawx:expr></saw:rangeHigh></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer></saw:spatialLayers>
+         <saw:canvasFormat width="620" height="360" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="198" height="533"/>
+         <saw:viewCaption>
+            <saw:caption>
+               <saw:text>Thematic Map</saw:text></saw:caption></saw:viewCaption></saw:view>
+</saw:views></saw:report>

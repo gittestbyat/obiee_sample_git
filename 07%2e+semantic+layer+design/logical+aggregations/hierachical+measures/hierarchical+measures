@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:hierarchicalColumn" columnID="c9bf7560978b11913" hierarchyID="Sales Rep Hierarchy" tableName="&quot;Sales Person&quot;" dimensionID="H5 Sales Rep">
+				<saw:hierarchyLevels>
+					<saw:hierarchyLevel levelID="Grand Total"/>
+				</saw:hierarchyLevels>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c2dbaf733a099b41e">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" width="80" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c9cefc713bb2fbd74">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Hierarchy Calculations&quot;.&quot;114  Individual Contrib (Flat Rev Agg)&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" hAlign="right" vAlign="top" imagePlacement="right" width="80" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c052f5be3cf9cb883">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Hierarchy Calculations&quot;.&quot;116  Team Rev  (Sum All)&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" hAlign="right" vAlign="top" imagePlacement="right" width="80" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c73c227af1fec4554">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Hierarchy Calculations&quot;.&quot;46  Peers Avg Revenue&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" hAlign="right" vAlign="top" imagePlacement="right" width="80" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c0019f703b5144966">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Hierarchy Calculations&quot;.&quot;45  Percent to Peers Revenue&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true" hAlign="right" vAlign="top" imagePlacement="right" width="80">
+						<saw:dataFormat minDigits="0" maxDigits="0" commas="true" negativeType="minus" xsi:type="saw:percent"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf7407ecd7eb35f06">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Hierarchy Calculations&quot;.&quot;47  Index to Peers Avg&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" hAlign="right" vAlign="top" imagePlacement="right" width="80" wrapText="true"><saw:dataFormat minDigits="2" maxDigits="2" commas="true" negativeType="minus" xsi:type="saw:number"/></saw:formatSpec><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="less" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cf7407ecd7eb35f06"/>
+										<sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								<saw:formatSpec fontColor="#CC3333" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="greaterOrEqual" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cf7407ecd7eb35f06"/>
+										<sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								<saw:formatSpec fontColor="#008000" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c8bde4628c2daf174">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Hierarchy Calculations&quot;.&quot;115  Peers Rev  (Sum Siblings)&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" hAlign="right" vAlign="top" imagePlacement="right" width="80" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ce5bbfa50885d0384">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Hierarchy Calculations&quot;.&quot;E41  Full Team Population&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" fontColor="#0000FF" wrapText="true" hAlign="right" vAlign="top" imagePlacement="right" width="80"/>
+				</saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+		</saw:columns>
+	</saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!1"/>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="pivotTableView!2"/>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="dvtchart!1"/>
+				</saw:cvRow>
+			</saw:cvTable>
+		</saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2" autoPreview="true" deck="bottom" headingDisplay="columns" rowsPerPage="30" clientEventEnabled="false">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t2" grandTotalPosition="none"/>
+					</saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c9bf7560978b11913">
+							<saw:drillState>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c9bf7560978b11913"/>
+											</saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Grand Total"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>27</saw:value>
+													</saw:members>
+												</saw:hierarchyLevelMembers>
+											</saw:hierarchyMembers>
+										</saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c9bf7560978b11913"/>
+										</saw:target>
+									</saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c9bf7560978b11913" groupID="0"/>
+									</saw:selectionGroups>
+								</saw:drillStep>
+								<saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c9bf7560978b11913"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="VALUE_HIERARCHY_LEVEL==1"/><saw:members xsi:type="saw:integerMembers"><saw:value>18</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c9bf7560978b11913"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c9bf7560978b11913" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c9bf7560978b11913" levelID="Grand Total"><saw:members xsi:type="saw:integerMembers"><saw:value>27</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep></saw:drillState>
+						</saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column">
+					<saw:edgeLayers><saw:edgeLayer type="measure" insertPageBreak="false"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+				<saw:measure columnID="ce5bbfa50885d0384"/>
+				<saw:measure columnID="c0019f703b5144966"/>
+				<saw:measure columnID="cf7407ecd7eb35f06"/>
+				<saw:measure columnID="c2dbaf733a099b41e"/>
+				<saw:measure columnID="c052f5be3cf9cb883"/>
+				<saw:measure columnID="c8bde4628c2daf174"/>
+				<saw:measure columnID="c73c227af1fec4554"/>
+				<saw:measure columnID="c9cefc713bb2fbd74"/>
+			</saw:measuresList>
+		</saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view>
+		<saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+			<saw:display type="bar" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">
+				<saw:style barStyle="rectangle" lineStyle="curve" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+			</saw:display>
+			<saw:canvasFormat height="300" width="450" showGradient="true">
+				<saw:dataLabels display="always" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default">
+					<saw:textFormat fontSize="10"/>
+				</saw:dataLabels>
+				<saw:title mode="auto">
+					<saw:caption/>
+				</saw:title>
+				<saw:gridlines default="true">
+					<saw:horizontal>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/>
+					</saw:horizontal>
+					<saw:vertical>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/>
+					</saw:vertical>
+				</saw:gridlines>
+			</saw:canvasFormat>
+			<saw:selections>
+				<saw:categories>
+					<saw:category>
+						<saw:columnRef columnID="c9bf7560978b11913"/>
+						<saw:drillState>
+							<saw:hiddenLevels>
+								<saw:hierarchyLevel levelID="Grand Total"/>
+							</saw:hiddenLevels>
+							<saw:drillStep drillType="down">
+								<saw:QDR>
+									<saw:staticMemberGroup>
+										<saw:groupType>
+											<sawx:columnRefExpr columnID="c9bf7560978b11913"/>
+										</saw:groupType>
+										<saw:hierarchyMembers>
+											<saw:hierarchyLevelMembers>
+												<saw:hierarchyLevel levelID="Grand Total"/>
+												<saw:members xsi:type="saw:integerMembers">
+													<saw:value>27</saw:value>
+												</saw:members>
+											</saw:hierarchyLevelMembers>
+										</saw:hierarchyMembers>
+									</saw:staticMemberGroup>
+									<saw:target>
+										<sawx:columnRefExpr columnID="c9bf7560978b11913"/>
+									</saw:target>
+								</saw:QDR>
+								<saw:selectionGroups>
+									<saw:selectionGroup columnID="c9bf7560978b11913" groupID="0"/>
+								</saw:selectionGroups>
+							</saw:drillStep>
+							<saw:drillStep drillType="down">
+								<saw:QDR>
+									<saw:staticMemberGroup>
+										<saw:groupType>
+											<sawx:columnRefExpr columnID="c9bf7560978b11913"/>
+										</saw:groupType>
+										<saw:hierarchyMembers>
+											<saw:hierarchyLevelMembers>
+												<saw:hierarchyLevel levelID="VALUE_HIERARCHY_LEVEL==1"/>
+												<saw:members xsi:type="saw:integerMembers">
+													<saw:value>18</saw:value>
+												</saw:members>
+											</saw:hierarchyLevelMembers>
+										</saw:hierarchyMembers>
+									</saw:staticMemberGroup>
+									<saw:target>
+										<sawx:columnRefExpr columnID="c9bf7560978b11913"/>
+									</saw:target>
+								</saw:QDR>
+								<saw:selectionGroups>
+									<saw:selectionGroup columnID="c9bf7560978b11913" groupID="0"/>
+								</saw:selectionGroups>
+								<saw:drillParents>
+									<saw:drillParent columnID="c9bf7560978b11913" levelID="Grand Total">
+										<saw:members xsi:type="saw:integerMembers">
+											<saw:value>27</saw:value>
+										</saw:members>
+									</saw:drillParent>
+								</saw:drillParents>
+							</saw:drillStep>
+						</saw:drillState>
+					</saw:category>
+				</saw:categories>
+				<saw:measures showMeasureLabelsOnCategory="false">
+					<saw:column measureType="y">
+						<saw:columnRef columnID="cf7407ecd7eb35f06"/>
+					</saw:column>
+				</saw:measures>
+				<saw:seriesGenerators>
+					<saw:measureLabels/>
+				</saw:seriesGenerators>
+			</saw:selections>
+			<saw:legendFormat position="default" transparentFill="true"/>
+			<saw:axesFormats syncAxis="true">
+				<saw:axisFormat axis="Y1">
+					<saw:title mode="custom">
+						<saw:caption>
+							<saw:text/>
+						</saw:caption>
+					</saw:title>
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>
+					<saw:scaleMarkers>
+						<saw:scaleMarker color="#0000FF" xsi:type="saw:scaleMarkerLine">
+							<saw:markerLabel>
+								<saw:title mode="custom">
+									<saw:caption captionID="kcap12832459_2026">
+										<saw:text>Average</saw:text>
+									</saw:caption>
+								</saw:title>
+							</saw:markerLabel>
+							<saw:lineWidth>
+								<sawx:expr xsi:type="xsd:decimal">2</sawx:expr>
+							</saw:lineWidth>
+							<saw:linePosition>
+								<sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+							</saw:linePosition>
+						</saw:scaleMarker>
+					</saw:scaleMarkers>
+				</saw:axisFormat>
+				<saw:axisFormat axis="X">
+					<saw:title mode="auto">
+						<saw:caption/>
+					</saw:title>
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>
+				</saw:axisFormat>
+				<saw:axisFormat axis="Y2">
+					<saw:title mode="auto">
+						<saw:caption>
+							<saw:text/>
+						</saw:caption>
+					</saw:title>
+				</saw:axisFormat>
+			</saw:axesFormats>
+			<saw:seriesFormats>
+				<saw:seriesFormatGroup name="bar">
+					<saw:seriesFormatRule>
+						<saw:seriesCondition columnID="cf7407ecd7eb35f06" position="0">
+							<saw:condition>
+								<sawx:expr xsi:type="sawx:comparison" op="less">
+									<saw:columnRef columnID="cf7407ecd7eb35f06"/>
+									<sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+								</sawx:expr>
+							</saw:condition>
+						</saw:seriesCondition>
+						<saw:visualFormats>
+							<saw:visualFormat color="#FFCC99"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					<saw:seriesFormatRule>
+						<saw:seriesCondition columnID="cf7407ecd7eb35f06" position="1">
+							<saw:condition>
+								<sawx:expr xsi:type="sawx:comparison" op="greater">
+									<saw:columnRef columnID="cf7407ecd7eb35f06"/>
+									<sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+								</sawx:expr>
+							</saw:condition>
+						</saw:seriesCondition>
+						<saw:visualFormats>
+							<saw:visualFormat color="#7EB679"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+				</saw:seriesFormatGroup>
+			</saw:seriesFormats>
+		</saw:view>
+	</saw:views>
+</saw:report>

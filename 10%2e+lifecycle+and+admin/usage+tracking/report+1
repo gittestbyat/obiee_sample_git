@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">	
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;U - Usage Tracking&quot;" withinHierarchy="true">		
+      <saw:columns>			
+         <saw:column xsi:type="saw:regularColumn" columnID="ce93f9246c1ee9a16" aggRule="countDistinct">				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">Upper(&quot;Users&quot;.&quot;User Name&quot;)</sawx:expr>
+				</saw:columnFormula>
+				
+            <saw:displayFormat>					
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="action">						
+                  <saw:actionLinks showPopupMenuForOneLink="true">							
+                     <saw:actionLink actionLinkID="ce93f9246c1ee9a16_alb3b62fafd8986301">								
+                        <saw:action>									
+                           <saw:actionName>Report 2</saw:actionName>
+									
+                           <saw:parameters allowExtraParameters="true">										
+                              <saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false">											
+                                 <saw:prompt>__navigateToBIContent__</saw:prompt>
+											
+                                 <saw:description/></saw:parameter></saw:parameters>
+									
+                           <saw:assignments>										
+                              <saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign">											
+                                 <saw:value>/shared/10. Lifecycle and Admin/Usage Tracking/More Reports/Report 2</saw:value></saw:assign></saw:assignments>
+									
+                           <saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">										
+                              <saw:functionName>__navigateToBIContent__</saw:functionName>
+										
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+										
+                              <saw:scriptPath/>
+									</saw:implementation>
+									
+                           <saw:clientImplementation>										
+                              <saw:customisation invokeConfirmation="false"/>
+									</saw:clientImplementation></saw:action>
+								
+                        <saw:caption>									
+                           <saw:text>Report 2</saw:text>
+								</saw:caption>
+							</saw:actionLink></saw:actionLinks></saw:formatSpec>
+				</saw:displayFormat>
+				
+            <saw:columnHeading>					
+               <saw:displayFormat>						
+                  <saw:formatSpec/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+			</saw:column>
+			
+         <saw:column xsi:type="saw:regularColumn" columnID="c33bd000240f61575" forceGroupBy="true">				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">case when rank(aggregate(&quot;Measures&quot;.&quot;Query Count&quot; by &quot;Topic&quot;.&quot;Dashboard&quot;))&lt;6 then case when &quot;Topic&quot;.&quot;Dashboard&quot; is null then &#39;Ad-hoc Answers Queries&#39; else &quot;Topic&quot;.&quot;Dashboard&quot; end else &#39;All Other Dashboards&#39; end</sawx:expr>
+				</saw:columnFormula>
+				
+            <saw:tableHeading>					
+               <saw:caption fmt="text" oldID="kcap12832459_2595">						
+                  <saw:text>Query</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnHeading>					
+               <saw:caption fmt="text" oldID="kcap12832459_2596">						
+                  <saw:text>Top 5 Dashboards</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			
+         <saw:column xsi:type="saw:regularColumn" columnID="ce7952b0401e6649e" aggRule="sum">				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;Query Count&quot;</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column xsi:type="saw:regularColumn" columnID="c86ed3ebedb361dda">				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Week Number&quot;</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column xsi:type="saw:regularColumn" columnID="cfc195ebce71058ad">				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Start Date&quot;</sawx:expr>
+				</saw:columnFormula>
+				
+            <saw:tableHeading>					
+               <saw:caption fmt="text" captionID="kcap12832459_2597">						
+                  <saw:text>Query Time</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnHeading>					
+               <saw:caption fmt="text" captionID="kcap12832459_2598">						
+                  <saw:text>Date</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+		
+         <saw:column xsi:type="saw:regularColumn" columnID="c2b5c6aa97e62c61d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Query&quot;.&quot;Dashboard&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cecd7455ae73a213a" forceGroupBy="true" aggRule="none">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">case when rank(aggregate(&quot;Measures&quot;.&quot;Query Count&quot; by &quot;Topic&quot;.&quot;Dashboard&quot;))&lt;16 then rank(aggregate(&quot;Measures&quot;.&quot;Query Count&quot; by &quot;Topic&quot;.&quot;Dashboard&quot;)) else 17 end</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Query</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Dashboard Rank</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c1c663ebe49f1beac" aggRule="none" forceGroupBy="true"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">case when rank(aggregate(&quot;Measures&quot;.&quot;Query Count&quot; by &quot;Topic&quot;.&quot;Dashboard&quot;))&lt;17 then case when &quot;Topic&quot;.&quot;Dashboard&quot; is null then &#39;Ad-hoc Answers Queries&#39; else &quot;Topic&quot;.&quot;Dashboard&quot; end else &#39;All Other Dashboards&#39; end</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Query</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Top 16 Dashboards</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+		
+      <saw:filter>			
+         <sawx:expr xsi:type="sawx:logical" op="and">				
+            <sawx:expr op="prompted" xsi:type="sawx:special">					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Users&quot;.&quot;User Name&quot;</sawx:expr>
+				</sawx:expr>
+				
+            <sawx:expr op="prompted" xsi:type="sawx:special">					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Week Number&quot;</sawx:expr>
+				</sawx:expr>
+				
+            <sawx:expr op="prompted" xsi:type="sawx:special">					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Topic&quot;.&quot;Subject Area Name&quot;</sawx:expr>
+				</sawx:expr>
+				
+            <sawx:expr xsi:type="sawx:list" op="notIn">					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Users&quot;.&quot;User Name&quot;</sawx:expr>
+					
+               <sawx:expr xsi:type="xsd:string">BISystemUser</sawx:expr>
+				</sawx:expr>
+			
+            <sawx:expr xsi:type="sawx:comparison" op="greater">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Start Date&quot;</sawx:expr>
+               <sawx:expr xsi:type="xsd:date">2013-06-09</sawx:expr></sawx:expr></sawx:expr>
+		</saw:filter>
+		
+      <saw:columnOrder>
+         <saw:columnOrderRef columnID="cfc195ebce71058ad" direction="ascending"/>			
+         <saw:columnOrderRef columnID="cecd7455ae73a213a" direction="ascending"/></saw:columnOrder>
+	</saw:criteria>
+	
+   <saw:interactionOptions drill="true" movecolumns="true" sortcolumns="true" addremovevalues="true" groupoperations="true" calcitemoperations="true" showhidesubtotal="true" showhiderunningsum="true" inclexclcolumns="true" hidecolumns="true"/>
+   <saw:views textDelivery="compoundView!1" parentsBefore="true" includeNewColumns="false" nullSuppress="true" currentView="0">		
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">			
+         
+		<saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="4">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec/>
+						</saw:displayFormat>
+					</saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!2"/><saw:cvCell viewName="dvtchart!4" colSpan="2" rowSpan="2"/><saw:cvCell viewName="dvtchart!5" rowSpan="3"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="dvtchart!6"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1" colSpan="2"/><saw:cvCell viewName="pivotTableView!3"/></saw:cvRow></saw:cvTable></saw:view>
+		
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title>				
+            <saw:caption fmt="text" captionID="kcap12832459_2594">					
+               <saw:text>Query Analysis</saw:text>
+				</saw:caption>
+				
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title><saw:logoFormat>				
+            <saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>				
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>				
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view>
+		
+      <saw:view xsi:type="saw:tableView" name="tableView!1">			
+         <saw:edges>				
+            <saw:edge axis="page" showColumnHeader="true"/>
+				
+            <saw:edge axis="section"/>
+				
+            <saw:edge axis="row" showColumnHeader="true">					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="column" columnID="ce93f9246c1ee9a16"/>
+					
+                  <saw:edgeLayer type="column" columnID="c3a74950bd6d2363f"/></saw:edgeLayers>
+				</saw:edge>
+				
+            <saw:edge axis="column"/>
+			</saw:edges>
+		</saw:view>
+		
+      
+		
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" autoPreview="true">			
+         <saw:edges>				
+            <saw:edge axis="page" showColumnHeader="true"/>
+				
+            <saw:edge axis="section"/>
+				
+            <saw:edge axis="row" showColumnHeader="true">					
+               <saw:columnOrder>						
+                  <saw:columnOrderRef columnID="ce93f9246c1ee9a16" direction="descending">							
+                     <saw:QDR>								
+                        <saw:staticMemberGroup specialDimension="measure">									
+                           <saw:members xsi:type="saw:specialValueMembers">										
+                              <saw:value>ce7952b0401e6649e</saw:value>
+									</saw:members>
+								</saw:staticMemberGroup>
+							</saw:QDR>
+						</saw:columnOrderRef>
+					</saw:columnOrder>
+					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="column" columnID="ce93f9246c1ee9a16"/></saw:edgeLayers></saw:edge>
+				
+            <saw:edge axis="column">					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="measure"/>
+						
+                  <saw:edgeLayer type="column" columnID="ce93f9246c1ee9a16" duplicateID="d2"/></saw:edgeLayers></saw:edge></saw:edges>
+			
+         <saw:measuresList>				
+            <saw:measure columnID="ce7952b0401e6649e"/></saw:measuresList>
+			
+         <saw:nestedViews>				
+            <saw:nestedView position="chart only">					
+               <saw:view xsi:type="saw:dvtchart" name="pivotTableView!1::GridChart">						
+                  <saw:display type="bar" subtype="horizontalStacked" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="true">							
+                     <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+						</saw:display>
+						
+                  <saw:canvasFormat height="400" width="350" showGradient="true">							
+                     <saw:dataLabels display="always" label="name" position="below" transparentBackground="true" valueAs="value" abbreviation="none">								
+                        <saw:textFormat/>
+							</saw:dataLabels>
+							
+                     <saw:gridlines default="true">								
+                        <saw:horizontal>									
+                           <saw:major visible="false"/>
+									
+                           <saw:minor visible="false"/>
+								</saw:horizontal>
+								
+                        <saw:vertical>									
+                           <saw:major visible="false"/>
+									
+                           <saw:minor visible="false"/>
+								</saw:vertical>
+							</saw:gridlines>
+							
+                     <saw:title mode="custom">								
+                        <saw:caption captionID="kcap12832459_2605">									
+                           <saw:text># of Queries by User</saw:text>
+								</saw:caption>
+							</saw:title>
+						</saw:canvasFormat>
+						
+                  <saw:legendFormat position="none" transparentFill="true"/>
+						
+                  <saw:axesFormats syncAxis="false">							
+                     <saw:axisFormat axis="Y1">								
+                        <saw:scale scaleValues="auto" showMajorTicks="true" majorTicks="1" showMinorTicks="true" minorTicks="1" logarithmic="false" defaultTicks="false"/>
+								
+                        <saw:title mode="custom">									
+                           <saw:caption>										
+                              <saw:text/>
+									</saw:caption>
+								</saw:title>
+							</saw:axisFormat>
+							
+                     <saw:axisFormat axis="X">								
+                        <saw:scale scaleValues="auto" showMajorTicks="true" majorTicks="1" showMinorTicks="true" minorTicks="1" logarithmic="false" defaultTicks="false"/>
+								
+                        <saw:title mode="custom">									
+                           <saw:caption>										
+                              <saw:text/>
+									</saw:caption>
+								</saw:title>
+							</saw:axisFormat>
+						</saw:axesFormats>
+						
+                  <saw:seriesFormats>							
+                     <saw:seriesFormatGroup name="bar">								
+                        <saw:seriesFormatRule>									
+                           <saw:seriesCondition position="1"/>
+									
+                           <saw:visualFormats>										
+                              <saw:visualFormat color="#7EB679"/>
+									</saw:visualFormats>
+								</saw:seriesFormatRule>
+							</saw:seriesFormatGroup>
+						</saw:seriesFormats>
+						
+                  <saw:selections><saw:categories><saw:category><saw:columnRef columnID="ce93f9246c1ee9a16"/></saw:category></saw:categories><saw:measures showMeasureLabelsOnCategory="false"><saw:column measureType="x"><saw:columnRef columnID="ce7952b0401e6649e"/></saw:column></saw:measures><saw:seriesGenerators><saw:seriesGenerator><saw:columnRef columnID="ce93f9246c1ee9a16"/></saw:seriesGenerator><saw:measureLabels/></saw:seriesGenerators></saw:selections></saw:view></saw:nestedView></saw:nestedViews></saw:view>
+		
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2">			
+         <saw:edges>				
+            <saw:edge axis="page" showColumnHeader="true">				</saw:edge>
+				
+            <saw:edge axis="section">				</saw:edge>
+				
+            <saw:edge axis="row" showColumnHeader="true">				
+               <saw:edgeLayers/></saw:edge>
+				
+            <saw:edge axis="column">					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="measure" insertPageBreak="false"/></saw:edgeLayers></saw:edge></saw:edges>
+			
+         <saw:measuresList>				
+            <saw:measure columnID="ce7952b0401e6649e">					
+               <saw:memberFormat>						
+                  <saw:displayFormat>							
+                     <saw:formatSpec wrapText="true"/>
+						</saw:displayFormat>
+						
+                  <saw:caption captionID="kcap12832459_2601">							
+                     <saw:text>Total # of Queries</saw:text>
+						</saw:caption>
+					</saw:memberFormat></saw:measure>
+				
+            <saw:measure columnID="ce93f9246c1ee9a16">					
+               <saw:memberFormat>						
+                  <saw:displayFormat>							
+                     <saw:formatSpec wrapText="true"/>
+						</saw:displayFormat>
+						
+                  <saw:caption captionID="kcap12832459_2602">							
+                     <saw:text>Distinct Users</saw:text>
+						</saw:caption>
+					</saw:memberFormat></saw:measure></saw:measuresList></saw:view>
+		
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!3">			
+			
+         
+         <saw:edges><saw:edge axis="page" showColumnHeader="true">				</saw:edge><saw:edge axis="section">				</saw:edge><saw:edge axis="row" showColumnHeader="false">					
+               <saw:displayGrandTotals>						
+                  <saw:displayGrandTotal id="t1" grandTotalPosition="after">							
+                     <saw:dataBodyFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec backgroundColor="#99CCFF" wrapText="true"/>
+								</saw:displayFormat>
+							</saw:dataBodyFormat>
+						</saw:displayGrandTotal>
+					</saw:displayGrandTotals>
+					
+               <saw:edgeLayers><saw:edgeLayer type="column" columnID="cecd7455ae73a213a"/><saw:edgeLayer type="column" columnID="c1c663ebe49f1beac"/></saw:edgeLayers></saw:edge><saw:edge axis="column">					
+               <saw:edgeLayers><saw:edgeLayer type="measure" insertPageBreak="false"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>				
+				
+            
+            <saw:measure columnID="ce7952b0401e6649e" aggRule="sum"/><saw:measure columnID="ce7952b0401e6649e" duplicateID="d1" aggRule="sum">					
+					
+					
+               
+               
+               <saw:showAs type="percentOfAxis" axis="column" parent="column">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec>								
+                        <saw:dataFormat xsi:type="saw:percent" minDigits="1" maxDigits="1" scale="2"/>
+							</saw:formatSpec>
+						</saw:displayFormat>
+					</saw:showAs><saw:memberFormat>						
+                  <saw:displayFormat>							
+                     <saw:formatSpec wrapText="true"/>
+						</saw:displayFormat>
+						
+                  <saw:caption captionID="kcap12832459_2603">							
+                     <saw:text>%</saw:text>
+						</saw:caption>
+					</saw:memberFormat><saw:dataBodyFormat/></saw:measure></saw:measuresList></saw:view>
+		
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!4">			
+         <saw:edges>				
+            <saw:edge axis="page" showColumnHeader="true">					
+               <saw:edgeLayers/></saw:edge>
+				
+            <saw:edge axis="section">					
+               <saw:edgeLayers/></saw:edge>
+				
+            <saw:edge axis="row" showColumnHeader="true">					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="column" columnID="ce93f9246c1ee9a16"/>
+						
+                  <saw:edgeLayer type="column" columnID="c33bd000240f61575"/>
+                  <saw:edgeLayer type="column" columnID="c3a74950bd6d2363f"/></saw:edgeLayers>
+				</saw:edge>
+				
+            <saw:edge axis="column">					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="measure"/></saw:edgeLayers>
+				</saw:edge></saw:edges>
+			
+         <saw:measuresList>				
+            <saw:measure columnID="ce7952b0401e6649e"/>
+			</saw:measuresList>
+		</saw:view>
+		
+      
+		
+      
+		
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!4" autoPreview="true">			
+         <saw:display type="bar" subtype="stacked" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">				
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="solidFill" bubblePercentSize="100" effect="2d"/>
+			</saw:display>
+			
+         <saw:canvasFormat height="350" width="500" showGradient="true">				
+            <saw:dataLabels display="never" label="name" position="below" transparentBackground="true" valueAs="value" abbreviation="none">					
+               <saw:textFormat/>
+				</saw:dataLabels>
+				
+            <saw:gridlines default="true">					
+               <saw:horizontal>						
+                  <saw:major visible="false"/>
+						
+                  <saw:minor visible="false"/>
+					</saw:horizontal>
+					
+               <saw:vertical>						
+                  <saw:major visible="false"/>
+						
+                  <saw:minor visible="false"/>
+					</saw:vertical>
+				</saw:gridlines>
+				
+            <saw:title mode="custom">					
+               <saw:caption captionID="kcap12832459_2600">						
+                  <saw:text># of Queries</saw:text>
+					</saw:caption>
+				</saw:title>
+			</saw:canvasFormat>
+			
+         <saw:selections>				
+            <saw:categories>					
+               <saw:category>						
+                  <saw:columnRef columnID="cfc195ebce71058ad"/>
+					</saw:category>
+				</saw:categories>
+				
+            <saw:measures showMeasureLabelsOnCategory="false">					
+               
+				<saw:column measureType="y"><saw:columnRef columnID="ce7952b0401e6649e"/></saw:column></saw:measures>
+				
+            <saw:seriesGenerators>					
+               <saw:seriesGenerator><saw:columnRef columnID="c33bd000240f61575"/></saw:seriesGenerator>
+				<saw:measureLabels/></saw:seriesGenerators>
+			</saw:selections>
+			
+         <saw:legendFormat position="bottom" transparentFill="true"/>
+			
+         <saw:axesFormats syncAxis="true">				
+            <saw:axisFormat axis="Y1">					
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" minorTicks="1" logarithmic="false" defaultTicks="true" min="0"/>
+					
+               <saw:title mode="custom">						
+                  <saw:caption>							
+                     <saw:text/>
+						</saw:caption>
+					</saw:title>
+				</saw:axisFormat>
+				
+            <saw:axisFormat axis="X" displayScaleLabels="true">					
+               <saw:scale scaleValues="auto" showMajorTicks="true" majorTicks="1" showMinorTicks="true" minorTicks="1" logarithmic="false" defaultTicks="false"/>
+					
+               <saw:title mode="custom">						
+                  <saw:caption/>
+					</saw:title>
+				<saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/><saw:textFormat fontSize="10"/></saw:axisFormat>
+			</saw:axesFormats>
+		<saw:seriesFormats><saw:seriesFormatGroup name="bar"><saw:seriesFormatRule><saw:seriesCondition columnID="c33bd000240f61575" position="0"><saw:condition><sawx:expr xsi:type="sawx:comparison" op="equal"><saw:columnRef columnID="c33bd000240f61575"/><sawx:expr xsi:type="xsd:string">All Other Dashboards</sawx:expr></sawx:expr></saw:condition></saw:seriesCondition><saw:visualFormats><saw:visualFormat color="#999999"/></saw:visualFormats></saw:seriesFormatRule><saw:seriesFormatRule><saw:seriesCondition columnID="c33bd000240f61575" position="1"><saw:condition><sawx:expr xsi:type="sawx:comparison" op="equal"><saw:columnRef columnID="c33bd000240f61575"/><sawx:expr xsi:type="xsd:string">Ad-hoc Answers Queries</sawx:expr></sawx:expr></saw:condition></saw:seriesCondition><saw:visualFormats><saw:visualFormat color="#6699CC"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+		
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!5" autoPreview="true">			
+         <saw:display type="bar" subtype="horizontal" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">				
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+			
+         <saw:canvasFormat height="640" width="300" showGradient="true">				
+            <saw:dataLabels display="always" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default">
+               <saw:textFormat fontSize="10"/></saw:dataLabels>
+				
+            <saw:title mode="custom">					
+               <saw:caption/></saw:title>
+				
+            <saw:gridlines default="true">					
+               <saw:horizontal>						
+                  <saw:major visible="false"/>
+						
+                  <saw:minor visible="false"/></saw:horizontal>
+					
+               <saw:vertical>						
+                  <saw:major visible="false"/>
+						
+                  <saw:minor visible="false"/></saw:vertical></saw:gridlines></saw:canvasFormat>
+			
+         <saw:selections>				
+            <saw:categories>					
+               <saw:category>
+                  <saw:columnRef columnID="cecd7455ae73a213a"/></saw:category>
+               <saw:category><saw:columnRef columnID="c1c663ebe49f1beac"/></saw:category></saw:categories>
+				
+            <saw:measures showMeasureLabelsOnCategory="false">					
+               <saw:column measureType="x">						
+                  <saw:columnRef columnID="ce7952b0401e6649e"/></saw:column></saw:measures>
+				
+            <saw:seriesGenerators>					
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+			
+         <saw:legendFormat position="none" transparentFill="true"/>
+			
+         <saw:axesFormats syncAxis="false">				
+            <saw:axisFormat axis="Y1">					
+               <saw:title mode="custom">						
+                  <saw:caption/></saw:title>
+					
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/></saw:axisFormat>
+				
+            <saw:axisFormat axis="X" displayScaleLabels="true">					
+               <saw:title mode="custom">						
+                  <saw:caption>							
+                     <saw:text/></saw:caption></saw:title>
+					
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/>
+					
+               <saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/>
+					
+               <saw:textFormat fontSize="9"/></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats><saw:seriesFormatGroup name="bar"><saw:seriesFormatRule><saw:seriesCondition columnID="c1c663ebe49f1beac" position="0"><saw:condition><sawx:expr xsi:type="sawx:comparison" op="equal"><saw:columnRef columnID="c1c663ebe49f1beac"/><sawx:expr xsi:type="xsd:string">All Other Dashboards</sawx:expr></sawx:expr></saw:condition></saw:seriesCondition><saw:visualFormats><saw:visualFormat color="#999999"/></saw:visualFormats></saw:seriesFormatRule><saw:seriesFormatRule><saw:seriesCondition columnID="c1c663ebe49f1beac" position="1"><saw:condition><sawx:expr xsi:type="sawx:comparison" op="equal"><saw:columnRef columnID="c1c663ebe49f1beac"/><sawx:expr xsi:type="xsd:string">Ad-hoc Answers Queries</sawx:expr></sawx:expr></saw:condition></saw:seriesCondition><saw:visualFormats><saw:visualFormat color="#6699CC"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view><saw:view xsi:type="saw:dvtchart" name="dvtchart!6" autoPreview="true">			
+         <saw:display type="lineTimeSeries" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">				
+            <saw:style barStyle="rectangle" lineStyle="step" scatterStyle="default" fillStyle="solidFill" bubblePercentSize="100" effect="2d"/>
+			</saw:display>
+			
+         <saw:canvasFormat height="250" width="500" showGradient="true">				
+            <saw:dataLabels display="never" label="name" position="below" transparentBackground="true" valueAs="value" abbreviation="none">					
+               <saw:textFormat/>
+				</saw:dataLabels>
+				
+            <saw:gridlines default="true">					
+               <saw:horizontal>						
+                  <saw:major visible="false"/>
+						
+                  <saw:minor visible="false"/>
+					</saw:horizontal>
+					
+               <saw:vertical>						
+                  <saw:major visible="false"/>
+						
+                  <saw:minor visible="false"/>
+					</saw:vertical>
+				</saw:gridlines>
+				
+            <saw:title mode="custom">					
+               <saw:caption captionID="kcap12832459_2600">						
+                  <saw:text># of Queries</saw:text>
+					</saw:caption>
+				</saw:title>
+			</saw:canvasFormat>
+			
+         <saw:selections>				
+            <saw:categories>					
+               <saw:category>						
+                  <saw:columnRef columnID="cfc195ebce71058ad"/>
+					</saw:category>
+				</saw:categories>
+				
+            <saw:measures showMeasureLabelsOnCategory="false">					
+               
+				<saw:column measureType="y"><saw:columnRef columnID="ce7952b0401e6649e"/></saw:column></saw:measures>
+				
+            <saw:seriesGenerators>					
+               
+				<saw:measureLabels/></saw:seriesGenerators>
+			</saw:selections>
+			
+         <saw:legendFormat position="none" transparentFill="true"/>
+			
+         <saw:axesFormats syncAxis="true">				
+            <saw:axisFormat axis="Y1">					
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" minorTicks="1" logarithmic="false" defaultTicks="true" min="0"/>
+					
+               <saw:title mode="custom">						
+                  <saw:caption>							
+                     <saw:text/>
+						</saw:caption>
+					</saw:title>
+				</saw:axisFormat>
+				
+            <saw:axisFormat axis="X" displayScaleLabels="true">					
+               <saw:scale scaleValues="auto" showMajorTicks="true" majorTicks="1" showMinorTicks="true" minorTicks="1" logarithmic="false" defaultTicks="false"/>
+					
+               <saw:title mode="custom">						
+                  <saw:caption/>
+					</saw:title>
+				<saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/><saw:textFormat fontSize="10"/></saw:axisFormat>
+			</saw:axesFormats>
+		</saw:view></saw:views></saw:report>

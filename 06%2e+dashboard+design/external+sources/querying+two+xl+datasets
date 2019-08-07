@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="XSA(&#39;prodney&#39;.&#39;Online Sales Qty&#39;)" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cfe4d9948603360e2">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;A - Sample Sales&quot;.&quot;Ship To Regions&quot;.&quot;R50  Region&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>From Subject Area</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Region</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cc9b10fb7a7a4004e">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;A - Sample Sales&quot;.&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>From Subject Area</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Brand</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ca4cbd3b1833de9e7">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;A - Sample Sales&quot;.&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading><saw:caption fmt="text"><saw:text>From Subject Area</saw:text></saw:caption></saw:tableHeading><saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Year</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c7b6ca4228190bc3b">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Columns&quot;.&quot;Online Sales Qty&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>From 1st XL</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Online Sales Qty</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cb7669d687ec63875">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">XSA(&#39;prodney&#39;.&#39;Online Sales Qty Target&#39;).&quot;Columns&quot;.&quot;Online Sales Qty Target&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>From 2nd XL</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Online Sales Qty Target</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:logical" op="and">
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Columns&quot;.&quot;Region&quot;</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Columns&quot;.&quot;Brand&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!1"/>
+               <saw:cvCell viewName="trellisView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none"><saw:title><saw:caption fmt="text"><saw:text>Querying two XL datasets and a Subject Area </saw:text></saw:caption></saw:title></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true" headingDisplay="table2Rows" repeat="false">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cfe4d9948603360e2"/>
+                  <saw:edgeLayer type="column" columnID="cc9b10fb7a7a4004e"/>
+                  <saw:edgeLayer type="column" columnID="ca4cbd3b1833de9e7"/>
+                  <saw:edgeLayer type="column" columnID="c7b6ca4228190bc3b"/>
+                  <saw:edgeLayer type="column" columnID="cb7669d687ec63875"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:trellisView" name="trellisView!1" scrollingEnabled="false" type="singleviz">
+         <saw:nestedViews>
+            <saw:nestedView position="embedded">
+               <saw:view xsi:type="saw:dvtchart" name="Trellis37f93ab9f501af0c">
+                  <saw:display type="bar" subtype="default" renderFormat="default" mode="online">
+                     <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+                  <saw:canvasFormat height="100" width="100">
+                     <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/></saw:canvasFormat>
+                  <saw:selections>
+                     <saw:categories>
+                        <saw:category>
+                           <saw:columnRef columnID="ca4cbd3b1833de9e7"/></saw:category></saw:categories>
+                     <saw:measures showMeasureLabelsOnCategory="false">
+                        <saw:column measureType="y">
+                           <saw:columnRef columnID="c7b6ca4228190bc3b"/></saw:column>
+                        <saw:column measureType="y">
+                           <saw:columnRef columnID="cb7669d687ec63875"/></saw:column></saw:measures>
+                     <saw:seriesGenerators>
+                        <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+                  <saw:legendFormat position="default" transparentFill="true"/>
+                  <saw:axesFormats>
+                     <saw:axisFormat axis="X" displayScaleLabels="true">
+                        <saw:labels rotate="0" rotateLabels="false" skipLabels="true" abbreviation="default"/>
+                        <saw:textFormat/></saw:axisFormat>
+                     <saw:axisFormat axis="Y1">
+                        <saw:title mode="custom"/></saw:axisFormat></saw:axesFormats></saw:view></saw:nestedView></saw:nestedViews>
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cc9b10fb7a7a4004e"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover" dependent="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cfe4d9948603360e2"/>
+                  <saw:edgeLayer type="measure" visibility="hidden"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c7b6ca4228190bc3b" name="Trellis37f93ab9f501af0c" type="view"/></saw:measuresList></saw:view></saw:views></saw:report>

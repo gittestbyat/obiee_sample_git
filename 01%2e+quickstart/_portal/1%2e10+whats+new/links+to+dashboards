@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="0ut2mq7t1pc8lta6"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="u2336bqkig6449lk" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 0" duid="huro4gu4dm4qss8r" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="8jf9nepd4kasu48o"><sawd:HTML fmt="html">&lt;font size=3 color=#000080&gt;
+Links to New Feature Demo Pages
+&lt;/font&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+The dashboard  1.10 New Feature Demo Pages that existed in SampleApp 406 has now been updated to showcase new features in OBIEE 11.1.1.9. 
+[br/]The features highlighted in the SampleApp 406 version of New Features Demo is available in a different dashboard within the catalog.  &lt;/br&gt;&lt;/br&gt;
+Please refer to the following table for details on the feature and the dashboard page where it is highlighted in this version. 
+
+
+&lt;/br&gt;
+&lt;/br&gt;</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 1" duid="kecvpbb6fqmte0q0"><sawd:HTML fmt="html">&lt;body lang=EN-US link=blue vlink=purple style=&#39;tab-interval:.5in&#39;&gt;
+
+&lt;br&gt;
+&lt;table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style=&#39;margin-left:.5in;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext&#39;&gt;
+ &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+  &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Performance Tiles&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+  minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/01. QuickStart/_portal/1.30 Quickstart&amp;Page=Overview&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+  style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+  &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin&#39;&gt;100% Stacked Bar&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+  &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+  minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla and Configured Visuals&amp;Page=Standard Visuals&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+  style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+
+ &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+   &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+   &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+   normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+   mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+   mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+   Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Waterfall Bridge Report&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+   &lt;/td&gt;
+   &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+   solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+   &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+   normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+   mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+   mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+   minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla and Configured Visuals&amp;Page=Waterfall&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+   style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+   mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+   mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+   Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+   &lt;/td&gt;
+ &lt;/tr&gt;
+
+ &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+    &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+    mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+    &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+    mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+    mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Navigation from Totals&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;/td&gt;
+    &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+    border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+    solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+    &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+    normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+    mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+    mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla and Configured Visuals&amp;Page=Actions on Totals&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+    style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+    mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+    mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;/td&gt;
+ &lt;/tr&gt;
+
+ &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+     &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+     mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+     &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+     normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+     mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+     mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+     Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Null Non-Suppress&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+     &lt;/td&gt;
+     &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+     border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+     solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+     &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+     normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+     mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+     mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+     minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Null Non-Suppress&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+     style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+     mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+     mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+     Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+     &lt;/td&gt;
+ &lt;/tr&gt;
+
+  &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+      &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+      mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+      &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+      mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+      mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+      Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Layout Options&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;/td&gt;
+      &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+      border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+      solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+      &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+      normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+      mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+      mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+      minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=Layout Options&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+      style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+      mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+      mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+      Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;/td&gt;
+ &lt;/tr&gt;
+
+  &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+       &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+       mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+       &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+       normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+       mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+       mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+       Arial;mso-bidi-theme-font:minor-latin&#39;&gt;BIP Printing&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+       &lt;/td&gt;
+       &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+       border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+       solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+       &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+       normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+       mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+       mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+       minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.20 Dashboards Design&amp;Page=BIP Printing&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+       style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+       mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+       mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+       Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+       &lt;/td&gt;
+ &lt;/tr&gt;
+
+  &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+        &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+        mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+        &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+        mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+        mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+        Arial;mso-bidi-theme-font:minor-latin&#39;&gt;BIP CEIM&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+        &lt;/td&gt;
+        &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+        border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+        solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+        &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+        normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+        mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+        minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/05. Published Reporting/_portal/5.30 Integration&amp;Page=OBIEESubjectAreaSource&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+        style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+        mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+        mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+        Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+        &lt;/td&gt;
+ &lt;/tr&gt;
+
+  &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+         &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+         mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+         &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+         normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+         mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+         mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+         Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Totals After&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+         &lt;/td&gt;
+         &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+         border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+         solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+         &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+         normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+         mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+         mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+         minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Hier Columns&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+         style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+         mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+         mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+         Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+         &lt;/td&gt;
+ &lt;/tr&gt;
+
+ &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+          &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+          mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+          &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+          normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+          mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+          mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+          Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Blob Images&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+          &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+          border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+          solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+          &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+          normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+          mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+          mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+          minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/06. Dashboard Design/_portal/6.10 Report Building Features&amp;Page=Blob Images&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+          style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+          mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+          mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+          Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+          &lt;/td&gt;
+ &lt;/tr&gt;
+
+  &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+           &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+           mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+           &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+           normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+           mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+           mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+           Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Map Lines&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+           &lt;/td&gt;
+           &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+           border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+           solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+           &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+           normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+           mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+           mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+           minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.12 Map Geometries&amp;Page=Line Geometries&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+           style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+           mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+           mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+           Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+           &lt;/td&gt;
+ &lt;/tr&gt;
+
+  &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+            &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+            mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+            &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+            normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+            mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+            mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+            Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Maps as MD Target&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+            border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+            solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+            &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+            normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+            mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+            minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/04. Maps and Spatial/_portal/4.13 Map Interactions&amp;Page=Master Detail 2&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+            style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+            mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+            mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+            Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+            &lt;/td&gt;
+ &lt;/tr&gt;
+
+&lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+            &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+            mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+            &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+            normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+            mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+            mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+            Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Master Details&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+            border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+            solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+            &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+            normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+            mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+            minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla and Configured Visuals&amp;Page=Master Details&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+            style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+            mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+            mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+            Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+            &lt;/td&gt;
+ &lt;/tr&gt;
+  &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+             &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+             mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+             &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+             normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+             mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+             mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+             Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Essbase Writeback&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+             &lt;/td&gt;
+             &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+             border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+             solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+             &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+             normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+             mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+             mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+             minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Writeback from Tbl&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+             style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+             mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+             mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+             Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+             &lt;/td&gt;
+ &lt;/tr&gt;
+
+  &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+              &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+              mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+              &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+              normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+              mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+              mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+              Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Essbase Aggregates&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+              &lt;/td&gt;
+              &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+              border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+              solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+              &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+              normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+              mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+              mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+              minor-latin;color:black&#39;&gt;Not Available in this verion of OBIEE&lt;/a&gt;&lt;/span&gt;&lt;span
+              style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+              mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+              mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+              Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+              &lt;/td&gt;
+ &lt;/tr&gt;
+
+ &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+               &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+               mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+               &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+               normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+               mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+               mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+               Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Essbase Dynamic Alias&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+               &lt;/td&gt;
+               &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+               border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+               solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+               &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+               normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+               mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+               mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+               minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/07. Semantic Layer Design/_portal/7.40 Oracle Essbase&amp;Page=Dynamic Alias&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+               style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+               mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+               mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+               Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+               &lt;/td&gt;
+ &lt;/tr&gt;
+
+ &lt;tr style=&#39;mso-yfti-irow:0;mso-yfti-firstrow:yes&#39;&gt;
+                &lt;td width=274 valign=top style=&#39;width:205.55pt;border:solid windowtext 1.0pt;
+                mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+                &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+                normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+                mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+                mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+                Arial;mso-bidi-theme-font:minor-latin&#39;&gt;Data Range Scale&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+                &lt;/td&gt;
+                &lt;td width=316 valign=top style=&#39;width:237.25pt;border:solid windowtext 1.0pt;
+                border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+                solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt&#39;&gt;
+                &lt;p class=MsoNormal style=&#39;margin-bottom:0in;margin-bottom:.0001pt;line-height:
+                normal&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+                mso-fareast-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;
+                mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+                minor-latin;color:black&#39;&gt;&lt;a href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02. Visualizations/_portal/2.10 Vanilla and Configured Visuals&amp;Page=Data Range Scale&quot; target=&quot;_blank&quot;&gt;Click Here&lt;/a&gt;&lt;/span&gt;&lt;span
+                style=&#39;mso-ascii-font-family:Arial;mso-ascii-theme-font:minor-latin;
+                mso-fareast-font-family:Arial;mso-fareast-theme-font:minor-latin;
+                mso-hansi-font-family:Arial;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+                Arial;mso-bidi-theme-font:minor-latin&#39;&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+                &lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p class=MsoNormal style=&#39;margin-left:.5in&#39;&gt;&lt;span style=&#39;mso-ascii-font-family:
+Arial;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Arial;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-latin&#39;&gt;&lt;o:p&gt;&amp;nbsp;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;/body&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

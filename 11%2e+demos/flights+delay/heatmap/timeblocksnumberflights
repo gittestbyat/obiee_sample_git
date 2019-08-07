@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria subjectArea="&quot;X - Airlines Delay&quot;" xsi:type="saw:simpleCriteria" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="cbdc7fd961f6d8a2f"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Carrier&quot;.&quot;Carrier Short&quot;}</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" interaction="none"/></saw:displayFormat><saw:tableHeading><saw:caption fmt="html"><saw:text>Carrier</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="html"><saw:text>@{Dim01}{&quot;Carrier&quot;.&quot;Carrier Short&quot;}</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column columnID="c2" xsi:type="saw:regularColumn">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Schedule&quot;.&quot;Dep Time Grp&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" fontSize="10" wrapText="true" hAlign="right" width="50" fontStyle="bold"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat>
+				</saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c94b6984218cb6e56" forceGroupBy="true">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">ntile(&quot;Flight Facts&quot;.&quot;# of Flights&quot;,10)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="html">
+						<saw:text>Delay Facts</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="html">
+						<saw:text>Decile Flights</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ca43321e3b5440e8a">
+				<saw:displayFormat>
+					<saw:formatSpec wrapText="true" suppress="repeat" fontSize="10">
+					</saw:formatSpec><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c94b6984218cb6e56"/>
+										<sawx:expr xsi:type="xsd:decimal">1</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#c7d7ff" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c94b6984218cb6e56"/>
+										<sawx:expr xsi:type="xsd:decimal">2</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#b8c7ff" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c94b6984218cb6e56"/>
+										<sawx:expr xsi:type="xsd:decimal">3</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#a9b7f8" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c94b6984218cb6e56"/>
+										<sawx:expr xsi:type="xsd:decimal">4</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#9aa7e2" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c94b6984218cb6e56"/>
+										<sawx:expr xsi:type="xsd:decimal">5</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#8b97cd" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c94b6984218cb6e56"/>
+										<sawx:expr xsi:type="xsd:decimal">6</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#7d88b8" wrapText="true" fontColor="#FFFFFF"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c94b6984218cb6e56"/>
+										<sawx:expr xsi:type="xsd:decimal">7</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#6f79a3" wrapText="true" fontColor="#FFFFFF"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c94b6984218cb6e56"/>
+										<sawx:expr xsi:type="xsd:decimal">8</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#555c7c" wrapText="true" fontColor="#FFFFFF"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c94b6984218cb6e56"/>
+										<sawx:expr xsi:type="xsd:decimal">9</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#39415c" wrapText="true" fontColor="#FFFFFF"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c94b6984218cb6e56"/>
+										<sawx:expr xsi:type="xsd:decimal">10</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#242939" wrapText="true" fontColor="#FFFFFF" fontStyle="regular"/></saw:formatRule></saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></saw:columnFormula>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column columnID="c0" xsi:type="saw:regularColumn">
+				<saw:displayFormat>
+					<saw:formatSpec wrapText="true" suppress="repeat" fontSize="11">
+						<saw:dataFormat xsi:type="saw:percent" minDigits="1" maxDigits="1" commas="true" negativeType="redMinus"/></saw:formatSpec><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cbe6e360dc1e2baa2"/>
+										<sawx:expr xsi:type="xsd:decimal">1</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#7FFFAA" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cbe6e360dc1e2baa2"/>
+										<sawx:expr xsi:type="xsd:decimal">2</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#AAFFAA" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cbe6e360dc1e2baa2"/>
+										<sawx:expr xsi:type="xsd:decimal">3</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#D4FFAA" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cbe6e360dc1e2baa2"/>
+										<sawx:expr xsi:type="xsd:decimal">4</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#F7DDB5" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cbe6e360dc1e2baa2"/>
+										<sawx:expr xsi:type="xsd:decimal">5</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#FFFFFF" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cbe6e360dc1e2baa2"/>
+										<sawx:expr xsi:type="xsd:decimal">6</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#F6F7A2" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cbe6e360dc1e2baa2"/>
+										<sawx:expr xsi:type="xsd:decimal">7</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#FFD47F" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cbe6e360dc1e2baa2"/>
+										<sawx:expr xsi:type="xsd:decimal">8</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#FFAA55" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cbe6e360dc1e2baa2"/>
+										<sawx:expr xsi:type="xsd:decimal">9</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#FF7F2A" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr op="equal" xsi:type="sawx:comparison">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cbe6e360dc1e2baa2"/>
+										<sawx:expr xsi:type="xsd:decimal">10</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#CC3333" wrapText="true" fontColor="#FFFFFF" fontStyle="bold"/></saw:formatRule></saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat>
+				</saw:columnHeading>
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Delay Facts&quot;.&quot;Delay Perf % (0=Ontime,  &gt;0=Late)&quot;}</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cbe6e360dc1e2baa2">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">Ntile(@{Met01}{&quot;Delay Facts&quot;.&quot;Delay Perf % (0=Ontime,  &gt;0=Late)&quot;},10)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="html">
+						<saw:text>Answers Calc</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="html">
+						<saw:text>Decile Ratio</saw:text></saw:caption></saw:columnHeading></saw:column>
+		</saw:columns>
+		<saw:filter><sawx:expr xsi:type="sawx:savedFilter" path="/shared/11. Demos/_filters/X - Airlines Delay/Prt Filters - All Dims" name="Prt Filters - All Dims"/></saw:filter><saw:columnOrder>
+			<saw:columnOrderRef columnID="c2" direction="ascending"/><saw:columnOrderRef columnID="ca43321e3b5440e8a" direction="descending"/></saw:columnOrder></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!2"><saw:displayFormat><saw:formatSpec borderColor="#EEEEEE" borderPosition="8" borderStyle="single"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!3"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="none" includeName="false"><saw:displayFormat><saw:formatSpec borderColor="#666699" borderPosition="8" borderStyle="thick" wrapText="true"/></saw:displayFormat><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666666" borderPosition="none" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:title>
+				<saw:caption fmt="text">
+					<saw:text>Time Block Delay Performance</saw:text></saw:caption><saw:displayFormat><saw:formatSpec fontColor="#000000" wrapText="true"/></saw:displayFormat></saw:title></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true">
+				</saw:edge><saw:edge axis="section">
+					<saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge><saw:edge axis="row" showColumnHeader="false">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t2" grandTotalPosition="after"/></saw:displayGrandTotals>
+					<saw:columnOrder><saw:columnOrderRef columnID="ca43321e3b5440e8a" direction="descending"/></saw:columnOrder><saw:edgeLayers><saw:edgeLayer type="column" columnID="c1"/></saw:edgeLayers></saw:edge><saw:edge axis="column">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="after"/></saw:displayGrandTotals>
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c2"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+				<saw:measure columnID="ca43321e3b5440e8a"/><saw:measure columnID="c0"/></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+			<saw:display type="lineBar" subtype="basic" renderFormat="default" mode="online" animateOnDisplay="false">
+				<saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+			<saw:canvasFormat height="180" width="400">
+				<saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+				<saw:title mode="custom"/><saw:gridlines default="true"/></saw:canvasFormat>
+			<saw:selections>
+				<saw:categories>
+					<saw:category>
+						<saw:columnRef columnID="c2"/></saw:category></saw:categories>
+				<saw:measures showMeasureLabelsOnCategory="false">
+					<saw:column measureType="y1" riserType="bar">
+						<saw:columnRef columnID="ca43321e3b5440e8a"/></saw:column>
+					<saw:column measureType="y2" riserType="line">
+						<saw:columnRef columnID="c0"/></saw:column></saw:measures>
+				<saw:seriesGenerators>
+					<saw:measureLabels/></saw:seriesGenerators></saw:selections>
+			<saw:legendFormat position="top" transparentFill="true"><saw:textFormat fontSize="11"/></saw:legendFormat>
+			<saw:axesFormats>
+				<saw:axisFormat axis="Y1" displayScaleLabels="true">
+					<saw:title mode="auto">
+						<saw:displayFormat>
+							<saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+					<saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="k" skipLabels="true"/>
+					<saw:textFormat fontSize="9"/><saw:scale showMajorTicks="true" majorTicks="5" defaultTicks="false"/></saw:axisFormat>
+				<saw:axisFormat axis="Y2" displayScaleLabels="true">
+					<saw:title mode="custom">
+						<saw:displayFormat>
+							<saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+					<saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true">
+						<saw:dataFormat xsi:type="saw:number" commas="false" negativeType="minus" minDigits="0" maxDigits="0"/></saw:labels>
+					<saw:textFormat fontSize="1"/><saw:scale showMajorTicks="false" defaultTicks="false" majorTicks="5" showMinorTicks="false" minorTicks="1"/></saw:axisFormat>
+				<saw:axisFormat axis="X" displayScaleLabels="true">
+					<saw:title mode="custom"/>
+					<saw:labels rotate="90" rotateLabels="true" stagger="false" abbreviation="default" skipLabels="true"/>
+					<saw:textFormat fontSize="9"/></saw:axisFormat></saw:axesFormats>
+			<saw:seriesFormats><saw:seriesFormatGroup name="lineBarBar"><saw:seriesFormatRule><saw:seriesCondition position="1"/><saw:visualFormats><saw:visualFormat color="#A7B5F6"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup><saw:seriesFormatGroup name="lineBarLine"><saw:seriesFormatRule><saw:seriesCondition position="1"/><saw:visualFormats><saw:visualFormat lineStyle="default" lineWidth="2" symbol="off"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+		<saw:view xsi:type="saw:dvtchart" name="dvtchart!2">
+			<saw:display type="lineBar" subtype="basic" renderFormat="default" mode="online" animateOnDisplay="false">
+				<saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+			<saw:canvasFormat height="230" width="600">
+				<saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+				<saw:title mode="custom"/></saw:canvasFormat>
+			<saw:selections>
+				<saw:categories>
+					<saw:category><saw:columnRef columnID="cbdc7fd961f6d8a2f"/></saw:category></saw:categories>
+				<saw:measures showMeasureLabelsOnCategory="false">
+					<saw:column measureType="y1" riserType="bar">
+						<saw:columnRef columnID="ca43321e3b5440e8a"/></saw:column>
+					<saw:column measureType="y2" riserType="line">
+						<saw:columnRef columnID="c0"/></saw:column></saw:measures>
+				<saw:seriesGenerators>
+					<saw:measureLabels/></saw:seriesGenerators></saw:selections>
+			<saw:legendFormat position="top" transparentFill="true"/>
+			<saw:axesFormats>
+				<saw:axisFormat axis="Y1" displayScaleLabels="true">
+					<saw:title mode="auto">
+						<saw:displayFormat>
+							<saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+					<saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="k" skipLabels="true"/>
+					<saw:textFormat fontSize="10"/></saw:axisFormat>
+				<saw:axisFormat axis="Y2" displayScaleLabels="true">
+					<saw:title mode="auto">
+						<saw:displayFormat>
+							<saw:formatSpec fontSize="10"/></saw:displayFormat></saw:title>
+					<saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true">
+						<saw:dataFormat xsi:type="saw:number" commas="false" negativeType="minus" minDigits="0" maxDigits="0"/></saw:labels>
+					<saw:textFormat fontSize="10"/></saw:axisFormat>
+				<saw:axisFormat axis="X" displayScaleLabels="true">
+					<saw:title mode="custom"><saw:caption truncate="true" truncateLength="10"><saw:text/></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:title>
+					<saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/>
+					<saw:textFormat fontSize="10"/></saw:axisFormat></saw:axesFormats>
+			<saw:seriesFormats><saw:seriesFormatGroup name="lineBarBar"><saw:seriesFormatRule><saw:seriesCondition position="1"/><saw:visualFormats><saw:visualFormat color="#A7B5F6"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup><saw:seriesFormatGroup name="lineBarLine"><saw:seriesFormatRule><saw:seriesCondition position="1"/><saw:visualFormats><saw:visualFormat lineStyle="default" lineWidth="1" symbol="off"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+		<saw:view xsi:type="saw:filtersView" name="filtersView!1"/><saw:view xsi:type="saw:compoundView" name="compoundView!2"><saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="dvtchart!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false"><saw:displayGrandTotals><saw:displayGrandTotal id="t3" grandTotalPosition="none"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge><saw:edge axis="column"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c2"><saw:memberFormat><saw:displayFormat><saw:formatSpec width="90" wrapText="true" fontStyle="regular"/></saw:displayFormat></saw:memberFormat><saw:headerFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="ca43321e3b5440e8a"><saw:memberFormat><saw:displayFormat><saw:formatSpec fontSize="10" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:measure><saw:measure columnID="c0"><saw:memberFormat><saw:displayFormat><saw:formatSpec width="90" wrapText="true" fontSize="10" hAlign="right"/></saw:displayFormat></saw:memberFormat><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec backgroundColor="#FFFFFF" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList><saw:sectionContent><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:sectionContent></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!3" autoPreview="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false"><saw:columnOrder><saw:columnOrderRef columnID="c94b6984218cb6e56" direction="descending"/><saw:columnOrderRef columnID="ca43321e3b5440e8a" direction="descending"/></saw:columnOrder><saw:displayGrandTotals><saw:displayGrandTotal id="t5" grandTotalPosition="after"><saw:memberFormat><saw:displayFormat><saw:formatSpec borderColor="#CCCCCC" borderPosition="all" borderStyle="single" wrapText="true" paddingTop="4" paddingBottom="4" backgroundColor="#f3f2ea"/></saw:displayFormat></saw:memberFormat></saw:displayGrandTotal></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="cbdc7fd961f6d8a2f" uiTableName="Carrier"><saw:memberFormat><saw:displayFormat><saw:formatSpec backgroundColor="#fcfcfc" borderColor="#CCCCCC" borderPosition="all" borderStyle="single" paddingTop="4" paddingBottom="4" wrapText="true"/></saw:displayFormat></saw:memberFormat><saw:headerFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column"><saw:displayGrandTotals><saw:displayGrandTotal id="t4" grandTotalPosition="after"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="measure" visibility="hidden" uiTableName="Measure Labels"><saw:memberFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="c2" uiTableName="Schedule"><saw:memberFormat><saw:displayFormat><saw:formatSpec backgroundColor="#fcfcfc" borderColor="#CCCCCC" borderPosition="all" borderStyle="single" wrapText="true" hAlign="right" fontStyle="regular" paddingTop="4" paddingBottom="4"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="ca43321e3b5440e8a" uiTableName="Flight Facts"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true" hAlign="right"/></saw:displayFormat></saw:memberFormat><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec paddingTop="6" paddingBottom="6" wrapText="true" borderColor="#CCCCCC" borderPosition="12" borderStyle="single" width="60" fontSize="11"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="text"><saw:text>Delay Performance by Time Blocks</saw:text></saw:caption></saw:staticText><saw:displayFormat><saw:formatSpec fontFamily="Arial" fontSize="18"/></saw:displayFormat></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!2"><saw:staticText><saw:caption fmt="text"><saw:text>Number of Flights</saw:text></saw:caption></saw:staticText><saw:displayFormat><saw:formatSpec fontFamily="Arial" fontSize="18"/></saw:displayFormat></saw:view><saw:view xsi:type="saw:titleView" name="titleView!2" includeName="false" startedDisplay="none"><saw:title><saw:caption fmt="text"><saw:text>Number of Flights</saw:text></saw:caption><saw:displayFormat>
+					<saw:formatSpec fontColor="#000000" fontSize="16" wrapText="true" fontFamily="Arial" fontStyle="bold"/>
+				</saw:displayFormat>
+			</saw:title><saw:displayFormat>
+				<saw:formatSpec borderPosition="none" wrapText="true"/>
+			</saw:displayFormat><saw:subTitle><saw:displayFormat>
+					<saw:formatSpec fontSize="14" wrapText="true" fontFamily="Arial" fontColor="#000080"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text">
+					<saw:text>Flight Volume by Airline</saw:text>
+				</saw:caption>
+			</saw:subTitle></saw:view></saw:views></saw:report>

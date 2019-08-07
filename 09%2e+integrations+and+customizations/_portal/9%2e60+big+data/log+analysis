@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="knon2jtr4ptbbmg6"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="true" duid="68o5m70k1lsusma8" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="all" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4" borderColor="#EEEEEE"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontSize="12" fontFamily="Arial"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			
+		<sawd:htmlView name="HTML 0" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font style=&quot;font:12px arial&quot;&gt; &lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot; /&gt;&lt;b&gt; Description :&lt;/b&gt; This report analyses log files generated on accessing an http server. Oracle Big Data SQL is used to read these log files residing in HDFS. [br/]
+The log files contain the host ipaddress from where the request is originating. This ip is joined to a lookup table in Oracle database to determine the country to which this ip belongs
+
+&lt;/font&gt;
+</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 3" frozen="false" canFreeze="false" duid="gm4btiteuvlc26hn" layoutType="bestFit" break="column"><sawd:dashboardSection layoutType="bestFit" name="Section 4" duid="9fqddnnrt3ehggfd" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 1" path="/shared/09. Integrations and Customizations/Big Data - Hive/Log Analysis/Prt - Month" duid="rakao9er1qmj81ii"><saw:caption><saw:text>Prt - Month</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection><sawd:dashboardSection layoutType="bestFit" name="Section 3" collapsible="false" duid="pc9v4stca6melqq9" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="s5g3eovq7egoc50o" links="merd" overrideParentLinks="true"><saw:caption><saw:text>Log Analysis</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Big Data - Hive/Log Analysis/Log Analysis"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

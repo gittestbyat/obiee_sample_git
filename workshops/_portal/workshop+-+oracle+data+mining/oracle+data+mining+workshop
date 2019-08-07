@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlVersion="200810300" isEmpty="false" xmlns:saw="com.siebel.analytics.web/report/v1.1" duid="njkdu67edpibgfdm" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="jrmsjujq0d5kmo3f" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="qv5cip0mlhjc7te1" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec paddingLeft="10" wrapText="true" borderPosition="none"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="l4b5qm6ius8ffter"><sawd:HTML fmt="html">[br/]
+[b]INTRODUCTION[/b]
+[br/]
+Oracle Data Mining provides a powerful, state-of-the-art data mining capability within Oracle Database. You can use Oracle Data Mining to build and deploy predictive and descriptive data mining applications, to add intelligent capabilities to existing applications, and to generate predictive queries for data exploration.
+[br/][br/]
+Oracle Data Mining offers a comprehensive set of in-database algorithms for performing a variety of mining tasks, such as classification, regression, anomaly detection, feature extraction, clustering, and market basket analysis. The algorithms can work on standard case data, transactional data, star schemas, and text and other forms of unstructured data. Oracle Data Mining is uniquely suited to the mining of very large data sets.
+[br/][br/]
+[b]WORKSHOP[/b]
+[br/]
+This tutorial covers the use of Oracle Data Miner 4.0 to perform data mining activities against Oracle Database 12c Release 1. Oracle Data Miner 4.0 is included as an extension of Oracle SQL Developer, version 4.0. In this lesson, you learn how to use Data Miner to create a classification model in order to solve a business problem. 
+[br/][br/]
+Specifically this tutorial covers step by step instructions on building the following data mining applications:
+[br/] - Targeting best customers: a data mining process that predicts which existing customers are most likely to purchase insurance.
+[br/] - Market Basket Analysis: a workflow using association rules models to perform market basket analysis of retail customers.
+[br/] - Text Mining with an EM Clustering Model: a workflow that performs text mining activities with the EM algorithm. New in Oracle Database 12c, Expectation Maximization (EM) enables combination of structured data (such as sales transactions and customer demographics) with unstructured data, such as text data.
+[br/][br/]
+&lt;a target=_blank href=&#39;/analyticsRes/SampleApp/WorkshopDocs/OAA_TD_Manual.pdf&#39;&gt;[b]Workshop Manual [PDF][/b]&lt;/a&gt;
+[br/][br/]</sawd:HTML></sawd:htmlView><sawd:linkView name="Link 0" target="_self" type="url" destination="" layout="captionAbove" duid="mr6un2npfq2n68hn"><sawd:linkCaption/><sawd:image src="/analyticsRes/SampleApp/WorkshopDocs/odm_sqldev.jpg"/></sawd:linkView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

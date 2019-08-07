@@ -1,0 +1,100 @@
+var airport = airport || {};
+airport.log = OM.util.Logger;
+airport.airportsLayer = null;
+airport.map = null;
+
+airport.filterBIReport = function()
+{
+	selStr ="";
+    selected = airportsLayer.getSelectedFeatures();
+	if (selected && selected.length>0){
+		for (var i=0;i<selected.length;i++){
+			selStr+="'"+selected[i].id + "',"; }
+		selStr = selStr.substring(0,selStr.length-1);
+	}
+	
+	//following function is defined in set_psvar.js file
+	SAutils.setPSVarPrompt('airport_selection',selStr);
+}
+
+airport.deselectFeature =function(){
+    selected = airportsLayer.getSelectedFeatures();
+    var i=0;
+    while(selected && selected.length>0&& i<= selected.length+1){
+        airportsLayer.deselectFeature(selected[i]);        
+    }  
+}
+
+airport.init=function(darray){
+	var baseURL = "/mapviewer";
+	var center = new OM.geometry.Point(-96, 38, 8307);
+    var uni=new OM.universe.ElocationUniverse(); 
+    map = new OM.Map(
+    	document.getElementById('map1'),
+    	{
+          mapviewerURL: baseURL,
+          disableOverviewMap:true,
+    	  universe:uni
+    	}) ;
+        
+	var navigationPanelBar = new OM.control.NavigationPanelBar();
+	map.addMapDecoration(navigationPanelBar);
+	
+	var states = new OM.layer.VectorLayer("stateslayer", 
+			{
+			  def:
+			  {
+			  type:OM.layer.VectorLayer.TYPE_PREDEFINED, 
+			  dataSource:"mvdemo", theme:"theme_demo_states", 
+			  url: baseURL,
+			  loadOnDemand: false
+			}
+		  });
+
+	var basecol = new OM.style.Color({
+				fill : "#7FAAFF",
+				fillOpacity : 0.7,
+				stroke : "#ffffff",
+				strokeThickness : 1,
+				strokeOpacity : 0.7
+			});
+	
+	states.setRenderingStyle(basecol);
+	states.enableInfoWindow(false);
+	map.addLayer(states);
+
+  airportsLayer = new OM.layer.VectorLayer("airports", { def:{	type:OM.layer.VectorLayer.TYPE_LOCAL }  });   
+  
+  /*"Code","State","Airport","Lat","Long","# Flights","Delay Mins"*/
+  var features = [];
+  for (i=0;i<darray.length; i++){
+  		var fid = darray[i][0];
+  		var mpoint = new OM.geometry.Point(darray[i][4], darray[i][3],8307);
+  		var f_attr = {attributes :{"AIRPORT":darray[i][2], "STATE":darray[i][1], "#FLIGHTS":darray[i][5], "DELAY":darray[i][6]}};
+  		features.push(new OM.Feature(fid,mpoint,f_attr));   		
+  	}
+   airportsLayer.addFeatures(features);
+   var s = new OM.style.Marker({vectorDef : [{
+            shape: { type:"circle", cx:5, cy:5, width:10, height:10 }, 
+            style: { fill:"#FFFF2A", stroke:"#787878" }}],
+        width: 10, height:10 });
+
+  airportsLayer.setRenderingStyle(s);
+  airportsLayer.setBringToTopOnMouseOver(true);
+  //airportsLayer.setLabelsVisible(true);
+  airportsLayer.enableInfoWindow(false);
+  airportsLayer.setToolTipCustomizer(function(f){
+			return f.getAttributes()["AIRPORT"]+ 
+	       "\n#FLIGHTS: "+f.getAttributes()["#FLIGHTS"] + 
+		   "\nDELAY: " +f.getAttributes()["DELAY"];
+			});
+  airportsLayer.addListener(OM.event.LayerEvent.FEATURES_DISPLAYED, function(){
+		airportsLayer.enableFeatureSelection(true,OM.layer.VectorLayer.MULTIPLE_SELECTION);	});
+  var markerStyle = new OM.style.Marker({width: 16, height: 16, src: "/mvdemo/icons/target.png"});
+  airportsLayer.setSelectStyle(markerStyle);
+  map.addLayer(airportsLayer) ;
+  
+  map.setMapCenter(center);
+  map.setMapZoomLevel(3);
+  map.init() ;
+}

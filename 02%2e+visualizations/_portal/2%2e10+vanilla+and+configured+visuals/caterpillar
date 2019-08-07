@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="a9nmbqga2rvhigjf" personalSelections="false">
+	<saw:pageProps orientation="portrait" printRows="visible">
+		<saw:pageHeader show="true"/>
+		<saw:pageFooter showOnDashboard="true" show="true">
+			<saw:zone position="top">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" borderColor="#9ABFDC" borderPosition="none" borderStyle="thick" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="left">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="left" width="33%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_207">
+					<saw:text>Samples Sales</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="center">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" width="34%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_208">
+					<saw:text>Page : @{savedName}</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="right">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="right" width="33%" fontStyle="italic" borderPosition="none" backgroundColor="#E7E7F7" fontSize="9"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" captionID="kcap12832459_209">
+					<saw:text>@{pageNumber}</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="bottom">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" fontSize="0" fontStyle="regular" height="0"/>
+				</saw:displayFormat>
+			</saw:zone>
+		</saw:pageFooter>
+	</saw:pageProps>
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_216">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Caterpillar Test Report
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_215">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="4l6e8jbp5nhvichm" break="column" frozen="false" canFreeze="false" layoutType="minimumSize"><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderPosition="none" width="200"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 2" showHeading="false" duid="d0bh29v2b2nspfb4" collapsible="false" drillInline="true" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_205">
+				<saw:text>Reports</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+			</saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/02. Visualizations/Configured Visuals/CaterPillar/PCol - Cater" duid="9oiq5eofcmv3tqa9"><saw:caption><saw:text>PCol - Cater</saw:text></saw:caption></sawd:globalFilterView>
+			<sawd:reportView name="Report 0" display="embed" showView="" links="" duid="mj4jnapkein6i84k"><saw:caption><saw:text>Caterpillar Report</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/02. Visualizations/Configured Visuals/CaterPillar/Caterpillar Report"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<getFolderContentsResponse xmlns="http://xmlns.oracle.com/oxp/service/v2">
+   <getFolderContentsReturn>
+      <catalogContents>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Data Models</absolutePath>
+            <creationDate>2011-05-10T14:13:32.000Z</creationDate>
+            <displayName>Data Models</displayName>
+            <fileName>Data Models</fileName>
+            <lastModified>2011-05-10T14:13:32.000Z</lastModified>
+            <lastModifier>biadmin</lastModifier>
+            <owner>BIAdministrator</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Folder</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Annual Appraisal Report.xdo</absolutePath>
+            <creationDate>2011-05-10T14:14:26.000Z</creationDate>
+            <displayName>Annual Appraisal Report</displayName>
+            <fileName>Annual Appraisal Report.xdo</fileName>
+            <lastModified>2011-05-10T14:14:26.000Z</lastModified>
+            <lastModifier>weblogic</lastModifier>
+            <owner>weblogic</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Balance Letter Report.xdo</absolutePath>
+            <creationDate>2011-05-10T14:13:32.000Z</creationDate>
+            <displayName>Balance Letter Report</displayName>
+            <fileName>Balance Letter Report.xdo</fileName>
+            <lastModified>2011-05-10T14:13:32.000Z</lastModified>
+            <lastModifier>weblogic</lastModifier>
+            <owner>BIAdministrator</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Brand Revenue Details.xdo</absolutePath>
+            <creationDate>2011-05-10T14:13:32.000Z</creationDate>
+            <displayName>Brand Revenue Details</displayName>
+            <fileName>Brand Revenue Details.xdo</fileName>
+            <lastModified>2011-05-10T14:13:32.000Z</lastModified>
+            <lastModifier>weblogic</lastModifier>
+            <owner>BIAdministrator</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Customer Letter.xdo</absolutePath>
+            <creationDate>2011-05-10T14:13:32.000Z</creationDate>
+            <displayName>Customer Letter</displayName>
+            <fileName>Customer Letter.xdo</fileName>
+            <lastModified>2011-05-10T14:13:32.000Z</lastModified>
+            <lastModifier>prodney</lastModifier>
+            <owner>BIAdministrator</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Employees by Department Report.xdo</absolutePath>
+            <creationDate>2011-05-10T14:14:26.000Z</creationDate>
+            <displayName>Employees by Department Report</displayName>
+            <fileName>Employees by Department Report.xdo</fileName>
+            <lastModified>2011-05-10T14:14:26.000Z</lastModified>
+            <lastModifier>weblogic</lastModifier>
+            <owner>weblogic</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Office Sales Report.xdo</absolutePath>
+            <creationDate>2011-05-10T14:13:32.000Z</creationDate>
+            <displayName>Office Sales Report</displayName>
+            <fileName>Office Sales Report.xdo</fileName>
+            <lastModified>2011-05-10T14:13:32.000Z</lastModified>
+            <lastModifier>weblogic</lastModifier>
+            <owner>BIAdministrator</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Product Listing.xdo</absolutePath>
+            <creationDate>2011-05-10T14:13:32.000Z</creationDate>
+            <displayName>Product Listing</displayName>
+            <fileName>Product Listing.xdo</fileName>
+            <lastModified>2011-05-10T14:13:32.000Z</lastModified>
+            <lastModifier>weblogic</lastModifier>
+            <owner>BIAdministrator</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Revenue Budget Actual and Detail.xdo</absolutePath>
+            <creationDate>2011-05-10T14:13:32.000Z</creationDate>
+            <displayName>Revenue Budget Actual and Detail</displayName>
+            <fileName>Revenue Budget Actual and Detail.xdo</fileName>
+            <lastModified>2011-05-10T14:13:32.000Z</lastModified>
+            <lastModifier>prodney</lastModifier>
+            <owner>BIAdministrator</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Salary Report.xdo</absolutePath>
+            <creationDate>2011-05-10T14:13:32.000Z</creationDate>
+            <displayName>Salary Report</displayName>
+            <fileName>Salary Report.xdo</fileName>
+            <lastModified>2011-05-10T14:13:32.000Z</lastModified>
+            <lastModifier>weblogic</lastModifier>
+            <owner>BIAdministrator</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/Sales History Report.xdo</absolutePath>
+            <creationDate>2011-05-10T14:13:32.000Z</creationDate>
+            <displayName>Sales History Report</displayName>
+            <fileName>Sales History Report.xdo</fileName>
+            <lastModified>2011-05-10T14:13:32.000Z</lastModified>
+            <lastModifier>weblogic</lastModifier>
+            <owner>BIAdministrator</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/SFO Passenger Count Report.xdo</absolutePath>
+            <creationDate>2011-05-10T16:58:06.000Z</creationDate>
+            <displayName>SFO Passenger Count Report</displayName>
+            <fileName>SFO Passenger Count Report.xdo</fileName>
+            <lastModified>2011-05-10T16:58:06.000Z</lastModified>
+            <lastModifier>weblogic</lastModifier>
+            <owner>weblogic</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+         <item>
+            <absolutePath>/05. Published Reporting/11g Overview/W2 2010.xdo</absolutePath>
+            <creationDate>2011-05-10T14:13:32.000Z</creationDate>
+            <displayName>W2 2010</displayName>
+            <fileName>W2 2010.xdo</fileName>
+            <lastModified>2011-05-10T14:13:32.000Z</lastModified>
+            <lastModifier>biadmin</lastModifier>
+            <owner>BIAdministrator</owner>
+            <parentAbsolutePath>/05. Published Reporting/11g Overview</parentAbsolutePath>
+            <type>Report</type>
+         </item>
+      </catalogContents>
+   </getFolderContentsReturn>
+</getFolderContentsResponse>

@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+  <saw:criteria xsi:type="saw:physicalCriteria" connectionPool="&quot;X6 - Warranty Claims Data&quot;.&quot;Warranty Claims Connection&quot;">
+    <saw:columns>
+      <saw:column columnID="c0" xsi:type="saw:physicalColumnRef">
+        <saw:displayFormat>
+          <saw:formatSpec suppress="suppress" fontSize="10" wrapText="true"/>
+        </saw:displayFormat>
+        <saw:tableHeading/>
+        <saw:columnHeading>
+          <saw:caption fmt="html">
+            <saw:text>RECORDID</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c1" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>CLAIM_DATE</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c2" xsi:type="saw:physicalColumnRef">
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true"/>
+        </saw:displayFormat>
+        <saw:tableHeading/>
+        <saw:columnHeading>
+          <saw:caption fmt="html">
+            <saw:text>CLAIM_DATE_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c3" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>DAYS_IN_SERVICE</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c4" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>DAYS_IN_SERVICE_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c5" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>CLAIM_AGE</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c6" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>CLAIM_AGE_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c7" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>CLAIM_ODMTR_MILEAGE</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c8" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>CLAIM_ODMTR_MILEAGE_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c9" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>CLAIM_TOT_GLOBL_AMT</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c10" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>CLAIM_TOT_GLOBL_AMT_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c11" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>DRIVE_TRAIN</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c12" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>DRIVE_TRAIN_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c13" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>NUM_CYLS</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c14" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>NUM_CYLS_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c15" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>PROD_DATE</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c16" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>PROD_DATE_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c17" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEH_EXPOSURE</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c18" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEH_EXPOSURE_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c19" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEH_FLOAT</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c20" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEH_FLOAT_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c21" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>SALE_DATE</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c22" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>SALE_DATE_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c23" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_BUILD_COUNTRY</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c24" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_BUILD_COUNTRY_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c25" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_EXPOSURE</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c26" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_EXPOSURE_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c27" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_FLOAT</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c28" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_FLOAT_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c29" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_MAKE</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c30" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_MAKE_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c31" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_MANUFACTURER</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c32" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_MANUFACTURER_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c33" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_MODEL</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c34" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_MODEL_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c35" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_MODEL_YEAR</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c36" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>VEHICLE_MODEL_YEAR_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c37" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>DEALER</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c38" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>DEALER_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c39" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>DEALER_CITY</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c40" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>DEALER_CITY_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c41" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>DEALER_STATEPROVINCE</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c42" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>DEALER_STATEPROVINCE_DIST</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c43" xsi:type="saw:physicalColumnRef">
+        <saw:columnHeading>
+          <saw:caption>
+            <saw:text>RK</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c44" xsi:type="saw:physicalColumnRef">
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat xsi:type="saw:number" minDigits="3" maxDigits="3" commas="true" negativeType="minus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading/>
+        <saw:columnHeading>
+          <saw:caption fmt="html">
+            <saw:text>PROBANOM</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec fontSize="10" wrapText="true"/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column columnID="c45" xsi:type="saw:physicalColumnRef">
+        <saw:displayFormat>
+          <saw:formatSpec suppress="suppress" width="500" fontSize="10" wrapText="true"/>
+        </saw:displayFormat>
+        <saw:tableHeading/>
+        <saw:columnHeading>
+          <saw:caption fmt="html">
+            <saw:text>ANOM_DET</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+    <saw:sql>SELECT *
+FROM
+  (SELECT S1.RECORDID,
+    S1.CLAIM_DATE, S1.CLAIM_DATE_DIST,
+    S1.DAYS_IN_SERVICE, S1.DAYS_IN_SERVICE_DIST,
+    S1.CLAIM_AGE, S1.CLAIM_AGE_DIST,
+    S1.CLAIM_ODMTR_MILEAGE, S1.CLAIM_ODMTR_MILEAGE_DIST,
+    S1.CLAIM_TOT_GLOBL_AMT, S1.CLAIM_TOT_GLOBL_AMT_DIST,
+    S1.DRIVE_TRAIN, S1.DRIVE_TRAIN_DIST,
+    S1.NUM_CYLS, S1.NUM_CYLS_DIST,
+    S1.PROD_DATE, S1.PROD_DATE_DIST,
+    S1.VEH_EXPOSURE, S1.VEH_EXPOSURE_DIST,
+    S1.VEH_FLOAT, S1.VEH_FLOAT_DIST,
+    S1.SALE_DATE, S1.SALE_DATE_DIST,
+    S1.VEHICLE_BUILD_COUNTRY, S1.VEHICLE_BUILD_COUNTRY_DIST,
+    S1.VEHICLE_EXPOSURE, S1.VEHICLE_EXPOSURE_DIST,
+    S1.VEHICLE_FLOAT, S1.VEHICLE_FLOAT_DIST,
+    S1.VEHICLE_MAKE, S1.VEHICLE_MAKE_DIST,
+    S1.VEHICLE_MANUFACTURER, S1.VEHICLE_MANUFACTURER_DIST,
+    S1.VEHICLE_MODEL, S1.VEHICLE_MODEL_DIST,
+    S1.VEHICLE_MODEL_YEAR, S1.VEHICLE_MODEL_YEAR_DIST,
+    S1.DEALER, S1.DEALER_DIST,
+    S1.DEALER_CITY, S1.DEALER_CITY_DIST,
+    S1.DEALER_STATEPROVINCE, S1.DEALER_STATEPROVINCE_DIST,
+    RANK() OVER (ORDER BY S1.PROBANOM DESC) RK, S1.PROBANOM,
+    EXTRACT(S1.ANOM_DET,&#39;/Details/Attribute&#39;).GETSTRINGVAL() ANOM_DET
+  FROM
+    (SELECT F.*,
+      PREDICTION_PROBABILITY(OF ANOMALY, 0 USING  @{claimattr}{CLAIM_DATE, DAYS_IN_SERVICE, CLAIM_AGE, CLAIM_ODMTR_MILEAGE, CLAIM_TOT_GLOBL_AMT, DRIVE_TRAIN, NUM_CYLS, PROD_DATE, VEH_EXPOSURE, VEH_FLOAT, SALE_DATE, 
+VEHICLE_BUILD_COUNTRY, VEHICLE_EXPOSURE, VEHICLE_FLOAT, VEHICLE_MAKE, VEHICLE_MANUFACTURER, VEHICLE_MODEL, VEHICLE_MODEL_YEAR, DEALER, 
+DEALER_CITY, DEALER_STATEPROVINCE}) OVER () PROBANOM,
+      PREDICTION_DETAILS(OF ANOMALY, 0, 4 USING  @{claimattr}{CLAIM_DATE, DAYS_IN_SERVICE, CLAIM_AGE, CLAIM_ODMTR_MILEAGE, CLAIM_TOT_GLOBL_AMT, DRIVE_TRAIN, NUM_CYLS, PROD_DATE, VEH_EXPOSURE, VEH_FLOAT, SALE_DATE, 
+VEHICLE_BUILD_COUNTRY, VEHICLE_EXPOSURE, VEHICLE_FLOAT, VEHICLE_MAKE, VEHICLE_MANUFACTURER, VEHICLE_MODEL, VEHICLE_MODEL_YEAR, DEALER, 
+DEALER_CITY, DEALER_STATEPROVINCE}) OVER () ANOM_DET
+    FROM ENDECA.FACT_CLAIM_DN F
+    ) S1
+  )
+WHERE RK &lt;= @{ranklimit}{10}</saw:sql>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1" colSpan="2">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="dvtchart!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+          <saw:cvCell viewName="tableView!2"/>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none"><saw:title><saw:caption fmt="text"><saw:text>Anomaly Predictions</saw:text></saw:caption></saw:title></saw:view>
+    <saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+      <saw:display type="bar" subtype="horizontal" renderFormat="default" mode="online">
+        <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+      </saw:display>
+      <saw:canvasFormat height="500" width="500">
+        <saw:dataLabels display="always" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default">
+          <saw:textFormat fontSize="10"/>
+          <saw:dataFormat xsi:type="saw:number" commas="false" negativeType="minus" minDigits="2" maxDigits="2"/>
+        </saw:dataLabels>
+        <saw:title mode="custom"><saw:caption><saw:text>Distance to Average (in # of Sigmas for each attribute)</saw:text></saw:caption></saw:title>
+      </saw:canvasFormat>
+      <saw:selections>
+        <saw:categories/>
+        <saw:measures showMeasureLabelsOnCategory="false">
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c2"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c4"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c6"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c8"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c10"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c12"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c14"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c16"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c18"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c20"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c22"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c24"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c26"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c28"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c30"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c32"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c34"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c36"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c38"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c40"/>
+          </saw:column>
+          <saw:column measureType="x">
+            <saw:columnRef columnID="c42"/>
+          </saw:column>
+          
+        </saw:measures>
+        <saw:seriesGenerators>
+          <saw:measureLabels/>
+        </saw:seriesGenerators>
+        <saw:page>
+          <saw:column>
+            <saw:columnRef columnID="c0"/>
+          </saw:column>
+        </saw:page>
+        <saw:sections displayAsSlider="true"/>
+      </saw:selections>
+      <saw:legendFormat position="right" transparentFill="true">
+        <saw:textFormat fontSize="10"/>
+      </saw:legendFormat>
+      <saw:axesFormats>
+        <saw:axisFormat axis="X">
+          <saw:title mode="custom">
+            <saw:caption>
+              <saw:text>Distance to Avg (# of Sigmas)</saw:text>
+            </saw:caption>
+          </saw:title>
+        </saw:axisFormat>
+      <saw:axisFormat axis="Y1"><saw:scaleMarkers><saw:scaleMarker color="#CCFFCC" xsi:type="saw:scaleMarkerRange"><saw:markerLabel><saw:title mode="custom"><saw:caption><saw:text>One Sigma</saw:text></saw:caption></saw:title></saw:markerLabel><saw:rangeLow><sawx:expr xsi:type="xsd:decimal">0</sawx:expr></saw:rangeLow><saw:rangeHigh><sawx:expr xsi:type="xsd:decimal">1</sawx:expr></saw:rangeHigh></saw:scaleMarker><saw:scaleMarker color="#F1E87D" xsi:type="saw:scaleMarkerRange"><saw:markerLabel><saw:title mode="custom"><saw:caption><saw:text>Two Sigmas</saw:text></saw:caption></saw:title></saw:markerLabel><saw:rangeLow><sawx:expr xsi:type="xsd:decimal">1</sawx:expr></saw:rangeLow><saw:rangeHigh><sawx:expr xsi:type="xsd:decimal">2</sawx:expr></saw:rangeHigh></saw:scaleMarker><saw:scaleMarker color="#FFCC99" xsi:type="saw:scaleMarkerRange"><saw:markerLabel><saw:title mode="custom"><saw:caption><saw:text>Over Two Sigmas</saw:text></saw:caption></saw:title></saw:markerLabel><saw:rangeLow><sawx:expr xsi:type="xsd:decimal">2</sawx:expr></saw:rangeLow><saw:rangeHigh><sawx:expr xsi:type="xsd:decimal">3</sawx:expr></saw:rangeHigh></saw:scaleMarker><saw:scaleMarker color="#CCCCCC" xsi:type="saw:scaleMarkerLine"><saw:markerLabel><saw:title mode="custom"><saw:caption><saw:text>.</saw:text></saw:caption></saw:title></saw:markerLabel><saw:lineWidth><sawx:expr xsi:type="xsd:decimal">1</sawx:expr></saw:lineWidth><saw:linePosition><sawx:expr xsi:type="xsd:decimal">1</sawx:expr></saw:linePosition></saw:scaleMarker><saw:scaleMarker color="#CC9933" xsi:type="saw:scaleMarkerLine"><saw:markerLabel><saw:title mode="custom"><saw:caption><saw:text>.</saw:text></saw:caption></saw:title></saw:markerLabel><saw:lineWidth><sawx:expr xsi:type="xsd:decimal">1</sawx:expr></saw:lineWidth><saw:linePosition><sawx:expr xsi:type="xsd:decimal">2</sawx:expr></saw:linePosition></saw:scaleMarker></saw:scaleMarkers></saw:axisFormat></saw:axesFormats>
+      <saw:pageEdgeState>
+        
+        
+      <saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c0"/></saw:groupType><saw:members xsi:type="saw:stringMembers"><saw:value>629701</saw:value></saw:members></saw:staticMemberGroup></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c0" groupID="0"/></saw:selectionGroups></saw:pageEdgeState>
+    </saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1" autoPreview="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true">
+          
+        <saw:edgeLayers><saw:edgeLayer type="column" columnID="c0"/><saw:edgeLayer type="column" columnID="c1"/><saw:edgeLayer type="column" columnID="c5"/><saw:edgeLayer type="column" columnID="c9"/><saw:edgeLayer type="column" columnID="c11"/><saw:edgeLayer type="column" columnID="c13"/><saw:edgeLayer type="column" columnID="c23"/><saw:edgeLayer type="column" columnID="c29"/><saw:edgeLayer type="column" columnID="c33"/><saw:edgeLayer type="column" columnID="c35"/><saw:edgeLayer type="column" columnID="c3"/><saw:edgeLayer type="column" columnID="c17"/><saw:edgeLayer type="column" columnID="c19"/><saw:edgeLayer type="column" columnID="c7"/><saw:edgeLayer type="column" columnID="c15"/><saw:edgeLayer type="column" columnID="c21"/><saw:edgeLayer type="column" columnID="c37"/><saw:edgeLayer type="column" columnID="c39"/><saw:edgeLayer type="column" columnID="c41"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges>
+    
+      
+      <saw:greenBarFormat greenBar="allLayers" enabled="true"/>
+      <saw:sectionContent>
+        <saw:displayFormat>
+          <saw:formatSpec/>
+        </saw:displayFormat>
+      </saw:sectionContent></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!2" autoPreview="true">
+    <saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true">
+          
+        <saw:edgeLayers><saw:edgeLayer type="column" columnID="c43"/><saw:edgeLayer type="column" columnID="c44"/><saw:edgeLayer type="column" columnID="c0"/><saw:edgeLayer type="column" columnID="c45"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges>
+      
+      <saw:greenBarFormat greenBar="allLayers" enabled="true"/></saw:view>
+  </saw:views>
+</saw:report>

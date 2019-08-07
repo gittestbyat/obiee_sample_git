@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/b. Features/Crosstab Report/Data Models/Complex Crosstab DM.xdm"/>
+   <description>
+      <![CDATA[Data%20Model:%20Complex%20Crosstab%20DM%20--Layout:%20RTF%20Template%20--Features:%20Crosstab,%20Conditional%20Column%20Formatting,%20Chinese%20Currency%20Amount%20in%20Words,%20XSL%20Sub%20Template]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Crosstab Layout">
+      <template label="Crosstab Layout" url="CrossTab_For Chinese Client.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Report Description" url="ReportDescription Complexcrosstab.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

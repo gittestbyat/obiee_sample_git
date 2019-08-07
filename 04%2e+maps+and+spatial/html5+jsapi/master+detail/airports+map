@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c74a4bc41084ba1f0"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Destination</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Airport Code</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ca8115943b69ba612"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">SUBSTRING(&quot;Destination&quot;.&quot;Dest US State Name&quot; FROM 5)</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Destination</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>State</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c55629c04e6f6d9d4"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport Name&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Destination</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Airport Name</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf4e6239d609985fc"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport Lat&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="6" maxDigits="6" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c03631745e775a6f5"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport Long&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="6" maxDigits="6" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c177162d943092884"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ce8a79559118eaafc"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Delay Facts&quot;.&quot;Delay Perf % (0=Ontime,  &gt;0=Late)&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Delay Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Delay Perf %</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:columnExpression" formulaUse="code" displayUse="display"><saw:columnFormula formulaUse="display"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport Name&quot;</sawx:expr></saw:columnFormula></sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Region Name&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria><saw:views currentView="3"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none"><saw:title><saw:caption fmt="text"><saw:text>Master Detail Events from Map</saw:text></saw:caption></saw:title></saw:view><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true" height="700"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:columnOrder><saw:columnOrderRef columnID="ce8a79559118eaafc" direction="descending"/></saw:columnOrder><saw:edgeLayers><saw:edgeLayer type="column" columnID="c55629c04e6f6d9d4"><saw:memberFormat><saw:displayFormat><saw:formatSpec width="200" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="ca8115943b69ba612"/><saw:edgeLayer type="column" columnID="c177162d943092884"/><saw:edgeLayer type="column" columnID="ce8a79559118eaafc"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:narrative rowCount="1000"><saw:caption fmt="html"><saw:text>[&quot;@{c74a4bc41084ba1f0}&quot;,&quot;@{ca8115943b69ba612}&quot;,&quot;@{c55629c04e6f6d9d4}&quot;,@{cf4e6239d609985fc},@{c03631745e775a6f5},@{c177162d943092884},@{ce8a79559118eaafc}]</saw:text></saw:caption></saw:narrative><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep><saw:postfix><saw:caption fmt="html"><saw:text>&#39;;
+var darray=eval(&#39;[&#39;+tempStr+&#39;]&#39;);
+var map = null;
+var airportsLayer = null;
+var connectionsLayer = null;
+var nearestAirport = null;
+var nearestFeature = null;
+var connectionsData = null;
+var baseURL  = &quot;http://&quot;+document.location.host+&quot;/mapviewer&quot;;
+var center = new OM.geometry.Point(-96,38,8307); 
+map = new OM.Map(document.getElementById(&#39;map&#39;),{mapviewerURL: baseURL}) ;
+
+//map.addListener(OM.event.MouseEvent.MOUSE_MOVE, onMouseMove);
+
+var tilelayer = new OM.layer.ElocationTileLayer(&quot;oracle.maps&quot;);
+map.addLayer(tilelayer) ;  
+
+var states = new OM.layer.VectorLayer(&quot;states&quot;, {
+def:{
+	type:OM.layer.VectorLayer.TYPE_PREDEFINED,
+	dataSource:&quot;mvdemo&quot;,
+	theme:&quot;theme_demo_states&quot;
+}
+});
+map.addLayer(states);
+
+airportsLayer = new OM.layer.VectorLayer(&quot;airports&quot;, 
+{
+def:{
+	type:OM.layer.VectorLayer.TYPE_LOCAL		
+}
+});   
+
+/*&quot;Code&quot;,&quot;State&quot;,&quot;Airport&quot;,&quot;Lat&quot;,&quot;Long&quot;,&quot;# Flights&quot;,&quot;Delay Mins&quot;*/
+for (i=0;i&lt;darray.length; i++){
+		var fid = darray[i][0];
+		var mpoint = new OM.geometry.Point(darray[i][4], darray[i][3],8307);
+		var f_attr = {attributes :{&quot;AIRPORT&quot;:darray[i][2], &quot;STATE&quot;:darray[i][1], &quot;#FLIGHTS&quot;:darray[i][5], &quot;DELAY&quot;:darray[i][6]}};
+		var feature = new OM.Feature(fid,mpoint,f_attr);  
+		airportsLayer.addFeature(feature);
+	}
+
+//airportsLayer.setLabelsVisible(false);
+airportsLayer.setBringToTopOnMouseOver(false);
+setupAirportStyles(airportsLayer);
+var pulse = new OM.style.PulseAnimation({
+	stroke: &quot;#336699&quot;,
+	duration: 1,
+	beginSize: 8,
+	endSize: 50,
+	repeatCount:3
+});
+airportsLayer.enableFeatureSelection(true);
+airportsLayer.setSelectStyle(pulse);
+airportsLayer.addListener(OM.event.MouseEvent.MOUSE_CLICK, sendMDevent);
+map.addLayer(airportsLayer) ;
+map.setMapCenter( center );
+map.setMapZoomLevel(3) ;
+map.init() ;
+
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix><saw:prefix><saw:caption fmt="html"><saw:text>&lt;DIV id=map style=&quot;width:800px;height:700px;padding:5px;&quot;&gt;&lt;/DIV&gt;
+
+&lt;script language=&#39;JavaScript&#39; src=&quot;/mvdemo/jslib/v2/jquery/jquery-1.7.2.js&quot;&gt;&lt;/script&gt;
+&lt;script language=&#39;JavaScript&#39; src=&quot;/mvdemo/gv.js&quot;&gt;&lt;/script&gt;
+&lt;script language=&#39;JavaScript&#39; src=&quot;/mvdemo/common.js&quot;&gt;&lt;/script&gt;
+&lt;script language=&#39;JavaScript&#39; src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+&lt;script src=&#39;/analyticsRes/SampleApp/customjs/SAutilsv1.3.js&#39;&gt;&lt;/script&gt;
+
+&lt;script language=&quot;JavaScript&quot; type=&quot;text/javascript&quot;&gt;
+  function sendMDevent(evt){
+  	var f = evt.feature;
+        var values = [&#39;&quot;Destination&quot;.&quot;Dest Airport Name&quot;&#39;,f.id];
+        SAutils.publishMDEvent(&#39;ch3&#39;,values);
+  }
+
+  function setupAirportStyles(layer)
+  {
+    var circles = [];
+    for(var i=0; i&lt;10; i++)
+    {
+      circles[i] =  new OM.style.Marker({
+        vectorDef : [{
+            shape: { type:&quot;circle&quot;, cx:5, cy:5, width:10, height:10 }, 
+            style: {
+              fill:&quot;#AFB6BD&quot;, 
+              stroke:&quot;#6784A3&quot;
+            }
+          }],
+        width: 7 + i*3,
+        height:7 + i*3
+      });
+    }
+    
+    var bucketStyle = new OM.style.BucketStyle(
+    {
+      styles: circles,
+      numClasses:10, 
+      classification:&#39;equal&#39;,  //creates equal-ranged buckets
+      defaultStyle: circles[0]
+    });
+
+    layer.setRenderingStyle(bucketStyle, [&quot;#FLIGHTS&quot;]);
+  }      
+
+var tempStr= &#39;</saw:text></saw:caption></saw:prefix></saw:view></saw:views></saw:report>

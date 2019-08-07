@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+       <dataModel url=".xdm"></dataModel>
+       <description></description>
+       <property name="showControls" value="true"></property>
+       <property name="online" value="true"></property>
+       <property name="openLinkInNewWindow" value="true"></property>
+       <property name="autoRun" value="true"></property>
+       <property name="cacheDocument" value="false"></property>
+       <property name="showReportLinks" value="true"></property>
+       <property name="asynchronousRun" value="false"></property>
+       <property name="useExcelProcessor" value="false"></property>
+       <property name="cacheDuration" value="45"></property>
+       <property name="controledByExtApp" value="false"></property>
+       <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;displayApply:true;"></parameters>
+       <templates default="Phone"><template label="Phone" type="xmt" url="Phone.xmt" locale="en_US" deviceType="phone" outputFormat="analyze"/></templates>
+</report>

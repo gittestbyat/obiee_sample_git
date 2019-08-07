@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         
+         
+         
+         <saw:column xsi:type="saw:regularColumn" columnID="cf11026f23d3aca61">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c590b4ba5230803fd"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D3  Organization&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf3d66f2bca2ef528"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C4  Customer Segment&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+      <saw:filter><sawx:expr xsi:type="sawx:savedFilter" path="/shared/01. QuickStart/_filters/A - Sample Sales/Short Prompted Filters" name="Short Prompted Filters"/></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c933f4274b0f3333a"/>
+                  <saw:edgeLayer type="column" columnID="c4874f268044bf5a8"/>
+                  <saw:edgeLayer type="column" columnID="c70de9d5fc3c215c4"/>
+                  <saw:edgeLayer type="column" columnID="cf11026f23d3aca61"/><saw:edgeLayer type="column" columnID="c590b4ba5230803fd"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="pie" subtype="default" renderFormat="default" mode="online" animateOnDisplay="false">
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="200" width="800">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/><saw:title mode="custom"/></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category><saw:columnRef columnID="cf3d66f2bca2ef528"/></saw:category><saw:measureLabels/></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="pie"><saw:columnRef columnID="cf11026f23d3aca61"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:seriesGenerator><saw:columnRef columnID="c590b4ba5230803fd"/></saw:seriesGenerator></saw:seriesGenerators>
+            <saw:page/><saw:sections/></saw:selections>
+         <saw:legendFormat position="left" transparentFill="true"/></saw:view></saw:views></saw:report>

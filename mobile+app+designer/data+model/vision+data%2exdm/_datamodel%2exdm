@@ -1,0 +1,185 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="MAD_HCM" type="simple">
+         <file dataSourceRef="xdo:local">vision_main.xml</file>
+      </dataSet>
+      <dataSet name="Planning2" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Vision_plans.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="REC_SUMM" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>p_recruitment_summary.xls</file>
+            <sheetName>Sheet2</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="REC_DETAIL" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>p_recruitment.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="COSTS" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Santander_Cost.xls</file>
+            <sheetName>Sheet2</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="METRICS" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Vision_metrics.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="WORKFORCE" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Vision_workforce.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="TOP_TALENT" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Vision_toptalent.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <link name="dl-4109" parentGroup="G_3" parentColumn="Recruiting_Area" childQuery="REC_DETAIL" childColumn="Recruiting Area"/>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="MAD_HCM"/>
+      <nodeList name="data-structure">
+         <dataStructure tagName="EXTRA">
+            <group name="G_2" label="G_2" source="Planning2">
+               <element name="MARKET" value="MARKET" label="MARKET" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="LOB" value="LOB" label="LOB" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="CURRENT_HEADCOUNT" value="CURRENT_HEADCOUNT" label="CURRENT_HEADCOUNT" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="NATURAL_ATTRITION" value="NATURAL_ATTRITION" label="NATURAL_ATTRITION" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+               <element name="PAID_LEAVERS" value="PAID_LEAVERS" label="PAID_LEAVERS" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+               <element name="AGENCY_JOINERS" value="AGENCY_JOINERS" label="AGENCY_JOINERS" dataType="xsd:double" breakOrder="" fieldOrder="6"/>
+               <element name="MA" value="MA" label="MA" dataType="xsd:double" breakOrder="" fieldOrder="7"/>
+               <element name="NEW_DIRECTIONS" value="NEW_DIRECTIONS" label="NEW_DIRECTIONS" dataType="xsd:double" breakOrder="" fieldOrder="8"/>
+               <element name="OTHER" value="OTHER" label="OTHER" dataType="xsd:double" breakOrder="" fieldOrder="9"/>
+               <element name="ENDING_HEADCOUNT" value="ENDING_HEADCOUNT" label="ENDING_HEADCOUNT" dataType="xsd:double" breakOrder="" fieldOrder="10"/>
+               <element name="VARIANCE" value="VARIANCE" label="VARIANCE" dataType="xsd:double" breakOrder="" fieldOrder="11"/>
+               <element name="GROWTH" value="GROWTH" label="GROWTH" dataType="xsd:double" breakOrder="" fieldOrder="12"/>
+               <element name="REVENUE" value="REVENUE" label="REVENUE" dataType="xsd:double" breakOrder="" fieldOrder="13"/>
+            </group>
+            <group name="G_3" label="G_3" source="REC_SUMM">
+               <element name="Recruiting_Area" value="Recruiting Area" label="Recruiting Area" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="Quarter" value="Quarter" label="Quarter" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="Year" value="Year" label="Year" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="No_Positions_Recruited" value="No Positions Recruited" label="No Positions Recruited" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+               <element name="__Fill_Rate" value="% Fill Rate" label="% Fill Rate" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+               <element name="Time_to_Hire" value="Time to Hire" label="Time to Hire" dataType="xsd:double" breakOrder="" fieldOrder="6"/>
+               <group name="G_4" label="G_4" source="REC_DETAIL">
+                  <element name="Recruiting_Area" value="Recruiting Area" label="Recruiting Area" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+                  <element name="No_positions_opened" value="No positions opened" label="No positions opened" dataType="xsd:double" breakOrder="" fieldOrder="2"/>
+                  <element name="Unfilled_Positions" value="Unfilled Positions" label="Unfilled Positions" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+                  <element name="No_Candidates" value="No Candidates" label="No Candidates" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+                  <element name="No_Hires" value="No Hires" label="No Hires" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+                  <element name="Job_" value="Job " label="Job " dataType="xsd:string" breakOrder="" fieldOrder="6"/>
+                  <element name="ACE_candidate_refusals" value="ACE candidate refusals" label="ACE candidate refusals" dataType="xsd:double" breakOrder="" fieldOrder="7"/>
+                  <element name="Refusal_reason" value="Refusal reason" label="Refusal reason" dataType="xsd:string" breakOrder="" fieldOrder="8"/>
+                  <element name="Name" value="Name" label="Name" dataType="xsd:string" breakOrder="" fieldOrder="9"/>
+                  <element name="Application_Date" value="Application Date" label="Application Date" dataType="xsd:string" breakOrder="" fieldOrder="10"/>
+                  <element name="Phone_Number_" value="Phone Number " label="Phone Number " dataType="xsd:string" breakOrder="" fieldOrder="11"/>
+                  <element name="Email" value="Email" label="Email" dataType="xsd:string" breakOrder="" fieldOrder="12"/>
+                  <element name="null" value="" label="null" dataType="xsd:string" breakOrder="" fieldOrder="14"/>
+                  <element name="null" value="" label="null" dataType="xsd:string" breakOrder="" fieldOrder="14"/>
+                  <element name="Recruiter_Notes" value="Recruiter Notes" label="Recruiter Notes" dataType="xsd:string" breakOrder="" fieldOrder="13"/>
+               </group>
+            </group>
+            <group name="G_5" label="G_5" source="COSTS">
+               <element name="P_MARKET" value="P_MARKET" label="P_MARKET" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="P_LOB" value="P_LOB" label="P_LOB" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="P_HEADCOUNT" value="P_HEADCOUNT" label="P_HEADCOUNT" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="P_QTR" value="P_QTR" label="P_QTR" dataType="xsd:string" breakOrder="" fieldOrder="4"/>
+               <element name="P_YEAR" value="P_YEAR" label="P_YEAR" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+               <element name="P_PAY" value="P_PAY" label="P_PAY" dataType="xsd:double" breakOrder="" fieldOrder="6"/>
+               <element name="P_BONUS" value="P_BONUS" label="P_BONUS" dataType="xsd:double" breakOrder="" fieldOrder="7"/>
+               <element name="P_TOTAL" value="P_TOTAL" label="P_TOTAL" dataType="xsd:double" breakOrder="" fieldOrder="8"/>
+               <element name="P_REVENUE" value="P_REVENUE" label="P_REVENUE" dataType="xsd:double" breakOrder="" fieldOrder="9"/>
+               <element name="P_CHANGE_COST" value="P_CHANGE_COST" label="P_CHANGE_COST" dataType="xsd:double" breakOrder="" fieldOrder="10"/>
+               <element name="P_CONTINGENT" value="P_CONTINGENT" label="P_CONTINGENT" dataType="xsd:double" breakOrder="" fieldOrder="11"/>
+               <element name="P_CHANGE_CONT" value="P_CHANGE_CONT" label="P_CHANGE_CONT" dataType="xsd:double" breakOrder="" fieldOrder="12"/>
+            </group>
+            <group name="G_7" label="G_7" source="METRICS">
+               <element name="Measure_Name" value="Measure_Name" label="Measure_Name" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="Measure_Market" value="Measure_Market" label="Measure_Market" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="Actual" value="Actual" label="Actual" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="Budget" value="Budget" label="Budget" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+               <element name="Variance" value="Variance" label="Variance" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+               <element name="On_Target" value="On Target" label="On Target" dataType="xsd:string" breakOrder="" fieldOrder="6"/>
+            </group>
+            <group name="G_6" label="G_6" source="WORKFORCE">
+               <element name="HC_MARKET" value="HC_MARKET" label="HC_MARKET" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="HC_MONTH" value="HC_MONTH" label="HC_MONTH" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="HC_HEADCOUNT" value="HC_HEADCOUNT" label="HC_HEADCOUNT" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="HC_HEADCOUNT_BUD" value="HC_HEADCOUNT_BUD" label="HC_HEADCOUNT_BUD" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+               <element name="HC_CONTINGENT" value="HC_CONTINGENT" label="HC_CONTINGENT" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+               <element name="HC_CONTINGENT_BUD" value="HC_CONTINGENT_BUD" label="HC_CONTINGENT_BUD" dataType="xsd:double" breakOrder="" fieldOrder="6"/>
+               <element name="HC_OVERTIME" value="HC_OVERTIME" label="HC_OVERTIME" dataType="xsd:double" breakOrder="" fieldOrder="7"/>
+               <element name="HC_OVERTIME_BUD" value="HC_OVERTIME_BUD" label="HC_OVERTIME_BUD" dataType="xsd:double" breakOrder="" fieldOrder="8"/>
+               <element name="HC_GENDER" value="HC_GENDER" label="HC_GENDER" dataType="xsd:string" breakOrder="" fieldOrder="9"/>
+               <element name="HC_GENDER_HEADCOUNT" value="HC_GENDER_HEADCOUNT" label="HC_GENDER_HEADCOUNT" dataType="xsd:double" breakOrder="" fieldOrder="10"/>
+               <element name="HC_PERSON_TYPE" value="HC_PERSON_TYPE" label="HC_PERSON_TYPE" dataType="xsd:string" breakOrder="" fieldOrder="11"/>
+               <element name="HC_PT_HEADCOUNT" value="HC_PT_HEADCOUNT" label="HC_PT_HEADCOUNT" dataType="xsd:double" breakOrder="" fieldOrder="12"/>
+               <element name="HC_JOB" value="HC_JOB" label="HC_JOB" dataType="xsd:string" breakOrder="" fieldOrder="13"/>
+               <element name="HC_JOB_HEADCOUNT" value="HC_JOB_HEADCOUNT" label="HC_JOB_HEADCOUNT" dataType="xsd:double" breakOrder="" fieldOrder="14"/>
+            </group>
+            <group name="G_8" label="G_8" source="TOP_TALENT">
+               <element name="TT_Metric" value="TT_Metric" label="TT_Metric" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="TT_Metric_Value" value="TT_Metric_Value" label="TT_Metric_Value" dataType="xsd:double" breakOrder="" fieldOrder="2"/>
+               <element name="Whole_Company" value="Whole_Company" label="Whole_Company" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="Project_Type" value="Project_Type" label="Project_Type" dataType="xsd:string" breakOrder="" fieldOrder="4"/>
+               <element name="TT_Project" value="TT_Project" label="TT_Project" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+               <element name="Deal_Type" value="Deal_Type" label="Deal_Type" dataType="xsd:string" breakOrder="" fieldOrder="6"/>
+               <element name="TT_Name" value="TT_Name" label="TT_Name" dataType="xsd:string" breakOrder="" fieldOrder="8"/>
+               <element name="TT_Org" value="TT_Org" label="TT_Org" dataType="xsd:string" breakOrder="" fieldOrder="9"/>
+               <element name="TT_Manager" value="TT_Manager" label="TT_Manager" dataType="xsd:string" breakOrder="" fieldOrder="10"/>
+               <element name="TT_Deal" value="TT_Deal" label="TT_Deal" dataType="xsd:double" breakOrder="" fieldOrder="7"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="MAD_HCM" left="44px" top="224px"/>
+         <layout name="Planning2" left="356px" top="88px"/>
+         <layout name="REC_SUMM" left="629px" top="79px"/>
+         <layout name="REC_DETAIL" left="876px" top="113px"/>
+         <layout name="COSTS" left="124px" top="303px"/>
+         <layout name="METRICS" left="369px" top="418px"/>
+         <layout name="WORKFORCE" left="625px" top="306px"/>
+         <layout name="TOP_TALENT" left="876px" top="466px"/>
+         <layout name="EXTRA" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks>
+         <groupLink name="dl-3595" parentGroup="G_3" childGroup="G_4"/>
+      </groupLinks>
+   </display>
+</dataModel>

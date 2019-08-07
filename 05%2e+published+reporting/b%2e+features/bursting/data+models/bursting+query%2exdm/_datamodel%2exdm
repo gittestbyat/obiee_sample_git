@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[This%20data%20model%20generates%20the%20same%20XML%20as%20the%20bursting%20query%20in%20the%20'Bursting%20Data%20Model'.%20%20]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Bursing XML" type="complex">
+         <sql dataSourceRef="demo">
+            <![CDATA[Select distinct c.custid "KEY",
+     'Customer Orders' TEMPLATE,
+     'XPT' TEMPLATE_FORMAT,
+     'en-US' LOCALE,
+     'PDF' OUTPUT_FORMAT,
+     'FILE' DEL_CHANNEL,
+     '/Temp' PARAMETER1,
+     c.custname||'_orders.pdf' PARAMETER2
+From (Select  (cv.cust_last_name|| '  ' || cv.cust_first_name ) custname, cv.customer_id custid from customers_view cv, orders_view ov where cv.customer_id = ov.customer_id) c 
+order by  c.custid]]>
+         </sql>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="G_1" source="Bursing XML" label="G_1">
+    <element name="KEY" value="KEY" dataType="xsd:integer" label="KEY" breakOrder="None" fieldOrder="1"/>
+    <element name="TEMPLATE" value="TEMPLATE" dataType="xsd:string" label="TEMPLATE" breakOrder="None" fieldOrder="2"/>
+    <element name="TEMPLATE_FORMAT" value="TEMPLATE_FORMAT" dataType="xsd:string" label="TEMPLATE_FORMAT" breakOrder="None" fieldOrder="3"/>
+    <element name="LOCALE" value="LOCALE" dataType="xsd:string" label="LOCALE" breakOrder="None" fieldOrder="4"/>
+    <element name="OUTPUT_FORMAT" value="OUTPUT_FORMAT" dataType="xsd:string" label="OUTPUT_FORMAT" breakOrder="None" fieldOrder="5"/>
+    <element name="DEL_CHANNEL" value="DEL_CHANNEL" dataType="xsd:string" label="DEL_CHANNEL" breakOrder="None" fieldOrder="6"/>
+    <element name="PARAMETER1" value="PARAMETER1" dataType="xsd:string" label="PARAMETER1" breakOrder="None" fieldOrder="7"/>
+    <element name="PARAMETER2" value="PARAMETER2" dataType="xsd:string" label="PARAMETER2" breakOrder="None" fieldOrder="8"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+<layouts><layout name="Bursing XML" left="80px" top="110px"/><layout name="DATA_DS" left="28px" top="14px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

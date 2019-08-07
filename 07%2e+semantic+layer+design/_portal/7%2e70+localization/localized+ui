@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlVersion="200810300" isEmpty="false" duid="f7kmthbgtqqe8ab6" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sawd:dashboardColumn name="Column 1" duid="6rk4nhv3qr7tirbb" layoutType="bestFit"><saw:displayFormat>
+			<saw:formatSpec vAlign="middle" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" collapsible="false" duid="ntfu04q0p33i1mn7" showSectionTitle="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" borderColor="#EFEDDF"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 1" duid="9k8nphnndboesfa4">
+				<sawd:HTML fmt="html" captionID="kcap12851496_4">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Fully Translated Example
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="l43h15jqtk3nsi2r">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12851496_3">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 0" showSectionTitle="true" duid="52pf2k7v7nud9idh" layoutType="bestFit">
+			<saw:caption captionID="kcap12851496_1">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 0" duid="4ae0l8au3ck7pifm">
+				<sawd:HTML fmt="html" captionID="kcap12851496_5">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; OBIEE interface can automatically translate all objects in the user choosed language : UI, Menus, Reports, Column Objects and Report Data.
+For default SampleApp users, english is the language, all the objects on the page show in english, including report data and AdHoc subject area column names when building queries. When login in as [b]Rjames[/b] (Admin123) user, the whole UI will show different language (swedish like in this case) including report data and AdHoc subject area column names when building queries.[br/]
+Login as [b]Rjames[/b] (Admin123) and navigae back to this example dashboard to see full translation example.</sawd:HTML>
+			</sawd:htmlView>
+			
+			
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" break="column" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" links="" duid="l8qthgk0qi23gjek"><saw:caption><saw:text>Language Translation Example</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Translation/Language Translation Example"/></sawd:reportView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

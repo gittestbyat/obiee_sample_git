@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="sb879ntn4nicj33u">
+	<sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2549">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Value of Session parameters and System Variables&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2548">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2545">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2550">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; OBIEE session and system infos can be retrieved either using javascripts, or querying values of session/RPD variable values.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 1" duid="r712cpp4grprnavb" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 3" collapsible="false" duid="mjo1aodgtt422s91" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 4" duid="lpb5edmand4o6on5"><sawd:HTML fmt="html">&lt;div id=&#39;_insertscid&#39;/&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var tempStr=&quot;&quot;;
+tempStr += &quot;&lt;table&gt;&lt;tr&gt;&lt;td colspan=2&gt;&lt;b&gt;&lt;font size=2&gt;Session Details:&lt;/font&gt;&lt;/b&gt;&lt;/br&gt;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td width=200px&gt;&lt;b&gt;- User Display Name&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.user.displayName + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Current Session ID&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + obips_scid + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- User GUID&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.user.guid + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- User ID&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.user.id + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+
+tempStr += &quot;&lt;tr&gt;&lt;td colspan=2&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Actual User Display Name&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.user.actualUserDisplayName + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Actual User ID&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.user.actualUserId + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+
+tempStr += &quot;&lt;tr&gt;&lt;td colspan=2&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Home Directory&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.user.homeDir + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Is Admin?&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.privileges.isAdmin + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Can Act As?&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.privileges.canActAs + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Has Alerts?&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.hasAlerts + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Has Creatable Item?&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.hasCreatableItem + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Most Recent Lists?&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.mostRecentLists + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Enable Section 508&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.user.prefs.userPrefsMap[&#39;enableSection508&#39;] + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+tempStr += &quot;&lt;tr&gt;&lt;td&gt;&lt;b&gt;- Default Analysis Mode&lt;/b&gt; &lt;/td&gt;&lt;td&gt;&quot; + tSessionInfos.user.prefs.userPrefsMap[&#39;defaultAnalysisMode&#39;] + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+
+tempStr += &quot;&lt;/table&gt;&quot;;
+document.getElementById(&#39;_insertscid&#39;).innerHTML = tempStr;
+&lt;/script&gt;</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 5" duid="puksgitormcclg6f"><sawd:HTML fmt="html">[br/]
+[b]URL Used : [/b][br/]&lt;script language=&quot;javascript&quot;&gt;
+document.write( document.location.href.match(/^[^?]+/)
+);
+&lt;/script&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 0" display="embed" showView="" duid="crpr1alj0gkrj9f5"><saw:caption><saw:text>System Variables</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Security/System Variables/System Variables"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec borderPosition="none" hAlign="center" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+</sawd:dashboardPage>

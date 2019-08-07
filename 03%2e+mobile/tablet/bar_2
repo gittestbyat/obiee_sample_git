@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c6164ec5d97a1125b">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:binned">
+                  <sawx:baseFormula>
+                     <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></sawx:baseFormula>
+                  <sawx:rules>
+                     <sawx:when>
+                        <sawx:condition>
+                           <sawx:expr op="equal" xsi:type="sawx:comparison">
+                              <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr>
+                              <sawx:expr xsi:type="xsd:string">BizTech</sawx:expr></sawx:expr></sawx:condition>
+                        <sawx:value>
+                           <sawx:expr xsi:type="xsd:string">1-Billing</sawx:expr></sawx:value></sawx:when>
+                     <sawx:when>
+                        <sawx:condition>
+                           <sawx:expr op="equal" xsi:type="sawx:comparison">
+                              <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr>
+                              <sawx:expr xsi:type="xsd:string">FunPod</sawx:expr></sawx:expr></sawx:condition>
+                        <sawx:value>
+                           <sawx:expr xsi:type="xsd:string">3-Other</sawx:expr></sawx:value></sawx:when>
+                     <sawx:otherwise>
+                        <sawx:value>
+                           <sawx:expr xsi:type="xsd:string">2-Support</sawx:expr></sawx:value></sawx:otherwise></sawx:rules></sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Products</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>P4  Brand</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c10fc3f23d825299d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Alternate Calendars&quot;.&quot;T32 Cal Month&quot;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Time</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Hour Block</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c88d4a05b9c30d1aa">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN &quot;Products&quot;.&quot;P4  Brand&quot; = &#39;FunPod&#39; THEN 5000+2000*sin(&quot;Base Facts&quot;.&quot;1- Revenue&quot;) WHEN &quot;Products&quot;.&quot;P4  Brand&quot; = &#39;BizTech&#39; THEN 20000+5000*cos(&quot;Base Facts&quot;.&quot;1- Revenue&quot;) else &quot;Base Facts&quot;.&quot;1- Revenue&quot;/100 END</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Products</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Metric</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+      <saw:columnOrder>
+         <saw:columnOrderRef columnID="c6164ec5d97a1125b" direction="descending"/></saw:columnOrder></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="htmlview!1"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c6164ec5d97a1125b"/>
+                  <saw:edgeLayer type="column" columnID="c10fc3f23d825299d"/>
+                  <saw:edgeLayer type="column" columnID="c88d4a05b9c30d1aa"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="bar" subtype="stacked" renderFormat="default" mode="online">
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="300" width="400">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+            <saw:title mode="custom">
+               <saw:caption>
+                  <saw:text/></saw:caption></saw:title></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="c10fc3f23d825299d"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="c88d4a05b9c30d1aa"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:seriesGenerator>
+                  <saw:columnRef columnID="c6164ec5d97a1125b"/></saw:seriesGenerator>
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+         <saw:legendFormat position="bottom" transparentFill="true"/>
+         <saw:axesFormats>
+            <saw:axisFormat axis="Y1">
+               <saw:title mode="custom"/></saw:axisFormat>
+            <saw:axisFormat axis="X" displayScaleLabels="true">
+               <saw:title mode="custom"/>
+               <saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/>
+               <saw:textFormat fontSize="12"/></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="bar">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#99CCFF"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="2"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#9999CC"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="3"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#333366"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+         <saw:staticText>
+            <saw:caption fmt="html">
+               <saw:text>[b]Rolling&amp;nbsp; 12hrs &amp;nbsp;Call &amp;nbsp;Volumes[/b]</saw:text></saw:caption></saw:staticText>
+         <saw:displayFormat>
+            <saw:formatSpec fontSize="16" fontStyle="regular" fontColor="#666666"/></saw:displayFormat></saw:view></saw:views></saw:report>

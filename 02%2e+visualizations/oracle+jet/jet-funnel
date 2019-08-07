@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="cdd01407ab4055306"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R1  Order Status&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" width="90" wrapText="true"/></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Orders</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Order Status</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c7a560b84f2c94c25"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;31  # of Orders  (Cnt Distinct)&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true" width="90"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Counts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text># of Orders</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:list" op="notIn"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R1  Order Status&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">6-Cancelled</sawx:expr><sawx:expr xsi:type="xsd:string">9-On Hold</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R2  Order Type&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:special" op="prompted"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="narrativeView!1"><saw:displayFormat><saw:formatSpec width="500" height="500" paddingLeft="20" paddingRight="10" paddingTop="20"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:displayGrandTotals><saw:displayGrandTotal id="gt_row" grandTotalPosition="after"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="cdd01407ab4055306"><saw:levels><saw:level><saw:displaySubTotal id="st_cdd01407ab4055306" subTotalPosition="none"/></saw:level></saw:levels></saw:edgeLayer><saw:edgeLayer type="column" columnID="c7a560b84f2c94c25"/><saw:edgeLayer type="column" columnID="c0c60871481a8fd50"/><saw:edgeLayer type="column" columnID="cc95035d0f8edc8fc"/><saw:edgeLayer type="column" columnID="c61f6f624cd76db50"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"/><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script&gt;
+var funnelSeries = [</saw:text></saw:caption></saw:prefix><saw:postfix><saw:caption fmt="html"><saw:text>];
+&lt;/script&gt;
+
+&lt;link rel=&quot;stylesheet&quot; id=&quot;css&quot; href=&quot;&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/analyticsRes/ojet-demo/demo-icon-charts.css&quot;&gt;
+&lt;script src=&quot;/va/api/v1/plugins/resource/oracle-jet/require.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/va/api/v1/plugins/registry/requirejsConfig.js&quot;&gt;&lt;/script&gt; 
+
+&lt;script&gt;
+document.getElementById(&quot;css&quot;).href = require.toUrl(&quot;ojs&quot;)+&quot;.css&quot;;
+$( &quot;html&quot; ).css( &quot;font-size&quot;, 14);
+
+require([&#39;ojs/ojcore&#39;, &#39;knockout&#39;, &#39;jquery&#39;, &#39;ojs/ojknockout&#39;, &#39;ojs/ojbutton&#39;, &#39;ojs/ojchart&#39;, &#39;ojs/ojtoolbar&#39;],
+function(oj, ko, $)
+{   
+    function ChartModel() {
+        var self = this;
+        self.threeDValue = ko.observable(&#39;on&#39;);
+        self.orientationValue = ko.observable(&#39;horizontal&#39;);
+        
+        /* chart data 
+        var funnelSeries = [{name: &quot;Series 1&quot;, items: [42]},
+                            {name: &quot;Series 2&quot;, items: [55]},
+                            {name: &quot;Series 3&quot;, items: [36]},
+                            {name: &quot;Series 4&quot;, items: [22]},
+                            {name: &quot;Series 5&quot;, items: [22]}];*/
+        self.funnelSeriesValue = ko.observableArray(funnelSeries);
+        
+        /* toggle buttons*/
+        self.threeDOptions = [
+            {id: &#39;2D&#39;, label: &#39;2D&#39;, value: &#39;off&#39;, icon: &#39;oj-icon demo-2d&#39;},
+            {id: &#39;3D&#39;, label: &#39;3D&#39;, value: &#39;on&#39;, icon: &#39;oj-icon demo-3d&#39;}
+        ];
+        self.orientationOptions = [
+            {id: &#39;vertical&#39;, label: &#39;vertical&#39;, value: &#39;vertical&#39;, icon: &#39;oj-icon demo-funnel-vert&#39;},
+            {id: &#39;horizontal&#39;, label: &#39;horizontal&#39;, value: &#39;horizontal&#39;, icon: &#39;oj-icon demo-funnel-horiz&#39;}
+        ];		
+    }
+    
+    var chartModel = new ChartModel();
+    
+    $(document).ready(
+	function(){
+            ko.applyBindings(chartModel, document.getElementById(&#39;chart-container&#39;));
+	}
+    );
+});	
+&lt;/script&gt;
+
+&lt;div id=&#39;chart-container&#39;&gt;
+    &lt;div id=&quot;funnelChart&quot; data-bind=&quot;ojComponent: {
+            component: &#39;ojChart&#39;, 
+            type: &#39;funnel&#39;,
+            series: funnelSeriesValue,
+            orientation: orientationValue,
+            animationOnDisplay: &#39;auto&#39;,
+            animationOnDataChange: &#39;auto&#39;,
+            styleDefaults: {threeDEffect: ko.toJS(threeDValue)}
+        }&quot;
+        style=&quot;max-width:600px;width:100%;height:400px;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;myToolbar&quot; aria-label=&quot;Chart Display Options Toolbar&quot; aria-controls=&quot;funnelChart&quot;
+       data-bind=&quot;ojComponent: {component:&#39;ojToolbar&#39;}&quot;
+       style=&quot;max-width:400px;width:100%;&quot;&gt;
+        &lt;!-- vertical/horizontal toggle button --&gt;
+        &lt;div id=&quot;radioButtonset&quot; data-bind=&quot;ojComponent: {component: &#39;ojButtonset&#39;, focusManagement:&#39;none&#39;, checked: orientationValue, chroming: &#39;half&#39;}&quot; 
+             aria-label=&quot;Choose an orientation.&quot;&gt;
+            &lt;!-- ko foreach: orientationOptions --&gt;
+              &lt;label data-bind=&quot;attr: {for: id}&quot;&gt;&lt;/label&gt;
+              &lt;input type=&quot;radio&quot; name=&quot;orientation&quot;
+                   data-bind=&quot;value: value, attr: {id: id},
+                   ojComponent: {component: &#39;ojButton&#39;, label: label, 
+                                     icons: {start: icon}, display: &#39;icons&#39;}&quot;/&gt;
+            &lt;!-- /ko --&gt;
+        &lt;/div&gt;
+        &lt;span role=&quot;separator&quot; aria-orientation=&quot;vertical&quot; class=&quot;oj-toolbar-separator&quot;&gt;&lt;/span&gt;
+        &lt;!-- 2D/3D toggle button --&gt;
+        &lt;div id=&quot;radioButtonset2&quot; data-bind=&quot;ojComponent: {component: &#39;ojButtonset&#39;, focusManagement:&#39;none&#39;, checked: threeDValue, chroming: &#39;half&#39;}&quot; 
+             aria-label=&quot;Choose a setting.&quot;&gt;
+            &lt;!-- ko foreach: threeDOptions --&gt;
+              &lt;label data-bind=&quot;attr: {for: id}&quot;&gt;&lt;/label&gt;
+              &lt;input type=&quot;radio&quot; name=&quot;threeD&quot;
+                   data-bind=&quot;value: value, attr: {id: id},
+                   ojComponent: {component: &#39;ojButton&#39;, label: label, 
+                                     icons: {start: icon}, display: &#39;icons&#39;}&quot;/&gt;
+            &lt;!-- /ko --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt; 
+&lt;/div&gt;</saw:text></saw:caption></saw:postfix><saw:narrative><saw:caption fmt="html"><saw:text>{name: &quot;@{cdd01407ab4055306}&quot;, items: [@{c7a560b84f2c94c25}]}</saw:text></saw:caption></saw:narrative><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:view></saw:views></saw:report>

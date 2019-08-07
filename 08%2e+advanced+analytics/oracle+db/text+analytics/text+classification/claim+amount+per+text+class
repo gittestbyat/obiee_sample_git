@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X6 - Warranty Claims&quot;"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c2863894392763f85"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Classes&quot;.&quot;Classification&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf95dea594a994815"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Claims&quot;.&quot;# of Claims&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c7fa7ba139d5a7eaa"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Claims&quot;.&quot;Avg Lbr Tot Amt&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c522729e9cd19e756"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Claims&quot;.&quot;Sum Tot Amt&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c851e6b778ff4760f"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Claims&quot;.&quot;Avg Part Tot Amt&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="titleView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="dvtchart!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="none" includeName="true"><saw:displayFormat><saw:formatSpec borderColor="#666666" borderPosition="8" wrapText="true"/></saw:displayFormat><saw:title><saw:displayFormat><saw:formatSpec fontFamily="Arial" fontColor="#000000" wrapText="true" fontSize="16" fontStyle="regular"/></saw:displayFormat></saw:title></saw:view><saw:view xsi:type="saw:tableView" name="tableView!1" rowsPerPage="15"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:displayGrandTotals><saw:displayGrandTotal id="gt_row" grandTotalPosition="after"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="c2863894392763f85"/><saw:edgeLayer type="column" columnID="cf95dea594a994815"/><saw:edgeLayer type="column" columnID="c522729e9cd19e756"/><saw:edgeLayer type="column" columnID="c7fa7ba139d5a7eaa"/><saw:edgeLayer type="column" columnID="c851e6b778ff4760f"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:dvtchart" name="dvtchart!1"><saw:display type="lineBar" subtype="basic" renderFormat="default" mode="online"><saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display><saw:canvasFormat height="300" width="400"><saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/><saw:title mode="custom"><saw:caption><saw:text>Cost Analysis by Classification</saw:text></saw:caption></saw:title></saw:canvasFormat><saw:selections><saw:categories><saw:category><saw:columnRef columnID="c2863894392763f85"/></saw:category></saw:categories><saw:measures showMeasureLabelsOnCategory="false"><saw:column measureType="y2" riserType="line"><saw:columnRef columnID="c851e6b778ff4760f"/></saw:column><saw:column measureType="y2" riserType="line"><saw:columnRef columnID="c7fa7ba139d5a7eaa"/></saw:column><saw:column measureType="y1" riserType="bar"><saw:columnRef columnID="c522729e9cd19e756"/></saw:column></saw:measures><saw:seriesGenerators><saw:measureLabels/></saw:seriesGenerators></saw:selections><saw:legendFormat position="top" transparentFill="true"/><saw:seriesFormats><saw:seriesFormatGroup name="lineBarBar"><saw:seriesFormatRule><saw:seriesCondition position="1"/><saw:visualFormats><saw:visualFormat color="#99CCFF"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats><saw:axesFormats><saw:axisFormat axis="Y2"><saw:title mode="custom"><saw:caption><saw:text>Avg Amount</saw:text></saw:caption></saw:title></saw:axisFormat></saw:axesFormats></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"/><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;iframe frameborder=&quot;0&quot; scrolling=&quot;no&quot; width=&quot;0&quot; height=&quot;0&quot; src=&quot;saw.dll?Answers&quot; id=&quot;myframe&quot;&gt;&lt;/iframe&gt;
+
+&lt;script&gt;
+function refreshReport(idResultsDiv){
+	var refreshObj, indexOfId;
+alert(&#39;Refreshing Report&#39;);
+	refreshObj = document.getElementById(idResultsDiv);
+	if(!refreshObj) return;	
+	while ( !refreshObj.parentNode.getAttribute(&#39;vid&#39;))       
+		refreshObj = refreshObj.parentNode;
+	refreshID=refreshObj.parentNode.getAttribute(&#39;vid&#39;);
+	indexOfId=refreshID.indexOf(&#39;~v:&#39;);
+	if (indexOfId&gt;-1) refreshID = refreshID.substring(0,indexOfId);
+	refFunction = &quot;HereLink(&#39;&quot; + refreshID + &quot;&#39;,&#39;Refresh&#39;)&quot;;
+	eval(refFunction);
+}
+
+function classifytext(){
+	var dsqlxml;
+	dsqlxml = &quot;&lt;saw:report xmlns:saw=&#39;com.siebel.analytics.web/report/v1.1&#39; xmlns:xsi=&#39;http://www.w3.org/2001/XMLSchema-instance&#39; cacheControl=&#39;bypassCache&#39;&gt;&lt;saw:criteria xsi:type=&#39;saw:physicalCriteria&#39; connectionPool=&#39;\&quot;01 - Sample App Data (ORCL)\&quot;.\&quot;Sample Relational Connection\&quot;&#39;&gt;&lt;saw:sql&gt;alter index ENDECA.TEXT_CLASSIFICATION_IDX1 rebuild&lt;/saw:sql&gt;&lt;/saw:criteria&gt;&lt;/saw:report&gt;&quot;;
+	
+	var MyIFrame = document.getElementById(&quot;myframe&quot;);
+	var MyIFrameDoc = (MyIFrame.contentWindow || MyIFrame.contentDocument);
+	if (MyIFrameDoc.document) MyIFrameDoc = MyIFrameDoc.document;
+	//MyIFrameDoc.getElementById(&quot;myform&quot;).submit();
+
+	var form = MyIFrameDoc.createElement(&quot;form&quot;);
+    form.setAttribute(&quot;method&quot;, &quot;POST&quot;);
+    form.setAttribute(&quot;action&quot;, &quot;saw.dll?Answers&quot;);
+	var hiddenField = MyIFrameDoc.createElement(&quot;input&quot;);
+    hiddenField.setAttribute(&quot;type&quot;, &quot;hidden&quot;);
+    hiddenField.setAttribute(&quot;name&quot;, &quot;ReportXML&quot;);
+    hiddenField.setAttribute(&quot;value&quot;, dsqlxml);
+    form.appendChild(hiddenField);
+    MyIFrameDoc.body.appendChild(form);
+    form.submit();
+    alert (&#39;Recomputing, please wait&#39;);
+setTimeout(function(){ refreshReport(&quot;myframe&quot;) }, 10000);
+}
+&lt;/script&gt;
+
+&lt;button onclick=classifytext();&gt;Reclassify Complain Texts&lt;/button&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

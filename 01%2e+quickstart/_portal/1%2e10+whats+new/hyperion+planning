@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="chtn24h0kc03q009"><sawd:dashboardColumn name="Column 2" frozen="false" canFreeze="true" duid="68o5m70k1lsusma8" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="all" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4" borderColor="#EEEEEE"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontSize="12" fontFamily="Arial"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			
+		<sawd:htmlView name="HTML 2" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font style=&quot;font:12px arial&quot;&gt; &lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot; /&gt;
+&lt;b&gt; Description :&lt;/b&gt; OBIEE 11.1.1.9 now supports Hyperion Planning as a data source. The following requirements must be met:[br/]
+- The Hyperion Planning Server must be version 11.1.2.4 or above.[br/]
+- The Hyperion Planning 11.1.2.4 or above application and Oracle Enterprise Performance Management Financial Planning Analytics application must be installed on the Hyperion Planning Server.[br/]
+- The servers that run Hyperion Planning 11.1.2.4 or above must be licensed for Oracle Enterprise Performance Management Financial Planning Analytics.[br/]
+[br/]
+When you import data from Hyperion Planning data sources, both measures and dimensions are imported into the Physical layer. The Hyperion Planning model is exposed in the Physical layer in the following ways:[br/]
+- The imported Hyperion Planning data source contains multiple Value columns to support measures of different data types.[br/]
+- Some measures specific to Hyperion Financial Management are not imported for Hyperion Planning data sources.[br/]
+- The Attribute property has additional sub-properties, such as IsReadOnly. These properties are also exposed as additional columns.[br/]
+&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" canFreeze="false" duid="7m6qn254nucu9jv8" layoutType="bestFit" break="column" frozen="false"><sawd:dashboardSection layoutType="bestFit" name="Section 1" collapsible="false" duid="6hsn9ba8s98i4v2p" showSectionTitle="false" horizontalLayout="true"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" borderColor="#999999" paddingRight="6"/></saw:displayFormat><sawd:htmlView name="HTML 4" duid="hapvo4de08p4cfvg"><sawd:HTML fmt="html">[b]Data Source Definition: [/b][br/][br/]
+&lt;img src=&#39;saw.dll?downloadFile&amp;path=%2Fshared%2F01.%20QuickStart%2FNew%20Features%2F11.1.1.9.0%2Fplanning_conn0.png&#39; /&gt;</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 5" duid="mdsqnvtkkqinlk51"><sawd:HTML fmt="html">[b]Hyperion Planning Metadata in the Physical Layer: [/b][br/][br/]
+&lt;img src=&#39;saw.dll?downloadFile&amp;path=%2Fshared%2F01.%20QuickStart%2FNew%20Features%2F11.1.1.9.0%2Fplanning_conn1.png&#39; /&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

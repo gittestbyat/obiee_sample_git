@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;U - Usage Tracking&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c6f1872a43b7e86f9">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Topic&quot;.&quot;Webcat Path&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c24f0c3eadeb6a6f3">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Month Number&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c3279a5a5f042cde4">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Month&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ce30ab46dbf622227">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;Query Count&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true" interaction="action">
+						<saw:actionLinks showPopupMenuForOneLink="true">
+							<saw:actionLink actionLinkID="ce30ab46dbf622227_al8b844efccad15f4f">
+								<saw:action>
+									<saw:actionName>U - Usage Tracking Overview</saw:actionName>
+									<saw:parameters allowExtraParameters="true">
+										<saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="999" multiValues="false">
+											<saw:prompt>__navigateToBIContent__</saw:prompt>
+											<saw:description/></saw:parameter></saw:parameters>
+									<saw:assignments>
+										<saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign">
+											<saw:value>/shared/10. Lifecycle and Admin/Usage Tracking/More Reports/Usage Tracking Overview</saw:value></saw:assign></saw:assignments>
+									<saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+										<saw:functionName>__navigateToBIContent__</saw:functionName>
+										<saw:scriptLanguage>JScript</saw:scriptLanguage>
+										<saw:scriptPath/></saw:implementation>
+									<saw:clientImplementation>
+										<saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action>
+								<saw:caption>
+									<saw:text>Drill to Details</saw:text></saw:caption></saw:actionLink></saw:actionLinks></saw:formatSpec></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c5d1920aad105f0ee">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">RANK(&quot;Measures&quot;.&quot;Query Count&quot;)</sawx:expr></saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Measures</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Rank</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:logical" op="and">
+				<sawx:expr op="prompted" xsi:type="sawx:special">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Users&quot;.&quot;User Name&quot;</sawx:expr>
+				</sawx:expr>
+				<sawx:expr op="prompted" xsi:type="sawx:special">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Week Number&quot;</sawx:expr>
+				</sawx:expr>
+				<sawx:expr op="prompted" xsi:type="sawx:special">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Topic&quot;.&quot;Subject Area Name&quot;</sawx:expr>
+				</sawx:expr>
+				<sawx:expr xsi:type="sawx:comparison" op="notNull">
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Topic&quot;.&quot;Webcat Path&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter>
+		<saw:columnOrder>
+			<saw:columnOrderRef columnID="ce30ab46dbf622227" direction="descending"/></saw:columnOrder></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="pivotTableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1"/>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c24f0c3eadeb6a6f3"/>
+						<saw:edgeLayer type="column" columnID="c3279a5a5f042cde4"/>
+						<saw:edgeLayer type="column" columnID="ce30ab46dbf622227"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view>
+		<saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+			<saw:display type="bar" subtype="stacked" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="true">
+				<saw:style barStyle="default" lineStyle="curve" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+			<saw:canvasFormat height="200" width="640" showGradient="true">
+				<saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+				<saw:gridlines default="true">
+					<saw:horizontal>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/></saw:horizontal>
+					<saw:vertical>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/></saw:vertical></saw:gridlines>
+				<saw:title mode="auto">
+					<saw:caption/></saw:title></saw:canvasFormat>
+			<saw:selections>
+				<saw:categories>
+					<saw:category>
+						<saw:columnRef columnID="c3279a5a5f042cde4"/></saw:category></saw:categories>
+				<saw:measures showMeasureLabelsOnCategory="false">
+					<saw:column measureType="y">
+						<saw:columnRef columnID="ce30ab46dbf622227"/></saw:column></saw:measures>
+				<saw:seriesGenerators>
+					<saw:seriesGenerator>
+						<saw:columnRef columnID="c6f1872a43b7e86f9"/></saw:seriesGenerator>
+					<saw:measureLabels/></saw:seriesGenerators></saw:selections>
+			<saw:legendFormat position="default" transparentFill="true">
+				<saw:textFormat/></saw:legendFormat>
+			<saw:axesFormats syncAxis="false">
+				<saw:axisFormat axis="Y1">
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/>
+					<saw:title mode="custom">
+						<saw:caption>
+							<saw:text/></saw:caption></saw:title></saw:axisFormat>
+				<saw:axisFormat axis="X">
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/>
+					<saw:title mode="auto">
+						<saw:caption/></saw:title></saw:axisFormat></saw:axesFormats></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c6f1872a43b7e86f9"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="ce30ab46dbf622227"/>
+				<saw:measure columnID="c5d1920aad105f0ee"/></saw:measuresList></saw:view></saw:views></saw:report>

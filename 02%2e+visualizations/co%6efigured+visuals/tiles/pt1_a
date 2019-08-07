@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="ce1511b5e4754ddfc">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">1</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true" backgroundColor="#CC3333"/><saw:conditionalDisplayFormats>
+					</saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Avg Call Time (sec)</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cebcee8cd584f0089">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&#39;857&#39;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true" backgroundColor="#CC3333" fontColor="#FFFFFF">
+						<saw:dataFormat textFormat="plain" xsi:type="saw:text"/></saw:formatSpec><saw:conditionalDisplayFormats>
+					</saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Data</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ca2621ceb3a7e9e68">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">6</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true" image="fmap:meters/status/ud_minus/03_slightlyup_red.png" backgroundColor="#F1E87D" fontColor="#993333">
+						<saw:dataFormat commas="false" negativeType="minus" minDigits="0" maxDigits="0" xsi:type="saw:percent"/></saw:formatSpec><saw:conditionalDisplayFormats>
+					</saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Time Series</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Pct Change Period Ago</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c751d87f80c163443">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true"/><saw:conditionalDisplayFormats/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+		</saw:columns>
+	</saw:criteria>
+	<saw:interactionOptions drill="true" movecolumns="false" sortcolumns="false" addremovevalues="false" groupoperations="false" calcitemoperations="false" showhidesubtotal="false" showhiderunningsum="false" inclexclcolumns="false"/>
+	<saw:views currentView="0" textDelivery="compoundView!1" includeNewColumns="true">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="pivotTableView!4">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!1">
+			<saw:staticText>
+				<saw:caption fmt="html">
+					<saw:text>&lt;style&gt;.PTCC {   background-color: white;   border-top: white;   border-left: white;}&lt;/style&gt;</saw:text></saw:caption></saw:staticText></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!4">
+			<saw:viewCaption>
+				<saw:caption>
+					<saw:text>Pivot Table:Tile</saw:text></saw:caption></saw:viewCaption>
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c751d87f80c163443" uiTableName="Base Facts">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec fontColor="#FFFFFF" backgroundColor="#FFFFFF" height="1" fontSize="1" wrapText="true" borderPosition="none"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column">
+					<saw:edgeLayers><saw:edgeLayer type="measure" uiTableName="Measure Labels">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec fontFamily="Arial" fontColor="#666666" borderColor="#CCCCCC" borderPosition="22" borderStyle="single" hAlign="center" paddingTop="3" paddingBottom="3" fontSize="16" wrapText="true" width="150" backgroundColor="#fcfcfc" fontStyle="bold"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="cebcee8cd584f0089" uiTableName="Base Facts">
+							<saw:memberFormat>
+								<saw:displayFormat>
+									<saw:formatSpec borderColor="#CCCCCC" borderPosition="22" borderStyle="single" paddingTop="7" paddingBottom="5" fontSize="40" wrapText="true" fontFamily="Arial" hAlign="center" paddingLeft="15"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+				<saw:measure columnID="ce1511b5e4754ddfc" uiTableName="Base Facts">
+					<saw:dataBodyFormat>
+						<saw:displayFormat>
+							<saw:formatSpec fontColor="#FFFFFF" borderColor="#CCCCCC" borderPosition="28" borderStyle="single" hAlign="center" height="1" paddingBottom="6" fontSize="1" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList></saw:view></saw:views></saw:report>

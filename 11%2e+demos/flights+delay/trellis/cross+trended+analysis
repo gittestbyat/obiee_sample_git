@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="ccaa527760076b614">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Date&quot;.&quot;Dep Month&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="action">
+					</saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Time Dim</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Time Dim</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf338277afc385465" forceGroupBy="true">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">cast(rank(sum(&quot;Flight Facts&quot;.&quot;# of Flights&quot; by &quot;Carrier&quot;.&quot;Carrier Short&quot;)) as varchar(2))||&#39;-&#39;||&quot;Carrier&quot;.&quot;Carrier Short&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true" interaction="action">
+					</saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Carrier</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Carrier</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="action">
+						</saw:formatSpec></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ce12a589011cf9a89">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Carrier&quot;.&quot;Carrier Short&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c5b385c4f56b7dbf8">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Schedule&quot;.&quot;Dep Time Grp&quot;}</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" fontStyle="bold" vAlign="middle" wrapText="true" interaction="action">
+					</saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Columns</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat>
+					<saw:caption fmt="text">
+						<saw:text>Column Dim</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c6c936bd84d89aa83" aggRule="sum">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">@{Line}{&quot;Flight Facts&quot;.&quot;# of Flights&quot;}</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="repeat" wrapText="true" interaction="action"/><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="greater">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cf72408e8f28bcb03"/>
+										<sawx:expr xsi:type="xsd:decimal">1</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#FFEECC" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="less">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cf72408e8f28bcb03"/>
+										<sawx:expr xsi:type="xsd:decimal">40</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#FFFF99" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="less">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cf72408e8f28bcb03"/>
+										<sawx:expr xsi:type="xsd:decimal">20</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#CCFFCC" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="less">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c4bbe6c3e4acf1579"/>
+										<sawx:expr xsi:type="xsd:decimal">1</sawx:expr></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#FFCC99" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="null">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="c4bbe6c3e4acf1579"/></sawx:expr></saw:condition>
+								<saw:formatSpec backgroundColor="#FFCC99" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Flight Facts</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat>
+					<saw:caption fmt="text">
+						<saw:text># of Flights</saw:text></saw:caption></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cd8e6de110ef6d821">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">rank(sum(&quot;Flight Facts&quot;.&quot;# of Flights&quot; by &quot;Carrier&quot;.&quot;Carrier Short&quot;))</sawx:expr></saw:columnFormula>
+				<saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat><saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Flight Facts</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>Ranks</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c4bbe6c3e4acf1579">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Delay Facts&quot;.&quot;Delay Perf % (0=Ontime,  &gt;0=Late)&quot;}</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="action">
+						<saw:dataFormat minDigits="2" maxDigits="2" commas="true" negativeType="redMinus" xsi:type="saw:percent"/>
+					</saw:formatSpec><saw:conditionalDisplayFormats/></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Delay Facts</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text">
+						<saw:text>@{Met01}</saw:text></saw:caption>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			</saw:columns>
+		
+		<saw:filter><sawx:expr xsi:type="sawx:comparison" op="less"><sawx:expr xsi:type="sawx:sqlExpression">cast(rank(sum(&quot;Flight Facts&quot;.&quot;# of Flights&quot; by &quot;Carrier&quot;.&quot;Carrier Short&quot;)) as varchar(2))||&#39;-&#39;||&quot;Carrier&quot;.&quot;Carrier Short&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">17</sawx:expr></sawx:expr></saw:filter><saw:columnOrder>
+			<saw:columnOrderRef columnID="cd8e6de110ef6d821" direction="ascending"/></saw:columnOrder></saw:criteria>
+	<saw:views currentView="1">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!2">
+						<saw:displayFormat>
+							<saw:formatSpec vAlign="middle"/></saw:displayFormat></saw:cvCell>
+					<saw:cvCell viewName="pivotTableView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell>
+					<saw:cvCell viewName="legendView!1"/></saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell colSpan="3" viewName="trellisView!2"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:trellisView" name="trellisView!2" type="multiviz" autoPreview="true">
+			
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section" insertPageBreak="false">
+					<saw:displayFormat>
+						<saw:formatSpec wrapText="true"/></saw:displayFormat></saw:edge><saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c5b385c4f56b7dbf8"/><saw:edgeLayer type="measure" visibility="hidden"/></saw:edgeLayers></saw:edge><saw:edge axis="column" dependent="true">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="cf338277afc385465"/><saw:edgeLayer type="column" columnID="ce12a589011cf9a89" visibility="hidden"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+				
+				<saw:measure columnID="c6c936bd84d89aa83" name="Trellisf33bed8e84e08aaf" type="view" aggRule="last">
+					<saw:dataBodyFormat>
+						<saw:displayFormat>
+							<saw:formatSpec borderColor="#999999" borderPosition="16" wrapText="true" paddingLeft="2" paddingRight="2" paddingTop="2"/></saw:displayFormat></saw:dataBodyFormat></saw:measure><saw:measure type="view" columnID="c4bbe6c3e4acf1579" name="Trellis5d8afb3bc262a3f5">
+					<saw:dataBodyFormat>
+						<saw:displayFormat>
+							<saw:formatSpec borderPosition="24" wrapText="true" borderColor="#999999" paddingLeft="2" paddingRight="2" paddingBottom="2"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList>
+			<saw:nestedViews>
+				<saw:nestedView position="embedded">
+					<saw:view xsi:type="saw:dvtmicrochart" name="Trellisf33bed8e84e08aaf">
+						<saw:display type="line" subtype="default" renderFormat="default" mode="online">
+							<saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+						<saw:canvasFormat height="50" width="110" sizeType="custom">
+							<saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default">
+								<saw:textFormat/></saw:dataLabels></saw:canvasFormat>
+						<saw:selections>
+							<saw:categories><saw:category>
+									<saw:columnRef columnID="ccaa527760076b614"/></saw:category></saw:categories>
+							<saw:measures showMeasureLabelsOnCategory="false">
+								<saw:column measureType="y">
+									<saw:columnRef columnID="c6c936bd84d89aa83"/></saw:column></saw:measures>
+							<saw:seriesGenerators><saw:measureLabels/></saw:seriesGenerators></saw:selections>
+						<saw:legendFormat position="default" transparentFill="true"/>
+						<saw:axesFormats>
+							<saw:axisFormat axis="Y1">
+								<saw:scaleMarkers/></saw:axisFormat></saw:axesFormats>
+						<saw:markerFormats>
+							<saw:markerFormat type="riser" color="#333366"/></saw:markerFormats></saw:view></saw:nestedView>
+				<saw:nestedView position="embedded">
+					<saw:view xsi:type="saw:dvtmicrochart" name="Trellis5d8afb3bc262a3f5">
+						<saw:display type="bar" subtype="default"/>
+						<saw:selections>
+							<saw:measures showMeasureLabelsOnCategory="false">
+								<saw:column measureType="y">
+									<saw:columnRef columnID="c4bbe6c3e4acf1579"/></saw:column></saw:measures>
+							<saw:seriesGenerators>
+								<saw:measureLabels/></saw:seriesGenerators>
+							<saw:categories>
+								<saw:category>
+									<saw:columnRef columnID="ccaa527760076b614"/></saw:category></saw:categories></saw:selections>
+						<saw:canvasFormat height="60" width="110" sizeType="custom">
+							<saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/></saw:canvasFormat>
+						<saw:axesFormats>
+							<saw:axisFormat axis="Y1">
+								<saw:scaleMarkers>
+									<saw:scaleMarker color="#000000" xsi:type="saw:scaleMarkerLine">
+										<saw:markerLabel>
+											<saw:title mode="custom">
+												<saw:caption>
+													<saw:text>d</saw:text></saw:caption></saw:title></saw:markerLabel>
+										<saw:lineWidth>
+											<sawx:expr xsi:type="xsd:decimal">1</sawx:expr></saw:lineWidth>
+										<saw:linePosition>
+											<sawx:expr xsi:type="xsd:decimal">0</sawx:expr></saw:linePosition></saw:scaleMarker></saw:scaleMarkers></saw:axisFormat></saw:axesFormats>
+						<saw:markerFormats>
+							<saw:markerFormat type="riser" color="#CCCCCC"/>
+							<saw:markerFormat type="high" color="#669966"/></saw:markerFormats></saw:view></saw:nestedView></saw:nestedViews></saw:view>
+		<saw:view xsi:type="saw:legendView" name="legendView!1" across="2">
+			<saw:captionFormat position="right"/>
+			<saw:legendList>
+				<saw:legendItem>
+					<saw:legendCaption>
+						<saw:caption>
+							<saw:text># of Flights</saw:text></saw:caption></saw:legendCaption>
+					<saw:sampleText>
+						<saw:caption>
+							<saw:text>--</saw:text></saw:caption></saw:sampleText>
+					<saw:displayFormat>
+						<saw:formatSpec fontColor="#666699" fontStyle="bold" wrapText="true" backgroundColor="#FFFFFF" borderPosition="none"/></saw:displayFormat></saw:legendItem>
+				<saw:legendItem>
+					<saw:legendCaption>
+						<saw:caption>
+							<saw:text>Delay % indicator</saw:text></saw:caption></saw:legendCaption>
+					<saw:displayFormat>
+						<saw:formatSpec backgroundColor="#CCCCCC" wrapText="true" fontSize="5"/></saw:displayFormat></saw:legendItem>
+				
+				</saw:legendList>
+			<saw:title/>
+			<saw:legendTable>
+				<saw:displayFormat>
+					<saw:formatSpec borderPosition="none" fontSize="5" wrapText="true"/></saw:displayFormat></saw:legendTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!2" includeName="false" startedDisplay="none"><saw:title>
+				<saw:caption fmt="text">
+					<saw:text>Cross-Trended Analysis</saw:text></saw:caption>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#000000" fontSize="16" wrapText="true" fontFamily="Arial" fontStyle="bold"/>
+				</saw:displayFormat></saw:title><saw:displayFormat>
+				<saw:formatSpec borderPosition="none" wrapText="true"/>
+			</saw:displayFormat><saw:subTitle>
+				<saw:displayFormat>
+					<saw:formatSpec fontSize="14" wrapText="true" fontFamily="Arial" fontColor="#000080"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text">
+					<saw:text>By Month by Top Carriers</saw:text>
+				</saw:caption></saw:subTitle></saw:view>
+		<saw:view xsi:type="saw:selectionView" name="selectionView!1"/>
+		<saw:view xsi:type="saw:filtersView" name="filtersView!1"/>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" autoPreview="true">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="false">
+					<saw:columnOrder>
+						<saw:columnOrderRef columnID="ce12a589011cf9a89" direction="descending">
+							<saw:QDR>
+								<saw:staticMemberGroup specialDimension="measure">
+									<saw:members xsi:type="saw:specialValueMembers">
+										<saw:value>c6c936bd84d89aa83</saw:value></saw:members></saw:staticMemberGroup></saw:QDR></saw:columnOrderRef></saw:columnOrder>
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="none"/></saw:displayGrandTotals>
+					<saw:edgeLayers>
+						<saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="c6c936bd84d89aa83"/>
+				<saw:measure columnID="c4bbe6c3e4acf1579">
+					<saw:memberFormat>
+						<saw:displayFormat>
+							<saw:formatSpec wrapText="true"/></saw:displayFormat>
+						<saw:caption>
+							<saw:text>Delay Metric</saw:text></saw:caption></saw:memberFormat></saw:measure></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!1"/></saw:views></saw:report>

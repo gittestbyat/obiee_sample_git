@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BIEE">
+   <description>
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Country" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>country_data_nuclear.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="Plants" type="complex">
+         <sql dataSourceRef="BISAMPLE">
+            <![CDATA[select	 "PLANTS_COUNTRY"."ID" as "ID",
+	 "PLANTS_COUNTRY"."FACILITY" as "FACILITY",
+	 "PLANTS_COUNTRY"."PROCESS" as "PROCESS",
+	 "PLANTS_COUNTRY"."CAPACITY_MWE_NET" as "CAPACITY_MWE_NET",
+	 "PLANTS_COUNTRY"."CURRENT_STATUS" as "CURRENT_STATUS",
+	 "PLANTS_COUNTRY"."START_YEAR" as "START_YEAR",
+	 "PLANTS_COUNTRY"."OWNER" as "OWNER",
+	 "PLANTS_COUNTRY"."LOCATION" as "LOCATION",
+	 "PLANTS_COUNTRY"."REGION" as "REGION" 
+ from	"BISAMPLE_OTHER"."PLANTS_COUNTRY" "PLANTS_COUNTRY"]]>
+         </sql>
+      </dataSet>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_2" label="G_2" source="Country">
+               <element name="Facility" value="Facility" label="Facility" dataType="xsd:string" breakOrder="None" fieldOrder="1"/>
+               <element name="Process" value="Process" label="Process" dataType="xsd:string" breakOrder="None" fieldOrder="2"/>
+               <element name="Capacity_MWe_net" value="Capacity MWe net" label="Capacity_MWe_net" dataType="xsd:double" breakOrder="None" fieldOrder="3"/>
+               <element name="Current_Status" value="Current Status" label="Current_Status" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="Start_Year" value="Start Year" label="Start_Year" dataType="xsd:double" breakOrder="None" fieldOrder="5"/>
+               <element name="Owner" value="Owner" label="Owner" dataType="xsd:string" breakOrder="None" fieldOrder="6"/>
+               <element name="Location" value="Location" label="Location" dataType="xsd:string" breakOrder="None" fieldOrder="7"/>
+               <element name="Region" value="Region" label="Region" dataType="xsd:string" breakOrder="None" fieldOrder="8"/>
+            </group>
+            <group name="G_1" label="G_1" source="Plants">
+               <element name="ID" value="ID" label="ID" dataType="xsd:double" breakOrder="None" fieldOrder="1"/>
+               <element name="FACILITY" value="FACILITY" label="FACILITY" dataType="xsd:string" breakOrder="None" fieldOrder="2"/>
+               <element name="PROCESS" value="PROCESS" label="PROCESS" dataType="xsd:string" breakOrder="None" fieldOrder="3"/>
+               <element name="CAPACITY_MWE_NET" value="CAPACITY_MWE_NET" label="CAPACITY_MWE_NET" dataType="xsd:double" breakOrder="None" fieldOrder="4"/>
+               <element name="CURRENT_STATUS" value="CURRENT_STATUS" label="CURRENT_STATUS" dataType="xsd:string" breakOrder="None" fieldOrder="5"/>
+               <element name="START_YEAR" value="START_YEAR" label="START_YEAR" dataType="xsd:string" breakOrder="None" fieldOrder="6"/>
+               <element name="OWNER" value="OWNER" label="OWNER" dataType="xsd:string" breakOrder="None" fieldOrder="7"/>
+               <element name="LOCATION" value="LOCATION" label="LOCATION" dataType="xsd:string" breakOrder="None" fieldOrder="8"/>
+               <element name="REGION" value="REGION" label="REGION" dataType="xsd:string" breakOrder="None" fieldOrder="9"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="Country" left="520px" top="30px"/>
+         <layout name="Plants" left="255px" top="29px"/>
+         <layout name="DATA_DS" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="cbd51ab1a46a76870"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P4  Brand&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Level 1</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c14194b2134e2e0e2"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim02}{&quot;Products&quot;.&quot;P3  LOB&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Level 2</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c302b106f4f44f9e9"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim03}{&quot;Products&quot;.&quot;P2  Product Type&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Level 3</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c2a6c5927333ba199"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim04}{&quot;Products&quot;.&quot;P1  Product&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Level 04</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ce8424ac964b6fb4e"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;}</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Metric</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cbd51ab1a46a76870"/><saw:edgeLayer type="column" columnID="c14194b2134e2e0e2"/><saw:edgeLayer type="column" columnID="c302b106f4f44f9e9"/><saw:edgeLayer type="column" columnID="c2a6c5927333ba199"/><saw:edgeLayer type="column" columnID="ce8424ac964b6fb4e"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:narrative rowCount="300"><saw:caption fmt="html"><saw:text>mydata.push([&quot;@{cbd51ab1a46a76870}&quot;,&quot;@{c14194b2134e2e0e2}&quot;,&quot;@{c302b106f4f44f9e9}&quot;,&quot;@{c2a6c5927333ba199}&quot;,&quot;@{ce8424ac964b6fb4e}&quot;]);
+</saw:text></saw:caption></saw:narrative><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/d3/d3.v3.js&quot;&gt;&lt;/script&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/analyticsRes/d3/examples/treemap/treemap.css&quot;/&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/analyticsRes/d3/examples/button.css&quot;/&gt;
+&lt;div id=&quot;treemap_chart&quot;&gt;&lt;/div&gt;
+&lt;!--&lt;button id=&quot;size&quot; class=&quot;first active&quot;&gt;
+        Size
+      &lt;/button
+      &gt;&lt;button id=&quot;count&quot; class=&quot;last&quot;&gt;
+        Count
+      &lt;/button&gt;
+--&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+mydata=[];</saw:text></saw:caption></saw:prefix><saw:postfix><saw:caption fmt="html"><saw:text>jsonStr=&quot;&quot;;
+v0=&quot;&quot;; v1=&quot;&quot;; v2=&quot;&quot;;
+t=&quot;&quot;;
+for(i in mydata){
+	lMisMatch=0;
+	
+	if(v0!=mydata[i][0])	{lMisMatch=1;	endMarker=&quot;]}]}]}&quot;;}
+    if(v1!=mydata[i][1] &amp;&amp; !lMisMatch)	{lMisMatch=2;	endMarker=&quot;]}]}&quot;;}
+    if(v2!=mydata[i][2] &amp;&amp; !lMisMatch)	{lMisMatch=3;	endMarker=&quot;]}&quot;;}
+	
+    if(i!=0 &amp;&amp; (lMisMatch&gt;0))	jsonStr+= endMarker;
+	if(i!=0)	jsonStr+=&quot;,&quot;;
+	
+    if(v0!=mydata[i][0]){   jsonStr+=&quot;\n{\&quot;name\&quot;: \&quot;&quot;+mydata[i][0]+&quot;\&quot;,\&quot;children\&quot;: [&quot;;}
+    if(v1!=mydata[i][1]){   jsonStr+=&quot;\n\t{\&quot;name\&quot;: \&quot;&quot;+mydata[i][1]+&quot;\&quot;,\&quot;children\&quot;: [&quot;;}
+    if(v2!=mydata[i][2]){   jsonStr+=&quot;\n\t\t{\&quot;name\&quot;: \&quot;&quot;+mydata[i][2]+&quot;\&quot;,\&quot;children\&quot;: [&quot;;}
+
+    jsonStr+=&quot;\n\t\t\t{\&quot;name\&quot;: \&quot;&quot; +mydata[i][3]+ &quot;\&quot;, \&quot;size\&quot;:&quot; + mydata[i][4] + &quot;}&quot;;
+
+    if(v0!=mydata[i][0]){ v0=mydata[i][0];}
+    if(v1!=mydata[i][1]){ v1=mydata[i][1];}
+    if(v2!=mydata[i][2]){ v2=mydata[i][2];}
+
+    if (i==(mydata.length-1)) { jsonStr+=&quot;]}]}]}&quot; };
+}
+jsonStr = &quot;{\&quot;name\&quot;: \&quot;All Products\&quot;, \&quot;children\&quot;: [&quot; + jsonStr + &quot;]}&quot;;
+var myDataObject = eval(&#39;(&#39; + jsonStr + &#39;)&#39;);
+
+var width = @{Width}{800},
+    height = @{Height}{400},
+    color = d3.scale.category20c();
+var treemap = d3.layout.treemap()
+    .size([width, height])
+    .sticky(true)
+    .value(function(d) { return d.size; });
+
+var div = d3.select(&quot;#treemap_chart&quot;).append(&quot;div&quot;)
+    .style(&quot;position&quot;, &quot;relative&quot;)
+    .style(&quot;width&quot;, width + &quot;px&quot;)
+    .style(&quot;height&quot;, height + &quot;px&quot;);
+
+json=myDataObject;
+  div.data([json]).selectAll(&quot;div&quot;)
+      .data(treemap.nodes)
+    .enter().append(&quot;div&quot;)
+      .attr(&quot;class&quot;, &quot;cell&quot;)
+      .style(&quot;background&quot;, function(d) { return d.children ? color(d.name) : null; })
+      .call(cell)
+      .text(function(d) { return d.children ? null : d.name+&quot; (&quot;+d.size+&quot;)&quot;; });
+
+  d3.select(&quot;#size&quot;).on(&quot;click&quot;, function() {
+    div.selectAll(&quot;div&quot;)
+        .data(treemap.value(function(d) { return d.size; }))
+      .transition()
+        .duration(1500)
+        .call(cell);
+
+    d3.select(&quot;#size&quot;).classed(&quot;active&quot;, true);
+    d3.select(&quot;#count&quot;).classed(&quot;active&quot;, false);
+  });
+
+  d3.select(&quot;#count&quot;).on(&quot;click&quot;, function() {
+    div.selectAll(&quot;div&quot;)
+        .data(treemap.value(function(d) { return 1; }))
+      .transition()
+        .duration(1500)
+        .call(cell);
+
+    d3.select(&quot;#size&quot;).classed(&quot;active&quot;, false);
+    d3.select(&quot;#count&quot;).classed(&quot;active&quot;, true);
+  });
+
+function cell() {
+  this
+      .style(&quot;left&quot;, function(d) { return d.x + &quot;px&quot;; })
+      .style(&quot;top&quot;, function(d) { return d.y + &quot;px&quot;; })
+      .style(&quot;width&quot;, function(d) { return Math.max(0, d.dx - 1) + &quot;px&quot;; })
+      .style(&quot;height&quot;, function(d) { return Math.max(0, d.dy - 1) + &quot;px&quot;; });
+}
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix></saw:view></saw:views></saw:report>

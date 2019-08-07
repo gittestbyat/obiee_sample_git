@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="c26565ffc11d82c0b">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c931f64fbb620a5e5">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D1  Office&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cdb80bee8b624a0b5">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c50a8390d25ae9d23">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot; - CAST(EVALUATE (&#39;LAG (%1,1,0) OVER (PARTITION BY %2 ORDER BY %1) &#39;  ,&quot;Base Facts&quot;.&quot;1- Revenue&quot; , &quot;Products&quot;.&quot;P4  Brand&quot;) AS DOUBLE)</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2189">
+            <saw:text>Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2190">
+            <saw:text>Diff from Prev Row - Using LAG</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c9124341f7e7881e0">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">(&quot;Base Facts&quot;.&quot;1- Revenue&quot;- CAST(EVALUATE (&#39;LAG (%1,1,0) OVER (PARTITION BY %2 ORDER BY %1) &#39;  ,&quot;Base Facts&quot;.&quot;1- Revenue&quot; , &quot;Products&quot;.&quot;P4  Brand&quot;) AS DOUBLE))/ CAST(EVALUATE (&#39;LAG (%1,1,0) OVER (PARTITION BY %2 ORDER BY %1) &#39;  ,&quot;Base Facts&quot;.&quot;1- Revenue&quot; , &quot;Products&quot;.&quot;P4  Brand&quot;) AS DOUBLE) * 100</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true">
+            <saw:dataFormat commas="false" negativeType="redMinus" minDigits="1" maxDigits="1" xsi:type="saw:percent"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption captionID="kcap12832459_2191">
+            <saw:text>(Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption captionID="kcap12832459_2192">
+            <saw:text>% Diff - Prev Row</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+    <saw:columnOrder>
+      <saw:columnOrderRef columnID="c26565ffc11d82c0b" direction="ascending"/>
+      <saw:columnOrderRef columnID="cdb80bee8b624a0b5" direction="ascending"/>
+    </saw:columnOrder>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="tableView!2"/>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!1"/>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c931f64fbb620a5e5"/>
+            <saw:edgeLayer type="column" columnID="cdb80bee8b624a0b5"/>
+            <saw:edgeLayer type="column" columnID="c50a8390d25ae9d23"/>
+            <saw:edgeLayer type="column" columnID="c9124341f7e7881e0"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!2">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c26565ffc11d82c0b"/>
+            <saw:edgeLayer type="column" columnID="c931f64fbb620a5e5"/>
+            <saw:edgeLayer type="column" columnID="cdb80bee8b624a0b5"/>
+            <saw:edgeLayer type="column" columnID="c50a8390d25ae9d23"/>
+            <saw:edgeLayer type="column" columnID="c9124341f7e7881e0"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+      <saw:staticText>
+        <saw:caption fmt="text" captionID="kcap12832459_2188">
+          <saw:text>&#39;Diff from Prev row&#39; is defined using the EVALUATE function.
+[br/]
+It uses the database analytic function LAG to compute the values.</saw:text>
+        </saw:caption>
+      </saw:staticText>
+    </saw:view>
+  </saw:views>
+</saw:report>

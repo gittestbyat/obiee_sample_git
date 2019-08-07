@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="tns1q4lifa3lu0nn"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="jpl63776f7anr80q" layoutType="bestFit"><sawd:dashboardSection layoutType="specificSize" name="Section 2" collapsible="false" duid="77n98lmebikff5r8" showSectionTitle="false"><saw:displayFormat><saw:formatSpec backgroundColor="#f7f7f7" wrapText="true" borderPosition="12" width="1100" borderColor="#EEEEEE"/></saw:displayFormat><sawd:htmlView name="HTML 3" duid="vnq8f1tm9mb0vaq4"><sawd:HTML fmt="html">&lt;font size=3 color=#000066&gt;See multiple examples of Advanced Analytics functions invoked through Native BI Server Advanced Analytics framework.[br/]
+[br/]
+&lt;a class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=%2Fshared%2F08.%20Advanced%20Analytics%2F_portal%2F8.00%20OBIEE%2012c%20Advanced%20Analytics&amp;Page=Text%20Sentiment&quot;&gt;
+Visit this Dashboard for complete content &lt;/a&gt;
+&lt;/font&gt;
+
+
+
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection layoutType="bestFit" name="Section 0" duid="79ctgjdd7lemdd48" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:linkView name="Link 0" target="_self" type="report" destination="" layout="captionLeft" duid="r8qljosjg2lh7epp"><sawd:linkCaption/><sawd:image src="cmap:/shared/01. QuickStart/New Features/img/606_AA.jpg"/></sawd:linkView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

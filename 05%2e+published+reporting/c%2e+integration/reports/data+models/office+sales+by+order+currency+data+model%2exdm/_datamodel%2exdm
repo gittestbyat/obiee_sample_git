@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="Oracle BI EE">
+   <description>
+      <![CDATA[Data%20Source%20Types:%20(1)%20Sample%20Sales%20BI%20Server%20subject%20area%20(2)%20BISAMPLES%20database%20schema%20%0A--%20Data%20Structure:%20Hierarchical%20master-detail%20data%20set%0A%20--%20Features:%20Group-level%20links,%20Combines%20data%20from%20two%20heterogeneous%20data%20sources.]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="true"/>
+      <property name="include_rowsettag" value="true"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Office Orders - DB" type="complex">
+         <sql dataSourceRef="BISAMPLE">
+            <![CDATA[select	 "SAMP_OFFICES_D"."COMPANY" as "COMPANY",
+	 "SAMP_OFFICES_D"."ORGANIZATION" as "ORGANIZATION",
+	 "SAMP_OFFICES_D"."DEPARTMENT" as "DEPARTMENT",
+	 "SAMP_OFFICES_D"."OFFICE_DSC" as "OFFICE_DSC",
+	 sum("SAMP_REVENUE_F"."REVENUE") as "REVENUE",
+	 sum("SAMP_REVENUE_F"."UNITS") as "UNITS",
+	 "SAMP_REVENUE_F"."CURRENCY" as "CURRENCY",
+	 "SAMP_REVENUE_F"."ORDER_NUMBER" as "ORDER_NUMBER" 
+ from	"BISAMPLE"."SAMP_REVENUE_F" "SAMP_REVENUE_F",
+	"BISAMPLE"."SAMP_OFFICES_D" "SAMP_OFFICES_D" 
+ where   "SAMP_OFFICES_D"."OFFICE_KEY"="SAMP_REVENUE_F"."OFFICE_KEY" 
+group by "SAMP_OFFICES_D"."COMPANY", "SAMP_OFFICES_D"."ORGANIZATION", "SAMP_OFFICES_D"."DEPARTMENT", "SAMP_OFFICES_D"."OFFICE_DSC", "SAMP_REVENUE_F"."CURRENCY", "SAMP_REVENUE_F"."ORDER_NUMBER"]]>
+         </sql>
+      </dataSet>
+      <dataSet name="Office Sales - BI Server" type="complex">
+         <sql>
+            <![CDATA[select	 "Offices"."D4  Company" as "D4  Company",
+	 "Offices"."D3  Organization" as "D3  Organization",
+	 "Offices"."D2  Department" as "D2  Department",
+	 "Offices"."D1  Office" as "D1  Office",
+	 "Orders"."R3  Order Currency" as "R3  Order Currency",
+	 "Base Facts"."1- Revenue" as "1- Revenue",
+	 "Base Facts"."2- Billed Quantity" as "2- Billed Quantity" 
+ from	"A - Sample Sales"."Offices" "Offices",
+	"A - Sample Sales"."Orders" "Orders",
+	"A - Sample Sales"."Base Facts" "Base Facts"]]>
+         </sql>
+      </dataSet>
+      <link name="link" parentGroup="G_1" parentColumn="OFFICE" childQuery="Office Orders - DB" childColumn="&quot;SAMP_OFFICES_D&quot;.&quot;OFFICE_DSC&quot;" childColumnAlias="OFFICE_DSC"/>
+      <link name="link_2" parentGroup="G_1" parentColumn="ORDER_CURRENCY" childQuery="Office Orders - DB" childColumn="&quot;SAMP_REVENUE_F&quot;.&quot;CURRENCY&quot;" childColumnAlias="CURRENCY"/>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="G_1" source="Office Sales - BI Server" label="G_1">
+    <element name="COMPANY" value="D4  COMPANY" dataType="xsd:string" label="COMPANY" breakOrder="None" fieldOrder="1"/>
+    <element name="ORGANIZATION" value="D3  ORGANIZATION" dataType="xsd:string" label="ORGANIZATION" breakOrder="None" fieldOrder="2"/>
+    <element name="DEPARTMENT" value="D2  DEPARTMENT" dataType="xsd:string" label=" DEPARTMENT" breakOrder="None" fieldOrder="3"/>
+    <element name="OFFICE" value="D1  OFFICE" dataType="xsd:string" label="OFFICE" breakOrder="None" fieldOrder="4"/>
+    <element name="ORDER_CURRENCY" value="R3  ORDER CURRENCY" dataType="xsd:string" label="ORDER CURRENCY" breakOrder="None" fieldOrder="5"/>
+    <element name="REVENUE" value="1- REVENUE" dataType="xsd:double" label="REVENUE" breakOrder="None" fieldOrder="6"/>
+    <element name="BILLED_QUANTITY" value="2- BILLED QUANTITY" dataType="xsd:integer" label="BILLED QUANTITY" breakOrder="None" fieldOrder="7"/>
+    <group name="G_2" source="Office Orders - DB" label="G_2">
+      <element name="COMPANY" value="COMPANY" dataType="xsd:string" label="COMPANY" breakOrder="None" fieldOrder="1"/>
+      <element name="ORGANIZATION" value="ORGANIZATION" dataType="xsd:string" label="ORGANIZATION" breakOrder="None" fieldOrder="2"/>
+      <element name="DEPARTMENT" value="DEPARTMENT" dataType="xsd:string" label="DEPARTMENT" breakOrder="None" fieldOrder="3"/>
+      <element name="OFFICE_DSC" value="OFFICE_DSC" dataType="xsd:string" label="OFFICE_DSC" breakOrder="None" fieldOrder="4"/>
+      <element name="REVENUE" value="REVENUE" dataType="xsd:integer" label="REVENUE" breakOrder="None" fieldOrder="5"/>
+      <element name="UNITS" value="UNITS" dataType="xsd:integer" label="UNITS" breakOrder="None" fieldOrder="6"/>
+      <element name="CURRENCY" value="CURRENCY" dataType="xsd:string" label="CURRENCY" breakOrder="None" fieldOrder="7"/>
+      <element name="ORDER_NUMBER" value="ORDER_NUMBER" dataType="xsd:integer" label="ORDER_NUMBER" breakOrder="None" fieldOrder="8"/>
+    </group>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="Office Sales - BI Server" left="36px" top="94px"/><layout name="Office Orders - DB" left="427px" top="221px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+<groupLink name="link_1" parentGroup="G_1" childGroup="G_2"/>
+</groupLinks>
+</display>
+</dataModel>

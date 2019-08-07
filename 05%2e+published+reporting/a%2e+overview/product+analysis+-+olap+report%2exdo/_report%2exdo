@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/a. Overview/Data Models/XML - OLAP Report Data Model.xdm" cache="true"/>
+   <description>
+      <![CDATA[Data%20Model:%20OLAP%20Report%20Data%20Model.%20Layouts:%20XPT%20example%20layouts%20showing%20how%20to%20present%20OLAP%20data%20using%20graphical,%20tabular%20or%20cross-tabular%20displays.]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="false"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="360"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Default">
+      <template label="Default" url="Data Model View.xpt" type="xpt" outputFormat="analyze,html,pdf,xlsx,pptx" defaultFormat="analyze" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Results by Product" url="Product Performance.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Monthly Results by Product" url="Sales Trend by Prod.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Results by Market" url="Yr-End Results by Market.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Product Sales -Crosstabs" url="Product Sales.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Report Description" url="Description.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

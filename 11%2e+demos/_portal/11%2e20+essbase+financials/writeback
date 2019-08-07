@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="6m2p0mcp5q1jojlv">
+	<sawd:dashboardColumn name="Column 1" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2403">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Running Essbase Calc Scripts using Actions&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2402">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			<sawd:linkView name="Link 7" target="new" type="report" destination="/shared/10. Lifecycle and Admin/_portal/10.20 Usage Tracking/Physical SQLs" layout="captionRight" duid="ekkloo9cvqjqcoep"><sawd:linkCaption><saw:caption><saw:text>Physical SQLs</saw:text></saw:caption></sawd:linkCaption><sawd:image src="res/sk_blafp/answers/bpIcon.png"/></sawd:linkView></sawd:dashboardSection><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" horizontalLayout="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2361">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2366">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This page shows a report directly sourced from the Essbase Sample datasource. The page allows the user to interact directly with Essbase physical data source first by launching calculation scripts, second by directly updating datacell values within Essbase source.
+[br/][br/]- To launch calc scrips in Essbase, select either &#39;Compute Trend&#39; or &#39;Clear Trend&#39; action. Default values for these actions should set the cube intersections to correct values. Select &#39;Refresh Results&#39; link to see the updated values on the dashboard. 
+&lt;br/&gt;[br/]
+- To writeback a new expense factor into Essbase cube, select the expense factor shown in the &#39;Set Expense Factor&#39; table below. Enter new expense factor in the popup dialog box. You may then execute calc script &#39;Adjust Trend Calculation&#39; and refresh dashboard page to view the results
+&lt;br/&gt;[br/]
+Note: This feature requires to have both Essbase Server and Essbase Analytics Provider Services up and running. </sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2368">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; This functionality is achieved leveraging Action Framework and direct Essbase update capability of BI Server. A custom browser script (defined in UserScript.js file) is invoked as an action which in turn issues an BI Server logical sql to update the corresponding cube intersection(s). A sample logical sql update statement is as follows:
+&lt;br/&gt;[br/]
+UPDATE &quot;F - Essbase Interaction&quot;.&quot;Basic&quot;  &lt;br/&gt;
+SET &quot;Expense Adjustment&quot; = 0.98&lt;br/&gt;
+WHERE &quot;F - Essbase Interaction&quot;.&quot;Channels&quot;.&quot;Gen1,Channels&quot; = &#39;Channels&#39; AND  &lt;br/&gt;
+&quot;F - Essbase Interaction&quot;.&quot;Product&quot;.&quot;Gen1,Product&quot; = &#39;Product&#39; AND  &lt;br/&gt;
+&quot;F - Essbase Interaction&quot;.&quot;Customers&quot;.&quot;Gen1,Customers&quot; = &#39;Customers&#39; AND &lt;br/&gt; 
+&quot;F - Essbase Interaction&quot;.&quot;Scenario&quot;.&quot;Gen1,Scenario&quot; = &#39;Scenario&#39; AND  &lt;br/&gt;
+&quot;F - Essbase Interaction&quot;.&quot;Year&quot;.&quot;History&quot; = &#39;Year&#39; 
+[br/]
+[br/]
+&lt;font color=red&gt;&lt;i&gt;NOTE:- Set SummaryStatisticsLogging to NO for this example to work.&lt;/i&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:dashboardSection name="Section 5" showHeading="true" collapsible="false" showSectionTitle="true" duid="7kfjbemclpd8fjj7" layoutType="bestFit"><saw:caption><saw:text>Essbase Writeback &amp; Whatif</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:actionLinkView name="Action Link 0" duid="29jd275vv0ps7e5g"><sawd:actionLink sDisplayName="Invoke Calc Script: trend" briefBookLink="false" target="_self"><saw:actionPath>/shared/07. Semantic Layer Design/Essbase/Writeback/Invoke Calc Script: trend</saw:actionPath><saw:caption><saw:text>Compute Trend</saw:text></saw:caption></sawd:actionLink></sawd:actionLinkView><sawd:actionLinkView name="Action Link 1" duid="uuenk73fbk0qhmq6"><sawd:actionLink briefBookLink="false" target="_self" sDisplayName="Invoke Calc Script: clrtrnd"><saw:actionPath>/shared/07. Semantic Layer Design/Essbase/Writeback/Invoke Calc Script: clrtrnd</saw:actionPath><saw:caption><saw:text>Clear Trend</saw:text></saw:caption></sawd:actionLink></sawd:actionLinkView><sawd:htmlView name="HTML 5" duid="qu5tg1708trh8ak4"><sawd:HTML fmt="html">&lt;/form&gt;
+&lt;img style=&quot;vertical-align:middle&quot; border=&quot;0&quot; src=&quot;res/sk_blafp/common/refresh_ena.png&quot; alt=&quot;Refresh&quot;/&gt;&amp;nbsp;&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a onclick=&quot;RefreshPage();return false;&quot;&gt;Refresh Page&lt;/a&gt;</sawd:HTML></sawd:htmlView><sawd:reportView name="Report 0" display="embed" showView="" duid="8s007jg4jahr4p0n" links="" overrideParentLinks="true"><saw:caption><saw:text>Set Expense Factor</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Essbase/Writeback/Set Expense Factor"/></sawd:reportView><sawd:actionLinkView name="Action Link 5" duid="vkci6tiqspl3r6s0"><sawd:actionLink briefBookLink="false" target="_self" sDisplayName="Invoke Calc Script: AdjInc"><saw:actionPath>/shared/07. Semantic Layer Design/Essbase/Writeback/Invoke Calc Script: AdjInc</saw:actionPath><saw:caption><saw:text>Adjust Trend Calculation</saw:text></saw:caption></sawd:actionLink></sawd:actionLinkView><sawd:htmlView name="HTML 2" duid="etnm866ooarjir15"><sawd:HTML fmt="text">[br/][br/][br/]</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 2" duid="aho0qaknejnaamd6" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 4" horizontalLayout="true" duid="66d38a414pecsr3o" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 2" display="embed" showView="" links="" duid="1isl0t3839f9mv3t"><saw:caption><saw:text>Expense Trend</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Essbase/Writeback/Expense Trend"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

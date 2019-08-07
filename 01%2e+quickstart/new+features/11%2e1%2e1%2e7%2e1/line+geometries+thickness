@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">	
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">		
+      <saw:columns>			
+         <saw:column xsi:type="saw:regularColumn" columnID="cd6c12f2b43215ccd">				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></saw:columnFormula>
+				
+            <saw:displayFormat>					
+					
+               
+               <saw:formatSpec suppress="repeat" wrapText="true"/><saw:conditionalDisplayFormats>						
+                  <saw:conditionalDisplayFormat>							
+                     <saw:formatRule>								
+                        <saw:condition>									
+                           <sawx:expr xsi:type="sawx:comparison" op="less">										
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c3f519de8d0efa504"/>
+										
+                              <sawx:expr xsi:type="xsd:decimal">4</sawx:expr></sawx:expr></saw:condition>
+								
+                        <saw:formatSpec backgroundColor="#CCFFCC" imagePlacement="left" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						
+                  <saw:conditionalDisplayFormat>							
+                     <saw:formatRule>								
+                        <saw:condition>									
+                           <sawx:expr xsi:type="sawx:comparison" op="between">										
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c3f519de8d0efa504"/>
+										
+                              <sawx:expr xsi:type="xsd:decimal">4</sawx:expr>
+										
+                              <sawx:expr xsi:type="xsd:decimal">6</sawx:expr></sawx:expr></saw:condition>
+								
+                        <saw:formatSpec backgroundColor="#F1E87D" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				
+            <saw:columnHeading>					
+               <saw:displayFormat>						
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			
+			
+			
+			
+			
+			
+			
+			
+         <saw:column xsi:type="saw:regularColumn" columnID="c44a7f69dd2e259f6">				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Route&quot;.&quot;Route&quot;</sawx:expr></saw:columnFormula>
+				
+            <saw:displayFormat>					
+					
+               
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="action">						
+                  </saw:formatSpec><saw:conditionalDisplayFormats>						
+                  
+						
+                  </saw:conditionalDisplayFormats></saw:displayFormat>
+				
+            <saw:columnHeading>					
+               <saw:displayFormat>						
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			
+         <saw:column xsi:type="saw:regularColumn" columnID="cc3815e04dfe8c974">				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Route&quot;.&quot;Route Description&quot;</sawx:expr></saw:columnFormula>
+				
+            <saw:displayFormat>					
+					
+               
+               <saw:formatSpec suppress="suppress" wrapText="true"/><saw:conditionalDisplayFormats>						
+                  <saw:conditionalDisplayFormat>							
+                     <saw:formatRule>								
+                        <saw:condition>									
+                           <sawx:expr xsi:type="sawx:comparison" op="less">										
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c3f519de8d0efa504"/>
+										
+                              <sawx:expr xsi:type="xsd:decimal">4</sawx:expr></sawx:expr></saw:condition>
+								
+                        <saw:formatSpec backgroundColor="#CCFFCC" imagePlacement="left" wrapText="true" noImage="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+						
+                  <saw:conditionalDisplayFormat>							
+                     <saw:formatRule>								
+                        <saw:condition>									
+                           <sawx:expr xsi:type="sawx:comparison" op="between">										
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c3f519de8d0efa504"/>
+										
+                              <sawx:expr xsi:type="xsd:decimal">4</sawx:expr>
+										
+                              <sawx:expr xsi:type="xsd:decimal">6</sawx:expr></sawx:expr></saw:condition>
+								
+                        <saw:formatSpec backgroundColor="#F1E87D" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				
+            <saw:columnHeading>					
+               <saw:displayFormat>						
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			
+			
+			
+			
+         <saw:column xsi:type="saw:regularColumn" columnID="c21560524675dcea6">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Destination&quot;.&quot;Dest Airport&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c89f1b507e56faea2">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Origin&quot;.&quot;Orig Airport&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+		
+      <saw:filter>			
+         <sawx:expr xsi:type="sawx:logical" op="and">				
+            <sawx:expr xsi:type="sawx:savedFilter" path="/shared/01. QuickStart/_filters/X - Airlines Delay/Prt Filters - All Dims" name="Prt Filters - All Dims"/>
+				
+            <sawx:expr xsi:type="sawx:comparison" op="equal">					
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Origin&quot;.&quot;Orig Airport Desc&quot;</sawx:expr>
+					
+               <sawx:expr xsi:type="xsd:string">SFO - San Francisco International</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:rank" op="top"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr><sawx:expr xsi:type="xsd:decimal">20</sawx:expr></sawx:expr></sawx:expr></saw:filter>
+		
+      <saw:columnOrder>			
+         <saw:columnOrderRef columnID="c0d86c20ab6c54d12" direction="descending"/></saw:columnOrder></saw:criteria>
+	
+   <saw:views currentView="0">		
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">			
+		
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="mapview!5"/><saw:cvCell viewName="mapview!2"/></saw:cvRow></saw:cvTable></saw:view>
+		
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="dateTime"><saw:logoFormat>				
+            <saw:displayFormat/></saw:logoFormat><saw:createdTime>				
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>
+            <saw:formatSpec wrapText="true" borderPosition="8" borderColor="#666666" borderStyle="single" paddingBottom="3"/></saw:displayFormat><saw:title><saw:displayFormat>
+               <saw:formatSpec wrapText="true" fontFamily="Arial" fontSize="15" fontStyle="bold" fontColor="#15164B"/></saw:displayFormat></saw:title></saw:view>
+		
+		
+		
+      
+		
+		
+		
+		
+		
+		
+      
+      <saw:view xsi:type="saw:mapview" name="mapview!2">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_USA_SIMPLE__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-129,24.138671875,-68.490234375,55"/>
+            <saw:boundingLayer layerID="l1"/>
+            <saw:mapCenter x="-98.677734375" y="39.501953125" size="30.99609375" zoomLevel="0" srid="8307" yUnitPixels="7.420289855072464" xUnitPixels="7.420289855072464"/></saw:viewportInfo>
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_FLIGHT_ROUTES_CURVED__~v0" class="omv_predefined_layer" layerID="l1">
+               <saw:layerLabelFormat display="false"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c44a7f69dd2e259f6"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v2" xsi:type="saw:lineScheme">
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="percentile" numBins="4" allowThresholdEdit="false">
+                        <saw:columnRef columnID="cd6c12f2b43215ccd"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>First Quartile</saw:text></saw:caption>
+                              <saw:g class="line" fill="#d0e5ff" strokeWidth="1"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Second Quartile</saw:text></saw:caption>
+                              <saw:g class="line" fill="#aebfff" strokeWidth="1"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>Third Quartile</saw:text></saw:caption>
+                              <saw:g class="line" fill="#8c9bde" strokeWidth="1"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>Fourth Quartile</saw:text></saw:caption>
+                              <saw:g class="line" fill="#6c78ae" strokeWidth="1"/></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_AIRPORTS_US_BLUE__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="true"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c21560524675dcea6"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v0" xsi:type="saw:variableMarker" subClass="image">
+                     <saw:tooltip/>
+                     <saw:g class="marker">
+                        <saw:image fmapURL="common/kpi_warning_status.gif"/></saw:g>
+                     <saw:varyImage binType="percentile" numBins="2">
+                        <saw:columnRef columnID="cd6c12f2b43215ccd"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>First Half</saw:text></saw:caption>
+                              <saw:g class="marker">
+                                 <saw:image fmapURL="meters/alert/sm/spacer.gif"/></saw:g></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Second Half</saw:text></saw:caption>
+                              <saw:g class="marker">
+                                 <saw:image fmapURL="meters/alert/sm/spacer.gif"/></saw:g></saw:rampItem></saw:rampStyle></saw:varyImage></saw:visual></saw:visuals></saw:spatialLayer>
+            
+            
+            </saw:spatialLayers>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:canvasFormat width="450" height="230" enableWrapAround="false"/>
+         <saw:formatPanel width="220" display="false"/></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!5">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_USA_SIMPLE__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-125.64453125,22.15625,-65.134765625,53.017578125"/>
+            <saw:boundingLayer layerID="l1"/>
+            <saw:mapCenter x="-95.322265625" y="37.51953125" size="30.99609375" zoomLevel="0" srid="8307" yUnitPixels="7.420289855072464" xUnitPixels="7.420289855072464"/></saw:viewportInfo>
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_FLIGHT_ROUTES_CURVED__~v0" class="omv_predefined_layer" layerID="l1">
+               <saw:layerLabelFormat display="false"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c44a7f69dd2e259f6"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v2" xsi:type="saw:lineScheme">
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="percentile" numBins="4" allowThresholdEdit="false">
+                        <saw:columnRef columnID="cd6c12f2b43215ccd"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>First Quartile</saw:text></saw:caption>
+                              <saw:g class="line" fill="#d0e5ff"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Second Quartile</saw:text></saw:caption>
+                              <saw:g class="line" fill="#aebfff"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>Third Quartile</saw:text></saw:caption>
+                              <saw:g class="line" fill="#8c9bde"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>Fourth Quartile</saw:text></saw:caption>
+                              <saw:g class="line" fill="#6c78ae"/></saw:rampItem></saw:rampStyle></saw:varyFillColor>
+                     <saw:varyStrokeWidth binType="continuous" numBins="1" startSize="2" endSize="15">
+                        <saw:columnRef columnID="cd6c12f2b43215ccd"/></saw:varyStrokeWidth></saw:visual></saw:visuals></saw:spatialLayer><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_AIRPORTS_US_BLUE__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="true"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c21560524675dcea6"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v0" xsi:type="saw:variableMarker" subClass="image">
+                     <saw:tooltip/>
+                     <saw:g class="marker">
+                        <saw:image fmapURL="common/kpi_warning_status.gif"/></saw:g>
+                     <saw:varyImage binType="percentile" numBins="2">
+                        <saw:columnRef columnID="cd6c12f2b43215ccd"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>First Half</saw:text></saw:caption>
+                              <saw:g class="marker">
+                                 <saw:image fmapURL="meters/alert/sm/spacer.gif"/></saw:g></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Second Half</saw:text></saw:caption>
+                              <saw:g class="marker">
+                                 <saw:image fmapURL="meters/alert/sm/spacer.gif"/></saw:g></saw:rampItem></saw:rampStyle></saw:varyImage></saw:visual></saw:visuals></saw:spatialLayer>
+            
+            
+            </saw:spatialLayers>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:canvasFormat width="450" height="230" enableWrapAround="false"/>
+         <saw:formatPanel width="218" display="true" height="600"/></saw:view>
+      </saw:views></saw:report>

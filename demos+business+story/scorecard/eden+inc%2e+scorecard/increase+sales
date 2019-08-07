@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawbsc:objective xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawbsc="com.siebel.analytics.web/scorecard/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sawkpi="com.siebel.analytics.web/kpi/v1" indicatorType="lagging" changeApprovalRequired="false"><sawkpi:relatedDocuments><sawkpi:relatedDocument><sawkpi:name>Converted Revenue</sawkpi:name><sawkpi:description/><sawkpi:link type="CATALOG"><sawkpi:path>/shared/01. QuickStart/Simple Demo Dashboard/Product Details/Converted Revenue</sawkpi:path></sawkpi:link></sawkpi:relatedDocument><sawkpi:relatedDocument><sawkpi:name>Daily Revenue Timeline</sawkpi:name><sawkpi:description/><sawkpi:link type="CATALOG"><sawkpi:path>/shared/01. QuickStart/Simple Demo Dashboard/Product Details/Daily Revenue Timeline</sawkpi:path></sawkpi:link></sawkpi:relatedDocument><sawkpi:relatedDocument><sawkpi:name>Top Customers Bookings</sawkpi:name><sawkpi:description/><sawkpi:link type="CATALOG"><sawkpi:path>/shared/06. Dashboard Design/Prompts/Hier Column Prompt/Top Customer Type Time Var Prompt</sawkpi:path></sawkpi:link></sawkpi:relatedDocument><sawkpi:relatedDocument><sawkpi:name>Trending Analysis</sawkpi:name><sawkpi:description/><sawkpi:link type="CATALOG"><sawkpi:path>/shared/02. Visualizations/Scorecards/Related Documents/Trending Analysis</sawkpi:path></sawkpi:link></sawkpi:relatedDocument></sawkpi:relatedDocuments><sawbsc:coreValues/><sawbsc:objectiveActionLinks><sawbsc:conditionalActionLinks assessmentStateKey="CRITICAL"><saw:actionLinks><saw:actionLink><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/01. QuickStart/_portal/1.30 Quickstart/Product Details</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+							<saw:functionName>__navigateToBIContent__</saw:functionName>
+							<saw:scriptLanguage>JScript</saw:scriptLanguage>
+							<saw:scriptPath/>
+						</saw:implementation><saw:clientImplementation>
+							<saw:customisation invokeConfirmation="false"/>
+						</saw:clientImplementation>
+					</saw:action><saw:caption><saw:text>Product Analysis</saw:text></saw:caption></saw:actionLink><saw:actionLink><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/01. QuickStart/_portal/1.30 Quickstart/Product Details</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+							<saw:functionName>__navigateToBIContent__</saw:functionName>
+							<saw:scriptLanguage>JScript</saw:scriptLanguage>
+							<saw:scriptPath/>
+						</saw:implementation><saw:clientImplementation>
+							<saw:customisation invokeConfirmation="false"/>
+						</saw:clientImplementation>
+					</saw:action><saw:caption><saw:text>Brand Analysis</saw:text></saw:caption></saw:actionLink><saw:actionLink><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/11. Demos/_portal/11.20 Essbase Financials/P&amp;L</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+							<saw:functionName>__navigateToBIContent__</saw:functionName>
+							<saw:scriptLanguage>JScript</saw:scriptLanguage>
+							<saw:scriptPath/>
+						</saw:implementation><saw:clientImplementation>
+							<saw:customisation invokeConfirmation="false"/>
+						</saw:clientImplementation>
+					</saw:action><saw:caption><saw:text>Financial Analysis Dashboard</saw:text></saw:caption></saw:actionLink></saw:actionLinks></sawbsc:conditionalActionLinks><sawbsc:conditionalActionLinks assessmentStateKey="OK"><saw:actionLinks><saw:actionLink><saw:action><saw:parameters allowExtraParameters="true"/><saw:assignments/><saw:implementation xsi:type="saw:URLActionType" executeOnClient="true">
+							<saw:url aliasedLocation="false">http://www.oralce.com/PeopleSoft</saw:url>
+							<saw:request>GET</saw:request>
+						</saw:implementation><saw:clientImplementation>
+							<saw:customisation invokeConfirmation="false"/>
+						</saw:clientImplementation>
+					</saw:action><saw:caption><saw:text>Nominate Top Reps for Golgen Circle</saw:text></saw:caption></saw:actionLink><saw:actionLink><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/01. QuickStart/_portal/1.30 Quickstart/Product Details</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+							<saw:functionName>__navigateToBIContent__</saw:functionName>
+							<saw:scriptLanguage>JScript</saw:scriptLanguage>
+							<saw:scriptPath/>
+						</saw:implementation><saw:clientImplementation>
+							<saw:customisation invokeConfirmation="false"/>
+						</saw:clientImplementation>
+					</saw:action><saw:caption><saw:text>Financial Analysis Dashboard</saw:text></saw:caption></saw:actionLink><saw:actionLink><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/06. Dashboard Design/Prompts/Hier Column Prompt/Top Customer Type Time Var Prompt</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+							<saw:functionName>__navigateToBIContent__</saw:functionName>
+							<saw:scriptLanguage>JScript</saw:scriptLanguage>
+							<saw:scriptPath/>
+						</saw:implementation><saw:clientImplementation>
+							<saw:customisation invokeConfirmation="false"/>
+						</saw:clientImplementation>
+					</saw:action><saw:caption><saw:text>Top Customers Bookings</saw:text></saw:caption></saw:actionLink></saw:actionLinks></sawbsc:conditionalActionLinks><sawbsc:conditionalActionLinks assessmentStateKey="WARNING"><saw:actionLinks><saw:actionLink><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/02. Visualizations/Scorecards/Related Documents/Geo Prompter</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+							<saw:functionName>__navigateToBIContent__</saw:functionName>
+							<saw:scriptLanguage>JScript</saw:scriptLanguage>
+							<saw:scriptPath/>
+						</saw:implementation><saw:clientImplementation>
+							<saw:customisation invokeConfirmation="false"/>
+						</saw:clientImplementation>
+					</saw:action><saw:caption><saw:text>Regional Analysis</saw:text></saw:caption></saw:actionLink><saw:actionLink><saw:action><saw:parameters allowExtraParameters="true"/><saw:assignments/><saw:implementation xsi:type="saw:URLActionType" executeOnClient="true">
+							<saw:url aliasedLocation="false">http://www.oracle.com</saw:url>
+							<saw:request>GET</saw:request>
+						</saw:implementation><saw:clientImplementation>
+							<saw:customisation invokeConfirmation="false"/>
+						</saw:clientImplementation>
+					</saw:action><saw:caption><saw:text>Adjust Forecast</saw:text></saw:caption></saw:actionLink><saw:actionLink><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/01. QuickStart/_portal/1.30 Quickstart/Geo Prompter</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+							<saw:functionName>__navigateToBIContent__</saw:functionName>
+							<saw:scriptLanguage>JScript</saw:scriptLanguage>
+							<saw:scriptPath/>
+						</saw:implementation><saw:clientImplementation>
+							<saw:customisation invokeConfirmation="false"/>
+						</saw:clientImplementation>
+					</saw:action><saw:caption><saw:text>Revenue Demographics</saw:text></saw:caption></saw:actionLink><saw:actionLink><saw:action><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/11. Demos/_portal/11.20 Essbase Financials/P&amp;L</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+							<saw:functionName>__navigateToBIContent__</saw:functionName>
+							<saw:scriptLanguage>JScript</saw:scriptLanguage>
+							<saw:scriptPath/>
+						</saw:implementation><saw:clientImplementation>
+							<saw:customisation invokeConfirmation="false"/>
+						</saw:clientImplementation>
+					</saw:action><saw:caption><saw:text>Financial Analysis Dashboard</saw:text></saw:caption></saw:actionLink></saw:actionLinks></sawbsc:conditionalActionLinks></sawbsc:objectiveActionLinks></sawbsc:objective>

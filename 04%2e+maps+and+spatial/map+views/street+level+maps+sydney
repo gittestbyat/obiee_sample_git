@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">  
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">    
+      <saw:columns>      
+         <saw:column xsi:type="saw:regularColumn" columnID="c6db79fb99ae92d6d">        
+            <saw:columnFormula>          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R64  Latitude&quot;</sawx:expr>        </saw:columnFormula>      </saw:column>      
+         <saw:column xsi:type="saw:regularColumn" columnID="c53f54c4c06d8f3bb">        
+            <saw:columnFormula>          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R65  Longitude&quot;</sawx:expr>        </saw:columnFormula>      </saw:column>      
+         <saw:column xsi:type="saw:regularColumn" columnID="c952f8a9bf0138307">        
+            <saw:columnFormula>          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R56  Postal Code&quot;</sawx:expr>        </saw:columnFormula>      </saw:column>      
+         <saw:column xsi:type="saw:regularColumn" columnID="c60694315bab78288">        
+            <saw:columnFormula>          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R59  Establishment Name&quot;</sawx:expr>        </saw:columnFormula>      </saw:column>      
+         <saw:column xsi:type="saw:regularColumn" columnID="c0d1f7d54cd3774af">        
+            <saw:columnFormula>          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>        </saw:columnFormula>      </saw:column>      
+         <saw:column xsi:type="saw:regularColumn" columnID="c086f0d8f56e0e93e">        
+            <saw:columnFormula>          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;</sawx:expr>        </saw:columnFormula>      </saw:column>    </saw:columns>    
+      <saw:filter>      
+         <sawx:expr xsi:type="sawx:logical" op="and">        
+            <sawx:expr xsi:type="sawx:comparison" op="equal">          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R55  City&quot;</sawx:expr>          
+               <sawx:expr xsi:type="xsd:string">Sydney</sawx:expr>        </sawx:expr>        
+            <sawx:expr xsi:type="sawx:special" op="prompted">          
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>        </sawx:expr>      </sawx:expr>    </saw:filter>    
+      <saw:columnOrder>      
+         <saw:columnOrderRef columnID="c0d1f7d54cd3774af" direction="descending"/>    </saw:columnOrder>  </saw:criteria>  
+   <saw:views currentView="0">    
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell colSpan="2" viewName="viewSelector!1"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!1"/>
+               <saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable>          </saw:view>    
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:logoFormat>        
+            <saw:displayFormat/>      </saw:logoFormat><saw:createdTime>        
+            <saw:displayFormat>          
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>        </saw:displayFormat>      </saw:createdTime><saw:displayFormat>        
+            <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>      </saw:displayFormat><saw:title>        
+            <saw:displayFormat>          
+               <saw:formatSpec fontColor="#333366" wrapText="true"/>        </saw:displayFormat>      </saw:title></saw:view>    
+      <saw:view xsi:type="saw:tableView" name="tableView!1">      
+         <saw:edges>        
+            <saw:edge axis="page" showColumnHeader="true"/>        
+            <saw:edge axis="section"/>        
+            <saw:edge axis="row" showColumnHeader="true">          
+               <saw:edgeLayers>            
+                  <saw:edgeLayer type="column" columnID="c952f8a9bf0138307"/>            
+                  <saw:edgeLayer type="column" columnID="c60694315bab78288"/>            
+                  <saw:edgeLayer type="column" columnID="c0d1f7d54cd3774af"/>            
+                  <saw:edgeLayer type="column" columnID="c086f0d8f56e0e93e"/>          </saw:edgeLayers>          
+               <saw:columnOrder>            
+                  <saw:columnOrderRef columnID="c952f8a9bf0138307" direction="ascending"/>          </saw:columnOrder>        </saw:edge>        
+            <saw:edge axis="column"/>      </saw:edges>    </saw:view>    
+      <saw:view xsi:type="saw:mapview" name="mapview!1">      
+         <saw:mapLayout>        
+            <saw:splitterLayout orientation="horizontal"/>      </saw:mapLayout>      
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_SYDNEY_MAP__~v0"/>      
+         <saw:mapWidgets>        
+            <saw:mapToolBar>          
+               <saw:panTools>            
+                  <saw:panHand display="false"/>          </saw:panTools>          
+               <saw:zoomTools>            
+                  <saw:zoomIn display="false"/>            
+                  <saw:zoomOut display="false"/>          </saw:zoomTools>          
+               <saw:selectionTools>            
+                  <saw:pointTool display="false"/>          </saw:selectionTools>        </saw:mapToolBar>        
+            <saw:mapInformation>          
+               <saw:scaleInfo display="true"/>          
+               <saw:overview display="false" viewState="collapsed"/>        </saw:mapInformation>        
+            <saw:mapOverlay>          
+               <saw:panButtons display="true"/>          
+               <saw:zoomSlider display="true"/>        </saw:mapOverlay>      </saw:mapWidgets>      
+         <saw:infoLegend display="true" viewState="collapsed"/>      
+         <saw:viewportInfo boundingType="box">        
+            <saw:mapCenter x="151.215556875" y="-33.86649156250001" size="0.09843749999999633" zoomLevel="1" srid="8307" yUnitPixels="4063.4920634922146" xUnitPixels="4063.4920634922146"/>        
+            <saw:boundingBox coords="151.156494375,-33.91546421875001,151.27437328125,-33.81727281250001"/>      
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>      
+         <saw:spatialLayers>        
+            <saw:spatialLayer sid="custom_poi" class="omv_custompoint_layer" layerID="l0">          
+               <saw:layerLabelFormat display="false"/>          
+               <saw:visuals>            
+                  <saw:visual visualID="v0" subClass="image" xsi:type="saw:variableMarker">              
+                     <saw:tooltip>                              
+                        <saw:columnRef columnID="c086f0d8f56e0e93e"/></saw:tooltip>              
+                     <saw:spatials srid="8307" singleXYColumn="false" delimiter="">
+                        <saw:columnRef columnID="c53f54c4c06d8f3bb"/>
+                        <saw:columnRef columnID="c6db79fb99ae92d6d"/></saw:spatials>              
+                     <saw:varyImage binType="percentile" numBins="5">
+                        <saw:columnRef columnID="c0d1f7d54cd3774af"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>Top Tile</saw:text></saw:caption>
+                              <saw:g sid="__OBIEE__MAPVIEW__OMVPREDEFINEDSTYLE__OBIEE_NAVTEQ_Sample__M.BI_BLUE_CIRCLE_D5RDYLBL__~v0" class="predefined"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Tile 2</saw:text></saw:caption>
+                              <saw:g sid="__OBIEE__MAPVIEW__OMVPREDEFINEDSTYLE__OBIEE_NAVTEQ_Sample__M.BI_LTBLUE_CIRCLE_D5RDYLBL__~v0" class="predefined"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>Tile 3</saw:text></saw:caption>
+                              <saw:g sid="__OBIEE__MAPVIEW__OMVPREDEFINEDSTYLE__OBIEE_NAVTEQ_Sample__M.BI_YELLOW_CIRCLE_D5RDYLGN__~v0" class="predefined"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>Tile 4</saw:text></saw:caption>
+                              <saw:g sid="__OBIEE__MAPVIEW__OMVPREDEFINEDSTYLE__OBIEE_NAVTEQ_Sample__M.BI_ORANGE_CIRCLE_D5RDYLGN__~v0" class="predefined"/></saw:rampItem>
+                           <saw:rampItem id="4">
+                              <saw:caption>
+                                 <saw:text>Low Tile</saw:text></saw:caption>
+                              <saw:g sid="__OBIEE__MAPVIEW__OMVPREDEFINEDSTYLE__OBIEE_NAVTEQ_Sample__M.BI_RED_CIRCLE_D5RDYLGN__~v0" class="predefined"/></saw:rampItem></saw:rampStyle></saw:varyImage>                          
+                     <saw:g class="marker">
+                        <saw:image fmapURL="common/kpi_warning_status.gif"/></saw:g></saw:visual>          </saw:visuals>        </saw:spatialLayer>      </saw:spatialLayers>      
+         <saw:formatPanel display="true" width="214" height="547"/>      
+         <saw:canvasFormat width="480" height="400" enableWrapAround="false"/>      
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>    
+         <saw:viewCaption>
+            <saw:caption>
+               <saw:text>Map with local NAVTEQ Spatial Data</saw:text></saw:caption></saw:viewCaption></saw:view>    
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">      
+         <saw:display type="bar" subtype="horizontal" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">        
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>      </saw:display>      
+         <saw:canvasFormat height="400" width="250" showGradient="true">        
+            <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>        
+            <saw:title mode="custom">          
+               <saw:caption truncate="false" truncateLength="0"/>          
+               <saw:displayFormat>            
+                  <saw:formatSpec fontSize="9"/>          </saw:displayFormat>        </saw:title>        
+            <saw:gridlines default="true">          
+               <saw:horizontal>            
+                  <saw:major visible="false"/>            
+                  <saw:minor visible="false"/>          </saw:horizontal>          
+               <saw:vertical>            
+                  <saw:major visible="false"/>            
+                  <saw:minor visible="false"/>          </saw:vertical>        </saw:gridlines>      </saw:canvasFormat>      
+         <saw:selections>        
+            <saw:categories>          
+               <saw:category>            
+                  <saw:columnRef columnID="c952f8a9bf0138307"/>          </saw:category>        </saw:categories>        
+            <saw:measures showMeasureLabelsOnCategory="false">          
+               <saw:column measureType="x">            
+                  <saw:columnRef columnID="c0d1f7d54cd3774af"/>          </saw:column>        </saw:measures>        
+            <saw:seriesGenerators>          
+               <saw:measureLabels/>        </saw:seriesGenerators>        
+            <saw:sections displayAsSlider="true"/>      </saw:selections>      
+         <saw:legendFormat position="none" transparentFill="true"/>      
+         <saw:axesFormats syncAxis="true">        
+            <saw:axisFormat axis="Y1" displayScaleLabels="true">          
+               <saw:title mode="custom">            
+                  <saw:caption>              
+                     <saw:text/>            </saw:caption>          </saw:title>          
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>          
+               <saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/>          
+               <saw:textFormat fontSize="9"/>        </saw:axisFormat>        
+            <saw:axisFormat axis="X" displayScaleLabels="true">          
+               <saw:title mode="auto">            
+                  <saw:caption truncate="false" truncateLength="0"/>            
+                  <saw:displayFormat>              
+                     <saw:formatSpec fontSize="9"/>            </saw:displayFormat>          </saw:title>          
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="false"/>          
+               <saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/>          
+               <saw:textFormat fontSize="9"/>        </saw:axisFormat>        
+            <saw:axisFormat axis="Y2">          
+               <saw:title mode="auto">            
+                  <saw:caption>              
+                     <saw:text/>            </saw:caption>          </saw:title>        </saw:axisFormat>      </saw:axesFormats>    </saw:view>  
+      <saw:view xsi:type="saw:viewSelector" name="viewSelector!1">
+         <saw:viewSelectorCaption position="left">
+            <saw:caption>
+               <saw:text>Select Background Map</saw:text></saw:caption></saw:viewSelectorCaption>
+         <saw:viewList>
+            <saw:viewItem type="view" name="mapview!1"/>
+            <saw:viewItem type="view" name="mapview!2"/></saw:viewList></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!2">      
+         <saw:mapLayout>        
+            <saw:splitterLayout orientation="horizontal"/>      </saw:mapLayout>      
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP_GOOGLE__~v0"/>      
+         <saw:mapWidgets>        
+            <saw:mapToolBar>          
+               <saw:panTools>            
+                  <saw:panHand display="true"/>          </saw:panTools>          
+               <saw:zoomTools>            
+                  <saw:zoomIn display="true"/>            
+                  <saw:zoomOut display="true"/>          </saw:zoomTools>          
+               <saw:selectionTools>            
+                  <saw:pointTool display="true"/>          </saw:selectionTools>        </saw:mapToolBar>        
+            <saw:mapInformation>          
+               <saw:scaleInfo display="true"/>          
+               <saw:overview display="true" viewState="collapsed"/>        </saw:mapInformation>        
+            <saw:mapOverlay>          
+               <saw:panButtons display="true"/>          
+               <saw:zoomSlider display="true"/>        </saw:mapOverlay>      </saw:mapWidgets>      
+         <saw:infoLegend display="true" viewState="collapsed"/>      
+         <saw:viewportInfo>        
+            <saw:mapCenter x="16831814.249737553" y="-4010693.508841439" size="15287.405395507812" zoomLevel="11" srid="3785" yUnitPixels="0.02616532954097885" xUnitPixels="0.02616532954097885"/>        
+            <saw:boundingBox coords="16822641.80650025,-4018298.9930257043,16840948.47446137,-4003049.8061436852"/>      </saw:viewportInfo>      
+         <saw:spatialLayers>        
+            <saw:spatialLayer sid="custom_poi" class="omv_custompoint_layer" layerID="l0">          
+               <saw:layerLabelFormat display="false"/>          
+               <saw:visuals>            
+                  <saw:visual visualID="v0" subClass="image" xsi:type="saw:variableMarker">              
+                     <saw:tooltip>                              
+                        <saw:columnRef columnID="c086f0d8f56e0e93e"/></saw:tooltip>              
+                     <saw:spatials srid="8307" singleXYColumn="false" delimiter="">
+                        <saw:columnRef columnID="c53f54c4c06d8f3bb"/>
+                        <saw:columnRef columnID="c6db79fb99ae92d6d"/></saw:spatials>              
+                     <saw:varyImage binType="percentile" numBins="5">
+                        <saw:columnRef columnID="c0d1f7d54cd3774af"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>Top Tile</saw:text></saw:caption>
+                              <saw:g sid="__OBIEE__MAPVIEW__OMVPREDEFINEDSTYLE__OBIEE_NAVTEQ_Sample__M.BI_GREEN_CIRCLE_D5RDYLGN__~v0" class="predefined"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Tile 2</saw:text></saw:caption>
+                              <saw:g sid="__OBIEE__MAPVIEW__OMVPREDEFINEDSTYLE__OBIEE_NAVTEQ_Sample__M.BI_LTGREEN_CIRCLE_D5RDYLGN__~v0" class="predefined"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>Tile 3</saw:text></saw:caption>
+                              <saw:g sid="__OBIEE__MAPVIEW__OMVPREDEFINEDSTYLE__OBIEE_NAVTEQ_Sample__M.BI_YELLOW_CIRCLE_D5RDYLGN__~v0" class="predefined"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>Tile 4</saw:text></saw:caption>
+                              <saw:g sid="__OBIEE__MAPVIEW__OMVPREDEFINEDSTYLE__OBIEE_NAVTEQ_Sample__M.BI_ORANGE_CIRCLE_D5RDYLGN__~v0" class="predefined"/></saw:rampItem>
+                           <saw:rampItem id="4">
+                              <saw:caption>
+                                 <saw:text>Low Tile</saw:text></saw:caption>
+                              <saw:g sid="__OBIEE__MAPVIEW__OMVPREDEFINEDSTYLE__OBIEE_NAVTEQ_Sample__M.BI_RED_CIRCLE_D5RDYLGN__~v0" class="predefined"/></saw:rampItem></saw:rampStyle></saw:varyImage>                          
+                     <saw:g class="marker">
+                        <saw:image fmapURL="common/kpi_warning_status.gif"/></saw:g></saw:visual>          </saw:visuals>        </saw:spatialLayer>      </saw:spatialLayers>      
+         <saw:formatPanel display="true" width="218" height="588"/>      
+         <saw:canvasFormat width="480" height="400"/>      
+         <saw:mapInteraction autoCreateFormats="true"/>    
+         <saw:viewCaption>
+            <saw:caption>
+               <saw:text>Google Maps Background Map</saw:text></saw:caption></saw:viewCaption></saw:view></saw:views></saw:report>

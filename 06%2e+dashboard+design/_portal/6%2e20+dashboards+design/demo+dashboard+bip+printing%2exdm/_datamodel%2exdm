@@ -1,0 +1,36 @@
+<dataModel xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0">
+   <description>
+      <![CDATA[Data model associated with /shared/01. QuickStart/_portal/1.10 New Features Demo/BIP Printing]]>
+   </description>
+   <dataProperties>
+      <property name="scalable_mode" value="off"/>
+      <property name="include_parameters" value="true"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="as_are"/>
+   </dataProperties>
+   <parameters/>
+   <dataSets>
+      <dataSet name="Dasbhoard BIP Printing" type="complex">
+         <answer sawTimeOut="0">
+            <reportPath>/shared/01. QuickStart/New Features/11.1.1.7.1/Dasbhoard BIP Printing</reportPath>
+         </answer>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="flase">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="Dasbhoard BIP Printing">
+               <element name="cc1f455e6d2c8aa38" label="T03 Per Name Qtr" value="cc1f455e6d2c8aa38" dataType="xsd:string" breakOrder="none" fieldOrder="1"/>
+               <element name="c1557f09a0e1422e6" label="T05 Per Name Year" value="c1557f09a0e1422e6" dataType="xsd:string" breakOrder="none" fieldOrder="2"/>
+               <element name="c889c51e1a2a9ee95" label="P3  LOB" value="c889c51e1a2a9ee95" dataType="xsd:string" breakOrder="none" fieldOrder="3"/>
+               <element name="c90c34996a473293a" label="P2  Product Type" value="c90c34996a473293a" dataType="xsd:string" breakOrder="none" fieldOrder="4"/>
+               <element name="c64eacde6b41b2d40" label="Revenue" value="c64eacde6b41b2d40" dataType="xsd:double" breakOrder="none" fieldOrder="5"/>
+               <element name="cc8b0eec23d57a757" label="Discount Rate" value="cc8b0eec23d57a757" dataType="xsd:double" breakOrder="none" fieldOrder="6"/>
+               <element name="c50ecb060f6265662" label="Actual Unit Price" value="c50ecb060f6265662" dataType="xsd:double" breakOrder="none" fieldOrder="7"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <valueSets/>
+</dataModel>

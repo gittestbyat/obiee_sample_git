@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="984eafmc7tbs9d9s" links="" overrideParentLinks="true"><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="ddmdnp1acs2uljq1" layoutType="bestFit"><sawd:dashboardSection name="Section 6" collapsible="false" duid="44c8bsc9518mud74" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec hAlign="center" paddingTop="10" paddingBottom="5" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="5u88kp1t4f4snsok"><sawd:HTML fmt="html">&lt;div align=left&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt; Refresh selected reports on a page&lt;/b&gt;&lt;/font&gt;[br/][br/][b]Description:[/b] In this page we are using a Javascript to refresh selected report(s). Though refresh by itself could be achieved by exposing a report link, this script offers lot of flexibility that may come handy in other use cases e.g. auto refresh one or more selected reports periodically, refresh them in a particular sequence and so on. Note: the metric displayed in the reports are multiplied by a random number just to make the refresh easily recognizable.&lt;/div&gt;</sawd:HTML></sawd:htmlView><sawd:linkView name="Link 4" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_679">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView><sawd:htmlView name="HTML 2" duid="cagoi1b0hdnbo91o"><sawd:HTML fmt="html">&lt;script type=&quot;text/javascript&quot;&gt;
+function refreshReport(idResultsDiv){
+	var refreshObj, indexOfId;
+	refreshObj = document.getElementById(idResultsDiv);
+	if(!refreshObj) return;	
+	while ( !refreshObj.parentNode.getAttribute(&#39;vid&#39;))       
+		refreshObj = refreshObj.parentNode;
+	refreshID=refreshObj.parentNode.getAttribute(&#39;vid&#39;);
+	indexOfId=refreshID.indexOf(&#39;~v:&#39;);
+	if (indexOfId&gt;-1) refreshID = refreshID.substring(0,indexOfId);
+	refFunction = &quot;HereLink(&#39;&quot; + refreshID + &quot;&#39;,&#39;Refresh&#39;)&quot;;
+	eval(refFunction);
+}
+&lt;/script&gt;
+
+&lt;table width=&quot;300&quot; border=0 cellspacing=20&gt;&lt;tr&gt;
+&lt;td&gt;&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a onclick=&quot;refreshReport(&#39;rep1&#39;);&quot;&gt;Refresh Report 1&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a onclick=&quot;refreshReport(&#39;rep2&#39;);&quot;&gt;Refresh Report 2&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;
+&lt;td&gt;&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a onclick=&quot;refreshReport(&#39;rep3&#39;);&quot;&gt;Refresh Report 3&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a onclick=&quot;refreshReport(&#39;rep4&#39;);&quot;&gt;Refresh Report 4&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 4" horizontalLayout="true" collapsible="false" duid="kjvkmck99gr9q877" showSectionTitle="false" layoutType="bestFit"><sawd:reportView name="Report 2" display="embed" showView="" duid="vjekcfd46nbq9m0f"><saw:caption><saw:text>Report1</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Selective Refresh/Report1"/></sawd:reportView><sawd:reportView name="Report 3" display="embed" showView="" duid="3vuuqt6kc1mb7h79"><saw:caption><saw:text>Report2</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Selective Refresh/Report2"/></sawd:reportView></sawd:dashboardSection><sawd:dashboardSection name="Section 5" horizontalLayout="true" collapsible="false" duid="5fskr6d1lfrl50a6" showSectionTitle="false" layoutType="bestFit"><sawd:reportView name="Report 4" display="embed" showView="" duid="fj32t90o9mouil4j"><saw:caption><saw:text>Report3</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Selective Refresh/Report3"/></sawd:reportView><sawd:reportView name="Report 5" display="embed" showView="" duid="ebu9jcl926rbm2of"><saw:caption><saw:text>Report4</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/09. Integrations and Customizations/Custom Interactions/Selective Refresh/Report4"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

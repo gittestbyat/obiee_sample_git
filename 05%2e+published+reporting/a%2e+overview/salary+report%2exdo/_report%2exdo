@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/a. Overview/Data Models/Salary Parameter Datamodel.xdm" cache="true"/>
+   <description>
+      <![CDATA[Data%20Model:%20Salary%20Parameter%20Datamodel%20(Requires%20that%20the%20%22demo%22%20JDBC%20connection%20in%20BI%20Publisher%20is%20set%20up.)%20Layout%20Types:%20RTF,%20XPT,%20PDF.%20Features:%20Multiple%20layout%20types;%20Cascading%20parameters%20displayed%20as%20menu%20with%20search.%20Bursting.]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="null"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Simple">
+      <template label="Simple" url="Simple.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="pdf" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Advanced Page Totals" url="Advanced Page Totals.rtf" type="rtf" outputFormat="pdf,rtf" defaultFormat="pdf" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Batch Manager Salary" url="Manager Salary Batch.rtf" type="rtf" outputFormat="html,pdf,xlsx,pptx" defaultFormat="html" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="W-2 2010 (Partial)" url="w2_2010.pdf" type="pdf" outputFormat="pdf" defaultFormat="pdf" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Manager Summary" url="Manager Summary.xpt" type="xpt" outputFormat="analyze,html,pdf,xlsx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Flex - Parameter Driven" url="ParameterDrivenEmployeeListing.swf" type="flash" outputFormat="Flash,pdf" defaultFormat="Flash" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+   <bursting active="Burst to Email"/>
+</report>

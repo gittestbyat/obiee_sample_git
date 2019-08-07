@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20Source:%20OLAP%20(Essbase);%20Structure:%20Concatenated%20flat%20%20XML;%20Features:%20Supports%20multiple%20views%20on%20data%20stored%20in%20Essbase%20or%20other%20OLAP%20sources.%20MDX%20Query%20examples%20(work%20with%20Sample.Basic)]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="G_1:Actual Vs Budget by Qtr 1" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT NON EMPTY CROSSJOIN(
+{[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]}, {[Scenario].[Actual], [Scenario].[Budget]}) on COLUMNS, NON EMPTY DESCENDANTS(Year) on ROWS
+From Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G_2:Actual Vs Budget by Qtr 2" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT NON EMPTY CROSSJOIN(
+{[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]}, {[Scenario].[Actual], [Scenario].[Budget]}) on ROWS, NON EMPTY DESCENDANTS(Year) on COLUMNS
+From Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G_3:Actual Vs Budget 3" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT NON EMPTY
+{[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]} on ROWS,
+NON EMPTY CROSSJOIN({[Scenario].[Actual], [Scenario].[Budget]},[Year].Generations(2).Members) ON COLUMNS
+From Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+      <dataSet name="G_4:Meas-Scen-Gen2Year" type="complex">
+         <olap dataSourceRef="Essbase">
+            <olapQuery>
+               <![CDATA[SELECT NON EMPTY
+{[Measures].[Sales],[Measures].[COGS],[Measures].[Margin],[Measures].[Total Expenses],[Measures].[Profit]} on Axis(0),
+NON EMPTY CROSSJOIN({[Scenario].[Actual], [Scenario].[Budget]},[Year].Generations(2).Members) ON Axis(1)
+From Sample.Basic]]>
+            </olapQuery>
+         </olap>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="G_1" source="G_1:Actual Vs Budget by Qtr 1" label="G_1">
+    <element name="Year" value="Year" dataType="xsd:string" label="Year" breakOrder="None" fieldOrder="0"/>
+    <element name="Sales_Actual" value="Sales,Actual" dataType="xsd:double" label="Sales,Actual" breakOrder="None" fieldOrder="1"/>
+    <element name="Sales_Budget" value="Sales,Budget" dataType="xsd:double" label="Sales,Budget" breakOrder="None" fieldOrder="2"/>
+    <element name="COGS_Actual" value="COGS,Actual" dataType="xsd:double" label="COGS,Actual" breakOrder="None" fieldOrder="3"/>
+    <element name="COGS_Budget" value="COGS,Budget" dataType="xsd:double" label="COGS,Budget" breakOrder="None" fieldOrder="4"/>
+    <element name="Margin_Actual" value="Margin,Actual" dataType="xsd:double" label="Margin,Actual" breakOrder="None" fieldOrder="5"/>
+    <element name="Margin_Budget" value="Margin,Budget" dataType="xsd:double" label="Margin,Budget" breakOrder="None" fieldOrder="6"/>
+    <element name="Total_Expenses_Actual" value="Total Expenses,Actual" dataType="xsd:double" label="Total Expenses,Actual" breakOrder="None" fieldOrder="7"/>
+    <element name="Total_Expenses_Budget" value="Total Expenses,Budget" dataType="xsd:double" label="Total Expenses,Budget" breakOrder="None" fieldOrder="8"/>
+    <element name="Profit_Actual" value="Profit,Actual" dataType="xsd:double" label="Profit,Actual" breakOrder="None" fieldOrder="9"/>
+    <element name="Profit_Budget" value="Profit,Budget" dataType="xsd:double" label="Profit,Budget" breakOrder="None" fieldOrder="10"/>
+  </group>
+  <group name="G_2" source="G_2:Actual Vs Budget by Qtr 2" label="G_2">
+    <element name="Measures" value="Measures" dataType="xsd:string" label="Measures" breakOrder="None" fieldOrder="0"/>
+    <element name="Scenario" value="Scenario" dataType="xsd:string" label="Scenario" breakOrder="None" fieldOrder="1"/>
+    <element name="Year" value="Year" dataType="xsd:double" label="Year" breakOrder="None" fieldOrder="2"/>
+    <element name="Qtr1" value="Qtr1" dataType="xsd:double" label="Qtr1" breakOrder="None" fieldOrder="3"/>
+    <element name="Jan" value="Jan" dataType="xsd:double" label="Jan" breakOrder="None" fieldOrder="4"/>
+    <element name="Feb" value="Feb" dataType="xsd:double" label="Feb" breakOrder="None" fieldOrder="5"/>
+    <element name="Mar" value="Mar" dataType="xsd:double" label="Mar" breakOrder="None" fieldOrder="6"/>
+    <element name="Qtr2" value="Qtr2" dataType="xsd:double" label="Qtr2" breakOrder="None" fieldOrder="7"/>
+    <element name="Apr" value="Apr" dataType="xsd:double" label="Apr" breakOrder="None" fieldOrder="8"/>
+    <element name="May" value="May" dataType="xsd:double" label="May" breakOrder="None" fieldOrder="9"/>
+    <element name="Jun" value="Jun" dataType="xsd:double" label="Jun" breakOrder="None" fieldOrder="10"/>
+    <element name="Qtr3" value="Qtr3" dataType="xsd:double" label="Qtr3" breakOrder="None" fieldOrder="11"/>
+    <element name="Jul" value="Jul" dataType="xsd:double" label="Jul" breakOrder="None" fieldOrder="12"/>
+    <element name="Aug" value="Aug" dataType="xsd:double" label="Aug" breakOrder="None" fieldOrder="13"/>
+    <element name="Sep" value="Sep" dataType="xsd:double" label="Sep" breakOrder="None" fieldOrder="14"/>
+    <element name="Qtr4" value="Qtr4" dataType="xsd:double" label="Qtr4" breakOrder="None" fieldOrder="15"/>
+    <element name="Oct" value="Oct" dataType="xsd:double" label="Oct" breakOrder="None" fieldOrder="16"/>
+    <element name="Nov" value="Nov" dataType="xsd:double" label="Nov" breakOrder="None" fieldOrder="17"/>
+    <element name="Dec" value="Dec" dataType="xsd:double" label="Dec" breakOrder="None" fieldOrder="18"/>
+  </group>
+  <group name="G_3" source="G_3:Actual Vs Budget 3" label="G_3">
+    <element name="Measures" value="Measures" dataType="xsd:string" label="Measures" breakOrder="None" fieldOrder="0"/>
+    <element name="Actual_Qtr1" value="Actual,Qtr1" dataType="xsd:double" label="Actual,Qtr1" breakOrder="None" fieldOrder="1"/>
+    <element name="Actual_Qtr2" value="Actual,Qtr2" dataType="xsd:double" label="Actual,Qtr2" breakOrder="None" fieldOrder="2"/>
+    <element name="Actual_Qtr3" value="Actual,Qtr3" dataType="xsd:double" label="Actual,Qtr3" breakOrder="None" fieldOrder="3"/>
+    <element name="Actual_Qtr4" value="Actual,Qtr4" dataType="xsd:double" label="Actual,Qtr4" breakOrder="None" fieldOrder="4"/>
+    <element name="Budget_Qtr1" value="Budget,Qtr1" dataType="xsd:double" label="Budget,Qtr1" breakOrder="None" fieldOrder="5"/>
+    <element name="Budget_Qtr2" value="Budget,Qtr2" dataType="xsd:double" label="Budget,Qtr2" breakOrder="None" fieldOrder="6"/>
+    <element name="Budget_Qtr3" value="Budget,Qtr3" dataType="xsd:double" label="Budget,Qtr3" breakOrder="None" fieldOrder="7"/>
+    <element name="Budget_Qtr4" value="Budget,Qtr4" dataType="xsd:double" label="Budget,Qtr4" breakOrder="None" fieldOrder="8"/>
+  </group>
+  <group name="G_4" source="G_4:Meas-Scen-Gen2Year" label="G_4">
+    <element name="Scenario" value="Scenario" dataType="xsd:string" label="Scenario" breakOrder="None" fieldOrder="0"/>
+    <element name="Year" value="Year" dataType="xsd:string" label="Year" breakOrder="None" fieldOrder="1"/>
+    <element name="Sales" value="Sales" dataType="xsd:double" label="Sales" breakOrder="None" fieldOrder="2"/>
+    <element name="COGS" value="COGS" dataType="xsd:double" label="COGS" breakOrder="None" fieldOrder="3"/>
+    <element name="Margin" value="Margin" dataType="xsd:double" label="Margin" breakOrder="None" fieldOrder="4"/>
+    <element name="Total_Expenses" value="Total Expenses" dataType="xsd:double" label="Total Expenses" breakOrder="None" fieldOrder="5"/>
+    <element name="Profit" value="Profit" dataType="xsd:double" label="Profit" breakOrder="None" fieldOrder="6"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="G_4:Meas-Scen-Gen2Year" left="821px" top="65px"/><layout name="G_3:Actual Vs Budget 3" left="575px" top="62px"/><layout name="G_2:Actual Vs Budget by Qtr 2" left="329px" top="59px"/><layout name="G_1:Actual Vs Budget by Qtr 1" left="53px" top="106px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

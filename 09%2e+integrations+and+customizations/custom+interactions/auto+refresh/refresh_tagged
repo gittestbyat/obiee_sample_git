@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cd9fe6fc6e2f02d51">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">5+rand(1)*50</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Month</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Time</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c0e1973d7ed80674b">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">SECOND(CURRENT_TIMESTAMP(1))</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Month</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>secs</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ca262a399b969f07f">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">1</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Month</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>bubble size</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf3e77b77a00524c7">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">NOW()</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!1" colSpan="2">
+                  <saw:displayFormat>
+                     <saw:formatSpec backgroundColor="#993333"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="dvtchart!1"/><saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable>
+         </saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cf3e77b77a00524c7">
+                     <saw:headerFormat>
+                        <saw:displayFormat>
+                           <saw:formatSpec wrapText="true"/></saw:displayFormat>
+                        <saw:caption>
+                           <saw:text>Last Refreshed:</saw:text></saw:caption></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="bubble" subtype="default" renderFormat="default" mode="online" animateOnDisplay="false">
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="300" width="300">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default">
+               <saw:textFormat/></saw:dataLabels>
+            <saw:title mode="custom"/></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="cf3e77b77a00524c7"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="z">
+                  <saw:columnRef columnID="ca262a399b969f07f"/></saw:column>
+               <saw:column measureType="x">
+                  <saw:columnRef columnID="c0e1973d7ed80674b"/></saw:column>
+               <saw:column measureType="y">
+                  <saw:columnRef columnID="cd9fe6fc6e2f02d51"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+         <saw:legendFormat position="default" transparentFill="true"/>
+         <saw:axesFormats>
+            <saw:axisFormat axis="Y1">
+               <saw:title mode="custom"/>
+               <saw:scale scaleValues="custom" max="60" defaultTicks="true"/></saw:axisFormat>
+            <saw:axisFormat axis="X">
+               <saw:title mode="custom"/>
+               <saw:scale scaleValues="custom" max="60" defaultTicks="true"/></saw:axisFormat></saw:axesFormats>
+         <saw:seriesFormats><saw:seriesFormatGroup name="bubble"><saw:seriesFormatRule><saw:seriesCondition position="1"/><saw:visualFormats><saw:visualFormat color="#FF5555" bubbleColor="#FF5555" bubbleType="3d"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+         <saw:staticText>
+            <saw:caption fmt="html">
+               <saw:text>[b]My Real Time Report[/b]&lt;div id=&quot;_autoref1&quot; /&gt;</saw:text></saw:caption></saw:staticText>
+         <saw:displayFormat>
+            <saw:formatSpec fontColor="#FFFFFF"/></saw:displayFormat></saw:view></saw:views></saw:report>

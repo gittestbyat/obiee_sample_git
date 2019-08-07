@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/c. Integration/Reports/Data Models/Customer Order Detail DM.xdm" cache="true"/>
+   <description>
+      <![CDATA[Data%20Model:%20Custom%20Order%20Detail%20DM%20--Layouts:%20XPT%20--%20Features:%20Bursting,%20Parameters,%20LOVs]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Orders Letter">
+      <template label="Orders Letter" url="Order Letters.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx" defaultFormat="" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Orders Letter 2" url="Letter 2.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,xlsx" defaultFormat="" locale="en_US" active="false" viewOnline="false"/>
+   </templates>
+   <bursting active="Burst2Email"/>
+</report>

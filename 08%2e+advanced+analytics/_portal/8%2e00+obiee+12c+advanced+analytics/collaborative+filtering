@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="h03bfehe0lhnu2d9"><sawd:dashboardColumn name="Column 3" canFreeze="true" duid="eqh92qf2ek34plnq" layoutType="specificSize"><sawd:dashboardSection layoutType="bestFit" name="Section 4" duid="4nfp1rljlqkf7844" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="2j2efof9q8cpgfol"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt; This example demonstrates Movie recommendation system using Collabarative Filtering algorithm implemented using Custom R-Scripts. This example demonstrates how we can use user defined custom R-Scripts to perform Advanced Analytics like recommendation algorithms in OBIEE.[br/] 
+In this example we use User Based top-N Collabarative filtering algorithm to generate recommendations for the users and predict the rating users are expected to give for the recommended movies. Prediction is done based on a precomputed model which is computed using the given data. User based top-N algorithm uses a similarity-based vector model to identify the k most similar users to an active user who have similar movie preferences. After the k most similar users are found, their corresponding ratings are taken into consideration and are aggregated to identify the set of items to be recommended for the current user.
+Please find the R-Script to generate the precomputed model.
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec wrapText="true" width="1200"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" break="column" frozen="false" canFreeze="false" duid="kmadvl9jb6cn73ri" layoutType="bestFit"><sawd:dashboardSection layoutType="specificSize" name="Section 0" duid="1rptpff1n34brmkd" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec backgroundColor="#EEEEEE" wrapText="true" width="190" borderPosition="none"/></saw:displayFormat><sawd:globalFilterView name="GFP 0" path="/shared/08. Advanced Analytics/BI Server AA/R Based/Collaborative Filtering Prompt" duid="alfuo3lnl8tp2rgl" scope="dashboardPage"><saw:caption><saw:text>Collaborative Filtering Prompt</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 4" frozen="false" canFreeze="false" duid="bhn12tedmieee7eg" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 5" duid="5ao0p21osp354nvm" showSectionTitle="false" collapsible="false" horizontalLayout="true"><saw:displayFormat><saw:formatSpec wrapText="true" borderPosition="none"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="8j61dcgivmran3sv"><saw:caption><saw:text>Collaborative Filtering(Precomputed Model)</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/BI Server AA/R Based/Collaborative Filtering(Precomputed Model)"/></sawd:reportView><sawd:htmlView name="HTML 0" duid="8h0bfhh70j8si0es"><sawd:HTML fmt="html">&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; R-Script to generate the Prediction Model:&lt;/b&gt;[br/]
+
+All the required prediction models &amp; data are present in /app/oracle/R/ [br/]
+
+Prerequisite : You need Movie_Ratings.csv or Movie_Ratings.xlsx to generate these models, [br/]
+which can be downloaded from Datasources section in VA 
+[br/][br/]
+
+R-Script:
+[br/][br/]
+
+library(reshape2) [br/]
+dat &lt;- read.csv(&quot;Movie_Ratings.csv&quot;) [br/]
+dat1 &lt;- dat[,c(5,4,3)] [br/]
+userid_list &lt;- sort(unique(dat1$User_Name)) [br/]
+g&lt;-acast(dat1, User_Name ~ Movie_Name) [br/]
+R&lt;-as.matrix(g) [br/]
+r &lt;- as(R, &quot;realRatingMatrix&quot;) [br/]
+saveRDS(r, &quot;User_location/realratingmatrix.rds&quot;) [br/]
+rec_movies &lt;- Recommender(r[1:nrow(r)], method = &quot;UBCF&quot;, [br/]param=list(normalize = &quot;Z-score&quot;,method=&quot;Cosine&quot;,nn=5, minRating=1)) [br/]
+saveRDS(rec_movies, &quot;User_location/rec_movies_model.rds&quot;) [br/]
+pred_rating &lt;- Recommender(r[1:nrow(r)],method=&quot;UBCF&quot;, [br/]param=list(normalize = &quot;Z-score&quot;,method=&quot;Cosine&quot;,nn=5, minRating=1)) [br/]
+saveRDS(pred_rating, &quot;User_location/pred_rating_model.rds&quot;) [br/]
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" break="column" frozen="false" canFreeze="false" duid="p0sh8h8agebqinjv" layoutType="specificSize"><sawd:dashboardSection layoutType="bestFit" name="Section 2" collapsible="false" duid="cpo6u9tjmpc1nvg9" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 1" display="embed" showView="" duid="87imckgsnbasfuoe"><saw:caption><saw:text>Collabarative Filtering 2</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/BI Server AA/R Based/Collabarative Filtering 2"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec wrapText="true" width="1200"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

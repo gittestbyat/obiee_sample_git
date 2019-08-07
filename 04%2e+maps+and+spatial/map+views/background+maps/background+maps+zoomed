@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c2079af1d7014b569">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c2c691d3bd594e690">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R69  Area Code&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1848b98b1cc40dac">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R51  Area&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!5"/><saw:cvCell viewName="htmlview!6"/><saw:cvCell viewName="htmlview!3"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="mapview!10"/><saw:cvCell viewName="mapview!8"/><saw:cvCell viewName="mapview!9"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c2079af1d7014b569"/>
+                  <saw:edgeLayer type="column" columnID="c57a34dab2503be9c"/>
+                  <saw:edgeLayer type="column" columnID="c2c691d3bd594e690"/>
+                  <saw:edgeLayer type="column" columnID="c581440ce752cf144"/>
+                  <saw:edgeLayer type="column" columnID="c1848b98b1cc40dac"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!2">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__NOKIA_MAP_SATELLITE__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-13626696.328880254,4551430.960683869,-13625743.254700128,4552025.736300038"/><saw:mapCenter x="-13626218.597461645" y="4551727.154163407" size="597.1642732620239" srid="3785" zoomLevel="15" xUnitPixels="0.4186452726556616" yUnitPixels="0.4186452726556616"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view><saw:view xsi:type="saw:mapview" name="mapview!3">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__NOKIA_MAP_TEST__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-16123932.21875,-6020046.347361989,15106402.515625,13469561.04326301"/><saw:mapCenter x="-469629.09375" y="3685621.59013801" size="19567878.90625" srid="3785" zoomLevel="0" xUnitPixels="0.000012776039814931079" yUnitPixels="0.000012776039814931079"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view><saw:view xsi:type="saw:mapview" name="mapview!4">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP_GOOGLE__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-16123932.21875,-6020046.347361989,15106402.515625,13469561.04326301"/><saw:mapCenter x="-469629.09375" y="3685621.59013801" size="19567878.90625" srid="3785" zoomLevel="0" xUnitPixels="0.000012776039814931079" yUnitPixels="0.000012776039814931079"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view><saw:view xsi:type="saw:mapview" name="mapview!5">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__BING_MAP_TEST__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-16123932.21875,-6020046.347361989,15106402.515625,13469561.04326301"/><saw:mapCenter x="-469629.09375" y="3685621.59013801" size="19567878.90625" srid="3785" zoomLevel="0" xUnitPixels="0.000012776039814931079" yUnitPixels="0.000012776039814931079"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view><saw:view xsi:type="saw:mapview" name="mapview!6">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__ELOC_WORLD_MAP__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-16123932.21875,-6042309.718465204,15106402.515625,13447297.672159795"/><saw:mapCenter x="-469629.09375" y="3663358.2190347956" size="19567878.90625" srid="54004" zoomLevel="0" xUnitPixels="0.000012776039814931079" yUnitPixels="0.000012776039814931079"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="text"><saw:text>NOKIA Satellite Map</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!2"><saw:staticText><saw:caption fmt="text"><saw:text>NOKIA Terrain Map</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!3"><saw:staticText><saw:caption fmt="text"><saw:text>GOOGLE Map</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!4"><saw:staticText><saw:caption fmt="text"><saw:text>BING Map</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!5"><saw:staticText><saw:caption fmt="text"><saw:text>ELOCATION Map</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!6"><saw:staticText><saw:caption fmt="text"><saw:text>NAVTEQ Simple Map</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:mapview" name="mapview!7">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__NOKIA_MAP_TERRAIN__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-13626696.32888021,4551430.960683872,-13625743.254700083,4552025.736300041"/><saw:mapCenter x="-13626218.5974616" y="4551727.15416341" size="597.1642732620239" srid="3785" zoomLevel="15" xUnitPixels="0.4186452726556616" yUnitPixels="0.4186452726556616"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view><saw:view xsi:type="saw:mapview" name="mapview!8">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-122.41118016181979,37.80067927605998,-122.4016284552482,37.806649092667215"/><saw:mapCenter x="-122.406404308534" y="37.8036641843636" size="0.005969816607233724" srid="8307" zoomLevel="15" xUnitPixels="41877.3333332842" yUnitPixels="41877.33333333404"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view><saw:view xsi:type="saw:mapview" name="mapview!9">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP_GOOGLE__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-13626696.328880183,4551428.572026775,-13625740.866042964,4552025.736300037"/><saw:mapCenter x="-13626218.597461574" y="4551727.154163406" size="597.1642732620239" srid="3857" zoomLevel="15" xUnitPixels="0.4186452726556616" yUnitPixels="0.4186452726556616"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view><saw:view xsi:type="saw:mapview" name="mapview!10">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__ELOC_WORLD_MAP__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-13626696.328880208,4551453.723514748,-13625740.866042988,4552050.88778801"/><saw:mapCenter x="-13626218.597461598" y="4551752.305651379" size="597.1642732620239" srid="3857" zoomLevel="15" xUnitPixels="0.4186452726556616" yUnitPixels="0.4186452726556616"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view><saw:view xsi:type="saw:mapview" name="mapview!1">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__BING_MAP_TEST__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingBox coords="-13626696.32888021,4551428.572026779,-13625740.86604299,4552025.736300041"/><saw:mapCenter x="-13626218.5974616" y="4551727.15416341" size="597.1642732620239" srid="3857" zoomLevel="15" xUnitPixels="0.4186452726556616" yUnitPixels="0.4186452726556616"/></saw:viewportInfo>
+         <saw:spatialLayers/>
+         <saw:canvasFormat width="400" height="250" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="0" height="507" display="false"/></saw:view></saw:views></saw:report>

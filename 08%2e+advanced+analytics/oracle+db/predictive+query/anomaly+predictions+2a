@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+  <saw:criteria xsi:type="saw:physicalCriteria" connectionPool="&quot;X6 - Warranty Claims Data&quot;.&quot;Warranty Claims Connection&quot;">
+    <saw:columns>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <saw:column columnID="c0" xsi:type="saw:physicalColumnRef"><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat><saw:tableHeading/><saw:columnHeading><saw:caption fmt="html"><saw:text>Rank</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column columnID="c1" xsi:type="saw:physicalColumnRef"><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat><saw:tableHeading/><saw:columnHeading><saw:caption fmt="html"><saw:text>Record ID</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column columnID="c2" xsi:type="saw:physicalColumnRef"><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="3" maxDigits="3" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading/><saw:columnHeading><saw:caption fmt="html"><saw:text>Anomality Probability</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column columnID="c3" xsi:type="saw:physicalColumnRef"><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" interaction="clientEvent"><saw:clientEventSpec channel="ch1"/></saw:formatSpec></saw:displayFormat><saw:tableHeading/><saw:columnHeading><saw:caption fmt="html"><saw:text>Influential Attribute </saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column columnID="c4" xsi:type="saw:physicalColumnRef"><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat><saw:tableHeading/><saw:columnHeading><saw:caption fmt="html"><saw:text>Attr Value</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column columnID="c5" xsi:type="saw:physicalColumnRef" aggRule="avg"><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="3" maxDigits="3" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading/><saw:columnHeading><saw:caption fmt="html"><saw:text>Attr Weight</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column columnID="c6" xsi:type="saw:physicalColumnRef" aggRule="avg"><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"/></saw:displayFormat><saw:tableHeading/><saw:columnHeading><saw:caption fmt="html"><saw:text>Attr Rank</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+    <saw:sql>SELECT 
+	RK,
+	RECORDID,
+	PROBANOM,
+	Attr.*
+FROM
+  (SELECT S1.*,
+    RANK() OVER (ORDER BY S1.PROBANOM DESC) RK, 
+    xmltype(to_clob(S1.ANOM_DET)) xml_data
+  FROM
+    (SELECT F.*,
+      PREDICTION_PROBABILITY(OF ANOMALY, 0 USING  @{claimattr}{*}) OVER () PROBANOM,
+      PREDICTION_DETAILS(OF ANOMALY, 0, 4 USING  @{claimattr}{*}) OVER () ANOM_DET
+    FROM ENDECA.FACT_CLAIM_DN F
+    ) S1
+  ),
+  XMLTable(&#39;for $i in /Details/Attribute return $i&#39;
+    passing xml_data
+    columns AttributeName VARCHAR2(100) path &#39;@name&#39;, 
+		AttributeValue VARCHAR2(100) path &#39;@actualValue&#39;,
+		AttributeWeight number path &#39;@weight&#39;,
+		AttributeRank number path &#39;@rank&#39;
+		)  Attr 
+WHERE 
+	RK &lt;= @{ranklimit}{10}
+</saw:sql>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      
+    <saw:cvTable><saw:cvRow><saw:cvCell viewName="pivotTableView!2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+    
+    
+    
+    
+  <saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="true" clientEventChannels="ch1" clientEventEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c3" duplicateID="d1"/></saw:edgeLayers></saw:edge><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c4"><saw:headerFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text>Attribute Value</saw:text></saw:caption></saw:headerFormat><saw:memberFormat><saw:displayFormat><saw:formatSpec hAlign="right" wrapText="true"/></saw:displayFormat></saw:memberFormat><saw:levels><saw:level><saw:displaySubTotal id="st_c4" subTotalPosition="after"/></saw:level></saw:levels></saw:edgeLayer><saw:edgeLayer type="column" columnID="c1"/><saw:edgeLayer type="column" columnID="c6"><saw:headerFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text>Attribute Rank</saw:text></saw:caption></saw:headerFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="c0"><saw:headerFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text>Probability Rank</saw:text></saw:caption></saw:headerFormat><saw:memberFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"><saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c5"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text>Attribute Weight</saw:text></saw:caption></saw:memberFormat></saw:measure><saw:measure columnID="c2"/></saw:measuresList></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2" scrollingEnabled="true" autoPreview="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:columnOrder><saw:columnOrderRef columnID="c3" direction="descending"><saw:QDR><saw:staticMemberGroup specialDimension="measure"><saw:members xsi:type="saw:specialValueMembers"><saw:value>c1</saw:value></saw:members></saw:staticMemberGroup></saw:QDR></saw:columnOrderRef></saw:columnOrder><saw:edgeLayers><saw:edgeLayer type="column" columnID="c3"><saw:memberFormat><saw:displayFormat><saw:formatSpec fontSize="9" wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"><saw:edgeLayers><saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c1" aggRule="count"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text>Record Count</saw:text></saw:caption></saw:memberFormat><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec fontSize="9" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList><saw:nestedViews><saw:nestedView position="left"><saw:view xsi:type="saw:dvtchart" name="pivotTableView!2::GridChart"><saw:display type="bar" subtype="horizontal" renderFormat="default" mode="online" animateOnDisplay="false"><saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display><saw:canvasFormat height="280" width="450"><saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/><saw:title mode="custom"><saw:caption><saw:text>Influence Count by Attribute</saw:text></saw:caption></saw:title></saw:canvasFormat><saw:legendFormat position="default" transparentFill="true"/><saw:axesFormats><saw:axisFormat axis="X" displayScaleLabels="true"><saw:title mode="custom"><saw:caption><saw:text>Count</saw:text></saw:caption></saw:title><saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="default" skipLabels="true"/><saw:textFormat fontSize="9"/></saw:axisFormat><saw:axisFormat axis="Y1"><saw:title mode="custom"/></saw:axisFormat></saw:axesFormats><saw:selections><saw:categories><saw:category><saw:columnRef columnID="c3"/></saw:category></saw:categories><saw:measures showMeasureLabelsOnCategory="false"><saw:column measureType="x"><saw:columnRef columnID="c1"/></saw:column></saw:measures><saw:seriesGenerators><saw:measureLabels/></saw:seriesGenerators></saw:selections></saw:view></saw:nestedView></saw:nestedViews></saw:view></saw:views>
+</saw:report>

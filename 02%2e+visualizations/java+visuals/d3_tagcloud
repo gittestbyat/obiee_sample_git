@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c5a64ce0129ddbf3c"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Sales Person&quot;.&quot;E1  Sales Rep Name&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Sales Person</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Selected Dimension</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf129aea85aee2881"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">LEFT(@{Dim01}{&quot;Sales Person&quot;.&quot;E1  Sales Rep Name&quot;}, POSITION(&#39; &#39; IN @{Dim01}{&quot;Sales Person&quot;.&quot;E1  Sales Rep Name&quot;}))</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Sales Person</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Selected Dim Word</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c71690a1ba36fd7f5"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Selected Metric</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ce0b205d11dae1876"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">40+100*@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}/ SUM(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} BY 1)</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Selected Metric %</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns><saw:columnOrder><saw:columnOrderRef columnID="c71690a1ba36fd7f5" direction="descending"/></saw:columnOrder></saw:criteria><saw:views currentView="2"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="narrativeView!1"/><saw:cvCell viewName="tableView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:tableView" name="tableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:columnOrder><saw:columnOrderRef columnID="ce0b205d11dae1876" direction="descending"/><saw:columnOrderRef columnID="c71690a1ba36fd7f5:d1" direction="descending"/></saw:columnOrder><saw:edgeLayers><saw:edgeLayer type="column" columnID="c5a64ce0129ddbf3c"/><saw:edgeLayer type="column" columnID="c71690a1ba36fd7f5" duplicateID="d1"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;div id=&quot;wordcloud&quot; /&gt;
+
+&lt;script src=&quot;/analyticsRes/d3-cloud/lib/d3/d3.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/analyticsRes/d3-cloud/d3.layout.cloud.js&quot;&gt;&lt;/script&gt;
+&lt;body&gt;
+&lt;script&gt;
+myWords=[];</saw:text></saw:caption></saw:prefix><saw:postfix><saw:caption fmt="html"><saw:text>w=@{Width}{800}/2; 
+h=@{Height}{400}/2;
+
+d3.layout.cloud().size([@{Width}{800}, @{Height}{400}])
+.words(myWords)
+      .rotate(function() { return ~~(Math.random() * 2) * 90; })
+      .fontSize(function(d) { return d.size; })
+      .font(&quot;Impact&quot;)
+      .padding(1)
+      .on(&quot;end&quot;, draw)
+      .start();
+
+  function draw(words) {
+    d3.select(&quot;#wordcloud&quot;).append(&quot;svg&quot;)
+        .attr(&quot;width&quot;, @{Width}{800})
+        .attr(&quot;height&quot;, @{Height}{400})
+      .append(&quot;g&quot;)
+        .attr(&quot;transform&quot;, &quot;translate(&quot;+w+&quot;,&quot;+h+&quot;)&quot;)
+      .selectAll(&quot;text&quot;)
+        .data(words)
+      .enter().append(&quot;text&quot;)
+        .style(&quot;font-size&quot;, function(d) { return d.size + &quot;px&quot;; })
+        .style(&quot;fill&quot;,&quot;@{TextColor}{steelblue}&quot;)
+        .attr(&quot;text-anchor&quot;, &quot;middle&quot;)
+        .attr(&quot;transform&quot;, function(d) {
+          return &quot;translate(&quot; + [d.x, d.y] + &quot;)rotate(&quot; + d.rotate + &quot;)&quot;;
+        })
+        .text(function(d) { return d.text; });
+  }
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix><saw:narrative rowCount="200"><saw:caption fmt="html"><saw:text>myWords.push({text:&quot;@{c5a64ce0129ddbf3c}&quot;,size:@{ce0b205d11dae1876}});</saw:text></saw:caption></saw:narrative></saw:view></saw:views></saw:report>

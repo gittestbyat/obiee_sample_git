@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;D - Sample Federated&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:hierarchicalColumn" columnID="c0bf07284fe783156" hierarchyID="Time Hierarchy" tableName="&quot;Time&quot;" dimensionID="H0 Time">
+				<saw:displayFormat>
+					<saw:formatSpec width="100" wrapText="true"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading>
+				<saw:hierarchyLevels>
+					<saw:hierarchyLevel levelID="Total Time"/>
+					<saw:hierarchyLevel levelID="Year"/>
+					<saw:hierarchyLevel levelID="Quarter"/>
+					<saw:hierarchyLevel levelID="Month">
+						<saw:displayFormat>
+							<saw:formatSpec suppress="suppress" backgroundColor="#EEEEEE" wrapText="true"/></saw:displayFormat></saw:hierarchyLevel>
+					<saw:hierarchyLevel levelID="Week">
+						<saw:displayFormat>
+							<saw:formatSpec suppress="suppress" backgroundColor="#FFFF99" wrapText="true"/></saw:displayFormat></saw:hierarchyLevel>
+					<saw:hierarchyLevel levelID="Day"/></saw:hierarchyLevels></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c9816e4ee3318aa62">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;2d- Qty (Orcl Db Cubes Federated)&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true"/><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Month"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>2010 / 05</saw:value>
+														<saw:value>2010 / 11</saw:value>
+														<saw:value>2011 / 12</saw:value>
+														<saw:value>2009 / 02</saw:value>
+														<saw:value>2009 / 09</saw:value>
+														<saw:value>2009 / 12</saw:value>
+														<saw:value>2010 / 07</saw:value>
+														<saw:value>2011 / 07</saw:value>
+														<saw:value>2011 / 08</saw:value>
+														<saw:value>2008 / 06</saw:value>
+														<saw:value>2008 / 11</saw:value>
+														<saw:value>2009 / 03</saw:value>
+														<saw:value>2008 / 10</saw:value>
+														<saw:value>2009 / 01</saw:value>
+														<saw:value>2009 / 05</saw:value>
+														<saw:value>2009 / 11</saw:value>
+														<saw:value>2010 / 12</saw:value>
+														<saw:value>2011 / 03</saw:value>
+														<saw:value>2011 / 06</saw:value>
+														<saw:value>2008 / 07</saw:value>
+														<saw:value>2009 / 04</saw:value>
+														<saw:value>2009 / 06</saw:value>
+														<saw:value>2010 / 02</saw:value>
+														<saw:value>2010 / 10</saw:value>
+														<saw:value>2011 / 01</saw:value>
+														<saw:value>2008 / 12</saw:value>
+														<saw:value>2010 / 01</saw:value>
+														<saw:value>2011 / 05</saw:value>
+														<saw:value>2011 / 09</saw:value>
+														<saw:value>2008 / 01</saw:value>
+														<saw:value>2008 / 02</saw:value>
+														<saw:value>2009 / 07</saw:value>
+														<saw:value>2010 / 09</saw:value>
+														<saw:value>2010 / 04</saw:value>
+														<saw:value>2010 / 08</saw:value>
+														<saw:value>2010 / 06</saw:value>
+														<saw:value>2011 / 02</saw:value>
+														<saw:value>2011 / 10</saw:value>
+														<saw:value>2008 / 03</saw:value>
+														<saw:value>2008 / 09</saw:value>
+														<saw:value>2009 / 08</saw:value>
+														<saw:value>2010 / 03</saw:value>
+														<saw:value>2011 / 04</saw:value>
+														<saw:value>2011 / 11</saw:value>
+														<saw:value>2008 / 04</saw:value>
+														<saw:value>2008 / 05</saw:value>
+														<saw:value>2008 / 08</saw:value>
+														<saw:value>2009 / 10</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c9816e4ee3318aa62"/></saw:target></saw:QDR></saw:QDRSet></saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec wrapText="true" backgroundColor="#CCCCCC"/></saw:formatRule></saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:scope xsi:type="saw:QDRScope">
+								<saw:QDRSet>
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Week"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>2008 Week 31</saw:value>
+														<saw:value>2008 Week 33</saw:value>
+														<saw:value>2008 Week 34</saw:value>
+														<saw:value>2008 Week 14</saw:value>
+														<saw:value>2008 Week 23</saw:value>
+														<saw:value>2008 Week 24</saw:value>
+														<saw:value>2008 Week 38</saw:value>
+														<saw:value>2008 Week 46</saw:value>
+														<saw:value>2008 Week 47</saw:value>
+														<saw:value>2008 Week 05</saw:value>
+														<saw:value>2008 Week 01</saw:value>
+														<saw:value>2008 Week 11</saw:value>
+														<saw:value>2008 Week 13</saw:value>
+														<saw:value>2008 Week 49</saw:value>
+														<saw:value>2008 Week 19</saw:value>
+														<saw:value>2008 Week 21</saw:value>
+														<saw:value>2008 Week 41</saw:value>
+														<saw:value>2008 Week 48</saw:value>
+														<saw:value>2008 Week 03</saw:value>
+														<saw:value>2008 Week 10</saw:value>
+														<saw:value>2008 Week 18</saw:value>
+														<saw:value>2008 Week 27</saw:value>
+														<saw:value>2008 Week 04</saw:value>
+														<saw:value>2008 Week 32</saw:value>
+														<saw:value>2008 Week 09</saw:value>
+														<saw:value>2008 Week 51</saw:value>
+														<saw:value>2008 Week 52</saw:value>
+														<saw:value>2008 Week 20</saw:value>
+														<saw:value>2008 Week 40</saw:value>
+														<saw:value>2008 Week 29</saw:value>
+														<saw:value>2008 Week 30</saw:value>
+														<saw:value>2008 Week 42</saw:value>
+														<saw:value>2008 Week 06</saw:value>
+														<saw:value>2008 Week 25</saw:value>
+														<saw:value>2008 Week 44</saw:value>
+														<saw:value>2008 Week 07</saw:value>
+														<saw:value>2008 Week 36</saw:value>
+														<saw:value>2008 Week 16</saw:value>
+														<saw:value>2008 Week 39</saw:value>
+														<saw:value>2008 Week 28</saw:value>
+														<saw:value>2008 Week 08</saw:value>
+														<saw:value>2008 Week 12</saw:value>
+														<saw:value>2008 Week 50</saw:value>
+														<saw:value>2008 Week 15</saw:value>
+														<saw:value>2008 Week 17</saw:value>
+														<saw:value>2008 Week 22</saw:value>
+														<saw:value>2008 Week 26</saw:value>
+														<saw:value>2008 Week 37</saw:value>
+														<saw:value>2008 Week 43</saw:value>
+														<saw:value>2008 Week 45</saw:value>
+														<saw:value>2008 Week 02</saw:value>
+														<saw:value>2008 Week 35</saw:value>
+														<saw:value>2008 Week 53</saw:value>
+														<saw:value>2009 Week 26</saw:value>
+														<saw:value>2009 Week 2</saw:value>
+														<saw:value>2009 Week 22</saw:value>
+														<saw:value>2009 Week 13</saw:value>
+														<saw:value>2009 Week 27</saw:value>
+														<saw:value>2009 Week 29</saw:value>
+														<saw:value>2009 Week 48</saw:value>
+														<saw:value>2009 Week 50</saw:value>
+														<saw:value>2009 Week 17</saw:value>
+														<saw:value>2009 Week 37</saw:value>
+														<saw:value>2009 Week 10</saw:value>
+														<saw:value>2009 Week 19</saw:value>
+														<saw:value>2009 Week 52</saw:value>
+														<saw:value>2009 Week 8</saw:value>
+														<saw:value>2009 Week 11</saw:value>
+														<saw:value>2009 Week 14</saw:value>
+														<saw:value>2009 Week 28</saw:value>
+														<saw:value>2009 Week 51</saw:value>
+														<saw:value>2009 Week 35</saw:value>
+														<saw:value>2009 Week 38</saw:value>
+														<saw:value>2009 Week 32</saw:value>
+														<saw:value>2009 Week 43</saw:value>
+														<saw:value>2009 Week 46</saw:value>
+														<saw:value>2009 Week 49</saw:value>
+														<saw:value>2009 Week 53</saw:value>
+														<saw:value>2009 Week 18</saw:value>
+														<saw:value>2009 Week 33</saw:value>
+														<saw:value>2009 Week 36</saw:value>
+														<saw:value>2009 Week 25</saw:value>
+														<saw:value>2009 Week 20</saw:value>
+														<saw:value>2009 Week 21</saw:value>
+														<saw:value>2009 Week 12</saw:value>
+														<saw:value>2009 Week 30</saw:value>
+														<saw:value>2009 Week 40</saw:value>
+														<saw:value>2009 Week 41</saw:value>
+														<saw:value>2009 Week 44</saw:value>
+														<saw:value>2009 Week 45</saw:value>
+														<saw:value>2009 Week 9</saw:value>
+														<saw:value>2009 Week 15</saw:value>
+														<saw:value>2009 Week 31</saw:value>
+														<saw:value>2009 Week 42</saw:value>
+														<saw:value>2009 Week 34</saw:value>
+														<saw:value>2009 Week 1</saw:value>
+														<saw:value>2009 Week 23</saw:value>
+														<saw:value>2009 Week 7</saw:value>
+														<saw:value>2009 Week 6</saw:value>
+														<saw:value>2010 Week 39</saw:value>
+														<saw:value>2010 Week 4</saw:value>
+														<saw:value>2010 Week 6</saw:value>
+														<saw:value>2010 Week 7</saw:value>
+														<saw:value>2010 Week 35</saw:value>
+														<saw:value>2010 Week 37</saw:value>
+														<saw:value>2010 Week 45</saw:value>
+														<saw:value>2010 Week 46</saw:value>
+														<saw:value>2010 Week 11</saw:value>
+														<saw:value>2010 Week 25</saw:value>
+														<saw:value>2010 Week 48</saw:value>
+														<saw:value>2010 Week 14</saw:value>
+														<saw:value>2010 Week 42</saw:value>
+														<saw:value>2010 Week 21</saw:value>
+														<saw:value>2010 Week 23</saw:value>
+														<saw:value>2010 Week 26</saw:value>
+														<saw:value>2010 Week 2</saw:value>
+														<saw:value>2010 Week 1</saw:value>
+														<saw:value>2010 Week 36</saw:value>
+														<saw:value>2010 Week 49</saw:value>
+														<saw:value>2010 Week 53</saw:value>
+														<saw:value>2010 Week 18</saw:value>
+														<saw:value>2010 Week 24</saw:value>
+														<saw:value>2010 Week 3</saw:value>
+														<saw:value>2010 Week 10</saw:value>
+														<saw:value>2010 Week 50</saw:value>
+														<saw:value>2010 Week 52</saw:value>
+														<saw:value>2010 Week 30</saw:value>
+														<saw:value>2010 Week 20</saw:value>
+														<saw:value>2010 Week 40</saw:value>
+														<saw:value>2010 Week 41</saw:value>
+														<saw:value>2010 Week 47</saw:value>
+														<saw:value>2010 Week 12</saw:value>
+														<saw:value>2010 Week 51</saw:value>
+														<saw:value>2010 Week 31</saw:value>
+														<saw:value>2010 Week 32</saw:value>
+														<saw:value>2010 Week 17</saw:value>
+														<saw:value>2010 Week 27</saw:value>
+														<saw:value>2010 Week 5</saw:value>
+														<saw:value>2010 Week 28</saw:value>
+														<saw:value>2010 Week 38</saw:value>
+														<saw:value>2010 Week 33</saw:value>
+														<saw:value>2010 Week 8</saw:value>
+														<saw:value>2010 Week 9</saw:value>
+														<saw:value>2010 Week 44</saw:value>
+														<saw:value>2010 Week 34</saw:value>
+														<saw:value>2010 Week 15</saw:value>
+														<saw:value>2010 Week 22</saw:value>
+														<saw:value>2010 Week 29</saw:value>
+														<saw:value>2010 Week 13</saw:value>
+														<saw:value>2010 Week 43</saw:value>
+														<saw:value>2010 Week 16</saw:value>
+														<saw:value>2010 Week 19</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c9816e4ee3318aa62"/></saw:target></saw:QDR></saw:QDRSet></saw:scope>
+							<saw:formatRule>
+								<saw:formatSpec backgroundColor="#F1E87D" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c74baf08f3bcdca36"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></saw:columnFormula><saw:dimensionSelection><saw:selectionStep stepID="1" type="startWith" category="member"><saw:stepMembers xsi:type="saw:staticMemberGroupDef"><saw:staticMemberGroup><saw:members xsi:type="saw:specialValueMembers"><saw:value specialValue="all"/></saw:members></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep></saw:dimensionSelection></saw:column></saw:columns></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="2">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!2"/><saw:cvCell viewName="legendView!1"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c95a70f3095d3c846">
+							<saw:drillState>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c95a70f3095d3c846"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Total Products"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c95a70f3095d3c846"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c95a70f3095d3c846" groupID="0"/></saw:selectionGroups></saw:drillStep></saw:drillState></saw:edgeLayer></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges>
+			<saw:measuresList>
+				<saw:measure columnID="c3755639bc6f6f6d6"/>
+				<saw:measure columnID="c438dfa9f3f7c7cc0"/>
+				<saw:measure columnID="c2c8bdba0cffd8beb"/>
+				<saw:measure columnID="ca1660df33db9c0cc"/>
+				<saw:measure columnID="c294555ab2ea118a1"/></saw:measuresList></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section">
+					<saw:edgeLayers/></saw:edge>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c3755639bc6f6f6d6"/>
+						<saw:edgeLayer type="column" columnID="c438dfa9f3f7c7cc0"/>
+						<saw:edgeLayer type="column" columnID="c2c8bdba0cffd8beb"/>
+						<saw:edgeLayer type="column" columnID="ca1660df33db9c0cc"/>
+						<saw:edgeLayer type="column" columnID="c294555ab2ea118a1"/>
+						<saw:edgeLayer type="column" columnID="c7f8e503c0e41a19a"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!2">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c0bf07284fe783156">
+							<saw:drillState>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Total Time"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups></saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Year"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>2009</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups>
+									<saw:drillParents>
+										<saw:drillParent columnID="c0bf07284fe783156" levelID="Total Time">
+											<saw:members xsi:type="saw:integerMembers">
+												<saw:value>1</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Year"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>2008</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups>
+									<saw:drillParents>
+										<saw:drillParent columnID="c0bf07284fe783156" levelID="Total Time">
+											<saw:members xsi:type="saw:integerMembers">
+												<saw:value>1</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep></saw:drillState></saw:edgeLayer></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!3">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c0bf07284fe783156">
+							<saw:drillState>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Total Time"/>
+													<saw:members xsi:type="saw:integerMembers">
+														<saw:value>1</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups></saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Quarter"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>2010 Q2</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups>
+									<saw:drillParents>
+										<saw:drillParent columnID="c0bf07284fe783156" levelID="Year">
+											<saw:members xsi:type="saw:stringMembers">
+												<saw:value>2010</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Month"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>2010 / 05</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups>
+									<saw:drillParents>
+										<saw:drillParent columnID="c0bf07284fe783156" levelID="Quarter">
+											<saw:members xsi:type="saw:stringMembers">
+												<saw:value>2010 Q2</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Year"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>2008</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups>
+									<saw:drillParents>
+										<saw:drillParent columnID="c0bf07284fe783156" levelID="Total Time">
+											<saw:members xsi:type="saw:integerMembers">
+												<saw:value>1</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Quarter"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>2008 Q1</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups>
+									<saw:drillParents>
+										<saw:drillParent columnID="c0bf07284fe783156" levelID="Year">
+											<saw:members xsi:type="saw:stringMembers">
+												<saw:value>2008</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep>
+								<saw:drillStep drillType="down">
+									<saw:QDR>
+										<saw:staticMemberGroup>
+											<saw:groupType>
+												<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType>
+											<saw:hierarchyMembers>
+												<saw:hierarchyLevelMembers>
+													<saw:hierarchyLevel levelID="Month"/>
+													<saw:members xsi:type="saw:stringMembers">
+														<saw:value>2008 / 01</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup>
+										<saw:target>
+											<sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR>
+									<saw:selectionGroups>
+										<saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups>
+									<saw:drillParents>
+										<saw:drillParent columnID="c0bf07284fe783156" levelID="Quarter">
+											<saw:members xsi:type="saw:stringMembers">
+												<saw:value>2008 Q1</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep></saw:drillState></saw:edgeLayer>
+						<saw:edgeLayer type="column" columnID="cd86f2d71957c5015"/>
+						<saw:edgeLayer type="column" columnID="c025579b26dfb0871"/>
+						<saw:edgeLayer type="column" columnID="cd46cabfcb52195bb"/>
+						<saw:edgeLayer type="column" columnID="c9816e4ee3318aa62"/>
+						<saw:edgeLayer type="column" columnID="ccbfa951a0cab1bb2"/>
+						<saw:edgeLayer type="column" columnID="cdc573b13c7b61159"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:legendView" name="legendView!1" across="1"><saw:captionFormat position="right"><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></saw:captionFormat><saw:legendList><saw:legendItem><saw:legendCaption><saw:caption><saw:text>Sources from Oracle Relational Database</saw:text></saw:caption></saw:legendCaption><saw:sampleText/><saw:displayFormat><saw:formatSpec backgroundColor="#F1E87D" wrapText="true" borderColor="#F1E87D"/></saw:displayFormat></saw:legendItem><saw:legendItem><saw:sampleText/><saw:legendCaption><saw:caption><saw:text>Sources from Flat XML File</saw:text></saw:caption></saw:legendCaption><saw:displayFormat><saw:formatSpec backgroundColor="#CCCCCC" wrapText="true"/></saw:displayFormat></saw:legendItem><saw:legendItem><saw:sampleText/><saw:displayFormat><saw:formatSpec backgroundColor="#FFFFFF" wrapText="true"/></saw:displayFormat><saw:legendCaption><saw:caption><saw:text>Sources from Physical Source indicated in Column Header</saw:text></saw:caption></saw:legendCaption></saw:legendItem></saw:legendList><saw:title/><saw:legendTable><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat></saw:legendTable></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c0bf07284fe783156" uiTableName="Time"><saw:drillState><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Total Time"/><saw:members xsi:type="saw:integerMembers"><saw:value>1</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Year"/><saw:members xsi:type="saw:stringMembers"><saw:value>2009</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c0bf07284fe783156" levelID="Total Time"><saw:members xsi:type="saw:integerMembers"><saw:value>1</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Quarter"/><saw:members xsi:type="saw:stringMembers"><saw:value>2009 Q1</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c0bf07284fe783156" levelID="Year"><saw:members xsi:type="saw:stringMembers"><saw:value>2009</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Month"/><saw:members xsi:type="saw:stringMembers"><saw:value>2009 / 02</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c0bf07284fe783156" levelID="Quarter"><saw:members xsi:type="saw:stringMembers"><saw:value>2009 Q1</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Year"/><saw:members xsi:type="saw:stringMembers"><saw:value>2010</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c0bf07284fe783156" levelID="Total Time"><saw:members xsi:type="saw:integerMembers"><saw:value>1</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Quarter"/><saw:members xsi:type="saw:stringMembers"><saw:value>2010 Q1</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c0bf07284fe783156" levelID="Year"><saw:members xsi:type="saw:stringMembers"><saw:value>2010</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep><saw:drillStep drillType="down"><saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:groupType><saw:hierarchyMembers><saw:hierarchyLevelMembers><saw:hierarchyLevel levelID="Month"/><saw:members xsi:type="saw:stringMembers"><saw:value>2010 / 02</saw:value></saw:members></saw:hierarchyLevelMembers></saw:hierarchyMembers></saw:staticMemberGroup><saw:target><sawx:columnRefExpr columnID="c0bf07284fe783156"/></saw:target></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c0bf07284fe783156" groupID="0"/></saw:selectionGroups><saw:drillParents><saw:drillParent columnID="c0bf07284fe783156" levelID="Quarter"><saw:members xsi:type="saw:stringMembers"><saw:value>2010 Q1</saw:value></saw:members></saw:drillParent></saw:drillParents></saw:drillStep></saw:drillState></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column"><saw:displayGrandTotals><saw:displayGrandTotal id="t1" grandTotalPosition="after"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text>Total</saw:text></saw:caption></saw:memberFormat></saw:displayGrandTotal></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="measure" uiTableName="Measure Labels"/><saw:edgeLayer type="column" columnID="c74baf08f3bcdca36" uiTableName="Products"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c9816e4ee3318aa62" uiTableName="Measures"/></saw:measuresList></saw:view></saw:views></saw:report>

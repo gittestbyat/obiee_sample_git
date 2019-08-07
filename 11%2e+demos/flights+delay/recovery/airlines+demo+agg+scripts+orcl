@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="ccd57a746dd6c0205"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="htmlview!1"><saw:displayFormat><saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="none" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:subTitle><saw:caption fmt="text"><saw:text>For Back-up purposes</saw:text></saw:caption></saw:subTitle><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view><saw:view xsi:type="saw:tableView" name="tableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="ccd57a746dd6c0205"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;pre&gt;set variable LOGLEVEL=7:
+create aggregates
+ 
+/*===========================================================*/
+FACT_AGG_OR_01Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;21 Dep Time Blk&quot;.&quot;21 Dep Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;23 Arr Time Blk&quot;.&quot;23 Arr Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_03Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;21 Dep Time Blk&quot;.&quot;21 Dep Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;23 Arr Time Blk&quot;.&quot;23 Arr Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;24 Cancellation&quot;.&quot;24 Cancel Detail&quot;,&quot;X0 - Airlines&quot;.&quot;25 Cancelled&quot;.&quot;25 Cancelled&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_04Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;24 Cancellation&quot;.&quot;24 Cancel Detail&quot;,&quot;X0 - Airlines&quot;.&quot;25 Cancelled&quot;.&quot;25 Cancelled&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_05Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_06Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_07Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_08Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;21 Dep Time Blk&quot;.&quot;21 Dep Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;23 Arr Time Blk&quot;.&quot;23 Arr Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_09Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_10Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;01 Day Attrib&quot;.&quot;01 Day of Mth&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_11Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;21 Dep Time Blk&quot;.&quot;21 Dep Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;23 Arr Time Blk&quot;.&quot;23 Arr Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;24 Cancellation&quot;.&quot;24 Cancel Detail&quot;,&quot;X0 - Airlines&quot;.&quot;25 Cancelled&quot;.&quot;25 Cancelled&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_18Y  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;21 Dep Time Blk&quot;.&quot;21 Dep Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;23 Arr Time Blk&quot;.&quot;23 Arr Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;50 Flight&quot;.&quot;50 Flight #&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_01M  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;21 Dep Time Blk&quot;.&quot;21 Dep Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;23 Arr Time Blk&quot;.&quot;23 Arr Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_02M  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_03M  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;21 Dep Time Blk&quot;.&quot;21 Dep Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;23 Arr Time Blk&quot;.&quot;23 Arr Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;24 Cancellation&quot;.&quot;24 Cancel Detail&quot;,&quot;X0 - Airlines&quot;.&quot;25 Cancelled&quot;.&quot;25 Cancelled&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_04M  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;24 Cancellation&quot;.&quot;24 Cancel Detail&quot;,&quot;X0 - Airlines&quot;.&quot;25 Cancelled&quot;.&quot;25 Cancelled&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_05M  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_06M  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_12M  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_17M  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_02D  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Date&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;01 Day Attrib&quot;.&quot;01 Day of Mth&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_04D  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;24 Cancellation&quot;.&quot;24 Cancel Detail&quot;,&quot;X0 - Airlines&quot;.&quot;25 Cancelled&quot;.&quot;25 Cancelled&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Date&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;01 Day Attrib&quot;.&quot;01 Day of Mth&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_05D  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Date&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;01 Day Attrib&quot;.&quot;01 Day of Mth&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_OR_12D  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;20 Arr Delay&quot;.&quot;20 Arr Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;22 Dept Delay&quot;.&quot;22 Dept Delay Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Date&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;01 Day Attrib&quot;.&quot;01 Day of Mth&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_13D  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;21 Dep Time Blk&quot;.&quot;21 Dep Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;23 Arr Time Blk&quot;.&quot;23 Arr Time Blk Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Date&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;01 Day Attrib&quot;.&quot;01 Day of Mth&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_14D  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;24 Cancellation&quot;.&quot;24 Cancel Detail&quot;,&quot;X0 - Airlines&quot;.&quot;25 Cancelled&quot;.&quot;25 Cancelled&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Date&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;01 Day Attrib&quot;.&quot;01 Day of Mth&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_15D  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Date&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;01 Day Attrib&quot;.&quot;01 Day of Mth&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_16D  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig State Map&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Date&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;01 Day Attrib&quot;.&quot;01 Day of Mth&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_OR_17D  
+ for &quot;X0 - Airlines&quot;.&quot;Flight Facts&quot;(
+ &quot;Distance (Miles)&quot;,&quot;# of Flights&quot;
+ ,&quot;Actual Elapsed Time (Min)&quot;,&quot;Air Time (Min)&quot;,&quot;Crs Elapsed Time (Min)&quot;
+ ,&quot;Arr Lag (Min)&quot;,&quot;Arr Delay (Min)&quot;,&quot;Dep Lag (Min)&quot;,&quot;Dep Delay (Min)&quot;
+ ,&quot;Carrier Delay (Min)&quot;,&quot;Late Aircraft Delay (Min)&quot;,&quot;Nas Delay (Min)&quot;
+ ,&quot;Security Delay (Min)&quot;,&quot;Weather Delay (Min)&quot;
+ ,&quot;# of Fl Arr 1 to 30 Min Late&quot;,&quot;# of Fl Arr Ontime or Early&quot;,&quot;# of Fl Dep 1 to 30 Min Late&quot;,&quot;# of Fl Dep Ontime or Early&quot;
+,&quot;# of Cancelled Flights&quot;,&quot;# of Scheduled Flights&quot;
+,&quot;Taxi In (Min)&quot;,&quot;Taxi Out (Min)&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Date&quot;,
+&quot;X0 - Airlines&quot;.&quot;02 Week Attrib&quot;.&quot;02 Day of Week&quot;,
+&quot;X0 - Airlines&quot;.&quot;01 Day Attrib&quot;.&quot;01 Day of Mth&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+
+/*===========================================================*/
+FACT_AGG_ORMK_04Y  
+ for &quot;X0 - Airlines&quot;.&quot;Market Facts&quot;(
+ &quot;Freight (Tons)&quot;,&quot;Passengers&quot;
+ ,&quot;Payload (Tons)&quot;,&quot;Mail (Tons)&quot;
+ ,&quot;# of Seats&quot;,&quot;Freight (Tons) x Miles&quot;,&quot;Passengers x Miles&quot;
+,&quot;Avg PAX per Flight&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;33 Aircraft Type&quot;.&quot;33 Aircraft Type Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;35 PPF Group&quot;.&quot;35 PPF Group Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+ &quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_ORMK_05Y  
+ for &quot;X0 - Airlines&quot;.&quot;Market Facts&quot;(
+ &quot;Freight (Tons)&quot;,&quot;Passengers&quot;
+ ,&quot;Payload (Tons)&quot;,&quot;Mail (Tons)&quot;
+ ,&quot;# of Seats&quot;,&quot;Freight (Tons) x Miles&quot;,&quot;Passengers x Miles&quot;
+,&quot;Avg PAX per Flight&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;32 Aircraft Group&quot;.&quot;32 Aircraft Group Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;33 Aircraft Type&quot;.&quot;33 Aircraft Type Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;35 PPF Group&quot;.&quot;35 PPF Group Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+ &quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Year&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_ORMK_01M  
+ for &quot;X0 - Airlines&quot;.&quot;Market Facts&quot;(
+ &quot;Freight (Tons)&quot;,&quot;Passengers&quot;
+ ,&quot;Payload (Tons)&quot;,&quot;Mail (Tons)&quot;
+ ,&quot;# of Seats&quot;,&quot;Freight (Tons) x Miles&quot;,&quot;Passengers x Miles&quot;
+,&quot;Avg PAX per Flight&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+ &quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_ORMK_02M  
+ for &quot;X0 - Airlines&quot;.&quot;Market Facts&quot;(
+ &quot;Freight (Tons)&quot;,&quot;Passengers&quot;
+ ,&quot;Payload (Tons)&quot;,&quot;Mail (Tons)&quot;
+ ,&quot;# of Seats&quot;,&quot;Freight (Tons) x Miles&quot;,&quot;Passengers x Miles&quot;
+,&quot;Avg PAX per Flight&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+ &quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;16 Dest Airport Map&quot;.&quot;16 Dest Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_ORMK_03M  
+ for &quot;X0 - Airlines&quot;.&quot;Market Facts&quot;(
+ &quot;Freight (Tons)&quot;,&quot;Passengers&quot;
+ ,&quot;Payload (Tons)&quot;,&quot;Mail (Tons)&quot;
+ ,&quot;# of Seats&quot;,&quot;Freight (Tons) x Miles&quot;,&quot;Passengers x Miles&quot;
+,&quot;Avg PAX per Flight&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;19 Distance Group&quot;.&quot;19 DGroup Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_ORMK_04M  
+ for &quot;X0 - Airlines&quot;.&quot;Market Facts&quot;(
+ &quot;Freight (Tons)&quot;,&quot;Passengers&quot;
+ ,&quot;Payload (Tons)&quot;,&quot;Mail (Tons)&quot;
+ ,&quot;# of Seats&quot;,&quot;Freight (Tons) x Miles&quot;,&quot;Passengers x Miles&quot;
+,&quot;Avg PAX per Flight&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;33 Aircraft Type&quot;.&quot;33 Aircraft Type Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;35 PPF Group&quot;.&quot;35 PPF Group Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+ &quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;,
+ 
+/*===========================================================*/
+FACT_AGG_ORMK_05M  
+ for &quot;X0 - Airlines&quot;.&quot;Market Facts&quot;(
+ &quot;Freight (Tons)&quot;,&quot;Passengers&quot;
+ ,&quot;Payload (Tons)&quot;,&quot;Mail (Tons)&quot;
+ ,&quot;# of Seats&quot;,&quot;Freight (Tons) x Miles&quot;,&quot;Passengers x Miles&quot;
+,&quot;Avg PAX per Flight&quot;
+)
+ at levels (
+&quot;X0 - Airlines&quot;.&quot;32 Aircraft Group&quot;.&quot;32 Aircraft Group Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;33 Aircraft Type&quot;.&quot;33 Aircraft Type Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;35 PPF Group&quot;.&quot;35 PPF Group Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;31 Carrier&quot;.&quot;31 Carrier Detail&quot;,
+ &quot;X0 - Airlines&quot;.&quot;11 Orig Airport Map&quot;.&quot;11 Orig Airport Map Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;18 Route&quot;.&quot;18 Route Detail&quot;,
+&quot;X0 - Airlines&quot;.&quot;00 Time&quot;.&quot;Time Month&quot;
+  ) using connection pool &quot;X0 - Airlines Demo Dbs (ORCL)&quot;.&quot;Aggr Connection&quot;
+ in &quot;X0 - Airlines Demo Dbs (ORCL)&quot;..&quot;BI_AIRLINES_AGG&quot;;
+&lt;/pre&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

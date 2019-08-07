@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">               
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;L - Geo Loc&quot;" withinHierarchy="true">                              
+      <saw:columns>                                             
+         <saw:column xsi:type="saw:regularColumn" columnID="c1ec39706d23a78ac">                                                            
+            <saw:columnFormula>                                                                           
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;India Demographics&quot;.&quot;State Name 1&quot;</sawx:expr></saw:columnFormula></saw:column>                                             
+         <saw:column xsi:type="saw:regularColumn" columnID="c1ec39706d23a78ac_d3">                                                            
+            <saw:columnFormula>                                                                           
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;India Demographics&quot;.&quot;District Name 1&quot;</sawx:expr></saw:columnFormula></saw:column>                                             
+         <saw:column xsi:type="saw:regularColumn" columnID="c1ec39706d23a78ac_d2">                                                            
+            <saw:columnFormula>                                                                           
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;India Demographics&quot;.&quot;District Name 1&quot;</sawx:expr></saw:columnFormula></saw:column>                                             
+         <saw:column xsi:type="saw:regularColumn" columnID="c1ec39706d23a78ac_d1">                                                            
+            <saw:columnFormula>                                                                           
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;India Demographics&quot;.&quot;District Name 1&quot;</sawx:expr></saw:columnFormula></saw:column>                                             
+         <saw:column xsi:type="saw:regularColumn" columnID="cad7c5c0476084811">                                                            
+            <saw:columnFormula>                                                                           
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Facts&quot;.&quot;Avg Population&quot;</sawx:expr></saw:columnFormula></saw:column>                                             
+         <saw:column xsi:type="saw:regularColumn" columnID="cb9a59fc75b98b9a8">                                                            
+            <saw:columnFormula>                                                                           
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Facts&quot;.&quot;Total Population&quot;</sawx:expr></saw:columnFormula></saw:column>                                             
+         <saw:column xsi:type="saw:regularColumn" columnID="c812ac005f543070e">                                                            
+            <saw:columnFormula>                                                                           
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Facts&quot;.&quot;Total Households&quot;</sawx:expr></saw:columnFormula></saw:column>                                             
+         <saw:column xsi:type="saw:regularColumn" columnID="c2e490dcd27969b50">                                                            
+            <saw:columnFormula>                                                                           
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Facts&quot;.&quot;Avg Hh Members&quot;</sawx:expr></saw:columnFormula></saw:column>                                             
+         <saw:column xsi:type="saw:regularColumn" columnID="cd0c7985a1d2fae1d">                                                            
+            <saw:columnFormula>                                                                           
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Households Facts&quot;.&quot;Avg Household Savings&quot;</sawx:expr></saw:columnFormula></saw:column>                                             
+         <saw:column xsi:type="saw:regularColumn" columnID="cb32fc57203c7dec0">                                                            
+            <saw:columnFormula>                                                                           
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Households Facts&quot;.&quot;Avg Household Income&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>               
+   <saw:views currentView="2">                              
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">                                             
+         <saw:viewCaption>            
+            <saw:caption>               
+               <saw:text>India States</saw:text></saw:caption></saw:viewCaption>         
+         <saw:cvTable>                        
+            <saw:cvRow>                              
+               <saw:cvCell viewName="mapview!1"/>                              
+               <saw:cvCell viewName="mapview!3"/></saw:cvRow>                        
+            <saw:cvRow>                              
+               <saw:cvCell viewName="mapview!4"/>                              
+               <saw:cvCell viewName="mapview!5"/></saw:cvRow></saw:cvTable></saw:view>                                                
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">                                             
+         <saw:edges>                                                            
+            <saw:edge axis="page" showColumnHeader="true"/>                                                            
+            <saw:edge axis="section"/>                                                            
+            <saw:edge axis="row" showColumnHeader="true">                                                                           
+               <saw:edgeLayers>                                                                                          
+                  <saw:edgeLayer type="column" columnID="c1ec39706d23a78ac"/>                                                                                          
+                  <saw:edgeLayer columnID="c1ec39706d23a78ac_d3" type="column"/>                                                                                          
+                  <saw:edgeLayer columnID="c1ec39706d23a78ac_d2" type="column"/>                                                                                          
+                  <saw:edgeLayer columnID="c1ec39706d23a78ac_d1" type="column"/>                                                                                          
+                  <saw:edgeLayer type="column" columnID="c2e490dcd27969b50"/></saw:edgeLayers></saw:edge>                                                            
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>                              
+      <saw:view xsi:type="saw:viewSelector" name="viewSelector!1">                                             
+         <saw:viewSelectorCaption position="left"><saw:caption><saw:text>Select render option:</saw:text></saw:caption><saw:displayFormat><saw:formatSpec fontColor="#0000FF" fontStyle="bold" wrapText="true"/></saw:displayFormat></saw:viewSelectorCaption>                                             
+         <saw:viewList>                                                                                                                                                                                                                                                                                                            
+                        
+            <saw:viewItem type="view" name="compoundView!2"/><saw:viewItem type="view" name="compoundView!1"/></saw:viewList></saw:view>                              
+      <saw:view xsi:type="saw:mapview" name="mapview!1">                                             
+         <saw:viewCaption>                                                            
+            <saw:caption>                                                                           
+               <saw:text>Map View - Population</saw:text></saw:caption></saw:viewCaption>                                             
+         <saw:mapLayout>                                                            
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>                                             
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP__~v0"/>                                             
+         <saw:mapWidgets>                                                            
+            <saw:mapToolBar>                                                                           
+               <saw:panTools>                                                                                          
+                  <saw:panHand display="true"/></saw:panTools>                                                                           
+               <saw:zoomTools>                                                                                          
+                  <saw:zoomIn display="true"/>                                                                                          
+                  <saw:zoomOut display="true"/></saw:zoomTools>                                                                           
+               <saw:selectionTools>                                                                                          
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>                                                            
+            <saw:mapInformation>                                                                           
+               <saw:scaleInfo display="true"/>                                                                           
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>                                                            
+            <saw:mapOverlay>                                                                           
+               <saw:panButtons display="false"/>                                                                           
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>                                             
+         <saw:infoLegend display="true" viewState="collapsed"/>                                             
+         <saw:viewportInfo boundingType="box">                                                            
+            <saw:mapCenter x="81.8919560767842" y="22.7287706930074" size="29.6875" srid="8307" zoomLevel="3" xUnitPixels="12.8" yUnitPixels="12.8"/>                                                            
+            <saw:boundingBox coords="66.2669560767842,7.963145693007402,97.4388310767842,37.572520693007405"/>                                                            
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>                                             
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__IND_STATES__~v0" class="omv_predefined_layer" layerID="l0">                                                                           
+               <saw:layerLabelFormat display="true"/>                                                                           
+               <saw:spatials>                                                                                          
+                  <saw:columnRef columnID="c1ec39706d23a78ac"/></saw:spatials>                                                                           
+               <saw:visuals>                                                                                          
+                  <saw:visual visualID="v1" xsi:type="saw:colorScheme" display="true">                                                                                                         
+                     <saw:varyFillColor binType="percentile" numBins="10" allowThresholdEdit="false">                                                                                                                        
+                        <saw:columnRef columnID="cad7c5c0476084811"/>                                                                                                                        
+                        <saw:rampStyle>                                                                                                                                       
+                           <saw:rampItem id="0">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>First Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FFFFCC"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="1">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Second Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FFEDA0"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="2">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Third Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FED976"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="3">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fourth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FEB24C"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="4">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fifth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FD8D3C"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="5">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Sixth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FC4E2A"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="6">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Seventh Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#E31A1C"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="7">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Eight Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#BD0026"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="8">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Ninth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#B00026"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="9">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Last Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#EC04DF"/></saw:rampItem></saw:rampStyle></saw:varyFillColor>                                                                                                         
+                     <saw:g class="color" fill="#3243ae"/>                                                                                                         
+                     <saw:tooltip/></saw:visual></saw:visuals></saw:spatialLayer>            
+                        </saw:spatialLayers>                                             
+         <saw:formatPanel width="169" height="559"/>                                             
+         <saw:canvasFormat width="400" height="380" enableWrapAround="false"/>                                             
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/></saw:view>                              
+      <saw:view xsi:type="saw:mapview" name="mapview!3">                                             
+         <saw:viewCaption>                                                            
+            <saw:caption>                                                                           
+               <saw:text>Map View - Total Households</saw:text></saw:caption></saw:viewCaption>                                             
+         <saw:mapLayout>                                                            
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>                                             
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP__~v0"/>                                             
+         <saw:mapWidgets>                                                            
+            <saw:mapToolBar>                                                                           
+               <saw:panTools>                                                                                          
+                  <saw:panHand display="true"/></saw:panTools>                                                                           
+               <saw:zoomTools>                                                                                          
+                  <saw:zoomIn display="true"/>                                                                                          
+                  <saw:zoomOut display="true"/></saw:zoomTools>                                                                           
+               <saw:selectionTools>                                                                                          
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>                                                            
+            <saw:mapInformation>                                                                           
+               <saw:scaleInfo display="true"/>                                                                           
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>                                                            
+            <saw:mapOverlay>                                                                           
+               <saw:panButtons display="false"/>                                                                           
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>                                             
+         <saw:infoLegend display="true" viewState="collapsed"/>                                             
+         <saw:viewportInfo boundingType="box">                                                            
+            <saw:mapCenter x="80.1146123598629" y="22.3354614320071" size="29.6875" srid="8307" zoomLevel="3" xUnitPixels="12.8" yUnitPixels="12.8"/>                                                            
+            <saw:boundingBox coords="64.4896123598629,7.569836432007101,95.6614873598629,37.1792114320071"/>                                                            
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>                                             
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__IND_STATES__~v0" class="omv_predefined_layer" layerID="l0">                                                                           
+               <saw:layerLabelFormat display="true"/>                                                                           
+               <saw:spatials>                                                                                          
+                  <saw:columnRef columnID="c1ec39706d23a78ac"/></saw:spatials>                                                                           
+               <saw:visuals>                                                                                          
+                  <saw:visual visualID="v1" xsi:type="saw:colorScheme" display="true">                                                                                                         
+                     <saw:varyFillColor binType="percentile" numBins="10" allowThresholdEdit="false">                                                                                                                        
+                        <saw:columnRef columnID="c812ac005f543070e"/>                                                                                                                        
+                        <saw:rampStyle>                                                                                                                                       
+                           <saw:rampItem id="0">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>First Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FFF7FB"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="1">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Second Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#ECE7F2"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="2">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Third Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#D0D1E6"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="3">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fourth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#A6BDDB"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="4">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fifth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#74A9CF"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="5">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Sixth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#3690C0"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="6">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Seventh Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#0570B0"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="7">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Eight Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#045A8D"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="8">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Ninth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#023858"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="9">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Last Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#79035F"/></saw:rampItem></saw:rampStyle></saw:varyFillColor>                                                                                                         
+                     <saw:g class="color" fill="#3243ae"/>                                                                                                         
+                     <saw:tooltip/></saw:visual></saw:visuals></saw:spatialLayer>            
+                        </saw:spatialLayers>                                             
+         <saw:formatPanel width="169" height="559"/>                                             
+         <saw:canvasFormat width="400" height="380" enableWrapAround="false"/>                                             
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/></saw:view>                              
+      <saw:view xsi:type="saw:mapview" name="mapview!4">                                             
+         <saw:viewCaption>                                                            
+            <saw:caption>                                                                           
+               <saw:text>Map View - Avg HouseHold Members</saw:text></saw:caption></saw:viewCaption>                                             
+         <saw:mapLayout>                                                            
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>                                             
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP__~v0"/>                                             
+         <saw:mapWidgets>                                                            
+            <saw:mapToolBar>                                                                           
+               <saw:panTools>                                                                                          
+                  <saw:panHand display="true"/></saw:panTools>                                                                           
+               <saw:zoomTools>                                                                                          
+                  <saw:zoomIn display="true"/>                                                                                          
+                  <saw:zoomOut display="true"/></saw:zoomTools>                                                                           
+               <saw:selectionTools>                                                                                          
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>                                                            
+            <saw:mapInformation>                                                                           
+               <saw:scaleInfo display="true"/>                                                                           
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>                                                            
+            <saw:mapOverlay>                                                                           
+               <saw:panButtons display="false"/>                                                                           
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>                                             
+         <saw:infoLegend display="true" viewState="collapsed"/>                                             
+         <saw:viewportInfo boundingType="box">                                                            
+            <saw:mapCenter x="79.0257451896541" y="21.9395739015634" size="29.6875" srid="8307" zoomLevel="3" xUnitPixels="12.8" yUnitPixels="12.8"/>                                                            
+            <saw:boundingBox coords="62.6194951896541,7.173948901563399,95.3538701896541,36.7833239015634"/>                                                            
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>                                             
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__IND_STATES__~v0" class="omv_predefined_layer" layerID="l0">                                                                           
+               <saw:layerLabelFormat display="true"/>                                                                           
+               <saw:spatials>                                                                                          
+                  <saw:columnRef columnID="c1ec39706d23a78ac"/></saw:spatials>                                                                           
+               <saw:visuals>                                                                                          
+                  <saw:visual visualID="v1" xsi:type="saw:colorScheme" display="true">                                                                                                         
+                     <saw:varyFillColor binType="continuous" numBins="4" allowThresholdEdit="false">                                                                                                                        
+                        <saw:columnRef columnID="c2e490dcd27969b50"/>                                                                                                                        
+                        <saw:rampStyle>                                                                                                                                       
+                           <saw:rampItem id="0">                                                                                                                                                      
+                              <saw:g class="color" fill="#003e70" fillOpacity="255"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="1">                                                                                                                                                      
+                              <saw:g class="color" fill="#e9f7fb" fillOpacity="255"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="2">                                                                                                                                                      
+                              <saw:g class="color" fill="#fff1f1" fillOpacity="255"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="3">                                                                                                                                                      
+                              <saw:g class="color" fill="#7b0000" fillOpacity="255"/></saw:rampItem></saw:rampStyle></saw:varyFillColor>                                                                                                         
+                     <saw:g class="color" fill="#3243ae"/>                                                                                                         
+                     <saw:tooltip/></saw:visual>                                                                                          
+                  <saw:visual visualID="v0" xsi:type="saw:variableMarker" subClass="bubble">                                                                                                         
+                     <saw:g class="marker" fill="#3243ae">                                                                                                                        
+                        <saw:circle radius="10"/></saw:g>                                                                                                         
+                     <saw:varySize binType="continuous" numBins="1" startSize="20" endSize="80">                                                                                                                        
+                        <saw:columnRef columnID="cad7c5c0476084811"/></saw:varySize>                                                                                                         
+                     <saw:tooltip/></saw:visual></saw:visuals></saw:spatialLayer>            
+                        </saw:spatialLayers>                                             
+         <saw:formatPanel width="170" height="559"/>                                             
+         <saw:canvasFormat width="420" height="380" enableWrapAround="false"/>                                             
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/></saw:view>                              
+      <saw:view xsi:type="saw:mapview" name="mapview!5">                                             
+         <saw:viewCaption>                                                            
+            <saw:caption>                                                                           
+               <saw:text>Map View - Average HouseHold Income</saw:text></saw:caption></saw:viewCaption>                                             
+         <saw:mapLayout>                                                            
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>                                             
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__OBIEE_WORLD_MAP__~v0"/>                                             
+         <saw:mapWidgets>                                                            
+            <saw:mapToolBar>                                                                           
+               <saw:panTools>                                                                                          
+                  <saw:panHand display="true"/></saw:panTools>                                                                           
+               <saw:zoomTools>                                                                                          
+                  <saw:zoomIn display="true"/>                                                                                          
+                  <saw:zoomOut display="true"/></saw:zoomTools>                                                                           
+               <saw:selectionTools>                                                                                          
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>                                                            
+            <saw:mapInformation>                                                                           
+               <saw:scaleInfo display="false"/>                                                                           
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>                                                            
+            <saw:mapOverlay>                                                                           
+               <saw:panButtons display="false"/>                                                                           
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>                                             
+         <saw:infoLegend display="true" viewState="collapsed"/>                                             
+         <saw:viewportInfo boundingType="box">                                                            
+            <saw:mapCenter x="79.9925420481147" y="22.5090993847327" size="28.125" srid="8307" zoomLevel="3" xUnitPixels="12.8" yUnitPixels="12.8"/>                                                            
+            <saw:boundingBox coords="63.5862920481147,8.5247243847327,96.3206670481147,36.5715993847327"/>                                                            
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>                                             
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__IND_STATES__~v0" class="omv_predefined_layer" layerID="l0">                                                                           
+               <saw:layerLabelFormat display="true"/>                                                                           
+               <saw:spatials>                                                                                          
+                  <saw:columnRef columnID="c1ec39706d23a78ac"/></saw:spatials>                                                                           
+               <saw:visuals>                                                                                          
+                  <saw:visual visualID="v1" xsi:type="saw:colorScheme" display="true">                                                                                                         
+                     <saw:varyFillColor binType="percentile" numBins="6" allowThresholdEdit="false">                                                                                                                        
+                        <saw:columnRef columnID="cb32fc57203c7dec0"/>                                                                                                                        
+                        <saw:rampStyle>                                                                                                                                       
+                           <saw:rampItem id="0">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>First Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FFFFCC" fillOpacity="217"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="1">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Second Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#D9F0A3" fillOpacity="217"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="2">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Third Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#ADDD8E" fillOpacity="217"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="3">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fourth Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#78C679" fillOpacity="217"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="4">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fifth Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#31A354" fillOpacity="217"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="5">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Last Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#006837" fillOpacity="217"/></saw:rampItem></saw:rampStyle></saw:varyFillColor>                                                                                                         
+                     <saw:g class="color" fill="#3243ae"/>                                                                                                         
+                     <saw:tooltip/></saw:visual>                                                                                          
+                  <saw:visual visualID="v0" xsi:type="saw:variableMarker" subClass="polygon">                                                                                                         
+                     <saw:g class="marker" fill="#FFFFFF">                                                                                                                        
+                        <saw:circle radius="50"/></saw:g>                                                                                                         
+                     <saw:varySize binType="continuous" numBins="1" startSize="10" endSize="90">                                                                                                                        
+                        <saw:columnRef columnID="cb9a59fc75b98b9a8"/></saw:varySize>                                                                                                         
+                     <saw:tooltip/>                                                                                                         
+                     <saw:varyFillColor binType="percentile" numBins="4">                                                                                                                        
+                        <saw:columnRef columnID="c2e490dcd27969b50"/>                                                                                                                        
+                        <saw:rampStyle>                                                                                                                                       
+                           <saw:rampItem id="0">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>First Quartile</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FFFB02"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="1">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Second Quartile</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FECC5C"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="2">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Third Quartile</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FD8D3C"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="3">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fourth Quartile</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#E31A1C"/></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer>            
+                        </saw:spatialLayers>                                             
+         <saw:formatPanel width="170" height="559"/>                                             
+         <saw:canvasFormat width="420" height="360" enableWrapAround="false"/>                                             
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/></saw:view>    	  
+	  
+      
+      <saw:view xsi:type="saw:compoundView" name="compoundView!2">           
+<saw:viewCaption>
+            <saw:caption>
+               <saw:text>India States on Thematic Map</saw:text></saw:caption></saw:viewCaption>                                  
+         <saw:cvTable>                        
+            <saw:cvRow>                              
+               <saw:cvCell viewName="mapview!6"/>                              
+               <saw:cvCell viewName="mapview!7"/></saw:cvRow>                        
+            <saw:cvRow>                              
+               <saw:cvCell viewName="mapview!8"/>                              
+               <saw:cvCell viewName="mapview!9"/></saw:cvRow></saw:cvTable></saw:view>                                                                        
+      
+	  
+	  
+      
+      <saw:view xsi:type="saw:mapview" name="mapview!6">                                             
+         <saw:viewCaption>                                                            
+            <saw:caption>                                                                           
+               <saw:text>Map View - Population</saw:text></saw:caption></saw:viewCaption>                                             
+         <saw:mapLayout>                                                            
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>                                             
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_WORLD_MAP_THEMATIC__~v1"/>                                             
+         <saw:mapWidgets>                                                            
+            <saw:mapToolBar>                                                                           
+               <saw:panTools>                                                                                          
+                  <saw:panHand display="true"/></saw:panTools>                                                                           
+               <saw:zoomTools>                                                                                          
+                  <saw:zoomIn display="true"/>                                                                                          
+                  <saw:zoomOut display="true"/></saw:zoomTools>                                                                           
+               <saw:selectionTools>                                                                                          
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>                                                            
+            <saw:mapInformation>                                                                           
+               <saw:scaleInfo display="true"/>                                                                           
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>                                                            
+            <saw:mapOverlay>                                                                           
+               <saw:panButtons display="false"/>                                                                           
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>                                             
+         <saw:infoLegend display="true" viewState="collapsed"/>                                             
+         <saw:viewportInfo boundingType="box">                                                            
+            <saw:mapCenter x="9116170.85053274" y="2582748.26338366" size="3717896.9921875" srid="54004" zoomLevel="3" xUnitPixels="0.00010220831851944863" yUnitPixels="0.00010220831851944863"/>                                                            
+            <saw:boundingBox coords="7159382.95990774,733583.706743035,11063174.801704615,4441696.75947741"/>                                                            
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>                                             
+         <saw:spatialLayers>            
+            <saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__IND_STATES__~v0" class="omv_predefined_layer" layerID="l0">                                                                           
+               <saw:layerLabelFormat display="false"/>                                                                           
+               <saw:spatials>                                                                                          
+                  <saw:columnRef columnID="c1ec39706d23a78ac"/></saw:spatials>                                                                           
+               <saw:visuals>                                                                                          
+                  <saw:visual visualID="v1" xsi:type="saw:colorScheme" display="true">                                                                                                         
+                     <saw:varyFillColor binType="percentile" numBins="10" allowThresholdEdit="false">                                                                                                                        
+                        <saw:columnRef columnID="cad7c5c0476084811"/>                                                                                                                        
+                        <saw:rampStyle>                                                                                                                                       
+                           <saw:rampItem id="0">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>First Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FFFFCC"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="1">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Second Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FFEDA0"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="2">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Third Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FED976"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="3">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fourth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FEB24C"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="4">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fifth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FD8D3C"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="5">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Sixth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FC4E2A"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="6">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Seventh Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#E31A1C"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="7">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Eight Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#BD0026"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="8">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Ninth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#B00026"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="9">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Last Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#EC04DF"/></saw:rampItem></saw:rampStyle></saw:varyFillColor>                                                                                                         
+                     <saw:g class="color" fill="#3243ae"/>                                                                                                         
+                     <saw:tooltip/></saw:visual></saw:visuals></saw:spatialLayer>            </saw:spatialLayers>                                             
+         <saw:formatPanel width="167" height="533"/>                                             
+         <saw:canvasFormat width="400" height="380" enableWrapAround="false"/>                                             
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/></saw:view>                  
+      
+      
+      <saw:view xsi:type="saw:mapview" name="mapview!7">                                             
+         <saw:viewCaption>                                                            
+            <saw:caption>                                                                           
+               <saw:text>Map View - Total Households</saw:text></saw:caption></saw:viewCaption>                                             
+         <saw:mapLayout>                                                            
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>                                             
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_WORLD_MAP_THEMATIC__~v1"/>                                             
+         <saw:mapWidgets>                                                            
+            <saw:mapToolBar>                                                                           
+               <saw:panTools>                                                                                          
+                  <saw:panHand display="true"/></saw:panTools>                                                                           
+               <saw:zoomTools>                                                                                          
+                  <saw:zoomIn display="true"/>                                                                                          
+                  <saw:zoomOut display="true"/></saw:zoomTools>                                                                           
+               <saw:selectionTools>                                                                                          
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>                                                            
+            <saw:mapInformation>                                                                           
+               <saw:scaleInfo display="true"/>                                                                           
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>                                                            
+            <saw:mapOverlay>                                                                           
+               <saw:panButtons display="false"/>                                                                           
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>                                             
+         <saw:infoLegend display="true" viewState="collapsed"/>                                             
+         <saw:viewportInfo boundingType="box">                                                            
+            <saw:mapCenter x="8918317.85300044" y="2535617.75392898" size="3717896.9921875" srid="54004" zoomLevel="3" xUnitPixels="0.00010220831851944863" yUnitPixels="0.00010220831851944863"/>                                                            
+            <saw:boundingBox coords="6961529.96237544,686453.1972883549,10865321.804172315,4394566.25002273"/>                                                            
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>                                             
+         <saw:spatialLayers>            
+            <saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__IND_STATES__~v0" class="omv_predefined_layer" layerID="l0">                                                                           
+               <saw:layerLabelFormat display="false"/>                                                                           
+               <saw:spatials>                                                                                          
+                  <saw:columnRef columnID="c1ec39706d23a78ac"/></saw:spatials>                                                                           
+               <saw:visuals>                                                                                          
+                  <saw:visual visualID="v1" xsi:type="saw:colorScheme" display="true">                                                                                                         
+                     <saw:varyFillColor binType="percentile" numBins="10" allowThresholdEdit="false">                                                                                                                        
+                        <saw:columnRef columnID="c812ac005f543070e"/>                                                                                                                        
+                        <saw:rampStyle>                                                                                                                                       
+                           <saw:rampItem id="0">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>First Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FFF7FB"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="1">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Second Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#ECE7F2"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="2">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Third Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#D0D1E6"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="3">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fourth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#A6BDDB"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="4">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fifth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#74A9CF"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="5">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Sixth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#3690C0"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="6">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Seventh Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#0570B0"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="7">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Eight Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#045A8D"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="8">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Ninth Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#023858"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="9">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Last Tenth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#79035F"/></saw:rampItem></saw:rampStyle></saw:varyFillColor>                                                                                                         
+                     <saw:g class="color" fill="#3243ae"/>                                                                                                         
+                     <saw:tooltip/></saw:visual></saw:visuals></saw:spatialLayer>            </saw:spatialLayers>                                             
+         <saw:formatPanel width="167" height="533"/>                                             
+         <saw:canvasFormat width="400" height="380" enableWrapAround="false"/>                                             
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/></saw:view>                  
+      
+      
+      <saw:view xsi:type="saw:mapview" name="mapview!8">                                             
+         <saw:viewCaption>                                                            
+            <saw:caption>                                                                           
+               <saw:text>Map View - Avg HouseHold Members</saw:text></saw:caption></saw:viewCaption>                                             
+         <saw:mapLayout>                                                            
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>                                             
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_WORLD_MAP_THEMATIC__~v1"/>                                             
+         <saw:mapWidgets>                                                            
+            <saw:mapToolBar>                                                                           
+               <saw:panTools>                                                                                          
+                  <saw:panHand display="true"/></saw:panTools>                                                                           
+               <saw:zoomTools>                                                                                          
+                  <saw:zoomIn display="true"/>                                                                                          
+                  <saw:zoomOut display="true"/></saw:zoomTools>                                                                           
+               <saw:selectionTools>                                                                                          
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>                                                            
+            <saw:mapInformation>                                                                           
+               <saw:scaleInfo display="true"/>                                                                           
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>                                                            
+            <saw:mapOverlay>                                                                           
+               <saw:panButtons display="false"/>                                                                           
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>                                             
+         <saw:infoLegend display="true" viewState="collapsed"/>                                             
+         <saw:viewportInfo boundingType="box">                                                            
+            <saw:mapCenter x="8777537.83516503" y="2625289.01491289" size="3717896.9921875" srid="54004" zoomLevel="3" xUnitPixels="0.00010220831851944863" yUnitPixels="0.00010220831851944863"/>                                                            
+            <saw:boundingBox coords="6722910.550008779,776124.4582722648,10822381.180868154,4484237.51100664"/>                                                            
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>                                             
+         <saw:spatialLayers>            
+            <saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__IND_STATES__~v0" class="omv_predefined_layer" layerID="l0">                                                                           
+               <saw:layerLabelFormat display="false"/>                                                                           
+               <saw:spatials>                                                                                          
+                  <saw:columnRef columnID="c1ec39706d23a78ac"/></saw:spatials>                                                                           
+               <saw:visuals>                                                                                          
+                  <saw:visual visualID="v1" xsi:type="saw:colorScheme" display="true">                                                                                                         
+                     <saw:varyFillColor binType="continuous" numBins="4" allowThresholdEdit="false">                                                                                                                        
+                        <saw:columnRef columnID="c2e490dcd27969b50"/>                                                                                                                        
+                        <saw:rampStyle>                                                                                                                                       
+                           <saw:rampItem id="0">                                                                                                                                                      
+                              <saw:g class="color" fill="#003e70" fillOpacity="255"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="1">                                                                                                                                                      
+                              <saw:g class="color" fill="#e9f7fb" fillOpacity="255"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="2">                                                                                                                                                      
+                              <saw:g class="color" fill="#fff1f1" fillOpacity="255"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="3">                                                                                                                                                      
+                              <saw:g class="color" fill="#7b0000" fillOpacity="255"/></saw:rampItem></saw:rampStyle></saw:varyFillColor>                                                                                                         
+                     <saw:g class="color" fill="#3243ae"/>                                                                                                         
+                     <saw:tooltip/></saw:visual>                                                                                          
+                  <saw:visual visualID="v0" xsi:type="saw:variableMarker" subClass="bubble">                                                                                                         
+                     <saw:g class="marker" fill="#3243ae">                                                                                                                        
+                        <saw:circle radius="10"/></saw:g>                                                                                                         
+                     <saw:varySize binType="continuous" numBins="1" startSize="20" endSize="80">                                                                                                                        
+                        <saw:columnRef columnID="cad7c5c0476084811"/></saw:varySize>                                                                                                         
+                     <saw:tooltip/></saw:visual></saw:visuals></saw:spatialLayer>            </saw:spatialLayers>                                             
+         <saw:formatPanel width="168" height="533"/>                                             
+         <saw:canvasFormat width="420" height="380" enableWrapAround="false"/>                                             
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/></saw:view>                  
+      
+      
+      <saw:view xsi:type="saw:mapview" name="mapview!9">                                             
+         <saw:viewCaption>                                                            
+            <saw:caption>                                                                           
+               <saw:text>Map View - Average HouseHold Income</saw:text></saw:caption></saw:viewCaption>                                             
+         <saw:mapLayout>                                                            
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>                                             
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_WORLD_MAP_THEMATIC__~v1"/>                                             
+         <saw:mapWidgets>                                                            
+            <saw:mapToolBar>                                                                           
+               <saw:panTools>                                                                                          
+                  <saw:panHand display="true"/></saw:panTools>                                                                           
+               <saw:zoomTools>                                                                                          
+                  <saw:zoomIn display="true"/>                                                                                          
+                  <saw:zoomOut display="true"/></saw:zoomTools>                                                                           
+               <saw:selectionTools>                                                                                          
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>                                                            
+            <saw:mapInformation>                                                                           
+               <saw:scaleInfo display="false"/>                                                                           
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>                                                            
+            <saw:mapOverlay>                                                                           
+               <saw:panButtons display="false"/>                                                                           
+               <saw:zoomSlider display="false"/></saw:mapOverlay></saw:mapWidgets>                                             
+         <saw:infoLegend display="true" viewState="collapsed"/>                                             
+         <saw:viewportInfo boundingType="box">                                                            
+            <saw:mapCenter x="8914512.98750878" y="2634679.69050314" size="3522218.203125" srid="54004" zoomLevel="3" xUnitPixels="0.00010220831851944863" yUnitPixels="0.00010220831851944863"/>                                                            
+            <saw:boundingBox coords="6859885.702352529,883354.528393765,10959356.333211904,4395788.79206564"/>                                                            
+            <saw:boundingLayer layerID="l0"/></saw:viewportInfo>                                             
+         <saw:spatialLayers>            
+            <saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__IND_STATES__~v0" class="omv_predefined_layer" layerID="l0">                                                                           
+               <saw:layerLabelFormat display="false"/>                                                                           
+               <saw:spatials>                                                                                          
+                  <saw:columnRef columnID="c1ec39706d23a78ac"/></saw:spatials>                                                                           
+               <saw:visuals>                                                                                          
+                  <saw:visual visualID="v1" xsi:type="saw:colorScheme" display="true">                                                                                                         
+                     <saw:varyFillColor binType="percentile" numBins="6" allowThresholdEdit="false">                                                                                                                        
+                        <saw:columnRef columnID="cb32fc57203c7dec0"/>                                                                                                                        
+                        <saw:rampStyle>                                                                                                                                       
+                           <saw:rampItem id="0">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>First Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FFFFCC" fillOpacity="217"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="1">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Second Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#D9F0A3" fillOpacity="217"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="2">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Third Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#ADDD8E" fillOpacity="217"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="3">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fourth Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#78C679" fillOpacity="217"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="4">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fifth Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#31A354" fillOpacity="217"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="5">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Last Sixth</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#006837" fillOpacity="217"/></saw:rampItem></saw:rampStyle></saw:varyFillColor>                                                                                                         
+                     <saw:g class="color" fill="#3243ae"/>                                                                                                         
+                     <saw:tooltip/></saw:visual>                                                                                          
+                  <saw:visual visualID="v0" xsi:type="saw:variableMarker" subClass="polygon">                                                                                                         
+                     <saw:g class="marker" fill="#FFFFFF">                                                                                                                        
+                        <saw:circle radius="50"/></saw:g>                                                                                                         
+                     <saw:varySize binType="continuous" numBins="1" startSize="10" endSize="90">                                                                                                                        
+                        <saw:columnRef columnID="cb9a59fc75b98b9a8"/></saw:varySize>                                                                                                         
+                     <saw:tooltip/>                                                                                                         
+                     <saw:varyFillColor binType="percentile" numBins="4">                                                                                                                        
+                        <saw:columnRef columnID="c2e490dcd27969b50"/>                                                                                                                        
+                        <saw:rampStyle>                                                                                                                                       
+                           <saw:rampItem id="0">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>First Quartile</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FFFB02"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="1">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Second Quartile</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FECC5C"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="2">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Third Quartile</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#FD8D3C"/></saw:rampItem>                                                                                                                                       
+                           <saw:rampItem id="3">                                                                                                                                                      
+                              <saw:caption>                                                                                                                                                                     
+                                 <saw:text>Fourth Quartile</saw:text></saw:caption>                                                                                                                                                      
+                              <saw:g class="color" fill="#E31A1C"/></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual></saw:visuals></saw:spatialLayer>            </saw:spatialLayers>                                             
+         <saw:formatPanel width="168" height="533"/>                                             
+         <saw:canvasFormat width="420" height="360" enableWrapAround="false"/>                                             
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/></saw:view>
+		 
+
+</saw:views></saw:report>

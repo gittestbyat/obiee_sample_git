@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;U - Usage Tracking&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="cc2b1e74c8a4d42c0">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Start Date&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cb5eb0dce408c1197">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;Query Count&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cbcb7e63565862b81">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;Max Total Time in Secs&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c2a90ff70baea0681">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;Max Row Count&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c7577e59cc940ce18">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;Max Compile Time in Secs&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c42d3e19ae2236185">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Measures&quot;.&quot;Max Time Spent in dB&quot;</sawx:expr></saw:columnFormula></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ca10852d2c8228d25">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">(FILTER(&quot;Measures&quot;.&quot;Query Count&quot; USING (&quot;Topic&quot;.&quot;Cache Hit Indicator&quot; = &#39;Y&#39;))/&quot;Measures&quot;.&quot;Query Count&quot;)*100</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat xsi:type="saw:percent" minDigits="2" maxDigits="2" commas="true" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text">
+						<saw:text>Measures</saw:text></saw:caption></saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat>
+					<saw:caption fmt="text">
+						<saw:text> Cache Hit Ratio</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:comparison" op="greaterOrEqual">
+				<sawx:expr xsi:type="sawx:sqlExpression">&quot;Query Time&quot;.&quot;Start Date&quot;</sawx:expr>
+				<sawx:expr xsi:type="sawx:sqlExpression">CURRENT_DATE-90</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="viewSelector!1"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1"/>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="cc2b1e74c8a4d42c0"/>
+						<saw:edgeLayer type="column" columnID="cb5eb0dce408c1197"/>
+						<saw:edgeLayer type="column" columnID="cbcb7e63565862b81"/>
+						<saw:edgeLayer type="column" columnID="c2a90ff70baea0681"/>
+						<saw:edgeLayer type="column" columnID="c7577e59cc940ce18"/>
+						<saw:edgeLayer type="column" columnID="c42d3e19ae2236185"/>
+						<saw:edgeLayer type="column" columnID="ca10852d2c8228d25"/></saw:edgeLayers>
+					<saw:columnOrder>
+						<saw:columnOrderRef columnID="cc2b1e74c8a4d42c0" direction="descending"/></saw:columnOrder></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view>
+		<saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true">
+			<saw:display type="lineTimeSeries" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="true" yAxisLiveScrolling="true" clientEventEnabled="false" animateOnDisplay="true">
+				<saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+			<saw:canvasFormat height="200" width="640" showGradient="true">
+				<saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>
+				<saw:title mode="auto">
+					<saw:caption/></saw:title>
+				<saw:gridlines default="true">
+					<saw:horizontal>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/></saw:horizontal>
+					<saw:vertical>
+						<saw:major visible="false"/>
+						<saw:minor visible="false"/></saw:vertical></saw:gridlines></saw:canvasFormat>
+			<saw:selections>
+				<saw:categories>
+					<saw:category>
+						<saw:columnRef columnID="cc2b1e74c8a4d42c0"/></saw:category></saw:categories>
+				<saw:measures showMeasureLabelsOnCategory="false">
+					<saw:column measureType="y">
+						<saw:columnRef columnID="cb5eb0dce408c1197"/></saw:column></saw:measures>
+				<saw:seriesGenerators>
+					<saw:measureLabels/></saw:seriesGenerators></saw:selections>
+			<saw:legendFormat position="default" transparentFill="true"/>
+			<saw:axesFormats syncAxis="false">
+				<saw:axisFormat axis="Y1">
+					<saw:title mode="auto">
+						<saw:caption/></saw:title>
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false" defaultTicks="true"/></saw:axisFormat>
+				<saw:axisFormat axis="X">
+					<saw:title mode="auto">
+						<saw:caption/></saw:title>
+					<saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/></saw:axisFormat></saw:axesFormats>
+			<saw:seriesFormats>
+				<saw:seriesFormatGroup name="lineTimeSeries">
+					<saw:seriesFormatRule>
+						<saw:seriesCondition position="1"/>
+						<saw:visualFormats>
+							<saw:visualFormat lineStyle="default" lineWidth="7" symbol="round" symbolColor="#FFFF00"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+		<saw:view xsi:type="saw:viewSelector" name="viewSelector!1">
+			<saw:viewSelectorCaption position="left">
+				<saw:caption>
+					<saw:text>Select a View</saw:text></saw:caption></saw:viewSelectorCaption>
+			<saw:viewList>
+				<saw:viewItem type="view" name="dvtchart!1"/>
+				<saw:viewItem type="view" name="tableView!1"/></saw:viewList></saw:view></saw:views></saw:report>

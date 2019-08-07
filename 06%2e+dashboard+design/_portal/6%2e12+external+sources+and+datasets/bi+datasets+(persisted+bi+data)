@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="f3bati7hgr1d8h41"><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="blt1b4ubk36den0v" layoutType="bestFit"><sawd:dashboardSection layoutType="specificSize" name="Section 0" collapsible="false" duid="77n98lmebikff5r8" showSectionTitle="false"><saw:displayFormat><saw:formatSpec backgroundColor="#f7f7f7" wrapText="true" borderPosition="12" width="1100" borderColor="#EEEEEE"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="7kn8048huvj3fv36"><sawd:HTML fmt="html">[b]Description[/b]: [br/][b]Building a report sourced from results of another report ! [/b][br/]This example shows how a dataset persisted using &#39;create dataset&#39; query can be  mashed up with data in BI Subject Area. A join between these two was established by adding them in a VA project (source diagram shown below). Once a match is defined, that conformance is registered in the dataset service and it can reused in subsequent queries. The logical SQL used to create this dataset is as shown below:
+[br/]
+&lt;table border=0 cellpadding=10&gt;&lt;tr&gt;&lt;td&gt;
+CREATE DATASET &#39;Passenger Count by Location&#39; MODE CREATE AS SELECT[br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;X - Airlines Traffic&quot;.&quot;Destination&quot;.&quot;Dest City Name&quot;||&#39;&#39; City,[br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;REPLACE(&quot;X - Airlines Traffic&quot;.&quot;Destination&quot;.&quot;Dest US State Name&quot;,&#39;USA_&#39;,&#39;&#39;) State,[br/]
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;X - Airlines Traffic&quot;.&quot;Passengers&quot;.&quot;Passengers&quot; PassengerCount[br/]
+FROM &quot;X - Airlines Traffic&quot; WHERE (&quot;Passengers&quot;.&quot;Passengers&quot; &gt;= 100)
+&lt;/td&gt;&lt;td&gt;
+&lt;img src=&quot;saw.dll?downloadfile&amp;Path=%2Fshared%2F06.%20Dashboard%20Design%2FExternal%20Sources%2Fpics%2FSA_DS.jpg&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;
+[b]Note[/b]: 1.) Above LSQL can be executed from &quot;Issue SQL&quot; page under &quot;Administration&quot; options </sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection layoutType="bestFit" name="Section 1" collapsible="false" duid="jmpr3nabnl600qnd" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 1" display="embed" showView="" duid="kslr507ss5qc2511"><saw:caption><saw:text>Dataset Mashup with Subject Area</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/External Sources/Dataset Mashup with Subject Area"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

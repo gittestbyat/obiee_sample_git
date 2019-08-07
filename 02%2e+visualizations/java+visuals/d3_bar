@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="cd5fc9d3119ed453f"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P1  Product&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Products</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Dimension</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="caa0d0b58b758fb3a"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="tableView!1"/><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="cd5fc9d3119ed453f"/><saw:edgeLayer type="column" columnID="caa0d0b58b758fb3a"/></saw:edgeLayers><saw:columnOrder><saw:columnOrderRef columnID="caa0d0b58b758fb3a" direction="descending"/></saw:columnOrder></saw:edge><saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/d3/d3.v3.js&quot;&gt;&lt;/script&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+
+body {
+  font: 10px sans-serif;
+}
+
+.bar rect {
+  fill: steelblue;
+}
+
+.bar text.value {
+  fill: white;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  fill: none;
+}
+
+.x.axis line {
+  stroke: #fff;
+  stroke-opacity: .8;
+}
+
+.y.axis path {
+  stroke: black;
+}
+
+    &lt;/style&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+
+var margin = {top: 30, right: 10, bottom: 10, left: 30},
+    width = 960 - margin.right - margin.left,
+    height = 930 - margin.top - margin.bottom;
+
+var format = d3.format(&quot;,.0f&quot;);
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.ordinal()
+    .rangeRoundBands([0, height], .1);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient(&quot;top&quot;)
+    .tickSize(-height);
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient(&quot;left&quot;)
+    .tickSize(0);
+
+var svg = d3.select(&quot;body&quot;).append(&quot;svg&quot;)
+    .attr(&quot;width&quot;, width + margin.right + margin.left)
+    .attr(&quot;height&quot;, height + margin.top + margin.bottom)
+  .append(&quot;g&quot;)
+    .attr(&quot;transform&quot;, &quot;translate(&quot; + margin.left + &quot;,&quot; + margin.top + &quot;)&quot;);
+
+data = [
+{&quot;name&quot;:&quot;AK&quot;,&quot;value&quot;:&quot;100&quot;},
+{&quot;name&quot;:&quot;BK&quot;,&quot;value&quot;:&quot;100&quot;},
+{&quot;name&quot;:&quot;CK&quot;,&quot;value&quot;:&quot;100&quot;}
+];
+//[[0.1,0.2],[0.3,0.4],[0.8,0.4]];;
+//name,value
+//[[AL,4708708],[AK,698473],[AZ,6595778]];
+  // Parse numbers, and sort by value.
+  data.forEach(function(d) { d.value = +d.value; });
+  data.sort(function(a, b) { return b.value - a.value; });
+
+  // Set the scale domain.
+  x.domain([0, d3.max(data, function(d) { return d.value; })]);
+  y.domain(data.map(function(d) { return d.name; }));
+
+  var bar = svg.selectAll(&quot;g.bar&quot;)
+      .data(data)
+    .enter().append(&quot;g&quot;)
+      .attr(&quot;class&quot;, &quot;bar&quot;)
+      .attr(&quot;transform&quot;, function(d) { return &quot;translate(0,&quot; + y(d.name) + &quot;)&quot;; });
+
+  bar.append(&quot;rect&quot;)
+      .attr(&quot;width&quot;, function(d) { return x(d.value); })
+      .attr(&quot;height&quot;, y.rangeBand());
+
+  bar.append(&quot;text&quot;)
+      .attr(&quot;class&quot;, &quot;value&quot;)
+      .attr(&quot;x&quot;, function(d) { return x(d.value); })
+      .attr(&quot;y&quot;, y.rangeBand() / 2)
+      .attr(&quot;dx&quot;, -3)
+      .attr(&quot;dy&quot;, &quot;.35em&quot;)
+      .attr(&quot;text-anchor&quot;, &quot;end&quot;)
+      .text(function(d) { return format(d.value); });
+
+  svg.append(&quot;g&quot;)
+      .attr(&quot;class&quot;, &quot;x axis&quot;)
+      .call(xAxis);
+
+  svg.append(&quot;g&quot;)
+      .attr(&quot;class&quot;, &quot;y axis&quot;)
+      .call(yAxis);
+
+
+    &lt;/script&gt;
+</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;div id=&#39;_d3_bar&#39;/&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/d3/d3.v3.js&quot;&gt;&lt;/script&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+body {
+  font: 10px sans-serif;
+}
+
+.bar rect {
+  fill: @{BarColor}{steelblue};
+}
+
+.bar text.value {
+  fill: white;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  fill: none;
+}
+
+.x.axis line {
+  stroke: @{StrokeColor}{white};
+  stroke-opacity: @{StrokeOpacity}{0.8};
+}
+
+.y.axis path {
+  stroke: black;
+}
+    &lt;/style&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+
+var margin = {top: 30, right: 10, bottom: 10, left: 120},
+    width = @{Width}{800} - margin.right - margin.left,
+    height = @{Height}{500} - margin.top - margin.bottom;
+
+var format = d3.format(&quot;,.0f&quot;);
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.ordinal()
+    .rangeRoundBands([0, height], .1);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient(&quot;top&quot;)
+    .tickSize(-height);
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient(&quot;left&quot;)
+    .tickSize(0);
+
+var svg = d3.select(document.getElementById(&quot;_d3_bar&quot;)).append(&quot;svg&quot;)
+    .attr(&quot;width&quot;, width + margin.right + margin.left)
+    .attr(&quot;height&quot;, height + margin.top + margin.bottom)
+  .append(&quot;g&quot;)
+    .attr(&quot;transform&quot;, &quot;translate(&quot; + margin.left + &quot;,&quot; + margin.top + &quot;)&quot;);
+data=[];</saw:text></saw:caption></saw:prefix><saw:narrative rowCount="100"><saw:caption fmt="html"><saw:text>
+data.push({&quot;name&quot;:&quot;@{cd5fc9d3119ed453f}&quot;,&quot;value&quot;:&quot;@{caa0d0b58b758fb3a}&quot;});</saw:text></saw:caption></saw:narrative><saw:postfix><saw:caption fmt="html"><saw:text>
+
+  // Parse numbers, and sort by value.
+  data.forEach(function(d) { d.value = +d.value; });
+  data.sort(function(a, b) { return b.value - a.value; });
+
+  // Set the scale domain.
+  x.domain([0, d3.max(data, function(d) { return d.value; })]);
+  y.domain(data.map(function(d) { return d.name; }));
+
+  var bar = svg.selectAll(&quot;g.bar&quot;)
+      .data(data)
+    .enter().append(&quot;g&quot;)
+      .attr(&quot;class&quot;, &quot;bar&quot;)
+      .attr(&quot;transform&quot;, function(d) { return &quot;translate(0,&quot; + y(d.name) + &quot;)&quot;; });
+
+  bar.append(&quot;rect&quot;)
+      .attr(&quot;width&quot;, function(d) { return x(d.value); })
+      .attr(&quot;height&quot;, y.rangeBand());
+
+  bar.append(&quot;text&quot;)
+      .attr(&quot;class&quot;, &quot;value&quot;)
+      .attr(&quot;x&quot;, function(d) { return x(d.value); })
+      .attr(&quot;y&quot;, y.rangeBand() / 2)
+      .attr(&quot;dx&quot;, -3)
+      .attr(&quot;dy&quot;, &quot;.35em&quot;)
+      .attr(&quot;text-anchor&quot;, &quot;end&quot;)
+      .text(function(d) { return format(d.value); });
+
+  svg.append(&quot;g&quot;)
+      .attr(&quot;class&quot;, &quot;x axis&quot;)
+      .call(xAxis);
+
+  svg.append(&quot;g&quot;)
+      .attr(&quot;class&quot;, &quot;y axis&quot;)
+      .call(yAxis);
+
+
+    &lt;/script&gt;
+
+</saw:text></saw:caption></saw:postfix></saw:view></saw:views></saw:report>

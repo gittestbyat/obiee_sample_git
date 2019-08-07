@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="c81b635e4c38798f6">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="cc1249a61de66ef00">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Sales Person&quot;.&quot;E0  Sales Rep Number&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c8f669ed9685ad456">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Sales Person&quot;.&quot;E1  Sales Rep Name&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c7d1926dea342c61b">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Sales Person&quot;.&quot;E6  Position Level&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c4901240a4f824d0b">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;More Sales Rep Objects&quot;.&quot;E99  Closure Distance&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2051">
+            <saw:text>More Sales Rep Objects</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2052">
+            <saw:text>Closure Distance</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="pivotTableView!1"/>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c81b635e4c38798f6"/>
+            <saw:edgeLayer type="column" columnID="cc1249a61de66ef00"/>
+            <saw:edgeLayer type="column" columnID="c4901240a4f824d0b"/>
+            <saw:edgeLayer type="column" columnID="c8f669ed9685ad456"/>
+            <saw:edgeLayer type="column" columnID="c7d1926dea342c61b"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" deck="bottom" headingDisplay="columns" rowsPerPage="30" clientEventEnabled="false">
+      <saw:edges>
+        
+        
+        
+        
+      <saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers/></saw:edge><saw:edge axis="section"><saw:edgeLayers/></saw:edge><saw:edge axis="row" showColumnHeader="true">
+          <saw:displayGrandTotals>
+            <saw:displayGrandTotal id="t1" grandTotalPosition="after"/>
+          </saw:displayGrandTotals>
+          <saw:columnOrder>
+            <saw:columnOrderRef columnID="cc1249a61de66ef00" direction="descending"/>
+          </saw:columnOrder>
+          <saw:edgeLayers>
+            
+            
+            
+          <saw:edgeLayer type="column" columnID="c7d1926dea342c61b" insertPageBreak="false" visibility="hidden">
+              <saw:levels>
+                <saw:level>
+                  <saw:displaySubTotal id="t3" subTotalPosition="after">
+                    <saw:dataBodyFormat>
+                      <saw:displayFormat>
+                        <saw:formatSpec backgroundColor="#EEEEEE" fontStyle="bold" wrapText="true"/>
+                      </saw:displayFormat>
+                    </saw:dataBodyFormat>
+                  </saw:displaySubTotal>
+                </saw:level>
+              </saw:levels>
+            </saw:edgeLayer><saw:edgeLayer type="column" columnID="c8f669ed9685ad456" insertPageBreak="false"/><saw:edgeLayer type="column" columnID="cc1249a61de66ef00" insertPageBreak="false"/></saw:edgeLayers>
+        </saw:edge><saw:edge axis="column" showColumnHeader="true">
+          <saw:displayGrandTotals>
+            <saw:displayGrandTotal id="t2" grandTotalPosition="after"/>
+          </saw:displayGrandTotals>
+          <saw:edgeLayers>
+            
+            
+          <saw:edgeLayer type="measure" insertPageBreak="false"/><saw:edgeLayer type="column" columnID="c4901240a4f824d0b" insertPageBreak="false"/></saw:edgeLayers>
+        </saw:edge></saw:edges>
+      <saw:measuresList>
+        <saw:measure columnID="c81b635e4c38798f6"/>
+      </saw:measuresList>
+      <saw:displayFormat>
+        <saw:formatSpec/>
+      </saw:displayFormat>
+    </saw:view>
+  </saw:views>
+</saw:report>

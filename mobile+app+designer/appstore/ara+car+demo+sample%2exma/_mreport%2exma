@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+           <dataModel url="/Mobile App Designer/Data Model/ARA Car excel.xdm"></dataModel>
+           <property name="showControls" value="true"></property>
+           <property name="online" value="true"></property>
+           <property name="openLinkInNewWindow" value="true"></property>
+           <property name="autoRun" value="true"></property>
+           <property name="cacheDocument" value="true"></property>
+           <property name="showReportLinks" value="true"></property>
+           <property name="asynchronousRun" value="false"></property>
+           <property name="useExcelProcessor" value="false"></property>
+           <property name="cacheDuration" value="30"></property>
+           <property name="controledByExtApp" value="false"></property>
+           <parameters paramPerLine="3"></parameters>
+           <templates default="Tablet"><template label="Tablet" type="xmt" url="Tablet.xmt" locale="en_US" deviceType="tablet" outputFormat="analyze"/></templates>
+</report>

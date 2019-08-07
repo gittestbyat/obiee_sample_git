@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">	
+   <saw:criteria subjectArea="&quot;A - Sample Sales&quot;" xsi:type="saw:simpleCriteria" withinHierarchy="true">		
+      <saw:columns>			
+         <saw:column columnID="c2" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:displayFormat>					
+               <saw:formatSpec suppress="default" interaction="none" backgroundColor="#f2f3fb" fontSize="9">						
+                  <saw:dataFormat xsi:type="saw:text" textFormat="plain"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				
+            <saw:columnHeading>					
+               <saw:displayFormat>						
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle" interaction="none"/>
+					</saw:displayFormat>
+					
+               <saw:caption captionID="kcap12387045_19078">						
+                  <saw:text>Dimension</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+				
+            <saw:tableHeading>					
+               <saw:displayFormat/>
+					
+               <saw:caption captionID="kcap12387045_19079">						
+                  <saw:text>Generic Columns</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Customers&quot;.&quot;C1  Customer Name&quot;}</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column columnID="c7" aggRule="sum" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:displayFormat>					
+               <saw:formatSpec suppress="default" interaction="default" backgroundColor="#FFFFFF" fontSize="9">						
+                  <saw:dataFormat xsi:type="saw:number" commas="true" negativeType="minus" minDigits="0" maxDigits="0"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				
+            <saw:columnHeading>					
+               <saw:displayFormat>						
+                  <saw:formatSpec interaction="default" fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle"/>
+					</saw:displayFormat>
+					
+               <saw:caption captionID="kcap12387045_19080">						
+                  <saw:text>Metric 1</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+				
+            <saw:tableHeading>					
+               <saw:caption captionID="kcap12387045_19081">						
+                  <saw:text>Generic Columns</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">cast(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} as double)</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column columnID="c9" aggRule="sum" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:displayFormat>					
+               <saw:formatSpec suppress="default" interaction="default" backgroundColor="#FFFFFF" fontSize="9">						
+                  <saw:dataFormat xsi:type="saw:number" commas="true" negativeType="minus" minDigits="0" maxDigits="0"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				
+            <saw:columnHeading>					
+               <saw:displayFormat>						
+                  <saw:formatSpec interaction="default" fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle"/>
+					</saw:displayFormat>
+					
+               <saw:caption captionID="kcap12387045_19082">						
+                  <saw:text>Metric 2</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+				
+            <saw:tableHeading>					
+               <saw:caption captionID="kcap12387045_19083">						
+                  <saw:text>Generic Columns</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Met02}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;}</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column columnID="c1" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:columnHeading>					
+               <saw:displayFormat>						
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle" interaction="default"/>
+					</saw:displayFormat>
+					
+               <saw:caption captionID="kcap12387045_19084">						
+                  <saw:text>Metric 1 N-tile</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+				
+            <saw:displayFormat>					
+               <saw:formatSpec suppress="default" interaction="default" backgroundColor="#FFFFFF" fontSize="9">						
+                  <saw:dataFormat xsi:type="saw:number" commas="false" negativeType="minus" minDigits="0" maxDigits="0"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				
+            <saw:tableHeading>					
+               <saw:caption captionID="kcap12387045_19085">						
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">NTILE(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;},@{Nvalue_for_Ntiling}{10})</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column columnID="c0" aggRule="sum" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:tableHeading>					
+               <saw:caption captionID="kcap12387045_19086">						
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnHeading>					
+               <saw:caption captionID="kcap12387045_19087">						
+                  <saw:text>Metric 1 Pct of Tot</saw:text>
+					</saw:caption>
+					
+               <saw:displayFormat>						
+                  <saw:formatSpec interaction="default" fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            <saw:displayFormat>					
+               <saw:formatSpec suppress="default" interaction="default" backgroundColor="#FFFFFF" fontSize="9" fontColor="#666666">						
+                  <saw:dataFormat xsi:type="saw:percent" commas="false" negativeType="minus" minDigits="1" maxDigits="1"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">cast(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} as double)/sum(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;})*100</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column columnID="c13" aggRule="sum" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:tableHeading>					
+               <saw:caption captionID="kcap12387045_19088">						
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnHeading>					
+               <saw:caption captionID="kcap12387045_19089">						
+                  <saw:text>Metric-2 Pct of Tot</saw:text>
+					</saw:caption>
+					
+               <saw:displayFormat>						
+                  <saw:formatSpec interaction="default" fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            <saw:displayFormat>					
+               <saw:formatSpec suppress="default" interaction="default" backgroundColor="#FFFFFF" fontSize="9">						
+                  <saw:dataFormat xsi:type="saw:percent" commas="false" negativeType="minus" minDigits="1" maxDigits="1"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">cast(@{Met02}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;} as double)/sum(@{Met02}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;})*100</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column columnID="c26" aggRule="avg" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:displayFormat>					
+               
+               <saw:formatSpec suppress="default" interaction="default" backgroundColor="#FFFFFF" fontSize="9">						
+                  <saw:dataFormat xsi:type="saw:number" commas="false" negativeType="minus" minDigits="2" maxDigits="2"/>
+					</saw:formatSpec><saw:conditionalDisplayFormats>						
+                  <saw:conditionalDisplayFormat>							
+                     <saw:formatRule>								
+                        <saw:condition>									
+                           <sawx:expr xsi:type="sawx:comparison" op="less">										
+                              <saw:columnRef columnID="c26"/>
+										
+                              <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								
+                        <saw:formatSpec fontColor="#CC3333"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						
+                  <saw:conditionalDisplayFormat>							
+                     <saw:formatRule>								
+                        <saw:condition>									
+                           <sawx:expr xsi:type="sawx:comparison" op="greater">										
+                              <saw:columnRef columnID="c26"/>
+										
+                              <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								
+                        <saw:formatSpec fontColor="#0000FF"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				
+            <saw:columnHeading>					
+               <saw:displayFormat>						
+                  <saw:formatSpec interaction="default" fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle"/>
+					</saw:displayFormat>
+					
+               <saw:caption fmt="html" oldID="kcap12387045_19090">						
+                  <saw:text>Ratio M2 to M1</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+				
+            <saw:tableHeading>					
+               <saw:caption captionID="kcap12387045_19091" fmt="html">						
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">(cast(@{Met02}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;} as double)/sum(@{Met02}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;})) / (cast(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} as double)/sum(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}))</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column columnID="c27" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:tableHeading>					
+               <saw:caption captionID="kcap12387045_19092">						
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnHeading>					
+               <saw:caption captionID="kcap12387045_19093">						
+                  <saw:text>Ntile Gap</saw:text>
+					</saw:caption>
+					
+               <saw:displayFormat>						
+                  <saw:formatSpec interaction="default" fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            <saw:displayFormat>					
+               
+               <saw:formatSpec suppress="default" interaction="default" backgroundColor="#FFFFFF" fontSize="9">						
+                  <saw:dataFormat xsi:type="saw:text" textFormat="plain"/>
+					</saw:formatSpec><saw:conditionalDisplayFormats>						
+                  <saw:conditionalDisplayFormat>							
+                     <saw:formatRule>								
+                        <saw:condition>									
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">										
+                              <saw:columnRef columnID="c27"/>
+										
+                              <sawx:expr xsi:type="xsd:string">Over</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								
+                        <saw:formatSpec imagePlacement="left,imageOnly" image="fmap:meters/arrow/stk/up.gif"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						
+                  <saw:conditionalDisplayFormat>							
+                     <saw:formatRule>								
+                        <saw:condition>									
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">										
+                              <saw:columnRef columnID="c27"/>
+										
+                              <sawx:expr xsi:type="xsd:string">Under</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								
+                        <saw:formatSpec image="fmap:meters/arrow/stk/down.gif" imagePlacement="left,imageOnly"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression"> case WHEN avg((cast(@{Met02}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;} as double)/sum(@{Met02}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;})) / (cast(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} as double)/sum(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;})) by NTILE(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;},@{Nvalue_for_Ntiling}{10})) &lt; 1 then &#39;Under&#39; else &#39;Over&#39; end</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column columnID="c25" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:tableHeading>					
+               <saw:caption captionID="kcap12387045_19094">						
+                  <saw:text>Answers Calc</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnHeading>					
+               <saw:caption captionID="kcap12387045_19095">						
+                  <saw:text>Avg % Marker</saw:text>
+					</saw:caption>
+					
+               <saw:displayFormat>						
+                  <saw:formatSpec interaction="default" fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            <saw:displayFormat>					
+               <saw:formatSpec suppress="default" interaction="default" backgroundColor="#FFFFFF" fontSize="9">						
+                  <saw:dataFormat xsi:type="saw:percent" commas="false" negativeType="minus" minDigits="0" maxDigits="0"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">100/max(@{Nvalue_for_Ntiling}{10})</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column columnID="c22" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:tableHeading>					
+               <saw:caption captionID="kcap12387045_19096">						
+                  <saw:text>Answers Calc (Pivot Table Format)</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnHeading>					
+               <saw:caption captionID="kcap12387045_19097">						
+                  <saw:text>Ntiles Tier</saw:text>
+					</saw:caption>
+					
+               <saw:displayFormat>						
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle" interaction="default"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            <saw:displayFormat>					
+               <saw:formatSpec suppress="default" interaction="default" backgroundColor="#FFFFFF" fontSize="9"/>
+				</saw:displayFormat>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">&#39;Ntiles &#39;||cast(floor((NTILE(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;},@{Nvalue_for_Ntiling}{10})-1)/3)*3+1 as varchar(2))||&#39; to &#39;||cast((floor((NTILE(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;},@{Nvalue_for_Ntiling}{10})-1)/3)+1)*3 as varchar(2))</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         <saw:column columnID="c23" xsi:type="saw:regularColumn" forceGroupBy="true">				
+            <saw:tableHeading>					
+               <saw:caption captionID="kcap12387045_19098">						
+                  <saw:text>Answers Calc (Pivot Table Format)</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				
+            <saw:columnHeading>					
+               <saw:caption captionID="kcap12387045_19099">						
+                  <saw:text>Ntile Count</saw:text>
+					</saw:caption>
+					
+               <saw:displayFormat>						
+                  <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle" interaction="default"/>
+					</saw:displayFormat>
+				</saw:columnHeading>
+				
+            <saw:displayFormat>					
+               <saw:formatSpec suppress="default" interaction="default" backgroundColor="#FFFFFF" fontSize="9"/>
+				</saw:displayFormat>
+				
+            <saw:columnFormula>					
+               <sawx:expr xsi:type="sawx:sqlExpression">rcount(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} by NTILE(@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;},@{Nvalue_for_Ntiling}{10}))</sawx:expr>
+				</saw:columnFormula>
+			</saw:column>
+			
+         
+		</saw:columns>
+		
+      <saw:columnOrder>			
+         <saw:columnOrderRef columnID="c7" direction="ascending"/>
+		</saw:columnOrder>
+	</saw:criteria>
+	
+   <saw:views currentView="13">		
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">			
+         <saw:cvTable>				
+            <saw:cvRow>					
+               <saw:cvCell viewName="titleView!1">						
+                  <saw:displayFormat/>
+					</saw:cvCell>
+				</saw:cvRow>
+				
+            <saw:cvRow>					
+               <saw:cvCell viewName="viewSelector!1">						
+                  <saw:displayFormat/>
+					</saw:cvCell>
+				</saw:cvRow>
+			</saw:cvTable>
+		</saw:view>
+		
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="none" includeName="false" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:logoFormat>				
+            <saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>				
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#666666" borderPosition="none"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>				
+            <saw:formatSpec borderColor="#660000" borderPosition="8" borderStyle="double" vAlign="middle" width="95%" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/>
+			</saw:displayFormat><saw:title>				
+            <saw:displayFormat>					
+               <saw:formatSpec fontColor="#000000" borderPosition="none" fontStyle="bold,italic" paddingLeft="15" paddingRight="0" paddingTop="2" paddingBottom="0" vAlign="top"/>
+				</saw:displayFormat>
+				
+            <saw:caption fmt="text" captionID="kcap12387045_19071">					
+               <saw:text>Deciling Comparative Analysis</saw:text>
+				</saw:caption>
+			</saw:title><saw:subTitle>				
+            <saw:displayFormat>					
+               <saw:formatSpec fontStyle="italic" borderPosition="none" paddingLeft="5" paddingRight="0" paddingTop="0" paddingBottom="0" vAlign="middle" fontColor="#505050"/>
+				</saw:displayFormat>
+				
+            <saw:caption fmt="text" captionID="kcap12851338_2748" oldID="kcap12387045_19072">					
+               <saw:text>How do my top tiles of @{Dim01}{&quot;Customers&quot;.&quot;C1  Customer Name&quot;} in @{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} values contribute to @{Met02}{&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;} values.</saw:text>
+				</saw:caption>
+			</saw:subTitle></saw:view>
+		
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2" autoPreview="true">
+			
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true">				</saw:edge>
+            <saw:edge axis="section">				</saw:edge>
+            <saw:edge axis="row" showColumnHeader="false">					
+               <saw:displayGrandTotals>						
+                  <saw:displayGrandTotal grandTotalPosition="after" id="t1">							
+                     <saw:memberFormat>								
+                        <saw:caption captionID="kcap12387045_19102">									
+                           <saw:text>Total</saw:text>
+								</saw:caption>
+								
+                        <saw:displayFormat>									
+                           <saw:formatSpec fontSize="9" fontColor="#000000" backgroundColor="#f5f3d9"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+							
+                     <saw:dataBodyFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec backgroundColor="#f5f3d9" fontSize="9"/>
+								</saw:displayFormat>
+							</saw:dataBodyFormat>
+						</saw:displayGrandTotal>
+					</saw:displayGrandTotals>
+					
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c1" insertPageBreak="false">							
+                     <saw:memberFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec fontSize="9" backgroundColor="#e7e7f7" borderColor="#CCCCCC" borderPosition="8"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+							
+                     <saw:headerFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec borderColor="#CCCCCC" borderPosition="8" width="30"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+						</saw:edgeLayer>
+                  <saw:edgeLayer type="column" columnID="c27" aggRule="last" insertPageBreak="false">							
+                     <saw:memberFormat>								
+                        <saw:displayFormat/>
+							</saw:memberFormat>
+							
+                     <saw:headerFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec borderColor="#CCCCCC" borderPosition="8" fontSize="0" fontColor="#e7e7f7"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+						</saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column">					
+               <saw:displayGrandTotals>						
+                  <saw:displayGrandTotal grandTotalPosition="none" id="t2">							
+                     <saw:memberFormat>								
+                        <saw:caption>									
+                           <saw:text/>
+								</saw:caption>
+								
+                        <saw:displayFormat>									
+                           <saw:formatSpec backgroundColor="#ddeeff" borderColor="#CCCCCC"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+							
+                     <saw:dataBodyFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec backgroundColor="#EEEEEE" borderColor="#CCCCCC"/>
+								</saw:displayFormat>
+							</saw:dataBodyFormat>
+						</saw:displayGrandTotal>
+					</saw:displayGrandTotals>
+					
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure" insertPageBreak="false">							
+                     <saw:memberFormat>								
+                        <saw:displayFormat/>
+							</saw:memberFormat>
+						</saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>				
+            <saw:measure columnID="c2" aggRule="countDistinct">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19104">							
+                     <saw:text>Count</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+					
+               <saw:dataBodyFormat>						
+                  <saw:displayFormat>							
+                     <saw:formatSpec backgroundColor="#FFFFFF" fontSize="9" hAlign="right"/>
+						</saw:displayFormat>
+					</saw:dataBodyFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c9">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19105">							
+                     <saw:text>Total Value</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c13">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19106">							
+                     <saw:text>% of Tot</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+					
+               <saw:dataBodyFormat>						
+                  <saw:displayFormat/>
+					</saw:dataBodyFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c9" duplicateID="d1" aggRule="avg">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19107">							
+                     <saw:text>Avg Value</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c26"/>
+			</saw:measuresList>			
+         <saw:sectionContent>				
+            <saw:displayFormat/>
+			</saw:sectionContent>
+		</saw:view>
+		
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">			
+         <saw:displayFormat>				
+            <saw:formatSpec fontStyle="italic"/>
+			</saw:displayFormat>
+			
+         <saw:staticText>				
+            <saw:caption fmt="html" captionID="kcap12851496_46" oldID="kcap12387045_19073">					
+               <saw:text>TBD</saw:text>
+				</saw:caption>
+			</saw:staticText>
+		</saw:view>
+		
+      <saw:view xsi:type="saw:htmlview" name="htmlview!2" autoPreview="true">			
+         <saw:staticText>				
+            <saw:caption fmt="text" captionID="kcap12387045_19074">					
+               <saw:text>2 - Metric 2 Values  [b][u]by Metric 1 Ntile[/u][/b]</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			
+         <saw:displayFormat>				
+            <saw:formatSpec fontStyle="italic"/>
+			</saw:displayFormat>
+		</saw:view>
+		
+      <saw:view xsi:type="saw:filtersView" name="filtersView!1"/>
+		
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" autoPreview="true">
+			
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true">				</saw:edge>
+            <saw:edge axis="section">				</saw:edge>
+            <saw:edge axis="row" showColumnHeader="false">					
+               <saw:displayGrandTotals>						
+                  <saw:displayGrandTotal grandTotalPosition="after" id="t1">							
+                     <saw:memberFormat>								
+                        <saw:caption captionID="kcap12387045_19103">									
+                           <saw:text>Total</saw:text>
+								</saw:caption>
+								
+                        <saw:displayFormat>									
+                           <saw:formatSpec fontSize="9" backgroundColor="#f5f3d9" fontColor="#000000"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+							
+                     <saw:dataBodyFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec backgroundColor="#f5f3d9" fontSize="9"/>
+								</saw:displayFormat>
+							</saw:dataBodyFormat>
+						</saw:displayGrandTotal>
+					</saw:displayGrandTotals>
+					
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c1" insertPageBreak="false">							
+                     <saw:memberFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec fontSize="9" backgroundColor="#e7e7f7"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+							
+                     <saw:headerFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec borderColor="#CCCCCC" borderPosition="8" width="30"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+						</saw:edgeLayer></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column">					
+               <saw:displayGrandTotals>						
+                  <saw:displayGrandTotal grandTotalPosition="none" id="t2">							
+                     <saw:memberFormat>								
+                        <saw:caption>									
+                           <saw:text/>
+								</saw:caption>
+								
+                        <saw:displayFormat>									
+                           <saw:formatSpec backgroundColor="#ddeeff" borderColor="#CCCCCC"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+							
+                     <saw:dataBodyFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec backgroundColor="#EEEEEE" borderColor="#CCCCCC"/>
+								</saw:displayFormat>
+							</saw:dataBodyFormat>
+						</saw:displayGrandTotal>
+					</saw:displayGrandTotals>
+					
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure" insertPageBreak="false">							
+                     <saw:memberFormat>								
+                        <saw:displayFormat/>
+							</saw:memberFormat>
+						</saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>				
+            <saw:measure columnID="c2" aggRule="countDistinct">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19108">							
+                     <saw:text>Count</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+					
+               <saw:dataBodyFormat>						
+                  <saw:displayFormat>							
+                     <saw:formatSpec backgroundColor="#FFFFFF" fontSize="9" hAlign="right"/>
+						</saw:displayFormat>
+					</saw:dataBodyFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c7">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19109">							
+                     <saw:text>Total Value</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat>							
+                     <saw:formatSpec fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" fontStyle="regular" vAlign="middle"/>
+						</saw:displayFormat>
+					</saw:memberFormat>
+					
+               <saw:dataBodyFormat>						
+                  <saw:displayFormat/>
+					</saw:dataBodyFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c0">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19110">							
+                     <saw:text>% of Tot</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+					
+               <saw:dataBodyFormat>						
+                  <saw:displayFormat/>
+					</saw:dataBodyFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c7" duplicateID="d1" aggRule="avg">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19111">							
+                     <saw:text>Avg Value</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat>							
+                     <saw:formatSpec fontStyle="regular" fontColor="#333366" backgroundColor="#e7e7f7" fontSize="9" vAlign="middle"/>
+						</saw:displayFormat>
+					</saw:memberFormat>
+				</saw:measure>
+			</saw:measuresList>			
+         <saw:sectionContent>				
+            <saw:displayFormat/>
+			</saw:sectionContent>
+		</saw:view>
+		
+      <saw:view xsi:type="saw:dvtchart" name="staticchart!1">			
+         <saw:canvasFormat width="300" height="245" showGradient="false">				
+            <saw:dataLabels display="always">					
+               <saw:textFormat fontStyle="regular" fontSize="8"/>
+					
+               <saw:dataFormat xsi:type="saw:percent" negativeType="minus" minDigits="0" maxDigits="0" commas="false"/>
+				</saw:dataLabels>
+				
+            <saw:title mode="auto">					
+               <saw:textFormat fontStyle="regular" fontSize="9"/>
+					
+               <saw:caption/></saw:title>
+				
+            <saw:gridlines default="false">					
+               <saw:vertical>						
+                  <saw:major visible="true"/>
+						
+                  <saw:minor color="#EEEEEE" visible="true"/>
+					</saw:vertical>
+					
+               <saw:horizontal>						
+                  <saw:major visible="true"/>
+						
+                  <saw:minor color="#EEEEEE" visible="true"/>
+					</saw:horizontal>
+				</saw:gridlines>
+			</saw:canvasFormat>
+			
+         <saw:axesFormats syncAxis="true">				
+            <saw:axisFormat axis="X">					
+               <saw:title mode="custom"/>
+					
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/></saw:axisFormat>
+				
+            <saw:axisFormat axis="Y1">					
+               <saw:scale majorTicks="4" minorTicks="1" defaultTicks="false" showMinorTicks="true" showMajorTicks="true" scaleValues="auto" logarithmic="false"/>
+					
+               <saw:title mode="custom"/>
+					
+               <saw:labels>						
+                  <saw:dataFormat xsi:type="saw:percent" negativeType="minus" minDigits="0" maxDigits="0" commas="false"/>
+					</saw:labels>
+					
+               <saw:scaleMarkers>						
+                  <saw:scaleMarker color="#FF00FF" xsi:type="saw:scaleMarkerLine">							
+                     <saw:markerLabel>								
+                        <saw:title mode="custom">									
+                           <saw:caption captionID="kcap12387045_19121">										
+                              <saw:text>Average</saw:text>
+									</saw:caption>
+								</saw:title>
+							</saw:markerLabel>
+							
+                     <saw:lineWidth>								
+                        <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+							</saw:lineWidth>
+							
+                     <saw:linePosition>								
+                        <saw:columnRef columnID="c25"/>
+							</saw:linePosition>
+						</saw:scaleMarker>
+					</saw:scaleMarkers>
+				</saw:axisFormat>
+			</saw:axesFormats>
+			
+         <saw:legendFormat position="none" transparentFill="true"/>
+			
+         <saw:selections>				
+            <saw:categories>					
+               <saw:category>						
+                  <saw:columnRef columnID="c1"/>
+					</saw:category>
+				</saw:categories>
+				
+            <saw:measures>					
+               <saw:column measureType="y">						
+                  <saw:columnRef columnID="c0"/>
+					</saw:column>
+				</saw:measures>
+				
+            <saw:seriesGenerators>					
+               <saw:measureLabels/>
+				</saw:seriesGenerators>
+			</saw:selections>
+			
+         <saw:display type="bar" subtype="stacked" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">				
+            <saw:style effect="2d" fillStyle="patternFill" barStyle="rectangle"/>
+			</saw:display>
+			
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="bar">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#7EB679"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+		
+      <saw:view xsi:type="saw:dvtchart" name="staticchart!2">			
+         <saw:canvasFormat width="300" height="245" showGradient="false">				
+            <saw:dataLabels display="always">					
+               <saw:textFormat fontStyle="regular" fontSize="8"/>
+					
+               <saw:dataFormat xsi:type="saw:percent" negativeType="minus" minDigits="0" maxDigits="0" commas="false"/>
+				</saw:dataLabels>
+				
+            <saw:title mode="auto">					
+               <saw:textFormat fontStyle="regular" fontSize="9"/>
+					
+               <saw:caption/></saw:title>
+				
+            <saw:gridlines default="false">					
+               <saw:vertical>						
+                  <saw:major visible="true"/>
+						
+                  <saw:minor color="#EEEEEE" visible="true"/>
+					</saw:vertical>
+					
+               <saw:horizontal>						
+                  <saw:major visible="true"/>
+						
+                  <saw:minor color="#EEEEEE" visible="true"/>
+					</saw:horizontal>
+				</saw:gridlines>
+			</saw:canvasFormat>
+			
+         <saw:axesFormats syncAxis="true">				
+            <saw:axisFormat axis="X">					
+               <saw:title mode="custom"/>
+					
+               <saw:scale scaleValues="auto" showMajorTicks="false" showMinorTicks="false" logarithmic="false"/></saw:axisFormat>
+				
+            <saw:axisFormat axis="Y1">					
+               <saw:scale majorTicks="4" minorTicks="1" defaultTicks="false" showMinorTicks="true" showMajorTicks="true" scaleValues="auto" logarithmic="false"/>
+					
+               <saw:title mode="custom"/>
+					
+               <saw:labels>						
+                  <saw:dataFormat xsi:type="saw:percent" negativeType="minus" minDigits="0" maxDigits="0" commas="false"/>
+					</saw:labels>
+					
+               <saw:scaleMarkers>						
+                  <saw:scaleMarker color="#FF00FF" xsi:type="saw:scaleMarkerLine">							
+                     <saw:markerLabel>								
+                        <saw:title mode="custom">									
+                           <saw:caption captionID="kcap12387045_19122">										
+                              <saw:text>Average</saw:text>
+									</saw:caption>
+								</saw:title>
+							</saw:markerLabel>
+							
+                     <saw:lineWidth>								
+                        <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>
+							</saw:lineWidth>
+							
+                     <saw:linePosition>								
+                        <saw:columnRef columnID="c25"/>
+							</saw:linePosition>
+						</saw:scaleMarker>
+					</saw:scaleMarkers>
+				</saw:axisFormat>
+			</saw:axesFormats>
+			
+         <saw:legendFormat position="none" transparentFill="true"/>
+			
+         <saw:selections>				
+            <saw:categories>					
+               <saw:category>						
+                  <saw:columnRef columnID="c1"/>
+					</saw:category>
+				</saw:categories>
+				
+            <saw:measures>					
+               <saw:column measureType="y">						
+                  <saw:columnRef columnID="c13"/>
+					</saw:column>
+				</saw:measures>
+				
+            <saw:seriesGenerators>					
+               <saw:measureLabels/>
+					
+               <saw:seriesGenerator>						
+                  <saw:columnRef columnID="c27"/>
+					</saw:seriesGenerator>
+				</saw:seriesGenerators>
+			</saw:selections>
+			
+         <saw:display type="bar" subtype="stacked" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">				
+            <saw:style effect="2d" barStyle="rectangle"/>
+			</saw:display>
+			
+         <saw:seriesFormats>
+            <saw:seriesFormatGroup name="bar">
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="1"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#666699"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition position="2"/>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#666699"/></saw:visualFormats></saw:seriesFormatRule>
+               <saw:seriesFormatRule>
+                  <saw:seriesCondition columnID="c27" position="0">
+                     <saw:condition>								
+                        <sawx:expr xsi:type="sawx:comparison" op="equal">									
+                           <saw:columnRef columnID="c27"/>
+									
+                           <sawx:expr xsi:type="xsd:string">Under</sawx:expr>
+								</sawx:expr>
+							</saw:condition>						</saw:seriesCondition>
+                  <saw:visualFormats>
+                     <saw:visualFormat color="#FF6666"/></saw:visualFormats></saw:seriesFormatRule></saw:seriesFormatGroup></saw:seriesFormats></saw:view>
+		
+      <saw:view xsi:type="saw:dvtchart" name="staticchart!5">			
+         <saw:canvasFormat height="350" width="640" showGradient="false">				
+            <saw:dataLabels>					
+               <saw:textFormat fontSize="8"/>
+				</saw:dataLabels>
+				
+            <saw:title mode="custom"/>
+				
+            <saw:gridlines default="false">					
+               <saw:vertical>						
+                  <saw:major visible="true"/>
+						
+                  <saw:minor color="#EEEEEE" visible="true"/>
+					</saw:vertical>
+					
+               <saw:horizontal>						
+                  <saw:major visible="true"/>
+						
+                  <saw:minor color="#EEEEEE" visible="true"/>
+					</saw:horizontal>
+				</saw:gridlines>
+			</saw:canvasFormat>
+			
+         <saw:axesFormats syncAxis="false">				
+            <saw:axisFormat axis="Y1">					
+               <saw:scaleMarkers>						
+                  <saw:scaleMarker color="#0000FF" xsi:type="saw:scaleMarkerLine">							
+                     <saw:markerLabel>								
+                        <saw:title mode="custom">									
+                           <saw:caption captionID="kcap12387045_19123">										
+                              <saw:text>Avg</saw:text>
+									</saw:caption>
+								</saw:title>
+							</saw:markerLabel>
+							
+                     <saw:lineWidth>
+                        <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>							</saw:lineWidth>
+                     <saw:linePosition>
+                        <saw:columnRef columnID="c25"/>							</saw:linePosition></saw:scaleMarker>
+						
+                  <saw:scaleMarker color="#FDFDE2" xsi:type="saw:scaleMarkerRange">							
+                     <saw:markerLabel>								
+                        <saw:title mode="custom">									
+                           <saw:caption captionID="kcap12387045_19124">										
+                              <saw:text>.</saw:text>
+									</saw:caption>
+								</saw:title>
+							</saw:markerLabel>
+							
+                     <saw:rangeLow>
+                        <sawx:expr xsi:type="xsd:decimal">0</sawx:expr>							</saw:rangeLow>
+                     <saw:rangeHigh>
+                        <saw:columnRef columnID="c25"/>							</saw:rangeHigh></saw:scaleMarker>
+					</saw:scaleMarkers>
+					
+               <saw:scale majorTicks="4" minorTicks="1" defaultTicks="false" showMinorTicks="true" showMajorTicks="true" scaleValues="auto" logarithmic="false"/>
+					
+               <saw:labels>						
+                  <saw:dataFormat xsi:type="saw:percent" negativeType="minus" minDigits="0" maxDigits="0" commas="false"/>
+					</saw:labels>
+					
+               <saw:title mode="auto">
+                  <saw:caption/></saw:title></saw:axisFormat>
+				
+            <saw:axisFormat axis="X">					
+               <saw:scaleMarkers>						
+                  <saw:scaleMarker color="#0000FF" xsi:type="saw:scaleMarkerLine">							
+                     <saw:markerLabel>								
+                        <saw:title mode="custom">									
+                           <saw:caption captionID="kcap12387045_19125">										
+                              <saw:text>Avg</saw:text>
+									</saw:caption>
+								</saw:title>
+							</saw:markerLabel>
+							
+                     <saw:lineWidth>
+                        <sawx:expr xsi:type="xsd:decimal">1</sawx:expr>							</saw:lineWidth>
+                     <saw:linePosition>
+                        <saw:columnRef columnID="c25"/>							</saw:linePosition></saw:scaleMarker>
+						
+                  <saw:scaleMarker color="#FDFDE2" xsi:type="saw:scaleMarkerRange">							
+                     <saw:markerLabel>								
+                        <saw:title mode="custom">									
+                           <saw:caption captionID="kcap12387045_19126">										
+                              <saw:text>.</saw:text>
+									</saw:caption>
+								</saw:title>
+							</saw:markerLabel>
+							
+                     <saw:rangeLow>
+                        <sawx:expr xsi:type="xsd:decimal">0</sawx:expr>							</saw:rangeLow>
+                     <saw:rangeHigh>
+                        <saw:columnRef columnID="c25"/>							</saw:rangeHigh></saw:scaleMarker>
+					</saw:scaleMarkers>
+					
+               <saw:scale majorTicks="4" minorTicks="1" defaultTicks="false" showMinorTicks="true" showMajorTicks="true" scaleValues="auto" logarithmic="false"/>
+					
+               <saw:labels>						
+                  <saw:dataFormat xsi:type="saw:percent" negativeType="minus" minDigits="0" maxDigits="0" commas="false"/>
+					</saw:labels>
+					
+               <saw:title mode="auto">
+                  <saw:caption/></saw:title></saw:axisFormat>
+			</saw:axesFormats>
+			
+         <saw:legendFormat position="none" transparentFill="true"/>
+			
+         <saw:selections>				
+            <saw:categories>					
+               
+					
+               
+				<saw:category><saw:columnRef columnID="c2"/></saw:category></saw:categories>
+				
+            <saw:measures><saw:column measureType="y"><saw:columnRef columnID="c9"/></saw:column><saw:column measureType="x"><saw:columnRef columnID="c7"/></saw:column>					
+               
+					
+               
+				</saw:measures>
+				
+            <saw:seriesGenerators>					
+               <saw:measureLabels/>
+				</saw:seriesGenerators>
+			</saw:selections>
+			
+         <saw:seriesFormats>				
+            <saw:seriesFormatGroup name="scatter">					
+               <saw:seriesFormatRule>						
+                  <saw:seriesCondition position="1"/>
+						
+                  <saw:visualFormats>							
+                     <saw:visualFormat className="symbolProp" name="normalScatter" symbolColor="#6699CC" symbol="plus"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+					
+               <saw:seriesFormatRule>						
+                  <saw:seriesCondition position="1" columnID="c27">							
+                     <saw:condition>								
+                        <sawx:expr xsi:type="sawx:comparison" op="equal">									
+                           <saw:columnRef columnID="c27"/>
+									
+                           <sawx:expr xsi:type="xsd:string">Under</sawx:expr>
+								</sawx:expr>
+							</saw:condition>
+						</saw:seriesCondition>
+						
+                  <saw:visualFormats>							
+                     <saw:visualFormat className="symbolProp" name="normalScatter" symbolColor="#FF0000" symbol="square"/>
+						</saw:visualFormats>
+					</saw:seriesFormatRule>
+				</saw:seriesFormatGroup>
+			</saw:seriesFormats>
+			
+         <saw:display type="scatter" subtype="default" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="true">				
+            <saw:style scatterStyle="standardScatter" effect="2d"/>
+			</saw:display>
+		</saw:view>
+		
+      <saw:view xsi:type="saw:htmlview" name="htmlview!5" autoPreview="true">			
+         <saw:displayFormat>				
+            <saw:formatSpec fontStyle="italic"/>
+			</saw:displayFormat>
+			
+         <saw:staticText>				
+            <saw:caption fmt="html" captionID="kcap12851496_47" oldID="kcap12387045_19075">					
+               <saw:text>3 - Both Metrics Quadrant Plot</saw:text>
+				</saw:caption>
+			</saw:staticText>
+		</saw:view>
+		
+      <saw:view xsi:type="saw:htmlview" name="htmlview!3">			
+         <saw:displayFormat>				
+            <saw:formatSpec fontStyle="italic"/>
+			</saw:displayFormat>
+			
+         <saw:staticText>				
+            <saw:caption fmt="text" captionID="kcap12387045_19076">					
+               <saw:text>1 - Metric 1 Values [b] [u]by Metric 1 Ntile[/u][/b]</saw:text>
+				</saw:caption>
+			</saw:staticText>
+		</saw:view>
+		
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!3">
+		
+         <saw:viewCaption>
+            <saw:caption>
+               <saw:text>Detailed Tables with Individuals</saw:text></saw:caption></saw:viewCaption>
+			
+         <saw:edges>				
+            <saw:edge axis="page" showColumnHeader="true">					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="column" columnID="c22" insertPageBreak="false">							
+                     <saw:headerFormat>								
+                        <saw:caption captionID="kcap12387045_19112">									
+                           <saw:text>Select which Ntiles to display detail for :</saw:text>
+								</saw:caption>
+								
+                        <saw:displayFormat>									
+                           <saw:formatSpec backgroundColor="#FFFFFF" fontSize="11" fontStyle="bold"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+						</saw:edgeLayer></saw:edgeLayers>
+					
+               <saw:displayGrandTotals>						
+                  <saw:displayGrandTotal grandTotalPosition="before" id="t1">							
+                     <saw:dataBodyFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec fontStyle="regular"/>
+								</saw:displayFormat>
+							</saw:dataBodyFormat>
+						</saw:displayGrandTotal>
+					</saw:displayGrandTotals>
+				</saw:edge>
+            <saw:edge axis="section" insertPageBreak="outermost" showBlankRows="false" headings="before">					
+               <saw:displayFormat>						
+                  <saw:formatSpec hAlign="left"/>
+					</saw:displayFormat>
+					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="column" columnID="c22" insertPageBreak="false" duplicateID="d1">							
+                     <saw:headerFormat>								
+                        <saw:caption captionID="kcap12851496_48" oldID="kcap12387045_19113">									
+                           <saw:text>For :</saw:text>
+								</saw:caption>
+								
+                        <saw:displayFormat>									
+                           <saw:formatSpec fontColor="#000000" backgroundColor="#f5f3d9" fontSize="9"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+						</saw:edgeLayer></saw:edgeLayers>
+				</saw:edge>
+            <saw:edge axis="row" showColumnHeader="true">					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="column" columnID="c23" insertPageBreak="false">							
+                     <saw:headerFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec borderColor="#CCCCCC" borderPosition="8"/>
+								</saw:displayFormat>
+							</saw:headerFormat>
+						</saw:edgeLayer></saw:edgeLayers>
+					
+               <saw:columnOrder>						
+                  <saw:columnOrderRef columnID="c23" direction="ascending"/>
+					</saw:columnOrder>
+					
+               <saw:displayGrandTotals>						
+                  <saw:displayGrandTotal grandTotalPosition="after" id="t2">							
+                     <saw:memberFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec fontColor="#000000" backgroundColor="#f5f3d9" fontSize="9"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+							
+                     <saw:dataBodyFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec fontColor="#000000" backgroundColor="#f5f3d9" fontSize="9"/>
+								</saw:displayFormat>
+							</saw:dataBodyFormat>
+						</saw:displayGrandTotal>
+					</saw:displayGrandTotals>
+				</saw:edge>
+            <saw:edge axis="column" dependent="true">					
+               <saw:edgeLayers>						
+                  <saw:edgeLayer type="column" columnID="c1" insertPageBreak="false" visibility="hidden" duplicateID="d1">							
+                     <saw:memberFormat>								
+                        <saw:displayFormat>									
+                           <saw:formatSpec visibility="hidden"/>
+								</saw:displayFormat>
+							</saw:memberFormat>
+						</saw:edgeLayer>
+                  <saw:edgeLayer type="measure" insertPageBreak="false"/></saw:edgeLayers>
+				</saw:edge></saw:edges>
+			
+         <saw:measuresList>				
+            <saw:measure columnID="c24">					
+               <saw:memberFormat>						
+                  <saw:displayFormat>							
+                     <saw:formatSpec fontColor="#FFFFFF" backgroundColor="#FFFFFF" fontSize="2" borderColor="#CCCCCC" borderPosition="16"/>
+						</saw:displayFormat>
+					</saw:memberFormat>
+					
+               <saw:dataBodyFormat>						
+                  <saw:displayFormat>							
+                     <saw:formatSpec fontColor="#FFFFFF" backgroundColor="#FFFFFF" fontSize="1" borderColor="#CCCCCC" borderPosition="16"/>
+						</saw:displayFormat>
+					</saw:dataBodyFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c1" aggRule="last">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19114">							
+                     <saw:text>Ntile</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+					
+               <saw:dataBodyFormat>						
+                  <saw:displayFormat>							
+                     <saw:formatSpec fontColor="#000000" backgroundColor="#f5f3d9" fontSize="9" hAlign="center" fontStyle="bold"/>
+						</saw:displayFormat>
+					</saw:dataBodyFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c2" aggRule="first">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19115">							
+                     <saw:text>Individual</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c2" duplicateID="d1" aggRule="countDistinct">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19116">							
+                     <saw:text>Count</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c7"/>
+				
+            <saw:measure columnID="c0">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19117">							
+                     <saw:text>Pct of Tot</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c9"/>
+				
+            <saw:measure columnID="c13">					
+               <saw:memberFormat>						
+                  <saw:caption captionID="kcap12387045_19118">							
+                     <saw:text>Pct of Tot</saw:text>
+						</saw:caption>
+						
+                  <saw:displayFormat/>
+					</saw:memberFormat>
+				</saw:measure>
+				
+            <saw:measure columnID="c26"/>
+			</saw:measuresList>			
+         <saw:sectionContent>				
+            <saw:displayFormat/>
+			</saw:sectionContent></saw:view>
+		
+      <saw:view xsi:type="saw:compoundView" name="compoundView!2">			
+		
+         
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!3"/><saw:cvCell viewName="htmlview!2">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec borderColor="#CCCCCC" borderPosition="4"/>
+						</saw:displayFormat>
+					</saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="staticchart!1">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec borderPosition="4" borderColor="#CCCCCC"/>
+						</saw:displayFormat>
+					</saw:cvCell><saw:cvCell viewName="staticchart!2">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec borderColor="#CCCCCC" borderPosition="4"/>
+						</saw:displayFormat>
+					</saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec borderColor="#CCCCCC" borderPosition="4"/>
+						</saw:displayFormat>
+					</saw:cvCell><saw:cvCell viewName="pivotTableView!2">						
+                  <saw:displayFormat>							
+                     <saw:formatSpec borderColor="#CCCCCC" borderPosition="4"/>
+						</saw:displayFormat>
+					</saw:cvCell></saw:cvRow></saw:cvTable><saw:viewCaption>
+            <saw:caption>
+               <saw:text>Summary Tables and Charts</saw:text></saw:caption></saw:viewCaption></saw:view>
+		
+      <saw:view xsi:type="saw:viewSelector" name="viewSelector!1">			
+         <saw:viewSelectorCaption position="left">				
+            <saw:caption captionID="kcap12387045_19077">					
+               <saw:text>Select which information to display :</saw:text>
+				</saw:caption>
+				
+            <saw:displayFormat>					
+               <saw:formatSpec borderPosition="none" fontColor="#0000FF" fontStyle="italic"/>
+				</saw:displayFormat>
+			</saw:viewSelectorCaption>
+			
+         <saw:viewList>				
+            
+				
+            
+			<saw:viewItem type="view" name="compoundView!2"/><saw:viewItem type="view" name="pivotTableView!3"/></saw:viewList>
+		</saw:view>
+	</saw:views>
+	
+   <saw:prompts/>
+</saw:report>

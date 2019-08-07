@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[Data%20Source:%20OE%20sample%20schema%20(Oracle%20Database%20-%20Requires%20'demo'%20JDBC%20connection%20to%20be%20configured).%20Structure:%20Hierarchical%20XML.%20Features:%20Parameters%20with%20cascading%20LOVs.]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Customers" type="complex">
+         <sql dataSourceRef="demo">
+            <![CDATA[SELECT    "CUSTOMERS_VIEW"."CUSTOMER_ID" as "CUSTOMER_ID",
+	 ("CUSTOMERS_VIEW"."CUST_LAST_NAME"||' '|| "CUSTOMERS_VIEW"."CUST_FIRST_NAME") as "CUSTOMER_NAME",
+	 "CUSTOMERS_VIEW"."CITY" as "CITY",
+	 "CUSTOMERS_VIEW"."STATE_PROVINCE" as "STATE_PROVINCE",
+	 "CUSTOMERS_VIEW"."COUNTRY_NAME" as "COUNTRY_NAME"
+ FROM    "CUSTOMERS_VIEW" "CUSTOMERS_VIEW" 
+ WHERE   "CUSTOMERS_VIEW"."STATE_PROVINCE" IN (:P_STATE)
+ AND     "CUSTOMERS_VIEW"."CITY" IN (:P_CITY)
+ AND     "CUSTOMERS_VIEW"."CUSTOMER_ID" IN (:P_CUSTID)
+order by "CUSTOMERS_VIEW"."CUST_LAST_NAME"]]>
+         </sql>
+      </dataSet>
+      <dataSet name="Orders" type="complex">
+         <sql dataSourceRef="demo">
+            <![CDATA[select	 "ORDERS_VIEW"."CUSTOMER_ID" as "CUSTOMER_ID",
+	 "ORDERS_VIEW"."ORDER_ID" as "ORDER_ID",
+	 "ORDERS_VIEW"."ORDER_MODE" as "ORDER_MODE",
+	 "ORDERS_VIEW"."ORDER_TOTAL" as "ORDER_TOTAL" 
+ from	"ORDERS_VIEW" "ORDERS_VIEW" 
+ where 	 "ORDERS_VIEW"."ORDER_ID" IN (:P_ORDID)]]>
+         </sql>
+      </dataSet>
+      <link name="link" parentGroup="G_1" parentColumn="CUSTOMER_ID" childQuery="Orders" childColumn="&quot;ORDERS_VIEW&quot;.&quot;CUSTOMER_ID&quot;" childColumnAlias="CUSTOMER_ID"/>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="Customers">
+               <element name="CUSTOMER_NAME" value="CUSTOMER_NAME" label="CUSTOMER_NAME" dataType="xsd:string" breakOrder="None" fieldOrder="2"/>
+               <element name="CUSTOMER_ID" value="CUSTOMER_ID" label="CUSTOMER_ID" dataType="xsd:integer" breakOrder="None" fieldOrder="1"/>
+               <element name="CITY" value="CITY" label="CITY" dataType="xsd:string" breakOrder="None" fieldOrder="3"/>
+               <element name="STATE_PROVINCE" value="STATE_PROVINCE" label="STATE_PROVINCE" dataType="xsd:string" breakOrder="None" fieldOrder="4"/>
+               <element name="COUNTRY_NAME" value="COUNTRY_NAME" label="COUNTRY_NAME" dataType="xsd:string" breakOrder="None" fieldOrder="5"/>
+               <group name="G_2" label="G_2" source="Orders">
+                  <element name="CUSTOMER_ID" value="CUSTOMER_ID" label="CUSTOMER_ID" dataType="xsd:integer" breakOrder="None" fieldOrder="1"/>
+                  <element name="ORDER_ID" value="ORDER_ID" label="ORDER_ID" dataType="xsd:integer" breakOrder="None" fieldOrder="2"/>
+                  <element name="ORDER_MODE" value="ORDER_MODE" label="ORDER_MODE" dataType="xsd:string" breakOrder="None" fieldOrder="3"/>
+                  <element name="ORDER_TOTAL" value="ORDER_TOTAL" label="ORDER_TOTAL" dataType="xsd:double" breakOrder="None" fieldOrder="4"/>
+               </group>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets>
+      <valueSet id="state-list">
+         <sql dataSourceRef="demo">
+            <![CDATA[select distinct oc.cust_state
+from 
+       (select cv.state_province as cust_state from customers_view cv, orders_view ov where cv.customer_id = ov.customer_id) oc
+order by oc.cust_state]]>
+         </sql>
+      </valueSet>
+      <valueSet id="city-list">
+         <sql dataSourceRef="demo">
+            <![CDATA[select distinct a.cust_city
+from (select cv.city as cust_city from customers_view cv, orders_view ov where cv.customer_id = ov.customer_id and cv.state_province in (:p_state)) a
+order by a.cust_city]]>
+         </sql>
+         <input id="p_state" value="${p_state}" dataType="xsd:string"/>
+      </valueSet>
+      <valueSet id="customer-list" cache="true">
+         <sql dataSourceRef="demo">
+            <![CDATA[Select distinct cnms.cstname, cnms.cstid
+From 
+     (Select  (cv.cust_last_name|| '  ' || cv.cust_first_name ) cstname, cv.customer_id cstid
+      from customers_view cv, orders_view ov where cv.customer_id = ov.customer_id and cv.state_province in (:p_state) and
+cv.city in (:p_city)) cnms 
+order by  cnms.cstname]]>
+         </sql>
+         <input id="p_state" value="${p_state}" dataType="xsd:string"/>
+         <input id="p_city" value="${p_city}" dataType="xsd:string"/>
+      </valueSet>
+      <valueSet id="orders-list" cache="true">
+         <sql dataSourceRef="demo">
+            <![CDATA[select	 "ORDERS_VIEW"."ORDER_ID" as "ORDER_ID"
+ from	"ORDERS_VIEW" "ORDERS_VIEW" 
+ where 	 "ORDERS_VIEW"."CUSTOMER_ID" IN (:P_CUSTID)]]>
+         </sql>
+         <input id="P_CUSTID" value="${P_CUSTID}" dataType="xsd:string"/>
+      </valueSet>
+   </valueSets>
+   <parameters>
+      <parameter name="P_STATE" defaultValue="*" dataType="xsd:string" rowPlacement="1">
+         <select label="Customer State(s): " valueSet="state-list" multiple="true" all="true" allValue="lov" refreshParameters="true"/>
+      </parameter>
+      <parameter name="P_CITY" defaultValue="*" dataType="xsd:string" rowPlacement="1">
+         <select label="Customer City(s): " valueSet="city-list" multiple="true" all="true" allValue="lov" refreshParameters="true"/>
+      </parameter>
+      <parameter name="P_CUSTID" defaultValue="*" dataType="xsd:string">
+         <select label="Customer Name(s): " valueSet="customer-list" multiple="true" all="true" allValue="lov" refreshParameters="true"/>
+      </parameter>
+      <parameter name="P_ORDID" defaultValue="*" dataType="xsd:string">
+         <select label="Order Number(s):" valueSet="orders-list" multiple="true" all="true" allValue="lov"/>
+      </parameter>
+   </parameters>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="Customers" left="400px" top="42px"/>
+         <layout name="Orders" left="36px" top="151px"/>
+         <layout name="DATA_DS" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks>
+         <groupLink name="link_1" parentGroup="G_1" childGroup="G_2"/>
+      </groupLinks>
+   </display>
+</dataModel>

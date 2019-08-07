@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c0d53c3cdaf3efbae">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C0  Customer Number&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ca90c1950d38a7358">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">cast(&quot;Customers&quot;.&quot;C0  Customer Number&quot; as varchar(5))||&#39;-&#39;||cast(&quot;Orders Dates&quot;.&quot;R11  Order Date-Time&quot; as varchar(20))</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Customers</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Key</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c836be5abfdaff4de">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cae7aba700d97f65d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P1  Product&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c67096f8a52ed540f">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;More Time Objects&quot;.&quot;T12 Day Of Month&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:logical" op="and">
+            <sawx:expr xsi:type="sawx:comparison" op="equal">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P1  Product&quot;</sawx:expr>
+               <sawx:expr xsi:type="xsd:string">7 Megapixel Digital Camera</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:columnExpression" formulaUse="code" displayUse="display">
+                  <saw:columnFormula formulaUse="display">
+                     <sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C4  Customer Segment&quot;</sawx:expr></saw:columnFormula></sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;More Time Objects&quot;.&quot;T11 Day Of Week&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="1">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="pivotTableView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title><saw:caption fmt="text"><saw:text>Report A : Primary Product Selected</saw:text></saw:caption><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cae7aba700d97f65d"/>
+                  <saw:edgeLayer type="column" columnID="c67096f8a52ed540f"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c0d53c3cdaf3efbae"/>
+                  <saw:edgeLayer type="column" columnID="c836be5abfdaff4de"/>
+                  <saw:edgeLayer type="column" columnID="ca90c1950d38a7358"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="true">
+         
+         <saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section">
+               <saw:edgeLayers><saw:edgeLayer type="column" columnID="cae7aba700d97f65d" uiTableName="Products"><saw:memberFormat><saw:displayFormat><saw:formatSpec fontStyle="bold" wrapText="true" fontColor="#CC3333"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="row" showColumnHeader="false"/><saw:edge axis="column" showColumnHeader="false">
+               <saw:edgeLayers><saw:edgeLayer type="measure" uiTableName="Measure Labels"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+            
+            <saw:measure columnID="c0d53c3cdaf3efbae" aggRule="countDistinct" uiTableName="Customers">
+               <saw:memberFormat>
+                  <saw:displayFormat>
+                     <saw:formatSpec wrapText="true"/></saw:displayFormat>
+                  <saw:caption>
+                     <saw:text># of Customers</saw:text></saw:caption></saw:memberFormat></saw:measure><saw:measure columnID="c836be5abfdaff4de" uiTableName="Base Facts"/></saw:measuresList></saw:view>
+      <saw:view xsi:type="saw:filtersView" name="filtersView!1"/></saw:views></saw:report>

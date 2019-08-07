@@ -1,0 +1,227 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<ROWSET>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Enterprise</Products.Brand>
+      <Markets.Region>CENTRAL REGION</Markets.Region>
+      <Markets.District>CHICAGO DISTRICT</Markets.District>
+      <Periods.Year>2000</Periods.Year>
+      <Measures.Dollars>1555548.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Enterprise</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>NEW YORK DISTRICT</Markets.District>
+      <Periods.Year>2000</Periods.Year>
+      <Measures.Dollars>1409228.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Enterprise</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>YOUNGSTOWN DISTRICT</Markets.District>
+      <Periods.Year>1998</Periods.Year>
+      <Measures.Dollars>7798224.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Enterprise</Products.Brand>
+      <Markets.Region>SOUTHERN REGION</Markets.Region>
+      <Markets.District>MEMPHIS DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>4523472.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Enterprise</Products.Brand>
+      <Markets.Region>WESTERN REGION</Markets.Region>
+      <Markets.District>LOS ANGELES DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>24907200.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Magicolor</Products.Brand>
+      <Markets.Region>CENTRAL REGION</Markets.Region>
+      <Markets.District>KANSAS CITY DISTRICT</Markets.District>
+      <Periods.Year>1998</Periods.Year>
+      <Measures.Dollars>2671080.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Magicolor</Products.Brand>
+      <Markets.Region>CENTRAL REGION</Markets.Region>
+      <Markets.District>MINNEAPOLIS DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>14812.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Magicolor</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>BOSTON DISTRICT</Markets.District>
+      <Periods.Year>1998</Periods.Year>
+      <Measures.Dollars>4375600.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Magicolor</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>NEW YORK DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>1501996.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Magicolor</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>PHILADELPHIA DISTRICT</Markets.District>
+      <Periods.Year>1998</Periods.Year>
+      <Measures.Dollars>2546132.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Magicolor</Products.Brand>
+      <Markets.Region>WESTERN REGION</Markets.Region>
+      <Markets.District>LOS ANGELES DISTRICT</Markets.District>
+      <Periods.Year>2000</Periods.Year>
+      <Measures.Dollars>4803484.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>McCloskey</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>BOSTON DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>34736304.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>McCloskey</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>PHILADELPHIA DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>42736568.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>McCloskey</Products.Brand>
+      <Markets.Region>SOUTHERN REGION</Markets.Region>
+      <Markets.District>ATLANTA DISTRICT</Markets.District>
+      <Periods.Year>1998</Periods.Year>
+      <Measures.Dollars>5231612.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>McCloskey</Products.Brand>
+      <Markets.Region>SOUTHERN REGION</Markets.Region>
+      <Markets.District>CHARLOTTE DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>4765876.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>McCloskey</Products.Brand>
+      <Markets.Region>SOUTHERN REGION</Markets.Region>
+      <Markets.District>JACKSONVILLE DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>22917704.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>CENTRAL REGION</Markets.Region>
+      <Markets.District>KANSAS CITY DISTRICT</Markets.District>
+      <Periods.Year>1998</Periods.Year>
+      <Measures.Dollars>1335622.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>CENTRAL REGION</Markets.Region>
+      <Markets.District>KANSAS CITY DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>1897554.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>CENTRAL REGION</Markets.Region>
+      <Markets.District>MINNEAPOLIS DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>2519266.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>BOSTON DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>8630590.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>NEW YORK DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>22189758.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>PHILADELPHIA DISTRICT</Markets.District>
+      <Periods.Year>1998</Periods.Year>
+      <Measures.Dollars>6924310.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>EASTERN REGION</Markets.Region>
+      <Markets.District>YOUNGSTOWN DISTRICT</Markets.District>
+      <Periods.Year>2000</Periods.Year>
+      <Measures.Dollars>292436.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>SOUTHERN REGION</Markets.Region>
+      <Markets.District>CHARLOTTE DISTRICT</Markets.District>
+      <Periods.Year>1998</Periods.Year>
+      <Measures.Dollars>293986.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>SOUTHERN REGION</Markets.Region>
+      <Markets.District>DALLAS DISTRICT</Markets.District>
+      <Periods.Year>1999</Periods.Year>
+      <Measures.Dollars>4064594.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>SOUTHERN REGION</Markets.Region>
+      <Markets.District>JACKSONVILLE DISTRICT</Markets.District>
+      <Periods.Year>1998</Periods.Year>
+      <Measures.Dollars>6262444.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>WESTERN REGION</Markets.Region>
+      <Markets.District>DENVER DISTRICT</Markets.District>
+      <Periods.Year>2000</Periods.Year>
+      <Measures.Dollars>163126.0</Measures.Dollars>
+   </ROW>
+   <ROW>
+      <Products.Type>COATINGS</Products.Type>
+      <Products.Brand>Valspar</Products.Brand>
+      <Markets.Region>WESTERN REGION</Markets.Region>
+      <Markets.District>LOS ANGELES DISTRICT</Markets.District>
+      <Periods.Year>2000</Periods.Year>
+      <Measures.Dollars>422764.0</Measures.Dollars>
+   </ROW>
+</ROWSET>

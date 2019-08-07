@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c874e60914eddae7d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R52  Country Name&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1beaefb7a82905d3">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Office Regions&quot;.&quot;D52  Country Name&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce4ee5865bf78722c">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;31  # of Orders  (Cnt Distinct)&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c5c10ab556d138137">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c8f629d00641c6f1a">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Office Geo Codes&quot;.&quot;D61  Iso Country code3&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c625e68bb9145b64a">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R61  Geo Country Code&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:sql">&quot;Office Geo Codes&quot;.&quot;D61  Iso Country code3&quot; &lt;&gt; &quot;Ship To Geo Codes&quot;.&quot;R61  Geo Country Code&quot;</sawx:expr><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Office Regions&quot;.&quot;D52  Country Name&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">United States</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:comparison" op="greater"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr><sawx:expr xsi:type="xsd:decimal">15000</sawx:expr></sawx:expr></sawx:expr></saw:filter><saw:columnOrder><saw:columnOrderRef columnID="c5c10ab556d138137" direction="descending"/><saw:columnOrderRef columnID="ce4ee5865bf78722c" direction="descending"/></saw:columnOrder></saw:criteria>
+   <saw:views currentView="4">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!1"><saw:displayFormat><saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell><saw:cvCell viewName="dvtchart!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1" colSpan="2"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c8f629d00641c6f1a"/><saw:edgeLayer type="column" columnID="c1beaefb7a82905d3"/><saw:edgeLayer type="column" columnID="c874e60914eddae7d"/>
+                  <saw:edgeLayer type="column" columnID="c625e68bb9145b64a"/>
+                  
+                  
+                  <saw:edgeLayer type="column" columnID="ce4ee5865bf78722c"/>
+                  <saw:edgeLayer type="column" columnID="c5c10ab556d138137"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script&gt;
+var tempStr= &#39;</saw:text></saw:caption></saw:prefix><saw:narrative rowCount="2000"><saw:caption fmt="html"><saw:text>[&quot;@{c8f629d00641c6f1a}&quot;,&quot;@{c1beaefb7a82905d3}&quot;,&quot;@{c625e68bb9145b64a}&quot;,&quot;@{c874e60914eddae7d}&quot;,@{ce4ee5865bf78722c},@{c5c10ab556d138137}]</saw:text></saw:caption></saw:narrative><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep><saw:postfix><saw:caption fmt="html"><saw:text>&#39;;
+var darray=eval(&#39;[&#39;+tempStr+&#39;]&#39;);
+rendermap(darray);
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;font color=steelblue size=2&gt;&lt;b&gt;Shipping Revenue Flow Between Countries:&lt;/b&gt;&lt;font&gt;
+&lt;DIV id=&quot;map&quot; style=&quot;width:900px;height:680px&quot;&gt;&lt;/DIV&gt;
+&lt;DIV id=&quot;msg&quot; align=&quot;right&quot;&gt;&lt;/DIV&gt;
+&lt;br/&gt;
+
+&lt;script src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var midpt = {AFG:{lt:33,lg:65},ALB:{lt:41,lg:20},DZA:{lt:28,lg:3},ASM:{lt:-14.3333,lg:-170},AND:{lt:42.5,lg:1.6},AGO:{lt:-12.5,lg:18.5},AIA:{lt:18.25,lg:-63.1667},ATA:{lt:-90,lg:0},ATG:{lt:17.05,lg:-61.8},ARG:{lt:-34,lg:-64},ARM:{lt:40,lg:45},ABW:{lt:12.5,lg:-69.9667},AUS:{lt:-27,lg:133},AUT:{lt:47.3333,lg:13.3333},AZE:{lt:40.5,lg:47.5},BHS:{lt:24.25,lg:-76},BHR:{lt:26,lg:50.55},BGD:{lt:24,lg:90},BRB:{lt:13.1667,lg:-59.5333},BLR:{lt:53,lg:28},BEL:{lt:50.8333,lg:4},BLZ:{lt:17.25,lg:-88.75},BEN:{lt:9.5,lg:2.25},BMU:{lt:32.3333,lg:-64.75},BTN:{lt:27.5,lg:90.5},BOL:{lt:-17,lg:-65},BIH:{lt:44,lg:18},BWA:{lt:-22,lg:24},BVT:{lt:-54.4333,lg:3.4},BRA:{lt:-10,lg:-55},IOT:{lt:-6,lg:71.5},BRN:{lt:4.5,lg:114.6667},BGR:{lt:43,lg:25},BFA:{lt:13,lg:-2},BDI:{lt:-3.5,lg:30},KHM:{lt:13,lg:105},CMR:{lt:6,lg:12},CAN:{lt:60,lg:-95},CPV:{lt:16,lg:-24},CYM:{lt:19.5,lg:-80.5},CAF:{lt:7,lg:21},TCD:{lt:15,lg:19},CHL:{lt:-30,lg:-71},CHN:{lt:35,lg:105},CXR:{lt:-10.5,lg:105.6667},CCK:{lt:-12.5,lg:96.8333},COL:{lt:4,lg:-72},COM:{lt:-12.1667,lg:44.25},COG:{lt:-1,lg:15},COD:{lt:0,lg:25},COK:{lt:-21.2333,lg:-159.7667},CRI:{lt:10,lg:-84},CIV:{lt:8,lg:-5},HRV:{lt:45.1667,lg:15.5},CUB:{lt:21.5,lg:-80},CYP:{lt:35,lg:33},CZE:{lt:49.75,lg:15.5},DNK:{lt:56,lg:10},DJI:{lt:11.5,lg:43},DMA:{lt:15.4167,lg:-61.3333},DOM:{lt:19,lg:-70.6667},ECU:{lt:-2,lg:-77.5},EGY:{lt:27,lg:30},SLV:{lt:13.8333,lg:-88.9167},GNQ:{lt:2,lg:10},ERI:{lt:15,lg:39},EST:{lt:59,lg:26},ETH:{lt:8,lg:38},FLK:{lt:-51.75,lg:-59},FRO:{lt:62,lg:-7},FJI:{lt:-18,lg:175},FIN:{lt:64,lg:26},FRA:{lt:46,lg:2},GUF:{lt:4,lg:-53},PYF:{lt:-15,lg:-140},ATF:{lt:-43,lg:67},GAB:{lt:-1,lg:11.75},GMB:{lt:13.4667,lg:-16.5667},GEO:{lt:42,lg:43.5},DEU:{lt:51,lg:9},GHA:{lt:8,lg:-2},GIB:{lt:36.1833,lg:-5.3667},GRC:{lt:39,lg:22},GRL:{lt:72,lg:-40},GRD:{lt:12.1167,lg:-61.6667},GLP:{lt:16.25,lg:-61.5833},GUM:{lt:13.4667,lg:144.7833},GTM:{lt:15.5,lg:-90.25},GGY:{lt:49.5,lg:-2.56},GIN:{lt:11,lg:-10},GNB:{lt:12,lg:-15},GUY:{lt:5,lg:-59},HTI:{lt:19,lg:-72.4167},HMD:{lt:-53.1,lg:72.5167},VAT:{lt:41.9,lg:12.45},HND:{lt:15,lg:-86.5},HKG:{lt:22.25,lg:114.1667},HUN:{lt:47,lg:20},ISL:{lt:65,lg:-18},IND:{lt:20,lg:77},IDN:{lt:-5,lg:120},IRN:{lt:32,lg:53},IRQ:{lt:33,lg:44},IRL:{lt:53,lg:-8},IMN:{lt:54.23,lg:-4.55},ISR:{lt:31.5,lg:34.75},ITA:{lt:42.8333,lg:12.8333},JAM:{lt:18.25,lg:-77.5},JPN:{lt:36,lg:138},JEY:{lt:49.21,lg:-2.13},JOR:{lt:31,lg:36},KAZ:{lt:48,lg:68},KEN:{lt:1,lg:38},KIR:{lt:1.4167,lg:173},PRK:{lt:40,lg:127},KOR:{lt:37,lg:127.5},KWT:{lt:29.3375,lg:47.6581},KGZ:{lt:41,lg:75},LAO:{lt:18,lg:105},LVA:{lt:57,lg:25},LBN:{lt:33.8333,lg:35.8333},LSO:{lt:-29.5,lg:28.5},LBR:{lt:6.5,lg:-9.5},LBY:{lt:25,lg:17},LIE:{lt:47.1667,lg:9.5333},LTU:{lt:56,lg:24},LUX:{lt:49.75,lg:6.1667},MAC:{lt:22.1667,lg:113.55},MKD:{lt:41.8333,lg:22},MDG:{lt:-20,lg:47},MWI:{lt:-13.5,lg:34},MYS:{lt:2.5,lg:112.5},MDV:{lt:3.25,lg:73},MLI:{lt:17,lg:-4},MLT:{lt:35.8333,lg:14.5833},MHL:{lt:9,lg:168},MTQ:{lt:14.6667,lg:-61},MRT:{lt:20,lg:-12},MUS:{lt:-20.2833,lg:57.55},MYT:{lt:-12.8333,lg:45.1667},MEX:{lt:23,lg:-102},FSM:{lt:6.9167,lg:158.25},MDA:{lt:47,lg:29},MCO:{lt:43.7333,lg:7.4},MNG:{lt:46,lg:105},MNE:{lt:42,lg:19},MSR:{lt:16.75,lg:-62.2},MAR:{lt:32,lg:-5},MOZ:{lt:-18.25,lg:35},MMR:{lt:22,lg:98},NAM:{lt:-22,lg:17},NRU:{lt:-0.5333,lg:166.9167},NPL:{lt:28,lg:84},NLD:{lt:52.5,lg:5.75},ANT:{lt:12.25,lg:-68.75},NCL:{lt:-21.5,lg:165.5},NZL:{lt:-41,lg:174},NIC:{lt:13,lg:-85},NER:{lt:16,lg:8},NGA:{lt:10,lg:8},NIU:{lt:-19.0333,lg:-169.8667},NFK:{lt:-29.0333,lg:167.95},MNP:{lt:15.2,lg:145.75},NOR:{lt:62,lg:10},OMN:{lt:21,lg:57},PAK:{lt:30,lg:70},PLW:{lt:7.5,lg:134.5},PSE:{lt:32,lg:35.25},PAN:{lt:9,lg:-80},PNG:{lt:-6,lg:147},PRY:{lt:-23,lg:-58},PER:{lt:-10,lg:-76},PHL:{lt:13,lg:122},PCN:{lt:-24.7,lg:-127.4},POL:{lt:52,lg:20},PRT:{lt:39.5,lg:-8},PRI:{lt:18.25,lg:-66.5},QAT:{lt:25.5,lg:51.25},REU:{lt:-21.1,lg:55.6},ROU:{lt:46,lg:25},RUS:{lt:60,lg:100},RWA:{lt:-2,lg:30},SHN:{lt:-15.9333,lg:-5.7},KNA:{lt:17.3333,lg:-62.75},LCA:{lt:13.8833,lg:-61.1333},SPM:{lt:46.8333,lg:-56.3333},VCT:{lt:13.25,lg:-61.2},WSM:{lt:-13.5833,lg:-172.3333},SMR:{lt:43.7667,lg:12.4167},STP:{lt:1,lg:7},SAU:{lt:25,lg:45},SEN:{lt:14,lg:-14},SRB:{lt:44,lg:21},SYC:{lt:-4.5833,lg:55.6667},SLE:{lt:8.5,lg:-11.5},SGP:{lt:1.3667,lg:103.8},SVK:{lt:48.6667,lg:19.5},SVN:{lt:46,lg:15},SLB:{lt:-8,lg:159},SOM:{lt:10,lg:49},ZAF:{lt:-29,lg:24},SGS:{lt:-54.5,lg:-37},ESP:{lt:40,lg:-4},LKA:{lt:7,lg:81},SDN:{lt:15,lg:30},SUR:{lt:4,lg:-56},SJM:{lt:78,lg:20},SWZ:{lt:-26.5,lg:31.5},SWE:{lt:62,lg:15},CHE:{lt:47,lg:8},SYR:{lt:35,lg:38},TWN:{lt:23.5,lg:121},TJK:{lt:39,lg:71},TZA:{lt:-6,lg:35},THA:{lt:15,lg:100},TLS:{lt:-8.55,lg:125.5167},TGO:{lt:8,lg:1.1667},TKL:{lt:-9,lg:-172},TON:{lt:-20,lg:-175},TTO:{lt:11,lg:-61},TUN:{lt:34,lg:9},TUR:{lt:39,lg:35},TKM:{lt:40,lg:60},TCA:{lt:21.75,lg:-71.5833},TUV:{lt:-8,lg:178},UGA:{lt:1,lg:32},UKR:{lt:49,lg:32},ARE:{lt:24,lg:54},GBR:{lt:54,lg:-2},USA:{lt:38,lg:-97},UMI:{lt:19.2833,lg:166.6},URY:{lt:-33,lg:-56},UZB:{lt:41,lg:64},VUT:{lt:-16,lg:167},VEN:{lt:8,lg:-66},VNM:{lt:16,lg:106},VGB:{lt:18.5,lg:-64.5},VIR:{lt:18.3333,lg:-64.8333},WLF:{lt:-13.3,lg:-176.2},ESH:{lt:24.5,lg:-13},YEM:{lt:15,lg:48},ZMB:{lt:-15,lg:30},ZWE:{lt:-20,lg:30}};  
+
+  var map = null;
+  var flowsLayer = null;
+  var countriesLayer = null;
+  var arrowLayer = null;
+
+  
+  function rendermap()
+  {        
+    var baseURL  = &quot;http://&quot;+document.location.host+&quot;/mapviewer&quot;;
+    var center = new OM.geometry.Point(20,50,8307); 
+    map = new OM.Map(document.getElementById(&#39;map&#39;),
+    {mapviewerURL: baseURL}) ;
+            
+    var tilelayer = new OM.layer.ElocationTileLayer(&quot;oracle.maps&quot;);
+    map.addLayer(tilelayer) ;  
+    
+    
+       countriesLayer = new OM.layer.VectorLayer(&quot;countries&quot;,
+    {
+      def:{
+        type:OM.layer.VectorLayer.TYPE_DATAPACK,
+        url:&quot;/mvdemo/datapacks/world_countries.json&quot;
+      }
+    }
+  );
+    
+    var colorStyle = new OM.style.Color({&quot;stroke&quot;:&quot;#cc9999&quot;,strokeThickness:1, strokeOpacity:0.8});
+    countriesLayer.setRenderingStyle(colorStyle);
+    countriesLayer.enableInfoWindow(false);
+    countriesLayer.enableFeatureSelection(true);
+    countriesLayer.setSelectStyle(new OM.style.Color({fill:&quot;#FFFF00&quot;, fillOpacity:0.8,stroke:&quot;#cc9999&quot;, strokeThickness:4, strokeOpacity:0.5}))
+    map.addLayer(countriesLayer);
+    
+	flowsLayer = new OM.layer.VectorLayer(&quot;connections&quot;,{def:{type:OM.layer.VectorLayer.TYPE_LOCAL}});
+	/*&quot;from_code&quot;,&quot;to_code&quot;,&quot;from_name&quot;,&quot;to_name&quot;,&quot;met1&quot;,&quot;met2&quot;*/
+	for (i=0;i&lt;darray.length; i++){
+		var fid = darray[i][2];
+		var oPoint = new OM.geometry.Point(midpt[darray[i][0]].lg,midpt[darray[i][0]].lt,8307);
+		var dPoint = new OM.geometry.Point(midpt[darray[i][2]].lg,midpt[darray[i][2]].lt,8307);
+		var line = OM.util.GeomUtil.createGreatCircle(oPoint,dPoint);
+                var lineFeature = new OM.Feature(fid, line, {attributes :{&quot;FROM&quot;:darray[i][1], &quot;TO&quot;:darray[i][3], &quot;QTY&quot;:darray[i][4], &quot;REVENUE&quot;:darray[i][5]}}); 
+		flowsLayer.addFeature(lineFeature);
+  	}
+	flowsLayer.addListener(OM.event.MouseEvent.MOUSE_OUT, hideCountry);
+    flowsLayer.addListener(OM.event.MouseEvent.MOUSE_OVER, showCountry);
+	flowsLayer.setBringToTopOnMouseOver(false);
+    flowsLayer.setToolTipCustomizer(getTooltip);
+    flowsLayer.enableInfoWindow(false);
+
+    //var hoverStyle = new OM.style.Line({fill:&quot;#FFFF00&quot;, strokeThickness:0.4, stroke:&quot;#cc9999&quot;});
+	//flowsLayer.enableFeatureHover(true);
+	//flowsLayer.setHoverStyle(hoverStyle);
+
+	setupFlowStyles(flowsLayer);
+    map.addLayer(flowsLayer);
+	
+     countriesLayer.addListener(OM.event.LayerEvent.FEATURES_LOADED,function(){
+			addCountryAttribute(flowsLayer, countriesLayer);
+        	setupFlowStyles(flowsLayer);
+	});
+
+    map.setMapCenter(center);
+    map.setMapZoomLevel(1) ;
+    map.init() ;
+  }
+  
+  function getTooltip(feature)
+  {
+    
+	return &quot;FROM: &quot;+ feature.getAttributes()[&quot;FROM&quot;]+ 
+	       &quot;\nTO: &quot;+feature.getAttributes()[&quot;TO&quot;] + 
+		   &quot;\nREVENUE: &quot; +feature.getAttributes()[&quot;REVENUE&quot;] + 
+		   &quot;\nQUANTITY: &quot;  +feature.getAttributes()[&quot;QTY&quot;];
+  }
+  
+  
+        function setupFlowStyles(layer)
+      {
+        var lines = [], colors=[];
+        var fillColors = 
+        // 10 color multihue sequential OrRd
+//[&#39;#FFF9F2&#39;,&#39;#FFF7EC&#39;,&#39;#FEE8C8&#39;,&#39;#FDD49E&#39;,&#39;#FDBB84&#39;,&#39;#FC8D59&#39;,&#39;#EF6548&#39;,&#39;#D7301F&#39;,&#39;#B30000&#39;,&#39;#7F0000&#39;];
+        // 10 color qualitative paired
+[&#39;#A6CEE3&#39;,&#39;#B2DF8A&#39;,&#39;#FB9A99&#39;,&#39;#FDBF6F&#39;,&#39;#CAB2D6&#39;,&#39;#FF7F00&#39;,&#39;#1F78B4&#39;,&#39;#6A3D9A&#39;,&#39;#E31A1C&#39;,&#39;#33A02C&#39;];
+
+        for(var i=0; i&lt;10; i++)
+        {
+  var endMarker01 = new OM.style.Marker({
+                    vectorDef: [{
+                            shape: {type: &quot;path&quot;, coords: [[0,0,20,10,0,20,10,10,0,0]]},
+                            style: {fill: fillColors[i],strokeThickness:0.4, stroke:&quot;#cc9999&quot;}
+                    }],
+                    width: 20,
+                    height:20,
+                    xOffset:10,
+                    yOffset:10
+          });		
+          var lineStyle = new OM.style.Line({fillWidth:2+i*1.1, fill:fillColors[i], strokeThickness:0.4, stroke:&quot;#cc9999&quot;,endMarker:endMarker01});
+          lines[i] = lineStyle;
+		  colors[i] = new OM.style.Color({fill:fillColors[i], fillOpacity:0.8, stroke:&quot;#cc9999&quot;, strokeThickness:2, strokeOpacity:0.5});
+        }
+        
+        var bucketStyle = new OM.style.BucketStyle(
+        {
+          styles: lines,
+          numClasses:10, 
+          classification:&#39;logarithmic&#39;,  //creates equal-ranged buckets
+          defaultStyle: lines[0]
+        });
+        
+        layer.setRenderingStyle(bucketStyle, [&quot;REVENUE&quot;]);
+
+        colors[10] = new OM.style.Color({fill:&quot;#acacac&quot;, fillOpacity:0.1, stroke:&quot;#cc9999&quot;, strokeThickness:1, strokeOpacity:0.5});
+
+		var colorBucketStyle = new OM.style.BucketStyle(
+        {
+          styles: colors,
+          numClasses:10, 
+          classification:&#39;logarithmic&#39;,  //creates equal-ranged buckets
+          defaultStyle: colors[10]
+        });
+		
+        countriesLayer.setRenderingStyle(colorBucketStyle,[&quot;REVENUE&quot;]);
+        
+      }
+  
+  function showCountry(evt)
+  {
+    var feature = evt.feature;
+    var selectedFeature;
+    var destFeature = countriesLayer.getFeature(feature.id);
+    if (destFeature)
+    {
+      selectedFeature=countriesLayer.selectFeature(destFeature);
+      // try bringing selected feature to the top
+      // did not work. Use layer.bringToTop instead 
+      // selectedFeature.bringToTop();
+	  document.getElementById(&quot;msg&quot;).innerHTML = &quot;&lt;font color=#B80606 size=2&gt;&lt;b&gt;From: &lt;/b&gt;&quot;+ feature.getAttributes()[&quot;FROM&quot;]+ 
+	       &quot; &lt;b&gt;To: &lt;/b&gt;&quot;+feature.getAttributes()[&quot;TO&quot;] + &quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Revenue: &lt;/b&gt;&quot; +feature.getAttributes()[&quot;REVENUE&quot;] + &quot; &lt;b&gt;Quantity: &lt;/b&gt;&quot;  +feature.getAttributes()[&quot;QTY&quot;];
+      //countriesLayer.bringForward();      
+    }
+  }
+
+  function hideCountry(evt)
+  {
+    var feature = evt.feature;
+    var selectedFeature;
+    var destFeature = countriesLayer.getFeature(feature.id);
+    if (destFeature)
+    {
+      selectedFeature = countriesLayer.deselectFeature(destFeature);
+      //countriesLayer.sendBackward();
+	  document.getElementById(&quot;msg&quot;).innerHTML = &quot;&amp;nbsp;&quot;;
+      
+    }
+  }
+
+    function addCountryAttribute(lineLayer, polyLayer)
+  {
+	var lineFeature, polyFeature ;
+	var allLineFeatures;
+	allLineFeatures = lineLayer.getAllFeatures();
+	for (var l=0; l&lt;allLineFeatures.length; l++) 
+	{
+		// for each line feature add the REVENUE attribute to the dest country feature
+		lineFeature = allLineFeatures[l];
+		polyFeature = polyLayer.getFeature(lineFeature.id);
+		if(polyFeature) 
+		{
+			polyFeature.attributes[&quot;REVENUE&quot;] = lineFeature.getAttributes()[&quot;REVENUE&quot;];
+		}
+	}
+  }
+&lt;/script&gt;       
+</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:dvtchart" name="dvtchart!1" autoPreview="true"><saw:display type="bar" subtype="horizontal" renderFormat="default" mode="online" animateOnDisplay="false"><saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display><saw:canvasFormat height="600" width="400"><saw:dataLabels display="always" label="default" position="below" transparentBackground="true" valueAs="default" abbreviation="default"><saw:textFormat fontColor="#999999" fontSize="9"/><saw:dataFormat xsi:type="saw:currency" currencyTag="int:$" commas="true" negativeType="minus" minDigits="0" maxDigits="0"/></saw:dataLabels><saw:title mode="custom"/></saw:canvasFormat><saw:selections><saw:categories><saw:category><saw:columnRef columnID="c874e60914eddae7d"/></saw:category></saw:categories><saw:measures showMeasureLabelsOnCategory="false"><saw:column measureType="x"><saw:columnRef columnID="c5c10ab556d138137"/></saw:column></saw:measures><saw:seriesGenerators><saw:measureLabels/></saw:seriesGenerators><saw:page/><saw:sections displayAsSlider="false"/></saw:selections><saw:legendFormat position="top" transparentFill="true"/><saw:axesFormats><saw:axisFormat axis="Y1" displayScaleLabels="true"><saw:title mode="custom"/><saw:labels rotate="0" rotateLabels="false" stagger="false" abbreviation="k" skipLabels="true"/><saw:textFormat/></saw:axisFormat><saw:axisFormat axis="X"><saw:title mode="custom"/></saw:axisFormat></saw:axesFormats></saw:view></saw:views></saw:report>

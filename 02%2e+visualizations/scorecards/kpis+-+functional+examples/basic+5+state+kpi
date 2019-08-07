@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawkpi:kpi xmlns:sawkpi="com.siebel.analytics.web/kpi/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawbsc="com.siebel.analytics.web/scorecard/v1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" subjectArea="&quot;A - Sample Sales&quot;" isTrendEnabled="true" ID="5b99c960-0ba3-1000-8567-0ae4eb530000" name="Basic 5 State KPI" xmlVersion="201106170"><sawkpi:kpiPeriod changeToleranceType="UNITS">
+    
+  <saw:column columnID="c6e1a55061bb60cd1" xsi:type="saw:regularColumn">
+      <saw:columnFormula>
+        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr>
+      </saw:columnFormula>
+    </saw:column></sawkpi:kpiPeriod><sawkpi:owner id="25AA0C80A36211E28F0FDF357267F21E"/><sawkpi:relatedDocuments/><sawkpi:dimensions><sawkpi:dimension dimensionID="Time.Time Hierarchy">
+      <saw:column columnID="ccb039c42d1171adb" xsi:type="saw:hierarchicalColumn" dimensionID="H0 Time" hierarchyID="Time Hierarchy" tableName="Time"/>
+    </sawkpi:dimension><sawkpi:dimension dimensionID="Products.Products Hierarchy">
+      <saw:column columnID="cced98ef8750e6a30" xsi:type="saw:hierarchicalColumn" dimensionID="H1 Products" hierarchyID="Products Hierarchy" tableName="Products"/>
+    </sawkpi:dimension><sawkpi:dimension dimensionID="Offices.Offices Hierarchy">
+      <saw:column columnID="c3a5eaa1feccaf596" xsi:type="saw:hierarchicalColumn" dimensionID="H3 Offices" hierarchyID="Offices Hierarchy" tableName="Offices"/>
+    </sawkpi:dimension><sawkpi:dimension dimensionID="Customers.Cust Segments Hier">
+      <saw:column columnID="c6614158fc4d60620" xsi:type="saw:hierarchicalColumn" dimensionID="H6 Customers" hierarchyID="Cust Segments Hier" tableName="Customers"/>
+    </sawkpi:dimension></sawkpi:dimensions><sawkpi:actualValue isWritable="false">
+    <saw:column columnID="cbfa23b377e9db0f2" xsi:type="saw:regularColumn">
+      <saw:columnFormula>
+        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+      </saw:columnFormula>
+      <saw:displayFormat>
+        <saw:formatSpec suppress="repeat" wrapText="true">
+          <saw:dataFormat xsi:type="saw:currency" currencyTag="int:wrhs" commas="true" negativeType="paren" minDigits="2" maxDigits="2"/>
+        </saw:formatSpec>
+      </saw:displayFormat>
+      <saw:tableHeading>
+        <saw:caption>
+          <saw:text/>
+        </saw:caption>
+      </saw:tableHeading>
+      <saw:columnHeading>
+        <saw:caption>
+          <saw:text/>
+        </saw:caption>
+      </saw:columnHeading>
+    </saw:column>
+  </sawkpi:actualValue><sawkpi:targetSets><sawkpi:targetSet isDefault="true" name="Default">
+      <sawkpi:targetValue isWritable="false">
+        <saw:column columnID="c948287aae65ef2a0" xsi:type="saw:regularColumn">
+          <saw:columnFormula>
+            <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;</sawx:expr>
+          </saw:columnFormula>
+          <saw:tableHeading>
+            <saw:caption>
+              <saw:text/>
+            </saw:caption>
+          </saw:tableHeading>
+          <saw:columnHeading>
+            <saw:caption>
+              <saw:text/>
+            </saw:caption>
+          </saw:columnHeading>
+        </saw:column>
+      </sawkpi:targetValue>
+      <sawkpi:thresholds goal="high" treatNoDataAs="NOSTATUS" scoreType="DISCRETE" thresholdType="CUSTOMEXPRESSION">
+        <sawkpi:thresholdRange ID="5b8779e0-0ba3-1000-8567-0ae4eb530000" value="100" assessmentStateKey="5 Stars"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1467">
+              <saw:text>5 Stars</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="greater">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; * 0.95</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="#336633" icon="fmap:meters/rate/sm/5_stars.png"/></sawkpi:thresholdRange>
+        <sawkpi:thresholdRange ID="5b8779e1-0ba3-1000-8567-0ae4eb530000" value="80" assessmentStateKey="4 Stars"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1468">
+              <saw:text>4 Stars</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="greater">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; * 0.90</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="#7EB679" icon="fmap:meters/rate/sm/4_stars.png"/></sawkpi:thresholdRange>
+        <sawkpi:thresholdRange ID="5b8be6b0-0ba3-1000-8567-0ae4eb530000" value="60" assessmentStateKey="3 Stars"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1469">
+              <saw:text>3 Stars</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="greater">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; * 0.85</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="#FFFF99" icon="fmap:meters/rate/sm/3_stars.png"/></sawkpi:thresholdRange>
+        <sawkpi:thresholdRange ID="5b8c82f0-0ba3-1000-8567-0ae4eb530000" value="40" assessmentStateKey="2 Stars"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1470">
+              <saw:text>2 Stars</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="greater">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; * 0.80</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="#FFFF00" icon="fmap:meters/rate/sm/2_stars.png"/></sawkpi:thresholdRange>
+        <sawkpi:thresholdRange ID="5b8d1f30-0ba3-1000-8567-0ae4eb530000" value="20" assessmentStateKey="1 Star"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1471">
+              <saw:text>1 Star</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="greater">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; * 0.75</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme icon="fmap:meters/rate/sm/1_stars.png" color="#FF9933"/></sawkpi:thresholdRange>
+        <sawkpi:thresholdRange ID="5b87a0f0-0ba3-1000-8567-0ae4eb530000" value="0" assessmentStateKey="0 Stars"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1472">
+              <saw:text>0 Stars</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="lessOrEqual">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;5- Target Revenue&quot; * 0.75</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="red" icon="fmap:meters/rate/sm/0_stars.png"/></sawkpi:thresholdRange>
+      </sawkpi:thresholds>
+    </sawkpi:targetSet></sawkpi:targetSets></sawkpi:kpi>

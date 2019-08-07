@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X - Airlines Delay&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="ced3154a6c2275969">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Origin&quot;.&quot;Orig Airport&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c9ac829f39858619d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;# of Flights&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf4369d454662bfc4">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Flight Facts&quot;.&quot;Distance (Miles)&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cbcea7f3ca354d69d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Date&quot;.&quot;Dep Year&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf496d40655ef0b78">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Delay&quot;.&quot;Arr Delay Class&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c5c3a4b5dc446a0b5">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Delay Facts&quot;.&quot;Delay Perf % (0=Ontime,  &gt;0=Late)&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:list" op="in">
+            <sawx:expr xsi:type="sawx:sqlExpression">&quot;Origin&quot;.&quot;Orig Airport&quot;</sawx:expr>
+            <sawx:expr xsi:type="xsd:string">SFO</sawx:expr>
+            <sawx:expr xsi:type="sawx:variable" op="server">NQ_SESSION.USER</sawx:expr></sawx:expr></saw:filter>
+      <saw:prefix>SET VARIABLE DISABLE_CACHE_HIT=1;</saw:prefix></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="dvtchart!1"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="pivotTableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="ced3154a6c2275969"/>
+                  <saw:edgeLayer type="column" columnID="c9ac829f39858619d"/>
+                  <saw:edgeLayer type="column" columnID="cbcea7f3ca354d69d"/>
+                  <saw:edgeLayer type="column" columnID="cf496d40655ef0b78"/>
+                  <saw:edgeLayer type="column" columnID="c5c3a4b5dc446a0b5"/>
+                  <saw:edgeLayer type="column" columnID="c73485b62fd2e5913"/>
+                  <saw:edgeLayer type="column" columnID="c94833a9d41b0aaba"/>
+                  <saw:edgeLayer type="column" columnID="cf4369d454662bfc4"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c9ac829f39858619d"/>
+            <saw:measure columnID="c5c3a4b5dc446a0b5"/>
+            <saw:measure columnID="c73485b62fd2e5913"/>
+            <saw:measure columnID="c94833a9d41b0aaba"/>
+            <saw:measure columnID="cf4369d454662bfc4"/></saw:measuresList></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="ced3154a6c2275969"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="row" showColumnHeader="false">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cbcea7f3ca354d69d"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cf496d40655ef0b78"/>
+                  <saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c9ac829f39858619d"/>
+            <saw:measure columnID="c5c3a4b5dc446a0b5"/>
+            <saw:measure columnID="cf4369d454662bfc4"/></saw:measuresList></saw:view>
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+         <saw:display type="lineBar" subtype="stacked" renderFormat="default" mode="online">
+            <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>
+         <saw:canvasFormat height="330" width="800">
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/></saw:canvasFormat>
+         <saw:selections>
+            <saw:categories>
+               <saw:category>
+                  <saw:columnRef columnID="cbcea7f3ca354d69d"/></saw:category></saw:categories>
+            <saw:measures showMeasureLabelsOnCategory="false">
+               <saw:column measureType="y1" riserType="bar">
+                  <saw:columnRef columnID="c9ac829f39858619d"/></saw:column>
+               <saw:column measureType="y2" riserType="line">
+                  <saw:columnRef columnID="c5c3a4b5dc446a0b5"/></saw:column></saw:measures>
+            <saw:seriesGenerators>
+               <saw:measureLabels/></saw:seriesGenerators></saw:selections>
+         <saw:legendFormat position="default" transparentFill="true"/></saw:view></saw:views></saw:report>

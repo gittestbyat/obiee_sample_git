@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="93vnppe9urg1a71d" links="er" overrideParentLinks="true"><sawd:dashboardColumn name="Column 3" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1223">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Commentary
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1221">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 4" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_1892">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 4" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1898">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; The url of the APEX listener with the right hostname/ip address and port number needs to be updated in the following places.
+[br/] 1) Edit UserScripts.js from the following location
+/installhome/user_projects/domains/bifoundation_domain/servers/AdminServer/tmp/_WL_user/analytics_11.
+1.1/silp1v/war/res/b_mozilla/actions
+Look for the following line
+targUrl =
+&quot;http://localhost:7780/apex/f?p=100:1:::::P1_COMMENT_ID
+:&quot; + argValue;
+Replace [b]localhost:7780[/b] with the hostname/ipaddress and the port to the appropriate
+values of the APEX listener on your setup.
+[br/][br/]
+2) In the webcat, go the following location
+/shared/06. Dashboard Design/Actions/Functional Examples/Commentary and Annotations. Edit the following actions with the correct APEX listener settings. 
+[br/][br/]
+- Edit the „Add a Comment‟ action. Click on Options.
+Go to Action Results tab. In the Dialog text, edit the APEX listener address to point to your server and port.
+[br/]
+- Edit the „Edit Comment‟ action. Update the URL to point to your APEX listener server and port.</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 0" duid="dco7cf6npd6rj1dj"><sawd:HTML fmt="html">[b]This Dashboard page will only function fully if you have installed Oracle Application Express.[/b]</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" break="column" duid="veu05jgbdpq1t7ao" frozen="false" canFreeze="false" layoutType="minimumSize"><sawd:dashboardSection name="Section 7" duid="c1136cptdkj1dud7" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="pned6od7mp20elm5"><sawd:HTML fmt="html">&lt;font size=2&gt;&lt;img border=&quot;0&quot; src=&quot;res/sk_blafp/common/refresh_ena.png&quot; alt=&quot;Refresh&quot;/&gt;&lt;a href=&quot;javascript:void(null)&quot; onclick=&quot;RefreshPage();return false;&quot;&gt; Refresh Results &lt;/font&gt;&lt;/a&gt;
+</sawd:HTML></sawd:htmlView><sawd:reportView name="Report 0" display="embed" showView="" links="" duid="t34bc9k8oasv437d"><saw:caption><saw:text>Revenue Reporting By LOB and Sales Rep</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Actions/Functional Examples/Commentary and Annotations/Revenue Reporting By LOB and Sales Rep"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec width="30%" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" duid="74jose215v0di32p" frozen="false" canFreeze="false" layoutType="minimumSize"><saw:displayFormat><saw:formatSpec width="50%" wrapText="true"/></saw:displayFormat><sawd:dashboardSection name="Section 1" duid="duq2qpgqma3r0q05" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 1" display="embed" showView="" links="" duid="l83u0kb2g6i10qej"><saw:caption><saw:text>Comments to aggregate</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Actions/Functional Examples/Commentary and Annotations/Comments to aggregate"/></sawd:reportView></sawd:dashboardSection><sawd:dashboardSection name="Section 2" collapsible="false" duid="5l3lgujmd1de696i" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:htmlView name="HTML 2" duid="6nt8ob4qqmeaafvf"><sawd:HTML fmt="html">&lt;iframe src =&quot;about:blank&quot; name=&quot;thatframe&quot; border=&quot;0&quot; FRAMEBORDER=0 width=&quot;100%&quot; height=&quot;400&quot;  &gt;
+  &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+&lt;/iframe&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

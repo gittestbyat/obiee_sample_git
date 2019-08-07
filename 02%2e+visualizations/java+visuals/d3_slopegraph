@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c940642975f8af2a6"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P4  Brand&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Dim</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Dim</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c317da8ceb6272522"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Met01</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="ce0e28d838ead945b"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Met02}{&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;}</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Met02</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c7f24358b9fb6f3cb"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;} - @{Met02}{&quot;Base Facts&quot;.&quot;5- Target Revenue&quot;}</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Diff </saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!1"/><saw:cvCell viewName="tableView!1" rowSpan="2"><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1"/><saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c940642975f8af2a6"/><saw:edgeLayer type="column" columnID="c317da8ceb6272522"/><saw:edgeLayer type="column" columnID="ce0e28d838ead945b"/><saw:edgeLayer type="column" columnID="c7f24358b9fb6f3cb"/></saw:edgeLayers><saw:columnOrder><saw:columnOrderRef columnID="c7f24358b9fb6f3cb" direction="descending"/></saw:columnOrder></saw:edge><saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/d3/d3.v3.js&quot;&gt;&lt;/script&gt;              
+&lt;style&gt;
+line.slope-line
+ {            stroke:green
+ }
+ text.slope-label
+ {
+ fill:blue;
+ font: 11px Arial;
+ }
+    &lt;/style&gt;
+ &lt;div id=&quot;slope_chart&quot;&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+mydata=[];</saw:text></saw:caption></saw:prefix><saw:narrative><saw:caption fmt="html"><saw:text>mydata.push([&quot;@{c940642975f8af2a6}&quot;,@{c317da8ceb6272522},@{ce0e28d838ead945b}]);</saw:text></saw:caption></saw:narrative><saw:postfix><saw:caption fmt="html"><saw:text>//var data = { &quot;data&quot;:[[1, 2, 3, 4, 5], [7, 2, 5, 1, 4]], &quot;label&quot;:[[&#39;apple&#39;, &#39;banana&#39;, &#39;carrot&#39;, &#39;bacon&#39;, &#39;egg&#39;]]}; 
+var data;
+var dimarr = new Array(),
+      met1arr = new Array(),
+      met2arr = new Array(),
+	  maxValue = 0
+      minValue = 0;  
+	  
+
+mydata.forEach(function(row, rowNo, rows) {
+
+      var dim = row[0];
+	  if(rowNo == 0 ) {
+		minValue = Math.min(Number(row[1]),Number(row[2]));
+		maxValue = Math.max(Number(row[1]),Number(row[2]));
+		}
+      if (dimarr.indexOf(dim) &lt; 0 ){
+        dimarr.push(dim);			
+      }
+var met1 = row[1];
+	  
+      if (met2arr.indexOf(met1) &lt; 0 ){
+        met2arr.push(met1);
+					
+      }
+      var met2 = row[2];
+      met1arr.push(met2);	  
+      
+	  if (Math.min(Number(row[1]),Number(row[2])) &lt; minValue){
+        minValue = Math.min(Number(row[1]),Number(row[2]));		
+      }
+      if (Math.max(Number(row[1]),Number(row[2])) &gt; maxValue){
+        maxValue = Math.max(Number(row[1]),Number(row[2]));		
+      }
+ });
+
+var metarr = new Array();
+metarr.push(met1arr);
+metarr.push(met2arr);
+
+ //alert (&#39;a&#39; + a[0]);
+ d3.custom = {};
+ var finaldata = {&quot;label&quot; : &quot;value&quot;};
+ 
+ 
+ finaldata[0] = dimarr;
+ finaldata[1] = metarr;
+ data = finaldata;
+
+d3.custom.slopegraph = function() {     
+var opts = {        
+width: 600,        
+height: 1000,        
+margin: {top: 20, right: 50, bottom: 50, left: 50},        
+labelMargin:   @{labelmargin}{100}};     
+var scalefactor =  @{scalefactor}{0.2};   
+
+function exports(selection) {        
+selection.each(function (dataset) {            
+var chartHeight = opts.height - opts.margin.top - opts.margin.bottom;            
+var chartWidth = opts.width - opts.margin.right - opts.margin.left;            
+
+ var parent = d3.select(this);            
+ var svg = parent.selectAll(&quot;svg.chart-root&quot;).data([0]);           
+ svg.enter().append(&quot;svg&quot;).attr(&quot;class&quot;, &quot;chart-root&quot;)                    
+ .append(&#39;g&#39;).attr(&#39;class&#39;, &#39;chart-group&#39;);            
+ svg.attr({width: opts.width, height: opts.height});           
+ svg.exit().remove();            
+ 
+ var chartSvg = svg.select(&#39;.chart-group&#39;);   
+ 
+ //var data = d3.transpose(dataset.data);    
+ var data = d3.transpose(dataset[1]);    
+
+ //var scale = d3.scale.linear().domain(d3.extent(d3.merge(data))).range([0, chartHeight]);             
+ var scale = d3.scale.linear().domain([minValue,maxValue]).range([0, chartHeight]);             
+
+ var lines = chartSvg.selectAll(&#39;line.slope-line&#39;)                
+ .data(data);            
+ lines.enter().append(&quot;line&quot;)            
+ lines.attr({                    
+ class: &#39;slope-line&#39;,                    
+ x1: opts.margin.left + opts.labelMargin,                    
+ x2: opts.width - opts.margin.right - opts.labelMargin,                    
+ y1: function(d) { return opts.margin.top + scale(d[0]) * scalefactor    ;},                     
+ y2: function(d) { return opts.margin.top + scale(d[1]) * scalefactor;  }});            
+ 
+ 
+ lines.exit().remove();             
+ 
+ 
+ var leftLabels = chartSvg.selectAll(&#39;text.left_labels&#39;)                
+ .data(data);            
+ leftLabels.enter().append(&#39;text&#39;);            
+ leftLabels.attr({                    
+ class: &#39;left_labels slope-label&#39;,                    
+ x: opts.margin.left + opts.labelMargin,                   
+ y: function(d,i) { return opts.margin.top + scale(d[0]) * scalefactor ; },                    
+ dy: &#39;.35em&#39;,                    
+ &#39;text-anchor&#39;: &#39;end&#39;})                
+ //.text(function(d,i) { return dataset.label[0][i]  + &#39; &#39; + String(dataset.data[1][i]);});            
+ .text(function(d,i) { return dataset[0][i]  + &#39; (&#39; + String(dataset[1][1][i]) + &#39;)&#39;;});            
+ leftLabels.exit().remove();  
+ 
+ 
+ var rightLabels = chartSvg.selectAll(&#39;text.right_labels&#39;)                
+ .data(data);            rightLabels.enter().append(&#39;text&#39;);            
+ rightLabels.attr({                    
+ class: &#39;right_labels slope-label&#39;,                    
+ x: opts.width - opts.margin.right - opts.labelMargin,                    
+ y: function(d,i) { return opts.margin.top + scale(d[1]) * scalefactor  ; },                    
+ dy: &#39;.35em&#39;})                
+ //.text(function(d,i) { return dataset.label[0][i] + &#39; &#39; + String(dataset.data[0][i])});            
+ .text(function(d,i) { return dataset[0][i] + &#39; (&#39; + String(dataset[1][0][i]) + &#39;)&#39;});            
+ rightLabels.exit().remove();        });    
+ }     
+exports.opts = opts;    
+ createAccessors(exports);     
+ return exports;
+}
+
+createAccessors =  function(visExport) {    
+	for (var n in visExport.opts) 
+		{        
+			if (!visExport.opts.hasOwnProperty(n)) 
+				continue;        
+				visExport[n] = (function(n) 
+				{            
+				return function(v) {                
+				return arguments.length ? (visExport.opts[n] = v, this) : visExport.opts[n];            }        
+				})(n);    }};
+
+var slopeGraph = d3.custom.slopegraph();
+
+ d3.select(&quot;#slope_chart&quot;)    
+ .datum(data)    
+ .call(slopeGraph); 
+ //slopeGraph.width(400);
+ d3.select(&quot;#slope_chart&quot;);     
+
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>The numbers in the bracket are Metric 1 and Metric 2</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

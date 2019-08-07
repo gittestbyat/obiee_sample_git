@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="nebogc5bu5a5bt05"><sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 7" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 4" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1866">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Creating Aggregate Tables
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 4" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1865">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+			<sawd:linkView name="Link 0" target="new" type="report" destination="/shared/10. Lifecycle and Admin/_portal/10.20 Usage Tracking/Physical SQLs" layout="captionRight" duid="ekkloo9cvqjqcoep"><sawd:linkCaption><saw:caption><saw:text>Physical SQLs</saw:text></saw:caption></sawd:linkCaption><sawd:image src="res/sk_blafp/answers/bpIcon.png"/></sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 6" duid="tc8jgu68jioop6o7" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:htmlView name="HTML 5" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1867">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; Persistent Aggregate Scripts allow to generate ans resolve aggregate source architecture for OBIEE, from any logical SQL client. In this example, you may first run the report below and check from the physical SQL generated that it access granular table Samp_Revenue_F.[br/] Then copy the create aggregate script from the top of dashboard into the logical SQL client, and run it. Should take about a minute to run. Once completes, refresh teh report, and check the physical SQL again, to confirm it&#39;s now accessing the newly created aggregate table. OBIEE has dynamically configured the necessary mappings, and is now able to navigate to the most efficient aggreate source for the report.[br/] Once completed, do not forget to run the &#39;delete aggregates;&#39; statement in the logical sql client, to be able to reproduce the testing.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="hno3th559r6b7rcl" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="um3nvdrpke4aqicc" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" hAlign="center"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="fuc4d513gjgst7ag"><saw:caption><saw:text>Report Hitting Granular Table</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Persistent Aggregates/Report Hitting Granular Table"/></sawd:reportView><sawd:reportView name="Report 1" display="embed" showView="" duid="lk4eg89f0c1u7245"><saw:caption><saw:text>Physical From Clause of Last Reports - Short</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/10. Lifecycle and Admin/Usage Tracking/Query Analysis/Physical From Clause of Last Reports - Short"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" duid="ha2i4ee8ibhg7e0u" frozen="false" canFreeze="false" layoutType="minimumSize"><sawd:dashboardSection name="Section 2" collapsible="false" duid="a94dfjgpc08d5b3a" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:reportView name="Report 3" display="embed" showView="" duid="bno9vpfqanvdf09e" links="" overrideParentLinks="true"><saw:caption><saw:text>PA script to create a custom aggregation on the fly</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Persistent Aggregates/PA script to create a custom aggregation on the fly"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" width="600"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

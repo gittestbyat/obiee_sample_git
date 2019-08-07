@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboard xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" style="" xmlVersion="200810300" links="erfd"><sawd:dashboardPageRef path="Agent Execution Time" type="catalog" hidden="false"/><sawd:dashboardPageRef path="Agent Run Status" type="catalog" hidden="false"/></sawd:dashboard>

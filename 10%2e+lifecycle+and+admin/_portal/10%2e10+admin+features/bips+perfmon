@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="iqv22b1m1puqpvm2" links="" overrideParentLinks="true"><sawd:dashboardColumn name="Column 1" duid="7f5a2fdg1cqs27p3" layoutType="bestFit"><sawd:dashboardSection name="Section 6" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 3" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2549">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+List of Open Sessions and details of logical requests&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 0" duid="0sf42o35ce4qkun1"><sawd:HTML fmt="html">&lt;font size=1&gt;&lt;img style=&quot;vertical-align:middle&quot; border=&quot;0&quot; src=&quot;res/sk_blafp/common/refresh_ena.png&quot; alt=&quot;Refresh&quot;/&gt;&lt;a href=&quot;javascript:void(null)&quot; onclick=&quot;RefreshPage();return false;&quot;&gt; Refresh Results &lt;/font&gt;&lt;/a&gt;
+</sawd:HTML></sawd:htmlView><sawd:linkView name="Link 2" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2548">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 1" duid="9iuk1igfct2fvchs" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:iframeView name="IFrame 1" width="100%" height="800" scrolling="yes" src="saw.dll?perfmon" duid="283hr9s2h8ij8shh"/></sawd:dashboardSection><saw:displayFormat><saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

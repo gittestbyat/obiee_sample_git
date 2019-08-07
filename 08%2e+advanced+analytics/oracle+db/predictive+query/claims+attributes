@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:view xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="saw:globalFilterPrompt" name="">
+  <saw:prompts scope="dashboard" subjectArea="&quot;X - Airlines Delay&quot;">
+    <saw:promptStep labelPosition="above" setWidthToAllPrompts="true">
+      <saw:individualPrompts>
+        <saw:prompt xsi:type="saw:variablePrompt" columnID="c0" required="false" subjectArea="&quot;X - Airlines Delay&quot;">
+          <saw:promptUIControl xsi:type="saw:listBox" maxChoices="-1">
+            <saw:customWidth width="120" using="default"/>
+          </saw:promptUIControl>
+          <saw:promptSource xsi:type="saw:choiceList" dataType="string" useCaptionOnly="true">
+            
+          <saw:promptChoices><saw:promptChoice><saw:caption><saw:text>CLAIM_LABOR_CODE</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>DAYS_IN_SERVICE</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>CLAIM_AGE</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>CLAIM_ODMTR_MILEAGE</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>CLAIM_TOT_GLOBL_AMT</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>DRIVE_TRAIN</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>NUM_CYLS</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>PROD_DATE</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>VEH_EXPOSURE</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>VEH_FLOAT</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>SALE_DATE</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>VEHICLE_BUILD_COUNTRY</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>VEHICLE_EXPOSURE</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>VEHICLE_FLOAT</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>VEHICLE_MAKE</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>VEHICLE_MANUFACTURER</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>VEHICLE_MODEL</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>VEHICLE_MODEL_YEAR</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>DEALER</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>DEALER_CITY</saw:text></saw:caption></saw:promptChoice><saw:promptChoice><saw:caption><saw:text>DEALER_STATEPROVINCE</saw:text></saw:caption></saw:promptChoice></saw:promptChoices></saw:promptSource>
+          <saw:setPromptVariables>
+            <saw:setPromptVariable location="value" type="presentationVariable" variableFormula="claimattr"/>
+          </saw:setPromptVariables>
+          <saw:promptOperator/>
+          <saw:constrainPrompt type="none"/>
+          <saw:label>
+            <saw:caption>
+              <saw:text>Prediction Attributes</saw:text>
+            </saw:caption>
+          </saw:label>
+          <saw:promptDefaultValues type="specificCustomValue" usingCodeValue="false">
+            
+          <saw:promptDefaultValue>DEALER_CITY</saw:promptDefaultValue><saw:promptDefaultValue>DAYS_IN_SERVICE</saw:promptDefaultValue><saw:promptDefaultValue>DRIVE_TRAIN</saw:promptDefaultValue><saw:promptDefaultValue>VEH_EXPOSURE</saw:promptDefaultValue><saw:promptDefaultValue>VEHICLE_MANUFACTURER</saw:promptDefaultValue><saw:promptDefaultValue>DEALER_STATEPROVINCE</saw:promptDefaultValue></saw:promptDefaultValues>
+        </saw:prompt>
+        <saw:prompt xsi:type="saw:columnFilterPrompt" columnID="c6" subjectArea="&quot;X - Airlines Delay&quot;" required="true">
+          <saw:formula>
+            <sawx:expr xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xsi:type="sawx:sqlExpression">1</sawx:expr>
+          </saw:formula>
+          <saw:promptOperator op="in"/>
+          <saw:promptUIControl xsi:type="saw:slider" orientation="horizontal" sliderSpinbox="show" labelLocation="logicalLeftOfControl" controlSize="smallSize" labelFormat="fulllabel" increamentSize="1" numValueLabels="5" numTicksBetweenLabels="3"/>
+          <saw:label>
+            <saw:caption>
+              <saw:text>Top N Ranks</saw:text>
+            </saw:caption>
+          </saw:label>
+          <saw:promptDefaultValues type="specificValue" usingCodeValue="false">
+            <saw:promptDefaultValue>10</saw:promptDefaultValue>
+          </saw:promptDefaultValues>
+          <saw:constrainPrompt type="none"/>
+          <saw:setPromptVariables>
+            <saw:setPromptVariable location="value" type="presentationVariable" variableFormula="ranklimit"/>
+          </saw:setPromptVariables>
+          <saw:promptSource xsi:type="saw:specificLimits" rangeLowLimit="1" rangeHighLimit="25"/>
+        </saw:prompt>
+      </saw:individualPrompts>
+      <saw:customWidth width="120" using="custompixels"/>
+      <saw:title/>
+    </saw:promptStep>
+  </saw:prompts>
+</saw:view>

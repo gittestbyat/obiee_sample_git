@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c76807cd32af66b6d">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R64  Latitude&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="6" maxDigits="6" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf0e28a32c711944a">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R65  Longitude&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="6" maxDigits="6" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c5a88b13abb8b2a7b">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R68  Geo Establisht&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c5202b88b2c4ee900">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>1- Revenue</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:logical" op="and">
+            <sawx:expr xsi:type="sawx:comparison" op="equal">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R55  City&quot;</sawx:expr>
+               <sawx:expr xsi:type="xsd:string">San Francisco</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:comparison" op="equal">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+               <sawx:expr xsi:type="xsd:string">2013</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R68  Geo Establisht&quot;</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="htmlview!1"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:narrativeView" name="narrativeView!1">
+         <saw:prefix>
+            <saw:caption fmt="html">
+               <saw:text>&lt;script&gt;
+var repData= &#39;</saw:text></saw:caption></saw:prefix>
+         <saw:narrative rowCount="5000">
+            <saw:caption fmt="html">
+               <saw:text>[@{c76807cd32af66b6d},@{cf0e28a32c711944a},&quot;@{c5a88b13abb8b2a7b}&quot;,@{c5202b88b2c4ee900}]</saw:text></saw:caption></saw:narrative>
+         <saw:rowSep>
+            <saw:caption fmt="html">
+               <saw:text>,</saw:text></saw:caption></saw:rowSep>
+         <saw:postfix>
+            <saw:caption fmt="html">
+               <saw:text>&#39;;
+rendermap(repData);
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+         <saw:staticText>
+            <saw:caption fmt="html">
+               <saw:text>&lt;script src=&quot;/mvdemo/jslib/v2/jquery/jquery-1.7.2.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mvdemo/gv.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mvdemo/common.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var baseURL= &quot;http://&quot;+document.location.host+&quot;/mapviewer&quot;;;
+OM.gv.setResourcePath(&quot;/mapviewer/jslib/v2/&quot;);  
+
+function addPoints(darray,layer){
+  /*lat,long,estb,metric*/
+  for (i=0;i&lt;darray.length; i++){
+  		var fid = i;
+  		var mpoint = new OM.geometry.Point(darray[i][1], darray[i][0],8307);
+  		var f_attr = {attributes :{&quot;NAME&quot;:darray[i][2], &quot;METRIC&quot;:darray[i][3]}};
+  		var feature = new OM.Feature(fid,mpoint,f_attr);  
+  		layer.addFeature(feature);
+  	}
+}
+
+function rendermap(repData){
+	var darray=eval(&#39;[&#39;+repData+&#39;]&#39;);
+      var map1 = new OM.Map(document.getElementById(&#39;map1&#39;), {mapviewerURL: baseURL}) ;
+  map1.addLayer(new OM.layer.ElocationTileLayer(&quot;background&quot;) ) ;  
+  
+  
+  layer1 = new OM.layer.VectorLayer(&quot;cluster&quot;,{
+      def:
+          {
+          type: OM.layer.VectorLayer.TYPE_LOCAL
+      }
+  });
+  
+
+   var variableMarker = new OM.style.VariableMarker(
+   {
+     classification:&quot;logarithmic&quot;,
+     marker:new OM.style.Marker({ vectorDef: [
+                   {
+                       shape: {type: &quot;circle&quot;, cx: 5, cy: 5, width: 10, height: 10},
+                       style: {fill: &quot;#ff00ff&quot;, stroke: &quot;#000000&quot;}
+                   }]}), 
+     startSize:20, 
+     increment:5,
+     numClasses:10
+   });
+   layer1.enableClustering(true,{clusterStyle:variableMarker,minPointCount:5, maxClusteringLevel:11, threshold:40});
+  
+  addPoints(darray,layer1);
+  //layer1.zoomToTheme();
+  var center = new OM.geometry.Point(-122.443352,37.700972,8307); 
+  map1.setMapCenter( center );
+  map1.setMapZoomLevel(7) ;
+  map1.addLayer(layer1);
+
+  var navigationPanelBar = new OM.control.NavigationPanelBar( {
+    style:1
+  } );
+  map1.addMapDecoration(navigationPanelBar);
+  map1.init();
+
+}
+&lt;/script&gt;
+
+
+&lt;DIV id=map1 style=&quot;width:720px;height:700px;padding:10px;border:1px solid grey;&quot; &gt;&lt;/DIV&gt;
+</saw:text></saw:caption></saw:staticText></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none"><saw:title>
+            <saw:caption fmt="text">
+               <saw:text>Ship-to Locations for Product Orders</saw:text></saw:caption></saw:title></saw:view>
+      <saw:view xsi:type="saw:filtersView" name="filtersView!1"/></saw:views></saw:report>

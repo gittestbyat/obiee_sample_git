@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="cd0e428e0b90efb59">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;31  # of Orders  (Cnt Distinct)&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_912">
+            <saw:text>Counts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_913">
+            <saw:text># of Orders</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c50f162cd35cf748d">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="suppress" wrapText="true"/>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_914">
+            <saw:text>Products</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_915">
+            <saw:text>Brand</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      <saw:dimensionSelection><saw:selectionStep stepID="1" type="startWith" category="member"><saw:stepMembers xsi:type="saw:staticMemberGroupDef"><saw:staticMemberGroup><saw:members xsi:type="saw:specialValueMembers"><saw:value specialValue="all"/></saw:members></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep><saw:selectionStep stepID="2" type="add" category="calcItem"><saw:calcItem function="Sum" hideDetails="false" id="calc_ad8a3b05031ab7b6"><saw:caption><saw:text>Calculated : Biz + Fun</saw:text></saw:caption><sawx:expr xsi:type="sawx:calcItemExpr"><sawx:expr xsi:type="sawx:calcFunction" op="sum"><sawx:expr xsi:type="saw:memberExpr"><saw:staticMemberGroup><saw:members xsi:type="saw:stringMembers"><saw:value>FunPod</saw:value><saw:value>BizTech</saw:value></saw:members></saw:staticMemberGroup></sawx:expr></sawx:expr></sawx:expr></saw:calcItem></saw:selectionStep></saw:dimensionSelection></saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c4fce22d25e231f35">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true" interaction="action">
+            
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_916">
+            <saw:text>Base Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_917">
+            <saw:text>Revenue</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c1c25753f5d683109">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R2  Order Type&quot;</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="suppress" wrapText="true" interaction="action">
+            
+          <saw:actionLinks showPopupMenuForOneLink="true"><saw:actionLink actionLinkID="c1c25753f5d683109_al7d99b44b992b0964">
+                
+                <saw:action><saw:actionName>Order Details</saw:actionName><saw:parameters allowExtraParameters="true"><saw:parameter name="__navigateToBIContent__" type="string" mandatory="true" removable="true" order="0" multiValues="false"><saw:prompt>__navigateToBIContent__</saw:prompt><saw:description/></saw:parameter></saw:parameters><saw:assignments><saw:assign name="__navigateToBIContent__" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign"><saw:value>/shared/02. Visualizations/Scorecards/Related Documents/Order Details</saw:value></saw:assign></saw:assignments><saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+                    <saw:functionName>__navigateToBIContent__</saw:functionName>
+                    <saw:scriptLanguage>JScript</saw:scriptLanguage>
+                    <saw:scriptPath/>
+                  </saw:implementation><saw:clientImplementation>
+                    <saw:customisation invokeConfirmation="false"/>
+                  </saw:clientImplementation></saw:action><saw:caption>
+                  <saw:text>Navigate to Orders Details</saw:text>
+                </saw:caption>
+              </saw:actionLink></saw:actionLinks></saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_918">
+            <saw:text>Orders</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+          <saw:caption fmt="text" captionID="kcap12832459_919">
+            <saw:text>Order Type</saw:text>
+          </saw:caption>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="pivotTableView!1"/>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="dvtchart!1"/>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title></saw:view>
+    <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="false">
+          <saw:displayGrandTotals>
+            <saw:displayGrandTotal id="t1" grandTotalPosition="after"><saw:memberFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:displayGrandTotal>
+          </saw:displayGrandTotals>
+          
+        <saw:edgeLayers><saw:edgeLayer type="column" columnID="c50f162cd35cf748d" insertPageBreak="false"/></saw:edgeLayers></saw:edge><saw:edge axis="column">
+          
+        <saw:edgeLayers><saw:edgeLayer type="column" columnID="c1c25753f5d683109" insertPageBreak="false"/><saw:edgeLayer type="measure" insertPageBreak="false"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+        
+        
+      <saw:measure columnID="cd0e428e0b90efb59"/><saw:measure columnID="c4fce22d25e231f35"/></saw:measuresList>
+      
+      
+    <saw:sectionContent><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:sectionContent></saw:view>
+    <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+      <saw:display type="pie" subtype="default" renderFormat="default" mode="online" xAxisLiveScrolling="false" yAxisLiveScrolling="false" clientEventEnabled="false" animateOnDisplay="false">
+        <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+      </saw:display>
+      <saw:canvasFormat height="330" width="640" showGradient="true">
+        <saw:dataLabels display="always" label="nameValue" position="below" transparentBackground="true" valueAs="default" abbreviation="default">
+          <saw:textFormat/>
+        </saw:dataLabels>
+        <saw:gridlines default="true">
+          <saw:horizontal>
+            <saw:major visible="false"/>
+            <saw:minor visible="false"/>
+          </saw:horizontal>
+          <saw:vertical>
+            <saw:major visible="false"/>
+            <saw:minor visible="false"/>
+          </saw:vertical>
+        </saw:gridlines>
+        <saw:title mode="auto">
+          <saw:caption/>
+        </saw:title>
+      </saw:canvasFormat>
+      <saw:selections>
+        <saw:seriesGenerators>
+          <saw:seriesGenerator>
+            <saw:columnRef columnID="c1c25753f5d683109"/>
+          </saw:seriesGenerator>
+        </saw:seriesGenerators>
+        <saw:measures showMeasureLabelsOnCategory="false">
+          <saw:column measureType="pie">
+            <saw:columnRef columnID="c4fce22d25e231f35"/>
+          </saw:column>
+        </saw:measures>
+        <saw:categories>
+          
+          <saw:category>
+            <saw:columnRef columnID="c50f162cd35cf748d"/>
+          </saw:category>
+        </saw:categories>
+        <saw:sections>
+          <saw:measureLabels/>
+        </saw:sections>
+      </saw:selections>
+      <saw:legendFormat position="default" transparentFill="true"/>
+      <saw:axesFormats>
+        <saw:axisFormat axis="Y1">
+          <saw:title mode="auto">
+            <saw:caption captionID="kcap12832459_920">
+              <saw:text/>
+            </saw:caption>
+          </saw:title>
+        </saw:axisFormat>
+        <saw:axisFormat axis="X">
+          <saw:title mode="auto">
+            <saw:caption captionID="kcap12832459_921">
+              <saw:text/>
+            </saw:caption>
+          </saw:title>
+        </saw:axisFormat>
+      </saw:axesFormats>
+    </saw:view>
+  </saw:views>
+</saw:report>

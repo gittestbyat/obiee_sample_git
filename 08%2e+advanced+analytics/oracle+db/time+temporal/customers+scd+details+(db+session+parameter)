@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" cacheControl="bypassCache">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1b2a8b33fe8d1370">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Point in Time Session&quot;.&quot;SC0  Customer Number&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               
+               <saw:formatSpec suppress="repeat" wrapText="true"/><saw:conditionalDisplayFormats>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c9aef94000187c8ed"/>
+                              <sawx:expr xsi:type="xsd:dateTime">2006-01-01T00:00:00</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec fontColor="#666666" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Point in Time Session</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Cust #</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c3cf8a7fdce5055bb">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Point in Time Session&quot;.&quot;SC1  Customer Name&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="none"/><saw:conditionalDisplayFormats>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c9aef94000187c8ed"/>
+                              <sawx:expr xsi:type="xsd:dateTime">2006-01-01T00:00:00</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec fontColor="#666666" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c9aef94000187c8ed">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Point in Time Session&quot;.&quot;SC5  Start_Time&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               
+               <saw:formatSpec suppress="suppress" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:custom" customFormat="dd MMM, yyyy"/></saw:formatSpec><saw:conditionalDisplayFormats>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c9aef94000187c8ed"/>
+                              <sawx:expr xsi:type="xsd:dateTime">2006-01-01T00:00:00</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec fontColor="#666666" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Point in Time Session</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>Start Time</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ca90fcd51f5ea777b">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Point in Time Session&quot;.&quot;SC7  Marital Status&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               
+               <saw:formatSpec suppress="suppress" wrapText="true"/><saw:conditionalDisplayFormats>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="ca90fcd51f5ea777b"/>
+                              <sawx:expr xsi:type="xsd:string">DIVORCED</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec imagePlacement="right" image="fmap:meters/status/flag/05_triangle.png" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="ca90fcd51f5ea777b"/>
+                              <sawx:expr xsi:type="xsd:string">WIDOW</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec imagePlacement="right" image="fmap:meters/status/flag/01_circle.png" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="ca90fcd51f5ea777b"/>
+                              <sawx:expr xsi:type="xsd:string">MARRIED</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec image="fmap:meters/status/flag/02_semicircle.png" wrapText="true" imagePlacement="right"/></saw:formatRule></saw:conditionalDisplayFormat>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="ca90fcd51f5ea777b"/>
+                              <sawx:expr xsi:type="xsd:string">SINGLE</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec imagePlacement="right" image="fmap:meters/status/flag/04_diamond.png" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c9aef94000187c8ed"/>
+                              <sawx:expr xsi:type="xsd:dateTime">2006-01-01T00:00:00</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec fontColor="#666666" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Point in Time Session</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Marital Status</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ccbe9dcaa7d46c673">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Point in Time Session&quot;.&quot;SC8  Income Level&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               
+               <saw:formatSpec suppress="suppress" wrapText="true"/><saw:conditionalDisplayFormats>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="equal">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c9aef94000187c8ed"/>
+                              <sawx:expr xsi:type="xsd:dateTime">2006-01-01T00:00:00</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec fontColor="#666666" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Point in Time Session</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Income Lvl</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:special" op="prompted">
+            <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P3  LOB&quot;</sawx:expr></sawx:expr></saw:filter><saw:prefix>SET VARIABLE DISABLE_CACHE_SEED=1, DISABLE_CACHE_HIT=1; </saw:prefix></saw:criteria>
+   <saw:views currentView="5">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!2">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="htmlview!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="none"><saw:title>
+            <saw:displayFormat>
+               <saw:formatSpec fontFamily="Arial" fontColor="#000000" wrapText="true" fontSize="16" fontStyle="regular"/></saw:displayFormat></saw:title><saw:displayFormat>
+            <saw:formatSpec borderColor="#666666" borderPosition="8" wrapText="true"/></saw:displayFormat></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c2c4c3ee282059e25"/>
+                  <saw:edgeLayer type="column" columnID="c8d79d4f852a4a67e"/>
+                  <saw:edgeLayer type="column" columnID="c6adbf78e96f4112c"/>
+                  <saw:edgeLayer type="column" columnID="cbf8cc3414d1838a4"/>
+                  <saw:edgeLayer type="column" columnID="c1b2a8b33fe8d1370"/>
+                  <saw:edgeLayer type="column" columnID="c3cf8a7fdce5055bb"/>
+                  <saw:edgeLayer columnID="c3cf8a7fdce5055bb_d2" type="column"/>
+                  <saw:edgeLayer columnID="c3cf8a7fdce5055bb_d1" type="column"/>
+                  <saw:edgeLayer type="column" columnID="ca90fcd51f5ea777b"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="gt_row" grandTotalPosition="after"/></saw:displayGrandTotals>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c6adbf78e96f4112c"/>
+                  <saw:edgeLayer type="column" columnID="c3cf8a7fdce5055bb"/>
+                  <saw:edgeLayer columnID="c3cf8a7fdce5055bb_d2" type="column"/>
+                  <saw:edgeLayer columnID="c3cf8a7fdce5055bb_d1" type="column"/>
+                  <saw:edgeLayer type="column" columnID="ca90fcd51f5ea777b"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="gt_column" grandTotalPosition="none"/></saw:displayGrandTotals></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c1b2a8b33fe8d1370" aggRule="count"/></saw:measuresList></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!2" autoPreview="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c3cf8a7fdce5055bb"/>
+                  <saw:edgeLayer type="column" columnID="c1b2a8b33fe8d1370"/>
+                  <saw:edgeLayer type="column" columnID="c9aef94000187c8ed"/>
+                  <saw:edgeLayer type="column" columnID="ca90fcd51f5ea777b"/>
+                  <saw:edgeLayer type="column" columnID="ccbe9dcaa7d46c673"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges>
+         <saw:greenBarFormat greenBar="allLayers" enabled="true"/></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+         <saw:staticText>
+            <saw:caption fmt="html">
+               <saw:text>&lt;div id=&quot;_TimeTemporalReport1_&quot;&gt; &lt;/div&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cbd51ab1a46a76870">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P4  Brand&quot;}</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Dimension</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Level 1</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c14194b2134e2e0e2">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim02}{&quot;Products&quot;.&quot;P3  LOB&quot;}</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Dimension</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Level 2</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c302b106f4f44f9e9">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim03}{&quot;Offices&quot;.&quot;D1  Office&quot;}</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Dimension</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Level 3</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c2a6c5927333ba199">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Met01}{&quot;Base Facts&quot;.&quot;1- Revenue&quot;}</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:number" minDigits="0" maxDigits="0" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Base Facts</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Metric</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:logical" op="and">
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim01}{&quot;Products&quot;.&quot;P4  Brand&quot;}</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim02}{&quot;Products&quot;.&quot;P3  LOB&quot;}</sawx:expr></sawx:expr>
+            <sawx:expr xsi:type="sawx:special" op="prompted">
+               <sawx:expr xsi:type="sawx:sqlExpression">@{Dim03}{&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;}</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="3">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="narrativeView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cbd51ab1a46a76870"/>
+                  <saw:edgeLayer type="column" columnID="c14194b2134e2e0e2"/>
+                  <saw:edgeLayer type="column" columnID="c302b106f4f44f9e9"/>
+                  <saw:edgeLayer type="column" columnID="c2a6c5927333ba199"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:narrativeView" name="narrativeView!1">
+         <saw:narrative rowCount="500">
+            <saw:caption fmt="html">
+               <saw:text>mydata.push([&quot;@{cbd51ab1a46a76870}&quot;,&quot;@{c14194b2134e2e0e2}&quot;,&quot;@{c302b106f4f44f9e9}&quot;,@{c2a6c5927333ba199}]);
+</saw:text></saw:caption></saw:narrative>
+         <saw:prefix>
+            <saw:caption fmt="html">
+               <saw:text>    &lt;script type=&quot;text/javascript&quot; src=&quot;/analyticsRes/d3/d3.v3.js&quot;&gt;&lt;/script&gt;
+
+  &lt;style type=&quot;text/css&quot;&gt;
+      circle.node {
+        cursor: pointer;
+        stroke: #000;
+        stroke-width: .1px;
+      }
+
+      circle.node.directory {
+        stroke: #9ecae1;
+        stroke-width: 1px;
+      }
+
+      circle.node.collapsed {
+        stroke: #555;
+      }
+
+      .nodetext {
+        fill: #252929;
+        font-weight: bold;
+        text-shadow: 0 0 0.2em white;
+      }
+
+      line.link {
+        fill: none;
+        stroke: #9ecae1;
+        stroke-width: 1.5px;
+      }
+    &lt;/style&gt;
+
+    &lt;div id=&quot;flower&quot;&gt;   &lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+
+
+
+mydata=[];
+</saw:text></saw:caption></saw:prefix>
+         <saw:postfix>
+            <saw:caption fmt="html">
+               <saw:text>jsonStr=&quot;&quot;;
+v0=&quot;&quot;; v1=&quot;&quot;; 
+t=&quot;&quot;;
+for(i in mydata){
+	lMisMatch=0;
+	
+	if(v0!=mydata[i][0])	{lMisMatch=1;	endMarker=&quot;]}]}&quot;;}
+    if(v1!=mydata[i][1] &amp;&amp; !lMisMatch)	{lMisMatch=2;	endMarker=&quot;]}&quot;;}
+    
+	
+    if(i!=0 &amp;&amp; (lMisMatch&gt;0))	jsonStr+= endMarker;
+	if(i!=0)	jsonStr+=&quot;,&quot;;
+	
+    if(v0!=mydata[i][0]){   jsonStr+=&quot;\n{\&quot;name\&quot;: \&quot;&quot;+mydata[i][0]+&quot;\&quot;,\&quot;children\&quot;: [&quot;;}
+    if(v1!=mydata[i][1]){   jsonStr+=&quot;\n\t{\&quot;name\&quot;: \&quot;&quot;+mydata[i][1]+&quot;\&quot;,\&quot;children\&quot;: [&quot;;}
+    
+    jsonStr+=&quot;\n\t\t\t{\&quot;name\&quot;: \&quot;&quot; +mydata[i][2]+ &quot;\&quot;, \&quot;size\&quot;:&quot; +  mydata[i][3] + &quot;}&quot;;
+
+    if(v0!=mydata[i][0]){ v0=mydata[i][0];}
+    if(v1!=mydata[i][1]){ v1=mydata[i][1];}
+    
+
+    if (i==(mydata.length-1)) { jsonStr+=&quot;]}]}&quot; };
+}
+jsonStr = &quot;{\&quot;name\&quot;: \&quot;All\&quot;, \&quot;children\&quot;: [&quot; + jsonStr + &quot;]}&quot;;
+
+
+var myDataObject = eval(&#39;(&#39; + jsonStr + &#39;)&#39;);
+
+
+
+var CodeFlower = function(selector, w, h) {
+
+  this.w = w;
+  this.h = h;
+
+  d3.select(selector).selectAll(&quot;svg&quot;).remove();
+
+  this.svg = d3.select(selector).append(&quot;svg:svg&quot;)
+    .attr(&#39;width&#39;, w)
+    .attr(&#39;height&#39;, h);
+
+
+  /*this.svg.append(&quot;svg:rect&quot;)
+    .style(&quot;stroke&quot;, &quot;#999&quot;)
+    .style(&quot;fill&quot;, &quot;#fff&quot;)
+    .attr(&#39;width&#39;, w)
+    .attr(&#39;height&#39;, h);
+	*/
+
+  this.force = d3.layout.force()
+    .on(&quot;tick&quot;, this.tick.bind(this))
+    .charge(function(d) { return d._children ? -d.size / 100 : -40; })
+    .linkDistance(function(d) { 		
+		return d.target._children ? 80 : 25; }
+		)   
+    .size([h, w]);
+	
+
+	//alert (&#39;link distance &#39; + this.force.linkDistance);
+};
+
+CodeFlower.prototype.update = function(json) {
+
+  if (json) this.json = json;
+
+  //this.json.fixed = true;
+  this.json.x = this.w / 2;
+  this.json.y = this.h / 2;
+
+  var nodes = this.flatten(this.json);
+  
+  // Find the range and values of metric
+    
+    var metrics = new Array(); 
+    var maxValue ,
+        minValue ;  
+  	  
+    nodes.forEach(function(row, rowNo, rows) {
+    if (typeof(row.children) == &quot;undefined&quot;){
+    	if(rowNo == 0 ) {
+  		minValue = Number(row.size);
+  		maxValue = Number(row.size);
+  	}
+    var metric = row.size;
+        metrics.push(Number(metric));
+  	  
+        if (metric &lt; minValue){
+          minValue = Number(metric);		
+        }
+        if (metric &gt; maxValue){	  
+          maxValue = Number(metric);		
+        }    
+      }
+  	}
+  	);
+  var scale = d3.scale.quantile()
+    .domain([0,maxValue])
+  .range(d3.range((metrics.length) - 1));
+  
+  
+  var links = d3.layout.tree().links(nodes);
+  var total = nodes.length || 1;
+
+  // remove existing text (will readd it afterwards to be sure it&#39;s on top)
+  this.svg.selectAll(&quot;text&quot;).remove();
+
+  // Restart the force layout
+    this.force
+    .gravity(Math.atan(total / 50) / Math.PI * @{gravity}{0.03})	
+    .nodes(nodes)
+    .links(links)
+    .start();
+
+
+
+  // Update the links
+  this.link = this.svg.selectAll(&quot;line.link&quot;)
+    .data(links, function(d) { return d.target.id; });
+//alert (&#39;after updating links &#39;);
+  // Enter any new links
+  this.link.enter().insert(&quot;svg:line&quot;, &quot;.node&quot;)
+    .attr(&quot;class&quot;, &quot;link&quot;)
+    .attr(&quot;x1&quot;, function(d) { return d.source.x; })
+    .attr(&quot;y1&quot;, function(d) { return d.source.y; })
+    .attr(&quot;x2&quot;, function(d) { return d.target.x; })
+    .attr(&quot;y2&quot;, function(d) { return d.target.y; })
+	;
+
+  // Exit any old links.
+  this.link.exit().remove();
+
+  // Update the nodes
+  
+  this.node = this.svg.selectAll(&quot;circle.node&quot;)
+    .data(nodes, function(d) { return d.id; })
+    .classed(&quot;collapsed&quot;, function(d) { return d._children ? 1 : 0; });
+//alert (&#39;after node update&#39;);
+  this.node.transition()
+    //.attr(&quot;r&quot;, function(d) { return d.children ? 3.5 : Math.pow(d.size, 0.2) || 1; });
+    .attr(&quot;r&quot;, function(d) { return d.children ? 3.5 : scale(d.size) *@{circlesize}{0.2}|| 1; });
+
+	
+
+  // Enter any new nodes
+  ///NOTE .. changing the denominator in &quot;r&quot; changes size of circle 
+  this.node.enter().append(&#39;svg:circle&#39;)
+    .attr(&quot;class&quot;, &quot;node&quot;)
+    .classed(&#39;directory&#39;, function(d) { return (d._children || d.children) ? 1 : 0; })
+    //.attr(&quot;r&quot;, function(d) { return d.children ? 3.5 : Math.pow(d.size, 0.2) || 1; })    
+    .attr(&quot;r&quot;, function(d) { return d.children ? 3.5 : scale(d.size) * @{circlesize}{0.2} || 1; })    
+    .style(&quot;fill&quot;, function color(d) {
+      return &quot;hsl(&quot; + parseInt(360 / total * d.id, 10) + &quot;,90%,70%)&quot;;
+    })
+    .call(this.force.drag)
+  //  .on(&quot;click&quot;, this.click.bind(this))
+    .on(&quot;mouseover&quot;, this.mouseover.bind(this))
+    .on(&quot;mouseout&quot;, this.mouseout.bind(this));
+//alert (&#39;after append nodes&#39;);
+  // Exit any old nodes
+  this.node.exit().remove();
+
+
+  this.text = this.svg.append(&#39;svg:text&#39;)
+    .attr(&#39;class&#39;, &#39;nodetext&#39;)
+    .attr(&#39;dy&#39;, 0)
+    .attr(&#39;dx&#39;, 0)
+    .attr(&#39;text-anchor&#39;, &#39;middle&#39;);
+
+  return this;
+};
+
+CodeFlower.prototype.flatten = function(root) {
+  var nodes = [], i = 0;
+
+  function recurse(node) {
+    if (node.children) {
+      node.size = node.children.reduce(function(p, v) {
+        return p + recurse(v);
+      }, 0);
+    }
+    if (!node.id) node.id = ++i;
+
+    nodes.push(node);
+    return node.size;
+  }
+
+  root.size = recurse(root);
+
+  return nodes;
+};
+
+CodeFlower.prototype.click = function(d) {
+//alert (&#39;inside click &#39;);
+  // Toggle children on click.
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+  clickFlag = 1;
+  this.update(); 
+  ///////////////////////////End of update code
+};
+
+
+
+CodeFlower.prototype.mouseover = function(d) {
+  //this.text.attr(&#39;transform&#39;, &#39;translate(&#39; + d.x + &#39;,&#39; + (d.y - 10 - (d.children ? 3.5 : Math.sqrt(d.size) / 2)) + &#39;)&#39;)
+  this.text.attr(&#39;transform&#39;, &#39;translate(&#39; + d.x + &#39;,&#39; + (d.y - 40) + &#39;)&#39;)
+    .text(d.name + &quot;: &quot; + d.size )
+    .style(&#39;display&#39;, null);
+}; 
+
+CodeFlower.prototype.mouseout = function(d) {
+  this.text.style(&#39;display&#39;, &#39;none&#39;);
+};
+
+CodeFlower.prototype.tick = function() {
+  var h = this.h;
+  var w = this.w;
+  this.link.attr(&quot;x1&quot;, function(d) { return d.source.x; })
+    .attr(&quot;y1&quot;, function(d) { return d.source.y; })
+    .attr(&quot;x2&quot;, function(d) { return d.target.x; })
+    .attr(&quot;y2&quot;, function(d) { return d.target.y; });
+
+  this.node.attr(&quot;transform&quot;, function(d) {
+    return &quot;translate(&quot; + Math.max(5, Math.min(w - 5, d.x)) + &quot;,&quot; + Math.max(5, Math.min(h - 5, d.y)) + &quot;)&quot;;
+  });
+};
+
+CodeFlower.prototype.cleanup = function() {
+  this.update([]);
+  this.force.stop();
+};
+
+//codeflower javascript ends
+
+var currentCodeFlower;
+      var createCodeFlower = function(json) {
+	  ////alert (&#39;json &#39; + JSON.stringify(json));
+	  
+        // update the jsonData textarea
+        //document.getElementById(&#39;jsonData&#39;).value = JSON.stringify(json);
+        // remove previous flower to save memory
+        if (currentCodeFlower) currentCodeFlower.cleanup();
+        // adapt layout size to the total number of elements
+        //var total = countElements(json);
+		var total  = 199
+		
+        w = parseInt(Math.sqrt(total) * 50, 10);
+        h = parseInt(Math.sqrt(total) * 50, 10);
+		
+        // create a new CodeFlower
+        currentCodeFlower = new CodeFlower(&quot;#flower&quot;,@{Width}{600},@{Height}{600}).update(json);
+		
+		
+		
+      };
+var bijson = myDataObject;
+//alert (JSON.stringify(bijson));
+createCodeFlower(bijson);
+
+
+&lt;/script&gt;
+  </saw:text></saw:caption></saw:postfix>
+         <saw:displayFormat>
+            <saw:formatSpec/></saw:displayFormat></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!2" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cbd51ab1a46a76870">
+                     <saw:levels>
+                        <saw:level>
+                           <saw:displaySubTotal id="st_cbd51ab1a46a76870" subTotalPosition="after"/></saw:level></saw:levels></saw:edgeLayer>
+                  <saw:edgeLayer type="column" columnID="c14194b2134e2e0e2">
+                     <saw:levels>
+                        <saw:level>
+                           <saw:displaySubTotal id="st_c14194b2134e2e0e2" subTotalPosition="after"/></saw:level></saw:levels></saw:edgeLayer>
+                  <saw:edgeLayer type="column" columnID="c302b106f4f44f9e9"/>
+                  <saw:edgeLayer type="column" columnID="c2a6c5927333ba199"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!3" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cbd51ab1a46a76870"/>
+                  <saw:edgeLayer type="column" columnID="c14194b2134e2e0e2"/>
+                  <saw:edgeLayer type="column" columnID="c302b106f4f44f9e9"/>
+                  <saw:edgeLayer type="column" columnID="c2a6c5927333ba199"/></saw:edgeLayers>
+               <saw:columnOrder>
+                  <saw:columnOrderRef columnID="c2a6c5927333ba199" direction="descending"/></saw:columnOrder></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="gt_page" grandTotalPosition="none"/></saw:displayGrandTotals></saw:edge>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="gt_row" grandTotalPosition="none"/></saw:displayGrandTotals>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="cbd51ab1a46a76870"/>
+                  <saw:edgeLayer type="column" columnID="c14194b2134e2e0e2">
+                     <saw:levels>
+                        <saw:level>
+                           <saw:displaySubTotal id="st_c14194b2134e2e0e2" subTotalPosition="none"/></saw:level></saw:levels></saw:edgeLayer>
+                  <saw:edgeLayer type="column" columnID="c302b106f4f44f9e9"/></saw:edgeLayers>
+               <saw:columnOrder>
+                  <saw:columnOrderRef columnID="cbd51ab1a46a76870" direction="descending">
+                     <saw:QDR>
+                        <saw:staticMemberGroup specialDimension="measure">
+                           <saw:members xsi:type="saw:specialValueMembers">
+                              <saw:value>c2a6c5927333ba199</saw:value></saw:members></saw:staticMemberGroup></saw:QDR></saw:columnOrderRef>
+                  <saw:columnOrderRef columnID="c14194b2134e2e0e2" direction="descending">
+                     <saw:QDR>
+                        <saw:staticMemberGroup specialDimension="measure">
+                           <saw:members xsi:type="saw:specialValueMembers">
+                              <saw:value>c2a6c5927333ba199</saw:value></saw:members></saw:staticMemberGroup></saw:QDR></saw:columnOrderRef>
+                  <saw:columnOrderRef columnID="c302b106f4f44f9e9" direction="descending">
+                     <saw:QDR>
+                        <saw:staticMemberGroup specialDimension="measure">
+                           <saw:members xsi:type="saw:specialValueMembers">
+                              <saw:value>c2a6c5927333ba199</saw:value></saw:members></saw:staticMemberGroup></saw:QDR></saw:columnOrderRef></saw:columnOrder></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="gt_column" grandTotalPosition="none"/></saw:displayGrandTotals>
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="c2a6c5927333ba199"/></saw:measuresList></saw:view></saw:views></saw:report>

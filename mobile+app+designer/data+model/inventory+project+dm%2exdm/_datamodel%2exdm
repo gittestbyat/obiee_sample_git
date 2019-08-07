@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BIEE">
+   <description xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <dataSet name="Data" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>consulting project sample.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output xmlns="http://xmlns.oracle.com/oxp/xmlp" rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+            <group name="G_1" label="G_1" source="Data">
+               <element name="Consultant" value="Consultant" label="Consultant" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="Rate" value="Rate" label="Rate" dataType="xsd:double" breakOrder="" fieldOrder="2"/>
+               <element name="Week" value="Week" label="Week" dataType="xsd:date" breakOrder="" fieldOrder="3"/>
+               <element name="PJR_Hours" value="PJR Hours" label="PJR Hours" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+               <element name="Mgr_Name" value="Mgr Name" label="Mgr Name" dataType="xsd:string" breakOrder="" fieldOrder="7"/>
+               <element name="Project_Type" value="Project Type" label="Project Type" dataType="xsd:string" breakOrder="" fieldOrder="8"/>
+               <element name="Project_ID" value="Project ID" label="Project ID" dataType="xsd:double" breakOrder="" fieldOrder="9"/>
+               <element name="Project_Name" value="Project Name" label="Project Name" dataType="xsd:string" breakOrder="" fieldOrder="10"/>
+               <element name="Total_Amount" value="${G_1.Rate*G_1.PJR_Hours}" label="Total_Amount" dataType="xsd:double" breakOrder="None" fieldOrder="0"/>
+               <element name="Status" value="${DECODE(G_1.Project_ID, 'Not Assigned', 'Not Assigned' , 'Assigned')}" label="Status" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Week_Short" value="${FORMAT_DATE(G_1.Week,'dd-MMM')}" label="Week_Short" dataType="xsd:string" breakOrder="None" fieldOrder="0"/>
+               <element name="Week_Number" value="Week_Number" label="Week_Number" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+               <element name="Forecast_Hours" value="${NVL(G_1.PJR_Hours, DECODE(G_1.Project_ID, 'Not Assigned', 0 , 40))}" label="Forecast_Hours" dataType="xsd:integer" breakOrder="None" fieldOrder="0"/>
+               <element name="Expected_Hours" value="Expected_Hours" label="Expected_Hours" dataType="xsd:double" breakOrder="" fieldOrder="6"/>
+               <element name="Inventory_Name" value="Inventory Name" label="Inventory Name" dataType="xsd:string" breakOrder="" fieldOrder="11"/>
+               <element name="Email" value="Email" label="Email" dataType="xsd:string" breakOrder="" fieldOrder="12"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <lexicals xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <valueSets xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <parameters xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <bursting xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <display xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <layouts>
+         <layout name="Data" left="840px" top="32px"/>
+         <layout name="DATA_DS" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="e92rmreo5iv7erb1">
+	<saw:pageProps orientation="portrait" printRows="visible" disableMargins="false">
+		<saw:pageHeader show="false"/>
+		<saw:pageFooter showOnDashboard="true" show="true">
+			<saw:zone position="top">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="left">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="left" width="33%" fontColor="#999999" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:caption fmt="text" oldID="kcap12832459_17">
+					<saw:text>OBI EE SampleApp</saw:text>
+				</saw:caption>
+			</saw:zone>
+			<saw:zone position="center">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center" width="34%"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="right">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="right" width="33%" fontColor="#999999" fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:zone>
+			<saw:zone position="bottom">
+				<saw:displayFormat>
+					<saw:formatSpec hAlign="center"/>
+				</saw:displayFormat>
+			</saw:zone>
+		</saw:pageFooter>
+	</saw:pageProps>
+	<sawd:dashboardColumn name="Column 0" duid="94apgmot0sbao4qn" canFreeze="false" frozen="false" layoutType="specificSize"><sawd:dashboardSection name="Section 17" duid="onmrj50qvftd2q2j" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" borderColor="#CCCCCC" borderStyle="single" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="to5r0gq9f1vqa4br"><sawd:HTML fmt="html">[b]&lt;font size=3 align=left color=#336666&gt;Sample Concurrency Simulator - Purpose and Usage Instructions&lt;/font&gt;[/b]</sawd:HTML></sawd:htmlView><sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1838">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 21" showSectionTitle="true" duid="enkdekcp5edm27tc" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Overview and Purpose</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="5" paddingRight="5" paddingTop="10" paddingBottom="10"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontColor="#FFFFFF" backgroundColor="#336666"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 12" duid="n2o09rg5vorl18lk"><sawd:HTML fmt="html">This program simulates concurrent execution of BI queries using multiple concurrent users. Scripts and usage instructions are saved under [b]/app/oracle/SAScripts/ConcurrencySimulation[/b] folder in SampleApp virtual image.
+[br/][br/]
+It first creates N user sessions (based on users_list.txt), then it parallely invokes and executes one distinct query each for each session. Row counts from the results of those queries gathered and displayed as and when each thread completes. When all the parallel threads complete, user sessions are cleaned up.
+[br/][br/]
+&#39;users_list.txt&#39; file contains the list of concurrent users that this program will use for simulation. These users must already be created with a common password inside the security provider used within your WLS deployment. Use &#39;import_users_to_wls.dat&#39; to create these users on your environment if they don&#39;t exist already. You can import the users by navigating to Summary of Security Realms &gt;myrealm &gt;Providers &gt;DefaultAuthenticator page under WLS Console.
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec hAlign="center" width="800" wrapText="true"/></saw:displayFormat><sawd:dashboardSection name="Section 0" showSectionTitle="true" duid="enkdekcp5edm27tc" collapsible="false" showHeading="true" layoutType="bestFit"><saw:caption><saw:text>Monitoring</saw:text></saw:caption><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="5" paddingRight="5" paddingTop="10" paddingBottom="10"/></saw:displayFormat><sawd:sectionHeading><saw:displayFormat><saw:formatSpec wrapText="true" fontColor="#FFFFFF" backgroundColor="#336666"/></saw:displayFormat></sawd:sectionHeading><sawd:htmlView name="HTML 1" duid="n2o09rg5vorl18lk"><sawd:HTML fmt="html">Query execution can  be monitored in several ways including:
+1) Inspecting output messages and time taken during the simulation 2) Concurrency Simulator Dashboard Pages (next pages on this Dashboard) 3) &lt;a href=&quot;http://localhost:7001/em/faces/as/perf/performance?target=%2FFarm_bifoundation_domain%2Fbifoundation_domain%2FBusinessIntelligence&amp;type=oracle_bi_instance&quot; target=&quot;_blank&quot;&gt;WLS performance metrics&lt;/a&gt; such as active sessions, requests, request processing time etc  4) Database active sessions
+[br/][br/]
+If you wish to increase the number of concurrent users for simulation, edit users_list.txt and copy/paste the existing users to the number you desire. 
+[br/][br/]
+NOTE:- [br/]
+1.) If you increase concurrent users to a very large number, you may have to edit the database parameters like number of processes, sessions and transactions to handle the large volume. If you fail to do so, then many of the queries will fail and return rowcount as 0, which indicates that the database is not able to handle the large number of concurrent sessions.
+[br/][br/]
+2.) This utility is not meant to be a substitute for load testing. For proper stress/load/volume benchmarking or tests, industry standard tools should be used. 
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn>
+	
+</sawd:dashboardPage>

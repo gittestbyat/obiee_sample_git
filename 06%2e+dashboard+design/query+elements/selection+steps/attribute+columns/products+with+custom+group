@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c8a11e9500b6aa061">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P1  Product&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_933">
+						<saw:text>Products</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_934">
+						<saw:text>Product</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+				<saw:dimensionSelection>
+					<saw:selectionStep stepID="1" type="startWith" category="member">
+						<saw:stepMembers xsi:type="saw:staticMemberGroupDef">
+							<saw:staticMemberGroup>
+								<saw:members xsi:type="saw:specialValueMembers">
+									<saw:value specialValue="all"/>
+								</saw:members>
+							</saw:staticMemberGroup>
+						</saw:stepMembers>
+					</saw:selectionStep>
+					<saw:selectionStep type="add" stepID="2" category="customGroup">
+						<saw:customGroup customGroupID="c8a11e9500b6aa061_g1">
+							<saw:caption><saw:text>LCD Products</saw:text></saw:caption><saw:displayFormat>
+								<saw:formatSpec backgroundColor="#99CCFF" wrapText="true"/>
+							</saw:displayFormat>
+							<saw:selectionStep type="add" stepID="3" category="member"><saw:stepMembers xsi:type="saw:staticMemberGroupDef"><saw:staticMemberGroup><saw:members xsi:type="saw:stringMembers"><saw:value>LCD 36X Standard</saw:value><saw:value>LCD HD Television</saw:value></saw:members></saw:staticMemberGroup></saw:stepMembers></saw:selectionStep></saw:customGroup>
+					</saw:selectionStep>
+				</saw:dimensionSelection>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cf6e3c712a8a8c73f">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_935">
+						<saw:text>Base Facts</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_936">
+						<saw:text>Revenue</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+		</saw:columns>
+	</saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!2"/>
+				</saw:cvRow><saw:cvRow><saw:cvCell viewName="selectionView!1"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!2">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:displayGrandTotals>
+						<saw:displayGrandTotal id="t1" grandTotalPosition="after"/>
+					</saw:displayGrandTotals>
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c8a11e9500b6aa061"/>
+						<saw:edgeLayer type="column" columnID="cf6e3c712a8a8c73f"/>
+					</saw:edgeLayers>
+					<saw:columnOrder><saw:columnOrderRef columnID="c8a11e9500b6aa061" direction="ascending"/></saw:columnOrder></saw:edge>
+				<saw:edge axis="column"/>
+			</saw:edges>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!1">
+			<saw:staticText>
+				<saw:caption fmt="text" captionID="kcap12832459_932">
+					<saw:text>LCD Products group is the Sum(Revenue), Sum(Billed Quantity) of items with &#39;LCD&#39; in the product name (explicitly selected)</saw:text>
+				</saw:caption>
+			</saw:staticText>
+		</saw:view>
+		<saw:view xsi:type="saw:selectionView" name="selectionView!1"/></saw:views>
+</saw:report>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c0e7b17388b5f66bc"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;C1  Customer Name&quot;</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Customers</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Customer Name</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c830ce188bba5b1ac"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{colformula}{&quot;Customers&quot;.&quot;C4  Customer Segment&quot;}</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" interaction="none"><saw:dataFormat xsi:type="saw:custom" customFormat="@[html]&quot;&lt;input type=checkbox value=&#39;&quot;@&quot;&#39; onchange=&#39;handleChkbox(this);&#39; checked/&gt;&quot;"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="html"><saw:text> </saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="html"><saw:text>&lt;form&gt;</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf5b89bc85897eb36"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{colformula}{&quot;Customers&quot;.&quot;C4  Customer Segment&quot;}</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" interaction="none"/></saw:displayFormat><saw:tableHeading><saw:caption fmt="html"><saw:text>Customers</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="html"><saw:text>@{col}{Customer Segment}</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="cf4082295ac19e4e8"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">@{colformula}{&quot;Customers&quot;.&quot;C4  Customer Segment&quot;}</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true" interaction="none"><saw:dataFormat xsi:type="saw:custom" customFormat="@[html]&quot;&lt;table border=0 width=100%&gt;&lt;tr&gt;&lt;td align=right&gt;&lt;div style=&#39;height:16px;width:24px; background-color:#008fff&#39; id=&#39;&quot;@&quot;&#39;&gt;&lt;img src=&#39;res/sk_blafp/common/dropdown_ena.gif&#39;/&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot;"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Customers</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat><saw:caption fmt="text"><saw:text>Color</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c01f47ae5daae9e2c"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Cust Geo Codes&quot;.&quot;C64  Latitude&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="7" maxDigits="7" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Cust Geo Codes</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Latitude</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c7c743588f3a0faa9"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Cust Geo Codes&quot;.&quot;C65  Longitude&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="repeat" wrapText="true"><saw:dataFormat xsi:type="saw:number" minDigits="7" maxDigits="7" commas="false" negativeType="minus"/></saw:formatSpec></saw:displayFormat><saw:tableHeading><saw:caption fmt="text"><saw:text>Cust Geo Codes</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Longitude</saw:text></saw:caption><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns><saw:filter><sawx:expr xsi:type="sawx:logical" op="and"><sawx:expr xsi:type="sawx:comparison" op="notNull"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Cust Geo Codes&quot;.&quot;C64  Latitude&quot;</sawx:expr></sawx:expr><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:sqlExpression">&quot;Cust Regions&quot;.&quot;C55  City&quot;</sawx:expr><sawx:expr xsi:type="xsd:string">San Francisco</sawx:expr></sawx:expr></sawx:expr></saw:filter></saw:criteria><saw:views currentView="3"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="htmlview!1"><saw:displayFormat><saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;font color=steelblue size=2&gt;&lt;b&gt;Customer Locations&lt;/b&gt;&lt;font&gt;
+&lt;DIV id=&quot;map&quot; style=&quot;width:700px;height:700px&quot;&gt;&lt;/DIV&gt;
+&lt;br/&gt;
+
+&lt;script src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mvdemo/jslib/v2/jquery/jquery-1.7.2.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mapviewer/jslib/v2/jquery/colorpicker/js/colorpicker.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mapviewer/jslib/v2/jquery/colorpicker/js/eye.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mapviewer/jslib/v2/jquery/colorpicker/js/layout.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/mapviewer/jslib/v2/jquery/colorpicker/js/utils.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;/mapviewer/jslib/v2/jquery/colorpicker/css/colorpicker.css&#39;/&gt;
+
+&lt;script&gt;
+var map = null, custLayer = null;
+var catValues = [];
+
+function rendermap()
+{        
+    var baseURL  = &quot;http://&quot;+document.location.host+&quot;/mapviewer&quot;;
+    var center = new OM.geometry.Point(20,50,8307); 
+    map = new OM.Map(document.getElementById(&#39;map&#39;), {mapviewerURL: baseURL}) ;
+	//map.addLayer(new OM.layer.ElocationTileLayer(&quot;background&quot;) ) ;  
+	var tilelayer = new OM.layer.ElocationTileLayer(&quot;oracle.maps&quot;);
+    map.addLayer(tilelayer) ;
+    
+	custLayer = new OM.layer.VectorLayer(&quot;customers&quot;, {
+		def:{ type:OM.layer.VectorLayer.TYPE_LOCAL }
+		}); 
+	
+	for (i=0;i&lt;darray.length; i++){
+		var fid = i;
+		var catValue = darray[i][1];
+		var mpoint = new OM.geometry.Point(darray[i][3], darray[i][2],8307);
+		var f_attr = {attributes :{&quot;_LABEL_&quot;:darray[i][0]}};
+		f_attr.attributes[catHdr] = catValue;
+		var feature = new OM.Feature(fid,mpoint,f_attr);  
+		custLayer.addFeature(feature);
+		if (catValues.indexOf(catValue)==-1)   catValues.push(catValue);
+	}
+	
+	addLegendColors();
+	setupStyles();
+	custLayer.zoomToTheme();
+    map.addLayer(custLayer);
+    map.setMapCenter(center);
+    map.setMapZoomLevel(1) ;
+    map.init() ;
+}
+
+function addLegendColors(){
+	var fillColors =[&#39;#6800ED&#39;,&#39;#811828&#39;,&#39;#2AF3FA&#39;,&#39;#1F4E1F&#39;,&#39;#5077FF&#39;,&#39;#E84C66&#39;,&#39;#1F78B4&#39;,&#39;#6A3D9A&#39;,&#39;#90E590&#39;,&#39;#FFFF00&#39;]; 
+	var catArray = [];
+	for (var i=0;i&lt;catValues.length; i++){
+		var colDiv = document.getElementById(catValues[i]);
+		colDiv.style.backgroundColor = fillColors[i%10];
+		catArray.push(&quot;[id=&#39;&quot; + catValues[i] + &quot;&#39;]&quot;);
+	}	
+	
+	$(catArray.toString()).ColorPicker({
+    	color: &#39;#000000&#39;,
+    	onShow: function (colpkr) {
+                console.log(colpkr);
+    		$(colpkr).fadeIn(500);
+    		return false;
+    	},
+    	onHide: function (colpkr) {
+    		$(colpkr).fadeOut(500);
+    		return false;
+    	},
+    	onSubmit: function(hsb, hex, rgb, el) {
+    		$(el).css(&quot;background-color&quot;, &#39;#&#39;+hex);
+            $(el).ColorPickerHide();
+			setupStyles();
+    	}
+    })	
+}
+
+function handleChkbox(e){
+	var fArray = custLayer.getAllFeatures();
+	for (i = 0; i &lt; fArray.length; i++){
+		var catValue = fArray[i].getAttributes()[catHdr.toUpperCase()];
+		if (e.value == catValue) fArray[i].setVisible(e.checked);		
+	}
+}
+  
+function setupStyles()
+{
+	var fArray = custLayer.getAllFeatures();
+	for (i = 0; i &lt; fArray.length; i++){
+		var catValue = fArray[i].getAttributes()[catHdr.toUpperCase()];
+		var colDiv = document.getElementById(catValue);
+		var c = colDiv.style.backgroundColor;
+		var circle = new OM.style.Marker({
+					vectorDef : [{
+						shape: { type:&quot;circle&quot;, cx:5, cy:5, width:10, height:10 }, 
+						style: { fill:c, stroke:c }}],
+					width: 15, height:15 });
+		fArray[i].setRenderingStyle(circle);
+	}
+}
+&lt;/script&gt;       
+</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!2"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;table id =&#39;legend&#39; border=0 width=300px&gt;&lt;/table&gt;</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>&lt;script&gt;
+var tempStr= &#39;</saw:text></saw:caption></saw:prefix><saw:narrative rowCount="2000"><saw:caption fmt="html"><saw:text>[&quot;@{c0e7b17388b5f66bc}&quot;,&quot;@{cf5b89bc85897eb36}&quot;,@{c01f47ae5daae9e2c},@{c7c743588f3a0faa9}]</saw:text></saw:caption></saw:narrative><saw:rowSep><saw:caption fmt="html"><saw:text>,</saw:text></saw:caption></saw:rowSep><saw:postfix><saw:caption fmt="html"><saw:text>&#39;;
+var darray=eval(&#39;[&#39;+tempStr+&#39;]&#39;);
+var catHdr = &#39;@{col}{Segment}&#39;;
+rendermap();
+&lt;/script&gt;</saw:text></saw:caption></saw:postfix></saw:view><saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="true" headingDisplay="columns"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:displayGrandTotals><saw:displayGrandTotal id="gt_row" grandTotalPosition="after"/></saw:displayGrandTotals><saw:edgeLayers><saw:edgeLayer type="column" columnID="c830ce188bba5b1ac"/><saw:edgeLayer type="column" columnID="cf5b89bc85897eb36"><saw:headerFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat></saw:headerFormat><saw:memberFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="cf4082295ac19e4e8"/></saw:edgeLayers></saw:edge><saw:edge axis="column" showColumnHeader="rollover"><saw:edgeLayers><saw:edgeLayer type="measure"><saw:memberFormat><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:memberFormat></saw:edgeLayer></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList><saw:measure columnID="c0e7b17388b5f66bc" aggRule="countDistinct"><saw:memberFormat><saw:displayFormat><saw:formatSpec wrapText="true"/></saw:displayFormat><saw:caption><saw:text>Count</saw:text></saw:caption></saw:memberFormat><saw:dataBodyFormat><saw:displayFormat><saw:formatSpec hAlign="right" wrapText="true"/></saw:displayFormat></saw:dataBodyFormat></saw:measure></saw:measuresList></saw:view></saw:views></saw:report>

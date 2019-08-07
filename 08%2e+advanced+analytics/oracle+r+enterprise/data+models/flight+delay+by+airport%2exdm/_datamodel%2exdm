@@ -1,0 +1,154 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="ORE_MH_2">
+   <description>
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="ORData" type="complex">
+         <sql>
+            <![CDATA[select value
+from   table(rqTableEval( cursor(select :numAirports NUM_AIRPORTS,
+                                        :uniqueCarriers UNIQUE_CARRIERS,
+                                        :startYearA START_YEAR_A,
+                                        :endYearA END_YEAR_A,
+                                        :regionA REGION_A,
+                                        :busiestA BUSIEST_A,
+                                        :colA COL_A,
+                                        :startYearB START_YEAR_B,
+                                        :endYearB END_YEAR_B,
+                                        :regionB REGION_B,
+                                        :busiestB BUSIEST_B,
+                                        :colB COL_B,
+                                        :varWidth VAR_WIDTH,
+                                        :sideBySide SIDE_BY_SIDE from dual),cursor(select 1 "ore.connect" from dual),'XML','BusiestAirports-1'))]]>
+         </sql>
+      </dataSet>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="ORData" source="ORData" label="ORData">
+    <element name="VALUE" value="VALUE" dataType="xdo:xml" label="VALUE" breakOrder="None" fieldOrder="1"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets>
+      <valueSet id="WIDTH">
+         <nvPairs>
+            <nvPair label="Fixed Width Boxes" value="FALSE"/>
+            <nvPair label="Variable Width Boxes" value="TRUE"/>
+         </nvPairs>
+      </valueSet>
+      <valueSet id="LAYOUT">
+         <nvPairs>
+            <nvPair label="Horizontal" value="h"/>
+            <nvPair label="Vertical" value="v"/>
+         </nvPairs>
+      </valueSet>
+      <valueSet id="YEARS">
+         <nvPairs>
+            <nvPair label="1999" value="1999"/>
+            <nvPair label="2000" value="2000"/>
+            <nvPair label="2001" value="2001"/>
+            <nvPair label="2002" value="2002"/>
+            <nvPair label="2003" value="2003"/>
+            <nvPair label="2004" value="2004"/>
+            <nvPair label="2005" value="2005"/>
+            <nvPair label="2006" value="2006"/>
+            <nvPair label="2007" value="2007"/>
+            <nvPair label="2008" value="2008"/>
+         </nvPairs>
+      </valueSet>
+      <valueSet id="REGION">
+         <nvPairs>
+            <nvPair label="ALL" value="ALL"/>
+         </nvPairs>
+      </valueSet>
+      <valueSet id="COLORS">
+         <nvPairs>
+            <nvPair label="Gold" value="gold"/>
+            <nvPair label="Red" value="red"/>
+            <nvPair label="Blue" value="blue"/>
+         </nvPairs>
+      </valueSet>
+      <valueSet id="BUSIEST">
+         <nvPairs>
+            <nvPair label="Busiest" value="TRUE"/>
+            <nvPair label="Least Busy" value="FALSE"/>
+         </nvPairs>
+      </valueSet>
+      <valueSet id="NUM_AIRPORTS">
+         <nvPairs>
+            <nvPair label="5" value="5"/>
+            <nvPair label="10" value="10"/>
+            <nvPair label="15" value="15"/>
+            <nvPair label="20" value="20"/>
+         </nvPairs>
+      </valueSet>
+      <valueSet id="CARRIERS">
+         <nvPairs>
+            <nvPair label="ALL" value="ALL"/>
+            <nvPair label="AA" value="AA"/>
+            <nvPair label="US" value="US"/>
+         </nvPairs>
+      </valueSet>
+   </valueSets>
+   <parameters>
+      <parameter name="NUMAIRPORTS" defaultValue="5" dataType="xsd:integer">
+         <select label="Number of Airports" valueSet="NUM_AIRPORTS" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="SIDEBYSIDE" defaultValue="h" dataType="xsd:string">
+         <select label="Layout Option" valueSet="LAYOUT" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="VARWIDTH" defaultValue="TRUE" dataType="xsd:boolean">
+         <select label="Box Width" valueSet="WIDTH" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="UNIQUECARRIERS" defaultValue="ALL" dataType="xsd:string">
+         <select label="Graph A: Unique Carriers" valueSet="CARRIERS" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="STARTYEARA" defaultValue="2008" dataType="xsd:integer">
+         <select label="Graph A: Start Year" valueSet="YEARS" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="ENDYEARA" defaultValue="2008" dataType="xsd:integer">
+         <select label="Graph A: End Year" valueSet="YEARS" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="REGIONA" defaultValue="ALL" dataType="xsd:string">
+         <select label="Graph A: Region" valueSet="REGION" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="BUSIESTA" defaultValue="TRUE" dataType="xsd:boolean">
+         <select label="Graph A: Airport Category" valueSet="BUSIEST" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="COLA" defaultValue="gold" dataType="xsd:string">
+         <select label="Graph A: Color" valueSet="COLORS" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="STARTYEARB" defaultValue="2000" dataType="xsd:integer">
+         <select label="Graph B: Start Year" valueSet="YEARS" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="ENDYEARB" defaultValue="2000" dataType="xsd:integer">
+         <select label="Graph B: End Year" valueSet="YEARS" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="REGIONB" defaultValue="ALL" dataType="xsd:string">
+         <select label="Graph B: Region" valueSet="REGION" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="BUSIESTB" defaultValue="TRUE" dataType="xsd:boolean">
+         <select label="Graph B: Airport Category" valueSet="BUSIEST" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="COLB" defaultValue="red" dataType="xsd:string">
+         <select label="Graph B: Color" valueSet="COLORS" multiple="false" all="false" allValue="null"/>
+      </parameter>
+   </parameters>
+   <bursting/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="ORData" left="274px" top="17px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

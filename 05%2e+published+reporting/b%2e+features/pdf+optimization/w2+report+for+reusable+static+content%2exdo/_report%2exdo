@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/b. Features/PDF Optimization/Data Model/W2 DM.xdm"/>
+   <description>
+      <![CDATA[The%20static%20content%20in%20a%20report%20can%20be%20made%20as%20reusable%20static%20content,%20which%20will%20store%20the%20content%20in%20one%20place%20in%20a%20PDF%20output%20file%20but%20can%20be%20displayed%20multiple%20times.]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value=""/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="W2 Form with RSC">
+      <template label="W2 Form with RSC" url="w2-d.rtf" type="rtf" outputFormat="pdf" defaultFormat="pdf" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="W2 Form without RSC" url="w2-d-withoutRSC.rtf" type="rtf" outputFormat="pdf" defaultFormat="pdf" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Report Description" url="ReportDescription_RSC.rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

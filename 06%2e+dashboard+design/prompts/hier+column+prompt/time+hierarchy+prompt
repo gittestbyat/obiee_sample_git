@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:view xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="saw:globalFilterPrompt" name="">
+	<saw:prompts scope="dashboard" subjectArea="&quot;A - Sample Sales&quot;">
+		<saw:promptStep labelPosition="above">
+			<saw:individualPrompts>
+				<saw:prompt xsi:type="saw:columnFilterPrompt" columnID="c0" subjectArea="&quot;A - Sample Sales&quot;" required="true">
+					<saw:formula>
+						<sawx:expr xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xsi:type="sawx:hierarchicalColumnExpr" dimensionID="H0 Time" hierarchyID="Time Hierarchy" tableName="&quot;Time&quot;">&quot;Time&quot;.&quot;Time Hierarchy&quot;</sawx:expr>
+					</saw:formula>
+					<saw:promptOperator op="in"/>
+					<saw:promptUIControl includeAllChoices="false" xsi:type="saw:multiSelect" maxChoices="-1"/>
+					<saw:label>
+						<saw:caption captionID="kcap12832459_1108">
+							<saw:text>Time Hierarchy</saw:text>
+						</saw:caption>
+					</saw:label>
+					<saw:promptDefaultValues type="reportDefault" usingCodeValue="false"/>
+					<saw:promptSource xsi:type="saw:allChoices"/>
+				</saw:prompt>
+			</saw:individualPrompts>
+			<saw:displayFormat/>
+			<saw:title/></saw:promptStep>
+	</saw:prompts>
+</saw:view>

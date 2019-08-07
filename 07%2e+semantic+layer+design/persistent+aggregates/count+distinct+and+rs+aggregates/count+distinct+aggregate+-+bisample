@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;B - Sample Sales Exa&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cbae4ee1a1e346b7a">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Counts&quot;.&quot;32  # of Cust with Orders  (Cnt Distinct)&quot;</sawx:expr></saw:columnFormula></saw:column>
+         
+         <saw:column xsi:type="saw:regularColumn" columnID="cf1102cd8d318f029">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c230643083180bb55"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;Source Fact Table&quot;</sawx:expr></saw:columnFormula><saw:displayFormat><saw:formatSpec suppress="suppress" wrapText="true"/><saw:conditionalDisplayFormats><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c230643083180bb55"/><sawx:expr xsi:type="xsd:string">FACT_AGG_OR_01 - 151k Rows</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#CC3333" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat><saw:conditionalDisplayFormat><saw:formatRule><saw:condition><sawx:expr xsi:type="sawx:comparison" op="equal"><sawx:expr xsi:type="sawx:columnRefExpr" columnID="c230643083180bb55"/><sawx:expr xsi:type="xsd:string">FACT_AGG_OR_CD_01 - 499K Rows</sawx:expr></sawx:expr></saw:condition><saw:formatSpec fontColor="#008000" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat><saw:columnHeading><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c2804ac7d0cdfc0b4">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P4  Brand&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1311c4262c27affd">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D4  Company&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="ce481858cf2a2c568">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:list" op="in">
+            <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr>
+            
+            
+            <sawx:expr xsi:type="xsd:string">2013</sawx:expr><sawx:expr xsi:type="xsd:string">2014</sawx:expr><sawx:expr xsi:type="xsd:string">2015</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="3"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="pivotTableView!1"/>
+               <saw:cvCell viewName="htmlview!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell>
+               <saw:cvCell viewName="htmlview!2">
+                  <saw:displayFormat>
+                     <saw:formatSpec hAlign="left"/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="pivotTableView!2" colSpan="3"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="none"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true">
+               <saw:edgeLayers/></saw:edge>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c2804ac7d0cdfc0b4"/>
+                  <saw:edgeLayer type="column" columnID="cbae4ee1a1e346b7a"/>
+                  <saw:edgeLayer type="column" columnID="cf1102cd8d318f029"/>
+                  <saw:edgeLayer type="column" columnID="c1311c4262c27affd"/>
+                  <saw:edgeLayer type="column" columnID="ce481858cf2a2c568"/><saw:edgeLayer type="column" columnID="c230643083180bb55"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  
+                  <saw:edgeLayer type="column" columnID="c230643083180bb55"/><saw:edgeLayer type="column" columnID="cf1102cd8d318f029"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="cbae4ee1a1e346b7a"/></saw:measuresList></saw:view>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!2" scrollingEnabled="false">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true">
+               <saw:edgeLayers/></saw:edge>
+            <saw:edge axis="section">
+               <saw:edgeLayers/></saw:edge>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c1311c4262c27affd"/>
+                  <saw:edgeLayer type="column" columnID="c2804ac7d0cdfc0b4"/><saw:edgeLayer type="column" columnID="c230643083180bb55"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="ce481858cf2a2c568"/>
+                  <saw:edgeLayer type="measure"/></saw:edgeLayers></saw:edge></saw:edges>
+         <saw:measuresList>
+            <saw:measure columnID="cbae4ee1a1e346b7a"/>
+            <saw:measure columnID="cf1102cd8d318f029"/></saw:measuresList>
+         <saw:displayFormat>
+            <saw:formatSpec/></saw:displayFormat></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+         <saw:staticText>
+            <saw:caption fmt="text">
+               <saw:text>[u][b]Persistent Aggregate with Count Distinct Metric[/b][/u][br/]
+ Create Aggregates FACT_AGG_OR_CD_01[br/]
+ for &quot;01 - Sample App Exa&quot;.&quot;F0 Sales Base Measures&quot;[br/]
+ ( 
+&quot;32  # of Cust with Orders  (Cnt Distinct)&quot; [b] as_raw_values [/b])[br/]
+    at levels ([br/]
+    &quot;01 - Sample App Exa&quot;.&quot;H1 Products&quot;.&quot;Products Detail&quot;, [br/]
+    &quot;01 - Sample App Exa&quot;.&quot;H3 Offices&quot;.&quot;Offices Detail&quot;, [br/]
+    &quot;01 - Sample App Exa&quot;.&quot;H0 Time&quot;.&quot;Month&quot; [br/]
+    ) [br/]
+    using connection pool[br/] &quot;02 - Sample App Exa Data (ORCL)&quot;.&quot;Aggs Sample Connection&quot; [br/]
+in &quot;02 - Sample App Exa Data (ORCL)&quot;..&quot;BISAMPLE_AGGS&quot;</saw:text></saw:caption></saw:staticText></saw:view>
+      <saw:view xsi:type="saw:htmlview" name="htmlview!2">
+         <saw:staticText>
+            <saw:caption fmt="text">
+               <saw:text>[u][b]Aggregate table details[/b][br/][/u]
+Aggregate table in case of a count distinct metric is slightly different from the aggregate tables with regular metrics.[br/]
+In case of a count distinct metric, the non-aggregated actual column value is stored in the aggregate table. [br/]
+During query processing, count distinct is performed on this count distinct metric in the aggregate table. [br/]
+[br/]
+[b]FACT_AGG_OR_CD_01 table definition[/b][br/]
+- Product (Dimension)[br/]
+- Office (Dimension)[br/]
+- Month (Dimension) [br/]
+- Customer Key (Count Distinct Metric) - Customer key values are stored as is, without any aggregation[br/]
+[br/][u][/u]</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>

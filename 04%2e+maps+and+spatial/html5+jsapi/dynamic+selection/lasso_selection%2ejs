@@ -1,0 +1,173 @@
+var airport = airport || {};
+airport.log = OM.util.Logger;
+airport.airportsLayer = null;
+airport.map = null;
+
+airport.setupAirportStyles=function(layer){
+    var circles = [];
+    for(var i=0; i<10; i++)
+    {
+      circles[i] =  new OM.style.Marker({
+        vectorDef : [{
+            shape: { type:"circle", cx:5, cy:5, width:10, height:10 }, 
+            style: {
+              fill:"#AFB6BD", 
+              stroke:"#6784A3"
+            }
+          }],
+        width: 7 + i*3,
+        height:7 + i*3
+      });
+    }
+    
+    var bucketStyle = new OM.style.BucketStyle(
+    {
+      styles: circles,
+      numClasses:10, 
+      classification:'equal',  //creates equal-ranged buckets
+      defaultStyle: circles[0]
+    });
+
+    layer.setRenderingStyle(bucketStyle, ["#FLIGHTS"]);
+  }     
+  
+var highlightLayer;
+var selStr = "";
+airport.clearHighlight = function(e)
+{
+  if (highlightLayer != null)
+  {
+    map.removeLayer(highlightLayer);
+    highlightLayer = null;
+	selStr = "";
+  }
+}
+
+airport.addHighlight = function(e)
+{
+  airport.clearHighlight();
+  var tool = e.target;
+  var geom = tool.getGeometry();
+  //to select all the features that interact with a custom drawn geometry
+  //(using the circle, rectangle or polygon tool), we simply apply the
+  //AnyInteract filter on all the current layer. 
+  var filter1 = new OM.filter.AnyInteract(geom);
+  var selectStyle = new OM.style.Color({
+    fill:"#ffff44",
+    stroke:"#44ff22"
+  });
+    
+  //The result of applying the filter is returned as a new layer.
+  highlightLayer = airportsLayer.applyFilter(filter1,false);
+  //highlightLayer.setRenderingStyle(selectStyle);
+
+  //display all the filtered features attributes in a very simple HTML table
+  //alongside the map.
+  var features=highlightLayer.getAllFeatures();
+  selStr = "";
+  var s = features[0].getRenderingStyle();
+  s = s.clone();
+  for(i=0; i<s.styles.length; i++)
+  {
+      s.styles[i] = s.styles[i].clone();
+      s.styles[i].vectorDef[0].style.fill = "#ffff44";
+  }
+  highlightLayer.setRenderingStyle(s);
+  
+  for(i=0;i<features.length;i++)
+     selStr+="'"+features[i].id + "',";
+  
+  /*
+  for(i=0;i<features.length;i++){
+    var s = features[i].getRenderingStyle();
+    s.vectorDef[0].style.fill = "#ffff44";
+    features[i].setRenderingStyle(s);
+    selStr+="'"+features[i].id + "',";
+  }
+  */
+  selStr = selStr.substring(0,selStr.length-1);
+  
+  //following function is defined in set_psvar.js file
+  SAutils.setPSVarPrompt('airport_selection',selStr);
+  
+  map.addLayer(highlightLayer);
+    
+}
+
+airport.init=function(darray){
+  var baseURL  = "http://"+document.location.host+"/mapviewer";
+  var center = new OM.geometry.Point(-100,36,8307); 
+  map = new OM.Map(document.getElementById('map'),{mapviewerURL: baseURL}) ;
+  
+  //map.addListener(OM.event.MouseEvent.MOUSE_MOVE, onMouseMove);
+  
+  var tilelayer = new OM.layer.ElocationTileLayer("oracle.maps");
+  map.addLayer(tilelayer) ;  
+  
+  var states = new OM.layer.VectorLayer("states", {
+  def:{
+  	type:OM.layer.VectorLayer.TYPE_PREDEFINED,
+  	dataSource:"mvdemo",
+  	theme:"theme_demo_states"
+  }
+  });
+  map.addLayer(states);
+  
+  airportsLayer = new OM.layer.VectorLayer("airports", 
+  {
+  def:{
+  	type:OM.layer.VectorLayer.TYPE_LOCAL		
+  }
+  });   
+  
+  /*"Code","State","Airport","Lat","Long","# Flights","Delay Mins"*/
+  for (i=0;i<darray.length; i++){
+  		var fid = darray[i][0];
+  		var mpoint = new OM.geometry.Point(darray[i][4], darray[i][3],8307);
+  		var f_attr = {attributes :{"AIRPORT":darray[i][2], "STATE":darray[i][1], "#FLIGHTS":darray[i][5], "DELAY":darray[i][6]}};
+  		var feature = new OM.Feature(fid,mpoint,f_attr);  
+  		airportsLayer.addFeature(feature);
+  	}
+  
+  //airportsLayer.setLabelsVisible(false);
+  airportsLayer.setBringToTopOnMouseOver(false);
+  this.setupAirportStyles(airportsLayer);
+  var pulse = new OM.style.PulseAnimation({
+  	stroke: "#336699",
+  	duration: 1,
+  	beginSize: 8,
+  	endSize: 50,
+  	repeatCount:3
+  });
+  airportsLayer.enableFeatureSelection(true);
+  airportsLayer.setSelectStyle(pulse);
+  map.addLayer(airportsLayer) ;
+  map.setMapCenter( center );
+  map.setMapZoomLevel(3) ;
+
+  var navigationPanelBar = new OM.control.NavigationPanelBar( {
+    style:2
+  } );
+  map.addMapDecoration(navigationPanelBar);
+            
+  toolbar = new OM.control.ToolBar("toolbar1",{
+    builtInButtons:[OM.control.ToolBar.BUILTIN_ALL]
+  });          
+  toolbar.setPosition(0.04,0.95);
+  map.addToolBar(toolbar);    
+  
+ var circleTool = toolbar.getBuiltInTool(OM.control.ToolBar.BUILTIN_CIRCLE);
+  circleTool.on(OM.event.ToolEvent.TOOL_END, this.addHighlight);
+  circleTool.on(OM.event.ToolEvent.TOOL_CLEAR, this.clearHighlight);
+          
+  var rectTool = toolbar.getBuiltInTool(OM.control.ToolBar.BUILTIN_RECTANGLE);
+  rectTool.on(OM.event.ToolEvent.TOOL_END, this.addHighlight);
+  rectTool.on(OM.event.ToolEvent.TOOL_CLEAR, this.clearHighlight)
+          
+  var polyTool = toolbar.getBuiltInTool(OM.control.ToolBar.BUILTIN_REDLINE);
+  polyTool.on(OM.event.ToolEvent.TOOL_END, this.addHighlight);
+  polyTool.on(OM.event.ToolEvent.TOOL_CLEAR, this.clearHighlight);
+  polyTool.on(OM.event.ToolEvent.REDLINE_EDITED, this.addHighlight);
+
+  map.init() ;
+}

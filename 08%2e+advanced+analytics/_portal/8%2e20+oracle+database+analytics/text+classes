@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="l3nata4pu9g4eahk"><sawd:dashboardColumn name="Column 5" duid="onnnmu9lefhpv08l" canFreeze="false" frozen="false" layoutType="specificSize"><sawd:dashboardSection name="Section 2" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2365">[br/]&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Text Classification
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 2" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2364">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 3" duid="8bv4aun7up81lqld" showSectionTitle="false" collapsible="false" showHeading="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:caption oldID="kcap12832459_2361">
+				<saw:text>Section 3</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2366">[br/][br/]&lt;table border=0 width=600&gt;&lt;tr&gt;&lt;td&gt;
+&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; This is an example of using Oracle Text&#39;s MATCHES operator to classify the records into different categories. A set of queries that define our categories are saved in a table (TEXT_CLASSIFICATION). We then index the table to create a CTXRULE index which is used by MATCHES operator to classify the records.
+
+[br/][br/]
+&lt;font color=darkblue&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Usage:&lt;/b&gt;&lt;/font&gt; Update classification criteria in the table beside. Once done, then click on the button &#39;Rebuild Classification Index&#39;. After allowing few seconds (~15 secs), refresh the report by selecting &#39;Refresh Report&#39; button.
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</sawd:HTML>
+			</sawd:htmlView>
+			
+			
+		<sawd:reportView name="Report 1" display="embed" showView="" duid="0m1736svdsoncqcg"><saw:caption><saw:text>Classification Categories</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Text Analytics/Text Classification/Classification Categories"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle" width="100%"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 0" collapsible="false" duid="fk4ed0p9vonnae7i" showSectionTitle="false" layoutType="bestFit"><sawd:reportView name="Report 0" display="embed" showView="" duid="6vl46rsff2j33lbr"><saw:caption><saw:text>Text Classification</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Text Analytics/Text Classification/Text Classification"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

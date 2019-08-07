@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description>
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="MAD_HCM" type="simple">
+         <file dataSourceRef="xdo:local">HR OTBI Example 2_.xml</file>
+      </dataSet>
+      <dataSet name="Planning2" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>planning2.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="Recruitment_Summary" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>recruitment_summary.xls</file>
+            <sheetName>Sheet2</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="Recruitment" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>recruitment.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="Learn" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Learn.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <dataSet name="Learn_Detail" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Learn Detail2.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output rootName="DATA_DS" uniqueRowName="false">
+      <nodeList name="MAD_HCM"/>
+      <nodeList name="data-structure">
+         <dataStructure tagName="EXTRA">
+            <group name="G_2" label="G_2" source="Planning2">
+               <element name="MARKET" value="MARKET" label="MARKET" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="LOB" value="LOB" label="LOB" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="CURRENT_HEADCOUNT" value="CURRENT_HEADCOUNT" label="CURRENT_HEADCOUNT" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="NATURAL_ATTRITION" value="NATURAL_ATTRITION" label="NATURAL_ATTRITION" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+               <element name="PAID_LEAVERS" value="PAID_LEAVERS" label="PAID_LEAVERS" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+               <element name="AGENCY_JOINERS" value="AGENCY_JOINERS" label="AGENCY_JOINERS" dataType="xsd:double" breakOrder="" fieldOrder="6"/>
+               <element name="MA" value="MA" label="MA" dataType="xsd:double" breakOrder="" fieldOrder="7"/>
+               <element name="NEW_DIRECTIONS" value="NEW_DIRECTIONS" label="NEW_DIRECTIONS" dataType="xsd:double" breakOrder="" fieldOrder="8"/>
+               <element name="OTHER" value="OTHER" label="OTHER" dataType="xsd:double" breakOrder="" fieldOrder="9"/>
+               <element name="ENDING_HEADCOUNT" value="ENDING_HEADCOUNT" label="ENDING_HEADCOUNT" dataType="xsd:double" breakOrder="" fieldOrder="10"/>
+               <element name="VARIANCE" value="VARIANCE" label="VARIANCE" dataType="xsd:double" breakOrder="" fieldOrder="11"/>
+               <element name="GROWTH" value="GROWTH" label="GROWTH" dataType="xsd:double" breakOrder="" fieldOrder="12"/>
+               <element name="REVENUE" value="REVENUE" label="REVENUE" dataType="xsd:double" breakOrder="" fieldOrder="13"/>
+            </group>
+            <group name="G_4" label="G_4" source="Recruitment_Summary">
+               <element name="Recruiting_Area" value="Recruiting Area" label="Recruiting Area" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="Quarter" value="Quarter" label="Quarter" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="Year" value="Year" label="Year" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="No_Positions_Recruited" value="No Positions Recruited" label="No Positions Recruited" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+               <element name="__Fill_Rate" value="% Fill Rate" label="% Fill Rate" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+            </group>
+            <group name="G_3" label="G_3" source="Recruitment">
+               <element name="Recruiting_Area" value="Recruiting Area" label="Recruiting Area" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="No_positions_opened" value="No positions opened" label="No positions opened" dataType="xsd:double" breakOrder="" fieldOrder="2"/>
+               <element name="Unfilled_Positions" value="Unfilled Positions" label="Unfilled Positions" dataType="xsd:double" breakOrder="" fieldOrder="3"/>
+               <element name="No_Candidates" value="No Candidates" label="No Candidates" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+               <element name="No_Hires" value="No Hires" label="No Hires" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+               <element name="Job_" value="Job " label="Job " dataType="xsd:string" breakOrder="" fieldOrder="6"/>
+               <element name="ACE_candidate_refusals" value="ACE candidate refusals" label="ACE candidate refusals" dataType="xsd:double" breakOrder="" fieldOrder="7"/>
+               <element name="Refusal_reason" value="Refusal reason" label="Refusal reason" dataType="xsd:string" breakOrder="" fieldOrder="8"/>
+               <element name="Name" value="Name" label="Name" dataType="xsd:string" breakOrder="" fieldOrder="9"/>
+               <element name="Application_Date" value="Application Date" label="Application Date" dataType="xsd:string" breakOrder="" fieldOrder="10"/>
+               <element name="Phone_Number_" value="Phone Number " label="Phone Number " dataType="xsd:string" breakOrder="" fieldOrder="11"/>
+               <element name="Email" value="Email" label="Email" dataType="xsd:string" breakOrder="" fieldOrder="12"/>
+            </group>
+            <group name="G_5" label="G_5" source="Learn">
+               <element name="Area" value="Area" label="Area" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="Store" value="Store" label="Store" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="Skill" value="Skill" label="Skill" dataType="xsd:string" breakOrder="" fieldOrder="3"/>
+               <element name="Expire_in_30_days" value="Expire in 30 days" label="Expire in 30 days" dataType="xsd:double" breakOrder="" fieldOrder="4"/>
+               <element name="Expire_in_60_days" value="Expire in 60 days" label="Expire in 60 days" dataType="xsd:double" breakOrder="" fieldOrder="5"/>
+               <element name="Expire_in_90_days" value="Expire in 90 days" label="Expire in 90 days" dataType="xsd:double" breakOrder="" fieldOrder="6"/>
+               <element name="Total_Expire_in_90_days" value="Total Expire in 90 days" label="Total Expire in 90 days" dataType="xsd:double" breakOrder="" fieldOrder="7"/>
+               <element name="Still_Current" value="Still Current" label="Still Current" dataType="xsd:double" breakOrder="" fieldOrder="8"/>
+            </group>
+            <group name="G_6" label="G_6" source="Learn_Detail">
+               <element name="Area" value="Area" label="Area" dataType="xsd:string" breakOrder="" fieldOrder="1"/>
+               <element name="Store" value="Store" label="Store" dataType="xsd:string" breakOrder="" fieldOrder="2"/>
+               <element name="Skill" value="Skill" label="Skill" dataType="xsd:string" breakOrder="" fieldOrder="3"/>
+               <element name="Expiry" value="Expiry" label="Expiry" dataType="xsd:string" breakOrder="" fieldOrder="4"/>
+               <element name="Person" value="Person" label="Person" dataType="xsd:string" breakOrder="" fieldOrder="5"/>
+               <element name="Current_Level" value="Current Level" label="Current Level" dataType="xsd:string" breakOrder="" fieldOrder="6"/>
+               <element name="Date_of_Expiry" value="Date of Expiry" label="Date of Expiry" dataType="xsd:string" breakOrder="" fieldOrder="7"/>
+            </group>
+         </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets/>
+   <parameters/>
+   <bursting/>
+   <display>
+      <layouts>
+         <layout name="MAD_HCM" left="12px" top="102px"/>
+         <layout name="Planning2" left="224px" top="32px"/>
+         <layout name="Recruitment_Summary" left="683px" top="32px"/>
+         <layout name="Recruitment" left="449px" top="31px"/>
+         <layout name="Learn" left="108px" top="388px"/>
+         <layout name="Learn_Detail" left="337px" top="380px"/>
+         <layout name="EXTRA" left="5px" top="28px"/>
+      </layouts>
+      <groupLinks/>
+   </display>
+</dataModel>

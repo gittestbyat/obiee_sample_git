@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+  <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+    <saw:columns>
+      <saw:column xsi:type="saw:regularColumn" columnID="c99d8237cb1d5af78">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D3  Organization&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c02a802ac983e1f9f">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c681e47c45e187c5e">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">(&quot;Base Facts&quot;.&quot;1- Revenue&quot;- CAST(EVALUATE (&#39;LAG (%1,1,0) OVER (PARTITION BY %2 ORDER BY %1) &#39;  ,&quot;Base Facts&quot;.&quot;1- Revenue&quot; , &quot;Offices&quot;.&quot;D3  Organization&quot;) AS DOUBLE))/ CAST(EVALUATE (&#39;LAG (%1,1,0) OVER (PARTITION BY %2 ORDER BY %1) &#39;  ,&quot;Base Facts&quot;.&quot;1- Revenue&quot; , &quot;Offices&quot;.&quot;D3  Organization&quot;) AS DOUBLE) * 100</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" fontColor="#669966" wrapText="true">
+            <saw:dataFormat xsi:type="saw:percent" minDigits="0" maxDigits="0" commas="true" negativeType="minus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2180">
+            <saw:text>Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2181">
+            <saw:text>% Diff - Previous row</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c69a6ed41c70821eb">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">&quot;Products&quot;.&quot;P1  Product&quot;</sawx:expr>
+        </saw:columnFormula>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="caf40e3cb2a28f436">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">EVALUATE(&#39;ROUND(CUME_DIST () OVER (PARTITION BY %1 ORDER BY %2),3)&#39;, &quot;Offices&quot;.&quot;D3  Organization&quot;, &quot;Base Facts&quot;.&quot;1- Revenue&quot;)</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" fontColor="#996600" wrapText="true"/>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2182">
+            <saw:text>Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="html" captionID="kcap12832459_2183">
+            <saw:text>Cumulative Dist</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+      <saw:column xsi:type="saw:regularColumn" columnID="c53fea371bb7ee957">
+        <saw:columnFormula>
+          <sawx:expr xsi:type="sawx:sqlExpression">CAST(EVALUATE (&#39; PERCENT_RANK() OVER (PARTITION BY %1 ORDER BY %2)&#39;, &quot;Offices&quot;.&quot;D3  Organization&quot;,&quot;Base Facts&quot;.&quot;1- Revenue&quot;) AS DOUBLE) * 100</sawx:expr>
+        </saw:columnFormula>
+        <saw:displayFormat>
+          <saw:formatSpec suppress="repeat" wrapText="true" fontColor="#CC3333">
+            <saw:dataFormat xsi:type="saw:percent" minDigits="0" maxDigits="0" commas="true" negativeType="minus"/>
+          </saw:formatSpec>
+        </saw:displayFormat>
+        <saw:tableHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2184">
+            <saw:text>Facts</saw:text>
+          </saw:caption>
+        </saw:tableHeading>
+        <saw:columnHeading>
+          <saw:caption fmt="text" captionID="kcap12832459_2185">
+            <saw:text>Percent Rank</saw:text>
+          </saw:caption>
+          <saw:displayFormat>
+            <saw:formatSpec/>
+          </saw:displayFormat>
+        </saw:columnHeading>
+      </saw:column>
+    </saw:columns>
+    <saw:columnOrder>
+      <saw:columnOrderRef columnID="c99d8237cb1d5af78" direction="ascending"/>
+      <saw:columnOrderRef columnID="caf40e3cb2a28f436" direction="ascending"/>
+    </saw:columnOrder>
+  </saw:criteria>
+  <saw:views currentView="0">
+    <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+      <saw:cvTable>
+        <saw:cvRow>
+          <saw:cvCell viewName="titleView!1">
+            <saw:displayFormat>
+              <saw:formatSpec/>
+            </saw:displayFormat>
+          </saw:cvCell>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="tableView!2"/>
+        </saw:cvRow>
+        <saw:cvRow>
+          <saw:cvCell viewName="htmlview!1"/>
+        </saw:cvRow>
+      </saw:cvTable>
+    </saw:view>
+    <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:logoFormat>
+        <saw:displayFormat/>
+      </saw:logoFormat><saw:createdTime>
+        <saw:displayFormat>
+          <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+        </saw:displayFormat>
+      </saw:createdTime><saw:displayFormat>
+        <saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+      </saw:displayFormat><saw:title>
+        <saw:displayFormat>
+          <saw:formatSpec fontColor="#333366" wrapText="true"/>
+        </saw:displayFormat>
+      </saw:title></saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!1">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c99d8237cb1d5af78"/>
+            <saw:edgeLayer type="column" columnID="c69a6ed41c70821eb"/>
+            <saw:edgeLayer type="column" columnID="c53fea371bb7ee957"/>
+            <saw:edgeLayer type="column" columnID="caf40e3cb2a28f436"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+      <saw:measuresList/>
+    </saw:view>
+    <saw:view xsi:type="saw:tableView" name="tableView!2">
+      <saw:edges>
+        <saw:edge axis="page" showColumnHeader="true"/>
+        <saw:edge axis="section"/>
+        <saw:edge axis="row" showColumnHeader="true">
+          <saw:edgeLayers>
+            <saw:edgeLayer type="column" columnID="c99d8237cb1d5af78"/>
+            <saw:edgeLayer type="column" columnID="c69a6ed41c70821eb"/>
+            <saw:edgeLayer type="column" columnID="c02a802ac983e1f9f"/>
+            <saw:edgeLayer type="column" columnID="c681e47c45e187c5e"/>
+            <saw:edgeLayer type="column" columnID="c53fea371bb7ee957"/>
+            <saw:edgeLayer type="column" columnID="caf40e3cb2a28f436"/>
+          </saw:edgeLayers>
+        </saw:edge>
+        <saw:edge axis="column"/>
+      </saw:edges>
+    </saw:view>
+    <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">
+      <saw:display type="line" subtype="default" renderFormat="default" mode="online">
+        <saw:style barStyle="rectangle" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/>
+      </saw:display>
+      <saw:canvasFormat height="330" width="640">
+        <saw:dataLabels display="never" label="default" position="below" transparentBackground="true" valueAs="default"/>
+      </saw:canvasFormat>
+      <saw:selections>
+        <saw:categories>
+          <saw:category>
+            <saw:columnRef columnID="c99d8237cb1d5af78"/>
+          </saw:category>
+          <saw:category>
+            <saw:columnRef columnID="c69a6ed41c70821eb"/>
+          </saw:category>
+        </saw:categories>
+        <saw:measures showMeasureLabelsOnCategory="false">
+          <saw:column measureType="y">
+            <saw:columnRef columnID="c53fea371bb7ee957"/>
+          </saw:column>
+          <saw:column measureType="y">
+            <saw:columnRef columnID="caf40e3cb2a28f436"/>
+          </saw:column>
+        </saw:measures>
+        <saw:seriesGenerators>
+          <saw:measureLabels/>
+        </saw:seriesGenerators>
+      </saw:selections>
+      <saw:legendFormat position="default" transparentFill="true"/>
+    </saw:view>
+    <saw:view xsi:type="saw:htmlview" name="htmlview!1">
+      <saw:staticText>
+        <saw:caption fmt="text" captionID="kcap12832459_2179">
+          <saw:text>Cumulative Distribution is defined using the EVALUATE function.
+[br/]
+It uses the database function CUME_DIST to compute the values.</saw:text>
+        </saw:caption>
+      </saw:staticText>
+    </saw:view>
+  </saw:views>
+</saw:report>

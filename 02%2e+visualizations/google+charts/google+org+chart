@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1"><saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true"><saw:columns><saw:column xsi:type="saw:regularColumn" columnID="c289248de3b67be1d"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN &quot;Sales Person&quot;.&quot;E9  Manager Name&quot; IS NULL THEN &#39;--&#39; ELSE &quot;Sales Person&quot;.&quot;E9  Manager Name&quot; END</sawx:expr></saw:columnFormula><saw:tableHeading><saw:caption fmt="text"><saw:text>Sales Person</saw:text></saw:caption></saw:tableHeading><saw:columnHeading><saw:caption fmt="text"><saw:text>Manager</saw:text></saw:caption></saw:columnHeading></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c04541b4ab6c55dca"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Sales Person&quot;.&quot;E1  Sales Rep Name&quot;</sawx:expr></saw:columnFormula></saw:column><saw:column xsi:type="saw:regularColumn" columnID="c5670b0795553a910"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Sales Person&quot;.&quot;E4  Position&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns><saw:columnOrder><saw:columnOrderRef columnID="c289248de3b67be1d" direction="ascending"/></saw:columnOrder></saw:criteria><saw:views currentView="0"><saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view><saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg" includeName="true"><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat><saw:logoFormat><saw:displayFormat/></saw:logoFormat><saw:createdTime><saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:title><saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat></saw:title></saw:view><saw:view xsi:type="saw:tableView" name="tableView!1"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c04541b4ab6c55dca"/><saw:edgeLayer type="column" columnID="c5670b0795553a910"/><saw:edgeLayer type="column" columnID="c289248de3b67be1d"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:prefix><saw:caption fmt="html"><saw:text>    &lt;script type=&#39;text/javascript&#39; src=&#39;https://www.google.com/jsapi&#39;&gt;&lt;/script&gt;
+    &lt;script type=&#39;text/javascript&#39;&gt;
+if(document.URL.indexOf(&quot;saw.dll?Answers&quot;) == -1) {
+      google.load(&#39;visualization&#39;, &#39;1&#39;, {packages:[&#39;orgchart&#39;]});
+      google.setOnLoadCallback(drawOrgChart);
+}
+      function drawOrgChart() {
+if(document.URL.indexOf(&quot;saw.dll?Answers&quot;) == -1) {  
+      var data = new google.visualization.DataTable();
+        data.addColumn(&#39;string&#39;, &#39;Name&#39;);
+        data.addColumn(&#39;string&#39;, &#39;Manager&#39;);
+        data.addColumn(&#39;string&#39;, &#39;ToolTip&#39;);
+        var myOrgArray=[];
+        var tempStr = &quot;&quot;;</saw:text></saw:caption></saw:prefix><saw:postfix><saw:caption fmt="html"><saw:text>        data.addRows(myOrgArray);
+        var chart = new google.visualization.OrgChart(document.getElementById(&#39;div_orgchart&#39;));
+        chart.draw(data, {allowHtml:true});
+}
+      }
+    &lt;/script&gt;
+    &lt;div id=&#39;div_orgchart&#39;&gt;&lt;/div&gt;</saw:text></saw:caption></saw:postfix><saw:narrative><saw:caption fmt="html"><saw:text>myOrgArray.push([{v:&quot;@{c04541b4ab6c55dca}&quot;.replace(&quot;  &quot;,&quot; &quot;), f:&quot;@{c04541b4ab6c55dca}&lt;br/&gt;&lt;font color=red&gt;&lt;i&gt;@{c5670b0795553a910}&lt;i&gt;&lt;/font&gt;&quot;.replace(&quot;  &quot;,&quot; &quot;)}, &quot;@{c289248de3b67be1d}&quot;.replace(&quot;--&quot;,&quot;&quot;), &quot;@{c5670b0795553a910}&quot;]);</saw:text></saw:caption></saw:narrative></saw:view><saw:view xsi:type="saw:tableView" name="tableView!2"><saw:edges><saw:edge axis="page" showColumnHeader="true"/><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true"><saw:columnOrder><saw:columnOrderRef columnID="c289248de3b67be1d" direction="ascending"/></saw:columnOrder><saw:edgeLayers><saw:edgeLayer type="column" columnID="cfab9db47378dfcc1"/><saw:edgeLayer type="column" columnID="c04541b4ab6c55dca"/><saw:edgeLayer type="column" columnID="c5670b0795553a910"/><saw:edgeLayer type="column" columnID="c289248de3b67be1d"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view></saw:views></saw:report>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="7ckdgb6f3dianjjs"><sawd:dashboardColumn name="Column 1" duid="c8lb6mu46kte84cr" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 0" collapsible="false" duid="urjk6gc527k5vfqb" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_216">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Example of Standard Gauge Visuals&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 1" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_215">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 4" horizontalLayout="true" collapsible="false" duid="78hdislmoe47d3as" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0"/></saw:displayFormat><sawd:reportView name="Report 5" display="embed" showView="" duid="17r0anarpa2bo40v"><saw:caption><saw:text>Examples of Gauge Views</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/02. Visualizations/Report Views/Gallery/Examples of Gauge Views"/></sawd:reportView><sawd:reportView name="Report 6" display="embed" showView="" duid="moloojrs1790sspc"><saw:caption><saw:text>Examples of Funnel Views</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/02. Visualizations/Report Views/Gallery/Examples of Funnel Views"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

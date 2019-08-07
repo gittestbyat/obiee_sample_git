@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BIEE">
+   <description xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <dataSet name="Acquisition" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>oracle_acquisition.xls</file>
+            <sheetName>Sheet1</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output xmlns="http://xmlns.oracle.com/oxp/xmlp" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="G_2" source="Acquisition" label="G_2">
+    <element name="Category" value="Category" dataType="xsd:string" label="Category" breakOrder="None" fieldOrder="1"/>
+    <element name="Company" value="Company" dataType="xsd:string" label="Company" breakOrder="None" fieldOrder="2"/>
+    <element name="Month" value="Month" dataType="xsd:double" label="Month" breakOrder="None" fieldOrder="3"/>
+    <element name="Year" value="Year" dataType="xsd:double" label="Year" breakOrder="None" fieldOrder="4"/>
+    <element name="URL" value="URL" dataType="xsd:string" label="URL" breakOrder="None" fieldOrder="5"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <lexicals xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <valueSets xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <parameters xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <bursting xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="Acquisition" left="552px" top="20px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

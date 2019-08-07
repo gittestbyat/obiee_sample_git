@@ -1,0 +1,177 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="BISAMPLE">
+   <description>
+      <![CDATA[Data%20Source%20Types--%20BI%20Server,%20Oracle%20DB,%20Excel.%20%0AData%20Structure--%20Master-detail%20hierarchical.%20%0AFeatures--%20Parameters,%20LOVs.]]>
+   </description>
+   <dataProperties>
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets>
+      <dataSet name="Q1-Trns DB" type="complex">
+         <sql dataSourceRef="BISAMPLE">
+            <![CDATA[select	 "SAMP_PRODUCTS_D"."PROD_DSC" as "PROD_DSC",
+	 "SAMP_PRODUCTS_D"."TYPE" as "TYPE",
+	 "SAMP_PRODUCTS_D"."LOB" as "LOB",
+	 "SAMP_PRODUCTS_D"."BRAND" as "BRAND",
+	 "SAMP_OFFICES_D"."OFFICE_DSC" as "OFFICE_DSC",
+	 "SAMP_OFFICES_D"."COMPANY" as "COMPANY",
+	 "SAMP_OFFICES_D"."ORGANIZATION" as "ORGANIZATION",
+	 "SAMP_OFFICES_D"."DEPARTMENT" as "DEPARTMENT",
+	 "SAMP_REVENUE_F"."REVENUE" as "REVENUE",
+	 "SAMP_REVENUE_F"."UNITS" as "UNITS",
+	 "SAMP_REVENUE_F"."ORDER_NUMBER" as "ORDER_NUMBER",
+	 "SAMP_REVENUE_F"."DISCNT_RATE" as "DISCNT_RATE",
+	 "SAMP_REVENUE_F"."ORDER_STATUS" as "ORDER_STATUS",
+	 "SAMP_REVENUE_F"."CURRENCY" as "CURRENCY" 
+ from	"BISAMPLE"."SAMP_OFFICES_D" "SAMP_OFFICES_D",
+	"BISAMPLE"."SAMP_REVENUE_F" "SAMP_REVENUE_F",
+	"BISAMPLE"."SAMP_PRODUCTS_D" "SAMP_PRODUCTS_D" 
+ where   "SAMP_PRODUCTS_D"."PROD_KEY"="SAMP_REVENUE_F"."PROD_KEY"
+ and	 "SAMP_OFFICES_D"."OFFICE_KEY"="SAMP_REVENUE_F"."OFFICE_KEY"]]>
+         </sql>
+      </dataSet>
+      <dataSet name="Q2 - BI Server" type="complex">
+         <sql dataSourceRef="Oracle BI EE">
+            <![CDATA[select	 "Offices"."D1  Office" as "D1  Office",
+	 "Offices"."D2  Department" as "D2  Department",
+	 "Offices"."D3  Organization" as "D3  Organization",
+	 "Offices"."D4  Company" as "D4  Company",
+	 "Base Facts"."1- Revenue" as "1- Revenue",
+	 "Base Facts"."2- Billed Quantity" as "2- Billed Quantity",
+	 "Base Facts"."4- Paid Amount" as "4- Paid Amount",
+	 "Base Facts"."5- Target Revenue" as "5- Target Revenue",
+	 "Orders"."R3  Order Currency" as "R3  Order Currency" 
+ from	"A - Sample Sales"."Orders" "Orders",
+	"A - Sample Sales"."Offices" "Offices",
+	"A - Sample Sales"."Base Facts" "Base Facts" 
+ where 	 "Offices"."D4  Company" IN (:P_COMPANY) 
+   and	 "Orders"."R3  Order Currency" =:P_CURRENCY]]>
+         </sql>
+      </dataSet>
+      <dataSet name="Q3 - Actual Sales" type="complex">
+         <sql dataSourceRef="BISAMPLE">
+            <![CDATA[select	 "SAMP_REVENUE_F"."OFFICE_KEY" as "OFFICE_KEY",
+	 "SAMP_REVENUE_F"."PROD_KEY" as "PROD_KEY",
+	 "SAMP_REVENUE_F"."BILL_MTH_KEY" as "BILL_MTH_KEY",
+	 "SAMP_REVENUE_F"."BILL_QTR_KEY" as "BILL_QTR_KEY",
+	 "SAMP_REVENUE_F"."CURRENCY" as "CURRENCY",
+	 sum("SAMP_REVENUE_F"."REVENUE") as "REVENUE",
+	 sum("SAMP_REVENUE_F"."UNITS") as "UNITS",
+	 "SAMP_PRODUCTS_D"."PROD_DSC" as "PROD_DSC",
+	 "SAMP_OFFICES_D"."OFFICE_DSC" as "OFFICE_DSC" 
+ from	"BISAMPLE"."SAMP_OFFICES_D" "SAMP_OFFICES_D",
+	"BISAMPLE"."SAMP_PRODUCTS_D" "SAMP_PRODUCTS_D",
+	"BISAMPLE"."SAMP_REVENUE_F" "SAMP_REVENUE_F" 
+ where   "SAMP_PRODUCTS_D"."PROD_KEY"="SAMP_REVENUE_F"."PROD_KEY"
+ and	 "SAMP_OFFICES_D"."OFFICE_KEY"="SAMP_REVENUE_F"."OFFICE_KEY"
+  and 	 "SAMP_REVENUE_F"."CURRENCY" =:P_CURRENCY 
+group by "SAMP_REVENUE_F"."OFFICE_KEY", "SAMP_REVENUE_F"."PROD_KEY", "SAMP_REVENUE_F"."BILL_MTH_KEY", "SAMP_REVENUE_F"."BILL_QTR_KEY", "SAMP_REVENUE_F"."CURRENCY", "SAMP_PRODUCTS_D"."PROD_DSC", "SAMP_OFFICES_D"."OFFICE_DSC"]]>
+         </sql>
+      </dataSet>
+      <dataSet name="Q4 - Target Sales" type="complex">
+         <excel dataSourceRef="demo files">
+            <file>SAMP_TARGETS_BIPDEMO.xls</file>
+            <sheetName>MTH_TARGET_SALES</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+      <link name="link" parentGroup="Master" parentColumn="OFFICE" childQuery="Q1-Trns DB" childColumn="&quot;SAMP_OFFICES_D&quot;.&quot;OFFICE_DSC&quot;" childColumnAlias="OFFICE_DSC"/>
+      <link name="link_2" parentGroup="Master" parentColumn="ORDER_CURRENCY" childQuery="Q1-Trns DB" childColumn="&quot;SAMP_REVENUE_F&quot;.&quot;CURRENCY&quot;" childColumnAlias="CURRENCY"/>
+      <link name="link_2" parentGroup="Actual" parentColumn="OFFICE_KEY" childQuery="Q4 - Target Sales" childColumn="OFFICE_KEY"/>
+      <link name="link_4" parentGroup="Actual" parentColumn="PROD_KEY" childQuery="Q4 - Target Sales" childColumn="PROD_KEY"/>
+      <link name="link_5" parentGroup="Actual" parentColumn="BILL_MTH_KEY" childQuery="Q4 - Target Sales" childColumn="BILL_MTH_KEY"/>
+   </dataSets>
+   <output uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="Master" source="Q2 - BI Server" label="BI_SERVER">
+    <element name="OFFICE" value="D1  OFFICE" dataType="xsd:string" label="Office" breakOrder="None" fieldOrder="1"/>
+    <element name="DEPT" value="D2  DEPARTMENT" dataType="xsd:string" label="Department" breakOrder="None" fieldOrder="2"/>
+    <element name="ORG" value="D3  ORGANIZATION" dataType="xsd:string" label="Organization" breakOrder="None" fieldOrder="3"/>
+    <element name="COMPANY" value="D4  COMPANY" dataType="xsd:string" label="Company" breakOrder="None" fieldOrder="4"/>
+    <element name="REVENUE" value="1- REVENUE" dataType="xsd:double" label="Revenue" breakOrder="None" fieldOrder="5"/>
+    <element name="BILLED_QUANTITY" value="2- BILLED QUANTITY" dataType="xsd:integer" label="Billed Quantity " breakOrder="None" fieldOrder="6"/>
+    <element name="PAID_AMOUNT" value="4- PAID AMOUNT" dataType="xsd:double" label="Paid Amount" breakOrder="None" fieldOrder="7"/>
+    <element name="TARGET_REVENUE" value="5- TARGET REVENUE" dataType="xsd:double" label="Target Revenue" breakOrder="None" fieldOrder="8"/>
+    <element name="ORDER_CURRENCY" value="R3  ORDER CURRENCY" dataType="xsd:string" label="Order Currency" breakOrder="None" fieldOrder="9"/>
+    <element name="DISCOUNT" value="${Master.REVENUE-Master.PAID_AMOUNT}" dataType="xsd:double" label="Discounted Amount" breakOrder="None" fieldOrder="0"/>
+    <group name="Detail" source="Q1-Trns DB" label="TRANSACTIONAL_DB">
+      <element name="PROD_DSC" value="PROD_DSC" dataType="xsd:string" label="Product Name" breakOrder="None" fieldOrder="1"/>
+      <element name="TYPE" value="TYPE" dataType="xsd:string" label="Product Type" breakOrder="None" fieldOrder="2"/>
+      <element name="LOB" value="LOB" dataType="xsd:string" label="Product LOB" breakOrder="None" fieldOrder="3"/>
+      <element name="BRAND" value="BRAND" dataType="xsd:string" label="Product Brand" breakOrder="None" fieldOrder="4"/>
+      <element name="OFFICE_DSC" value="OFFICE_DSC" dataType="xsd:string" label="Office Name" breakOrder="None" fieldOrder="5"/>
+      <element name="COMPANY" value="COMPANY" dataType="xsd:string" label="Comapny" breakOrder="None" fieldOrder="6"/>
+      <element name="ORGANIZATION" value="ORGANIZATION" dataType="xsd:string" label="Organization" breakOrder="None" fieldOrder="7"/>
+      <element name="DEPARTMENT" value="DEPARTMENT" dataType="xsd:string" label="Department" breakOrder="None" fieldOrder="8"/>
+      <element name="REVENUE" value="REVENUE" dataType="xsd:integer" label="Revenue" breakOrder="None" fieldOrder="9"/>
+      <element name="UNITS" value="UNITS" dataType="xsd:integer" label="Units" breakOrder="None" fieldOrder="10"/>
+      <element name="ORDER_NUMBER" value="ORDER_NUMBER" dataType="xsd:integer" label="Order Number" breakOrder="None" fieldOrder="11"/>
+      <element name="DISCNT_RATE" value="DISCNT_RATE" dataType="xsd:integer" label="Discount Rate" breakOrder="None" fieldOrder="12"/>
+      <element name="ORDER_STATUS" value="ORDER_STATUS" dataType="xsd:string" label="Order Status" breakOrder="None" fieldOrder="13"/>
+      <element name="CURRENCY" value="CURRENCY" dataType="xsd:string" label="Currency" breakOrder="None" fieldOrder="14"/>
+    </group>
+  </group>
+  <group name="Actual" source="Q3 - Actual Sales" label="ACTUAL_(BI_SERVER)">
+    <element name="OFFICE_KEY" value="OFFICE_KEY" dataType="xsd:integer" label="OFFICE_KEY" breakOrder="None" fieldOrder="1"/>
+    <element name="PROD_KEY" value="PROD_KEY" dataType="xsd:integer" label="PROD_KEY" breakOrder="None" fieldOrder="2"/>
+    <element name="BILL_MTH_KEY" value="BILL_MTH_KEY" dataType="xsd:integer" label="BILL_MTH_KEY" breakOrder="None" fieldOrder="3"/>
+    <element name="BILL_QTR_KEY" value="BILL_QTR_KEY" dataType="xsd:integer" label="BILL_QTR_KEY" breakOrder="None" fieldOrder="4"/>
+    <element name="CURRENCY" value="CURRENCY" dataType="xsd:string" label="CURRENCY" breakOrder="None" fieldOrder="5"/>
+    <element name="REVENUE" value="REVENUE" dataType="xsd:integer" label="REVENUE" breakOrder="None" fieldOrder="6"/>
+    <element name="PROD_DSC" value="PROD_DSC" dataType="xsd:string" label="Product Name" breakOrder="None" fieldOrder="8"/>
+    <element name="OFFICE_DSC" value="OFFICE_DSC" dataType="xsd:string" label="OFFICE_DSC" breakOrder="None" fieldOrder="9"/>
+    <element name="UNITS" value="UNITS" dataType="xsd:integer" label="UNITS" breakOrder="None" fieldOrder="7"/>
+    <group name="Budget" source="Q4 - Target Sales" label="BUDGET_(EXCEL)">
+      <element name="OFFICE_KEY" value="OFFICE_KEY" dataType="xsd:double" label="OFFICE_KEY" breakOrder="None" fieldOrder="1"/>
+      <element name="PROD_KEY" value="PROD_KEY" dataType="xsd:double" label="PROD_KEY" breakOrder="None" fieldOrder="2"/>
+      <element name="REVENUE" value="REVENUE" dataType="xsd:double" label="REVENUE" breakOrder="None" fieldOrder="3"/>
+      <element name="UNITS" value="UNITS" dataType="xsd:double" label="UNITS" breakOrder="None" fieldOrder="4"/>
+      <element name="BILL_MTH_KEY" value="BILL_MTH_KEY" dataType="xsd:double" label="BILL_MTH_KEY" breakOrder="None" fieldOrder="5"/>
+      <element name="BILL_QTR_KEY" value="BILL_QTR_KEY" dataType="xsd:double" label="BILL_QTR_KEY" breakOrder="None" fieldOrder="6"/>
+      <element name="BILL_YR" value="BILL_YR" dataType="xsd:string" label="BILL_YR" breakOrder="None" fieldOrder="7"/>
+      <element name="MTH_NUM" value="MTH_NUM" dataType="xsd:double" label="MTH_NUM" breakOrder="None" fieldOrder="8"/>
+      <element name="QTR_NUM" value="QTR_NUM" dataType="xsd:double" label="QTR_NUM" breakOrder="None" fieldOrder="9"/>
+      <element name="MTH_NAME" value="MTH_NAME" dataType="xsd:string" label="MTH_NAME" breakOrder="None" fieldOrder="10"/>
+      <element name="QTR_NAME" value="QTR_NAME" dataType="xsd:string" label="QTR_NAME" breakOrder="None" fieldOrder="11"/>
+    </group>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers/>
+   <lexicals/>
+   <valueSets>
+      <valueSet id="COMPANY_LOV" cache="true">
+         <sql dataSourceRef="Oracle BI EE">
+            <![CDATA[select	 "Offices"."D4  Company" as "D4  Company" 
+ from	"A - Sample Sales"."Offices" "Offices"]]>
+         </sql>
+      </valueSet>
+      <valueSet id="CURR_LOV">
+         <nvPairs>
+            <nvPair label="EUR" value="EUR"/>
+            <nvPair label="USD" value="USD"/>
+            <nvPair label="AUD" value="AUD"/>
+         </nvPairs>
+      </valueSet>
+   </valueSets>
+   <parameters>
+      <parameter name="P_CURRENCY" defaultValue="USD" dataType="xsd:string">
+         <select label="Currency Type " valueSet="CURR_LOV" multiple="false" all="false" allValue="null"/>
+      </parameter>
+      <parameter name="P_COMPANY" defaultValue="Stockplus Inc." dataType="xsd:string">
+         <select label="Company Name " valueSet="COMPANY_LOV" multiple="false" all="true" allValue="lov"/>
+      </parameter>
+   </parameters>
+   <bursting/>
+   <display>
+<layouts><layout name="DATA_DS" left="15px" top="2px"/><layout name="Q4 - Target Sales" left="280px" top="306px"/><layout name="Q3 - Actual Sales" left="523px" top="153px"/><layout name="Q2 - BI Server" left="257px" top="15px"/><layout name="Q1-Trns DB" left="18px" top="112px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+<groupLink name="link_1" parentGroup="Master" childGroup="Detail"/>
+<groupLink name="link_3" parentGroup="Actual" childGroup="Budget"/>
+</groupLinks>
+</display>
+</dataModel>

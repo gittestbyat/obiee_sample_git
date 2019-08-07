@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawkpi:kpi xmlns:sawkpi="com.siebel.analytics.web/kpi/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawbsc="com.siebel.analytics.web/scorecard/v1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" subjectArea="&quot;A - Sample Sales&quot;" isTrendEnabled="true" ID="2db8a390-0ba3-1000-8567-0ae4eb530000" name="Avg Order Size" xmlVersion="201106170"><sawkpi:kpiPeriod changeToleranceType="UNITS">
+    
+  <saw:column columnID="c8f47ac84112d54af" xsi:type="saw:regularColumn">
+      <saw:columnFormula>
+        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T02 Per Name Month&quot;</sawx:expr>
+      </saw:columnFormula>
+    </saw:column></sawkpi:kpiPeriod><sawkpi:owner id="25AA0C80A36211E28F0FDF357267F21E"/><sawkpi:relatedDocuments>
+    <sawkpi:relatedDocument>
+      <sawkpi:name>Oracle CRM</sawkpi:name>
+      <sawkpi:description/>
+      <sawkpi:link type="URL">
+        <sawkpi:path>http://www.oracle.com/CRM</sawkpi:path>
+      </sawkpi:link>
+    </sawkpi:relatedDocument>
+  </sawkpi:relatedDocuments><sawkpi:dimensions><sawkpi:dimension dimensionID="Products.Products Hierarchy">
+      <saw:column columnID="c7e0d4a3bc3a22412" xsi:type="saw:hierarchicalColumn" dimensionID="H1 Products" hierarchyID="Products Hierarchy" tableName="Products"/>
+    </sawkpi:dimension><sawkpi:dimension dimensionID="&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;"><saw:column xsi:type="saw:regularColumn" columnID="c25dac9bb5ab5f0b8"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T03 Per Name Qtr&quot;</sawx:expr></saw:columnFormula></saw:column></sawkpi:dimension><sawkpi:dimension dimensionID="&quot;Office Regions&quot;.&quot;D50  Region&quot;"><saw:column xsi:type="saw:regularColumn" columnID="cc9f4b76c42eb69e3"><saw:columnFormula><sawx:expr xsi:type="sawx:sqlExpression">&quot;Office Regions&quot;.&quot;D50  Region&quot;</sawx:expr></saw:columnFormula></saw:column></sawkpi:dimension></sawkpi:dimensions><sawkpi:postUpdateBusinessRules><sawkpi:kpiBusinessRule isDefault="true"><sawkpi:businessRule/></sawkpi:kpiBusinessRule></sawkpi:postUpdateBusinessRules><sawkpi:actualValue isWritable="false">
+    <saw:column columnID="c47c5251acf6c9d08" xsi:type="saw:regularColumn">
+      <saw:columnFormula>
+        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Simple Calculations&quot;.&quot;25  Avg Order Size&quot;</sawx:expr>
+      </saw:columnFormula>
+      <saw:displayFormat>
+        <saw:formatSpec suppress="repeat" wrapText="true">
+          <saw:dataFormat xsi:type="saw:currency" currencyTag="int:wrhs" commas="true" negativeType="paren" minDigits="0" maxDigits="0"/>
+        </saw:formatSpec>
+      </saw:displayFormat>
+      <saw:tableHeading>
+        
+      </saw:tableHeading>
+      <saw:columnHeading>
+        
+      </saw:columnHeading>
+    </saw:column>
+  </sawkpi:actualValue><sawkpi:targetSets><sawkpi:targetSet isDefault="true" name="Default">
+      <sawkpi:targetValue isWritable="false">
+        <saw:column columnID="cf29cd3f6ce4210ae" xsi:type="saw:regularColumn">
+          <saw:columnFormula>
+            <sawx:expr xsi:type="sawx:sqlExpression">1000</sawx:expr>
+          </saw:columnFormula>
+          <saw:tableHeading>
+            
+          </saw:tableHeading>
+          <saw:columnHeading>
+            
+          </saw:columnHeading>
+        </saw:column>
+      </sawkpi:targetValue>
+      <sawkpi:thresholds goal="high" treatNoDataAs="NOSTATUS" scoreType="DISCRETE" thresholdType="CUSTOMEXPRESSION">
+        <sawkpi:thresholdRange ID="2da8ec20-0ba3-1000-8567-0ae4eb530000" value="100" assessmentStateKey="OK"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1439">
+              <saw:text>OK</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="greater">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">ago(FILTER(&quot;Simple Calculations&quot;.&quot;25  Avg Order Size&quot; USING (&quot;Time&quot;.&quot;T05 Per Name Year&quot; &gt; &#39;2007&#39;)),1) * 1.05</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="green" icon="fmap:common/kpi_ok_status.gif"/></sawkpi:thresholdRange>
+        <sawkpi:thresholdRange ID="2da91330-0ba3-1000-8567-0ae4eb530000" value="50" assessmentStateKey="WARNING"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1440">
+              <saw:text>WARNING</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="greater">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">ago(FILTER(&quot;Simple Calculations&quot;.&quot;25  Avg Order Size&quot; USING (&quot;Time&quot;.&quot;T05 Per Name Year&quot; &gt; &#39;2007&#39;)),1)</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="yellow" icon="fmap:common/kpi_warning_status.gif"/></sawkpi:thresholdRange>
+        <sawkpi:thresholdRange ID="2da91331-0ba3-1000-8567-0ae4eb530000" value="0" assessmentStateKey="CRITICAL"><sawkpi:statusText>
+            <saw:caption captionID="kcap12832459_1441">
+              <saw:text>CRITICAL</saw:text>
+            </saw:caption>
+          </sawkpi:statusText><sawkpi:rangeExpression>
+            <sawx:expr xsi:type="sawx:comparison" op="lessOrEqual">
+              <sawx:expr xsi:type="sawkpi:kpiSpecExpr" valueType="actualVal"/>
+              <sawx:expr xsi:type="sawx:sqlExpression">ago(FILTER(&quot;Simple Calculations&quot;.&quot;25  Avg Order Size&quot; USING (&quot;Time&quot;.&quot;T05 Per Name Year&quot; &gt; &#39;2007&#39;)),1)</sawx:expr>
+            </sawx:expr>
+          </sawkpi:rangeExpression><sawkpi:iconScheme color="red" icon="fmap:common/kpi_critical_status.gif"/></sawkpi:thresholdRange>
+      </sawkpi:thresholds>
+    </sawkpi:targetSet></sawkpi:targetSets></sawkpi:kpi>

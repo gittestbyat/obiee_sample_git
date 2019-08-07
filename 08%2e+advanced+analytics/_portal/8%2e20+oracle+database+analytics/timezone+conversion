@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="vbihfvqd7ee321b6"><sawd:dashboardColumn name="Column 4" duid="onnnmu9lefhpv08l" canFreeze="true" frozen="false" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2365">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Timezone Conversion
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 2" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2364">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 6" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2361">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="5" paddingRight="5" paddingTop="5" paddingBottom="5" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2366">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt;  This page leverages the timezone conversion capabilities available within Oracle database and makes it available in the dashboard. </sawd:HTML>
+			</sawd:htmlView>
+			
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2368">&lt;font color=darkblue&gt;&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt; Fact table is set up with orders stamped with different timezones. These orders are converted to user specific timezones using Oracle database&#39;s timezone related functions.
+&lt;/br&gt; Eg:- The SQL &lt;i&gt;ORDER_TIMESTAMP at time zone &#39;Europe/London&#39; &lt;/i&gt;  will convert the data into &#39;Europe/London&#39; timezone provided this column is defined as datatype &#39;timestamp with timezone&#39;</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="48crvmiqmsfonasc" break="column" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="gokrmdgl7sf1io5u" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat><sawd:globalFilterView name="GFP 1" path="/shared/08. Advanced Analytics/Oracle DB/Timezone Conversion/Timezone Order Date Prompt" duid="jefumvmhul2ct5gt" scope="dashboardPage"><saw:caption><saw:text>Timezone Order Date Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:globalFilterView name="GFP 0" path="/shared/08. Advanced Analytics/Oracle DB/Timezone Conversion/Timezone Query Prompt" duid="afl132m5dt0mgv0t" scope="dashboardPage"><saw:caption><saw:text>Timezone Query Prompt</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="j6c608sko6oup8tp" layoutType="bestFit"><sawd:dashboardSection name="Section 3" collapsible="false" duid="icjatnegubffakfm" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec wrapText="true" borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="10" paddingBottom="0"/></saw:displayFormat><sawd:reportView name="Report 0" display="embed" showView="" duid="6h7eh3n9bdlkbt33"><saw:caption><saw:text>Orders Timezone (Data Rows with Custom Timezone)</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/08. Advanced Analytics/Oracle DB/Timezone Conversion/Orders Timezone (Data Rows with Custom Timezone)"/></sawd:reportView></sawd:dashboardSection><saw:displayFormat><saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/></saw:displayFormat></sawd:dashboardColumn></sawd:dashboardPage>

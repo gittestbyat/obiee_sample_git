@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c8f35f35a3a08f5e0_d1">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R0  Order Key&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat minDigits="0" maxDigits="0" commas="false" negativeType="minus" xsi:type="saw:number"/>
+					</saw:formatSpec>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_1346">
+						<saw:text>Orders</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					<saw:caption fmt="text" captionID="kcap12832459_1347">
+						<saw:text>Order Number</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c8e09a2d5f496ed39">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R1  Order Status&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_1348">
+						<saw:text>Orders</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					<saw:caption fmt="text" captionID="kcap12832459_1349">
+						<saw:text>Order Status</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cdcaaf9b47123f680">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_1350">
+						<saw:text>Base Facts</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					<saw:caption fmt="text" captionID="kcap12832459_1351">
+						<saw:text>Amount Due</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cb82c6e9d39a38baf">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Calculated Attributes&quot;.&quot;R28  Bill to Cash Days&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="repeat" wrapText="true" noImage="true"/><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="less">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cb82c6e9d39a38baf"/>
+										<sawx:expr xsi:type="xsd:decimal">30</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								<saw:formatSpec image="fmap:meters/light/stop/3g.gif" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="less">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cb82c6e9d39a38baf"/>
+										<sawx:expr xsi:type="xsd:decimal">60</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								<saw:formatSpec image="fmap:meters/light/stop/2y.gif" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="greaterOrEqual">
+										<sawx:expr xsi:type="sawx:columnRefExpr" columnID="cb82c6e9d39a38baf"/>
+										<sawx:expr xsi:type="xsd:decimal">60</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								<saw:formatSpec image="fmap:meters/light/stop/1r.gif" wrapText="true"/>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_1352">
+						<saw:text>Orders</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					<saw:caption fmt="text" captionID="kcap12832459_1353">
+						<saw:text>Days Overdue</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+				<saw:dimensionSelection>
+					<saw:selectionStep stepID="1" type="startWith" category="member">
+						<saw:stepMembers xsi:type="saw:staticMemberGroupDef">
+							<saw:staticMemberGroup>
+								<saw:members xsi:type="saw:specialValueMembers">
+									<saw:value specialValue="all"/>
+								</saw:members>
+							</saw:staticMemberGroup>
+						</saw:stepMembers>
+					</saw:selectionStep>
+				</saw:dimensionSelection>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c24f3bd76f8f94cd5">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&#39;Click to take Action&#39;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="action">
+						<saw:actionLinks showPopupMenuForOneLink="true">
+							<saw:actionLink actionLinkID="c24f3bd76f8f94cd5_al65bdfc69c299b13e">
+								<saw:actionPath>/shared/06. Dashboard Design/Actions/Actions to Navigate to a Web Page/Navigate to Google</saw:actionPath>
+								<saw:caption>
+									<saw:text>Search for company news</saw:text>
+								</saw:caption>
+								<saw:paramMapping>
+									<saw:assign xsi:type="saw:stringAssign" name="1" fixed="true" hidden="false">
+										<saw:mapping xsi:type="saw:contextColumnMappingType">
+											<sawx:columnRefExpr columnID="c84058d3a33d4118f"/>
+										</saw:mapping>
+									</saw:assign>
+								</saw:paramMapping>
+							</saw:actionLink>
+						</saw:actionLinks>
+					</saw:formatSpec><saw:conditionalDisplayFormats>
+						<saw:conditionalDisplayFormat>
+							<saw:formatRule>
+								<saw:condition>
+									<sawx:expr xsi:type="sawx:comparison" op="greater">
+										<sawx:expr xsi:type="sawx:sqlExpression">&quot;Calculated Attributes&quot;.&quot;R28  Bill to Cash Days&quot;</sawx:expr>
+										<sawx:expr xsi:type="xsd:decimal">60</sawx:expr>
+									</sawx:expr>
+								</saw:condition>
+								<saw:formatSpec interaction="action">
+									<saw:actionLinks showPopupMenuForOneLink="true">
+										<saw:actionLink actionLinkID="c24f3bd76f8f94cd5_alc7fb2185c1642cd9">
+											<saw:actionPath>/shared/06. Dashboard Design/Actions/Actions to Invoke Web Services/Initiate Credit Hold</saw:actionPath>
+											<saw:caption>
+												<saw:text>Initiate Credit Hold</saw:text>
+											</saw:caption>
+											<saw:paramMapping>
+												<saw:assign xsi:type="saw:intAssign" name="processOrder_arg1" fixed="false" hidden="false">
+													<saw:value>222</saw:value>
+												</saw:assign>
+												<saw:assign xsi:type="saw:stringAssign" name="processOrder_arg3" fixed="true" hidden="false">
+													<saw:mapping xsi:type="saw:contextColumnMappingType">
+														<sawx:columnRefExpr columnID="c84058d3a33d4118f"/>
+													</saw:mapping>
+												</saw:assign>
+											</saw:paramMapping>
+										</saw:actionLink>
+									</saw:actionLinks>
+								</saw:formatSpec>
+							</saw:formatRule>
+						</saw:conditionalDisplayFormat>
+					</saw:conditionalDisplayFormats>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_1354">
+						<saw:text>Customers</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					<saw:caption fmt="text" captionID="kcap12832459_1355">
+						<saw:text>Action</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c84058d3a33d4118f">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Offices&quot;.&quot;D4  Company&quot;</sawx:expr>
+				</saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true"/>
+				</saw:displayFormat>
+				<saw:tableHeading>
+					<saw:caption fmt="text" captionID="kcap12832459_1356">
+						<saw:text>Offices</saw:text>
+					</saw:caption>
+				</saw:tableHeading>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/>
+					</saw:displayFormat>
+					<saw:caption fmt="text" captionID="kcap12832459_1357">
+						<saw:text>Customer Name</saw:text>
+					</saw:caption>
+				</saw:columnHeading>
+			</saw:column>
+		</saw:columns>
+		<saw:filter>
+			<sawx:expr xsi:type="sawx:comparison" op="equal">
+				<sawx:expr xsi:type="sawx:sqlExpression">&quot;Orders&quot;.&quot;R1  Order Status&quot;</sawx:expr>
+				<sawx:expr xsi:type="xsd:string">4-Billed</sawx:expr>
+			</sawx:expr>
+		</saw:filter>
+		<saw:columnOrder/>
+	</saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1">
+			<saw:cvTable>
+				<saw:cvRow>
+					<saw:cvCell viewName="titleView!1">
+						<saw:displayFormat>
+							<saw:formatSpec/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="tableView!1">
+						<saw:displayFormat>
+							<saw:formatSpec hAlign="left"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+				<saw:cvRow>
+					<saw:cvCell viewName="htmlview!1">
+						<saw:displayFormat>
+							<saw:formatSpec hAlign="left" vAlign="bottom"/>
+						</saw:displayFormat>
+					</saw:cvCell>
+				</saw:cvRow>
+			</saw:cvTable>
+		</saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" logoUrl="fmap:images/report_medicalResearch.jpg"><saw:title>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#333366" wrapText="true"/>
+				</saw:displayFormat>
+			</saw:title><saw:logoFormat>
+				<saw:displayFormat/>
+			</saw:logoFormat><saw:createdTime>
+				<saw:displayFormat>
+					<saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat>
+			</saw:createdTime><saw:displayFormat>
+				<saw:formatSpec borderColor="#EDE8CA" borderPosition="8" borderStyle="thick"/>
+			</saw:displayFormat></saw:view>
+		<saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1">
+			<saw:edges>
+				
+				
+				
+				
+			<saw:edge axis="page" showColumnHeader="true">
+					<saw:edgeLayers/>
+				</saw:edge><saw:edge axis="section">
+					<saw:edgeLayers/>
+				</saw:edge><saw:edge axis="row" showColumnHeader="false">
+					<saw:edgeLayers>
+						
+						
+						
+						
+					<saw:edgeLayer type="column" columnID="c24f3bd76f8f94cd5"/><saw:edgeLayer columnID="c8f35f35a3a08f5e0_d1" type="column"/><saw:edgeLayer type="column" columnID="c8e09a2d5f496ed39"/><saw:edgeLayer type="column" columnID="cb82c6e9d39a38baf"/></saw:edgeLayers>
+				</saw:edge><saw:edge axis="column">
+					<saw:edgeLayers/>
+				</saw:edge></saw:edges>
+		</saw:view>
+		<saw:view xsi:type="saw:tableView" name="tableView!1">
+			<saw:edges>
+				<saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers>
+						<saw:edgeLayer type="column" columnID="c84058d3a33d4118f"/>
+						<saw:edgeLayer type="column" columnID="c8f35f35a3a08f5e0_d1"/>
+						<saw:edgeLayer type="column" columnID="c8e09a2d5f496ed39"/>
+						<saw:edgeLayer type="column" columnID="cdcaaf9b47123f680"/>
+						<saw:edgeLayer type="column" columnID="cb82c6e9d39a38baf"/>
+						<saw:edgeLayer type="column" columnID="c24f3bd76f8f94cd5"/>
+					</saw:edgeLayers>
+				</saw:edge>
+				<saw:edge axis="column"/>
+			</saw:edges>
+		</saw:view>
+		<saw:view xsi:type="saw:htmlview" name="htmlview!1">
+			<saw:staticText>
+				<saw:caption fmt="html" captionID="kcap12832459_1345">
+					<saw:text>Applying a Credit Hold is recommended for customers with payments overdue by more than 60 days.</saw:text>
+				</saw:caption>
+			</saw:staticText>
+			<saw:displayFormat>
+				<saw:formatSpec style="background-color: red"/>
+			</saw:displayFormat>
+		</saw:view>
+	</saw:views>
+</saw:report>

@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<dataModel version="2.0" xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xdm="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" defaultDataSourceRef="demo">
+   <description xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <![CDATA[undefined]]>
+   </description>
+   <dataProperties xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <property name="include_parameters" value="true"/>
+      <property name="include_null_Element" value="false"/>
+      <property name="include_rowsettag" value="false"/>
+      <property name="xml_tag_case" value="upper"/>
+   </dataProperties>
+   <dataSets xmlns="http://xmlns.oracle.com/oxp/xmlp">
+      <dataSet name="Default" type="complex">
+         <excel dataSourceRef="xdo:local">
+            <file>Stanford_Event_List.xls</file>
+            <sheetName>Stanford_Event_List.csv</sheetName>
+            <tableName/>
+         </excel>
+      </dataSet>
+   </dataSets>
+   <output xmlns="http://xmlns.oracle.com/oxp/xmlp" uniqueRowName="false">
+      <nodeList name="data-structure">
+         <dataStructure tagName="DATA_DS">
+  <group name="G_1" source="Default" label="G_1">
+    <element name="Category" value="Category" dataType="xsd:string" label="Category" breakOrder="None" fieldOrder="1"/>
+    <element name="Sub_Category" value="Sub_Category" dataType="xsd:string" label="Sub_Category" breakOrder="None" fieldOrder="2"/>
+    <element name="Class_Name" value="Class Name" dataType="xsd:string" label="Class_Name" breakOrder="None" fieldOrder="3"/>
+    <element name="Location" value="Location" dataType="xsd:string" label="Location" breakOrder="None" fieldOrder="4"/>
+    <element name="Start_Time" value="Start_Time" dataType="xsd:string" label="Start_Time" breakOrder="None" fieldOrder="5"/>
+    <element name="Img_URL" value="Img_URL" dataType="xsd:string" label="Img_URL" breakOrder="None" fieldOrder="7"/>
+    <element name="Description" value="Description" dataType="xsd:string" label="Description" breakOrder="None" fieldOrder="6"/>
+  </group>
+ </dataStructure>
+      </nodeList>
+   </output>
+   <eventTriggers xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <lexicals xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <valueSets xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <parameters xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <bursting xmlns="http://xmlns.oracle.com/oxp/xmlp"/>
+   <display>
+<layouts><layout name="DATA_DS" left="28px" top="14px"/><layout name="Default" left="274px" top="17px"/><layout name="dsModalMask" left="" top=""/></layouts><groupLinks>
+</groupLinks>
+</display>
+</dataModel>

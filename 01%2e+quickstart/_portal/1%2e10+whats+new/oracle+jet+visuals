@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="kl5ojdhuk98to9kk"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="jpl63776f7anr80q" layoutType="bestFit"><sawd:dashboardSection layoutType="specificSize" name="Section 2" collapsible="false" duid="77n98lmebikff5r8" showSectionTitle="false"><saw:displayFormat><saw:formatSpec backgroundColor="#f7f7f7" wrapText="true" borderPosition="12" width="1100" borderColor="#EEEEEE"/></saw:displayFormat><sawd:htmlView name="HTML 3" duid="vnq8f1tm9mb0vaq4"><sawd:HTML fmt="html">&lt;font size=3 color=#000066&gt;See multiple examples of how to use some of the Oracle JET library functions to visualize data from OBIEE.[br/]
+[br/]
+&lt;a class=new href=&quot;saw.dll?Dashboard&amp;PortalPath=/shared/02.%20Visualizations/_portal/2.30%20JS%20Based%20Visuals&amp;Page=Overview&quot;&gt;
+Visit this Dashboard for complete content &lt;/a&gt;
+&lt;/font&gt;
+
+
+
+</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection layoutType="bestFit" name="Section 0" duid="79ctgjdd7lemdd48" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:linkView name="Link 0" target="_self" type="report" destination="" layout="captionLeft" duid="6l2u7g0fmc2ffak5"><sawd:linkCaption/><sawd:image src="cmap:/shared/01. QuickStart/New Features/img/606_OJET.jpg"/></sawd:linkView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

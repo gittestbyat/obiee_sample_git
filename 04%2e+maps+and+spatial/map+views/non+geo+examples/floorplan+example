@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;L - Geo Loc&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c750529f6156bd92e">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Floor Plan&quot;.&quot;IBX&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c877ce9c9eedc6764">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Floor Plan&quot;.&quot;Cage Number&quot;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Floor Plan</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Cage No</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c968e8e2f71466a51">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Floor Plan&quot;.&quot;KVA per Cab&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               
+               <saw:formatSpec suppress="repeat" wrapText="true" width="40"/><saw:conditionalDisplayFormats>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="greater">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="c968e8e2f71466a51"/>
+                              <sawx:expr xsi:type="xsd:decimal">100</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec image="fmap:meters/icon/rc/red.gif" wrapText="true" imagePlacement="right"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf7299b06b2cbf8d0">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Floor Plan&quot;.&quot;Cross Connect Count&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               
+               <saw:formatSpec suppress="repeat" wrapText="true" width="40"/><saw:conditionalDisplayFormats>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="greater">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="cf7299b06b2cbf8d0"/>
+                              <sawx:expr xsi:type="xsd:decimal">250</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec backgroundColor="#FF9933" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="between">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="cf7299b06b2cbf8d0"/>
+                              <sawx:expr xsi:type="xsd:decimal">150</sawx:expr>
+                              <sawx:expr xsi:type="xsd:decimal">250</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec backgroundColor="#FFCC99" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="between">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="cf7299b06b2cbf8d0"/>
+                              <sawx:expr xsi:type="xsd:decimal">50</sawx:expr>
+                              <sawx:expr xsi:type="xsd:decimal">150</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec backgroundColor="#FFFF99" wrapText="true"/></saw:formatRule></saw:conditionalDisplayFormat>
+                  <saw:conditionalDisplayFormat>
+                     <saw:formatRule>
+                        <saw:condition>
+                           <sawx:expr xsi:type="sawx:comparison" op="less">
+                              <sawx:expr xsi:type="sawx:columnRefExpr" columnID="cf7299b06b2cbf8d0"/>
+                              <sawx:expr xsi:type="xsd:decimal">50</sawx:expr></sawx:expr></saw:condition>
+                        <saw:formatSpec backgroundColor="#FFFFFF" wrapText="true" fontColor="#000000"/></saw:formatRule></saw:conditionalDisplayFormat></saw:conditionalDisplayFormats></saw:displayFormat>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="2">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1" colSpan="2">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="tableView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell>
+               <saw:cvCell viewName="mapview!2"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="none"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges><saw:edge axis="page" showColumnHeader="true"><saw:edgeLayers><saw:edgeLayer type="column" columnID="c750529f6156bd92e" uiTableName="Floor Plan"/></saw:edgeLayers></saw:edge><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers><saw:edgeLayer type="column" columnID="c877ce9c9eedc6764" uiTableName="Floor Plan"/><saw:edgeLayer type="column" columnID="c968e8e2f71466a51" uiTableName="Floor Plan"><saw:headerFormat><saw:displayFormat><saw:formatSpec fontSize="10" wrapText="true"/></saw:displayFormat></saw:headerFormat></saw:edgeLayer><saw:edgeLayer type="column" columnID="cf7299b06b2cbf8d0" uiTableName="Floor Plan"><saw:headerFormat><saw:displayFormat><saw:formatSpec fontSize="10" wrapText="true"/></saw:displayFormat></saw:headerFormat></saw:edgeLayer></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges></saw:view>
+      
+      <saw:view xsi:type="saw:mapview" name="mapview!2">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__AI_LA1_6F_FLOORPLAN__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="true"/>
+               <saw:overview display="true" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="true"/>
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="layer">
+            <saw:boundingLayer layerID="l0"/>
+            <saw:mapCenter x="-1700.5553191173688" y="-1789.3455" size="2762.3298828125" srid="262158" zoomLevel="0" xUnitPixels="0.1882468865270196" yUnitPixels="0.1882468865270196"/>
+            <saw:boundingBox coords="-3719.1810027111187,-3165.1982685546873,312.75819162481866,-408.18055859375"/></saw:viewportInfo>
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__AL_LA1_6F_FLOORPLAN__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="true"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c877ce9c9eedc6764"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v1" xsi:type="saw:colorScheme">
+                     <saw:varyFillColor binType="custom" numBins="5" allowThresholdEdit="false">
+                        <saw:columnRef columnID="c968e8e2f71466a51"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>0 - 5</saw:text></saw:caption>
+                              <saw:g class="color" fill="#199403"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">0</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">5</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>5 - 10</saw:text></saw:caption>
+                              <saw:g class="color" fill="#8cc606"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">5</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">10</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>10 - 20</saw:text></saw:caption>
+                              <saw:g class="color" fill="#f8be0b"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">10</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">20</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>20 - 50</saw:text></saw:caption>
+                              <saw:g class="color" fill="#d1450b"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">20</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">50</sawx:expr></saw:rangeHigh></saw:rampItem>
+                           <saw:rampItem id="4">
+                              <saw:caption>
+                                 <saw:text>50 - 150</saw:text></saw:caption>
+                              <saw:g class="color" fill="#a90a25"/>
+                              <saw:rangeLow>
+                                 <sawx:expr xsi:type="xsd:double">50</sawx:expr></saw:rangeLow>
+                              <saw:rangeHigh>
+                                 <sawx:expr xsi:type="xsd:double">150</sawx:expr></saw:rangeHigh></saw:rampItem></saw:rampStyle></saw:varyFillColor>
+                     <saw:g class="color" fill="#3243ae"/>
+                     <saw:tooltip/></saw:visual>
+                  <saw:visual visualID="v0" xsi:type="saw:variableMarker" subClass="polygon">
+                     <saw:g class="marker" fill="#3E6CB8">
+                        <saw:circle radius="50"/></saw:g>
+                     <saw:varySize binType="continuous" numBins="1" startSize="10" endSize="78">
+                        <saw:columnRef columnID="cf7299b06b2cbf8d0"/></saw:varySize>
+                     <saw:tooltip/></saw:visual></saw:visuals></saw:spatialLayer>
+            </saw:spatialLayers>
+         <saw:canvasFormat width="760" height="520" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true"/>
+         <saw:formatPanel width="186" height="751"/></saw:view></saw:views></saw:report>

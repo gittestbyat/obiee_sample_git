@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="auu9stlj1phsgd47">
+	<sawd:dashboardColumn name="Column 2" duid="onnnmu9lefhpv08l" canFreeze="true" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="daht98r584aiqq2f" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="minimumSize">
+			<saw:displayFormat>
+				<saw:formatSpec borderColor="#EFEDDF" borderPosition="8" vAlign="bottom" height="0" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="false"/>
+			</saw:displayFormat>
+			<sawd:htmlView name="HTML 0" duid="al3aq64l1co3ogrl">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1947">&lt;br&gt;&lt;font size=2 color = darkblue&gt;&lt;b&gt;
+&lt;img src=&quot;res/sk_blafp/answers/stepBullet.png&quot;&gt;
+Value based Hierarchy Alternative Aggregations
+&lt;/b&gt;&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_1946">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView>
+		</sawd:dashboardSection><saw:displayFormat>
+			<saw:formatSpec paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" vAlign="middle"/>
+		</saw:displayFormat><sawd:dashboardSection name="Section 1" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" horizontalLayout="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_1942">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			<sawd:htmlView name="HTML 1" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1948">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Description :&lt;/b&gt;&lt;/font&gt; Oracle BIEE can leverage value-based hierarchies to aggregate metric information in distinct ways; either using a rollup aggregation at each level or using an individual contribution for each level.
+The three reports in this example show three distinct examples of hierarchy based aggregations. Flat aggregation only shows the metric value for each individual contribution (records in the fact table that have this individual value key). Rollup aggregations cumulate the individual value plus all the cumulated sum of it&#39;s descendants values. The distance based aggregation indicates the value for each individual broken down by &#39;generation distance&#39; to the individual.</sawd:HTML>
+			</sawd:htmlView>
+			<sawd:htmlView name="HTML 3" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_1950">&lt;font color=darkblue&gt;
+&lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot;&gt;&lt;b&gt; Setup :&lt;/b&gt;&lt;/font&gt;  Hierarchical aggregation rules are set up directly in the logical layer of an Oracle BIEE RPD, by leveraging distinct physical aliases of the fact table.</sawd:HTML>
+			</sawd:htmlView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+	<sawd:dashboardColumn name="Column 0" duid="qtgamb0hqhqc9rb6" break="column" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 2" duid="i1lnusgagdcm0ojj" showSectionTitle="false" collapsible="false" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="10" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 2" display="new" showView="" links="" duid="72dutl9ap75cc969"><saw:caption captionID="kcap12832459_1943">
+					<saw:text>3 - Value Based Hier - Rollup Aggr by Distance</saw:text>
+				</saw:caption>
+				
+				<sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Logical Aggregations/Value Base Hier/3 - Value Based Hier - Rollup Aggr by Distance"/>
+			</sawd:reportView>
+		</sawd:dashboardSection><sawd:dashboardSection name="Section 3" duid="hj3bau11a0brb4qu" showSectionTitle="false" collapsible="false" horizontalLayout="true" layoutType="bestFit">
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="none" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true"/>
+			</saw:displayFormat>
+			<sawd:reportView name="Report 3" display="embed" showView="" links="" duid="lii7mopco8mvkuvj"><saw:caption captionID="kcap12832459_1944">
+					<saw:text>1 - Value Based Hier - Flat Aggregation</saw:text>
+				</saw:caption>
+				
+				<sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Logical Aggregations/Value Base Hier/1 - Value Based Hier - Flat Aggregation"/>
+			</sawd:reportView>
+			<sawd:reportView name="Report 4" display="embed" showView="" links="" duid="lj0664abk2f61c7j"><saw:caption captionID="kcap12832459_1945">
+					<saw:text>2 - Value Based Hier - Rollup Aggregation</saw:text>
+				</saw:caption>
+				
+				<sawd:reportRef type="catalog" path="/shared/07. Semantic Layer Design/Logical Aggregations/Value Base Hier/2 - Value Based Hier - Rollup Aggregation"/>
+			</sawd:reportView>
+		</sawd:dashboardSection></sawd:dashboardColumn>
+</sawd:dashboardPage>

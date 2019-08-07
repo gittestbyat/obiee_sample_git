@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;L - Geo Loc&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c199ab0f09e0bd2ce">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Blocks&quot;.&quot;Block Id&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:switchGroupColumn" columnID="cb9bf33470113e8d8" choice="c3b11b38e54f459ad">
+            <saw:choices>
+               <saw:choice>
+                  <saw:column xsi:type="saw:regularColumn" columnID="cc30a5699ee8f98e9">
+                     <saw:columnFormula>
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Blocks&quot;.&quot;Households&quot;</sawx:expr></saw:columnFormula></saw:column></saw:choice>
+               <saw:choice>
+                  <saw:column xsi:type="saw:regularColumn" columnID="c3b11b38e54f459ad">
+                     <saw:columnFormula>
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Blocks&quot;.&quot;Total Pop&quot;</sawx:expr></saw:columnFormula></saw:column></saw:choice>
+               <saw:choice>
+                  <saw:column xsi:type="saw:regularColumn" columnID="cc84234baf37bc0e2">
+                     <saw:columnFormula>
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Blocks&quot;.&quot;Med Household Income&quot;</sawx:expr></saw:columnFormula></saw:column></saw:choice>
+               <saw:choice>
+                  <saw:column xsi:type="saw:regularColumn" columnID="c0460162653c547cc">
+                     <saw:columnFormula>
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Population&quot;.&quot;Pop Male&quot;</sawx:expr></saw:columnFormula></saw:column></saw:choice>
+               <saw:choice>
+                  <saw:column xsi:type="saw:regularColumn" columnID="c3ace7cbb0c39f4a7">
+                     <saw:columnFormula>
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Population&quot;.&quot;Pop Female&quot;</sawx:expr></saw:columnFormula></saw:column></saw:choice>
+               <saw:choice>
+                  <saw:column xsi:type="saw:regularColumn" columnID="c919792e5d9b45971">
+                     <saw:columnFormula>
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Population&quot;.&quot;Pop Female Ge25&quot;</sawx:expr></saw:columnFormula></saw:column></saw:choice>
+               <saw:choice>
+                  <saw:column xsi:type="saw:regularColumn" columnID="cd49b9c9a5f87f8a0">
+                     <saw:columnFormula>
+                        <sawx:expr xsi:type="sawx:sqlExpression">&quot;Population&quot;.&quot;Pop Male Ge25&quot;</sawx:expr></saw:columnFormula></saw:column></saw:choice></saw:choices></saw:column></saw:columns></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell>
+               <saw:cvCell viewName="columnSelectorView!1"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="mapview!1" colSpan="2"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" startedDisplay="dateTime" includeName="false"><saw:logoFormat>
+            <saw:displayFormat/></saw:logoFormat><saw:createdTime>
+            <saw:displayFormat>					
+               
+               
+               
+               <saw:formatSpec fontStyle="italic" wrapText="true" fontColor="#666666"/>
+				</saw:displayFormat></saw:createdTime><saw:displayFormat>				
+            
+            
+            
+            <saw:formatSpec wrapText="true" borderPosition="8" borderColor="#666666" borderStyle="single" paddingBottom="3"/></saw:displayFormat><saw:title>
+            <saw:caption fmt="text">
+               <saw:text>SF Blocks Demographics - Thematic bgmap</saw:text></saw:caption></saw:title></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c199ab0f09e0bd2ce"/>
+                  <saw:edgeLayer type="column" columnID="cb9bf33470113e8d8"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!1">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_Sample__OBIEE_WORLD_MAP_THEMATIC__~v2"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="true"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="true"/>
+                  <saw:zoomOut display="true"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="true"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="true"/>
+               <saw:overview display="true" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="true"/>
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:boundingLayer layerID="l0"/>
+            <saw:mapCenter x="-13629259.0709154" y="4519355.88186757" size="22166.737823486328" zoomLevel="11" srid="54004" yUnitPixels="0.02616532954097885" xUnitPixels="0.02616532954097885"/>
+            <saw:boundingBox coords="-13645501.939148126,4508310.7314693155,-13613054.42119616,4530439.250779313"/></saw:viewportInfo>
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__NTC_POI_RESTAURANT__~v0" class="omv_predefined_layer" layerID="l1" display="false">
+               <saw:layerLabelFormat display="false"/></saw:spatialLayer><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__NTC_POI_PARKING_LOT__~v0" class="omv_predefined_layer" layerID="l2" display="false">
+               <saw:layerLabelFormat display="false"/></saw:spatialLayer><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__NTC_POI_ATM__~v1" class="omv_predefined_layer" layerID="l4" display="false">
+               <saw:layerLabelFormat display="false"/></saw:spatialLayer><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__NTC_POI_BANK__~v1" class="omv_predefined_layer" layerID="l3" display="false">
+               <saw:layerLabelFormat display="false"/></saw:spatialLayer><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__BLOCK_GROUP__~v0" class="omv_predefined_layer" layerID="l0" display="true">
+               <saw:layerLabelFormat display="false"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c199ab0f09e0bd2ce"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v1" xsi:type="saw:colorScheme" display="false">
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="percentile" numBins="10" allowThresholdEdit="false">
+                        <saw:columnRef columnID="cb9bf33470113e8d8"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>First Tenth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#ffff66" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Second Tenth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#d8fc63" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>Third Tenth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#8cf585" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>Fourth Tenth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#00eba8" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="4">
+                              <saw:caption>
+                                 <saw:text>Fifth Tenth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#00dcc4" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="5">
+                              <saw:caption>
+                                 <saw:text>Sixth Tenth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#00c9d7" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="6">
+                              <saw:caption>
+                                 <saw:text>Seventh Tenth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#00b1e0" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="7">
+                              <saw:caption>
+                                 <saw:text>Eight Tenth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#6595dd" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="8">
+                              <saw:caption>
+                                 <saw:text>Ninth Tenth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#a758af" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="9">
+                              <saw:caption>
+                                 <saw:text>Last Tenth</saw:text></saw:caption>
+                              <saw:g class="color" fill="#97395f" fillOpacity="229"/></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual>
+                  <saw:visual visualID="v0" xsi:type="saw:colorScheme" display="true">
+                     <saw:varyFillColor binType="continuous" numBins="4" allowThresholdEdit="false">
+                        <saw:columnRef columnID="cb9bf33470113e8d8"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:g class="color" fill="#003e70" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:g class="color" fill="#e9f7fb" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:g class="color" fill="#fff1f1" fillOpacity="229"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:g class="color" fill="#7b0000" fillOpacity="229"/></saw:rampItem></saw:rampStyle></saw:varyFillColor>
+                     <saw:g class="color" fill="#3243ae"/>
+                     <saw:tooltip/></saw:visual></saw:visuals></saw:spatialLayer>
+            
+            
+            
+            
+            </saw:spatialLayers>
+         <saw:canvasFormat width="550" height="580" enableWrapAround="false"/>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:formatPanel width="153" height="740"/></saw:view>
+      <saw:view xsi:type="saw:columnSelectorView" name="columnSelectorView!1" labelPosition="left" goButton="false">
+         <saw:selector prompt="true" columnID="cb9bf33470113e8d8">
+            <saw:label>
+               <saw:caption>
+                  <saw:text>Select Metric</saw:text></saw:caption></saw:label></saw:selector></saw:view></saw:views></saw:report>

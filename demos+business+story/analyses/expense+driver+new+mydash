@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+	<saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;F - Essbase Interaction&quot;" withinHierarchy="true">
+		<saw:columns>
+			<saw:column xsi:type="saw:regularColumn" columnID="c185afcab59baecce">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Channels&quot;.&quot;Gen1,Channels&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="none" visibility="hidden"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cfafc360f5c15acf7">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Product&quot;.&quot;Gen1,Product&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="none" visibility="hidden"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="ca60eb2a8c41dabc6">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Customers&quot;.&quot;Gen1,Customers&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="none" visibility="hidden"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c957c67f1b0ba69ad">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Scenario&quot;.&quot;Gen1,Scenario&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="none" visibility="hidden"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c349635497eea42f2">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Year&quot;.&quot;History&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="suppress" wrapText="true" interaction="none" visibility="hidden"/></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec interaction="none"/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="c2252aba7e7fcc053">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&quot;Basic&quot;.&quot;Expense Adjustment&quot;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat xsi:type="saw:number" minDigits="2" maxDigits="2" commas="true" negativeType="minus"/></saw:formatSpec></saw:displayFormat>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+			<saw:column xsi:type="saw:regularColumn" columnID="cedee374b44baaade">
+				<saw:columnFormula>
+					<sawx:expr xsi:type="sawx:sqlExpression">&#39;&lt;form name=&quot;input&quot; action=&quot;http://demodrive:8001/essbasecalc/writeback.jsp&quot;&gt;  &lt;input type=&quot;text&quot; name=&quot;p_Value&quot; size=&quot;10&quot;/&gt; &lt;input type=&quot;hidden&quot; name=&quot;p_User&quot; value=&quot;admin&quot; /&gt; &lt;input type=&quot;hidden&quot; name=&quot;p_Password&quot; value=&quot;password&quot; /&gt; &lt;input type=&quot;hidden&quot; name=&quot;p_olapSvrName&quot; value=&quot;&#39;||VALUEOF(NQ_SESSION.ESSB_SERVER)||&#39;&quot; /&gt; &lt;input type=&quot;hidden&quot; name=&quot;p_Provider&quot; value=&quot;http://&#39;||VALUEOF(NQ_SESSION.ESSB_SERVER)||&#39;:19000/aps/JAPI&quot; /&gt; &lt;input type=&quot;hidden&quot; name=&quot;p_Application&quot; value=&quot;BISAMPL2&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;p_Cube&quot; value=&quot;Basic&quot; /&gt; &lt;input type=&quot;hidden&quot; name=&quot;p_Redirect&quot; value=&quot;http://demodrive:8001/analytics/saw.dll?dashboard&amp;PortalPath=%2Fusers%2Fweblogic%2F_portal&amp;page=Expense Analysis&quot; /&gt; &lt;input type=&quot;submit&quot; value=&quot;Update&quot; /&gt; &lt;input type=&quot;hidden&quot; name=&quot;p_Measures&quot; value=&quot;Expense Adjustment&quot; /&gt;  &lt;input type=&quot;hidden&quot; name=&quot;p_Year&quot; value=&quot;&#39;||&quot;Year&quot;.&quot;History&quot;||&#39;&quot;/&gt;  &lt;input type=&quot;hidden&quot; name=&quot;p_Customers&quot; value=&quot;&#39;||Customers.&quot;Gen1,Customers&quot;||&#39;&quot;/&gt;  &lt;input type=&quot;hidden&quot; name=&quot;p_Product&quot; value=&quot;&#39;||Product.&quot;Gen1,Product&quot;||&#39;&quot;/&gt;  &lt;input type=&quot;hidden&quot; name=&quot;p_Scenario&quot; value=&quot;&#39;||Scenario.&quot;Gen1,Scenario&quot;||&#39;&quot;/&gt;  &lt;input type=&quot;hidden&quot; name=&quot;p_Channels&quot; value=&quot;&#39;||Channels.&quot;Gen1,Channels&quot;||&#39;&quot;/&gt;  &lt;/form&gt;&#39;</sawx:expr></saw:columnFormula>
+				<saw:displayFormat>
+					<saw:formatSpec suppress="repeat" wrapText="true">
+						<saw:dataFormat xsi:type="saw:text" textFormat="html"/></saw:formatSpec></saw:displayFormat>
+				<saw:tableHeading/>
+				<saw:columnHeading>
+					<saw:displayFormat>
+						<saw:formatSpec/></saw:displayFormat>
+					<saw:caption fmt="html">
+						<saw:text>Writeback</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns></saw:criteria>
+	<saw:views currentView="0">
+		<saw:view xsi:type="saw:compoundView" name="compoundView!1"><saw:cvTable><saw:cvRow><saw:cvCell viewName="narrativeView!1"/></saw:cvRow></saw:cvTable></saw:view>
+		<saw:view xsi:type="saw:titleView" name="titleView!1"/>
+		<saw:view xsi:type="saw:tableView" name="tableView!3">
+			<saw:edges><saw:edge axis="page" showColumnHeader="true"/>
+				<saw:edge axis="section"/>
+				<saw:edge axis="row" showColumnHeader="true">
+					<saw:edgeLayers><saw:edgeLayer type="column" columnID="c185afcab59baecce"/>
+						<saw:edgeLayer type="column" columnID="cfafc360f5c15acf7"/>
+						<saw:edgeLayer type="column" columnID="ca60eb2a8c41dabc6"/>
+						<saw:edgeLayer type="column" columnID="c957c67f1b0ba69ad"/>
+						<saw:edgeLayer type="column" columnID="c349635497eea42f2"/>
+						<saw:edgeLayer type="column" columnID="c2252aba7e7fcc053"/>
+						<saw:edgeLayer type="column" columnID="cedee374b44baaade"/></saw:edgeLayers></saw:edge>
+				<saw:edge axis="column"/></saw:edges></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!1"><saw:narrative rowCount="1"><saw:caption fmt="html"><saw:text>Current Adjustment is : [b]@{c2252aba7e7fcc053}[/b][br/]
+Change it to : @{cedee374b44baaade}[br/]</saw:text></saw:caption></saw:narrative><saw:displayFormat><saw:formatSpec/></saw:displayFormat></saw:view><saw:view xsi:type="saw:htmlview" name="htmlview!1"><saw:staticText><saw:caption fmt="html"><saw:text>&lt;font color=darkred&gt;
+[b]Troubleshooting : make sure the formula of the Writeback column in this report includes the correct IP address of your WebLogic and OBIEE servers hosts. Edit the report to fix this incase writeback action is not working.[/b]
+&lt;font/&gt;</saw:text></saw:caption></saw:staticText></saw:view><saw:view xsi:type="saw:narrativeView" name="narrativeView!2"><saw:narrative><saw:caption fmt="text"><saw:text>Current Adjustment is : [b]@{c2252aba7e7fcc053}[/b][br/]
+Change it to : @{cedee374b44baaade}[br/]</saw:text></saw:caption></saw:narrative></saw:view></saw:views><saw:prompts scope="report" subjectArea="&quot;F - Essbase Interaction&quot;"/></saw:report>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlVersion="201201160">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="c8de412a137cec7b2">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Regions&quot;.&quot;R53  State Province&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="suppress" wrapText="true"/></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>From Sample Sales SA</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec fontColor="#FFFFFF" backgroundColor="#666666" wrapText="true" borderStyle="double"/></saw:displayFormat></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>R53  State Province</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c0d3626124b156d65">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R62  Geo Ctry State Name&quot;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>From Sample Sales SA</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>R62  Geo Ctry State Name</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf24489c32fee2d0c">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:currency" minDigits="0" maxDigits="0" commas="true" negativeType="minus" currencyTag="int:$"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>From Sample Sales SA</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>1- Revenue</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c08cb41bdc1087e27">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;2- Billed Quantity&quot;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>From Sample Sales SA</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>2- Billed Quantity</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cd28bff7fe9627959">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">XSA(&#39;prodney&#39;.&#39;State Demographics&#39;).&quot;Columns&quot;.&quot;Household Income&quot;</sawx:expr></saw:columnFormula>
+            <saw:displayFormat>
+               <saw:formatSpec suppress="repeat" wrapText="true">
+                  <saw:dataFormat xsi:type="saw:currency" minDigits="0" maxDigits="0" commas="true" negativeType="minus" currencyTag="int:$"/></saw:formatSpec></saw:displayFormat>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>From Spreadsheet</saw:text></saw:caption>
+               <saw:displayFormat>
+                  <saw:formatSpec fontColor="#FFFFFF" backgroundColor="#666699" fontStyle="bold" wrapText="true"/></saw:displayFormat></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat>
+               <saw:caption fmt="text">
+                  <saw:text>Household Income</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cfa569a9fc48c642e">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">XSA(&#39;prodney&#39;.&#39;State Demographics&#39;).&quot;Columns&quot;.&quot;Population&quot;</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>From Spreadsheet</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>Population</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>
+      <saw:filter>
+         <sawx:expr xsi:type="sawx:list" op="beginsWith">
+            <sawx:expr xsi:type="sawx:sqlExpression">&quot;Ship To Geo Codes&quot;.&quot;R62  Geo Ctry State Name&quot;</sawx:expr>
+            <sawx:expr xsi:type="xsd:string">USA</sawx:expr></sawx:expr></saw:filter></saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable><saw:cvRow><saw:cvCell viewName="titleView!1" colSpan="2"/></saw:cvRow><saw:cvRow><saw:cvCell viewName="tableView!1"/><saw:cvCell viewName="mapview!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="true" startedDisplay="none"/>
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true" headingDisplay="table2Rows" repeat="false">
+         <saw:edges>
+            <saw:edge axis="page" showColumnHeader="true"/>
+            <saw:edge axis="section"/>
+            <saw:edge axis="row" showColumnHeader="true">
+               <saw:edgeLayers>
+                  <saw:edgeLayer type="column" columnID="c8de412a137cec7b2"/>
+                  <saw:edgeLayer type="column" columnID="cf24489c32fee2d0c"/>
+                  <saw:edgeLayer type="column" columnID="c08cb41bdc1087e27"/>
+                  <saw:edgeLayer type="column" columnID="cd28bff7fe9627959"/>
+                  <saw:edgeLayer type="column" columnID="cfa569a9fc48c642e"/></saw:edgeLayers></saw:edge>
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>
+      <saw:view xsi:type="saw:mapview" name="mapview!1">
+         <saw:mapLayout>
+            <saw:splitterLayout orientation="horizontal"/></saw:mapLayout>
+         <saw:basemap sid="__OBIEE__MAPVIEW__TILE__OBIEE_NAVTEQ_SAMPLE__ELOC_WORLD_MAP__~v0"/>
+         <saw:mapWidgets>
+            <saw:mapToolBar>
+               <saw:panTools>
+                  <saw:panHand display="false"/></saw:panTools>
+               <saw:zoomTools>
+                  <saw:zoomIn display="false"/>
+                  <saw:zoomOut display="false"/></saw:zoomTools>
+               <saw:selectionTools>
+                  <saw:pointTool display="false"/></saw:selectionTools></saw:mapToolBar>
+            <saw:mapInformation>
+               <saw:scaleInfo display="false"/>
+               <saw:overview display="false" viewState="collapsed"/></saw:mapInformation>
+            <saw:mapOverlay>
+               <saw:panButtons display="false"/>
+               <saw:zoomSlider display="true"/></saw:mapOverlay></saw:mapWidgets>
+         <saw:infoLegend display="true" viewState="collapsed"/>
+         <saw:viewportInfo boundingType="box">
+            <saw:mapCenter x="-10951622.6992856" y="4733525.79116938" size="3884223.962890625" zoomLevel="3" srid="3857" yUnitPixels="0.00010220831851944863" xUnitPixels="0.00010220831851944863"/>
+            <saw:boundingBox coords="-14131403.021551225,2791413.8097240673,-7771842.377019975,6675637.772614692"/>
+            <saw:boundingLayer layerID="undefined"/></saw:viewportInfo>
+         <saw:spatialLayers><saw:spatialLayer sid="__OBIEE__MAPVIEW__LAYER__OBIEE_NAVTEQ_Sample__OBIEE_STATE__~v0" class="omv_predefined_layer" layerID="l0">
+               <saw:layerLabelFormat display="true"/>
+               <saw:spatials>
+                  <saw:columnRef columnID="c0d3626124b156d65"/></saw:spatials>
+               <saw:visuals>
+                  <saw:visual visualID="v0" xsi:type="saw:colorScheme">
+                     <saw:tooltip/>
+                     <saw:varyFillColor binType="percentile" numBins="4" allowThresholdEdit="false">
+                        <saw:columnRef columnID="cfa569a9fc48c642e"/>
+                        <saw:rampStyle>
+                           <saw:rampItem id="0">
+                              <saw:caption>
+                                 <saw:text>First Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#A5CAE0"/></saw:rampItem>
+                           <saw:rampItem id="1">
+                              <saw:caption>
+                                 <saw:text>Second Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#60A0C7"/></saw:rampItem>
+                           <saw:rampItem id="2">
+                              <saw:caption>
+                                 <saw:text>Third Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#3883B2"/></saw:rampItem>
+                           <saw:rampItem id="3">
+                              <saw:caption>
+                                 <saw:text>Fourth Quartile</saw:text></saw:caption>
+                              <saw:g class="color" fill="#1B4C6B"/></saw:rampItem></saw:rampStyle></saw:varyFillColor></saw:visual>
+                  <saw:visual visualID="v1" xsi:type="saw:variableMarker" subClass="bubble">
+                     <saw:g class="marker" fill="#1FB24D">
+                        <saw:circle radius="10"/></saw:g>
+                     <saw:varySize binType="continuous" numBins="1" startSize="10" endSize="30">
+                        <saw:columnRef columnID="cf24489c32fee2d0c"/></saw:varySize>
+                     <saw:tooltip/></saw:visual></saw:visuals></saw:spatialLayer>
+            </saw:spatialLayers>
+         <saw:mapInteraction autoCreateFormats="true" clientEventEnabled="false"/>
+         <saw:canvasFormat width="650" height="397" enableWrapAround="false"/>
+         <saw:formatPanel width="208" height="717"/></saw:view></saw:views></saw:report>

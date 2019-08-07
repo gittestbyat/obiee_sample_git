@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="rt62cba1ilgitdeu"><sawd:dashboardColumn name="Column 3" duid="402dblmituk86m81" frozen="false" canFreeze="false" layoutType="specificSize"><saw:displayFormat><saw:formatSpec width="100%" wrapText="true"/></saw:displayFormat><sawd:dashboardSection layoutType="bestFit" name="Section 2" collapsible="false" duid="77n98lmebikff5r8" showSectionTitle="false"><saw:displayFormat><saw:formatSpec backgroundColor="#f7f7f7" wrapText="true" borderPosition="12" borderColor="#EEEEEE"/></saw:displayFormat><sawd:htmlView name="HTML 2" duid="7kn8048huvj3fv36"><sawd:HTML fmt="html">[b]&lt;font size=4 align=left color=#0707DB&gt;Essbase  Business Intelligence Acceleration Wizard&lt;/font&gt;[/b][br/]
+BI query performance can be improved by adding an Essbase cubes as aggregation data sources to the BI business model. [br/]
+The Essbase BI Acceleration Wizard guides you through the process and implements the model configuration behind the scenes : [br/]
+	A - Selecting a BI business model that will be accelerated,[br/]
+	B - Specifying an Essbase application on which to deploy the cube,[br/]
+	C - Selecting BI measures, dimensions, and logical columns to include in the cube,[br/]
+	D - Deploying the Essbase cube and seamlessly connecting it to the BI business model as a data source[br/][br/]
+
+Essbase BI Acceleration Wizard can be launched from the url (click to launch) &lt;a href=&quot;/cds/view&quot; target=&quot;_blank&quot;&gt;http://yourservername:7780/cds/view&lt;/a&gt;[br/][br/]
+An example of creating an aggregate cube is described below :
+1. Click on Populate Business Models and choose the BI Business Model on which you wish to create the aggregate [br/]
+2. Click on &#39;Select existing connection from RPD&#39; and click on Populate Data Sources. Choose the Data Source &#39;3 - Essbase BI Acceleration&#39;, the connection pool &#39;Connection Pool&#39;, these were prebuilt in the demo RPD to host aggregate cubes. Then give an application name that you choose. [br/]
+NOTE: Alternately, you can uncheck the &#39;Select existing connection from RPD&#39; in which case, the process will create a new physical database and connection pool in the RPD, pointing to the Essbase server installed with OBIEE 12c.[br/]
+3. Choose the Measures and Dimensions along with the levels that need to be pre-aggregated . Click on the Deploy button [br/]
+This will create and load an Essbase cube with the metrics and dimensions that you chose. [br/]
+The wizard will also implement the necessary definitions in the BIEE RPD so that appropriate query rewrite to the Essbase cube can be optimally done by the BI Server.</sawd:HTML></sawd:htmlView><sawd:iframeView name="IFrame 0" width="1280" height="1024" scrolling="yes" src="../cds/view" embedsApp="false" duid="6tb699n6v3r75bdb"/></sawd:dashboardSection></sawd:dashboardColumn>
+	</sawd:dashboardPage>

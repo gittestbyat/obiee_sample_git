@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="1e6jrlkrq9v7kp9g"><sawd:dashboardColumn name="Column 3" frozen="false" canFreeze="true" duid="dk139n0ir62anq1l" layoutType="bestFit"><sawd:dashboardSection name="Section 4" duid="p689pnpr57maa8km" showSectionTitle="false" collapsible="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec paddingTop="10" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 2" duid="vp43dd394a4h1edl"><sawd:HTML fmt="html">&lt;font size=2&gt;&amp;nbsp;[b]Arena Map[/b]&lt;/font&gt;&lt;br/&gt;
+
+&lt;table width=100%&gt;&lt;tr&gt;
+&lt;td align=right&gt;
+&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a href=&quot;javascript:deselectFeature()&quot;&gt;Clear Selection&lt;/a&gt;&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span class=&quot;minibuttonOn&quot;&gt;&lt;a href=&quot;javascript:filterBIReport()&quot;&gt;Apply Selection &gt;&gt;&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;DIV id=&quot;map&quot; style=&quot;width:800px;height:600px;padding:10px;border:1px solid #e2e2e2&quot;&gt;&lt;/DIV&gt;
+&lt;script src=&#39;/mapviewer/jslib/v2/oraclemapsv2.js&#39;&gt;&lt;/script&gt;
+&lt;script src=&#39;/analyticsRes/SampleApp/customjs/SAutilsv1.3.js&#39;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var arena_sections;
+
+function filterBIReport()
+{
+	selStr =&quot;&quot;;
+    selected = arena_sections.getSelectedFeatures();
+	if (selected &amp;&amp; selected.length&gt;0){
+		for (var i=0;i&lt;selected.length;i++){
+			selStr+=&quot;&#39;&quot;+selected[i].getAttributes()[&quot;_LABEL_&quot;] + &quot;&#39;,&quot;; }
+		selStr = selStr.substring(0,selStr.length-1);
+	}
+	SAutils.setPSVarPrompt(&quot;section_selection&quot;,selStr);
+}
+
+function deselectFeature(){
+    selected = arena_sections.getSelectedFeatures();
+    var i=0;
+    while(selected &amp;&amp; selected.length&gt;0&amp;&amp; i&lt;= selected.length+1){
+        arena_sections.deselectFeature(selected[i]);        
+    }  
+}
+
+function rendermap(darray){
+	var baseURL = &quot;/mapviewer&quot;;
+
+     map = new OM.Map(
+			 document.getElementById(&#39;map&#39;),
+			 {
+				 mapviewerURL: baseURL,
+				 disableOverviewMap:true
+			 }) ;
+     var tileLayer = new OM.layer.TileLayer(
+     &quot;baseMap&quot;, 
+     {
+         dataSource:&quot;OBIEE_NAVTEQ_Sample&quot;, 
+         tileLayer:&quot;ARENA_MAP&quot;, 
+         tileServerURL: baseURL+&quot;/mcserver&quot;
+		 
+     });
+    map.addLayer(tileLayer) ; 
+		
+	var navigationPanelBar = new OM.control.NavigationPanelBar();
+	map.addMapDecoration(navigationPanelBar);
+	
+	arena_sections = new OM.layer.VectorLayer(&quot;arena_sectionslayer&quot;, 
+			{
+			  def:
+			  {
+			  type:OM.layer.VectorLayer.TYPE_PREDEFINED, 
+			  dataSource:&quot;OBIEE_NAVTEQ_Sample&quot;, theme:&quot;ARENA4BASEMAP&quot;, 
+			  url: baseURL,
+			}
+		  });
+
+	var basecol = new OM.style.Color({
+				fill : &quot;#7FAAFF&quot;,
+				fillOpacity : 0.5,
+				stroke : &quot;#ffffff&quot;,
+				strokeThickness : 2,
+				strokeOpacity : 0.7
+			});
+	
+	arena_sections.setRenderingStyle(basecol);
+
+	arena_sections.enableInfoWindow(false);
+	arena_sections.addListener(OM.event.LayerEvent.FEATURES_DISPLAYED, function(){
+		arena_sections.enableFeatureSelection(true,OM.layer.VectorLayer.MULTIPLE_SELECTION);	});
+  	var selectedcol = new OM.style.Color({
+				fill : &quot;#FFFF2A&quot;,
+				fillOpacity : 0.5,
+				stroke : &quot;#787878&quot;,
+				strokeThickness : 1,
+				strokeOpacity : 0.7
+			});
+    arena_sections.setSelectStyle(selectedcol);
+	//arena_sections.addSecondaryStyle(barchart);  
+	map.addLayer(arena_sections);
+	map.setMapZoomLevel(1);
+	map.init() ;
+}
+
+rendermap();
+&lt;/script&gt;</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 3" duid="q9p19naeskelpnmr"><sawd:HTML fmt="html">&lt;DIV style=&quot;width:800px&quot;&gt;[b]Description[/b]: This example showcases an areana map on a white background. Sections within the areana are selectable with mouse clicks. When apply selection button is selected, the selected section codes are gathered and then a hidden dashboard prompt is set with selected sections. The hidden prompt filters the BI report next to the map.
+[br/][br/][b]NOTE[/b]: Javascript for setting hidden dashboard prompt is an unsupported custom utility included in SampleApp for demonstrative purposes.[br/]
+&lt;/div&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 1" duid="2cglgosp66r1uh5j" showSectionTitle="false" layoutType="bestFit"><saw:displayFormat><saw:formatSpec wrapText="true" style="display:none"/></saw:displayFormat><sawd:globalFilterView name="GFP 1" path="/shared/04. Maps and Spatial/HTML5 JSAPI/Dynamic Selection/Sections_Hidden Prompt" duid="hdbrft5j8h7snog7" scope="dashboardPage"><saw:caption><saw:text>Sections_Hidden Prompt</saw:text></saw:caption></sawd:globalFilterView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="cmbpoe4onascs5jl" layoutType="bestFit"><sawd:dashboardSection name="Section 2" collapsible="false" duid="ep5tfctsa5049i5l" showSectionTitle="false" layoutType="bestFit"><sawd:reportView name="Report 0" display="embed" showView="" duid="teglap6k5jdqd9ac"><saw:caption><saw:text>Arena Attendance</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/04. Maps and Spatial/HTML5 JSAPI/Dynamic Selection/Arena Attendance"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

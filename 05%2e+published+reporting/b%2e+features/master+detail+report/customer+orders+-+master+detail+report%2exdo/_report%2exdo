@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="false" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/05. Published Reporting/b. Features/Master Detail Report/Data Models/Master Detail Report DM.xdm" cache="true"/>
+   <description>
+      <![CDATA[Data%20Model:%20Master%20Detail%20Report%20DM%20(Requires%20'demo'%20connection%20against%20Oracle%20DB%20OE%20&%20HR%20sample%20schemas%20to%20be%20set%20up);%20Layout%20types:%20XPT;%20Features:%20Parameters,%20Cascading%20LOVs]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="false"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="false"/>
+   <property name="cacheDuration" value="30"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3" style="parameterLocation:in-horizontal;promptLocation:side;"/>
+   <templates default="Order Summary">
+      <template label="Order Summary" url="OrdersSummary.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,xlsx,pptx" defaultFormat="analyze" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Order Details" url="OrderDetails.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,xlsx,pptx" defaultFormat="analyze" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Orders by Channel" url="Orders-by-Channel.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,xlsx,pptx" defaultFormat="analyze" locale="en_US" disableMasterTemplate="true" active="true" viewOnline="true"/>
+      <template label="Header Footer Boilerplate" url="Header And Footer.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,xlsx,pptx" defaultFormat="analyze" locale="en_US" disableMasterTemplate="true" active="false" viewOnline="false"/>
+      <template label="Report Description" url="ReportDescription (6).rtf" type="rtf" outputFormat="html,pdf,rtf,xlsx,pptx" defaultFormat="html" locale="en" disableMasterTemplate="true" active="true" viewOnline="true"/>
+   </templates>
+</report>

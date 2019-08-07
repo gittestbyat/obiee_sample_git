@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlVersion="200810300" isEmpty="false" xmlns:saw="com.siebel.analytics.web/report/v1.1" duid="8582cgcius6tt0e7" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="true" duid="68o5m70k1lsusma8" layoutType="bestFit"><sawd:dashboardSection name="Section 0" duid="8bv4aun7up81lqld" showSectionTitle="true" collapsible="true" showHeading="false" layoutType="bestFit">
+			<saw:caption captionID="kcap12832459_2462">
+				<saw:text>Page Information (click to collapse or expand)</saw:text>
+			</saw:caption>
+			<saw:displayFormat>
+				<saw:formatSpec borderPosition="all" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0" wrapText="true" backgroundColor="#F9F9F4" borderColor="#EEEEEE"/>
+			</saw:displayFormat>
+			<sawd:sectionHeading>
+				<saw:displayFormat>
+					<saw:formatSpec fontColor="#666699" wrapText="true" fontStyle="italic" fontSize="12" fontFamily="Arial"/>
+				</saw:displayFormat>
+			</sawd:sectionHeading>
+			
+		<sawd:htmlView name="HTML 2" duid="0oaouic28aft8dk3">
+				<sawd:HTML fmt="html" captionID="kcap12832459_2467">&lt;font style=&quot;font:12px arial&quot;&gt; &lt;img src=&quot;res/sk_blafp/common/rightarrow.gif&quot; /&gt;
+&lt;b&gt; Description :&lt;/b&gt; This page highlights the difference in function shipping of analytical functions into physical SQL queries generated to Hive versus Oracle Big Data SQL. [br/]
+Query here is to find top 10 customers based on their number of activities on the Movie website. Logical Query to BI Sever is very similar in both cases, with Hive/Impala or Oracle Big Data SQL. [br/]
+However, physical queries against Hive doesn&#39;t include TOPN function, there by forcing the BI server to retrieve the granular data and then perform TOPN operation on its side. [br/]
+Whereas with Oracle Big Data SQL, the computation and filtering happens on the database side there by drastically improving the query performance.
+&lt;/font&gt;</sawd:HTML>
+			</sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 2" canFreeze="false" duid="hiq0qpnosea798pi" layoutType="bestFit" break="column" frozen="false"><sawd:dashboardSection layoutType="bestFit" name="Section 1" duid="rku4m6n297t5h7uj" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderColor="#666699" borderPosition="4" borderStyle="thick" wrapText="true" paddingRight="5"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="op3jiq9e5bt3c77u"><sawd:HTML fmt="html">&lt;PRE&gt;
+[b]Logical SQL query[/b]
+SELECT
+   0 s_0,
+   &quot;M - Big Data Movie&quot;.&quot;Customer&quot;.&quot;Cust ID&quot; s_1,
+   &quot;M - Big Data Movie&quot;.&quot;Facts (Hive)&quot;.&quot;Count of Activities&quot; s_2
+FROM &quot;M - Big Data Movie&quot;
+WHERE
+(TOPN(&quot;Facts ([b]Hive[/b])&quot;.&quot;Count of Activities&quot;,10) &lt;= 10)
+ORDER BY 1, 2 ASC NULLS LAST
+FETCH FIRST 5000001 ROWS ONLY
+
+[b]BI Server Physical Query Log [/b]
+[2015-01-14T01:51:37.572+00:00]----- Sending query to database named 20 - Big Data Movie (Hive) 
+(id: &lt;&lt;6354935&gt;&gt;), connection pool named Hive ODBC Connection Pool: [[
+select 0 as c1,
+     D1.c2 as c2,
+     D1.c1 as c3
+from
+     (select count(T290848.activity) as c1,
+               T290848.custid as c2
+          from
+               movieapp_log_v T290848
+          group by T290848.custid
+     ) D1
+
+]]
+[2015-01-14T01:52:24.39+00:00]----- Query Status: Successful Completion
+[2015-01-14T01:52:24.39+00:00]----- [b]Rows 2260, bytes 54240 retrieved from database[/b] 
+[2015-01-14T01:52:24.39+00:00]----- Physical query response time 46.409 (seconds)
+[2015-01-14T01:52:24.39+00:00]----- Physical Query Summary Stats: Number of physical queries 1, 
+Cumulative time 46.409, DB-connect time 0.000 (seconds)
+[2015-01-14T01:52:24.39+00:00]----- [b]Rows returned to Client 10[/b]
+[2015-01-14T01:52:24.40+00:00]----- Logical Query Summary Stats: Elapsed time 46.478, 
+Total time in BI Server 46.477, [b]Response time 46.478[/b], Compilation time 0.012 (seconds)
+
+
+
+
+
+
+&lt;/PRE&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn><sawd:dashboardColumn name="Column 1" frozen="false" canFreeze="false" duid="pvns0q6bcacj8vbd" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 2" duid="72sso82k0eho4snl" showSectionTitle="false" collapsible="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 1" duid="cr0dif3ljcpt8n2i"><sawd:HTML fmt="html">&lt;PRE&gt;
+[b]Logical SQL query[/b]
+SELECT
+   0 s_0,
+   &quot;M - Big Data Movie&quot;.&quot;Customer&quot;.&quot;Cust ID&quot; s_1,
+   &quot;M - Big Data Movie&quot;.&quot;Facts (BDSQL)&quot;.&quot;Count of Activities&quot; s_2
+FROM &quot;M - Big Data Movie&quot;
+WHERE
+(TOPN(&quot;Facts ([b]BDSQL[/b])&quot;.&quot;Count of Activities&quot;,10) &lt;= 10)
+ORDER BY 1, 2 ASC NULLS LAST
+FETCH FIRST 5000001 ROWS ONLY
+
+[b]BI Server Physical Query Log [/b]
+[2015-01-14T02:04:40.74+00:00]----- Sending query to database named 22 - Big Data Movie (BDSQL) 
+(id: &lt;&lt;6355850&gt;&gt;), connection pool named BDSQL Connection Pool: [[
+WITH
+SAWITH0 AS (select count(T290878.ACTIVITYID) as c1,
+     T290878.CUSTID as c2
+from
+     MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG T290878 /* MOVIEAPP_LOG_BDSQL_SRC */
+group by T290878.CUSTID),
+SAWITH1 AS (select 0 as c1,
+     D1.c2 as c2,
+     D1.c1 as c3,
+     Rank() OVER ( ORDER BY D1.c1 DESC NULLS LAST ) as c4
+from
+     SAWITH0 D1)
+select D1.c1 as c1, D1.c2 as c2, D1.c3 as c3 from ( select D1.c1 as c1,
+     D1.c2 as c2,
+     D1.c3 as c3
+from
+     SAWITH1 D1
+where  ( D1.c4 &lt;= 10 )
+order by c1, c2 ) D1 where rownum &lt;= 5000001
+
+]]
+[2015-01-14T02:04:47.836+00:00]----- Query Status: Successful Completion
+[2015-01-14T02:04:47.836+00:00]-----[b] Rows 10, bytes 320 retrieved from database quer[/b]y id: &lt;&lt;6355850&gt;&gt;
+[2015-01-14T02:04:47.836+00:00]----- Physical query response time 7.751 (seconds), id &lt;&lt;6355850&gt;&gt;
+[2015-01-14T02:04:47.836+00:00]----- Physical Query Summary Stats: Number of physical queries 1, [b]
+Cumulative time 7.751[/b], DB-connect time 0.002 (seconds)
+[2015-01-14T02:04:47.836+00:00]----- [b]Rows returned to Client 10[/b]
+&lt;/PRE&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

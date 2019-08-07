@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="uqbc6p9e74skvaof"><sawd:dashboardColumn name="Column 0" duid="mn6von1vgq40b1m3" frozen="false" canFreeze="false" layoutType="bestFit"><sawd:dashboardSection name="Section 1" duid="6becjloofkt9dbo3" showSectionTitle="true" horizontalLayout="true" showHeading="true" layoutType="bestFit" collapsible="false"><saw:caption><saw:text>Instructions for Keyboard-Only Navigation</saw:text></saw:caption><sawd:htmlView name="HTML 4" duid="4fmt43li9j9s550j"><sawd:HTML fmt="text">[b]To select another Dashboard:[/b]   Control-Alt-D, then spacebar to activate the dashboard menu drop-down, then down arrow to the desired dashboard. Hit [b]Enter[/b] to select.[br/]
+[b]To select a Page:[/b]   Control-Alt-P, then TAB to the desired dashboard page.[br/]
+[b]To select a Section within the current Page:[/b]   Control-Shift-S to select the Next section, or Control-Shift-U to select the previous section.</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 5" duid="soifmuinsmksaknk"><sawd:HTML fmt="text">[b][u]Other Keys:[/u][/b][br/]
+[b]Alt-Down[/b] or [b]Enter[/b] - Invoke a drop down menu[br/]
+[b]Escape[/b] - Close the current drop down menu[br/]</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 6" duid="m31t9fu9mm0ovkbs"><sawd:HTML fmt="text">[br/]
+[b]Spacebar[/b] - Select/Deselect a check box item[br/]
+[b]Arrow keys[/b] - Use to navigate cells within a Table/Pivot</sawd:HTML></sawd:htmlView><sawd:htmlView name="HTML 7" duid="d19dnqva9e53cra8"><sawd:HTML fmt="text">[br/]
+[b]Tab[/b] - Select next object or menu item[br/]
+[b]Shift-Tab[/b] - Select previous object or menu item</sawd:HTML></sawd:htmlView></sawd:dashboardSection><sawd:dashboardSection name="Section 0" duid="6p790ktichnk794l" showSectionTitle="false" horizontalLayout="true" layoutType="bestFit" collapsible="false"><sawd:globalFilterView name="GFP 0" path="/shared/06. Dashboard Design/Accessibility/Dashboard Prompts/Region Country Prompt" duid="sdf010phce6vc535"><saw:caption><saw:text>Region Country Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:globalFilterView name="GFP 2" path="/shared/06. Dashboard Design/Accessibility/Dashboard Prompts/Calendar Date Prompt" duid="sojvv3mlqql48l27"><saw:caption><saw:text>Calendar Date Prompt</saw:text></saw:caption></sawd:globalFilterView><sawd:linkView name="Link 0" target="_self" type="report" destination="/shared/01. QuickStart/_portal/1.00 General Index" layout="captionRight" duid="730rmpdau4u48g7l">
+				<sawd:linkCaption>
+					<saw:caption captionID="kcap12832459_2548">
+						<saw:text>Return to Main Index page</saw:text>
+					</saw:caption>
+				</sawd:linkCaption>
+				<sawd:image src="res/sk_blafp/catalog/fr/book.gif"/>
+			</sawd:linkView></sawd:dashboardSection><sawd:dashboardSection name="Section 2" duid="flo3fkohsm8ou9ek" showSectionTitle="false" layoutType="bestFit" collapsible="false"><sawd:reportView name="Report 3" display="embed" showView="" duid="7q3g3gmf6leullc4"><saw:caption><saw:text>My Report</saw:text></saw:caption><sawd:reportRef type="catalog" path="/shared/06. Dashboard Design/Accessibility/My Report"/></sawd:reportView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

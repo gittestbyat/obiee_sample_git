@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sawd:dashboardPage xmlns:sawd="com.siebel.analytics.web/dashboard/v1.1" xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlVersion="200810300" isEmpty="false" duid="nbpffgtc6nbgkimp"><sawd:dashboardColumn name="Column 0" frozen="false" canFreeze="false" duid="bmgbi8rbrojtmuri" layoutType="bestFit"><sawd:dashboardSection layoutType="bestFit" name="Section 0" collapsible="false" duid="6bl33ddt37i27j9e" showSectionTitle="false"><saw:displayFormat><saw:formatSpec borderPosition="none" wrapText="true"/></saw:displayFormat><sawd:htmlView name="HTML 0" duid="gm53pl1jo5te929t"><sawd:HTML fmt="html">&lt;font size=3&gt;
+[u][b]Introduction[/b][/u][br/][br/]
+The look and feel of the user interface in Oracle BI EE is controlled by skins and styles. Skins define the user interface chrome (visible graphic features) outside the home and dashboard area.
+[br/]
+Oracle BI EE ships with several styles, such as Skyros, blafp (browser look and feel), and FusionFX (fusion applications).
+You can control the way that the interface for Oracle BI EE is displayed to users by creating skins and styles. [br/]
+The primary difference between skins and styles is that styles only apply to dashboard content, whereas skins apply to every other part of the user interface.
+For example, within Oracle BI EE, skins apply to components that are used in analyses and scorecarding.
+[br/][br/]
+[b]NOTE:-[/b] In Oracle BI Presentation Services, you customize the user interface elements and appearance by modifying styles and skins, not with JavaScript. 
+You do not modify JavaScript files that are located in the ORACLE_HOME\bifoundation\web\appv2\res directory. 
+This is because the objects and methods in these scripts might change, and because these files might be replaced when upgrading.
+[br/][br/]
+[u][b]Steps to create your own style[/b][/u][br/][br/]
+Here are the high level steps to create your own custom style. (Please refer to Oracle® Fusion Middleware System Administrator&#39;s Guide for Oracle Business Intelligence Enterprise Edition for detailed steps)
+[br/]
+[br/]1)	     Copy ORACLE_HOME\bifoundation\jee\bicustom-template.ear to ORACLE_HOME\bifoundation\jee\bicustom.ear.
+[br/][br/]2)	     Update the bicustom.ear file.
+[br/]
+     - Extract the bicustom.war file from the bicustom.ear file.
+[br/]
+     - Extract the files from the bicustom.war file.
+[br/]
+-  Edit the files to create your custom style and save your changes. 
+[br/]
+- Update the bicustom.war file with your changes.
+[br/]
+- Update the bicustom.ear file with your new bicustom.war file.
+[br/]
+[br/]3)	Deploy the bicustom.ear file.
+Login to WLS console. Deploy bicustom.ear with the following options [br/]
+- Install this deployment as an application.[br/]
+- I will make the deployment accessible from the following location.[br/][br/]
+4)Start the application [br/][br/]
+5)Bounce Oracle Presentation Services [br/]
+[br/]
+
+Once you perform these steps, the new style will be available as one of the dashboard style options.
+&lt;/font&gt;</sawd:HTML></sawd:htmlView></sawd:dashboardSection></sawd:dashboardColumn></sawd:dashboardPage>

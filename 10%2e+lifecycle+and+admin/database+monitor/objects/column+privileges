@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;X1 - Db Structure&quot;">
+      <saw:columns>
+         <saw:column xsi:type="saw:regularColumn" columnID="cf0e4c1ed0c2e4c69">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;All Col Privs&quot;.&quot;Grantee&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c513529059d97cf82">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;All Col Privs&quot;.&quot;Column Name&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="cc5a8df77a0cbc08e">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;All Col Privs&quot;.&quot;Privilege&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c1c4af7839eabe3c8">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;All Col Privs&quot;.&quot;Table Name&quot;</sawx:expr></saw:columnFormula></saw:column>
+         <saw:column xsi:type="saw:regularColumn" columnID="c2d8e8bd03d273665">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;All Col Privs&quot;.&quot;Table Schema&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns>
+      </saw:criteria>
+   <saw:views currentView="0">
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">
+         <saw:cvTable>
+            <saw:cvRow>
+               <saw:cvCell viewName="titleView!1">
+                  <saw:displayFormat>
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell>
+               <saw:cvCell viewName="tableView!1" rowSpan="2"/></saw:cvRow>
+            <saw:cvRow>
+               <saw:cvCell viewName="pivotTableView!1"/></saw:cvRow></saw:cvTable></saw:view>
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>
+      <saw:view xsi:type="saw:pivotTableView" name="pivotTableView!1" autoPreview="true">
+         
+         <saw:edges><saw:edge axis="page" showColumnHeader="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="t3" grandTotalPosition="before"/></saw:displayGrandTotals>
+               <saw:edgeLayers><saw:edgeLayer type="column" columnID="c2d8e8bd03d273665"/></saw:edgeLayers></saw:edge><saw:edge axis="section">
+               <saw:displayFormat>
+                  <saw:formatSpec/></saw:displayFormat></saw:edge><saw:edge axis="row" showColumnHeader="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="t2" grandTotalPosition="after"/></saw:displayGrandTotals>
+               <saw:edgeLayers><saw:edgeLayer type="column" columnID="c1c4af7839eabe3c8"/><saw:edgeLayer type="column" columnID="c513529059d97cf82"/><saw:edgeLayer type="column" columnID="cc5a8df77a0cbc08e"/></saw:edgeLayers></saw:edge><saw:edge axis="column" dependent="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="t1" grandTotalPosition="after"/></saw:displayGrandTotals>
+               <saw:edgeLayers><saw:edgeLayer type="column" columnID="cf0e4c1ed0c2e4c69"/></saw:edgeLayers></saw:edge></saw:edges><saw:measuresList>
+            <saw:measure columnID="cf0e4c1ed0c2e4c69" aggRule="count"/></saw:measuresList>
+         <saw:pageEdgeState>
+            
+            <saw:QDR><saw:staticMemberGroup><saw:groupType><sawx:columnRefExpr columnID="c2d8e8bd03d273665"/></saw:groupType><saw:members xsi:type="saw:stringMembers"><saw:value>SYS</saw:value></saw:members></saw:staticMemberGroup></saw:QDR><saw:selectionGroups><saw:selectionGroup columnID="c2d8e8bd03d273665" groupID="0"/></saw:selectionGroups></saw:pageEdgeState>
+         <saw:sectionContent>
+            <saw:displayFormat>
+               <saw:formatSpec wrapText="true"/></saw:displayFormat></saw:sectionContent></saw:view>
+      <saw:view xsi:type="saw:tableView" name="tableView!1">
+         <saw:edges><saw:edge axis="page" showColumnHeader="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="t5" grandTotalPosition="before"/></saw:displayGrandTotals></saw:edge><saw:edge axis="section"/><saw:edge axis="row" showColumnHeader="true">
+               <saw:displayGrandTotals>
+                  <saw:displayGrandTotal id="t4" grandTotalPosition="after"/></saw:displayGrandTotals>
+               <saw:edgeLayers><saw:edgeLayer type="column" columnID="c2d8e8bd03d273665"/><saw:edgeLayer type="column" columnID="c1c4af7839eabe3c8"/><saw:edgeLayer type="column" columnID="c513529059d97cf82"/><saw:edgeLayer type="column" columnID="cc5a8df77a0cbc08e"/><saw:edgeLayer type="column" columnID="cf0e4c1ed0c2e4c69"/></saw:edgeLayers></saw:edge><saw:edge axis="column"/></saw:edges>
+         <saw:greenBarFormat greenBar="allLayers" enabled="true"/></saw:view></saw:views></saw:report>

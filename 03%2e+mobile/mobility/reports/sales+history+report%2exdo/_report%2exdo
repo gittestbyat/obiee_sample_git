@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<report xmlns="http://xmlns.oracle.com/oxp/xmlp" xmlns:xsd="http://wwww.w3.org/2001/XMLSchema" version="2.0" dataModel="true" useBipParameters="true" producerName="fin-financialCommon" parameterVOName="" parameterTaskFlow="" customDataControl="" cachePerUser="true" cacheSmartRefresh="false" cacheUserRefresh="false">
+   <dataModel url="/shared/03. Mobile/Mobility/Data Models/Sales History Data Model.xdm"/>
+   <description>
+      <![CDATA[Data%20Model:%20Sales%20History%20Data%20Model,%20Layout%20Type(s):%20XPT]]>
+   </description>
+   <property name="showControls" value="true"/>
+   <property name="online" value="true"/>
+   <property name="openLinkInNewWindow" value="true"/>
+   <property name="autoRun" value="true"/>
+   <property name="cacheDocument" value="true"/>
+   <property name="showReportLinks" value="true"/>
+   <property name="asynchronousRun" value="false"/>
+   <property name="useExcelProcessor" value="true"/>
+   <property name="cacheDuration" value="false"/>
+   <property name="controledByExtApp" value="false"/>
+   <parameters paramPerLine="3"/>
+   <templates default="Overview Report">
+      <template label="Overview Report" url="Overview Report.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="analyze" locale="en_US" active="true" viewOnline="true"/>
+      <template label="Revenue by Quarter" url="Revenue by Quarter.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="analyze" active="true" viewOnline="true"/>
+      <template label="Revenue by Brand" url="Revenue by Brand.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="analyze" active="true" viewOnline="true"/>
+      <template label="Summary Report" url="Summary Report.xpt" type="xpt" outputFormat="analyze,html,pdf,rtf,excel,pptx" defaultFormat="analyze" locale="en_US" active="false" viewOnline="true"/>
+   </templates>
+</report>

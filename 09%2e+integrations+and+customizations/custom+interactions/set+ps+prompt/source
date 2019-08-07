@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160" xmlns:sawx="com.siebel.analytics.web/expression/v1.1">      
+   <saw:criteria xsi:type="saw:simpleCriteria" subjectArea="&quot;A - Sample Sales&quot;" withinHierarchy="true">            
+      <saw:columns>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="ce94307e6a46f484f">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Time&quot;.&quot;T05 Per Name Year&quot;</sawx:expr></saw:columnFormula>                        
+            <saw:displayFormat>                              
+               <saw:formatSpec suppress="suppress" wrapText="true" interaction="action">                                    
+                  <saw:actionLinks showPopupMenuForOneLink="false" appliesToTotal="false">
+                     <saw:actionLink actionLinkID="ce94307e6a46f484f_albbe7c1ebbcf48f2d">
+                        <saw:action>
+                           <saw:actionName>Invoke a Browser Script</saw:actionName>
+                           <saw:parameters allowExtraParameters="true">
+                              <saw:parameter name="variable" type="string" mandatory="true" removable="true" order="0" multiValues="false">
+                                 <saw:prompt>variable</saw:prompt>
+                                 <saw:description/></saw:parameter>
+                              <saw:parameter name="value" type="string" mandatory="true" removable="true" order="1" multiValues="false">
+                                 <saw:prompt>value</saw:prompt>
+                                 <saw:description/></saw:parameter></saw:parameters>
+                           <saw:assignments>
+                              <saw:assign name="variable" fixed="true" hidden="true" parentFixed="false" parentHidden="false" xsi:type="saw:stringAssign">
+                                 <saw:value>myvar</saw:value></saw:assign></saw:assignments>
+                           <saw:implementation xsi:type="saw:ScriptActionType" executeOnClient="true">
+                              <saw:functionName>setprompt</saw:functionName>
+                              <saw:scriptLanguage>JScript</saw:scriptLanguage>
+                              <saw:scriptPath/></saw:implementation>
+                           <saw:clientImplementation>
+                              <saw:customisation invokeConfirmation="false"/></saw:clientImplementation></saw:action>
+                        <saw:caption>
+                           <saw:text>Invoke a Browser Script</saw:text></saw:caption>
+                        <saw:paramMapping>
+                           <saw:assign xsi:type="saw:anyTypeAssign" name="value" fixed="true" hidden="true">
+                              <saw:mapping xsi:type="saw:contextColumnMappingType">
+                                 <sawx:columnRefExpr columnID="ce94307e6a46f484f"/></saw:mapping></saw:assign></saw:paramMapping></saw:actionLink></saw:actionLinks></saw:formatSpec></saw:displayFormat>                        
+            <saw:columnHeading>                              
+               <saw:displayFormat>                                    
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>                  
+         <saw:column xsi:type="saw:regularColumn" columnID="c6346864f75965032">                        
+            <saw:columnFormula>                              
+               <sawx:expr xsi:type="sawx:sqlExpression">&quot;Base Facts&quot;.&quot;1- Revenue&quot;</sawx:expr></saw:columnFormula></saw:column></saw:columns></saw:criteria>      
+   <saw:views currentView="0">            
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">                  
+         <saw:cvTable>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="htmlview!1"/></saw:cvRow>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="titleView!1">                  
+                  <saw:displayFormat>                     
+                     <saw:formatSpec borderPosition="none"/></saw:displayFormat></saw:cvCell></saw:cvRow>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="tableView!1">                                    
+                  <saw:displayFormat>                                          
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>            
+      <saw:view xsi:type="saw:titleView" name="titleView!1" includeName="false" startedDisplay="none"><saw:title>            
+            <saw:caption fmt="text">               
+               <saw:text>Yearly Revenue</saw:text></saw:caption>            
+            <saw:displayFormat>               
+               <saw:formatSpec wrapText="true"/></saw:displayFormat></saw:title></saw:view>            
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="true">                  
+         <saw:edges>            
+            <saw:edge axis="page" showColumnHeader="true"/>            
+            <saw:edge axis="section"/>            
+            <saw:edge axis="row" showColumnHeader="false">                              
+               <saw:displayGrandTotals>                  
+                  <saw:displayGrandTotal id="gt_row" grandTotalPosition="after"/></saw:displayGrandTotals>               
+               <saw:edgeLayers>                  
+                  <saw:edgeLayer type="column" columnID="ce94307e6a46f484f">                     
+                     <saw:memberFormat>                        
+                        <saw:displayFormat>                           
+                           <saw:formatSpec wrapText="true"/></saw:displayFormat></saw:memberFormat></saw:edgeLayer>                  
+                  <saw:edgeLayer type="column" columnID="c6346864f75965032"/></saw:edgeLayers></saw:edge>            
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view>      
+      <saw:view xsi:type="saw:dvtchart" name="dvtchart!1">         
+         <saw:display type="pie" subtype="default" renderFormat="default" mode="online">            
+            <saw:style barStyle="default" lineStyle="default" scatterStyle="default" fillStyle="default" bubblePercentSize="100" effect="2d"/></saw:display>         
+         <saw:canvasFormat height="280" width="250">            
+            <saw:dataLabels display="default" label="default" position="below" transparentBackground="true" valueAs="default"/>            
+            <saw:title mode="custom"/></saw:canvasFormat>         
+         <saw:selections>            
+            <saw:categories>               
+               <saw:measureLabels/></saw:categories>            
+            <saw:measures showMeasureLabelsOnCategory="false">               
+               <saw:column measureType="pie">                  
+                  <saw:columnRef columnID="c6346864f75965032"/></saw:column></saw:measures>            
+            <saw:seriesGenerators>               
+               <saw:seriesGenerator>                  
+                  <saw:columnRef columnID="ce94307e6a46f484f"/></saw:seriesGenerator></saw:seriesGenerators></saw:selections>         
+         <saw:legendFormat position="default" transparentFill="true"/></saw:view>      
+      <saw:view xsi:type="saw:htmlview" name="htmlview!1">         
+         <saw:staticText>            
+            <saw:caption fmt="html">               
+               <saw:text>&lt;script src=&#39;/analyticsRes/SampleApp/customjs/SAutilsv1.3.js&#39;&gt;&lt;/script&gt;
+&lt;script&gt;
+function setprompt(aParams){
+  SAutils.setPSVarPrompt(aParams[&quot;variable&quot;], aParams[&quot;value&quot;]);
+}
+&lt;/script&gt;</saw:text></saw:caption></saw:staticText></saw:view></saw:views></saw:report>
